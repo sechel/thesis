@@ -1,12 +1,68 @@
-\input{Preamble}
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{ams}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% For Milnor's Lobachevsy function $\ML$ 
+\usepackage[OT2,T1]{fontenc} 
+\newcommand{\ML}{\mbox{\fontencoding{OT2}\fontfamily{wncyr}\fontseries{m}\fontshape{n}\selectfont L}} 
+
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\graphicspath{{image/}}
+
+\newtheorem{definition}{Definition}
+
+\title{Discrete differential geometry of surfaces. Variational principles, algorithms, and implementation}
+\author{Stefan Sechelmann}
 
 \begin{document}
 
-\part{Introduction}
-\part{Discrete Riemann Surfaces}
-\section{Elliptic Functions}
+\maketitle
+\newpage
 
-\part{Isothermic Parametrizations}
+\tableofcontents
+
+\section{Introduction}
+\section{Discrete conformal maps}
+
+\begin{definition}
+	Two triangulations $T$ and $\tilde{T}$ are \emph{discrete conformal equivalent} if there is a map $u:V \to \mathbb{R}$ such that for any edge $ij$ it is
+	\[l_{ij}=e^{u_i+u_j}\tilde{l}_{ij}\]
+\end{definition}
+
+\begin{definition}
+	A \emph{discrete flat metric} is a map $l:E\to\mathbb{R_+}$ such that triangle inequalities are satisfied and angle sums around each inner vertex are equal to $2\pi$. 	
+\end{definition}
+
+
+\subsection{Euclidean case}
+Construction of discrete flat metrics. A discrete Euclidean flat metric is the minimizer of a convex functional.
+\begin{eqnarray}
+\lambda_{ij} &:=& 2\log l_{ij}\\
+\tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
+f(u_i, u_j, u_k) &:=& \alpha_i \tilde \lambda_{jk} + \alpha_j \tilde \lambda_{ki} + \alpha_k \tilde \lambda_{ij} + 2\left(\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha k)\right)
+\end{eqnarray}
+
+\begin{definition}
+\begin{eqnarray}
+	E_{Euc}(u) &=& \sum_{ijk\in F}f(u_i, u_j, u_k) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right) + \sum_{i\in V} 2\pi u_i
+\end{eqnarray}
+\end{definition}
+
+\section{Uniformization of elliptic curves}
+\subsection{Elliptic Functions}
+
+\subsection{Convergence}
+
+\section{Discrete isothermic parametrizations}
+
+\section{Examples}
+\subsection{A discrete ellipsoid}
 
 \end{document}
  
