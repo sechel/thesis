@@ -1,7 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{color}
-\usepackage{ams}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -27,42 +26,71 @@
 
 \tableofcontents
 
+\newpage
+
 \section{Introduction}
 \section{Discrete conformal maps}
 
 \begin{definition}
 	Two triangulations $T$ and $\tilde{T}$ are \emph{discrete conformal equivalent} if there is a map $u:V \to \mathbb{R}$ such that for any edge $ij$ it is
 	\[l_{ij}=e^{u_i+u_j}\tilde{l}_{ij}\]
+where $l_{ij}$ is the length of the edge $ij$.
 \end{definition}
 
 \begin{definition}
-	A \emph{discrete flat metric} is a map $l:E\to\mathbb{R_+}$ such that triangle inequalities are satisfied and angle sums around each inner vertex are equal to $2\pi$. 	
+	A \emph{discrete flat metric} is a map $l:E\to\mathbb{R_+}$ such that triangle inequalities are satisfied and angle sums around each inner vertex are equal to $2\pi$. 
 \end{definition}
 
 
-\subsection{Euclidean case}
+\subsection{Euclidean}
 Construction of discrete flat metrics. A discrete Euclidean flat metric is the minimizer of a convex functional.
 \begin{eqnarray}
 \lambda_{ij} &:=& 2\log l_{ij}\\
 \tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
-f(u_i, u_j, u_k) &:=& \alpha_i \tilde \lambda_{jk} + \alpha_j \tilde \lambda_{ki} + \alpha_k \tilde \lambda_{ij} + 2\left(\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha k)\right)
+f_{Euc}(u_i, u_j, u_k) &:=& \alpha_i \tilde \lambda_{jk} + \alpha_j \tilde \lambda_{ki} + \alpha_k \tilde \lambda_{ij} + 2\left(\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k)\right)
 \end{eqnarray}
 
 \begin{definition}
 \begin{eqnarray}
-	E_{Euc}(u) &=& \sum_{ijk\in F}f(u_i, u_j, u_k) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right) + \sum_{i\in V} 2\pi u_i
+	E_{Euc}(u) &:=& \sum_{ijk\in F}f_{Euc}(u_i, u_j, u_k) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right) + \sum_{i\in V} \theta_i u_i
+\end{eqnarray}
+\end{definition}
+
+The gradient of the Euclidean functional is then givien by
+\[ \frac{\partial E_{Euc}}{\partial u_i}=\sum_{ij\in E}\]
+
+\subsection{Hyperbolic}
+
+For the hyperbolic case $\lambda$ and $\tilde\lambda$ are defined as before. Further define
+\begin{eqnarray}
+	\beta_i &:=& \frac{1}{2} \left(\pi + \alpha_i - \alpha_j - \alpha_k \right)\\
+	\beta_j &:=& \frac{1}{2} \left(\pi - \alpha_i + \alpha_j - \alpha_k \right)\\
+	\beta_k &:=& \frac{1}{2} \left(\pi - \alpha_i - \alpha_j + \alpha_k \right)\\
+	f_{Hyp}(u_i, u_j, u_k) &:=&\beta_i \tilde \lambda_{jk} + \beta_j \tilde \lambda_{ki} + \beta_k \tilde \lambda_{ij}\\ 		
+				&&+\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k) + \ML(\beta_i) + \ML(\beta_j) + \ML(\beta_k)\\
+				&&+\ML\left(\frac{1}{2} (\pi - \alpha_i - \alpha_j - \alpha_k)\right)
+\end{eqnarray}
+
+\begin{definition}
+\begin{eqnarray}
+	E_{Hyp}(u) &:=& \sum_{ijk\in F}f_{Hyp}(u_i, u_j, u_k) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right) + \sum_{i\in V} \theta_i u_i
 \end{eqnarray}
 \end{definition}
 
 \section{Uniformization of elliptic curves}
 \subsection{Elliptic Functions}
+\subsection{Numerical convergence analysis}
 
-\subsection{Convergence}
+\section{Uniformization of hyperelliptic curves}
+\subsection{Construction}
+Any hyperelliptic Riemann surface can be expressed as an algebraic curve of the form
+\[ \mu^2 = \prod_{i=1}^n(\lambda-\lambda_i)^2 \quad\quad n\geq3,\quad \lambda_i\neq \lambda_j \forall i\neq j.\]
+Here $\lambda_i$ are the branch points of the doubly covered Riemann sphere. If 
+
+\subsection{Canonical domains}
 
 \section{Discrete isothermic parametrizations}
-
-\section{Examples}
-\subsection{A discrete ellipsoid}
+\subsection{A discrete ellipsoid and its dual surface}
 
 \end{document}
  
