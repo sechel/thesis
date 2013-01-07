@@ -1,10 +1,13 @@
 \documentclass{article}
-\usepackage{graphicx}
+
 \usepackage{color}
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+
 \usepackage{url}
+
 %\usepackage{hyperref}
 \usepackage[nottoc,numbib,notlof]{tocbibind}
 
@@ -17,10 +20,17 @@
 \pagestyle{fancyplain}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex}
-\graphicspath{{image/}}
+
+\usepackage{graphicx}
+\graphicspath{{image/}{figures/}}
 
 \newtheorem{definition}{Definition}
 \newtheorem{proposition}{Proposition}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Chat}{\hat{\mathbb C}}
 
 \title{Discrete differential geometry of surfaces. Variational principles, algorithms, and implementation}
 \author{Stefan Sechelmann}
@@ -40,7 +50,27 @@
 
 \part{Discrete Uniformization}
 
+The discrete uniformization theory persented here is based on the notion of discrete conformal eqivalence of triangle meshes. The Euclidean definition was first considered by \cite{Luo2004}, the variational principle and applications in computer graphics is due to \cite{Springborn2008, Bobenko2010}. The notion of conformal equivalence of non-Euclidean metrics and corresponding variational principles were first defined in \cite{Bobenko2010}. \cite{Guo2010} investigate the gradient flow of this principle.
+Most of the material presented here can be found in \cite{BobSechSpr}.
+
 \section{Discrete Riemann surfaces}
+
+\begin{figure}
+\centering
+\scalebox{0.8}{\input{figures/triangles.pdf_t}}
+\caption{Discrete surfaces constructed from glued triangles of constant curvature. Euclidean, hyperbolic, and spherical. Bold edegs are identified to create a cone-like singularity at the vertex.}
+\label{fig:surface_triangles}
+\end{figure}
+
+\begin{definition}
+A \emph{discrete surface} is a collection of triangles equipped with a metric of constant Gaussian curvature and geodesic edges. Triangles are glued along edges to form a surface.
+\end{definition}
+
+Generically a discrete surface can have boundary components. We consider this case in Section~\ref{sec:planar_domains}. By glueing triangles equipped with a metric of constant curvature we obtain a surface that has constant curvature except for points where the metric has cone-like singularities (Figure~\ref{fig:surface_triangles}). A discrete surface is called Euclidean for $K=0$, hyperbolic for $K=-1$, and spherical if $K=1$.
+
+\begin{definition}
+The map $l:E\to \R$ of triangle edge lengths of a discrete surface is called a \emph{discrete Euclidean, hyperbolic, or spherical metric} respectively.
+\end{definition}
 
 
 \section{Discrete Uniformization}
@@ -116,14 +146,13 @@ Triangulated surfaces of genus $g\geq 2$ without boundary can be equipped with a
 \subsection{Separated handles}
 \subsection{Opposite sides identified}
 
-\section{Uniformization of tori}
+\section{Uniformization of elliptic and hyperelliptic surfaces}
 \subsection{Elliptic Functions}
-\subsection{The modul space}
+\subsection{The moduli space}
 \subsection{Numerical convergence analysis}
 \subsection{The modulus of the Wente torus}
 
-\section{Uniformization of hyperelliptic surfaces}
-\subsection{Construction}
+\subsection{Construction of hyperelliptic surfaces}
 Any hyperelliptic Riemann surface can be expressed as an algebraic curve of the form
 \[ \mu^2 = \prod_{i=1}^n(\lambda-\lambda_i)^2 \quad\quad n\geq3,\quad \lambda_i\neq \lambda_j \forall i\neq j.\]
 Here $\lambda_i$ are the branch points of the doubly covered Riemann sphere.
@@ -140,6 +169,7 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 \subsection{Examples}
 
 \section{Simply and multiply connected domains}
+\label{sec:planar_domains}
 \subsection{Variation of edge length}
 \subsection{Examples}
 \begin{figure}
@@ -167,8 +197,13 @@ The notion of quasiconformal parameterizations
 \subsection{A discrete ellipsoid and its dual surface}
 \subsection{Applications in architecture}
 \subsection{Piece-wise projective interpolation for arbitrary parameterizations}
-\section{Gridshells and Applications in Architecture}
 
+\section{Gridshells and Applications in Architecture}
+\subsection{Tschebyscheff Meshes}
+\subsection{Variational Principle}
+\subsection{Examples}
+
+\newpage
 \bibliographystyle{alpha}
 \bibliography{Thesis}
 

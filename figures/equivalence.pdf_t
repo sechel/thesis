@@ -1,0 +1,25 @@
+\begin{picture}(0,0)%
+\includegraphics{equivalence.pdf}%
+\end{picture}%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(4530,3550)(-164,-2597)
+\put(4351,-2311){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u_k$}%
+}}}}
+\put(2101,614){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u_i$}%
+}}}}
+\put(451,-2236){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u_j$}%
+}}}}
+\put(3076,-661){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$e^{\frac{1}{2}(u_i+u_k)}l_{\it{ik}}$}%
+}}}}
+\put(1876,-2461){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$e^{\frac{1}{2}(u_j+u_k)}l_{\it{jk}}$}%
+}}}}
+\put(-149,-811){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$e^{\frac{1}{2}(u_i+u_j)}l_{\it{ij}}$}%
+}}}}
+\end{picture}%
