@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{book}
 
 \usepackage{color}
 
@@ -33,10 +33,34 @@
 \newcommand{\Chat}{\hat{\mathbb C}}
 
 \title{Discrete differential geometry of surfaces. Variational principles, algorithms, and implementation}
-\author{Stefan Sechelmann}
+\author{
+vorgelegt von\\
+Dipl.-Math. techn. Stefan Sechelmann\\
+\vspace{0.3cm}\\
+von der Fakult{\"a}t II - Mathematik und Naturwissenschaften\\
+der Technischen Universit{\"a}t Berlin\\
+zur erlangung des akademischen Grades\\
+\vspace{0.3cm}\\
+Doktor der Naturwissenschaften\\
+-- Dr. rer. nat. --\\
+\vspace{2cm}\\
+Promotionsausschuss\\
+\vspace{0.3cm}\\
+\begin{tabular}{rl}
+Vorsitzender: & NN \\
+Gutachter/Berichter: & Prof. Dr. Alexander I. Bobenko \\
+& NN 
+\end{tabular}
+\vspace{0.3cm}\\
+Tag der wissenschaftlichen Aussprache: NN\\
+\vspace{2cm}\\
+}
+
+\date{Berlin, den 07. Januar 2013}
 
 \begin{document}
 
+\frontmatter
 \maketitle
 \newpage
 
@@ -45,10 +69,11 @@
 \listoffigures
 
 \newpage
+\mainmatter
+\chapter{Introduction}
 
-\section{Introduction}
 
-\part{Discrete Uniformization}
+\chapter{Discrete Uniformization}
 
 The discrete uniformization theory persented here is based on the notion of discrete conformal eqivalence of triangle meshes. The Euclidean definition was first considered by \cite{Luo2004}, the variational principle and applications in computer graphics is due to \cite{Springborn2008, Bobenko2010}. The notion of conformal equivalence of non-Euclidean metrics and corresponding variational principles were first defined in \cite{Bobenko2010}. \cite{Guo2010} investigate the gradient flow of this principle.
 Most of the material presented here can be found in \cite{BobSechSpr}.
@@ -73,7 +98,7 @@ The map $l:E\to \R$ of triangle edge lengths of a discrete surface is called a \
 \end{definition}
 
 
-\section{Discrete Uniformization}
+\section{Variational principles}
 
 \subsection{Discrete conformal equivalence}
 
@@ -182,7 +207,7 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 
 \subsection{Comparison with Examples of the Schwarz-Christoffel community}
 
-\part{Discrete Surface Parameterization}
+\chapter{Discrete Surface Parameterization}
 
 
 \section{Discrete quasiisothermic parametrizations}
@@ -204,7 +229,10 @@ The notion of quasiconformal parameterizations
 \subsection{Examples}
 
 \newpage
+\backmatter 
 \bibliographystyle{alpha}
+%disable numbering 
+\setcounter{secnumdepth}{-1} 
 \bibliography{Thesis}
 
 \end{document}
