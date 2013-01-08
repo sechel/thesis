@@ -16,8 +16,9 @@
 \newcommand{\ML}{\mbox{\fontencoding{OT2}\fontfamily{wncyr}\fontseries{m}\fontshape{n}\selectfont L}} 
 
 \usepackage[a4paper]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancyplain}
+%\usepackage{fancyhdr}
+%\pagestyle{headings}
+
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex}
 
@@ -75,7 +76,7 @@ Tag der wissenschaftlichen Aussprache: NN\\
 
 \chapter{Discrete Uniformization}
 
-The discrete uniformization theory persented here is based on the notion of discrete conformal eqivalence of triangle meshes. The Euclidean definition was first considered by \cite{Luo2004}, the variational principle and applications in computer graphics is due to \cite{Springborn2008, Bobenko2010}. The notion of conformal equivalence of non-Euclidean metrics and corresponding variational principles were first defined in \cite{Bobenko2010}. \cite{Guo2010} investigate the gradient flow of this principle.
+The discrete uniformization theory persented here is based on the notion of discrete conformal eqivalence of triangle meshes. The Euclidean definition was first considered by \cite{Luo2004}, the variational principle and applications in computer graphics is due to \cite{Springborn2008, OWF2009, Bobenko2010}. The notion of conformal equivalence of non-Euclidean metrics and corresponding variational principles were first defined in \cite{Bobenko2010}. \cite{Guo2011} investigate the gradient flow of this principle.
 Most of the material presented here can be found in \cite{BobSechSpr}.
 
 \section{Discrete Riemann surfaces}
@@ -91,11 +92,43 @@ Most of the material presented here can be found in \cite{BobSechSpr}.
 A \emph{discrete surface} is a collection of triangles equipped with a metric of constant Gaussian curvature and geodesic edges. Triangles are glued along edges to form a surface.
 \end{definition}
 
-Generically a discrete surface can have boundary components. We consider this case in Section~\ref{sec:planar_domains}. By glueing triangles equipped with a metric of constant curvature we obtain a surface that has constant curvature except for points where the metric has cone-like singularities (Figure~\ref{fig:surface_triangles}). A discrete surface is called Euclidean for $K=0$, hyperbolic for $K=-1$, and spherical if $K=1$.
+Generically a discrete surface can have boundary components where triangles have not been glued. We consider this case in Section~\ref{sec:planar_domains}. By glueing triangles equipped with a metric of constant Gaussian curvature we obtain a surface that has constant curvature except for points where the metric has cone-like singularities (Figure~\ref{fig:surface_triangles}). A discrete surface is called Euclidean for $K=0$, hyperbolic for $K=-1$, and spherical if $K=1$.
+Remark: In the latter we will use the Gaussian curvature and curvature synonymously.
+
+A discrete surface consists of vertices, edges, and faces $S=(V, E, F)$. We use single indices for denoting vertices, e.g., $i \in V$. Edges are denoted by $\it{ij}\in E$ and faces $\it{ijk}\in F$.
 
 \begin{definition}
 The map $l:E\to \R$ of triangle edge lengths of a discrete surface is called a \emph{discrete Euclidean, hyperbolic, or spherical metric} respectively.
 \end{definition}
+
+As in the smooth theory we define what it means for a metric to be conformally eqivalent to another metric. 
+
+\begin{figure}
+\centering
+\scalebox{0.5}{\input{figures/equivalence.pdf_t}}
+\caption{Two Euclidean triangles are discretely conformally equivalent if their edge lengths can be scaled by logarithmic factors $u$ defined on vertices.}
+\label{fig:conformal_equivalence}
+\end{figure}
+
+\begin{definition}
+A discrete Euclidean metric with edge lengths $l$ is \emph{discretely conformally equivalent} to the discrete Euclidean metric $\tilde l$ if there is a function $u:V\to \R$ such that for all edges $\it{ij}\in E$ it is
+\[l_{\it{ij}} = e^{\frac{1}{2}(u_i + u_j)}\tilde l_{\it{ij}}\]
+\end{definition}
+
+For a single Euclidean triangles all metrics are equivalent (Figure~\ref{fig:conformal_equivalence}).
+
+Every Euclidean metric is discretely conformally equivalent to a corresponding hyperbolic or spherical metric by the following 
+
+\begin{definition}
+A discrete Euclidean metric $l$ and a discrete hyperbolic or discrete spherical metric $\tilde l$ are \emph{discretely conformally equivalent} if for all edges $\it{ij}\in E$
+\begin{align*}
+l_{\it{ij}} &= 2\sinh \frac{\tilde l_{\it{ij}}}{2}\\
+l_{\it{ij}} &= 2\sin \frac{\tilde l_{\it{ij}}}{2}
+\end{align*}
+for $\tilde l$ hyperbolic or spherical respectively.
+\end{definition}
+
+Literally this means that in the spherical case each triangle can be fit onto the sphere. The conformally equivalent spherical lengths are the lengths of spherical geodesics connecting the triangle vertices. 
 
 
 \section{Variational principles}
