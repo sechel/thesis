@@ -92,8 +92,9 @@ Most of the material presented here can be found in \cite{BobSechSpr}.
 A \emph{discrete surface} is a collection of triangles equipped with a metric of constant Gaussian curvature and geodesic edges. Triangles are glued along edges to form a surface.
 \end{definition}
 
-Generically a discrete surface can have boundary components where triangles have not been glued. We consider this case in Section~\ref{sec:planar_domains}. By glueing triangles equipped with a metric of constant Gaussian curvature we obtain a surface that has constant curvature except for points where the metric has cone-like singularities (Figure~\ref{fig:surface_triangles}). A discrete surface is called Euclidean for $K=0$, hyperbolic for $K=-1$, and spherical if $K=1$.
-Remark: In the latter we will use the Gaussian curvature and curvature synonymously.
+By glueing triangles equipped with a metric of constant Gaussian curvature we obtain a surface that has constant curvature everywhere except for points where the metric has cone-like singularities (Figure~\ref{fig:surface_triangles}). A discrete surface is called Euclidean for $K=0$, hyperbolic for $K=-1$, and spherical if $K=1$.
+Remark: In the latter we will use Gaussian curvature and curvature synonymously.
+Generically a discrete surface can have boundary components where triangles have not been glued. We consider this case in Section~\ref{sec:planar_domains}. 
 
 A discrete surface consists of vertices, edges, and faces $S=(V, E, F)$. We use single indices for denoting vertices, e.g., $i \in V$. Edges are denoted by $\it{ij}\in E$ and faces $\it{ijk}\in F$.
 
@@ -111,20 +112,24 @@ As in the smooth theory we define what it means for a metric to be conformally e
 \end{figure}
 
 \begin{definition}
+\label{def:conformal_equivalence_euclidean}
 A discrete Euclidean metric with edge lengths $l$ is \emph{discretely conformally equivalent} to the discrete Euclidean metric $\tilde l$ if there is a function $u:V\to \R$ such that for all edges $\it{ij}\in E$ it is
-\[l_{\it{ij}} = e^{\frac{1}{2}(u_i + u_j)}\tilde l_{\it{ij}}\]
+\begin{equation}
+l_{\it{ij}} = e^{\frac{1}{2}(u_i + u_j)}\tilde l_{\it{ij}} \label{eq:euclidean_equivalence}
+\end{equation}
 \end{definition}
 
-For a single Euclidean triangles all metrics are equivalent (Figure~\ref{fig:conformal_equivalence}).
+This definition is motivated by the smooth theory of Riemann surfaces where two metrics $g$ and $\tilde g$ on a $2$-manifold $M$ are conformally equivalent if there is a smooth function $u:M\to \R$ with \[g=e^{2u}\tilde g.\]
 
-Every Euclidean metric is discretely conformally equivalent to a corresponding hyperbolic or spherical metric by the following 
+Every Euclidean metric is discretely conformally equivalent to a corresponding hyperbolic or spherical metric by the following \ref{eq:spherical_equivalence}
 
 \begin{definition}
+\label{def:conformal_equivalence_general}
 A discrete Euclidean metric $l$ and a discrete hyperbolic or discrete spherical metric $\tilde l$ are \emph{discretely conformally equivalent} if for all edges $\it{ij}\in E$
-\begin{align*}
-l_{\it{ij}} &= 2\sinh \frac{\tilde l_{\it{ij}}}{2}\\
-l_{\it{ij}} &= 2\sin \frac{\tilde l_{\it{ij}}}{2}
-\end{align*}
+\begin{align}
+l_{\it{ij}} &= 2\sinh \frac{\tilde l_{\it{ij}}}{2} \label{eq:hyperbolic_equivalence}\\
+l_{\it{ij}} &= 2\sin \frac{\tilde l_{\it{ij}}}{2} \label{eq:spherical_equivalence}
+\end{align}
 for $\tilde l$ hyperbolic or spherical respectively.
 \end{definition}
 
@@ -222,7 +227,8 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 \subsection{Lawsons surface}
 
 
-\section{Conformal Mapping to $\hat{\mathbb{C}}$ (Planned)}
+\section{Meromorphic functions (planned)}
+\subsection{Conformal maps to $\hat{\mathbb{C}}$ with singularities}
 \subsection{Selection of Branch Data}
 \subsection{Examples}
 
@@ -238,7 +244,10 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 	\label{fig:slit_circle}
 \end{figure}
 
-\subsection{Comparison with Examples of the Schwarz-Christoffel community}
+
+\section{Conformal maps of planar domains}
+\subsection{Boundary conditions}
+\subsection{Comparison with examples of the Schwarz-Christoffel community}
 
 \chapter{Discrete Surface Parameterization}
 
@@ -254,12 +263,15 @@ The notion of quasiconformal parameterizations
 \subsection{Constructing the associated family of apploximate minimal surfaces}
 \subsection{A discrete ellipsoid and its dual surface}
 \subsection{Applications in architecture}
-\subsection{Piece-wise projective interpolation for arbitrary parameterizations}
 
-\section{Gridshells and Applications in Architecture}
+\section{Piece-wise projective interpolation for arbitrary parameterizations}
+\subsection{Approximation by conformal deformation}
+\subsection{Examples}
+
+\section{A variational principle for discrete Tschebyshev nets}
 \subsection{Tschebyscheff Meshes}
 \subsection{Variational Principle}
-\subsection{Examples}
+\subsection{Applications in architecture}
 
 \newpage
 \backmatter 
