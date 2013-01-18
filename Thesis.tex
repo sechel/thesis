@@ -121,7 +121,7 @@ l_{\it{ij}} = e^{\frac{1}{2}(u_i + u_j)}\tilde l_{\it{ij}} \label{eq:euclidean_e
 
 This definition is motivated by the smooth theory of Riemann surfaces where two metrics $g$ and $\tilde g$ on a $2$-manifold $M$ are conformally equivalent if there is a smooth function $u:M\to \R$ with \[g=e^{2u}\tilde g.\]
 
-Every Euclidean metric is discretely conformally equivalent to a corresponding hyperbolic or spherical metric by the following \ref{eq:spherical_equivalence}
+Every Euclidean metric is discretely conformally equivalent to a corresponding hyperbolic or spherical metric by the following
 
 \begin{definition}
 \label{def:conformal_equivalence_general}
@@ -130,11 +130,22 @@ A discrete Euclidean metric $l$ and a discrete hyperbolic or discrete spherical 
 l_{\it{ij}} &= 2\sinh \frac{\tilde l_{\it{ij}}}{2} \label{eq:hyperbolic_equivalence}\\
 l_{\it{ij}} &= 2\sin \frac{\tilde l_{\it{ij}}}{2} \label{eq:spherical_equivalence}
 \end{align}
-for $\tilde l$ hyperbolic or spherical respectively.
+for $\tilde l$ hyperbolic or spherical respectively (see Figure~\ref{fig:conformal_equivalence_sph_hyp}).
 \end{definition}
 
-Literally this means that in the spherical case each triangle can be fit onto the sphere. The conformally equivalent spherical lengths are the lengths of spherical geodesics connecting the triangle vertices. 
+\begin{figure}
+\centering
+\scalebox{0.5}{\input{figures/spherical.pdf_t}}
+\caption{Relations between hyperbolic/spherical lengths $\tilde l$ and corresponding Euclidean edge lengths $l$. See Definition~\ref{def:conformal_equivalence_general}.}
+\label{fig:conformal_equivalence_sph_hyp}
+\end{figure}
 
+Literally this means that in the spherical case if a triangle is fit onto the sphere the conformally equivalent spherical lengths are the lengths of spherical geodesics connecting the triangle vertices. 
+The same intuition holds on the upper sheet of the two-sheeted unit hyperboloid for hyperbolic triangles.
+
+Combining Equations~\ref{eq:euclidean_equivalence} and \ref{eq:hyperbolic_equivalence}/\ref{eq:spherical_equivalence} we can define conformal equivalence of Euclidean and hyperbolic/spherical triangulations.
+
+For Euclidean conformally equivalent metrics 
 
 \section{Variational principles}
 
@@ -279,6 +290,7 @@ The notion of quasiconformal parameterizations
 %disable numbering 
 \setcounter{secnumdepth}{-1} 
 \bibliography{Thesis}
+
 
 \end{document}
 
