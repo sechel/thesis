@@ -1,4 +1,7 @@
-\documentclass{book}
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper, english]{book}
 
 \usepackage{color}
 
@@ -71,10 +74,11 @@ Tag der wissenschaftlichen Aussprache: NN\\
 
 \newpage
 \mainmatter
+\setcounter{secnumdepth}{-1} 
 \chapter{Introduction}
 
-
-\chapter{Discrete Uniformization}
+\setcounter{secnumdepth}{2} 
+\chapter{Uniformization of discrete Riemann surfaces}
 
 The discrete uniformization theory persented here is based on the notion of discrete conformal eqivalence of triangle meshes. The Euclidean definition was first considered by \cite{Luo2004}, the variational principle and applications in computer graphics is due to \cite{Springborn2008, OWF2009, Bobenko2010}. The notion of conformal equivalence of non-Euclidean metrics and corresponding variational principles were first defined in \cite{Bobenko2010}. \cite{Guo2011} investigate the gradient flow of this principle.
 Most of the material presented here can be found in \cite{BobSechSpr}.
@@ -121,7 +125,7 @@ l_{\it{ij}} = e^{\frac{1}{2}(u_i + u_j)}\tilde l_{\it{ij}} \label{eq:euclidean_e
 
 This definition is motivated by the smooth theory of Riemann surfaces where two metrics $g$ and $\tilde g$ on a $2$-manifold $M$ are conformally equivalent if there is a smooth function $u:M\to \R$ with \[g=e^{2u}\tilde g.\]
 
-Every Euclidean metric is discretely conformally equivalent to a corresponding hyperbolic or spherical metric by the following
+Every discrete Euclidean metric is discretely conformally equivalent to a corresponding discrete hyperbolic or discrete spherical metric by the following
 
 \begin{definition}
 \label{def:conformal_equivalence_general}
@@ -163,11 +167,11 @@ We can now state the uniformization problem:
 \emph{Given a discrete Riemann surface, find a metric of constant curvature
 without cone singularities.}
 
-This means that the angles $\alpha_{\it{jk}}^i$ of Euclidean, hyperbolic, or spherical triangles around each vertex  $i\in V$ sum up to $2\pi$ (Figure~\ref{fig:angles_at_vertex}). 
+This means that the angles $\alpha_{\it{jk}}^i$ of Euclidean, hyperbolic, or spherical triangles around each vertex  $i\in V$ sum up to $2\pi$ (Figure~\ref{fig:angles_at_vertex}). A discrete surface with a cone-like singularity free metric has constant curvature everywhere. 
 
-As in the smooth case we expect to find a metric with zero Gaussian curvature for tori, a constant negative curvature metric for surfaces with genus $g>1$, and a metric with positive constant curvature for spheres. In the latter we will normalize the curvature of the target spaces to have constant Gaussian curvature $0$, $-1$, or $1$. 
+As in the smooth case we expect to find a discrete metric with zero Gaussian curvature for tori, a constant negative curvature metric for surfaces with genus $g>1$, and a metric with positive constant curvature for spheres. In the latter we will normalize the curvature of the target spaces to have constant Gaussian curvature $0$, $-1$, or $1$. 
 
-In this work we will calculate discrete uniformizations as minimizers of functionals that fit the target geometry. The variational description of the uniformization problem then amounts to finding a critical point of the functional $E(u)$ where
+In this work we calculate discrete uniformizations as minimizers of functionals that fit the target geometry. The variational description of the uniformization problem then amounts to finding a critical point of the functional $E(u)$ where
 
 \begin{equation}
 \label{eq:gradient_variational}
@@ -181,11 +185,8 @@ In this work we will calculate discrete uniformizations as minimizers of functio
 \label{fig:angles_at_vertex}
 \end{figure}
 
-Every Riemann surface $R$ has a universal cover $X$, i.e., a simply connected covering space and a corresponding covering map. A metric of constant curvature on a compact $2$-manifold can be then be realized as its universal cover
+\section{Variational principles for discrete metrics in $\mathbb{E}^2$, $\mathbb{H}^2$, and $\mathbb{S}^2$}
 
-\section{Variational principles}
-
-\subsection{Variational principles for discrete metrics in $\mathbb{E}^2$, $\mathbb{H}^2$, and $\mathbb{S}^2$ }
 Construction of discrete flat metrics. A discrete Euclidean flat metric is the minimizer of a convex functional.
 \begin{eqnarray}
 \lambda_{ij} &:=& 2\log l_{ij}\\
@@ -217,15 +218,16 @@ For the hyperbolic case $\lambda$ and $\tilde\lambda$ are defined as before. Fur
 \end{eqnarray}
 \end{definition}
 
-\section{Uniformization of surfaces of higher genus}
+
+\section{Quotient spaces and fundamental domains}
+
+Every Riemann surface $R$ has a universal cover $X$, i.e., a simply connected covering space and a corresponding covering map. A metric of constant curvature on a compact $2$-manifold can be realized as the quotient of the universal cover over a uniformizing group.
+
 Triangulated surfaces of genus $g\geq 2$ without boundary can be equipped with a discretely conformally equivalent flat hyperbolic metric \cite{Bobenko2010}. By flat hyperbolic metric we mean that the edge length are hyperbolic and for any vertex the angle sum is $2\pi$. To realize this metric in the hyperbolic plane e.g. in the Poicar\'e disk model one has to introduce cuts along a basis of the homotopy. This creates a simply connected domain in $\mathbb H^2$. Matching cut paths are realated by a hyperbolic motion i.e. the M\"obius transformations that leave the unit disk invariant (Figure~\ref{fig:axes_of_motion}).
 
 \subsection{The cut-graph and fuchsian groups}
 \emph{Want so say here: the number of transformations generated by the mapping of corresponding edges equals the number of path segments in the homotopy-cut-graph. They generate a fuchsian group with \#vertices relations}
 
-\begin{proposition}
-	
-\end{proposition}
 
 \begin{figure}
 \centering
@@ -235,14 +237,24 @@ Triangulated surfaces of genus $g\geq 2$ without boundary can be equipped with a
 \end{figure}
 
 \subsection{Minimal presentation}
-
-\section{Canonical fundamental domains of fuchsian groups}
 \subsection{Separated handles}
 \subsection{Opposite sides identified}
 \subsection{Canonical Keen Polygons}
 
 \section{Uniformization of elliptic and hyperelliptic surfaces}
-\subsection{Elliptic Functions}
+In this section we discuss surfaces that arise as branched coverings of $\hat{\C}$. A Riemann surface that can be represented as a double cover of $\Chat$ is called elliptic for $g=1$ and hyperelliptic for $g>1$~\cite[p.~235]{Jost2007}. 
+
+\subsection{Branched coverings of $\Chat$}
+Let $\lambda_1,\ldots,\lambda_{2g+2}\in \hat{\C}$, $\lambda_i\neq \lambda_j \forall i\neq j.$. The algebraic curve
+
+\begin{equation}
+\label{eq:branched_cover}
+C=\{(z,w)\in\C^2 \mid w^2 = \prod_{i=1}^{2g+2}(z-\lambda_i)\}
+\end{equation}
+
+is a one dimensional complex manifold. A branched double cover of $\Chat$ is the projection $\pi:C\to\C$, $C\ni(z,w)\mapsto z$. A discrete branched cover of $\Chat$ is a triangulation of $\pi(C)$ with vertices at $\lambda_i$.
+
+\subsection{Elliptic curves}
 \subsection{The moduli space}
 \subsection{Numerical convergence analysis}
 \subsection{The modulus of the Wente torus}
@@ -258,14 +270,17 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 \subsection{Canonical domains}
 \subsection{Lawsons surface}
 
+\section{Uniformization of Schottky data}
+\subsection{Images of isometric circles}
+\subsection{Hyperelliptic data}
 
 \section{Meromorphic functions (planned)}
 \subsection{Conformal maps to $\hat{\mathbb{C}}$ with singularities}
 \subsection{Selection of Branch Data}
 \subsection{Examples}
 
-\section{Simply and multiply connected domains}
-\label{sec:planar_domains}
+\section{Surfaces with boundary}
+\label{sec:surfaces_with_boundary}
 \subsection{Variation of edge length}
 \subsection{Examples}
 \begin{figure}
@@ -278,8 +293,16 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 
 
 \section{Conformal maps of planar domains}
+\label{sec:planar_domains}
 \subsection{Boundary conditions}
 \subsection{Comparison with examples of the Schwarz-Christoffel community}
+
+
+\section{Java software for discrete uniformization}
+\subsection{Embedded surfaces}
+\subsection{Elliptic and hyperelliptic surfaces}
+\subsection{Schottky data}
+\subsection{Surfaces with boundary}
 
 \chapter{Discrete Surface Parameterization}
 
@@ -301,8 +324,8 @@ The notion of quasiconformal parameterizations
 \subsection{Examples}
 
 \section{A variational principle for discrete Tschebyshev nets}
-\subsection{Tschebyscheff Meshes}
-\subsection{Variational Principle}
+\subsection{Tschebyscheff meshes}
+\subsection{Variational principle}
 \subsection{Applications in architecture}
 
 \newpage
@@ -311,6 +334,8 @@ The notion of quasiconformal parameterizations
 %disable numbering 
 \setcounter{secnumdepth}{-1} 
 \bibliography{Thesis}
+
+\chapter{Acknowledgements}
 
 
 \end{document}
