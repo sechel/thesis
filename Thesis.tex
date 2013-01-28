@@ -1,9 +1,13 @@
 %!TEX TS-program = pdflatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[a4paper, english]{book}
+\documentclass[a4paper]{book}
 
 \usepackage{color}
+
+\usepackage{contour}
+\contournumber{32}
+\contourlength{0.1em}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -36,7 +40,7 @@
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Chat}{\hat{\mathbb C}}
 
-\title{Uniformization of discrete Riemann surfaces and Applications}
+\title{Variational Methods for Discrete Surface Parameterization. Applications and Implementation.}
 \author{
 vorgelegt von\\
 Dipl.-Math. techn. Stefan Sechelmann\\
@@ -78,255 +82,10 @@ Tag der wissenschaftlichen Aussprache: NN\\
 \chapter{Introduction}
 
 \setcounter{secnumdepth}{2} 
-\chapter{Uniformization of discrete Riemann surfaces}
 
-The discrete uniformization theory persented here is based on the notion of discrete conformal eqivalence of triangle meshes. The Euclidean definition was first considered by \cite{Luo2004}, the variational principle and applications in computer graphics is due to \cite{Springborn2008, OWF2009, Bobenko2010}. The notion of conformal equivalence of non-Euclidean metrics and corresponding variational principles were first defined in \cite{Bobenko2010}. \cite{Guo2011} investigate the gradient flow of this principle.
-Most of the material presented here can be found in \cite{BobSechSpr}.
-
-\section{Discrete Riemann surfaces}
-
-\begin{figure}
-\centering
-\scalebox{0.8}{\input{figures/triangles.pdf_t}}
-\caption[Discrete surfaces from glued triangles]{Discrete surfaces constructed from glued triangles of constant curvature. Euclidean, hyperbolic, and spherical. Bold edegs are identified to create a cone-like singularity at the vertex.}
-\label{fig:surface_triangles}
-\end{figure}
-
-\begin{definition}
-A \emph{discrete surface} is a collection of triangles equipped with a metric of constant Gaussian curvature and geodesic edges. Triangles are glued along edges to form a surface.
-\end{definition}
-
-By glueing triangles equipped with a metric of constant Gaussian curvature we obtain a surface that has constant curvature everywhere except for points where the metric has cone-like singularities (Figure~\ref{fig:surface_triangles}). A discrete surface is called Euclidean for $K=0$, hyperbolic for $K<0$, and spherical if $K>0$.
-Remark: In the latter we will use Gaussian curvature and curvature synonymously.
-Generically a discrete surface can have boundary components where triangles have not been glued. We consider this case in Section~\ref{sec:planar_domains}. 
-
-A discrete surface consists of vertices, edges, and faces $S=(V, E, F)$. We use single indices for denoting vertices, e.g., $i \in V$, edges are denoted $\it{ij}\in E$, and faces $\it{ijk}\in F$.
-
-\begin{definition}
-The map $l:E\to \R$ of triangle edge lengths of a discrete surface is called a \emph{discrete Euclidean, hyperbolic, or spherical metric} respectively.
-\end{definition}
-
-As in the smooth theory we define what it means for a metric to be conformally eqivalent to another metric. 
-
-\begin{figure}
-\centering
-\scalebox{0.5}{\input{figures/equivalence.pdf_t}}
-\caption[Euclidean conformal equivalence]{Two Euclidean triangles are discretely conformally equivalent if their edge lengths can be scaled by logarithmic factors $u$ defined on vertices.}
-\label{fig:conformal_equivalence}
-\end{figure}
-
-\begin{definition}
-\label{def:conformal_equivalence_euclidean}
-A discrete Euclidean metric with edge lengths $l$ is \emph{discretely conformally equivalent} to the discrete Euclidean metric $\tilde l$ if there is a function $u:V\to \R$ such that for all edges $\it{ij}\in E$ it is
-\begin{equation}
-l_{\it{ij}} = e^{\frac{1}{2}(u_i + u_j)}\tilde l_{\it{ij}} \label{eq:euclidean_equivalence}
-\end{equation}
-\end{definition}
-
-This definition is motivated by the smooth theory of Riemann surfaces where two metrics $g$ and $\tilde g$ on a $2$-manifold $M$ are conformally equivalent if there is a smooth function $u:M\to \R$ with \[g=e^{2u}\tilde g.\]
-
-Every discrete Euclidean metric is discretely conformally equivalent to a corresponding discrete hyperbolic or discrete spherical metric by the following
-
-\begin{definition}
-\label{def:conformal_equivalence_general}
-A discrete Euclidean metric $l$ and a discrete hyperbolic or discrete spherical metric $\tilde l$ are \emph{discretely conformally equivalent} if for all edges $\it{ij}\in E$
-\begin{align}
-l_{\it{ij}} &= 2\sinh \frac{\tilde l_{\it{ij}}}{2} \label{eq:hyperbolic_equivalence}\\
-l_{\it{ij}} &= 2\sin \frac{\tilde l_{\it{ij}}}{2} \label{eq:spherical_equivalence}
-\end{align}
-for $\tilde l$ hyperbolic or spherical respectively (see Figure~\ref{fig:conformal_equivalence_sph_hyp}).
-\end{definition}
-
-\begin{figure}
-\centering
-\scalebox{0.5}{\input{figures/spherical.pdf_t}}
-\caption[Conformal equivalence of Euclidean and hyperbolic/spherical metrics]{Relations between hyperbolic/spherical lengths $\tilde l$ and corresponding Euclidean edge lengths $l$. See Definition~\ref{def:conformal_equivalence_general}.}
-\label{fig:conformal_equivalence_sph_hyp}
-\end{figure}
-
-Literally this means that in the spherical case if a triangle is fit onto the sphere the conformally equivalent spherical lengths are the lengths of spherical geodesics connecting the triangle vertices. 
-The same intuition holds on the upper sheet of the two-sheeted unit hyperboloid for hyperbolic triangles.
-
-Combining Equations~\ref{eq:euclidean_equivalence} and \ref{eq:hyperbolic_equivalence}/\ref{eq:spherical_equivalence} we can define conformal equivalence of Euclidean and hyperbolic/spherical triangulations via transitivity of equivalence.
-
-With this general notion of conformal equivalence of Euclidean, hyperbolic, and spherical metrics we can now define discrete Riemann surfaces.
-
-\begin{definition}
-\label{def:discrete_riemann_surface}
-A discrete Riemann surface is an equivalence class of discretely conformally equivalent metrics.
-\end{definition}
-
-If one restricts the equivalence class to either Euclidean, hyperbolic, or spherical metrics the length cross-ratio $\mathrm{lcr}_{\it{ij}}$ at edge $\it{ij}$ with opposite vertices $k$ and $m$ is a conformal invariant. Note that this definition depends on the orientation of the surface.
-
-\begin{equation}
-	\mathrm{lcr}_{\it{ij}} = \frac{l_{\it{ik}} l_{\it{jm}}} {l_{\it{mi}} l_{\it{kj}}} \label{eq:length_cross_ratio}
-\end{equation}
-
-\section{Uniformization}
-We can now state the uniformization problem:
-\emph{Given a discrete Riemann surface, find a metric of constant curvature
-without cone singularities.}
-
-This means that the angles $\alpha_{\it{jk}}^i$ of Euclidean, hyperbolic, or spherical triangles around each vertex  $i\in V$ sum up to $2\pi$ (Figure~\ref{fig:angles_at_vertex}). A discrete surface with a cone-like singularity free metric has constant curvature everywhere. 
-
-As in the smooth case we expect to find a discrete metric with zero Gaussian curvature for tori, a constant negative curvature metric for surfaces with genus $g>1$, and a metric with positive constant curvature for spheres. In the latter we will normalize the curvature of the target spaces to have constant Gaussian curvature $0$, $-1$, or $1$. 
-
-In this work we calculate discrete uniformizations as minimizers of functionals that fit the target geometry. The variational description of the uniformization problem then amounts to finding a critical point of the functional $E(u)$ where
-
-\begin{equation}
-\label{eq:gradient_variational}
-\frac{\partial E}{\partial u_i} = 2\pi - \sum_{\it{ijk}\ni i} \alpha^i_{\it{jk}}.
-\end{equation}  
-
-\begin{figure}
-\centering
-\scalebox{0.4}{\input{figures/angles.pdf_t}}
-\caption[Angles at a vertex]{Angles a a vertex}
-\label{fig:angles_at_vertex}
-\end{figure}
-
-\section{Variational principles for discrete metrics in $\mathbb{E}^2$, $\mathbb{H}^2$, and $\mathbb{S}^2$}
-
-Construction of discrete flat metrics. A discrete Euclidean flat metric is the minimizer of a convex functional.
-\begin{eqnarray}
-\lambda_{ij} &:=& 2\log l_{ij}\\
-\tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
-f_{Euc}(u_i, u_j, u_k) &:=& \alpha_i \tilde \lambda_{jk} + \alpha_j \tilde \lambda_{ki} + \alpha_k \tilde \lambda_{ij} + 2\left(\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k)\right)
-\end{eqnarray}
-
-\begin{definition}
-\begin{eqnarray}
-	E_{Euc}(u) &:=& \sum_{ijk\in F}\left(f_{Euc}(u_i, u_j, u_k) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
-\end{eqnarray}
-\end{definition}
-
- This definition and the derivatives can be found in \cite{Bobenko2010}
-
-For the hyperbolic case $\lambda$ and $\tilde\lambda$ are defined as before. Further define
-\begin{eqnarray}
-	\beta_i &:=& \frac{1}{2} \left(\pi + \alpha_i - \alpha_j - \alpha_k \right)\\
-	\beta_j &:=& \frac{1}{2} \left(\pi - \alpha_i + \alpha_j - \alpha_k \right)\\
-	\beta_k &:=& \frac{1}{2} \left(\pi - \alpha_i - \alpha_j + \alpha_k \right)\\
-	f_{Hyp}(u_i, u_j, u_k) &:=&\beta_i \tilde \lambda_{jk} + \beta_j \tilde \lambda_{ki} + \beta_k \tilde \lambda_{ij}\\ 		
-				&&+\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k) + \ML(\beta_i) + \ML(\beta_j) + \ML(\beta_k)\\
-				&&+\ML\left(\frac{1}{2} (\pi - \alpha_i - \alpha_j - \alpha_k)\right)
-\end{eqnarray}
-
-\begin{definition}
-\begin{eqnarray}
-	E_{Hyp}(u) &:=& \sum_{ijk\in F}\left(f_{Hyp}(u_i, u_j, u_k) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
-\end{eqnarray}
-\end{definition}
-
-
-\section{Quotient spaces and fundamental domains}
-
-Every Riemann surface $R$ has a universal cover $X$, i.e., a simply connected covering space and a corresponding covering map. A metric of constant curvature on a compact $2$-manifold can be realized as the quotient of the universal cover over a uniformizing group.
-
-Triangulated surfaces of genus $g\geq 2$ without boundary can be equipped with a discretely conformally equivalent flat hyperbolic metric \cite{Bobenko2010}. By flat hyperbolic metric we mean that the edge length are hyperbolic and for any vertex the angle sum is $2\pi$. To realize this metric in the hyperbolic plane e.g. in the Poicar\'e disk model one has to introduce cuts along a basis of the homotopy. This creates a simply connected domain in $\mathbb H^2$. Matching cut paths are realated by a hyperbolic motion i.e. the M\"obius transformations that leave the unit disk invariant (Figure~\ref{fig:axes_of_motion}).
-
-\subsection{The cut-graph and fuchsian groups}
-\emph{Want so say here: the number of transformations generated by the mapping of corresponding edges equals the number of path segments in the homotopy-cut-graph. They generate a fuchsian group with \#vertices relations}
-
-
-\begin{figure}
-\centering
-\includegraphics[width=0.4\linewidth]{cutCuttedBrezel01}
-\caption{Hyperbolic flat metric on a genus $2$ surface and the axes of the associated hyperbolic motions.}
-\label{fig:axes_of_motion}
-\end{figure}
-
-\subsection{Minimal presentation}
-\subsection{Separated handles}
-\subsection{Opposite sides identified}
-\subsection{Canonical Keen Polygons}
-
-\section{Uniformization of elliptic and hyperelliptic surfaces}
-In this section we discuss surfaces that arise as branched coverings of $\hat{\C}$. A Riemann surface that can be represented as a double cover of $\Chat$ is called elliptic for $g=1$ and hyperelliptic for $g>1$~\cite[p.~235]{Jost2007}. 
-
-\subsection{Branched coverings of $\Chat$}
-Let $\lambda_1,\ldots,\lambda_{2g+2}\in \hat{\C}$, $\lambda_i\neq \lambda_j \forall i\neq j.$. The algebraic curve
-
-\begin{equation}
-\label{eq:branched_cover}
-C=\{(z,w)\in\C^2 \mid w^2 = \prod_{i=1}^{2g+2}(z-\lambda_i)\}
-\end{equation}
-
-is a one dimensional complex manifold. A branched double cover of $\Chat$ is the projection $\pi:C\to\C$, $C\ni(z,w)\mapsto z$. A discrete branched cover of $\Chat$ is a triangulation of $\pi(C)$ with vertices at $\lambda_i$.
-
-\subsection{Elliptic curves}
-\subsection{The moduli space}
-\subsection{Numerical convergence analysis}
-\subsection{The modulus of the Wente torus}
-
-\subsection{Construction of hyperelliptic surfaces}
-Any hyperelliptic Riemann surface can be expressed as an algebraic curve of the form
-\[ w^2 = \prod_{i=1}^{2g+2}(z-\lambda_i) \quad\quad g\geq1,\quad \lambda_i\neq \lambda_j \forall i\neq j.\]
-Here $\lambda_i$ are the branch points of the doubly covered Riemann sphere.
-
-\subsection{Weierstrass points on hyperelliptic surfaces}
-A hyperelliptic surface comes together with a holomorphic involution $h$ called the hyperelliptic involution. The branch points are fixed points under this transformation. For a hyperelliptic algebraic curve it is $h(\mu, \lambda)=(-\mu, \lambda)$
-
-\subsection{Canonical domains}
-\subsection{Lawsons surface}
-
-\section{Uniformization of Schottky data}
-\subsection{Images of isometric circles}
-\subsection{Hyperelliptic data}
-
-\section{Meromorphic functions (planned)}
-\subsection{Conformal maps to $\hat{\mathbb{C}}$ with singularities}
-\subsection{Selection of Branch Data}
-\subsection{Examples}
-
-\section{Surfaces with boundary}
-\label{sec:surfaces_with_boundary}
-\subsection{Variation of edge length}
-\subsection{Examples}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.3\linewidth]{image/slit_domain/domain_grid.png}
-	\includegraphics[width=0.3\linewidth]{image/slit_domain/image_grid.png}
-	\caption{Square with symmetric slit to the circle}
-	\label{fig:slit_circle}
-\end{figure}
-
-
-\section{Conformal maps of planar domains}
-\label{sec:planar_domains}
-\subsection{Boundary conditions}
-\subsection{Comparison with examples of the Schwarz-Christoffel community}
-
-
-\section{Java software for discrete uniformization}
-\subsection{Embedded surfaces}
-\subsection{Elliptic and hyperelliptic surfaces}
-\subsection{Schottky data}
-\subsection{Surfaces with boundary}
-
-\chapter{Discrete Surface Parameterization}
-
-
-\section{Discrete quasiisothermic parametrizations}
-The notion of quasiconformal parameterizations
-
-\subsection{Discrete quasiisothermic parameterizations}
-
-\subsection{Formulation as boundary value problem}
-\subsection{Global approach}
-\subsection{Variational principle for S-isothermic surfaces}
-\subsection{Constructing the associated family of apploximate minimal surfaces}
-\subsection{A discrete ellipsoid and its dual surface}
-\subsection{Applications in architecture}
-
-\section{Piece-wise projective interpolation for arbitrary parameterizations}
-\subsection{Approximation by conformal deformation}
-\subsection{Examples}
-
-\section{A variational principle for discrete Tschebyshev nets}
-\subsection{Tschebyscheff meshes}
-\subsection{Variational principle}
-\subsection{Applications in architecture}
+\input{Chapter1}
+\input{Chapter2}
+\input{Chapter3}
 
 \newpage
 \backmatter 
@@ -339,41 +98,3 @@ The notion of quasiconformal parameterizations
 
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 

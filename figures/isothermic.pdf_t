@@ -1,0 +1,43 @@
+\begin{picture}(0,0)%
+\includegraphics{isothermic.pdf}%
+\end{picture}%
+\setlength{\unitlength}{2171sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(8809,3153)(579,-2199)
+\put(5626,-511){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi$}%
+}}}}
+\put(3346,-516){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$j$}}%
+}}}}
+\put(2094,-327){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$i$}}%
+}}}}
+\put(2783,351){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$k$}}%
+}}}}
+\put(6018,472){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$v$}%
+}}}}
+\put(9057,-2108){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u$}%
+}}}}
+\put(2407, 40){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{\mathrm{\it{ki}}}$}}%
+}}}}
+\put(2945,-67){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{\mathrm{\it{jk}}}$}}%
+}}}}
+\put(2540,-366){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{\mathrm{\it{ij}}}$}}%
+}}}}
+\put(6998,-503){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{\mathrm{\it{ki}}}$}}%
+}}}}
+\put(7588,-400){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{\mathrm{\it{jk}}}$}}%
+}}}}
+\put(7528,-1459){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{\mathrm{\it{ij}}}$}}%
+}}}}
+\put(7395,318){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\Phi(k)$}}%
+}}}}
+\put(6376,-1411){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\Phi(i)$}}%
+}}}}
+\put(8776,-1636){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\Phi(j)$}}%
+}}}}
+\end{picture}%

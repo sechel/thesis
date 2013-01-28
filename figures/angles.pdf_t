@@ -14,7 +14,7 @@
 }}}}
 \put(1951,-1786){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$i$}%
 }}}}
-\put(2851,-1786){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\alpha^i_{\it{ji}}$}%
+\put(2851,-1786){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\alpha^i_{\it{jk}}$}%
 }}}}
 \put(3901,-436){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$k$}%
 }}}}
