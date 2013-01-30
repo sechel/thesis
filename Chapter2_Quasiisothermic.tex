@@ -4,6 +4,9 @@
 
 \section{Discrete quasiisothermic parametrizations}
 
+This work is joint woth with Thilo R{\"o}rig and Alexander Bobenko and was published in 
+\cite{Sechelmann2012}
+
 \emph{Abstract:} 
 In architecture the quality of a quad-mesh depends on the shape of the individual
 quadrilaterals. The ideal shape from an architectural point of view is the
@@ -22,26 +25,31 @@ further to obtain disk packing representations. The quadrilaterals of these
 meshes are planar and possess touching incircles.
 
 \begin{figure}
-  \centering
-  \includegraphics[width=0.48\linewidth]{image/aag2012/cover01.png}
-  \includegraphics[width=0.48\linewidth]{image/aag2012/cover02.png}\\
-  \includegraphics[width=0.48\linewidth]{image/aag2012/cover03.png}
-  \includegraphics[width=0.48\linewidth]{image/aag2012/cover04.png}
-  \caption{The algorithmic steps of this paper: For a triangulated surface we calculate 
-	texture coordinates by solving a boundary value problem for
-    	principle curvature directions on boundary edges (checker board texture
-    	and red directions). The edges of the corresponding quad mesh
-	align with the curvature directions (red crosses). The mesh is then
-	optimized towards planar quads with touching incircles.
-  }
- \label{fig:teaser}
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[width=0.48\linewidth]{image/aag2012/cover01.png}
+\includegraphics[width=0.48\linewidth]{image/aag2012/cover02.png}
+}\\
+\resizebox{\textwidth}{!}{
+\includegraphics[width=0.48\linewidth]{image/aag2012/cover03.png}
+\includegraphics[width=0.48\linewidth]{image/aag2012/cover04.png}
+}
+\caption[Quasiisothermic parameterization step-by-step]{The algorithmic 
+steps of this paper: For a triangulated surface we calculate 
+texture coordinates by solving a boundary value problem for
+principle curvature directions on boundary edges (checker board texture
+and red directions). The edges of the corresponding quad mesh
+align with the curvature directions (red crosses). The mesh is then
+optimized towards planar quads with touching incircles.
+}
+\label{fig:teaser}
 \end{figure}
 
 
 \begin{figure}
 \centering
 \resizebox{\linewidth}{!}{\input{figures/all_mesh.pdf_t}}
-\caption{The surface examples of this paper. All have been parameterized and
+\caption[Quasiisothermic parameterization: Examples]{The surface examples of this paper. All have been parameterized and
 remeshed. $(a)$ The \textsc{Teaser} surface is the minimizer of a spring energy
 with a smooth fixed boundary curve. $(b)$ A \textsc{Minimal} surface with
 polygonal boundary curve. $(c)$ \textsc{Dome}: Part of a NURBS surface
@@ -172,10 +180,12 @@ research in discrete differential geometry. A good overview of the recent
 development and literature can be found in the book~\cite{BobenkoSuris2008}. 
 
 
-In the next two sections we introduce the notion of quasiisothermic parameterizations and the
+\subsection{Discrete quasiisothermic parameterization}
+\label{sec:parametrization}
+In this section we introduce the notion of quasiisothermic parameterizations and the
 corresponding quality measure.
 
-\subsection{Discrete parameterizations}
+\subsubsection{Discrete parameterizations}
 Let $M=(V,E,F)$ be a triangle mesh. The elements of $V$ are the vertices of the
 mesh denoted by simple indices $i\in V$. Edges are denoted by double
 indices $\mathrm{\it{ij}}\in E$, and faces are denoted $\mathrm{\it{ijk}}\in F$. A triangulated surface is
@@ -207,13 +217,13 @@ $v$-axis of the parameter space. One could equally use the $u$-axis here.
 
 \begin{figure}
 \centering
-\input{figures/isothermic.pdf_t}
+\resizebox{\textwidth}{!}{\input{figures/isothermic.pdf_t}}
 \caption{A discrete isothermic parameterization. Angles between triangle edges 
 and a curvature direction family are preserved by the map.}
 \label{fig:isothermic_parameterization}
 \end{figure}
 
-\subsection{Discrete quasiisothermic parameterizations}
+\subsubsection{Quasiisothermic parameterizations}
 Our main example of a parameterization with an angle function $\alpha$ comes
 from $\alpha$ defined by the curvature directions of a surface $S:V\to
 \mathbb R^3$ (see Fig.~\ref{fig:isothermic_parameterization}). For a triangulated surface 
@@ -256,8 +266,8 @@ parameter space as with curvature directions on the surface. We will now
 create parameterizations that have small $Q$.
 
 
-\subsection{Minimization of the Functional - Discrete Conformal Maps}
-\label{subsec:algorithm}
+\subsection{Minimization of the Functional}
+\label{sec:algorithm}
 
 In this section the surface $M$ is a triangulated surface with one boundary
 component. We will now construct a function $\Phi$ that
@@ -266,6 +276,9 @@ conformal map in the sense of \cite{Springborn2008} in the interior of the
 surface. We argue under which circumstances this leads to nice
 behaviour in the interior. We start by briefly introducing discrete conformal
 maps and the boundary conditions we need for our purposes.
+
+\subsubsection{Discrete conformal maps}
+\label{subsub:discrete_conformal_maps}
 
 We recall the definition by Springborn~\emph{et al.} of discrete conformal 
 maps via conformal equivalence of triangle meshes. It is stated in terms of
@@ -286,7 +299,7 @@ For a given triangle mesh there is a unique solution $\mu$ that retains the
 boundary edge lengths. Another unique solution can be obtained by fixing 
 the angles between consecutive boundary edges. These angles have to be 
 chosen consistently obeying the Gau\ss-Bonnet relation 
-(see Sec.~\ref{sub:boundary}).
+(see the section about singularities).
 
 The function~$\mu$ for a given triangle mesh can be found as the minimizer 
 of a convex functional. Thus its computation is efficient. The resulting 
@@ -298,13 +311,13 @@ These so-called cone points will be inserted at singularities of the
 parameterization.
 
 
-\subsection{Curvature Boundary Conditions}
-\label{sub:boundary}
+\subsubsection{Curvature boundary conditions}
+\label{subsub:boundary}
 
 \begin{figure}
 \centering 
-\input{figures/boundary_conditions2_horizontal.pdf_t}
-\caption{Curvature boundary conditions: In parameter space the interior angle 
+\resizebox{\textwidth}{!}{\input{figures/boundary_conditions2_horizontal.pdf_t}}
+\caption[Curvature boundary conditions]{Curvature boundary conditions: In parameter space the interior angle 
 $\theta_j$ at the vertex~$\Phi(j)$ has to be chosen such that curvature 
 directions given by angles $\alpha_{\mathrm{\it{ij}}}$ and $\alpha_{\mathrm{\it{jk}}}$ align with the 
 $v$-axis. This choice is unique up to addition
@@ -336,8 +349,8 @@ boundary vertices serve as boundary conditions for the discrete conformal
 parameterization. A conformal parameterization with these boundary conditions
 will then have perfect alignment of curvature directions at the boundary.
 
-\subsection{Singularities}
-\label{sub:singularities}
+\subsubsection{Singularities}
+\label{subsub:singularities}
 There exists an analog of the smooth Gau{\ss}-Bonnet theorem
 for discrete surfaces that relates the Gaussian and the boundary curvature to
 the Euler characteristic. During parameterization we construct a metric that is
@@ -371,12 +384,12 @@ parameterization.
 \includegraphics[width=\linewidth]{image/aag2012/dach_example01_directions.png}
 \caption{Parameterization of the \textsc{Roof} model. The discrete 
 curvature lines approximate curvature directions with high quality. See 
-Section~\ref{sub:examples_quality} for a discussion.}
+Section~\ref{subsub:examples_quality} for a discussion.}
 \label{fig:dach01_directions}
 \end{figure}
 
-\subsection{Implementation}
-\label{sub:parameterization}
+\subsubsection{Implementation}
+\label{subsub:parameterization}
 
 The algorithm to compute a quasiisothermic parameterization with vanishing modulus at the 
 boundary of the domain is the following:
@@ -395,7 +408,7 @@ of the surface this defines the angle function
 $\alpha$. 
 
 We deduce the angles $\theta$ for the boundary vertices as described in
-Section~\ref{sub:boundary}. These angles are the boundary curvatures we plug
+Section~\ref{subsub:boundary}. These angles are the boundary curvatures we plug
 into the algorithm of Springborn \emph{et al.}\ to obtain a conformal
 parameterization. If necessary, we pick singularities for the curvature field at vertices
 and prescribe corresponding cone angles by inspection of the curvature direction
@@ -421,16 +434,13 @@ and regluing: We use the projective interpolation in the texture domain to
 increase the quality of the result. Previously cut paths from singularities to the 
 boundary are sewed up to obtain the final remesh.
 
-\subsection{Global approach??}
-
-\subsection{Examples and Quality}
-\label{sub:examples_quality}
+\subsubsection{Examples and quality}
+\label{subsub:examples_quality}
 
 \begin{figure}
-\centering
 \includegraphics[width=\linewidth]{image/aag2012/dach01_quality_highres.png}
 \includegraphics[width=\linewidth]{image/aag2012/dach02_quality_highres.png}
-\caption{The quality of the parameterization is measured in radians per
+\caption[Parameterization quality plot]{The quality of the parameterization is measured in radians per
 edge of the underlying triangulation. The checkerboard texture indicates the parameter
 lines of the map. Small (red and yellow) beads represent good curvature direction quality, big
 beads (green and blue) represent high deviation. The color of the histogram
@@ -530,13 +540,13 @@ cannot expect the solution to follow curvature lines as the distance to the boun
 increases.
 
 
-\subsection{Discrete S-isothermic Surfaces}
+\subsection{Discrete S-isothermic surfaces}
 \label{sec:s-isothermic}
 
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{image/aag2012/all_circles.png}
-\caption{S-isothermic meshes created from the models presented in
+\caption[S-isothermic meshes]{S-isothermic meshes created from the models presented in
 Figure~\ref{fig:all_mesh}.
 The inner quadrilaterals are optimized towards touching incircles. A series of
 touching circles in a row can be interpreted as discrete curvature line.}
@@ -556,8 +566,8 @@ parametrizations shown in Figure~\ref{fig:all_mesh}.
 \subsubsection{Variational Principle}
 
 \begin{figure}
-\input{figures/e_touching_circles.pdf_t}
 \centering
+\resizebox{0.4\textwidth}{!}{\input{figures/e_touching_circles.pdf_t}}
 \caption{Labels for the touching-circles-functional at an edge. The circles touch 
 if the ratio $\cot\left(\beta^i/2\right)/\cot\left(\beta^j/2\right)$ is equal on both sides of the edge.}
 \label{fig:functional}
@@ -604,8 +614,6 @@ For an interior edge $ij\in E$ we define
 On boundary edges the energy is zero. All energies can be formulated 
 in terms of the vertex coordinates and the derivatives can be calculated explicitly.
 
-
-
 Since all energies are in general non-convex we need a good initial guess to 
 find meaningful minimizers of $E_S$.
 S-isothermic minimal surfaces converge to isothermic parameterizations of
@@ -620,11 +628,11 @@ minimizers of $E_S$. Figure~\ref{fig:convergence} shows convergence plots of
 $E_S$ for the four models that were discussed in the previous section.
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{image/aag2012/dach_example01_circles.png}
+\resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{image/aag2012/dach_example01_circles.png}}
 \caption{The S-isothermic circle packing on the \textsc{Roof} model in detail.}
 \end{figure}
 
-As seen in the quality analysis of Section~\ref{sub:examples_quality}, the
+As seen in the quality analysis of Section~\ref{subsub:examples_quality}, the
 \textsc{Teaser}, the \textsc{Minimal}, and the \textsc{Roof} models are
 quasiisothermic surfaces with low modulus. For these models the corresponding S-isothermic
 surface is also close to the input surface. Figure~\ref{fig:convergence} shows
@@ -637,31 +645,159 @@ especially around the singularities.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\linewidth]{image/aag2012/convergence_plots_embedded.pdf}
-\caption{Convergence behavior of $E_S$ during optimization. We use the meshes 
+\resizebox{0.7\textwidth}{!}{\includegraphics{image/aag2012/convergence_plots_embedded.pdf}}
+\caption[Convergence behavior of $E_S$]{Convergence behavior of $E_S$ during optimization. We use the meshes 
 displayed in Figure~\ref{fig:all_mesh} as initial guesses for the minimization. The
 convergence of the Teaser geometry is slower due to the high complexity.}
 \label{fig:convergence}
 \end{figure}
 
-\subsection{Constructing the associated family of apploximate minimal surfaces}
-\subsection{A discrete ellipsoid and its dual surface}
-\subsection{Applications in architecture}
+\subsubsection{Isometric Deformations of Minimal Surfaces}
+\label{sub:isometric}
+\begin{figure*}
+\centering
+\resizebox{\textwidth}{!}{\input{figures/isometric.pdf_t}}
+\caption{Non-trivial isometric deformations of a minimal surface. The edges of the dual
+surface are rotated to create a \mbox{$1$-parameter} family of isometrically
+deformed surfaces with 
+period $2\pi$. The histogram shows the edge length error of the $90^\circ$ model
+when compared 
+with the initial surface. The mean edge length deviation of this model is $1.28\%$.}
+\label{fig:isometric} 
+\end{figure*}
 
-\section[Piece-wise projective interpolation for arbitrary parameterizations] % for the table of contents
-{Piece-wise projective interpolation for arbitrary parameterizations % normal title
-\sectionmark{Piece-wise projective interpolation} % title on the first page header of section
-}
-\sectionmark{Piece-wise projective interpolation} % on other page headers of the sectioin
+Every smooth minimal surface possesses a $1$-parameter (associated) family of
+non-trivial isometric deformations. All surfaces in this family have the same
+Gau{\ss} map. For discrete S-isothermic minimal surfaces this construction is
+discretized in~\cite{BobHofSpr06}: Edge lengths and the conformality of the
+parameterization are preserved. We need to introduce the concept of dual surface
+to construct the family of isometric surfaces.
 
-\subsection{Approximation by conformal deformation}
-\subsection{Examples}
+\noindent\textbf{The Dual Surface.}
+In differential geometry for isothermic surfaces there is a notion of a dual
+surface.  This dual or Christoffel transform is also an isothermic surface. Both
+surfaces are parameterized with isothermic coordinates. This setup can be
+discretized using the definition of discrete S-isothermic surfaces. The dual
+surface can be constructed using the incircle structure of S-isothermic meshes.
+We introduce consistent signs on edges on a discrete S-isothermic surface such
+that opposite sides of the quads have the same sign and consecutive edges in a
+quad have different signs. The dual mesh of a mesh $M$ will have parallel edges
+calculated as follows: Let $e_{ij}=v_j-v_i$ be an edge vector of~$M$. Then the
+dual edge vector $e_{ij}^*$ satisfies the following equation:
+\[e_{ij}^* = \pm \frac{1}{r_i \cdot r_j} e_{ij}\]
+where $r_i$ and $r_j$ are the distances from the vertex $v_i$ and $v_j$ to the
+touching point of the incircles of incident faces at the edge~$e_{ij}$. For a
+given
+discrete S-isothermic mesh we can easily calculate the dual mesh by enumerating
+the vertices along a spanning tree of edges. In Figure~\ref{fig:isometric} the
+dual surface of the \textsc{Minimal} model is shown in the upper left hand
+corner.  Via the dual surface we can now construct isometric deformations of
+minimal surfaces.
 
-\section{A variational principle for discrete Tschebyshev nets}
-\subsection{Tschebyscheff meshes}
-\subsection{Variational principle}
-\subsection{Applications in architecture}
+\noindent\textbf{Deformation.}
+The dual of a smooth minimal surface coincides with its Gau{\ss} map which is a
+part of a sphere. This sphere may be multiply covered. For discrete S-isothermic
+minimal surfaces this Gau{\ss} map is a part of a Koebe polyhedron, i.e., a
+polyhedral surfaces with edges tangent to a sphere. On the Koebe polyhedron
+every edge is rotated by a fixed angle in the tangent space of the sphere at the
+points of tangency of the edge. The resulting edge vectors again form closed
+quads and can be dualized. This dual surface has the same edge lengths as the
+initial minimal surface.
+
+For minimal quad meshes with touching incircles that were created using our
+parameterization and the optimization step, the dual surface will be close to a
+Koebe polyhedron. We use a least-squares-sphere to define a consistent tangent
+space at the touching points of incircles with the edges. The resulting
+deformation of a given minimal surface is then close to isometric. To distribute
+the isometry error on the edges we average over different roots of the layout
+spanning tree. Surfaces that do not possess exact isometric deformations are
+deformed approximative.
+
+We apply this procedure to the \textsc{Minimal} model
+\mbox{(Figure~\ref{fig:all_mesh}a)}. Figure~\ref{fig:isometric} shows the
+surface together
+with its dual and isometrically deformed versions with different turning angles.
+
+
+\subsection{Conclusions and Future Research}
+\label{sec:future}
+The main contributions of this article are, on the one hand, the definition of 
+quasiisothermic parameterizations together with a new algorithm to
+compute parameterizations of surfaces that optimizes the corresponding quality measure.
+On the other hand, we have defined a new energy for meshes with touching incircles.
+
+We see the main advantage of the algorithm presented in
+Section~\ref{sec:parametrization} in its simplicity and its applicability to
+shell-like roof structures which arise in architectural models. Since these
+models often have almost constant mean curvature and thus allow for an almost
+isothermic parameterization, our algorithm performs particularly well on these
+examples.
+
+The new energy described in Section~\ref{sec:s-isothermic} is closely related
+to the article of \cite{Schiftner2009} dealing with
+circle packing meshes. They explicitly do not treat quadrilateral meshes since
+they are aware of the shape restrictions and focus on triangle meshes instead.
+The shape restriction lies in the core of isothermic surfaces but
+did not influence our results dramatically for the surfaces in our focus. How
+to approximate arbitrary surfaces by isothermic surfaces is unknown and will be
+subject to future research. The results of Section~\ref{sec:s-isothermic}
+suggest that this might be possible using related methods.
+
+Our new functional generates quad circle packing meshes in the sense of
+Schiftner \emph{et al.}. For surfaces arising in architectural context (in
+particular for shell-like roofs) we are able to construct aesthetically
+pleasing quad meshes supporting a circle packing. 
+
+\subsection{A discrete S-isothermic ellipsoid and its dual surface}
+Here we describe the construction of a discrete S-isothermic ellipsoid and 
+its dual surface. (See \cite[p.~202]{Hertrich2003} for the smooth analog).
+The rough construction outline is as follows. We start with a discretized version
+of the smooth isothermically parameterized ellipsoid. We obtain this by calculating a 
+quasiisothermic parameterization of half of a triangulated ellipsoid. After remeshing 
+the parameter lines are approximate curvature lines. We complete the surface by reflection
+at the boundary. 
+Optimization of the S-isothermic functional yields the final discrete ellipsoid. Its 
+dual surface is constructed as in Section~\ref{sub:isometric}.
+
+The combinatorics at singularities of the discrete ellipsoid is not unique. If there is a discrete 
+curvature line a the symmetry plane of the ellipsoid we have degenerate quads that have 
+vertices with angle $\approx\pi$. The singularity is located at this valence $2$ vertex. 
+If there is no discrete curvature line at the symmetry plane then the singularity is located at the 
+mid point of the edge connecting two valence three vertices. We have observed that 
+the convergence behavior of the S-isothermic functional is considerable better in the former 
+model of singularities. We therefore like to call only the discrete ellipsoid with curvalure 
+lines at symmetry planes a discrete elipsoid.
+
 
 %%% Local Variables:
 %%% TeX-master: "Thesis.tex"
 %%% End:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
