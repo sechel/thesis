@@ -401,8 +401,8 @@ boundary of the domain is the following:
 \item Remove cone point cuts 
 \end{enumerate}
 
-\noindent To estimate principle curvature fields we use the method of Cohen-Steiner and
-Morvan~\cite{CohMor03}, where the curvature tensor is averaged over a disk of a
+To estimate principle curvature fields we use the method of Cohen-Steiner and
+Morvan \cite{CohMor03}, where the curvature tensor is averaged over a disk of a
 given radius centered at edge midpoints. Together with a fixed orientation
 of the surface this defines the angle function
 $\alpha$. 
@@ -759,6 +759,15 @@ $\vcenter{\hbox{\includegraphics[width=0.5\textwidth]{image/ellipsoid01_disks.pn
 \caption{Discrete S-isothermic ellipsoid}
 \label{fig:ellipsoid} 
 \end{figure*}
+\begin{figure}
+\centering
+\resizebox{0.8\textwidth}{!}{
+\includegraphics[width=0.5\textwidth]{image/ellipsoid01_dual.png}
+\includegraphics[width=0.5\textwidth]{image/ellipsoid01_dual_disks.png}
+}
+\caption{Dual surface of discrete S-isothermic ellipsoid of Figure~\ref{fig:ellipsoid}. }
+\label{fig:isometric} 
+\end{figure}
 
 Here we describe the construction of a discrete S-isothermic ellipsoid and 
 its dual surface. (See \cite[p.~202]{Hertrich2003} for the smooth analog).
@@ -769,16 +778,6 @@ the parameter lines are approximate curvature lines. We complete the surface by 
 at the boundary. 
 Optimization of the S-isothermic functional yields the final discrete ellipsoid. Its 
 dual surface is constructed as in Section~\ref{sub:isometric}.
-
-\begin{figure*}
-\centering
-\resizebox{\textwidth}{!}{
-\includegraphics[width=0.5\textwidth]{image/ellipsoid01_dual.png}
-\includegraphics[width=0.5\textwidth]{image/ellipsoid01_dual_disks.png}
-}
-\caption{Dual surface of discrete S-isothermic ellipsoid of Figure~\ref{fig:ellipsoid}. }
-\label{fig:isometric} 
-\end{figure*}
 
 The combinatorics at singularities of the discrete ellipsoid is not unique. If there is a discrete 
 curvature line a the symmetry plane of the ellipsoid we have degenerate quads that have 
