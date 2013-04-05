@@ -1,6 +1,15 @@
 %!TEX root = ./Thesis.tex
 \chapter{Discrete Differential Geometry - Software Packages}
 
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{figures/software_architecture}
+	\caption[Software package dependencies]{
+		Software architecture and dependencies of the DDG Framework. 
+		{\sc Jtem} library packages (green), mathematical software packages (red).
+	}
+	\label{fig:software_architecture}
+\end{figure}
+
 In the field of Discrete Differential Geometry (DDG) there is a special need for experiments
 conducted with the help of computer software. Especially if the methods of DDG are applied
 to problems in computer graphics, geometry processing, or architecture, algorithms have 
@@ -8,33 +17,58 @@ to be implemented and convincing examples have to be presented. Additionally a s
 visualization of the results has to be included in a state-of-the-art publication.
 
 There is a growing knowledge of software development in the mathematical community. This 
-is partly due to the curricula of universities which started to include programming courses for undergraduate students.
-This enables the students to extend their abilities of creating visualizations and mathematical software, where former generations of students solely used Mathematica and MatLab.
+is partly due to the curricula of universities which started to include programming courses for 
+undergraduate students. This enables the students to extend their abilities of creating 
+visualizations and mathematical software, where former generations of students solely 
+used Mathematica and MatLab.
 
 This Chapter is the description and getting-started manual of a set of software packages
-(DDG Framework) written in Java. They are specifically designed for the creation of custom interactive software
-for experiments with algorithms and geometries treated within DDG. 
-Section~\ref{sec:jrworkspace} introduces the {\sc JRWorkspace} library of the {\sc Jtem} project~\cite{JtemWebsite}.
-It is the foundation of any application created with the DDG Framework. It is also the user interface basis of {\sc Jreality}, a mathematical visualization library that uses {\sc JRWorkspace} as plug-in and user interface tool~\cite{JrealityWebsite}. In Section~\ref{sec:conformallab} we describe the software {\sc ConformalLab}. This package
-implements the methods of the publications~\cite{Bobenko2010, OWR2012, Sechelmann2012, BobSechSpr}.
-Section~\ref{sec:varylab} introduces {\sc VaryLab} the software implementation of the methods described in the publications \cite{Lafuente2011, Lafuente2012, Sechelmann2012}.
-This package is also released to partners of the development group as {\sc VaryLab[Gridshells]}, {\sc VaryLab[Ultimate]}, or even online as {\sc VaryLab[Service]}.
+(DDG Framework) written in Java. They are specifically designed for the creation of
+custom interactive software for experiments with algorithms and geometries treated 
+within DDG. Section~\ref{sec:jrworkspace} introduces the {\sc JRworkspace} library of the 
+{\sc Jtem} project~\cite{JtemWebsite}. It is the foundation of any application created with 
+the DDG Framework. It is also the user interface basis of {\sc Jreality}, a mathematical 
+visualization library that uses {\sc JRworkspace} as plug-in and user interface 
+tool~\cite{JrealityWebsite}. Section~\ref{sec:halfedge_halfedgetools} introduces the 
+{\sc Halfedge} and {\sc HalfedgeTools} package. It implements a half-edge data 
+structure and various user interface tools and algorithms for interaction and editing.  
+In Section~\ref{sec:conformallab} we describe the software 
+{\sc ConformalLab}. This package implements the methods of the 
+publications~\cite{Bobenko2010, OWR2012, Sechelmann2012, BobSechSpr}.
+Section~\ref{sec:varylab} introduces {\sc VaryLab} the software implementation of the 
+methods described in the publications \cite{Lafuente2011, Lafuente2012, Sechelmann2012}.
+This package is also released to partners of the development group as 
+{\sc VaryLab[Gridshells]}, {\sc VaryLab[Ultimate]}, or even online as {\sc VaryLab[Service]}.
 
-\begin{figure}
-	\includegraphics[width=\linewidth]{figures/software_architecture}
-	\caption{Software architecture of the DDG Framework}
-	\label{fig:software_architecture}
-\end{figure}
 
-\section{{\sc JRWorkspace} - A plug-in driven GUI library}
 
+Figure~\ref{fig:software_architecture} shows the dependencies of the packages. Every
+application depends on {\sc JRworkspace} which implements plug-in functionality. It is
+the basis of the {\sc Jreality} plug-in system. {\sc Half\-edge\-Tools} is using {\sc Jreality} 
+for visualization and is build on top of the {\sc Jtem} project {\sc Half\-edge}. 
+{\sc ConformalLab} and {\sc VaryLab} use {\sc Jpetsc/Jtao} to perform numerical
+optimization. Their algorithms are implemented as {\sc JRworkspace} plug-ins.
+
+
+The development of the described software is joint work with Thilo R{\" o}rig 
+({\sc HalfedgeTools, VaryLab}), the {\sc Jreality} members~\cite{JrealityWebsite}, Hannes 
+Sommer ({\sc Jpetsc/Jtao})~\cite{jpetsctao-web-page}, Paul Peters ({\sc JRworkspace}), and 
+Boris Springborn ({\sc Halfedge}).
+
+
+
+\section{{\sc JRworkspace} - A plug-in driven GUI library}
 \label{sec:jrworkspace}
+
+
+
 \subsection{Plug-ins}
 \subsection{Gui elements}
-\subsection{{\sc JRWorkspace} and {\sc Jreality}}
+\subsection{{\sc JRworkspace} and {\sc Jreality}}
 \subsection{Building a \emph{jrworkspace} application}
 
 \section{The {\sc Jtem} libraries {\sc Halfedge} and {\sc HalfedgeTools}}
+\label{sec:halfedge_halfedgetools}
 \subsection{The halfedge data structure and tools}
 \subsection{Data model and algorithms}
 
