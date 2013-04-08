@@ -14,6 +14,36 @@
 
 \usepackage{url}
 
+\usepackage{listings}
+\usepackage{pxfonts}
+%\usepackage{gfsartemisia-euler}
+%\usepackage{newtxtext,newtxmath}
+
+\definecolor{middlegray}{rgb}{0.5,0.5,0.5}
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+\definecolor{orange}{rgb}{0.8,0.3,0.3}
+\definecolor{yac}{rgb}{0.6,0.6,0.1}
+\lstset{
+   basicstyle=\scriptsize\ttfamily,
+   keywordstyle=\bfseries\ttfamily\color{black},
+   stringstyle=\color{blue}\ttfamily,
+   commentstyle=\color{middlegray}\ttfamily,
+   emph={square}, 
+   emphstyle=\color{blue}\texttt,
+   emph={[2]root,base},
+   emphstyle={[2]\color{yac}\texttt},
+   showstringspaces=false,
+   flexiblecolumns=false,
+   tabsize=2,
+   numbers=left,
+   numberstyle=\tiny,
+   numberblanklines=false,
+   stepnumber=1,
+   numbersep=10pt,
+   xleftmargin=15pt
+ }
+
+
 %\usepackage{hyperref}
 \usepackage[nottoc,numbib,notlof]{tocbibind}
 
@@ -79,10 +109,8 @@ Tag der wissenschaftlichen Aussprache: NN\\
 \newpage
 \mainmatter
 \setcounter{secnumdepth}{-1} 
-\chapter{Introduction}
-
+%\chapter{Introduction}
 \setcounter{secnumdepth}{2} 
-
 %\input{Chapter1}
 %\input{Chapter2_Quasiisothermic}
 %\input{Chapter2_Interpolation}

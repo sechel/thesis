@@ -1,7 +1,10 @@
 %!TEX root = ./Thesis.tex
 \chapter{Discrete Differential Geometry - Software Packages}
 
+\section{Introduction}
+
 \begin{figure}[h]
+	\centering
 	\includegraphics[width=\linewidth]{figures/software_architecture}
 	\caption[Software package dependencies]{
 		Software architecture and dependencies of the DDG Framework. 
@@ -18,12 +21,12 @@ visualization of the results has to be included in a state-of-the-art publicatio
 
 There is a growing knowledge of software development in the mathematical community. This 
 is partly due to the curricula of universities which started to include programming courses for 
-undergraduate students. This enables the students to extend their abilities of creating 
-visualizations and mathematical software, where former generations of students solely 
-used Mathematica and MatLab.
+undergraduate students. {\bf [Find Reference ??]}
+This enables the students to extend their abilities of creating visualizations and mathematical software, where former generations of students solely 
+used the visualization abilities of standard computer algebra packages like Mathematica or MatLab.
 
 This Chapter is the description and getting-started manual of a set of software packages
-(DDG Framework) written in Java. They are specifically designed for the creation of
+(Berlin DDG Framework) written in Java. They are specifically designed for the creation of
 custom interactive software for experiments with algorithms and geometries treated 
 within DDG. Section~\ref{sec:jrworkspace} introduces the {\sc JRworkspace} library of the 
 {\sc Jtem} project~\cite{JtemWebsite}. It is the foundation of any application created with 
@@ -41,7 +44,6 @@ This package is also released to partners of the development group as
 {\sc VaryLab[Gridshells]}, {\sc VaryLab[Ultimate]}, or even online as {\sc VaryLab[Service]}.
 
 
-
 Figure~\ref{fig:software_architecture} shows the dependencies of the packages. Every
 application depends on {\sc JRworkspace} which implements plug-in functionality. It is
 the basis of the {\sc Jreality} plug-in system. {\sc Half\-edge\-Tools} is using {\sc Jreality} 
@@ -52,20 +54,64 @@ optimization. Their algorithms are implemented as {\sc JRworkspace} plug-ins.
 
 The development of the described software is joint work with Thilo R{\" o}rig 
 ({\sc HalfedgeTools, VaryLab}), the {\sc Jreality} members~\cite{JrealityWebsite}, Hannes 
-Sommer ({\sc Jpetsc/Jtao})~\cite{jpetsctao-web-page}, Paul Peters ({\sc JRworkspace}), and 
+Sommer ({\sc Jpetsc/Jtao})~\cite{jpetsctao-web-page}, Ulrich Pinkall and Paul Peters ({\sc JRworkspace}), and 
 Boris Springborn ({\sc Halfedge}).
 
 
 
-\section{{\sc JRworkspace} - A plug-in driven GUI library}
+\section{{\sc JRworkspace} - A Java API for modular applications}
 \label{sec:jrworkspace}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/jrworkspace_uml}
+	\caption[{\sc JRworkspace} API]{
+		UML diagram for the {\sc JRworkspace} API.
+	}
+	\label{fig:jrworkspace_uml}
+\end{figure}
 
+The library package {\sc JRworkspace} is part of the {\sc Jtem} family of software projects \cite{JtemWebsite}. It defines a simple API to create modular Java applications. Figure~\ref{fig:jrworkspace_uml} shows the UML class diagram of the three main classes.
+The project contains a reference implementation that supports the creation of Java
+Swing applications. This implementation is used in all applications described in this work.
 
 \subsection{Plug-ins}
+
+\begin{table}
+\centering
+\begin{tabular}{r|r|l}
+	{\tt restoreState} & 1. & load plug-in state values from Controller\\
+	{\tt install} & 2. & calls getPlugin to obtain other plug-ins\\
+	{\tt --}  & 3. & program execution\\
+	{\tt storeStates} & 4. & stores state values in the Controller\\
+	{\tt uninstall}/program terination & 5. & clean up
+\end{tabular}
+\caption{{\sc JRworkspace} plug-in life cycle}
+\label{tab:plugin-lifecycle}
+\end{table}
+
+In {\sc JRworkspace} a module is called plug-in and extends the abstract class Plugin
+(Figure~\ref{fig:jrworkspace_uml}). The idea is that a plug-in can be installed by the controller calling its {\tt install} method or uninstalled via
+the uninstall() method. Before installation of a plug-in the controller calles the
+{\tt restoreStates} method of a plug-in. The {\tt storeStates} method is called at program termination or right before uninstall of the plug-in.
+Inter-plug-in-communication is done via the {\tt getPlugin} method of the controller. A plug-in should call {\tt getPlugin} from within the install method to obtain an instance of a dependent plug-in. See Table~\ref{tab:plugin-lifecycle} for the plug-in life-cycle.
+
+\lstinputlisting[
+	caption={A simple plug-in class. It depends on a plug-in called {\tt DependentPlugin} and has the property {\tt doubleState}. It provides the method {\tt doWork} that prints some message.}
+       \label{lst:javaclass},
+	captionpos=b,
+	language=JAVA,
+	firstline=6
+] {java/de/sechel/thesis/MyPlugin.java}
+
+
+\subsection{A reference implementation}
+
+
+
 \subsection{Gui elements}
 \subsection{{\sc JRworkspace} and {\sc Jreality}}
-\subsection{Building a \emph{jrworkspace} application}
+\subsection{Building a {\sc JRworkspace} application}
 
 \section{The {\sc Jtem} libraries {\sc Halfedge} and {\sc HalfedgeTools}}
 \label{sec:halfedge_halfedgetools}
@@ -85,13 +131,13 @@ Boris Springborn ({\sc Halfedge}).
 \subsection{Implemented functionals and options}
 \subsection{Remeshing}
 
-\section{U3D - 3D content in presentations and online publiciations}
+\section{{\sc U3D} - 3D content in presentations and online publiciations}
 \label{sec:u3d}
 \subsection{3D content in PDF documents}
 
-\section{Non-linear optimization with jPETSc/jTao}
+\section{Non-linear optimization with {\sc Jpetsc/Jtao}}
 \label{sec:jpetsctao}
-\subsection{A java wrapper for PETSc/Tao}
+\subsection{A java wrapper for {\sc Jpetsc/Jtao}}
 
 %%% Local Variables:
 %%% TeX-master: "Thesis.tex"
