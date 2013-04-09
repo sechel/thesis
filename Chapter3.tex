@@ -20,29 +20,37 @@ to be implemented and convincing examples have to be presented. Additionally a s
 visualization of the results has to be included in a state-of-the-art publication.
 
 There is a growing knowledge of software development in the mathematical community. This 
-is partly due to the curricula of universities which started to include programming courses for 
-undergraduate students. {\bf [Find Reference ??]}
-This enables the students to extend their abilities of creating visualizations and mathematical software, where former generations of students solely 
-used the visualization abilities of standard computer algebra packages like Mathematica or MatLab.
+is due to the curricula of universities which started to include programming courses for 
+undergraduate students with a visualization emphasis, e.g., \cite{VisMathHomepage, 
+CaltechVisMath}. It enables students to extend their abilities of creating visualizations and 
+mathematical software, where former generations of students solely used the visualization 
+abilities of standard computer algebra packages like Mathematica or MatLab.
+
+The audience of this chapter is two-fold. On the one hand it is students creating their 
+visualizations of surfaces and develop algorithms. On the other hand it is researchers in the
+field of discrete differential geometry who need a stable data structure and programming
+infrastructure to get the job done.
 
 This Chapter is the description and getting-started manual of a set of software packages
 (Berlin DDG Framework) written in Java. They are specifically designed for the creation of
 custom interactive software for experiments with algorithms and geometries treated 
-within DDG. Section~\ref{sec:jrworkspace} introduces the {\sc JRworkspace} library of the 
+within DDG. It is currently beeing used for teaching a mathematical visualization course at 
+TU-Berlin \cite{VisMathHomepage} and for research projects within the geometry group.
+
+Section~\ref{sec:jrworkspace} introduces the {\sc JRworkspace} library of the 
 {\sc Jtem} project~\cite{JtemWebsite}. It is the foundation of any application created with 
 the DDG Framework. It is also the user interface basis of {\sc Jreality}, a mathematical 
 visualization library that uses {\sc JRworkspace} as plug-in and user interface 
 tool~\cite{JrealityWebsite}. Section~\ref{sec:halfedge_halfedgetools} introduces the 
-{\sc Halfedge} and {\sc HalfedgeTools} package. It implements a half-edge data 
+{\sc Halfedge} and {\sc HalfedgeTools} package. They implement half-edge data 
 structure and various user interface tools and algorithms for interaction and editing.  
 In Section~\ref{sec:conformallab} we describe the software 
 {\sc ConformalLab}. This package implements the methods of the 
 publications~\cite{Bobenko2010, OWR2012, Sechelmann2012, BobSechSpr}.
-Section~\ref{sec:varylab} introduces {\sc VaryLab} the software implementation of the 
+Section~\ref{sec:varylab} introduces {\sc VaryLab}, the software implementation of the 
 methods described in the publications \cite{Lafuente2011, Lafuente2012, Sechelmann2012}.
-This package is also released to partners of the development group as 
-{\sc VaryLab[Gridshells]}, {\sc VaryLab[Ultimate]}, or even online as {\sc VaryLab[Service]}.
-
+This package is also released to partners of the development group as {\sc VaryLab[Gridshells]},
+{\sc VaryLab[Ultimate]}, or even online as {\sc VaryLab[Service]}.
 
 Figure~\ref{fig:software_architecture} shows the dependencies of the packages. Every
 application depends on {\sc JRworkspace} which implements plug-in functionality. It is
@@ -51,63 +59,114 @@ for visualization and is build on top of the {\sc Jtem} project {\sc Half\-edge}
 {\sc ConformalLab} and {\sc VaryLab} use {\sc Jpetsc/Jtao} to perform numerical
 optimization. Their algorithms are implemented as {\sc JRworkspace} plug-ins.
 
-
 The development of the described software is joint work with Thilo R{\" o}rig 
 ({\sc HalfedgeTools, VaryLab}), the {\sc Jreality} members~\cite{JrealityWebsite}, Hannes 
-Sommer ({\sc Jpetsc/Jtao})~\cite{jpetsctao-web-page}, Ulrich Pinkall and Paul Peters ({\sc JRworkspace}), and 
-Boris Springborn ({\sc Halfedge}).
+Sommer ({\sc Jpetsc/Jtao})~\cite{jpetsctao-web-page}, Ulrich Pinkall and Paul Peters 
+({\sc JRworkspace}), and Boris Springborn ({\sc Halfedge}).
 
 
-
-\section{{\sc JRworkspace} - A Java API for modular applications}
+\section{{\sc JRworkspace} - Java API for modular applications}
 \label{sec:jrworkspace}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.8\linewidth]{figures/jrworkspace_uml}
-	\caption[{\sc JRworkspace} API]{
-		UML diagram for the {\sc JRworkspace} API.
-	}
-	\label{fig:jrworkspace_uml}
-\end{figure}
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.8\linewidth]{figures/jrworkspace_uml}
+%	\caption[{\sc JRworkspace} API]{
+%		UML diagram for the {\sc JRworkspace} API.
+%	}
+%	\label{fig:jrworkspace_uml}
+%\end{figure}
 
-The library package {\sc JRworkspace} is part of the {\sc Jtem} family of software projects \cite{JtemWebsite}. It defines a simple API to create modular Java applications. Figure~\ref{fig:jrworkspace_uml} shows the UML class diagram of the three main classes.
+{\sc JRworkspace} is part of the {\sc Jtem} family of software projects 
+\cite{JtemWebsite}. It defines a simple API to create modular Java applications. It consists of
+three basic classes (Listings~\ref{lst:plugin_base}, \ref{lst:controller_interface}, and 
+\ref{lst:plugin_info}).
 The project contains a reference implementation that supports the creation of Java
-Swing applications. This implementation is used in all applications described in this work.
+Swing applications using the {\sc JRworkspace} API. This implementation is used in all 
+applications described in this work.
 
-\subsection{Plug-ins}
-
-\begin{table}
-\centering
-\begin{tabular}{r|r|l}
-	{\tt restoreState} & 1. & load plug-in state values from Controller\\
-	{\tt install} & 2. & calls getPlugin to obtain other plug-ins\\
-	{\tt --}  & 3. & program execution\\
-	{\tt storeStates} & 4. & stores state values in the Controller\\
-	{\tt uninstall}/program terination & 5. & clean up
-\end{tabular}
-\caption{{\sc JRworkspace} plug-in life cycle}
-\label{tab:plugin-lifecycle}
-\end{table}
+\subsection{Plug-ins and the controller}
 
 In {\sc JRworkspace} a module is called plug-in and extends the abstract class Plugin
-(Figure~\ref{fig:jrworkspace_uml}). The idea is that a plug-in can be installed by the controller calling its {\tt install} method or uninstalled via
-the uninstall() method. Before installation of a plug-in the controller calles the
-{\tt restoreStates} method of a plug-in. The {\tt storeStates} method is called at program termination or right before uninstall of the plug-in.
-Inter-plug-in-communication is done via the {\tt getPlugin} method of the controller. A plug-in should call {\tt getPlugin} from within the install method to obtain an instance of a dependent plug-in. See Table~\ref{tab:plugin-lifecycle} for the plug-in life-cycle.
+(Listing~\ref{lst:plugin_base}). The idea is that a plug-in can be installed by the controller 
+calling its {\tt install} method or uninstalled via the {\tt uninstall} method. You can think of it 
+as a feature added to your program. In particular there is no more than one instance of a
+plug-in class in a program.
+
+A plug-in has a life-cycle during the runtime of the program which includes these basic
+steps:
+\begin{center}
+\begin{tabular}{r|r|l}
+	instantiation & 1 & set default plug-in state\\
+	{\tt restoreStates} & 2 & load plug-in state from {\tt Controller}\\
+	{\tt install} & 3 & calls {\tt getPlugin} to obtain dependent plug-ins\\
+	{\tt --}  & 4 & program execution\\
+	{\tt storeStates} & 5 & stores state values in the {\tt Controller}\\
+	({\tt uninstall} & 6 & clean up)
+\end{tabular}
+\end{center}
+Step 1 instantiates a plugin and initializes its default properties. In step 2 the controller 
+calles the {\tt restoreStates} method. Step 3 is the actual installation of the plug-in. 
+During runtime
+of the application the plug-in can interact with possible user interface it created during 
+installation or offer services to other plug-ins. 
+Before program termination or before uninstall the {\tt storeStates} method is called. The plug-in
+is supposed to store its state values by calling the {\tt storeProperty}
+method of the controller.
+Inter-plug-in-communication is done via the {\tt getPlugin} method of the controller. 
+A plug-in should call {\tt getPlugin} from within the {\tt install} method to obtain an instance 
+of a dependent plug-in. The {\tt getPlugin} method always returns the same instance of a plug-in so its
+result can be stored by the {\tt install} method for later reference, see for example 
+Listing~\ref{lst:sample_plugin}.
+
+Step 6 {\tt uninstall} is only used with dynamic plug-ins that support this operation.
 
 \lstinputlisting[
-	caption={A simple plug-in class. It depends on a plug-in called {\tt DependentPlugin} and has the property {\tt doubleState}. It provides the method {\tt doWork} that prints some message.}
-       \label{lst:javaclass},
+	caption={A simple plug-in class. It depends on a plug-in called {\tt DependentPlugin} 
+		and has the property {\tt doubleState}. It provides the method {\tt doWork} that 
+		prints some message.
+	},
+	label=lst:sample_plugin,
 	captionpos=b,
-	language=JAVA,
 	firstline=6
 ] {java/de/sechel/thesis/MyPlugin.java}
 
 
-\subsection{A reference implementation}
 
 
+\lstinputlisting[
+	caption={The {\tt Plugin} base class. Note that plug-ins are equal if their classes are. 
+		It is not supported to have multiple instances of the same plug-in class installed.
+	},
+	label=lst:plugin_base,
+	captionpos=b,
+	firstline=3,
+	lastline=40,
+	float
+] {java/de/jtem/jrworkspace/plugin/Plugin.java}
+
+
+\lstinputlisting[
+	caption={The {\tt Controller} interface},
+	label=lst:controller_interface,
+	captionpos=b,
+	firstline=5,
+	float
+] {java/de/jtem/jrworkspace/plugin/Controller.java}
+
+\lstinputlisting[
+	caption={The {\tt PluginInfo} plug-in meta data class},
+	label=lst:plugin_info,
+	captionpos=b,
+	firstline=7,
+	lastline=25,
+	float
+] {java/de/jtem/jrworkspace/plugin/PluginInfo.java}
+
+
+
+
+\subsection{Reference implementation - {\tt SimpleController}}
 
 \subsection{Gui elements}
 \subsection{{\sc JRworkspace} and {\sc Jreality}}
@@ -131,13 +190,15 @@ Inter-plug-in-communication is done via the {\tt getPlugin} method of the contro
 \subsection{Implemented functionals and options}
 \subsection{Remeshing}
 
-\section{{\sc U3D} - 3D content in presentations and online publiciations}
-\label{sec:u3d}
-\subsection{3D content in PDF documents}
-
 \section{Non-linear optimization with {\sc Jpetsc/Jtao}}
 \label{sec:jpetsctao}
-\subsection{A java wrapper for {\sc Jpetsc/Jtao}}
+\subsection{A java wrapper for {\sc PETSc/Tao}}
+
+\section{{\sc U3D} - 3D content in presentations and online publiciations}
+\label{sec:u3d}
+\subsection{The {\sc Jreality} U3D export module}
+\subsection{Discrete S-isothermic minimal surfaces}
+
 
 %%% Local Variables:
 %%% TeX-master: "Thesis.tex"
