@@ -7,11 +7,8 @@ public abstract class Plugin {
 	}
 	
 	public void install(Controller c) throws Exception{}
-	
 	public void uninstall(Controller c) throws Exception {}
-	
 	public void restoreStates(Controller c) throws Exception {}
-	
 	public void storeStates(Controller c) throws Exception {}
 	
 	@Override

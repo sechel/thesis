@@ -24,7 +24,8 @@
 \definecolor{orange}{rgb}{0.8,0.3,0.3}
 \definecolor{yac}{rgb}{0.6,0.6,0.1}
 \lstset{
-   basicstyle=\small\ttfamily,
+  % backgroundcolor=\color{lightgray}
+   basicstyle=\footnotesize\ttfamily,
    keywordstyle=\bfseries\ttfamily\color{black},
    stringstyle=\color{blue}\ttfamily,
    commentstyle=\color{middlegray}\ttfamily,
@@ -39,10 +40,9 @@
    numberstyle=\tiny,
    numberblanklines=false,
    stepnumber=1,
-   numbersep=10pt,
-   xleftmargin=15pt
+   numbersep=5pt,
+   xleftmargin=12pt
  }
-
 
 %\usepackage{hyperref}
 \usepackage[nottoc,numbib,notlof]{tocbibind}
@@ -69,6 +69,8 @@
 \newcommand{\C}{\mathbb C}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Chat}{\hat{\mathbb C}}
+
+\def\TReg{\textsuperscript{\textregistered} }
 
 \title{Variational Methods for Discrete Surface Parameterization. Applications and Implementation.}
 \author{
@@ -119,7 +121,7 @@ Tag der wissenschaftlichen Aussprache: NN\\
 
 \newpage
 \backmatter 
-\bibliographystyle{alpha}
+\bibliographystyle{amsplain}
 %disable numbering 
 \setcounter{secnumdepth}{-1} 
 \bibliography{Thesis}
