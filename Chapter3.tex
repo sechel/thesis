@@ -180,7 +180,7 @@ deserialization may fail if class geometry changes.
 The plug-in meta data class (excerpt). Instances are returned by the {\tt getPluginInfo}
 method of any plug-in. The value of the {\tt name} field is a plaintext name that could be 
 shown in a user interface as well are the {\tt vendorName} and {\tt email} information. An optional 
-{\tt icon} and a {\tt documentationURL} can be given. The flag {\tt isDynamic} isevaluated
+{\tt icon} and a {\tt documentationURL} can be given. The flag {\tt isDynamic} is evaluated
 by controller implementations that support deinstallation of plug-ins. A dynamic plug-in can
 be installed or uninstalled during application runtime. A non-dynamic plug-in must be installed
 at startup and remains installed until program termination. The static {\tt create} method returns
@@ -195,15 +195,66 @@ a default {\tt PluginInfo} instance for the given plug-in class.
 In the next section we describe an implementation of this API.
 
 \subsection{Reference implementation - {\tt SimpleController}}
+\label{sec:reference_implementation}
 This section describes a reference implementation of the {\sc JRworkspace} plug-in API.
 It was started as a user interface framework for {\sc Jreality}~\cite{JrealityWebsite}. It implements
 the {\tt Controller} interface in a class called {\tt SimpleController}. This name is historic
 and did not change as the features evolved from simple into quite complex.
 {\tt SimpleController} implements a {\sc Java Swing\TReg} framework for the creation of complex
 modular applications based on the {\sc JRworkspace} API. It defines various plug-in flavors
-that define user interface features.
+that define user interface features. The implementation does not support dynamic plug-ins.
+
+In the remainder of this section I describe the basic and most interesting features of this 
+implementation. For a complete reference see the documentation on the {\sc Jtem} website 
+\cite{JtemWebsite}.
 
 
+{\bf Perspective Flavor}
+
+A plug-in implementing the interface {\tt PerspectiveFlavor} provides the base for a program's user 
+interface. It implements the method {\tt getCenterComponent} that returns a AWT {\tt Conponent}
+that is placed in the main frame of the application. The main program window itself is created and
+managed by the controller.
+
+{\bf Menu Flavor}
+
+A plug-in implementing the {\tt MenuFlavor} interface provides {\sc Java Swing\TReg} menu 
+components that are placed at the top of the main window. A reference implementation of this
+flavor is the plug-in {\tt MenuAggregator} that manages menu entries by contexts and
+menu paths.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{jrworkspace/menu_aggregator_03.png}
+\caption{The menu created by Listing~\ref{lst:menu_aggregator}}
+\end{figure}
+
+\lstinputlisting[
+	caption={Usage of the {\tt MenuFlavor} interface and the {\tt MenuAggregator} implementation.},
+	label=lst:menu_aggregator,
+	captionpos=b,
+	firstline=40,
+	lastline=51
+] {java/de/sechel/thesis/MyMenuBar.java}
+
+{\bf Tool Bar Flavor}
+
+This plug-in flavor creates a {\sc Java Swing\TReg} tool bar at the top of the main window. There
+can be more than one plug-in implementing this interface to create multiple tool bars.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{jrworkspace/tool_bar_aggregator.png}
+\caption{The menu bar created by Listing~\ref{lst:tool_bar_aggregator}}
+\end{figure}
+
+\lstinputlisting[
+	caption={Usage of the {\tt ToolFlavor} interface and the {\tt ToolBarAggregator} implementation.},
+	label=lst:tool_bar_aggregator,
+	captionpos=b,
+	firstline=40,
+	lastline=50
+] {java/de/sechel/thesis/MyToolBar.java}
 
 \subsection{Gui elements}
 \subsection{{\sc JRworkspace} and {\sc Jreality}}
