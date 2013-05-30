@@ -1,14 +1,14 @@
 %!TEX root = ./Thesis.tex
 
-\section{A variational principle for discrete Tschebyshev nets}
+\chapter{A variational principle for discrete Tschebyshev nets}
 
 Introduction...
 
-\subsection{Variational principle}
+\section{Variational principle}
 
 Let $M=(V,E,F)$ be a quad-mesh. The vertices of $M$ are denoted by $v_i \in V$, the edges
 are $e_{\mathrm{\it{ij}}} \in E$, and the quadrilaterals are denoted by $f_{\mathrm{\it{ijkm}}} \in F$.
-\subsection{Energies}
+\section{Energies}
 We use a linear combination of energies to enforce desired properties on the optimised mesh.
 Our energy consists of three parts.
 \begin{equation}
@@ -64,10 +64,10 @@ Here and $e_{\mathrm{\it{i1}}}$, $e_{\mathrm{\it{i2}}}$, $e_{\mathrm{\it{i3}}}$,
 \caption{Different initialization shear angles for a conformal remesh. $30^\circ$ left, $0^\circ$ middle, and $-30^\circ$ right.}
 \label{fig:initial_grids}
 \end{figure}
-\subsection{Initialization and parameters}
+\section{Initialization and parameters}
 The energy $E(M)$ is in general non-convex. That means there can be many local optima, and the solution found by some gradient descent depends on the initialisation. We propose to use a conformal remesh of the reference surface as initialization. The conformality of the parameterisation gives us control over the angles between edges of the quadrilaterals. We can introduce shear to the parameterisation and modify this angle globally. By this we start with meshes that have almost constant edge angle (see Fig.~\ref{fig:initial_grids}).
 
-\subsection{Implementation}
+\section{Implementation}
 We use the conformal mapping algorithm by \cite{Springborn2008} to create the
 initial mesh. To minimize the energy $E(M)$ we use the non-linear optimization package
 PETSc/TAO \cite{petsc-web-page,tao-user-ref} and its java binding 

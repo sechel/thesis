@@ -1,7 +1,10 @@
 %!TEX root = ./Thesis.tex
-\chapter{Discrete Differential Geometry - Software Packages}
+\chapter{Introduction}
 
-\section{Introduction}
+In this chapter words printed in {\sc SmallCapitals} are names of software packages, words printed
+in {\tt TeleType} are names of {\sc Java} classes, methods, or fields.
+
+\section{Mathematical Software Development}
 
 \begin{figure}[h]
 	\centering
@@ -20,9 +23,9 @@ to be implemented and convincing examples have to be presented. Additionally a s
 visualization of the results has to be included in a state-of-the-art publication.
 
 There is a growing knowledge of software development in the mathematical community. This 
-is due to the curricula of universities which started to include programming courses for 
+is party due to the curricula of universities which started to include programming courses for 
 undergraduate students with a visualization emphasis, e.g., \cite{VisMathHomepage, 
-CaltechVisMath}. It enables students to extend their abilities of creating visualizations and 
+CaltechVisMath}. This knowledge enables students to extend their abilities of creating visualizations and 
 mathematical software, where former generations of students solely used the visualization 
 abilities of standard computer algebra packages like Mathematica or MatLab.
 
@@ -71,7 +74,9 @@ Sommer ({\sc Jpetsc/Jtao})~\cite{jpetsctao-web-page}, Ulrich Pinkall and Paul Pe
 \label{sec:related_work}
 JavaView, CGAL, ...
 
-\section{{\sc JRworkspace} - Java API for modular applications}
+\section{CD Content}
+
+\chapter{{\sc JRworkspace} - Java API for modular applications}
 \label{sec:jrworkspace}
 
 %\begin{figure}
@@ -91,7 +96,8 @@ The project contains a reference implementation that supports the creation of Ja
 Swing applications using the {\sc JRworkspace} API. This implementation is used in all 
 applications described in this work.
 
-\subsection{Plug-ins and the controller}
+\section{Plug-ins and the controller}
+\label{sec:plugins}
 
 In a {\sc JRworkspace} application a feature is implemented as plug-in and the corresponding Java class 
 extends the abstract class Plugin
@@ -194,7 +200,7 @@ a default {\tt PluginInfo} instance for the given plug-in class.
 
 In the next section we describe an implementation of this API.
 
-\subsection{Reference implementation - {\tt SimpleController}}
+\section{Reference implementation - {\tt SimpleController}}
 \label{sec:reference_implementation}
 This section describes a reference implementation of the {\sc JRworkspace} plug-in API.
 It was started as a user interface framework for {\sc Jreality}~\cite{JrealityWebsite}. It implements
@@ -205,7 +211,7 @@ modular applications based on the {\sc JRworkspace} API. It defines various plug
 that define user interface features. The implementation does not support dynamic plug-ins.
 
 In the remainder of this section I describe the basic and most interesting features of this 
-implementation. For a complete reference see the documentation on the {\sc Jtem} website 
+implementation. For a complete API reference see the documentation on the {\sc Jtem} website 
 \cite{JtemWebsite}.
 
 
@@ -215,18 +221,44 @@ A plug-in implementing the interface {\tt PerspectiveFlavor} provides the base f
 interface. It implements the method {\tt getCenterComponent} that returns a AWT {\tt Conponent}
 that is placed in the main frame of the application. The main program window itself is created and
 managed by the controller.
+A reference implementation of this flavor is the {\tt SideContainerPerspective}. It layouts its content 
+using a {\tt BorderLayout} and places slots in the north, south, east, and west of the main window. These
+slots can contain {\tt ShrinkPanel}s that can be moved between slots by drag-and-drop. A {\tt ShrinkPanel}
+behaves like a {\tt JPanel} and has a title bar that resizes the panel when the user clicks with the mouse.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{jrworkspace/side_containers.png}
+\caption[The {\tt SideContainerPerspective} user interface plug-in]{The {\tt SideContainerPerspective} implementation uses slots to layout panels at the side of the
+main window. The left slot contains three {\tt ShrinkPanel}s, the top and right slots are empty. The menu bar 
+and tool bar are created by respective plug-in flavors.}
+\label{fig:side_containers}
+\end{figure}
+
 
 {\bf Menu Flavor}
 
 A plug-in implementing the {\tt MenuFlavor} interface provides {\sc Java Swing\TReg} menu 
 components that are placed at the top of the main window. A reference implementation of this
 flavor is the plug-in {\tt MenuAggregator} that manages menu entries by contexts and
-menu paths.
+menu paths. Its API provides four methods to add and remove menus, menu items, and
+separators. A typical method signature is
+
+\begin{lstlisting}[numbers=none]
+	public void addMenu(Class<?> ctx, double priority, JMenu m, String... path)
+\end{lstlisting}
+
+where the plug-in stores the menu item with the given context class. This context is used to
+bulk-remove menus from a menu aggregator. Menus are sorted ascending
+by their priority. The menu item appears at the end of the given menu path. See 
+Listing~\ref{lst:menu_aggregator} and Figure~\ref{fig:menu_aggregator}.
+
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=9cm]{jrworkspace/menu_aggregator_03.png}
 \caption{The menu created by Listing~\ref{lst:menu_aggregator}}
+\label{fig:menu_aggregator}
 \end{figure}
 
 \lstinputlisting[
@@ -239,13 +271,23 @@ menu paths.
 
 {\bf Tool Bar Flavor}
 
-This plug-in flavor creates a {\sc Java Swing\TReg} tool bar at the top of the main window. There
-can be more than one plug-in implementing this interface to create multiple tool bars.
+Plug-ins implementing this flavor interface create a {\sc Java Swing\TReg} tool bar at the top of the 
+main window. There can be more than one plug-in implementing this interface to create multiple 
+tool bars. The API method signatures a similar to the signatures of the menu aggregator flavor. As 
+a tool bar does not have a hierarchy, there is no path parameter. The signature of a API method is, e.g.,
+
+\begin{lstlisting}[numbers=none]
+	public void addAction(Class<?> context, double priority, Action a).
+\end{lstlisting}
+
+The tool bar aggregator implementation can handle {\tt Action}s, {\tt Component}s, and tool bar
+separators. See Listing~\ref{lst:tool_bar_aggregator} and Figure~\ref{fig:tool_bar_aggregator}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=9cm]{jrworkspace/tool_bar_aggregator.png}
 \caption{The menu bar created by Listing~\ref{lst:tool_bar_aggregator}}
+\label{fig:tool_bar_aggregator}
 \end{figure}
 
 \lstinputlisting[
@@ -256,36 +298,46 @@ can be more than one plug-in implementing this interface to create multiple tool
 	lastline=50
 ] {java/de/sechel/thesis/MyToolBar.java}
 
-\subsection{Gui elements}
-\subsection{{\sc JRworkspace} and {\sc Jreality}}
-\subsection{Building a {\sc JRworkspace} application}
+{\bf The API of {\tt SimpleController}}
 
-\section{The {\sc Jtem} libraries {\sc Halfedge} and {\sc HalfedgeTools}}
-\label{sec:halfedge_halfedgetools}
-\subsection{The halfedge data structure and tools}
-\subsection{Data model and algorithms}
+A plug-in implementation is independent of the concrete implementation of the {\tt Controller}. To create an
+application with the {\tt SimpleController} we need to register plug-ins we want to use and then invoke the
+startup sequence. A typical {\tt main} method is, e.g.,
 
-\section{{\sc ConformalLab} - Conformal maps and uniformization}
-\label{sec:conformallab}
-\subsection{Embedded surfaces}
-\subsection{Elliptic and hyperelliptic surfaces}
-\subsection{Schottky data}
-\subsection{Surfaces with boundary}
+\lstinputlisting[
+	caption={{\tt Main} method of a program created with the {\tt SimpleController} implementation. The result
+is shown in Figure~\ref{fig:side_containers}.},
+	label=lst:main_method,
+	captionpos=b,
+	firstline=13,
+	lastline=28
+] {java/de/sechel/thesis/MyApplication.java}
 
-\section{{\sc VaryLab} - Variational methods for discrete surfaces}
-\label{sec:varylab}
-\subsection{Functional plug-ins}
-\subsection{Implemented functionals and options}
-\subsection{Remeshing}
+We set the look and feel to be the system look and feel, in this case the Mac OS style. Then we create a
+{\tt SimpleController} and set the {\tt magageLookAndFeel} property to {\tt false}. Plug-in properties are saved
+to a file called {\tt MyApp.xml}. There are two property modes defined by the {\tt SimpleController}, {\tt StaticPropertiesFile}
+and {\tt UserPropertiesFile}. In static mode there is only one file location. In user mode the predefined location can
+be altered by the user of the program. This user decision is then stored as a {\sc Java} preference. In this example 
+we use the static properties.
 
-\section{Non-linear optimization with {\sc Jpetsc/Jtao}}
-\label{sec:jpetsctao}
-\subsection{A java wrapper for {\sc PETSc/Tao}}
+\section{{\sc JRworkspace} and {\sc Jreality}}
 
-\section{{\sc U3D} - 3D content in presentations and online publiciations}
-\label{sec:u3d}
-\subsection{The {\sc Jreality} U3D export module}
-\subsection{Discrete S-isothermic minimal surfaces}
+The user interface of {\sc Jreality} \cite{JrealityWebsite} is based on the {\sc JRworkspace} API and reference
+implementation.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{jrworkspace/jreality.png}
+\caption[The {\sc Jreality} user interface.]{The {\sc Jreality} user interface. It uses a {\tt SideContainerPerspective} 
+and {\tt ShrinkPanels}. The tool bar and 
+menu bar is created by the aggregators described in Section~\ref{sec:reference_implementation}. This application
+uses a set of predefined user interface features and virtual reality components. In a custom application the developer 
+usually registeres only a subset of these featurs.}
+\label{fig:tool_bar_aggregator}
+\end{figure}
+
+A custom {\sc Jreality} application is based on the {\tt JRViewer} class. This class uses {\tt SimpleController} to manage
+plug-in registration and start-up. 
 
 
 %%% Local Variables:

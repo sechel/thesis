@@ -1,0 +1,243 @@
+%!TEX root = ./Thesis.tex
+
+\chapter{The {\sc Jtem} libraries {\sc HalfEdge} and {\sc HalfEdgeTools}}
+
+This chapter describes the implementation of a half-edge data structure and a set of tools
+contained in the package {\sc HalfEdgeTools}. Both packages are part of the {\sc Jtem} project
+\cite{JtemWebsite}. This is joint work with Boris Springborn ({\sc HalfEdge}) and
+other contributers to the {\sc Jtem} project.
+
+This particular implementation was inspired by a half-edge implementation contained in
+the {\sc cgal} library \cite{CgalWebsite}.
+
+
+\label{sec:halfedge_halfedgetools}
+\section{The {\sc HalfEdge} data structure}
+
+This section is taken from the documentation of the package.
+
+{\bf Cell decompositions of surfaces}
+
+Half-edge data structures are used primarily to represent cell decompositions of oriented surfaces.
+We say "primarily" because half-edge data structures can be used to represent somewhat more general
+combinatorial structures, such as, for example, a checker board surface with white squares removed.
+
+Here, surface means two-dimensional manifold, possibly with boundary; and a cell decomposition 
+of a surface is a graph embedded in the surface such that the complement of the graph is 
+(topologically) a disjoint union of open disks. The term map on a surface means the same. 
+Thus, a cell decomposition decomposes a surface into vertices, edges, and faces.
+
+{\bf Regular and strongly regular}
+
+A cell decomposition of a surface is called regular, if it has no loops (edges with the same vertex 
+on both ends), and if the boundary of a face contains an edge or vertex at most once. It is called 
+strongly regular if two edges have at most one vertex in common, and if two faces have at most 
+one edge or one vertex in common. A strongly regular cell decomposition is usually called a mesh.
+
+{\bf This half-edge data structure implementation}
+
+This half-edge data structure implementation consists of different types of objects representing 
+vertices, half-edges, and faces. The term half-edge can and should be thought of as synonymous
+with oriented edge or directed edge.
+
+Every half-edge object holds references to:
+
+\begin{itemize}
+\item its oppositely oriented companion edge
+\item the next edge in the boundary of the face on its left hand side
+\item the previous edge in the boundary of the face on its left hand side
+\item the face on its left hand side
+\item the vertex it points to.
+\end{itemize}
+
+The face and vertex objects hold back references to a half-edge referencing them. Finally, there 
+is the class {\tt de.jtem.halfedge.HalfEdgeDataStructure} representing a whole half-edge data 
+structure. It acts as a container for (and sort of factory of) its vertices, edges, and faces.
+
+{\bf Use of generics}
+
+Typically, one wants to equip vertices, edges, and faces with additional properties or functionality. 
+For example, vertices may have coordinates associated with them, edges may have weights, and 
+faces may have colors.
+
+Our half-edge data structure facilitates this by using generic classes as abstract base classes for 
+vertex, edge, and face types: The classes {\tt de.jtem.halfedge.Vertex}, {\tt de.jtem.halfedge.Edge}, 
+{\tt de.jtem.halfedge.Face} are all parameterized with the associated vertex, edge, and face types.
+
+{\bf Example}
+
+To create a half-edge data structure with vertices that have 2D coordinates, proceed as follows.
+
+\begin{itemize}
+\item{Step 1.} 
+Define appropriate subclasses of {\tt de.jtem.halfedge.Vertex}, {\tt de.jtem.halfedge.Edge}, and 
+{\tt de.jtem.halfedge.Face}, for example:
+
+\begin{lstlisting}[numbers=none]
+public class MyVertex extends Vertex<MyVertex, MyEdge, MyFace> {
+	public Point2D p;
+}
+public class MyEdge extends Edge<MyVertex, MyEdge, MyFace> { }
+public class MyFace extends Face<MyVertex, MyEdge, MyFace> { }
+\end{lstlisting}
+
+Of course you might make the property {\tt p} of {\tt MyEdge} private and provide getter and setter 
+methods, etc. Note that you always have to subclass {\tt de.jtem.halfedge.Vertex}, 
+{\tt de.jtem.halfedge.Edge}, and {\tt de.jtem.halfedge.Face}, even if you do not define any 
+additional functionality or properties.
+
+\item{Step 2.} 
+Instantiate a {\tt de.jtem.halfedge.HalfEdgeDataStructure}:
+
+\begin{lstlisting}[numbers=none]
+HalfEdgeDataStructure heds = new HalfEdgeDataStructure(MyVertex.class, MyEdge.class, MyFace.class);
+\end{lstlisting}
+
+The parameters of the constructor serve as run time type tokens. Alternatively you can create a subclass
+of {\tt de.jtem.halfedge.HalfEdgeDataStructure} and create an instance of this:
+
+\begin{lstlisting}[numbers=none]
+public class MyHDS extends HalfEdgeDataStructure<MyVertex, MyEdge, MyFace> {
+	public MyHDS() {
+		super(MyVertex.class, MyEdge.class, MyFace.class);
+	}
+}
+...
+MyHDS mds = new MyHDS();
+\end{lstlisting}
+
+\item{Step 3.} 
+Instantiate vertices, edges, and faces using the {\tt addNewVertex}, {\tt addNewEdge}, and 
+{\tt addNewFace} methods, like this:
+
+\begin{lstlisting}[numbers=none]
+MyVertex v = heds.addNewVertex();
+MyEdge e = heds.addNewEdge();
+MyFace f = heds.addNewFace();
+\end{lstlisting}
+
+\end{itemize}
+
+\section{Data, Algorithms and Tools}
+
+A set of algorithms and tools is implemented in the {\sc Jtem} project {\sc HalfEdgeTools}
+\cite{JtemWebsite}. 
+
+Many algorithms in the library are purely combinatorial. This means there is no extra data 
+involved during algorithm execution. Thus such an algorithm is generic by definition. The
+method signature could look like this:
+
+\begin{lstlisting}
+public static <
+	V extends Vertex<V, E, F>,
+	E extends Edge<V, E, F>,
+	F extends Face<V, E, F>,
+	HDS extends HalfEdgeDataStructure<V, E, F>
+> void triangulate(HDS hds){
+	...
+}
+\end{lstlisting}
+
+This method works on any half-edge data structure that is either an instance of {\tt
+de.jtem.half\-edge.HalfEdgeDataStructure} or an instance of a sub-class. This method
+signature makes the algorithm code itself look very clean. For instance iterating over
+all vertices amounts to:
+
+\begin{lstlisting}
+for (V v : hds.getVertices()) {
+	E e = v.getIncomingEdge();
+	...
+}
+\end{lstlisting}
+
+On the other hand when designing a generic algorithm that needs certain data associated
+with nodes we have basically two options. Option 1. requires the generic node classes to
+implement the required interfaces:
+
+\begin{lstlisting}
+public static <
+	V extends Vertex<V, E, F> & HasCoordinate3D,
+	E extends Edge<V, E, F>,
+	F extends Face<V, E, F>,
+	HDS extends HalfEdgeDataStructure<V, E, F>
+> void convexHull(HDS hds){
+	...
+}
+\end{lstlisting}
+
+This forces the Vertex implementations that use this algorithm to implement an interface
+called {\tt HasCoordinate3D}.
+
+{\bf AdapterSet and Adapters}
+
+The second option uses the concept of adapters and is implemented in the package {\tt
+de.jtem.\-halfedge\-tools.adapter}. An adapter defines a map from nodes to a data type supported 
+by the adapter. We first show how this concept works when designing algorithms and then
+describe the implementation of the required adapters. 
+
+In this next example we calculate the discrete Dirichlet energy of a double valued function with 
+double valued weights on edges. 
+
+\begin{lstlisting}[
+label=alg:dirichlet,
+caption={Algorithm that uses data from the {\tt AdapterSet}}
+]
+public static <
+	V extends Vertex<V, E, F>,
+	E extends Edge<V, E, F>,
+	F extends Face<V, E, F>,
+	HDS extends HalfEdgeDataStructure<V, E, F>
+> double computeDirichlet(HDS hds, AdapterSet a){
+	double energy = 0.0;
+	for (E e : hds.getPositiveEdges()) {
+		V s = e.getStartVertex();
+		V t = e.getTargetVertex();
+		double fStart = a.get(FunctionValue.class, s, Double.class);
+		double fTarget = a.get(FunctionValue.class, t, Double.class);
+		double w = a.get(Weight.class, e, Double.class);
+		double d = fStart - fTarget;
+		energy += w * d * d; 
+	}
+	return energy;
+}
+\end{lstlisting}
+
+It requires the {\tt AdapterSet} to contain adapters that provide
+{\tt FunctionValue} data on vertices (Line 11 and 12) and {\tt Weight} data on half-edges (Line 13). 
+
+The classes {\tt FunctionValue} and {\tt Weight} are runtime annotation classes, e.g.,
+
+\begin{lstlisting}
+	@Retention(RetentionPolicy.RUNTIME)
+	@Target(ElementType.TYPE)
+	public @interface FunctionValue {}
+\end{lstlisting}
+
+A adapter class annotated with this annotation serves as data adapter when called for as in Line 11-13
+of Listing~\ref{alg:dirichlet}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%% Local Variables:
+%%% TeX-master: "Thesis.tex"
+%%% End:
