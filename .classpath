@@ -5,5 +5,7 @@
 	<classpathentry kind="lib" path="lib/jrworkspace.jar" sourcepath="/jrworkspace"/>
 	<classpathentry kind="lib" path="lib/xpp3.jar"/>
 	<classpathentry kind="lib" path="lib/xstream.jar"/>
+	<classpathentry kind="lib" path="lib/halfedge.jar"/>
+	<classpathentry kind="lib" path="lib/halfedgetools.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

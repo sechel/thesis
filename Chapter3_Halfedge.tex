@@ -8,7 +8,7 @@ contained in the package {\sc HalfEdgeTools}. Both packages are part of the {\sc
 other contributers to the {\sc Jtem} project.
 
 This particular implementation was inspired by a half-edge implementation contained in
-the {\sc cgal} library \cite{CgalWebsite}.
+the {\sc Cgal} library \cite{CgalWebsite}.
 
 
 \label{sec:halfedge_halfedgetools}
@@ -162,11 +162,16 @@ public static <
 	HDS extends HalfEdgeDataStructure<V, E, F>
 > void convexHull(HDS hds){
 	...
+	Coordinate3D x = v.getCoordinate3D();
 }
 \end{lstlisting}
 
 This forces the Vertex implementations that use this algorithm to implement an interface
-called {\tt HasCoordinate3D}.
+called {\tt HasCoordinate3D}. It leads to explicit and clean code of the algorithm. A drawback of this
+is that an existing implementation that should use this algorithm has to be adapted to implement the 
+possibly many interfaces required by the algorithm. 
+This is not a feasable solution when is comes to a modular application where algorithms come as 
+plug-ins without the chance to change the data structure.
 
 {\bf AdapterSet and Adapters}
 
@@ -178,48 +183,131 @@ describe the implementation of the required adapters.
 In this next example we calculate the discrete Dirichlet energy of a double valued function with 
 double valued weights on edges. 
 
-\begin{lstlisting}[
-label=alg:dirichlet,
-caption={Algorithm that uses data from the {\tt AdapterSet}}
-]
-public static <
-	V extends Vertex<V, E, F>,
-	E extends Edge<V, E, F>,
-	F extends Face<V, E, F>,
-	HDS extends HalfEdgeDataStructure<V, E, F>
-> double computeDirichlet(HDS hds, AdapterSet a){
-	double energy = 0.0;
-	for (E e : hds.getPositiveEdges()) {
-		V s = e.getStartVertex();
-		V t = e.getTargetVertex();
-		double fStart = a.get(FunctionValue.class, s, Double.class);
-		double fTarget = a.get(FunctionValue.class, t, Double.class);
-		double w = a.get(Weight.class, e, Double.class);
-		double d = fStart - fTarget;
-		energy += w * d * d; 
-	}
-	return energy;
-}
-\end{lstlisting}
+\lstinputlisting[
+	caption={Algorithm that uses data from the {\tt AdapterSet}. The {\tt get} method of the
+		{\tt AdapterSet} takes the data class type to find a matching adapter (Line 11 and 12).
+		The corresponding {\tt getDefault} method takes a default value that is returned if no
+		matching adapter is found (Line~13). No data type class is needed in the case.
+	},
+	label=alg:dirichlet,
+	captionpos=b,
+	firstline=14,
+	lastline=31
+]{java/de/sechel/thesis/MyUtility.java}
 
-It requires the {\tt AdapterSet} to contain adapters that provide
+This method requires the {\tt AdapterSet} to contain adapters that provide
 {\tt FunctionValue} data on vertices (Line 11 and 12) and {\tt Weight} data on half-edges (Line 13). 
 
 The classes {\tt FunctionValue} and {\tt Weight} are runtime annotation classes, e.g.,
 
 \begin{lstlisting}
-	@Retention(RetentionPolicy.RUNTIME)
-	@Target(ElementType.TYPE)
-	public @interface FunctionValue {}
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface FunctionValue {}
 \end{lstlisting}
 
-A adapter class annotated with this annotation serves as data adapter when called for as in Line 11-13
-of Listing~\ref{alg:dirichlet}
+A adapter class annotated with this annotation serves as {\tt FunctionaValue} data adapter when 
+called for as in Line 11-13 of Listing~\ref{alg:dirichlet}.
+There are three basic classes that could serve as base class of an adapter. It is
+
+\begin{itemize}
+\item {\tt Adapter} - The abstract base class of all adapters. Should never be subclassed directly.
+\item {\tt AbstractAdapter} - A adapter class that knows about the supported data type and implements
+all getter and setter methods. Here only the needed methods can be overwritten. Node type checking
+is done manually thus allows for the creation of generic adapters.
+\item {\tt AbstractTypedAdpter} - If you know which half edge node classes the adpter is supposed to
+work with this is the adapter base class you should use. Node type checking and casting is done in the
+super class.
+\end{itemize}
+
+An adapter implementation using the {\tt AbstractAdapter} is for instance:
+
+\lstinputlisting[
+	caption={
+		Adapter implementation using the {\tt AbstractAdapter} as base class and a 
+		map as storage concept for double values on generic vertices. It is annotated 
+		with a {\tt FunctionValue} annotation to serve as
+		provider for data in the {\tt AdapterSet} (Line 1). The super class {\tt
+		AbstractAdapter} is parameterized with the data type of the implementation; In this
+		case {\tt Double} (Line 1). 
+		The super class constructor is invoked with the class object of this type and flags 
+		that tell the adapter
+		if get and/or set operations are permitted (Line 6). The method {\tt canAccept}
+		decides whether the adapter can work with the given node class; In this case the 
+		adapter can accept any {\tt Vertex} object (Line 12). 
+		Vertex getter and setter methods are generic methods (Line 16 to 32). 
+	},
+	label=lst:adapter,
+	captionpos=b,
+	firstline=13,
+	lastline=50
+] {java/de/sechel/thesis/MyAbstractAdapter.java}
+
+When writing the adapter for concrete node classes we have a more concise description:
+
+\lstinputlisting[
+	caption={
+		An adapter using {\tt AbstractTypedAdpter} as base class. Also annotated with the {\tt
+		FunctionValue} annotation. This super class is parameterized
+		with a set of node class implementations and the adapter data type. Here the super
+		constructor takes the node class objects or {\tt null} if a node typep is not supported, the
+		data type class object, and the getter/setter flags. The vertex getter and setter methods 
+		are not generic and the corresponding casting is done in the super class.
+	},
+	label=lst:adapter,
+	captionpos=b,
+	firstline=9,
+	lastline=50
+] {java/de/sechel/thesis/MyTypedAdapter.java}
+
+Using this concept of typed adapters the usage of an algorithm amounts to the implementation of
+required data adapters and the creation of a suitable {\tt AdapterSet}.
+
+\lstinputlisting[
+	caption={Usage example of the algorithm presented in Listing~\ref{alg:dirichlet}. In this example 
+	an empty data structure is created and processed by the algorithm. The {\tt AdapterSet} contains
+	the {\tt FunctionValue} annotated adapter to provide {\tt double} values on vertices.},
+	label=alg:dirichlet,
+	captionpos=b,
+	firstline=33,
+	lastline=38
+]{java/de/sechel/thesis/MyUtility.java}
 
 
+\section{{\sc HalfEdgeTools} and {\sc Jreality}}
 
+The {\sc HalfEdgeTools} package contains utility classes for the visualization of half-edge data with 
+{\sc Jreality} \cite{JrealityWebsite}. A central role plays the plugin {\tt de.jtem.halfedgetools.plugin.Halfedge\-Interface}. This plug-in works as a converter between half-edge data structure and indexed face set 
+data structure used internally by {\sc Jreality}.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5cm]{jrworkspace/halfedge_interface.png}
+	\caption{The user interface created by the {\tt HalfedgeInterface} plug-in. It manages layers that
+		contain different instances of half-edge data structures and the corresponding visualizations.
+		Layers can be merged, {\tt OBJ} files can be exported and imported and visualization
+		options can be adjusted. 
+	}
+\end{figure}
 
+The API of the {\tt HalfedgeInterface} supports {\tt set} and {\tt get} methods that convert to and from
+{\sc Jreality}. During conversion data is read from a {\tt AdapterSet} managed by the half-edge
+interface. The plug-in supports various data on node types. We give a list of annotation types and
+their purposes. All conversion adapters work with {\tt double[]} or {\tt double} data types. All
+supported annotation types are in the package {\tt de.jtem.halfedgetools.adapter.type}.
+
+\begin{itemize}
+\item {\tt\bf @Position} - Positions of vertices can have lengths 2, 3, or 4.
+\item {\tt\bf @Color} - Colors either on vertices, edges, or faces.
+\item {\tt\bf @Normal} - Normals usually for vertices or faces.
+\item {\tt\bf @TexturePosition} - Texture coordinates of length 2, 3, or 4.
+\item {\tt\bf @Label} - Text annotations that appear next to the node.
+\item {\tt\bf @Radius} - Radii of vertex sphere representations or edge cylinders when rendered
+as spheres or tubes.
+\item {\tt\bf @Size} - Size in pixels of vertex points or edge lines when rendered as points or lines.
+\end{itemize}
+
+Internally the conversion is done using the classes from the package.
 
 
 
