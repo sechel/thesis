@@ -4,11 +4,12 @@
 
 This chapter describes the implementation of a half-edge data structure and a set of tools
 contained in the package {\sc HalfEdgeTools}. Both packages are part of the {\sc Jtem} project
-\cite{JtemWebsite}. This is joint work with Boris Springborn ({\sc HalfEdge}) and
+\cite{JtemWebsite}. This is joint work with Boris~Springborn ({\sc HalfEdge}), Thilo~R{\"o}rig, 
+Felix~Kn{\"o}ppel, and Kristoffer Josefsson ({\sc HalfEdgeTools}), and
 other contributers to the {\sc Jtem} project.
 
-This particular implementation was inspired by a half-edge implementation contained in
-the {\sc Cgal} library \cite{CgalWebsite}.
+This particular implementation of a half-edge data structure was inspired by an implementation 
+contained in the {\sc Cgal} library \cite{CgalWebsite}.
 
 
 \label{sec:halfedge_halfedgetools}
@@ -277,12 +278,18 @@ required data adapters and the creation of a suitable {\tt AdapterSet}.
 \section{{\sc HalfEdgeTools} and {\sc Jreality}}
 
 The {\sc HalfEdgeTools} package contains utility classes for the visualization of half-edge data with 
-{\sc Jreality} \cite{JrealityWebsite}. A central role plays the plugin {\tt de.jtem.halfedgetools.plugin.Halfedge\-Interface}. This plug-in works as a converter between half-edge data structure and indexed face set 
-data structure used internally by {\sc Jreality}.
+{\sc Jreality} \cite{JrealityWebsite}. It is part of the {\sc Jtem} project \cite{JtemWebsite}. 
+
+{\bf Half-edge Interface}
+
+A central 
+role plays the plug-in {\tt de.jtem.halfedge\-tools.plugin.Halfedge\-Interface}. This plug-in works 
+as a converter between half-edge data structure and {\tt IndexedFaceSet} data structure used internally 
+by {\sc Jreality}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=5cm]{jrworkspace/halfedge_interface.png}
+	\includegraphics[width=5cm]{jrworkspace/halfedge_interface_hires.png}
 	\caption{The user interface created by the {\tt HalfedgeInterface} plug-in. It manages layers that
 		contain different instances of half-edge data structures and the corresponding visualizations.
 		Layers can be merged, {\tt OBJ} files can be exported and imported and visualization
@@ -291,7 +298,7 @@ data structure used internally by {\sc Jreality}.
 \end{figure}
 
 The API of the {\tt HalfedgeInterface} supports {\tt set} and {\tt get} methods that convert to and from
-{\sc Jreality}. During conversion data is read from a {\tt AdapterSet} managed by the half-edge
+{\sc Jreality}. During conversion data is read from an {\tt AdapterSet} that is managed by the half-edge
 interface. The plug-in supports various data on node types. We give a list of annotation types and
 their purposes. All conversion adapters work with {\tt double[]} or {\tt double} data types. All
 supported annotation types are in the package {\tt de.jtem.halfedgetools.adapter.type}.
@@ -307,8 +314,44 @@ as spheres or tubes.
 \item {\tt\bf @Size} - Size in pixels of vertex points or edge lines when rendered as points or lines.
 \end{itemize}
 
-Internally the conversion is done using the classes from the package.
+Internally the conversion is done using the classes from the package 
+{\tt de.jtem.halfedge\-tools.jreality}. Conversion from and to a {\sc Jreality} {\tt IndexedFaceSet}
+is implemented in {\tt ConverterHeds2JR} and {\tt ConverterJR2Heds}.
 
+{\bf Visualization Interface}
+
+A second important plug-in is the {\tt Visuali\-zation\-Inter\-face}. It defines
+an plug-in API and various implementations for data visualization with the half-edge data structure. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=11cm]{jrworkspace/visualization_interface_hires02.png}
+\includegraphics[width=11cm]{jrworkspace/visualization_interface_hires.png}
+\caption[Visualization Interface]{The half-edge visualization user interface. Selection of a visualization
+plug-in for a data adapter (top). A histogram view for scalar data on half-edge nodes (bottom).}
+\label{fig:visualization_interface}
+\end{figure}
+
+Every {\tt Adapter} that is managed by the {\tt HalfedgeInterface} is available as data source. In 
+addition to this every plug-in extending {\tt de.jtem.half\-edgetools.plugin.data.Data\-Source\-Provider} 
+is asked for data adapters. A list of these data sources is displayed in the user interface, see 
+Figure~\ref{fig:visualization_interface} (top). A visualization is created by a corresponding 
+{\tt DataVisualizer} plug-in. For scalar data on vertices, edges, or faces we provide the 
+Colored Beads Visualizer or simply colored nodes. There is a histogram that displays a density
+plot for scalar data on nodes, Figure~\ref{fig:visualization_interface} (bottom). For vector valued data there is a visualizer that creates
+arrows starting at half-edge nodes.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=4.5cm]{jrworkspace/colored_beads.png}
+\includegraphics[width=4.5cm]{jrworkspace/node_colors.png}
+\includegraphics[width=5cm]{jrworkspace/histogram.png}
+\caption[Visualizers]{Different visualization plug-ins for scalar data on faces. Colored beads (left),
+node colors, and histogram view.}
+\label{fig:visualizers}
+\end{figure}
 
 
 
