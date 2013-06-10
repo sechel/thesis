@@ -3,7 +3,7 @@
 \chapter{The {\sc Jtem} libraries {\sc HalfEdge} and {\sc HalfEdgeTools}}
 
 This chapter describes the implementation of a half-edge data structure and a set of tools
-contained in the package {\sc HalfEdgeTools}. Both packages are part of the {\sc Jtem} project
+combined in the package {\sc HalfEdgeTools}. Both packages are part of the {\sc Jtem} project
 \cite{JtemWebsite}. This is joint work with Boris~Springborn ({\sc HalfEdge}), Thilo~R{\"o}rig, 
 Felix~Kn{\"o}ppel, and Kristoffer Josefsson ({\sc HalfEdgeTools}), and
 other contributers to the {\sc Jtem} project.
@@ -55,7 +55,7 @@ The face and vertex objects hold back references to a half-edge referencing them
 is the class {\tt de.jtem.halfedge.HalfEdgeDataStructure} representing a whole half-edge data 
 structure. It acts as a container for (and sort of factory of) its vertices, edges, and faces.
 
-{\bf Use of generics}
+{\bf Use of Generics}
 
 Typically, one wants to equip vertices, edges, and faces with additional properties or functionality. 
 For example, vertices may have coordinates associated with them, edges may have weights, and 
@@ -71,7 +71,7 @@ To create a half-edge data structure with vertices that have 2D coordinates, pro
 
 \begin{itemize}
 \item{Step 1.} 
-Define appropriate subclasses of {\tt de.jtem.halfedge.Vertex}, {\tt de.jtem.halfedge.Edge}, and 
+Define appropriate subclasses of {\tt de.jtem.half\-edge.Vertex}, {\tt de.jtem.half\-edge.Edge}, and 
 {\tt de.jtem.halfedge.Face}, for example:
 
 \begin{lstlisting}[numbers=none]
@@ -83,8 +83,8 @@ public class MyFace extends Face<MyVertex, MyEdge, MyFace> { }
 \end{lstlisting}
 
 Of course you might make the property {\tt p} of {\tt MyEdge} private and provide getter and setter 
-methods, etc. Note that you always have to subclass {\tt de.jtem.halfedge.Vertex}, 
-{\tt de.jtem.halfedge.Edge}, and {\tt de.jtem.halfedge.Face}, even if you do not define any 
+methods, etc. Note that you always have to subclass {\tt de.jtem.half\-edge.Vertex}, 
+{\tt de.jtem.half\-edge.Edge}, and {\tt de.jtem.half\-edge.Face}, even if you do not define any 
 additional functionality or properties.
 
 \item{Step 2.} 
@@ -118,6 +118,16 @@ MyFace f = heds.addNewFace();
 \end{lstlisting}
 
 \end{itemize}
+
+{\bf Half-Edge Utilities}
+
+To work efficiently with half-edge data a set of algorithms is implemented as static ulitity methods
+in the class {\tt de.jtem.half\-edge.util.Half\-Edge\-Utils}. It contains methods that help iterating 
+over incoming edges at a vertex, or iterating over the boundary edges of a surface or a face, and many 
+more.
+
+
+
 
 \section{Data, Algorithms and Tools}
 
@@ -188,7 +198,8 @@ double valued weights on edges.
 	caption={Algorithm that uses data from the {\tt AdapterSet}. The {\tt get} method of the
 		{\tt AdapterSet} takes the data class type to find a matching adapter (Line 11 and 12).
 		The corresponding {\tt getDefault} method takes a default value that is returned if no
-		matching adapter is found (Line~13). No data type class is needed in the case.
+		matching adapter is found (Line~13). It uses {\tt @FunctionValue} and {\tt @Weight} annotated 
+		adapters to aquire the data needed for calculation of the output value.
 	},
 	label=alg:dirichlet,
 	captionpos=b,
@@ -197,7 +208,7 @@ double valued weights on edges.
 ]{java/de/sechel/thesis/MyUtility.java}
 
 This method requires the {\tt AdapterSet} to contain adapters that provide
-{\tt FunctionValue} data on vertices (Line 11 and 12) and {\tt Weight} data on half-edges (Line 13). 
+{\tt @FunctionValue} data on vertices (Line 11 and 12) and {\tt @Weight} data on half-edges (Line 13). 
 
 The classes {\tt FunctionValue} and {\tt Weight} are runtime annotation classes, e.g.,
 
@@ -207,8 +218,12 @@ The classes {\tt FunctionValue} and {\tt Weight} are runtime annotation classes,
 public @interface FunctionValue {}
 \end{lstlisting}
 
-A adapter class annotated with this annotation serves as {\tt FunctionaValue} data adapter when 
-called for as in Line 11-13 of Listing~\ref{alg:dirichlet}.
+An adapter class annotated with this annotation serves as {\tt @FunctionaValue} data adapter when 
+called for as in Line 11-13 of Listing~\ref{alg:dirichlet}. The meaning of adapter annotations is 
+an agreement between the algorithm using it and the implementor of the adapter. It is subject
+of a best-practice policy to implement the adapters such that they output data that fit its 
+annotation names.
+
 There are three basic classes that could serve as base class of an adapter. It is
 
 \begin{itemize}
@@ -227,10 +242,10 @@ An adapter implementation using the {\tt AbstractAdapter} is for instance:
 	caption={
 		Adapter implementation using the {\tt AbstractAdapter} as base class and a 
 		map as storage concept for double values on generic vertices. It is annotated 
-		with a {\tt FunctionValue} annotation to serve as
+		with a {\tt @FunctionValue} annotation to serve as
 		provider for data in the {\tt AdapterSet} (Line 1). The super class {\tt
 		AbstractAdapter} is parameterized with the data type of the implementation; In this
-		case {\tt Double} (Line 1). 
+		case {\tt Double} (Line 2). 
 		The super class constructor is invoked with the class object of this type and flags 
 		that tell the adapter
 		if get and/or set operations are permitted (Line 6). The method {\tt canAccept}
@@ -249,11 +264,13 @@ When writing the adapter for concrete node classes we have a more concise descri
 \lstinputlisting[
 	caption={
 		An adapter using {\tt AbstractTypedAdpter} as base class. Also annotated with the {\tt
-		FunctionValue} annotation. This super class is parameterized
+		@FunctionValue} annotation. This super class is parameterized
 		with a set of node class implementations and the adapter data type. Here the super
-		constructor takes the node class objects or {\tt null} if a node typep is not supported, the
+		constructor takes the node class objects or {\tt null} if a node type is not supported, the
 		data type class object, and the getter/setter flags. The vertex getter and setter methods 
-		are not generic and the corresponding casting is done in the super class.
+		are not generic and the corresponding casting is done in the super class. Adapters working
+		on edges or faces implement the corresponding {\tt get/setEdgeValue} or 
+		{\tt get/setFaceValue} methods.
 	},
 	label=lst:adapter,
 	captionpos=b,
@@ -266,13 +283,45 @@ required data adapters and the creation of a suitable {\tt AdapterSet}.
 
 \lstinputlisting[
 	caption={Usage example of the algorithm presented in Listing~\ref{alg:dirichlet}. In this example 
-	an empty data structure is created and processed by the algorithm. The {\tt AdapterSet} contains
-	the {\tt FunctionValue} annotated adapter to provide {\tt double} values on vertices.},
+	an empty data structure is created, filled with a dodecahedron combinatorics, and then processed by the 	
+	algorithm. The {\tt AdapterSet} contains the {\tt @FunctionValue} annotated adapter to provide 
+	{\tt Double} values on vertices. In this example a {\tt @Weight} adapter in not needed since the 
+	{\tt computeDirichlet} algorithm uses the {\tt getDefault} method to obtain weight data for edges.},
 	label=alg:dirichlet,
 	captionpos=b,
 	firstline=33,
-	lastline=38
+	lastline=40
 ]{java/de/sechel/thesis/MyUtility.java}
+
+{\bf Generic Adapters}
+
+There is a set of generic adapters implemented in the package 
+{\tt de.jtem.half\-edge\-tools.adap\-ter.generic}. Here generic means that the adapter does not provide
+the data itself. Instead it asks for other adapters to provide data and converts, merges, or recalculates its
+output based on the data aquired from other adapter implementations.
+
+The most important example of a pre-defined generic adapter are position and texture position adapters.
+These adapters come in three versions, e.g., {\tt @Position2D}, {\tt @Position3D}, and {\tt @Position4D}. The implementations, e.g, {\tt de.jtem.half\-edge\-tools.adapter.generic.Position\-3dAdapter} obtain position
+data from the {\tt AdapterSet} using the adapter annotated with {\tt @Position} and convert if the lengths
+of arrays is not equal to $3$.
+
+An algorithm using generic adapters is free of data conversion code.
+
+
+{\bf Error Handling}
+
+If a data adapter that is used by an algorithm is not found, the {\tt AdapterSet} throws exceptions stating
+the name of the required annotation and the node type that is expected. 
+
+\begin{lstlisting}[
+numbers=none, stringstyle=\ttfamily,keywordstyle=\ttfamily, numbersep=0pt,xleftmargin=20pt
+]
+Exception in thread "main" de.jtem.halfedgetools.adapter.AdapterException: Adapter "FunctionValue" for node VV not found
+	at de.jtem.halfedgetools.adapter.AdapterSet.get(Unknown Source)
+	at de.sechel.thesis.MyUtility.computeDirichlet(MyUtility.java:25)
+	at de.sechel.thesis.MyUtility.calculate(MyUtility.java:39)
+	at de.sechel.thesis.MyUtility.main(MyUtility.java:44)
+\end{lstlisting}
 
 
 \section{{\sc HalfEdgeTools} and {\sc Jreality}}
@@ -282,12 +331,12 @@ The {\sc HalfEdgeTools} package contains utility classes for the visualization o
 
 {\bf Half-edge Interface}
 
-A central 
-role plays the plug-in {\tt de.jtem.halfedge\-tools.plugin.Halfedge\-Interface}. This plug-in works 
+A central role plays the plug-in {\tt de.jtem.halfedge\-tools.plugin.Halfedge\-Interface}. This plug-in works 
 as a converter between half-edge data structure and {\tt IndexedFaceSet} data structure used internally 
-by {\sc Jreality}.
+by {\sc Jreality}. It creates a user interface that contains gui elements for layer management, import, export,
+undo, redo, and more features, see Figure~\ref{fig:halfedge_interface}.
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=5cm]{jrworkspace/halfedge_interface_hires.png}
 	\caption{The user interface created by the {\tt HalfedgeInterface} plug-in. It manages layers that
@@ -295,6 +344,7 @@ by {\sc Jreality}.
 		Layers can be merged, {\tt OBJ} files can be exported and imported and visualization
 		options can be adjusted. 
 	}
+	\label{fig:halfedge_interface}
 \end{figure}
 
 The API of the {\tt HalfedgeInterface} supports {\tt set} and {\tt get} methods that convert to and from
@@ -324,34 +374,36 @@ A second important plug-in is the {\tt Visuali\-zation\-Inter\-face}. It defines
 an plug-in API and various implementations for data visualization with the half-edge data structure. 
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=11cm]{jrworkspace/visualization_interface_hires02.png}
-\includegraphics[width=11cm]{jrworkspace/visualization_interface_hires.png}
-\caption[Visualization Interface]{The half-edge visualization user interface. Selection of a visualization
-plug-in for a data adapter (top). A histogram view for scalar data on half-edge nodes (bottom).}
-\label{fig:visualization_interface}
+\begin{figure}
+	\centering
+	\includegraphics[width=11cm]{jrworkspace/visualization_interface_hires02.png}
+	\includegraphics[width=11cm]{jrworkspace/visualization_interface_hires.png}
+	\caption[Visualization Interface]{The half-edge visualization user interface. Selection of a visualization
+		plug-in for a data adapter (top). A histogram view for scalar data on half-edge nodes (bottom).}
+	\label{fig:visualization_interface}
 \end{figure}
 
 Every {\tt Adapter} that is managed by the {\tt HalfedgeInterface} is available as data source. In 
 addition to this every plug-in extending {\tt de.jtem.half\-edgetools.plugin.data.Data\-Source\-Provider} 
 is asked for data adapters. A list of these data sources is displayed in the user interface, see 
-Figure~\ref{fig:visualization_interface} (top). A visualization is created by a corresponding 
-{\tt DataVisualizer} plug-in. For scalar data on vertices, edges, or faces we provide the 
-Colored Beads Visualizer or simply colored nodes. There is a histogram that displays a density
-plot for scalar data on nodes, Figure~\ref{fig:visualization_interface} (bottom). For vector valued data there is a visualizer that creates
-arrows starting at half-edge nodes.
+Figure~\ref{fig:visualization_interface} (top). A visualization of the selected data source is created by a
+corresponding {\tt DataVisualizer} plug-in. For scalar data on vertices, edges, or faces we provide the 
+colored beads visualizer or simply colored nodes, Figure~\ref{fig:visualizers}. There is a histogram that displays a density
+plot for scalar data on nodes, Figure~\ref{fig:visualizers} (right) and Figure~\ref{fig:visualization_interface} (bottom). For vector valued data 
+there is a visualizer that creates arrows starting at half-edge nodes.
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=4.5cm]{jrworkspace/colored_beads.png}
-\includegraphics[width=4.5cm]{jrworkspace/node_colors.png}
-\includegraphics[width=5cm]{jrworkspace/histogram.png}
-\caption[Visualizers]{Different visualization plug-ins for scalar data on faces. Colored beads (left),
-node colors, and histogram view.}
-\label{fig:visualizers}
+\begin{figure}
+	\centering
+	\includegraphics[width=4.5cm]{jrworkspace/colored_beads.png}
+	\includegraphics[width=4.5cm]{jrworkspace/node_colors.png}
+	\includegraphics[width=5cm]{jrworkspace/histogram.png}
+	\caption[Visualizers]{Different visualization plug-ins for scalar data on faces. Colored beads (left),
+		node colors, and histogram view.}
+	\label{fig:visualizers}
 \end{figure}
+
+
 
 
 

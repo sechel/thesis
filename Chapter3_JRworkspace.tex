@@ -17,9 +17,9 @@ in {\tt TeleType} are names of {\sc Java} classes, methods, or fields.
 \end{figure}
 
 In the field of Discrete Differential Geometry (DDG) there is a special need for experiments
-conducted with the help of computer software. Especially if the methods of DDG are applied
+with the help of computer software. Especially if the methods of DDG are applied
 to problems in computer graphics, geometry processing, or architecture, algorithms have 
-to be implemented and convincing examples have to be presented. Additionally a suitable 
+to be implemented and convincing examples have to be presented. Additionally, a suitable 
 visualization of the results has to be included in a state-of-the-art publication.
 
 There is a growing knowledge of software development in the mathematical community. This 
@@ -47,7 +47,7 @@ similar to the DDG Framework. Section~\ref{sec:jrworkspace} introduces the {\sc 
 the DDG Framework. It is also the user interface basis of {\sc Jreality}, a mathematical 
 visualization library that uses {\sc JRworkspace} as plug-in and user interface 
 tool~\cite{JrealityWebsite}. Section~\ref{sec:halfedge_halfedgetools} introduces the 
-{\sc Halfedge} and {\sc HalfedgeTools} package. They implement half-edge data 
+{\sc HalfEdge} and {\sc HalfEdgeTools} package. They implement half-edge data 
 structure and various user interface tools and algorithms for interaction and editing.  
 In Section~\ref{sec:conformallab} we describe the software 
 {\sc ConformalLab}. This package implements the methods of the 
@@ -59,13 +59,13 @@ This package is also released to partners of the development group as {\sc VaryL
 
 Figure~\ref{fig:software_architecture} shows the dependencies of the packages. Every
 application depends on {\sc JRworkspace} which implements plug-in functionality. It is
-the basis of the {\sc Jreality} plug-in system. {\sc Half\-edge\-Tools} is using {\sc Jreality} 
-for visualization and is build on top of the {\sc Jtem} project {\sc Half\-edge}. 
+the basis of the {\sc Jreality} plug-in system. {\sc Half\-Edge\-Tools} is using {\sc Jreality} 
+for visualization and is build on top of the {\sc Jtem} project {\sc Half\-Edge}. 
 {\sc ConformalLab} and {\sc VaryLab} use {\sc Jpetsc/Jtao} to perform numerical
 optimization. Their algorithms are implemented as {\sc JRworkspace} plug-ins.
 
 The development of the described software is joint work with Thilo R{\" o}rig 
-({\sc HalfedgeTools, VaryLab}), the {\sc Jreality} members~\cite{JrealityWebsite}, Hannes 
+({\sc HalfEdgeTools, VaryLab}), the {\sc Jreality} members~\cite{JrealityWebsite}, Hannes 
 Sommer ({\sc Jpetsc/Jtao})~\cite{jpetsctao-web-page}, Ulrich Pinkall and Paul Peters 
 ({\sc JRworkspace}), and Boris Springborn ({\sc Halfedge}).
 

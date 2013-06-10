@@ -4,6 +4,7 @@ import de.jtem.halfedge.Edge;
 import de.jtem.halfedge.Face;
 import de.jtem.halfedge.HalfEdgeDataStructure;
 import de.jtem.halfedge.Vertex;
+import de.jtem.halfedge.util.HalfEdgeUtils;
 import de.jtem.halfedgetools.adapter.AdapterSet;
 import de.jtem.halfedgetools.adapter.type.Weight;
 import de.sechel.thesis.hds.FunctionValue;
@@ -30,12 +31,18 @@ public static <
 	return energy;
 }
 
-public double calculate() {
+public static double calculate() {
 	VHDS hds = new VHDS();
+	HalfEdgeUtils.addDodecahedron(hds);
 	AdapterSet a = new AdapterSet();
 	a.add(new MyTypedAdapter());
 	return computeDirichlet(hds, a);
 }
 	
+
+public static void main(String[] args) {
+	double r = calculate();
+	System.out.println("result: " + r);
+}
 	
 }
