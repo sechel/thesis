@@ -1,7 +1,7 @@
 %!TEX root = ./Thesis.tex
 \chapter{Variational Description}
 
-The discrete uniformization theory persented here is based on the notion of discrete conformal eqivalence of triangle meshes. The Euclidean definition was first considered by \cite{Luo2004}, the variational principle and applications in computer graphics is due to \cite{Springborn2008, OWF2009, Bobenko2010}. The notion of conformal equivalence of non-Euclidean metrics and corresponding variational principles were first defined in \cite{Bobenko2010}. \cite{Guo2011} investigate the gradient flow of this principle.
+The theory of discrete uniformization presented here is based on the notion of discrete conformal eqivalence of triangle meshes. The Euclidean definition was first considered by \cite{Luo2004}, the variational principle and applications in computer graphics is due to \cite{Springborn2008, OWF2009, Bobenko2010}. The notion of conformal equivalence of non-Euclidean metrics and corresponding variational principles were first defined in \cite{Bobenko2010}. \cite{Guo2011} investigate the gradient flow of this principle.
 Most of the material presented here can be found in \cite{BobSechSpr}.
 
 \section{Discrete Riemann surfaces}
@@ -32,7 +32,7 @@ As in the smooth theory we define what it means for a metric to be conformally e
 \begin{figure}
 \centering
 \scalebox{0.5}{\input{figures/equivalence.pdf_t}}
-\caption[Euclidean conformal equivalence]{Two Euclidean triangles are discretely conformally equivalent if their edge lengths can be scaled by logarithmic factors $u$ defined on vertices.}
+\caption[Euclidean conformal equivalence]{Two Euclidean triangles are discretely conformally equivalent if their edge lengths agree after scaling by logarithmic factors $u$ defined on vertices.}
 \label{fig:conformal_equivalence}
 \end{figure}
 
@@ -198,6 +198,20 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 \subsection{Lawsons surface}
 
 \section{Uniformization of Schottky data}
+Let $C_1,C'_1\ldots,C_g,C'_g$ be disjoint circles in $\hat{\C}$. A classical Schottky group $G$ is a Kleinian group
+with generators $\sigma_1,\ldots,\sigma_g$ satisfying
+\[\frac{\sigma_i z - B_i}{\sigma_i z - A_i} = \mu_i \frac{z - B_i}{z - A_i}, \quad\quad\quad 0 < \left|\mu_i\right|<1,\]
+where $\sigma_i$ maps the exterior of $C_i$ onto the interior of $C'_i$. The points $A_i$ and $B_i$ lie inside the circles $C_i$ and $B_i$ respectively \cite{Bobenko88}. Figure~\ref{fig:schottky_group} illustrates this construction.
+The quotient space $\Chat/G$ is a Riemann surface of genus $g$.
+
+\begin{figure}
+	\centering
+	\scalebox{1.0}{\input{figures/schottky2.pdf_t}}
+	\caption{Schottky group generating a Riemann surface of genus $2$. The point at infinity is not contained in 
+any of the circles. The parameters $A$ and $B$ lie inside the cirlces by definition.}
+	\label{fig:schottky_group}
+\end{figure}
+
 \subsection{Images of isometric circles}
 \subsection{Hyperelliptic data}
 
