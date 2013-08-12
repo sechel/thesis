@@ -83,6 +83,9 @@ If one restricts the equivalence class to either Euclidean, hyperbolic, or spher
 	\mathrm{lcr}_{\it{ij}} = \frac{l_{\it{ik}} l_{\it{jm}}} {l_{\it{mi}} l_{\it{kj}}} \label{eq:length_cross_ratio}
 \end{equation}
 
+Length cross-ratios are also invariant under M{\"o}bius transformations of the ambient space.
+
+
 \section{Uniformization}
 We can now state the uniformization problem:
 \emph{Given a discrete Riemann surface, find a metric of constant curvature
@@ -197,12 +200,13 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 \subsection{Canonical domains}
 \subsection{Lawsons surface}
 
-\section{Uniformization of Schottky data}
+\section{From Schottky to Fuchsian Uniformization}
 Let $C_1,C'_1\ldots,C_g,C'_g$ be disjoint circles in $\hat{\C}$. A classical Schottky group $G$ is a Kleinian group
 with generators $\sigma_1,\ldots,\sigma_g$ satisfying
 \[\frac{\sigma_i z - B_i}{\sigma_i z - A_i} = \mu_i \frac{z - B_i}{z - A_i}, \quad\quad\quad 0 < \left|\mu_i\right|<1,\]
-where $\sigma_i$ maps the exterior of $C_i$ onto the interior of $C'_i$. The points $A_i$ and $B_i$ lie inside the circles $C_i$ and $B_i$ respectively \cite{Bobenko88}. Figure~\ref{fig:schottky_group} illustrates this construction.
-The quotient space $\Chat/G$ is a Riemann surface of genus $g$.
+where $\sigma_i$ maps the exterior of $C_i$ onto the interior of $C'_i$. The points $A_i$ and $B_i$ lie inside the circles $C_i$ and $B_i$ respectively \cite{bobenko2011riemann}. Figure~\ref{fig:schottky_group} illustrates this construction.
+The quotient space $\Chat/G$ is a Riemann surface of genus $g$. The group $G$ is called the uniformizing
+Schottky group
 
 \begin{figure}
 	\centering
@@ -211,6 +215,27 @@ The quotient space $\Chat/G$ is a Riemann surface of genus $g$.
 any of the circles. The parameters $A$ and $B$ lie inside the cirlces by definition.}
 	\label{fig:schottky_group}
 \end{figure}
+
+Given a Riemann surface of genus $g$ and a cassical Schottky uniformization, we calculate a corresponding 
+Fuchsian uniformization using discrete conformal equivalence of spherical and hyperbolic triangle meshes.
+A fundamental domain of the Schottky uniformization is the Riemann sphere without the interior of the circles.
+
+The triangulation of a fundamental domain has to respect the mappings between the circles. Vertices on identified 
+circles have to be identified as well. It is however not clear a priori what the conformal structure of a triagulated 
+fundamental domain is. The edge length on identified circles differ since there is a M{\" o}bius transformation 
+between them. 
+
+The idea to define the conformal structure is to use length cross-ratios instead of edge lengths. Both definitions are equivalent and define the conformal structure of a discrete Riemann surface. So given length cross ratios on edges we can calculate representative edge lengths in the discrete conformal class of the surface and, more obvious, vice versa. On boundary edges of the fundamental domain the length cross ratios agree since length-cross ratios are M{\" o}bius invariant.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\linewidth]{image/schottky/schottky_domain2.pdf}
+	\includegraphics[width=0.4\linewidth]{image/schottky/schottky01.pdf}
+	\caption{Fuchsian uniformization of a Riemann surface (right) given by Schottky data (left).}
+	\label{fig:fuchsian_to_schottky}
+\end{figure}
+
+
 
 \subsection{Images of isometric circles}
 \subsection{Hyperelliptic data}
