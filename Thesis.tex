@@ -1,6 +1,7 @@
 %!TEX TS-program = pdflatex
 %!TEX encoding = UTF-8 Unicode
 \documentclass[a4paper]{book}
+\usepackage[english,german]{babel}
 
 \usepackage{color}
 
@@ -94,16 +95,20 @@ Promotionsausschuss\\
 \begin{tabular}{rl}
 Vorsitzender: & NN \\
 Gutachter/Berichter: & Prof. Dr. Alexander I. Bobenko \\
-& NN 
+& Prof. Dr. Max Wardetzky 
 \end{tabular}
 \vspace{0.3cm}\\
 Tag der wissenschaftlichen Aussprache: NN\\
 \vspace{2cm}\\
 }
 
-\date{Berlin, den 07. Januar 2013}
+\date{
+	Berlin, den {\selectlanguage{german}\today}\\
+	D 83
+}
 
 \begin{document}
+\selectlanguage{english}
 
 \frontmatter
 \maketitle
