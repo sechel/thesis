@@ -1,0 +1,2502 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   color-interpolation="sRGB"
+   color-rendering="auto"
+   font-size="12"
+   font-style="normal"
+   font-weight="normal"
+   viewBox="0 0 528.61191 527.5277"
+   image-rendering="auto"
+   shape-rendering="auto"
+   stroke-miterlimit="10"
+   text-rendering="auto"
+   id="svg182430"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="g1_schottky.svg"
+   style="font-size:12px;font-style:normal;font-weight:normal;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Arial">
+  <metadata
+     id="metadata183408">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs183406" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1295"
+     inkscape:window-height="868"
+     id="namedview183404"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.40273038"
+     inkscape:cx="107.03931"
+     inkscape:cy="273.0485"
+     inkscape:window-x="561"
+     inkscape:window-y="64"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg182430" />
+  <g
+     id="g183576"
+     style="fill:none;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none">
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182760"
+       points="486.83896,298.61647 487.93557,298.70277 487.61313,288.7797 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182762"
+       points="487.61313,288.7797 487.93557,298.70277 488.70974,288.86601 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182764"
+       points="487.35716,298.11044 487.41737,299.20879 752.6602,283.56697 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182766"
+       points="752.6602,283.56697 487.41737,299.20879 752.72041,284.66532 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182768"
+       points="484.54902,308.12577 485.61862,308.38256 486.85246,298.53122 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182770"
+       points="486.85246,298.53122 485.61862,308.38256 487.92207,298.78801 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182772"
+       points="487.56433,298.1389 487.2102,299.18034 740.11633,384.0155 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182774"
+       points="740.11633,384.0155 487.2102,299.18034 739.7622,385.05694 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182776"
+       points="544.74064,560.46002 544.59734,559.36939 502.24298,566.04392 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182778"
+       points="502.24298,566.04392 544.59734,559.36939 502.09968,564.9533 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182780"
+       points="501.63407,565.61632 502.70858,565.3809 453.29054,344.96798 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182782"
+       points="453.29054,344.96798 502.70858,565.3809 454.36505,344.73256 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182784"
+       points="445.24336,348.48542 444.18005,348.76714 502.70299,565.35775 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182786"
+       points="502.70299,565.35775 444.18005,348.76714 501.63967,565.63947 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182788"
+       points="502.1605,566.0485 502.18215,564.94872 465.68844,565.33058 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182790"
+       points="465.68844,565.33058 502.18215,564.94872 465.71009,564.23079 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182792"
+       points="485.24153,307.72726 484.92611,308.78107 740.09698,384.00932 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182794"
+       points="740.09698,384.00932 484.92611,308.78107 739.78156,385.06312 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182796"
+       points="480.79968,317.15978 481.81595,317.58073 484.57569,308.04369 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182798"
+       points="484.57569,308.04369 481.81595,317.58073 485.59195,308.46464 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182800"
+       points="485.40502,307.8077 484.76262,308.70063 699.27825,461.67658 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182802"
+       points="699.27825,461.67658 484.76262,308.70063 698.63584,462.56951 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182804"
+       points="465.61792,565.32464 465.78061,564.23674 434.46534,560.66595 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182806"
+       points="434.46534,560.66595 465.78061,564.23674 434.62803,559.57805 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182808"
+       points="465.15184,564.83384 466.24669,564.72754 444.16428,348.67943 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182810"
+       points="444.16428,348.67943 466.24669,564.72754 445.25913,348.57313 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182812"
+       points="475.68328,325.49603 476.62118,326.07078 480.83886,317.08288 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182814"
+       points="480.83886,317.08288 476.62118,326.07078 481.77677,317.65763 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182816"
+       points="481.61239,316.91229 481.00324,317.82822 699.26163,461.66508 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182818"
+       points="699.26163,461.66508 481.00324,317.82822 698.65247,462.58101 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182820"
+       points="433.99732,560.0956 435.09605,560.14841 444.16234,348.59988 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182822"
+       points="444.16234,348.59988 435.09605,560.14841 445.26107,348.65268 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182824"
+       points="435.66716,350.93123 434.56716,350.92823 435.09668,560.1235 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182826"
+       points="435.09668,560.1235 434.56716,350.92823 433.99668,560.1205 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182828"
+       points="434.40509,560.65346 434.68828,559.59054 407.73034,553.5466 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182830"
+       points="407.73034,553.5466 434.68828,559.59054 408.01353,552.48367 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182832"
+       points="476.4393,325.31427 475.86515,326.25254 699.24412,461.65391 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182834"
+       points="699.24412,461.65391 475.86515,326.25254 698.66997,462.59218 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182836"
+       points="469.32578,332.92927 470.16223,333.64366 475.734,325.42621 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182838"
+       points="475.734,325.42621 470.16223,333.64366 476.57045,326.1406 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182840"
+       points="476.55998,325.4143 475.74447,326.1525 646.82602,513.51238 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182842"
+       points="646.82602,513.51238 475.74447,326.1525 646.01051,514.25058 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182844"
+       points="407.32686,552.94165 408.417,553.08862 434.57209,350.85624 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182846"
+       points="434.57209,350.85624 408.417,553.08862 435.66223,351.00321 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182848"
+       points="425.82835,351.75128 424.73244,351.65651 408.41989,553.06252 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182850"
+       points="408.41989,553.06252 424.73244,351.65651 407.32398,552.96775 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182852"
+       points="407.67862,553.53004 408.06524,552.50022 384.69643,544.9021 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182854"
+       points="384.69643,544.9021 408.06524,552.50022 385.08304,543.87228 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182856"
+       points="470.13716,332.90185 469.35085,333.67108 646.81142,513.49686 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182858"
+       points="646.81142,513.49686 469.35085,333.67108 646.02511,514.2661 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182860"
+       points="461.88375,339.27646 462.59814,340.11291 469.38681,332.86824 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182862"
+       points="469.38681,332.86824 462.59814,340.11291 470.1012,333.70469 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182864"
+       points="470.21872,333.00871 469.2693,333.56422 593.75335,544.14147 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182866"
+       points="593.75335,544.14147 469.2693,333.56422 592.80393,544.69698 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182868"
+       points="425.8187,351.81674 424.7421,351.59106 385.42804,544.50003 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182870"
+       points="385.42804,544.50003 424.7421,351.59106 384.35144,544.27435 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182872"
+       points="384.65173,544.88302 385.12775,543.89136 364.69267,535.30219 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182874"
+       points="364.69267,535.30219 385.12775,543.89136 365.16869,534.31053 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182876"
+       points="462.70418,339.39818 461.77771,339.99119 593.74187,544.12272 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182878"
+       points="593.74187,544.12272 461.77771,339.99119 592.8154,544.71573 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182880"
+       points="453.54042,344.38132 454.11517,345.31923 461.95357,339.22573 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182882"
+       points="461.95357,339.22573 454.11517,345.31923 462.52832,340.16364 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182884"
+       points="462.75605,339.50189 461.72585,339.88749 545.18409,559.7219 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182886"
+       points="545.18409,559.7219 461.72585,339.88749 544.15389,560.1075 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182888"
+       points="364.40832,534.63419 365.45304,534.97853 424.75804,351.53173 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182890"
+       points="424.75804,351.53173 365.45304,534.97853 425.80276,351.87606 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182892"
+       points="415.97399,351.07542 414.91329,350.78403 365.46103,534.95205 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182894"
+       points="365.46103,534.95205 414.91329,350.78403 364.40033,534.66067 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182896"
+       points="364.6537,535.28152 365.20767,534.3312 347.16963,525.0895 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182898"
+       points="347.16963,525.0895 365.20767,534.3312 347.7236,524.13918 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182900"
+       points="444.50123,348.11815 444.92218,349.13441 453.61732,344.34214 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182902"
+       points="453.61732,344.34214 444.92218,349.13441 454.03827,345.35841 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182904"
+       points="454.33445,344.63627 453.32114,345.06428 545.17564,559.7007 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182906"
+       points="545.17564,559.7007 453.32114,345.06428 544.16233,560.12871 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182908"
+       points="347.13535,525.06779 347.75788,524.16089 331.68575,514.46251 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182910"
+       points="331.68575,514.46251 347.75788,524.16089 332.30828,513.55562 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182912"
+       points="346.93447,524.41383 347.95877,524.81484 414.93149,350.72922 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182914"
+       points="414.93149,350.72922 347.95877,524.81484 415.95579,351.13023 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182916"
+       points="434.98877,350.39492 435.24556,351.46453 444.58331,348.09148 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182918"
+       points="444.58331,348.09148 435.24556,351.46453 444.8401,349.16108 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182920"
+       points="331.65535,514.44006 332.33869,513.57807 317.88923,503.52696 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182922"
+       points="317.88923,503.52696 332.33869,513.57807 318.57258,502.66496 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182924"
+       points="331.49482,513.78481 332.49922,514.23333 405.34689,348.40202 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182926"
+       points="405.34689,348.40202 332.49922,514.23333 406.35129,348.85054 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182928"
+       points="331.5074,513.75853 332.48664,514.2596 414.95401,350.67919 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182930"
+       points="414.95401,350.67919 332.48664,514.2596 415.93326,351.18026 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182932"
+       points="425.23725,351.15559 425.32355,352.2522 435.07401,350.38142 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182934"
+       points="435.07401,350.38142 425.32355,352.2522 435.16031,351.47803 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182936"
+       points="317.86204,503.50393 318.59977,502.688 305.50098,492.32748 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182938"
+       points="305.50098,492.32748 318.59977,502.688 306.23872,491.51155 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182940"
+       points="317.75251,502.8246 318.7093,503.36732 405.37069,348.35492 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182942"
+       points="405.37069,348.35492 318.7093,503.36732 406.32749,348.89764 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182944"
+       points="415.48679,350.38142 415.40048,351.47803 425.32355,351.15559 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182946"
+       points="425.32355,351.15559 415.40048,351.47803 425.23725,352.2522 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182948"
+       points="305.47648,492.30391 306.26322,491.53512 294.30047,480.86704 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182950"
+       points="294.30047,480.86704 306.26322,491.53512 295.0872,480.09825 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182952"
+       points="305.40195,491.63043 306.33775,492.2086 396.2651,344.56119 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182954"
+       points="396.2651,344.56119 306.33775,492.2086 397.20091,345.13936 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182956"
+       points="305.41879,491.6048 306.32091,492.23423 405.39803,348.31156 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182958"
+       points="405.39803,348.31156 306.32091,492.23423 406.30015,348.94099 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182960"
+       points="294.27825,480.84291 295.10942,480.12238 284.11462,469.11861 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182962"
+       points="284.11462,469.11861 295.10942,480.12238 284.94579,468.39808 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182964"
+       points="294.25432,480.15199 295.13334,480.8133 396.29349,344.51962 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182966"
+       points="396.29349,344.51962 295.13334,480.8133 397.17251,345.18093 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182968"
+       points="396.94348,344.34214 396.52253,345.35841 406.05957,348.11815 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182970"
+       points="406.05957,348.11815 396.52253,345.35841 405.63861,349.13441 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182972"
+       points="405.97748,348.09148 405.72069,349.16108 415.57203,350.39492 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182974"
+       points="415.57203,350.39492 405.72069,349.16108 415.31524,351.46453 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182976"
+       points="284.09437,469.09383 284.96604,468.42286 274.80963,457.0319 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182978"
+       points="274.80963,457.0319 284.96604,468.42286 275.6813,456.36093 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182980"
+       points="397.14069,345.21945 396.32532,344.4811 284.93789,469.12752 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182982"
+       points="284.93789,469.12752 396.32532,344.4811 284.12252,468.38917 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182984"
+       points="284.1016,468.41367 284.95881,469.10301 387.89125,339.35001 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182986"
+       points="387.89125,339.35001 284.95881,469.10301 388.74846,340.03936 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182988"
+       points="388.60723,339.22573 388.03248,340.16364 397.02038,344.38132 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182990"
+       points="397.02038,344.38132 388.03248,340.16364 396.44563,345.31923 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182992"
+       points="388.71534,340.0769 387.92436,339.31247 275.64095,457.07863 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182994"
+       points="275.64095,457.07863 387.92436,339.31247 274.84997,456.3142 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182996"
+       points="274.79111,457.00635 275.69982,456.38648 266.28522,444.53681 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182998"
+       points="266.28522,444.53681 275.69982,456.38648 267.19394,443.91695 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183000"
+       points="381.17399,332.86824 380.45959,333.70469 388.67705,339.27646 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183002"
+       points="388.67705,339.27646 380.45959,333.70469 387.96266,340.11291 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183004"
+       points="388.67842,340.11173 387.96128,339.27764 267.09815,444.64393 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183006"
+       points="267.09815,444.64393 387.96128,339.27764 266.38101,443.80983 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183008"
+       points="266.38101,443.80983 267.09815,444.64393 387.96128,339.27764 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183010"
+       points="387.96128,339.27764 267.09815,444.64393 388.67842,340.11173 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183012"
+       points="381.20024,333.68076 380.43334,332.89217 267.12303,444.62117 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183014"
+       points="267.12303,444.62117 380.43334,332.89217 266.35613,443.83259 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183016"
+       points="266.26824,444.51032 267.21092,443.94344 258.47119,431.54457 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183018"
+       points="258.47119,431.54457 267.21092,443.94344 259.41386,430.97769 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183020"
+       points="374.82679,325.42621 373.99035,326.1406 381.23501,332.92927 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183022"
+       points="381.23501,332.92927 373.99035,326.1406 380.39857,333.64366 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183024"
+       points="381.11792,333.74671 380.51566,332.82623 252.11414,418.15154 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183026"
+       points="252.11414,418.15154 380.51566,332.82623 251.51188,417.23105 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183028"
+       points="258.59792,430.83247 259.28713,431.68979 380.47219,332.85781 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183030"
+       points="380.47219,332.85781 259.28713,431.68979 381.16139,333.71513 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183032"
+       points="258.45564,431.51694 259.42941,431.00532 251.32612,417.9471 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183034"
+       points="251.32612,417.9471 259.42941,431.00532 252.2999,417.43549 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183036"
+       points="374.69198,326.25476 374.12516,325.31205 245.62285,403.85963 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183038"
+       points="245.62285,403.85963 374.12516,325.31205 245.05602,402.91691 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183040"
+       points="369.72193,317.08288 368.78403,317.65763 374.87752,325.49603 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183042"
+       points="374.87752,325.49603 368.78403,317.65763 373.93962,326.07078 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183044"
+       points="374.63957,326.28254 374.17757,325.28427 239.77451,388.69759 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183046"
+       points="239.77451,388.69759 374.17757,325.28427 239.31251,387.69931 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183048"
+       points="251.4831,417.25123 252.14292,418.13136 374.07866,325.34334 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183050"
+       points="374.07866,325.34334 252.14292,418.13136 374.73848,326.22347 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183052"
+       points="251.31194,417.91808 252.31408,417.46451 244.83837,403.61505 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183054"
+       points="244.83837,403.61505 252.31408,417.46451 245.8405,403.16149 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183056"
+       points="369.51657,317.85297 368.98939,316.88753 239.8071,388.68117 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183058"
+       points="239.8071,388.68117 368.98939,316.88753 239.27992,387.71573 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183060"
+       points="369.45941,317.88004 369.04656,316.86046 234.69367,372.4492 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183062"
+       points="234.69367,372.4492 369.04656,316.86046 234.28082,371.42961 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183064"
+       points="365.98511,308.04369 364.96884,308.46464 369.76112,317.15978 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183066"
+       points="369.76112,317.15978 364.96884,308.46464 368.74485,317.58073 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183068"
+       points="369.39458,317.90171 369.11139,316.83879 230.42616,354.92608 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183070"
+       points="230.42616,354.92608 369.11139,316.83879 230.14297,353.86316 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183072"
+       points="244.82557,403.58434 245.8533,403.1922 239.02965,388.39453 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183074"
+       points="239.02965,388.39453 245.8533,403.1922 240.05737,388.00238 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183076"
+       points="365.65463,308.77469 365.29933,307.73365 230.46222,354.91514 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183078"
+       points="230.46222,354.91514 365.29933,307.73365 230.10691,353.8741 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183080"
+       points="363.70833,298.53122 362.63873,298.78801 366.01178,308.12577 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183082"
+       points="366.01178,308.12577 362.63873,298.78801 364.94217,308.38256 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183084"
+       points="365.58252,308.79394 365.37143,307.71439 227.22515,335.84767 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183086"
+       points="227.22515,335.84767 365.37143,307.71439 227.01406,334.76812 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183088"
+       points="239.01832,388.36178 240.0687,388.03513 233.96205,372.10273 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183090"
+       points="233.96205,372.10273 240.0687,388.03513 235.01243,371.77608 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183092"
+       points="363.31658,299.19069 363.03048,298.12855 227.26266,335.83897 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183094"
+       points="227.26266,335.83897 363.03048,298.12855 226.97656,334.77683 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183096"
+       points="363.23582,299.20608 363.11124,298.11316 225.33715,314.92507 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183098"
+       points="225.33715,314.92507 363.11124,298.11316 225.21256,313.83215 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183100"
+       points="362.94766,288.7797 361.85106,288.86601 363.72183,298.61647 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183102"
+       points="363.72183,298.61647 361.85106,288.86601 362.62523,298.70277 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183104"
+       points="363.14408,299.20883 363.20298,298.11041 225.14457,291.80994 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183106"
+       points="225.14457,291.80994 363.20298,298.11041 225.20346,290.71151 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183108"
+       points="233.95238,372.06753 235.02211,371.81128 229.7497,354.52274 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183110"
+       points="229.7497,354.52274 235.02211,371.81128 230.81943,354.2665 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183112"
+       points="362.40913,289.37277 362.38959,288.27294 225.18378,291.81064 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183114"
+       points="225.18378,291.81064 362.38959,288.27294 225.16425,290.71081 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183116"
+       points="363.72183,279.02925 362.62523,278.94294 362.94766,288.86601 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183118"
+       points="362.94766,288.86601 362.62523,278.94294 361.85106,288.7797 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183120"
+       points="362.30598,289.36487 362.49274,288.28084 227.35345,266.11393 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183122"
+       points="227.35345,266.11393 362.49274,288.28084 227.54022,265.0299 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183124"
+       points="229.74197,354.48459 230.82716,354.30465 226.57702,335.39787 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183126"
+       points="226.57702,335.39787 230.82716,354.30465 227.6622,335.21792 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183128"
+       points="363.11944,279.53343 363.22762,278.43876 227.39274,266.11925 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183130"
+       points="227.39274,266.11925 363.22762,278.43876 227.50093,265.02458 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183132"
+       points="366.01178,269.51994 364.94217,269.26315 363.70833,279.11449 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183134"
+       points="363.70833,279.11449 364.94217,269.26315 362.63873,278.8577 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183136"
+       points="363.0044,279.50945 363.34266,278.46275 232.85658,237.44976 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183138"
+       points="232.85658,237.44976 363.34266,278.46275 233.19484,236.40306 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183140"
+       points="226.57173,335.35619 227.66748,335.25961 224.72698,314.4269 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183142"
+       points="224.72698,314.4269 227.66748,335.25961 225.82273,314.33032 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183144"
+       points="365.34604,269.92574 365.60791,268.85736 232.89478,237.4606 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183146"
+       points="232.89478,237.4606 365.60791,268.85736 233.15664,236.39222 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183148"
+       points="369.76112,260.48594 368.74485,260.06499 365.98511,269.60202 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183150"
+       points="365.98511,269.60202 368.74485,260.06499 364.96884,269.18107 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183152"
+       points="365.22063,269.87815 365.73333,268.90494 243.02865,205.50624 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183154"
+       points="243.02865,205.50624 365.73333,268.90494 243.54135,204.53302 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183156"
+       points="224.72486,314.38101 225.82485,314.37621 224.62402,291.26312 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183158"
+       points="224.62402,291.26312 225.82485,314.37621 225.72401,291.25833 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183160"
+       points="374.87752,252.14968 373.93962,251.57494 369.72193,260.56284 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183162"
+       points="369.72193,260.56284 373.93962,251.57494 368.78403,259.98809 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183164"
+       points="369.03205,260.77914 369.47392,259.77179 243.06406,205.5233 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183166"
+       points="243.06406,205.5233 369.47392,259.77179 243.50594,204.51596 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183168"
+       points="224.62616,291.21225 225.72188,291.3092 226.89897,265.52344 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183170"
+       points="226.89897,265.52344 225.72188,291.3092 227.99469,265.62039 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183172"
+       points="374.22354,252.38025 374.5936,251.34437 243.09997,205.53757 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183174"
+       points="243.09997,205.53757 374.5936,251.34437 243.47003,204.50169 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183176"
+       points="381.23501,244.71644 380.39857,244.00205 374.82679,252.21951 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183178"
+       points="374.82679,252.21951 380.39857,244.00205 373.99035,251.50511 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183180"
+       points="374.08764,252.30897 374.7295,251.41565 259.90584,170.26756 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183182"
+       points="259.90584,170.26756 374.7295,251.41565 260.5477,169.37424 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183184"
+       points="226.90698,265.46678 227.98669,265.67706 232.48585,236.82127 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183186"
+       points="232.48585,236.82127 227.98669,265.67706 233.56557,237.03155 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183188"
+       points="380.52761,244.82709 381.10597,243.89141 259.93759,170.28874 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183190"
+       points="259.93759,170.28874 381.10597,243.89141 260.51595,169.35306 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183192"
+       points="388.67705,238.36925 387.96266,237.5328 381.17399,244.77747 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183194"
+       points="381.17399,244.77747 387.96266,237.5328 380.45959,243.94102 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183196"
+       points="380.39516,244.71242 381.23842,244.00607 286.25989,132.33185 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183198"
+       points="286.25989,132.33185 381.23842,244.00607 287.10314,131.6255 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183200"
+       points="232.50211,236.75805 233.54931,237.09477 242.7614,204.85127 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183202"
+       points="242.7614,204.85127 233.54931,237.09477 243.8086,205.18799 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183204"
+       points="397.02038,233.26439 396.44563,232.32649 388.60723,238.41998 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183206"
+       points="388.60723,238.41998 396.44563,232.32649 388.03248,237.48208 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183208"
+       points="387.92291,238.33174 388.71679,237.57032 286.28458,132.35938 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183210"
+       points="286.28458,132.35938 388.71679,237.57032 287.07846,131.59797 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183212"
+       points="242.78942,204.7811 243.78058,205.25816 259.73119,169.58237 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183214"
+       points="259.73119,169.58237 243.78058,205.25816 260.72235,170.05943 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183216"
+       points="396.36148,233.20099 397.10453,232.38989 286.31,132.38423 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183218"
+       points="286.31,132.38423 397.10453,232.38989 287.05304,131.57313 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183220"
+       points="406.05957,229.52757 405.63861,228.5113 396.94348,233.30358 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183222"
+       points="396.94348,233.30358 405.63861,228.5113 396.52253,232.28731 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183224"
+       points="396.24214,233.04354 397.22387,232.54734 325.8882,93.850559 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183226"
+       points="325.8882,93.850559 397.22387,232.54734 326.86992,93.354355 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183228"
+       points="259.776,169.50578 260.67754,170.13603 286.23075,131.66355 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183230"
+       points="286.23075,131.66355 260.67754,170.13603 287.13229,132.2938 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183232"
+       points="415.57203,227.25079 415.31524,226.18118 405.97748,229.55424 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183234"
+       points="405.97748,229.55424 415.31524,226.18118 405.72069,228.48463 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183236"
+       points="405.37474,229.29781 406.32344,228.74106 325.90471,93.880831 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183238"
+       points="325.90471,93.880831 406.32344,228.74106 326.85341,93.324083 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183240"
+       points="286.29925,131.58324 287.06379,132.37411 325.99679,93.207023 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183242"
+       points="325.99679,93.207023 287.06379,132.37411 326.76133,93.997891 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183244"
+       points="425.32355,226.49012 425.23725,225.39351 415.48679,227.26429 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183246"
+       points="415.48679,227.26429 425.23725,225.39351 415.40048,226.16768 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183248"
+       points="414.90344,226.81935 415.98384,226.61262 382.92046,59.671962 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183250"
+       points="382.92046,59.671962 415.98384,226.61262 384.00086,59.465232 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183252"
+       points="326.83618,93.296606 325.92195,93.908307 415.90075,226.41014 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183254"
+       points="415.90075,226.41014 325.92195,93.908307 414.98652,227.02184 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183256"
+       points="326.0974,93.130052 326.66073,94.074861 383.17899,59.096193 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183258"
+       points="383.17899,59.096193 326.66073,94.074861 383.74232,60.041002 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183260"
+       points="435.07401,227.26429 435.16031,226.16768 425.23725,226.49012 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183262"
+       points="425.23725,226.49012 435.16031,226.16768 425.32355,225.39351 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183264"
+       points="383.99406,59.43452 382.92725,59.702675 425.81381,225.80774 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183266"
+       points="425.81381,225.80774 382.92725,59.702675 424.74699,226.0759 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183268"
+       points="434.59168,226.87839 435.64264,226.55359 382.93518,59.730995 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183270"
+       points="382.93518,59.730995 435.64264,226.55359 383.98613,59.4062 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183272"
+       points="383.31926,59.037085 383.60206,60.10011 460.37386,38.537942 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183274"
+       points="460.37386,38.537942 383.60206,60.10011 460.65666,39.600968 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183276"
+       points="444.58331,229.55424 444.8401,228.48463 434.98877,227.25079 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183278"
+       points="434.98877,227.25079 444.8401,228.48463 435.24556,226.18118 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183280"
+       points="461.06029,39.143225 459.97023,38.995685 435.66219,226.78976 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183282"
+       points="435.66219,226.78976 459.97023,38.995685 434.57213,226.64222 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183284"
+       points="460.55378,38.520805 460.47674,39.618104 554.17943,45.094355 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183286"
+       points="554.17943,45.094355 460.47674,39.618104 554.10238,46.191654 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183288"
+       points="444.1636,228.97383 445.25981,229.06504 459.96715,39.023853 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183290"
+       points="459.96715,39.023853 445.25981,229.06504 461.06336,39.115056 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183292"
+       points="461.06493,39.08843 459.96558,39.05048 454.37747,232.81442 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183294"
+       points="454.37747,232.81442 459.96558,39.05048 453.27812,232.77647 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183296"
+       points="453.61732,233.30358 454.03827,232.28731 444.50123,229.52757 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183298"
+       points="444.50123,229.52757 454.03827,232.28731 444.92218,228.5113 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183300"
+       points="554.38055,45.147958 553.90126,46.13805 649.84667,91.361685 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183302"
+       points="649.84667,91.361685 553.90126,46.13805 649.36738,92.351777 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183304"
+       points="554.64714,45.858008 553.63467,45.428001 470.25024,244.57425 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183306"
+       points="470.25024,244.57425 553.63467,45.428001 469.23777,244.14425 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183308"
+       points="453.34304,232.53561 454.31255,233.05527 553.65615,45.383176 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183310"
+       points="553.65615,45.383176 454.31255,233.05527 554.62566,45.902833 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183312"
+       points="554.63715,45.880151 553.64466,45.405858 462.73719,238.18817 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183314"
+       points="462.73719,238.18817 553.64466,45.405858 461.7447,237.71388 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183316"
+       points="461.95357,238.41998 462.52832,237.48208 453.54042,233.26439 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183318"
+       points="453.54042,233.26439 462.52832,237.48208 454.11517,232.32649 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183320"
+       points="650.02656,91.501078 649.18749,92.212384 722.7951,177.34054 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183322"
+       points="722.7951,177.34054 649.18749,92.212384 721.95603,178.05185 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183324"
+       points="649.99607,92.245502 649.21798,91.467961 481.69686,260.66423 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183326"
+       points="481.69686,260.66423 649.21798,91.467961 480.91877,259.88669 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183328"
+       points="649.97995,92.260997 649.23411,91.452466 476.52515,252.26658 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183330"
+       points="476.52515,252.26658 649.23411,91.452466 475.77931,251.45804 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183332"
+       points="649.96272,92.276236 649.25134,91.437226 470.0997,244.77875 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183334"
+       points="470.0997,244.77875 649.25134,91.437226 469.38832,243.93974 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183336"
+       points="469.38681,244.77747 470.1012,243.94102 461.88375,238.36925 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183338"
+       points="461.88375,238.36925 470.1012,243.94102 462.59814,237.5328 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183340"
+       points="722.90452,177.54552 721.84661,177.84687 753.21927,283.96547 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183342"
+       points="753.21927,283.96547 721.84661,177.84687 752.16135,284.26683 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183344"
+       points="722.59327,178.20127 722.15786,177.19112 487.60498,279.49117 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183346"
+       points="487.60498,279.49117 722.15786,177.19112 487.16956,278.48102 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183348"
+       points="722.57381,178.20922 722.17732,177.18317 485.28207,269.90458 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183350"
+       points="485.28207,269.90458 722.17732,177.18317 484.88557,268.87852 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183352"
+       points="722.5538,178.21651 722.19733,177.17588 481.48605,260.79578 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183354"
+       points="481.48605,260.79578 722.19733,177.17588 481.12958,259.75514 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183356"
+       points="475.734,252.21951 476.57045,251.50511 469.32578,244.71644 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183358"
+       points="469.32578,244.71644 476.57045,251.50511 470.16223,244.00205 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183360"
+       points="753.23593,284.18543 752.14469,284.04687 740.48489,384.6055 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183362"
+       points="740.48489,384.6055 752.14469,284.04687 739.39365,384.46694 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183364"
+       points="752.70009,284.66606 752.68052,283.56623 488.17122,289.37277 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183366"
+       points="488.17122,289.37277 752.68052,283.56623 488.15165,288.27294 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183368"
+       points="752.67968,284.66604 752.70094,283.56625 487.37663,279.53599 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183370"
+       points="487.37663,279.53599 752.70094,283.56625 487.3979,278.4362 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183372"
+       points="480.83886,260.56284 481.77677,259.98809 475.68328,252.14968 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183374"
+       points="475.68328,252.14968 481.77677,259.98809 476.62118,251.57494 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183376"
+       points="740.42559,384.7931 739.45294,384.27934 699.44337,462.37993 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183378"
+       points="699.44337,462.37993 739.45294,384.27934 698.47072,461.86616 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183380"
+       points="484.57569,269.60202 485.59195,269.18107 480.79968,260.48594 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183382"
+       points="480.79968,260.48594 485.59195,269.18107 481.81595,260.06499 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183384"
+       points="699.34303,462.51485 698.57106,461.73124 646.80425,514.27329 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183386"
+       points="646.80425,514.27329 698.57106,461.73124 646.03228,513.48967 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183388"
+       points="486.85246,279.11449 487.92207,278.8577 484.54902,269.51994 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183390"
+       points="484.54902,269.51994 487.92207,278.8577 485.61862,269.26315 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183392"
+       points="646.69231,514.35835 646.14423,513.40461 593.55268,544.89609 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183394"
+       points="593.55268,544.89609 646.14423,513.40461 593.0046,543.94236 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183396"
+       points="487.61313,288.86601 488.70974,288.7797 486.83896,279.02925 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183398"
+       points="486.83896,279.02925 488.70974,288.7797 487.93557,278.94294 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183400"
+       points="593.44568,544.94324 593.1116,543.89521 544.83603,560.43872 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.37499999;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon183402"
+       points="544.83603,560.43872 593.1116,543.89521 544.50194,559.39068 " />
+  </g>
+  <g
+     id="g183410"
+     style="fill:none;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none">
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182432"
+       points="470.16223,244.00205 469.32578,244.71644 476.57045,251.50511 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182434"
+       points="476.57045,251.50511 469.32578,244.71644 475.734,252.21951 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182436"
+       points="502.09968,564.9533 502.24298,566.04392 544.59734,559.36939 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182438"
+       points="544.59734,559.36939 502.24298,566.04392 544.74064,560.46002 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182440"
+       points="225.72401,291.25833 224.62402,291.26312 225.82485,314.37621 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182442"
+       points="225.82485,314.37621 224.62402,291.26312 224.72486,314.38101 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182444"
+       points="721.95603,178.05185 722.7951,177.34054 649.18749,92.212384 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182446"
+       points="649.18749,92.212384 722.7951,177.34054 650.02656,91.501078 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182448"
+       points="373.99035,251.50511 374.82679,252.21951 380.39857,244.00205 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182450"
+       points="380.39857,244.00205 374.82679,252.21951 381.23501,244.71644 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182452"
+       points="362.63873,278.8577 363.70833,279.11449 364.94217,269.26315 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182454"
+       points="364.94217,269.26315 363.70833,279.11449 366.01178,269.51994 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182456"
+       points="380.39857,333.64366 381.23501,332.92927 373.99035,326.1406 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182458"
+       points="373.99035,326.1406 381.23501,332.92927 374.82679,325.42621 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182460"
+       points="698.47072,461.86616 699.44337,462.37993 739.45294,384.27934 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182462"
+       points="739.45294,384.27934 699.44337,462.37993 740.42559,384.7931 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182464"
+       points="240.05737,388.00238 239.02965,388.39453 245.8533,403.1922 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182466"
+       points="245.8533,403.1922 239.02965,388.39453 244.82557,403.58434 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182468"
+       points="649.36738,92.351777 649.84667,91.361685 553.90126,46.13805 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182470"
+       points="553.90126,46.13805 649.84667,91.361685 554.38055,45.147958 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182472"
+       points="470.1012,333.70469 469.38681,332.86824 462.59814,340.11291 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182474"
+       points="462.59814,340.11291 469.38681,332.86824 461.88375,339.27646 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182476"
+       points="284.94579,468.39808 284.11462,469.11861 295.10942,480.12238 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182478"
+       points="295.10942,480.12238 284.11462,469.11861 294.27825,480.84291 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182480"
+       points="593.0046,543.94236 593.55268,544.89609 646.14423,513.40461 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182482"
+       points="646.14423,513.40461 593.55268,544.89609 646.69231,514.35835 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182484"
+       points="488.70974,288.86601 487.61313,288.7797 487.93557,298.70277 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182486"
+       points="487.93557,298.70277 487.61313,288.7797 486.83896,298.61647 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182488"
+       points="368.78403,259.98809 369.72193,260.56284 373.93962,251.57494 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182490"
+       points="373.93962,251.57494 369.72193,260.56284 374.87752,252.14968 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182492"
+       points="267.19394,443.91695 266.28522,444.53681 275.69982,456.38648 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182494"
+       points="275.69982,456.38648 266.28522,444.53681 274.79111,457.00635 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182496"
+       points="373.93962,326.07078 374.87752,325.49603 368.78403,317.65763 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182498"
+       points="368.78403,317.65763 374.87752,325.49603 369.72193,317.08288 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182500"
+       points="368.74485,317.58073 369.76112,317.15978 364.96884,308.46464 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182502"
+       points="364.96884,308.46464 369.76112,317.15978 365.98511,308.04369 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182504"
+       points="435.16031,351.47803 435.07401,350.38142 425.32355,352.2522 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182506"
+       points="425.32355,352.2522 435.07401,350.38142 425.23725,351.15559 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182508"
+       points="235.01243,371.77608 233.96205,372.10273 240.0687,388.03513 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182510"
+       points="240.0687,388.03513 233.96205,372.10273 239.01832,388.36178 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182512"
+       points="544.50194,559.39068 544.83603,560.43872 593.1116,543.89521 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182514"
+       points="593.1116,543.89521 544.83603,560.43872 593.44568,544.94324 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182516"
+       points="487.92207,298.78801 486.85246,298.53122 485.61862,308.38256 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182518"
+       points="485.61862,308.38256 486.85246,298.53122 484.54902,308.12577 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182520"
+       points="245.8405,403.16149 244.83837,403.61505 252.31408,417.46451 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182522"
+       points="252.31408,417.46451 244.83837,403.61505 251.31194,417.91808 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182524"
+       points="380.45959,243.94102 381.17399,244.77747 387.96266,237.5328 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182526"
+       points="387.96266,237.5328 381.17399,244.77747 388.67705,238.36925 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182528"
+       points="425.32355,225.39351 425.23725,226.49012 435.16031,226.16768 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182530"
+       points="435.16031,226.16768 425.23725,226.49012 435.07401,227.26429 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182532"
+       points="476.57045,326.1406 475.734,325.42621 470.16223,333.64366 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182534"
+       points="470.16223,333.64366 475.734,325.42621 469.32578,332.92927 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182536"
+       points="405.72069,228.48463 405.97748,229.55424 415.31524,226.18118 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182538"
+       points="415.31524,226.18118 405.97748,229.55424 415.57203,227.25079 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182540"
+       points="434.62803,559.57805 434.46534,560.66595 465.78061,564.23674 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182542"
+       points="465.78061,564.23674 434.46534,560.66595 465.61792,565.32464 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182544"
+       points="435.24556,226.18118 434.98877,227.25079 444.8401,228.48463 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182546"
+       points="444.8401,228.48463 434.98877,227.25079 444.58331,229.55424 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182548"
+       points="444.92218,228.5113 444.50123,229.52757 454.03827,232.28731 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182550"
+       points="454.03827,232.28731 444.50123,229.52757 453.61732,233.30358 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182552"
+       points="415.31524,351.46453 415.57203,350.39492 405.72069,349.16108 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182554"
+       points="405.72069,349.16108 415.57203,350.39492 405.97748,348.09148 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182556"
+       points="347.7236,524.13918 347.16963,525.0895 365.20767,534.3312 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182558"
+       points="365.20767,534.3312 347.16963,525.0895 364.6537,535.28152 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182560"
+       points="752.16135,284.26683 753.21927,283.96547 721.84661,177.84687 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182562"
+       points="721.84661,177.84687 753.21927,283.96547 722.90452,177.54552 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182564"
+       points="487.93557,278.94294 486.83896,279.02925 488.70974,288.7797 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182566"
+       points="488.70974,288.7797 486.83896,279.02925 487.61313,288.86601 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182568"
+       points="365.16869,534.31053 364.69267,535.30219 385.12775,543.89136 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182570"
+       points="385.12775,543.89136 364.69267,535.30219 384.65173,544.88302 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182572"
+       points="465.71009,564.23079 465.68844,565.33058 502.18215,564.94872 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182574"
+       points="502.18215,564.94872 465.68844,565.33058 502.1605,566.0485 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182576"
+       points="554.10238,46.191654 554.17943,45.094355 460.47674,39.618104 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182578"
+       points="460.47674,39.618104 554.17943,45.094355 460.55378,38.520805 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182580"
+       points="383.74232,60.041002 383.17899,59.096193 326.66073,94.074861 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182582"
+       points="326.66073,94.074861 383.17899,59.096193 326.0974,93.130052 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182584"
+       points="332.30828,513.55562 331.68575,514.46251 347.75788,524.16089 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182586"
+       points="347.75788,524.16089 331.68575,514.46251 347.13535,525.06779 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182588"
+       points="361.85106,288.7797 362.94766,288.86601 362.62523,278.94294 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182590"
+       points="362.62523,278.94294 362.94766,288.86601 363.72183,279.02925 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182592"
+       points="230.81943,354.2665 229.7497,354.52274 235.02211,371.81128 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182594"
+       points="235.02211,371.81128 229.7497,354.52274 233.95238,372.06753 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182596"
+       points="485.61862,269.26315 484.54902,269.51994 487.92207,278.8577 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182598"
+       points="487.92207,278.8577 484.54902,269.51994 486.85246,279.11449 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182600"
+       points="462.59814,237.5328 461.88375,238.36925 470.1012,243.94102 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182602"
+       points="470.1012,243.94102 461.88375,238.36925 469.38681,244.77747 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182604"
+       points="260.72235,170.05943 259.73119,169.58237 243.78058,205.25816 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182606"
+       points="243.78058,205.25816 259.73119,169.58237 242.78942,204.7811 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182608"
+       points="388.03248,237.48208 388.60723,238.41998 396.44563,232.32649 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182610"
+       points="396.44563,232.32649 388.60723,238.41998 397.02038,233.26439 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182612"
+       points="415.40048,226.16768 415.48679,227.26429 425.23725,225.39351 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182614"
+       points="425.23725,225.39351 415.48679,227.26429 425.32355,226.49012 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182616"
+       points="481.77677,317.65763 480.83886,317.08288 476.62118,326.07078 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182618"
+       points="476.62118,326.07078 480.83886,317.08288 475.68328,325.49603 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182620"
+       points="476.62118,251.57494 475.68328,252.14968 481.77677,259.98809 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182622"
+       points="481.77677,259.98809 475.68328,252.14968 480.83886,260.56284 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182624"
+       points="364.94217,308.38256 366.01178,308.12577 362.63873,298.78801 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182626"
+       points="362.63873,298.78801 366.01178,308.12577 363.70833,298.53122 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182628"
+       points="646.03228,513.48967 646.80425,514.27329 698.57106,461.73124 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182630"
+       points="698.57106,461.73124 646.80425,514.27329 699.34303,462.51485 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182632"
+       points="233.56557,237.03155 232.48585,236.82127 227.98669,265.67706 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182634"
+       points="227.98669,265.67706 232.48585,236.82127 226.90698,265.46678 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182636"
+       points="454.03827,345.35841 453.61732,344.34214 444.92218,349.13441 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182638"
+       points="444.92218,349.13441 453.61732,344.34214 444.50123,348.11815 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182640"
+       points="227.99469,265.62039 226.89897,265.52344 225.72188,291.3092 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182642"
+       points="225.72188,291.3092 226.89897,265.52344 224.62616,291.21225 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182644"
+       points="396.44563,345.31923 397.02038,344.38132 388.03248,340.16364 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182646"
+       points="388.03248,340.16364 397.02038,344.38132 388.60723,339.22573 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182648"
+       points="405.63861,349.13441 406.05957,348.11815 396.52253,345.35841 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182650"
+       points="396.52253,345.35841 406.05957,348.11815 396.94348,344.34214 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182652"
+       points="243.8086,205.18799 242.7614,204.85127 233.54931,237.09477 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182654"
+       points="233.54931,237.09477 242.7614,204.85127 232.50211,236.75805 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182656"
+       points="454.11517,232.32649 453.54042,233.26439 462.52832,237.48208 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182658"
+       points="462.52832,237.48208 453.54042,233.26439 461.95357,238.41998 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182660"
+       points="364.96884,269.18107 365.98511,269.60202 368.74485,260.06499 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182662"
+       points="368.74485,260.06499 365.98511,269.60202 369.76112,260.48594 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182664"
+       points="444.8401,349.16108 444.58331,348.09148 435.24556,351.46453 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182666"
+       points="435.24556,351.46453 444.58331,348.09148 434.98877,350.39492 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182668"
+       points="739.39365,384.46694 740.48489,384.6055 752.14469,284.04687 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182670"
+       points="752.14469,284.04687 740.48489,384.6055 753.23593,284.18543 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182672"
+       points="425.23725,352.2522 425.32355,351.15559 415.40048,351.47803 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182674"
+       points="415.40048,351.47803 425.32355,351.15559 415.48679,350.38142 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182676"
+       points="287.13229,132.2938 286.23075,131.66355 260.67754,170.13603 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182678"
+       points="260.67754,170.13603 286.23075,131.66355 259.776,169.50578 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182680"
+       points="266.38101,443.80983 267.09815,444.64393 387.96128,339.27764 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182682"
+       points="387.96128,339.27764 267.09815,444.64393 388.67842,340.11173 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182684"
+       points="481.81595,260.06499 480.79968,260.48594 485.59195,269.18107 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182686"
+       points="485.59195,269.18107 480.79968,260.48594 484.57569,269.60202 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182688"
+       points="462.52832,340.16364 461.95357,339.22573 454.11517,345.31923 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182690"
+       points="454.11517,345.31923 461.95357,339.22573 453.54042,344.38132 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182692"
+       points="252.2999,417.43549 251.32612,417.9471 259.42941,431.00532 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182694"
+       points="259.42941,431.00532 251.32612,417.9471 258.45564,431.51694 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182696"
+       points="259.41386,430.97769 258.47119,431.54457 267.21092,443.94344 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182698"
+       points="267.21092,443.94344 258.47119,431.54457 266.26824,444.51032 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182700"
+       points="408.01353,552.48367 407.73034,553.5466 434.68828,559.59054 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182702"
+       points="434.68828,559.59054 407.73034,553.5466 434.40509,560.65346 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182704"
+       points="227.6622,335.21792 226.57702,335.39787 230.82716,354.30465 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182706"
+       points="230.82716,354.30465 226.57702,335.39787 229.74197,354.48459 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182708"
+       points="306.23872,491.51155 305.50098,492.32748 318.59977,502.688 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182710"
+       points="318.59977,502.688 305.50098,492.32748 317.86204,503.50393 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182712"
+       points="485.59195,308.46464 484.57569,308.04369 481.81595,317.58073 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182714"
+       points="481.81595,317.58073 484.57569,308.04369 480.79968,317.15978 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182716"
+       points="275.6813,456.36093 274.80963,457.0319 284.96604,468.42286 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182718"
+       points="284.96604,468.42286 274.80963,457.0319 284.09437,469.09383 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182720"
+       points="385.08304,543.87228 384.69643,544.9021 408.06524,552.50022 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182722"
+       points="408.06524,552.50022 384.69643,544.9021 407.67862,553.53004 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182724"
+       points="362.62523,298.70277 363.72183,298.61647 361.85106,288.86601 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182726"
+       points="361.85106,288.86601 363.72183,298.61647 362.94766,288.7797 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182728"
+       points="326.76133,93.997891 325.99679,93.207023 287.06379,132.37411 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182730"
+       points="287.06379,132.37411 325.99679,93.207023 286.29925,131.58324 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182732"
+       points="225.82273,314.33032 224.72698,314.4269 227.66748,335.25961 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182734"
+       points="227.66748,335.25961 224.72698,314.4269 226.57173,335.35619 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182736"
+       points="396.52253,232.28731 396.94348,233.30358 405.63861,228.5113 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182738"
+       points="405.63861,228.5113 396.94348,233.30358 406.05957,229.52757 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182740"
+       points="388.67842,340.11173 387.96128,339.27764 267.09815,444.64393 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182742"
+       points="267.09815,444.64393 387.96128,339.27764 266.38101,443.80983 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182744"
+       points="318.57258,502.66496 317.88923,503.52696 332.33869,513.57807 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182746"
+       points="332.33869,513.57807 317.88923,503.52696 331.65535,514.44006 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182748"
+       points="387.96266,340.11291 388.67705,339.27646 380.45959,333.70469 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182750"
+       points="380.45959,333.70469 388.67705,339.27646 381.17399,332.86824 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182752"
+       points="460.65666,39.600968 460.37386,38.537942 383.60206,60.10011 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182754"
+       points="383.60206,60.10011 460.37386,38.537942 383.31926,59.037085 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182756"
+       points="295.0872,480.09825 294.30047,480.86704 306.26322,491.53512 " />
+    <polygon
+       transform="translate(-224.62402,-38.520805)"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.99999998;stroke-miterlimit:10;stroke-dasharray:none"
+       id="polygon182758"
+       points="306.26322,491.53512 294.30047,480.86704 305.47648,492.30391 " />
+  </g>
+</svg>
