@@ -43,9 +43,11 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.2\linewidth]{image/schottky/g1_schottky.pdf}
-	\includegraphics[width=0.7\linewidth]{image/schottky/g1_domain.pdf}
-	\caption{Uniformization of a genus $1$ Riemann surface given by Schottky data.}
+	\includegraphics[width=0.3\linewidth]{image/schottky/g1_schottky_converted.pdf}
+	\quad
+	\includegraphics[width=0.6\linewidth]{image/schottky/g1_domain_converted.pdf}
+	\caption{Uniformization of a genus $1$ discrete Riemann surface given by Schottky data.
+	The boundary of the fundamental domain consists of circles in the Schottky uniformization.}
 	\label{fig:fuchsian_to_schottky_genus_1}
 \end{figure}
 
@@ -64,13 +66,13 @@ where $\sigma_i$ maps the exterior of $C_i$ onto the interior of $C'_i$. The poi
 Figure~\ref{fig:schottky_group} illustrates this construction.
 The quotient space $\Chat/G$ is a Riemann surface of genus $g$. The group $G$ is called the uniformizing
 Schottky group. The points $A_i,\ldots,A_g$ and $B_i,\ldots,B_g$ are fixed points of this map.
-A generator $\sigma_i$ is a M{\"o}bius loxodromic transformation with matrix representation 
+A generator $\sigma$ with parameters $A$, $B$ and $\mu$ is a loxodromic transformation with matrix representation 
 \[
-\begin{pmatrix}a & b\\c & d\end{pmatrix} = 
+\sigma = \frac{1}{A-B}
 \begin{pmatrix}
-	a & b \\
-	c & d
-\end{pmatrix}
+	A\sqrt{\mu}-\frac{B}{\sqrt\mu} & AB\left(\frac{1}{\sqrt\mu}-\sqrt{\mu}\right) \\
+	\sqrt\mu-\frac{1}{\sqrt\mu} & \frac{A}{\sqrt\mu}-B\sqrt\mu
+\end{pmatrix}.
 \]
 
 \begin{figure}
