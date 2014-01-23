@@ -10,7 +10,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-public class ConvertSVG {
+public class ConvertSVGPolygonStyle {
 
 	public static void main(String[] args) throws Exception {
 		if (args.length != 2) {
@@ -26,7 +26,7 @@ public class ConvertSVG {
 	
 	
 	static void transform(StreamSource source, Result result) throws Exception {
-		InputStream xslIn = ConvertSVG.class.getResourceAsStream("converter.xsl");
+		InputStream xslIn = ConvertSVGPolygonStyle.class.getResourceAsStream("converter.xsl");
 		StreamSource xslSource = new StreamSource(xslIn);
 		Transformer T = TransformerFactory.newInstance().newTransformer(xslSource);
 		T.setOutputProperty(OutputKeys.INDENT, "yes");

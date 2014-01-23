@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformalDataList xmlns="http://www.varylab.com/conformallab/types">
+    <DiscreteMetric name="Input Discrete Metric">
+        <MetricEdge index="0" length="1.0122855930493617"/>
+        <MetricEdge index="1" length="0.157232699828305"/>
+        <MetricEdge index="2" length="0.7524599328859717"/>
+        <MetricEdge index="3" length="0.15723269015849403"/>
+        <MetricEdge index="4" length="1.0122855915474036"/>
+        <MetricEdge index="5" length="0.157232699828305"/>
+        <MetricEdge index="6" length="0.15723269015849403"/>
+        <MetricEdge index="7" length="0.7524599214524086"/>
+        <MetricEdge index="8" length="0.5934987959217147"/>
+        <MetricEdge index="9" length="0.7358490481209956"/>
+        <MetricEdge index="10" length="0.34090140734138036"/>
+        <MetricEdge index="11" length="1.0"/>
+        <MetricEdge index="12" length="0.7585072293190669"/>
+        <MetricEdge index="13" length="0.335933832760447"/>
+        <MetricEdge index="14" length="0.7358490481209956"/>
+        <MetricEdge index="15" length="0.5906594545305404"/>
+        <MetricEdge index="16" length="0.3359338327240189"/>
+        <MetricEdge index="17" length="1.0"/>
+        <MetricEdge index="18" length="0.7645584877168544"/>
+        <MetricEdge index="19" length="0.340901407305483"/>
+        <MetricEdge index="20" length="0.7645584877168544"/>
+        <MetricEdge index="21" length="1.0"/>
+        <MetricEdge index="22" length="0.335933832724019"/>
+        <MetricEdge index="23" length="0.5906594545305404"/>
+        <MetricEdge index="24" length="0.7358490481209959"/>
+        <MetricEdge index="25" length="0.33593383276044714"/>
+        <MetricEdge index="26" length="0.7585072293190669"/>
+        <MetricEdge index="27" length="1.0"/>
+        <MetricEdge index="28" length="0.34090140734138036"/>
+        <MetricEdge index="29" length="0.7358490481209959"/>
+        <MetricEdge index="30" length="0.5934987959217153"/>
+        <MetricEdge index="31" length="0.34090140730548313"/>
+        <MetricEdge index="32" length="0.46540879428659404"/>
+        <MetricEdge index="33" length="0.4654087942865942"/>
+        <MetricEdge index="34" length="0.4912509220150512"/>
+        <MetricEdge index="35" length="0.3207547144068183"/>
+        <MetricEdge index="36" length="0.15723270200990871"/>
+        <MetricEdge index="37" length="0.32075471440681846"/>
+        <MetricEdge index="38" length="0.35721940238625566"/>
+        <MetricEdge index="39" length="0.15723269923868238"/>
+        <MetricEdge index="40" length="0.46540879428659404"/>
+        <MetricEdge index="41" length="0.46540879428659404"/>
+        <MetricEdge index="42" length="0.491250921128076"/>
+        <MetricEdge index="43" length="0.15723269074811666"/>
+        <MetricEdge index="44" length="0.3207547144068183"/>
+        <MetricEdge index="45" length="0.15723269923868238"/>
+        <MetricEdge index="46" length="0.3207547144068178"/>
+        <MetricEdge index="47" length="0.3572194184769074"/>
+        <MetricTriangle edge3="1" edge2="27" edge1="0"/>
+        <MetricTriangle edge3="5" edge2="11" edge1="0"/>
+        <MetricTriangle edge3="3" edge2="24" edge1="2"/>
+        <MetricTriangle edge3="1" edge2="14" edge1="2"/>
+        <MetricTriangle edge3="6" edge2="21" edge1="4"/>
+        <MetricTriangle edge3="3" edge2="17" edge1="4"/>
+        <MetricTriangle edge3="5" edge2="29" edge1="7"/>
+        <MetricTriangle edge3="6" edge2="9" edge1="7"/>
+        <MetricTriangle edge3="19" edge2="35" edge1="8"/>
+        <MetricTriangle edge3="9" edge2="8" edge1="10"/>
+        <MetricTriangle edge3="11" edge2="10" edge1="12"/>
+        <MetricTriangle edge3="12" edge2="32" edge1="13"/>
+        <MetricTriangle edge3="14" edge2="13" edge1="15"/>
+        <MetricTriangle edge3="15" edge2="44" edge1="16"/>
+        <MetricTriangle edge3="17" edge2="16" edge1="18"/>
+        <MetricTriangle edge3="19" edge2="18" edge1="41"/>
+        <MetricTriangle edge3="31" edge2="40" edge1="20"/>
+        <MetricTriangle edge3="21" edge2="20" edge1="22"/>
+        <MetricTriangle edge3="22" edge2="46" edge1="23"/>
+        <MetricTriangle edge3="24" edge2="23" edge1="25"/>
+        <MetricTriangle edge3="25" edge2="33" edge1="26"/>
+        <MetricTriangle edge3="27" edge2="26" edge1="28"/>
+        <MetricTriangle edge3="29" edge2="28" edge1="30"/>
+        <MetricTriangle edge3="31" edge2="30" edge1="37"/>
+        <MetricTriangle edge3="32" edge2="36" edge1="34"/>
+        <MetricTriangle edge3="33" edge2="43" edge1="34"/>
+        <MetricTriangle edge3="35" edge2="39" edge1="38"/>
+        <MetricTriangle edge3="37" edge2="36" edge1="38"/>
+        <MetricTriangle edge3="40" edge2="39" edge1="42"/>
+        <MetricTriangle edge3="41" edge2="45" edge1="42"/>
+        <MetricTriangle edge3="44" edge2="43" edge1="47"/>
+        <MetricTriangle edge3="46" edge2="45" edge1="47"/>
+    </DiscreteMetric>
+    <DiscreteEmbedding name="Input Discrete Position Embedding">
+        <EmbeddedVertex index="0" w="1.0" z="-0.36792452406049764" y="0.07861636008514271" x="-0.5"/>
+        <EmbeddedVertex index="1" w="1.0" z="-0.36792452406049764" y="0.07861636008514271" x="0.49999999999999994"/>
+        <EmbeddedVertex index="2" w="1.0" z="-0.36792452406049764" y="-0.0786163397431623" x="0.49999999999999994"/>
+        <EmbeddedVertex index="3" w="1.0" z="-0.36792452406049764" y="-0.0786163397431623" x="-0.5"/>
+        <EmbeddedVertex index="4" w="1.0" z="0.36792452406049764" y="0.07861632789174765" x="0.49999999999999994"/>
+        <EmbeddedVertex index="5" w="1.0" z="0.36792452406049764" y="-0.07861636226674638" x="0.49999999999999994"/>
+        <EmbeddedVertex index="6" w="1.0" z="0.36792452406049764" y="0.07861632789174765" x="-0.5"/>
+        <EmbeddedVertex index="7" w="1.0" z="0.36792452406049764" y="-0.07861636226674638" x="-0.5"/>
+        <EmbeddedVertex index="8" w="1.0" z="-0.1603773571739276" y="-0.0786163397431623" x="-0.2295597237009769"/>
+        <EmbeddedVertex index="9" w="1.0" z="0.16037735723288984" y="-0.07861636226674638" x="-0.2295597237009769"/>
+        <EmbeddedVertex index="10" w="1.0" z="-0.1603773571739276" y="-0.0786163397431623" x="0.23584907058561713"/>
+        <EmbeddedVertex index="11" w="1.0" z="0.16037735723288984" y="-0.07861636226674638" x="0.23584907058561713"/>
+        <EmbeddedVertex index="12" w="1.0" z="0.16037735723288984" y="0.078616336971936" x="0.23584907058561713"/>
+        <EmbeddedVertex index="13" w="1.0" z="0.16037735723288984" y="0.078616336971936" x="-0.2295597237009769"/>
+        <EmbeddedVertex index="14" w="1.0" z="-0.1603773571739276" y="0.07861635100495436" x="0.23584907058561713"/>
+        <EmbeddedVertex index="15" w="1.0" z="-0.1603773571739276" y="0.07861636226674641" x="-0.2295597237009769"/>
+        <EmbeddedTriangle vertex3="1" vertex2="0" vertex1="2"/>
+        <EmbeddedTriangle vertex3="3" vertex2="2" vertex1="0"/>
+        <EmbeddedTriangle vertex3="4" vertex2="1" vertex1="5"/>
+        <EmbeddedTriangle vertex3="2" vertex2="5" vertex1="1"/>
+        <EmbeddedTriangle vertex3="6" vertex2="4" vertex1="7"/>
+        <EmbeddedTriangle vertex3="5" vertex2="7" vertex1="4"/>
+        <EmbeddedTriangle vertex3="0" vertex2="6" vertex1="3"/>
+        <EmbeddedTriangle vertex3="7" vertex2="3" vertex1="6"/>
+        <EmbeddedTriangle vertex3="9" vertex2="8" vertex1="7"/>
+        <EmbeddedTriangle vertex3="7" vertex2="8" vertex1="3"/>
+        <EmbeddedTriangle vertex3="3" vertex2="8" vertex1="2"/>
+        <EmbeddedTriangle vertex3="8" vertex2="10" vertex1="2"/>
+        <EmbeddedTriangle vertex3="2" vertex2="10" vertex1="5"/>
+        <EmbeddedTriangle vertex3="10" vertex2="11" vertex1="5"/>
+        <EmbeddedTriangle vertex3="5" vertex2="11" vertex1="7"/>
+        <EmbeddedTriangle vertex3="7" vertex2="11" vertex1="9"/>
+        <EmbeddedTriangle vertex3="13" vertex2="12" vertex1="6"/>
+        <EmbeddedTriangle vertex3="6" vertex2="12" vertex1="4"/>
+        <EmbeddedTriangle vertex3="12" vertex2="14" vertex1="4"/>
+        <EmbeddedTriangle vertex3="4" vertex2="14" vertex1="1"/>
+        <EmbeddedTriangle vertex3="14" vertex2="15" vertex1="1"/>
+        <EmbeddedTriangle vertex3="1" vertex2="15" vertex1="0"/>
+        <EmbeddedTriangle vertex3="0" vertex2="15" vertex1="6"/>
+        <EmbeddedTriangle vertex3="6" vertex2="15" vertex1="13"/>
+        <EmbeddedTriangle vertex3="8" vertex2="15" vertex1="10"/>
+        <EmbeddedTriangle vertex3="14" vertex2="10" vertex1="15"/>
+        <EmbeddedTriangle vertex3="9" vertex2="13" vertex1="8"/>
+        <EmbeddedTriangle vertex3="15" vertex2="8" vertex1="13"/>
+        <EmbeddedTriangle vertex3="13" vertex2="9" vertex1="12"/>
+        <EmbeddedTriangle vertex3="11" vertex2="12" vertex1="9"/>
+        <EmbeddedTriangle vertex3="10" vertex2="14" vertex1="11"/>
+        <EmbeddedTriangle vertex3="12" vertex2="11" vertex1="14"/>
+    </DiscreteEmbedding>
+    <DiscreteEmbedding name="Output Texture Embedding">
+        <EmbeddedVertex index="0" w="1.2112252030071504" z="0.0" y="2.1377069345792132" x="-0.5440540966556029"/>
+        <EmbeddedVertex index="1" w="1.2019007135615323" z="0.0" y="1.754072373677519" x="0.19960225560037223"/>
+        <EmbeddedVertex index="2" w="1.201900709252989" z="0.0" y="0.7542373315730022" x="-0.2953452377265635"/>
+        <EmbeddedVertex index="3" w="1.2112251979539506" z="0.0" y="-0.15318754284928882" x="1.5449786020800491"/>
+        <EmbeddedVertex index="4" w="1.2019026032883586" z="0.0" y="1.4824583790669383" x="0.7482914274624289"/>
+        <EmbeddedVertex index="5" w="1.2019026078526769" z="0.0" y="0.4826213927616645" x="0.2533429692116685"/>
+        <EmbeddedVertex index="6" w="1.2112233035190691" z="0.0" y="1.125740871230947" x="1.5001949922081141"/>
+        <EmbeddedVertex index="7" w="1.2112233083160024" z="0.0" y="0.11633879514612758" x="1.0005115321023184"/>
+        <EmbeddedVertex index="8" w="0.8131179329062459" z="0.0" y="1.0125821859602175" x="-0.5818408967461436"/>
+        <EmbeddedVertex index="9" w="0.813118846369926" z="0.0" y="0.32730156294454504" x="0.8024849742429834"/>
+        <EmbeddedVertex index="10" w="0.8108418249920446" z="0.0" y="0.755329875460087" x="-0.0674887891903236"/>
+        <EmbeddedVertex index="11" w="0.8108409412017128" z="0.0" y="0.5798302686583184" x="0.28703289500611323"/>
+        <EmbeddedVertex index="12" w="0.8108409345428114" z="0.0" y="0.7536156028316956" x="0.37306169758193125"/>
+        <EmbeddedVertex index="13" w="0.8131188382352276" z="0.0" y="0.5006000444523601" x="0.888272775807648"/>
+        <EmbeddedVertex index="14" w="0.8108418303094732" z="0.0" y="0.9291150208230162" x="0.01853991627900698"/>
+        <EmbeddedVertex index="15" w="0.8131179423926949" z="0.0" y="1.1858808805843994" x="-0.49605299663837316"/>
+        <EmbeddedVertex index="16" w="0.8108409345428114" z="0.0" y="0.0" x="0.0"/>
+        <EmbeddedVertex index="17" w="1.2019026032883586" z="0.0" y="0.3653803970070774" x="0.19530525424173692"/>
+        <EmbeddedVertex index="18" w="1.2019007135615323" z="0.0" y="0.6369961480010257" x="-0.35338304815933963"/>
+        <EmbeddedVertex index="19" w="1.2112252030071504" z="0.0" y="1.0119642979666807" x="-1.1013295265977547"/>
+        <EmbeddedVertex index="20" w="1.2112233035190691" z="0.0" y="0.0" x="0.9429204362356802"/>
+        <EmbeddedVertex index="21" w="1.2112252030071504" z="0.0" y="0.8562164728161888" x="2.0446630327592317"/>
+        <EmbeddedVertex index="22" w="0.8131179423926949" z="0.0" y="0.32559256683816556" x="1.2418008231760354"/>
+        <EmbeddedVertex index="23" w="0.8131179329062459" z="0.0" y="0.15229388225175478" x="1.1560129027911328"/>
+        <EmbeddedVertex index="24" w="1.201900709252989" z="0.0" y="-0.5173877064815716" x="2.2734429167541927"/>
+        <EmbeddedVertex index="25" w="1.2112252030071504" z="0.0" y="-0.2695261637708834" x="1.487387602812543"/>
+        <Identification>
+            <Vertex>12</Vertex>
+            <Vertex>16</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>6</Vertex>
+            <Vertex>20</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>4</Vertex>
+            <Vertex>17</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>1</Vertex>
+            <Vertex>18</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>0</Vertex>
+            <Vertex>19</Vertex>
+            <Vertex>21</Vertex>
+            <Vertex>25</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>15</Vertex>
+            <Vertex>22</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>8</Vertex>
+            <Vertex>23</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>2</Vertex>
+            <Vertex>24</Vertex>
+        </Identification>
+        <EmbeddedTriangle vertex3="18" vertex2="19" vertex1="2"/>
+        <EmbeddedTriangle vertex3="3" vertex2="24" vertex1="25"/>
+        <EmbeddedTriangle vertex3="17" vertex2="18" vertex1="5"/>
+        <EmbeddedTriangle vertex3="2" vertex2="5" vertex1="18"/>
+        <EmbeddedTriangle vertex3="20" vertex2="17" vertex1="7"/>
+        <EmbeddedTriangle vertex3="5" vertex2="7" vertex1="17"/>
+        <EmbeddedTriangle vertex3="25" vertex2="20" vertex1="3"/>
+        <EmbeddedTriangle vertex3="7" vertex2="3" vertex1="20"/>
+        <EmbeddedTriangle vertex3="9" vertex2="23" vertex1="7"/>
+        <EmbeddedTriangle vertex3="7" vertex2="23" vertex1="3"/>
+        <EmbeddedTriangle vertex3="3" vertex2="23" vertex1="24"/>
+        <EmbeddedTriangle vertex3="8" vertex2="10" vertex1="2"/>
+        <EmbeddedTriangle vertex3="2" vertex2="10" vertex1="5"/>
+        <EmbeddedTriangle vertex3="10" vertex2="11" vertex1="5"/>
+        <EmbeddedTriangle vertex3="5" vertex2="11" vertex1="7"/>
+        <EmbeddedTriangle vertex3="7" vertex2="11" vertex1="9"/>
+        <EmbeddedTriangle vertex3="13" vertex2="12" vertex1="6"/>
+        <EmbeddedTriangle vertex3="20" vertex2="16" vertex1="17"/>
+        <EmbeddedTriangle vertex3="12" vertex2="14" vertex1="4"/>
+        <EmbeddedTriangle vertex3="4" vertex2="14" vertex1="1"/>
+        <EmbeddedTriangle vertex3="14" vertex2="15" vertex1="1"/>
+        <EmbeddedTriangle vertex3="1" vertex2="15" vertex1="0"/>
+        <EmbeddedTriangle vertex3="21" vertex2="22" vertex1="6"/>
+        <EmbeddedTriangle vertex3="6" vertex2="22" vertex1="13"/>
+        <EmbeddedTriangle vertex3="8" vertex2="15" vertex1="10"/>
+        <EmbeddedTriangle vertex3="14" vertex2="10" vertex1="15"/>
+        <EmbeddedTriangle vertex3="9" vertex2="13" vertex1="23"/>
+        <EmbeddedTriangle vertex3="22" vertex2="23" vertex1="13"/>
+        <EmbeddedTriangle vertex3="13" vertex2="9" vertex1="12"/>
+        <EmbeddedTriangle vertex3="11" vertex2="12" vertex1="9"/>
+        <EmbeddedTriangle vertex3="10" vertex2="14" vertex1="11"/>
+        <EmbeddedTriangle vertex3="12" vertex2="11" vertex1="14"/>
+    </DiscreteEmbedding>
+</ConformalDataList>
