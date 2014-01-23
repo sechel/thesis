@@ -1,7 +1,8 @@
 %!TEX TS-program = pdflatex
 %!TEX encoding = UTF-8 Unicode
 \documentclass[a4paper]{book}
-\usepackage[english,german]{babel}
+\usepackage{subfiles}
+\usepackage[german, english]{babel}
 
 \usepackage{color}
 
@@ -110,8 +111,21 @@ Tag der wissenschaftlichen Aussprache: NN\\
 	D 83
 }
 
+\def\mainbibliography {
+	\backmatter
+	\setcounter{secnumdepth}{-1} 
+	\bibliographystyle{amsalpha}
+	\bibliography{Thesis}
+}
+\def\subfilebibliography {
+	\backmatter
+	\setcounter{secnumdepth}{-1} 
+	\bibliographystyle{amsalpha}
+	\bibliography{Thesis}
+}
+
 \begin{document}
-\selectlanguage{english}
+\def\subfilebibliography{}
 
 \frontmatter
 \maketitle
@@ -127,27 +141,22 @@ Tag der wissenschaftlichen Aussprache: NN\\
 \chapter{Introduction}
 \setcounter{secnumdepth}{2} 
 \part{Uniformization of discrete Riemann surfaces}
-\input{Chapter1_00_Preliminaries}
-\input{Chapter1_01_Variational}
-\input{Chapter1_02_Examples}
+\subfile{Chapter1_00_Preliminaries.tex}
+\subfile{Chapter1_01_Variational.tex}
+\subfile{Chapter1_02_Examples.tex}
 \part{Variational Methods for Discrete Surface Parameterization}
-\input{Chapter2_Quasiisothermic}
-\input{Chapter2_Interpolation}
-\input{Chapter2_Tschebyscheff}
+\subfile{Chapter2_Quasiisothermic.tex}
+\subfile{Chapter2_Interpolation.tex}
+\subfile{Chapter2_Tschebyscheff.tex}
 \part{Software Packages}
-\input{Chapter3_JRworkspace}
-\input{Chapter3_Halfedge}
-\input{Chapter3_ConformalLab}
-\input{Chapter3_VaryLab}
+\subfile{Chapter3_JRworkspace.tex}
+\subfile{Chapter3_Halfedge.tex}
+\subfile{Chapter3_ConformalLab.tex}
+\subfile{Chapter3_VaryLab.tex}
 
-\newpage
-\backmatter 
-\bibliographystyle{amsplain}
-%disable numbering 
-\setcounter{secnumdepth}{-1} 
-\bibliography{Thesis}
+\newpage 
+\mainbibliography
 
 \chapter{Acknowledgements}
-
 
 \end{document}
