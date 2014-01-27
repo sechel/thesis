@@ -4,18 +4,49 @@
 \chapter{Examples}
 
 \section{Branched coverings of $\Chat$}
-In this section we discuss Riemann surfaces that arise as branched coverings of $\hat{\C}$. A Riemann surface that can be represented as a double cover of $\Chat$ is called elliptic for $g=1$ and hyperelliptic for $g>1$~\cite[p.~235]{Jost2007}. 
+In this section we discuss Riemann surfaces that arise as branched double coverings of $\hat{\C}$. A Riemann surface that can be represented as a double cover of $\Chat$ is called elliptic for $g=1$ and hyperelliptic for $g>1$~\cite[p.~235]{Jost2007}. Such a double cover of $\Chat$ can be described by the
+set of solutions of an algebraic equation.
 
-Let $\lambda_1,\ldots,\lambda_{2g+2}\in \hat{\C}$, $\lambda_i\neq \lambda_j \forall i\neq j.$. The algebraic curve
+\begin{definition}
+Let $\lambda_1,\ldots,\lambda_{2g+2}\in \hat{\C}$, $\lambda_i\neq \lambda_j \forall i\neq j$. The
+set
 
 \begin{equation}
 \label{eq:branched_cover}
 C=\{(z, \mu)\in\C^2 \mid \mu^2 = \prod_{i=1}^{2g+2}(z-\lambda_i)\}
 \end{equation}
 
-is a one dimensional complex manifold. A branched double cover of $\Chat$ is the projection $\pi:C\to\C$, $C\ni(z,\mu)\mapsto z$. A discrete branched cover of $\Chat$ is a triangulation of $\pi(C)$ with vertices at $\lambda_i$.
+is called an \emph{algebraic curve of genus $g$}.
+\end{definition}
+
+$C$ is a one dimensional complex manifold. The projection $\pi:C\to\Chat$, $C\ni(z,\mu)\mapsto z$ is a branched double cover of $\Chat$ is. 
+
+In order to discretize this construction and uniformize the corresponding discrete Riemann surfaces
+we need a notion of discrete double cover of $\Chat$.
+
+\begin{definition}
+Let $v_1,\ldots, v_n \in V\subset\S^2$. A triangulation of the convex hull of $v_1,\ldots, v_n$ is called a
+\emph{discrete Riemann sphere}. We denote $\Chat_V$ as the discrete Riemann sphere with vertex set 
+$V$.
+\end{definition}
+
+Note that by stereographic projection the triangle mesh of the discrete Riemann sphere is projected to a
+discretely conformally equivalent triangle mesh, see Theorem~\ref{thm:moebius_invariance}.
+
+\begin{definition}
+Let $S$ be a discrete surface without boundary and vertices $v_1,\ldots,\v_n\in\S^2$. $S$ is a \emph{discrete double
+branched cover if there exist $i_1,\ldots,\i_{2g+2}\in
+Let $\Chat_V$ be the discrete Riemann sphere with vertex set $V\subset\S^2$. Let $v_1,
+\ldots,v_{2g+2} \in V$ for $g\in \N$. A \emph{discrete double cover} of $\Chat_V$ 
+\end{definition}
+
+A discrete branched cover of $\Chat$ is a triangulation of $\pi(C)$ with vertices at $\lambda_i$.
+
 
 \subsection{Elliptic curves}
+
+Let $C$ be an elliptic algebraic curve and $R$ the corresponding Riemann surface. Let $\lambda_1, \ldots, \lambda_4 \in \Chat$ be the branch points of $C$. 
+
 \subsection{The moduli space}
 \subsection{Numerical convergence analysis}
 
