@@ -19,24 +19,24 @@ C=\{(z, \mu)\in\C^2 \mid \mu^2 = \prod_{i=1}^{2g+2}(z-\lambda_i)\}
 is called an \emph{algebraic curve of genus $g$}.
 \end{definition}
 
-$C$ is a one dimensional complex manifold. The projection $\pi:C\to\Chat$, $C\ni(z,\mu)\mapsto z$ is a branched double cover of $\Chat$ is. 
+$C$ is a one dimensional complex manifold. The projection $\pi:C\to\Chat$, $C\ni(z,\mu)\mapsto z$ is a branched double cover of $\Chat$. The points $\lambda_1,\ldots,\lambda_{2g+2}\in \hat{\C}$ are called
+the branch points of $C$.
 
 In order to discretize this construction and uniformize the corresponding discrete Riemann surfaces
 we need a notion of discrete double cover of $\Chat$.
 
 \begin{definition}
-Let $v_1,\ldots, v_n \in V\subset\S^2$. A triangulation of the convex hull of $v_1,\ldots, v_n$ is called a
-\emph{discrete Riemann sphere}. We denote $\Chat_V$ as the discrete Riemann sphere with vertex set 
-$V$.
+Let $C$ be an algebraic curve of genus $g$. Let $V = \{\lambda_1,\ldots,\lambda_{2g+2}\}$ be the set of
+branch points of $C$. A triangulation of $\pi(C)$ with vertices $V$ is called a discrete double cover of 
+$\Chat$.
 \end{definition}
 
 Note that by stereographic projection the triangle mesh of the discrete Riemann sphere is projected to a
 discretely conformally equivalent triangle mesh, see Theorem~\ref{thm:moebius_invariance}.
 
 \begin{definition}
-Let $S$ be a discrete surface without boundary and vertices $v_1,\ldots,\v_n\in\S^2$. $S$ is a \emph{discrete double
-branched cover if there exist $i_1,\ldots,\i_{2g+2}\in
-Let $\Chat_V$ be the discrete Riemann sphere with vertex set $V\subset\S^2$. Let $v_1,
+Let $S$ be a discrete surface without boundary and vertices $v_1,\ldots,v_n\in\S^2$. $S$ is a \emph{discrete double branched cover} if there exist $i_1,\ldots, i_{2g+2}\in \N$ such that ... \marginpar{complete definition}
+Let $\Chat_V$ be the discrete Riemann sphere with vertex set $V\subset S^2$. Let $v_1,
 \ldots,v_{2g+2} \in V$ for $g\in \N$. A \emph{discrete double cover} of $\Chat_V$ 
 \end{definition}
 
@@ -51,6 +51,12 @@ Let $C$ be an elliptic algebraic curve and $R$ the corresponding Riemann surface
 \subsection{Numerical convergence analysis}
 
 \subsection{Construction of hyperelliptic surfaces}
+
+\begin{definition}
+	A Rielmann surface is called \emph{hyperelliptic} if it admits a two-sheeted holomorphic map to
+$\Chat$.
+\end{definition}
+
 Any hyperelliptic Riemann surface can be expressed as an algebraic curve of the form
 \[ w^2 = \prod_{i=1}^{2g+2}(z-\lambda_i) \quad\quad g\geq1,\quad \lambda_i\neq \lambda_j \forall i\neq j.\]
 Here $\lambda_i$ are the branch points of the doubly covered Riemann sphere.
