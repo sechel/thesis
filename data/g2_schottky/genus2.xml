@@ -1,0 +1,3003 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformalDataList xmlns="http://www.varylab.com/conformallab/types">
+    <SchottkyData name="Schottky Data g2">
+        <SchottkyGenerator>
+            <A re="-0.8769108957997354" im="-1.0150202351744722"/>
+            <B re="-10.356599940167886" im="-2.8103100101572283"/>
+            <Mu re="0.4" im="0.0"/>
+            <Circle radius="0.6639417477182613">
+                <Center re="-0.6302083254548974" im="-0.6604174900105101"/>
+            </Circle>
+        </SchottkyGenerator>
+        <SchottkyGenerator>
+            <A re="0.13999745674176323" im="1.1625063581455903"/>
+            <B re="1.1124885553379378" im="0.13499745674176356"/>
+            <Mu re="0.05" im="0.0"/>
+            <Circle radius="0.3661872755907655">
+                <Center re="0.11141008239885625" im="1.251776235555194"/>
+            </Circle>
+        </SchottkyGenerator>
+    </SchottkyData>
+    <DiscreteMetric name="Input Schottky Data Metric">
+        <MetricEdge length="0.010382248088598018" index="0"/>
+        <MetricEdge length="0.010276531815731243" index="1"/>
+        <MetricEdge length="0.05378438840179881" index="2"/>
+        <MetricEdge length="5.068007714672548E-4" index="3"/>
+        <MetricEdge length="0.0015255319261390067" index="4"/>
+        <MetricEdge length="0.009779206650004618" index="5"/>
+        <MetricEdge length="0.0018036725728485029" index="6"/>
+        <MetricEdge length="0.0030527945922411526" index="7"/>
+        <MetricEdge length="0.001660120771817787" index="8"/>
+        <MetricEdge length="3.5783803572399155E-4" index="9"/>
+        <MetricEdge length="0.001707334713481622" index="10"/>
+        <MetricEdge length="0.002167395259368177" index="11"/>
+        <MetricEdge length="0.0016510049755682568" index="12"/>
+        <MetricEdge length="6.460060532517442E-4" index="13"/>
+        <MetricEdge length="0.0033405226292426995" index="14"/>
+        <MetricEdge length="0.0010426890055249243" index="15"/>
+        <MetricEdge length="0.0013897264631031953" index="16"/>
+        <MetricEdge length="0.001468275702525753" index="17"/>
+        <MetricEdge length="0.0022839046495746755" index="18"/>
+        <MetricEdge length="0.0014562147178225008" index="19"/>
+        <MetricEdge length="0.0021865608629391096" index="20"/>
+        <MetricEdge length="0.0012713142503865456" index="21"/>
+        <MetricEdge length="6.315158458598915E-4" index="22"/>
+        <MetricEdge length="3.3423859482631526E-4" index="23"/>
+        <MetricEdge length="0.0014589206888079571" index="24"/>
+        <MetricEdge length="9.565802601184051E-4" index="25"/>
+        <MetricEdge length="9.779579340394304E-4" index="26"/>
+        <MetricEdge length="0.009500292456582737" index="27"/>
+        <MetricEdge length="0.09971906378036605" index="28"/>
+        <MetricEdge length="0.0010289177465834043" index="29"/>
+        <MetricEdge length="0.009296955595282515" index="30"/>
+        <MetricEdge length="9.86995619867302E-4" index="31"/>
+        <MetricEdge length="0.009281154155333239" index="32"/>
+        <MetricEdge length="0.0010537029314155553" index="33"/>
+        <MetricEdge length="1.0152381618358012E-4" index="34"/>
+        <MetricEdge length="0.01" index="35"/>
+        <MetricEdge length="0.009500292456582748" index="36"/>
+        <MetricEdge length="1.1624954248499963E-4" index="37"/>
+        <MetricEdge length="9.646067089932928E-4" index="38"/>
+        <MetricEdge length="0.01023210403437246" index="39"/>
+        <MetricEdge length="1.3493870379754016E-4" index="40"/>
+        <MetricEdge length="0.0010288075242381469" index="41"/>
+        <MetricEdge length="9.868105917942294E-4" index="42"/>
+        <MetricEdge length="1.589096009913355E-4" index="43"/>
+        <MetricEdge length="0.001104257355122118" index="44"/>
+        <MetricEdge length="0.0010527395805495334" index="45"/>
+        <MetricEdge length="1.8999966209300634E-4" index="46"/>
+        <MetricEdge length="0.001192972097865099" index="47"/>
+        <MetricEdge length="0.0011311136617446606" index="48"/>
+        <MetricEdge length="2.3075242803938213E-4" index="49"/>
+        <MetricEdge length="0.0012972511151570208" index="50"/>
+        <MetricEdge length="0.0012249717817517625" index="51"/>
+        <MetricEdge length="2.845892723927419E-4" index="52"/>
+        <MetricEdge length="0.00141951869330068" index="53"/>
+        <MetricEdge length="0.0013384794648333715" index="54"/>
+        <MetricEdge length="3.557614455003019E-4" index="55"/>
+        <MetricEdge length="0.0015619654611675796" index="56"/>
+        <MetricEdge length="0.0014773209381140442" index="57"/>
+        <MetricEdge length="4.484817548814727E-4" index="58"/>
+        <MetricEdge length="0.0019811606553954042" index="59"/>
+        <MetricEdge length="0.0017957223435234124" index="60"/>
+        <MetricEdge length="0.0017153980380067264" index="61"/>
+        <MetricEdge length="5.866412301349545E-4" index="62"/>
+        <MetricEdge length="0.002203494725862179" index="63"/>
+        <MetricEdge length="0.0020353203010549186" index="64"/>
+        <MetricEdge length="7.674171412864493E-4" index="65"/>
+        <MetricEdge length="0.0029379750654470885" index="66"/>
+        <MetricEdge length="0.002612061451139873" index="67"/>
+        <MetricEdge length="0.002407334697414489" index="68"/>
+        <MetricEdge length="9.766845242818157E-4" index="69"/>
+        <MetricEdge length="0.0032513291893788254" index="70"/>
+        <MetricEdge length="0.003666158003950357" index="71"/>
+        <MetricEdge length="0.002988219682764044" index="72"/>
+        <MetricEdge length="0.0011919886531118612" index="73"/>
+        <MetricEdge length="0.0013617407331121877" index="74"/>
+        <MetricEdge length="0.003797242640199514" index="75"/>
+        <MetricEdge length="0.0035861304165715332" index="76"/>
+        <MetricEdge length="0.003925580077455086" index="77"/>
+        <MetricEdge length="0.0036890016407735084" index="78"/>
+        <MetricEdge length="0.0014275048728938674" index="79"/>
+        <MetricEdge length="0.0036519694768657918" index="80"/>
+        <MetricEdge length="0.00134721213922127" index="81"/>
+        <MetricEdge length="0.0036084429237642013" index="82"/>
+        <MetricEdge length="0.009800252073697831" index="83"/>
+        <MetricEdge length="0.003536365024644035" index="84"/>
+        <MetricEdge length="0.00867796788436855" index="85"/>
+        <MetricEdge length="0.0030688462111265148" index="86"/>
+        <MetricEdge length="0.002855810886589402" index="87"/>
+        <MetricEdge length="0.0025405303805061306" index="88"/>
+        <MetricEdge length="0.007736733286060358" index="89"/>
+        <MetricEdge length="7.320031854632322E-4" index="90"/>
+        <MetricEdge length="0.009633544531242924" index="91"/>
+        <MetricEdge length="0.0024474312553581304" index="92"/>
+        <MetricEdge length="0.0020066077178904204" index="93"/>
+        <MetricEdge length="0.0019106520053596586" index="94"/>
+        <MetricEdge length="0.0018670759773848364" index="95"/>
+        <MetricEdge length="0.009774939239142574" index="96"/>
+        <MetricEdge length="0.0018676507259536529" index="97"/>
+        <MetricEdge length="0.0103278311117044" index="98"/>
+        <MetricEdge length="0.04219865660820417" index="99"/>
+        <MetricEdge length="0.009348285252541456" index="100"/>
+        <MetricEdge length="0.04382270399179369" index="101"/>
+        <MetricEdge length="0.009537527237327694" index="102"/>
+        <MetricEdge length="0.009321447776058436" index="103"/>
+        <MetricEdge length="0.009790836145480823" index="104"/>
+        <MetricEdge length="0.00933803664137359" index="105"/>
+        <MetricEdge length="0.0012234989954207783" index="106"/>
+        <MetricEdge length="0.001113768666728609" index="107"/>
+        <MetricEdge length="0.006551005380280839" index="108"/>
+        <MetricEdge length="0.057956035814700255" index="109"/>
+        <MetricEdge length="0.06199643490654526" index="110"/>
+        <MetricEdge length="0.0011303404879564234" index="111"/>
+        <MetricEdge length="0.06410440558578771" index="112"/>
+        <MetricEdge length="0.06877086813749655" index="113"/>
+        <MetricEdge length="0.00967116602049739" index="114"/>
+        <MetricEdge length="0.07065904690579716" index="115"/>
+        <MetricEdge length="0.07566799062742119" index="116"/>
+        <MetricEdge length="0.009732776077376496" index="117"/>
+        <MetricEdge length="0.0774131494821355" index="118"/>
+        <MetricEdge length="0.009802910924030458" index="119"/>
+        <MetricEdge length="0.009774565578795236" index="120"/>
+        <MetricEdge length="0.010000000000000004" index="121"/>
+        <MetricEdge length="0.00980291092403044" index="122"/>
+        <MetricEdge length="0.01011679914608494" index="123"/>
+        <MetricEdge length="0.04988468509210762" index="124"/>
+        <MetricEdge length="0.048384786287912866" index="125"/>
+        <MetricEdge length="0.05276795604559465" index="126"/>
+        <MetricEdge length="0.00969932679710702" index="127"/>
+        <MetricEdge length="0.011910526379686353" index="128"/>
+        <MetricEdge length="0.002461626327914968" index="129"/>
+        <MetricEdge length="0.0028046809374772373" index="130"/>
+        <MetricEdge length="0.013018499271795237" index="131"/>
+        <MetricEdge length="0.010302774626123293" index="132"/>
+        <MetricEdge length="0.0024341118798926593" index="133"/>
+        <MetricEdge length="0.050542216714370716" index="134"/>
+        <MetricEdge length="0.009999999999999997" index="135"/>
+        <MetricEdge length="0.009706123217181367" index="136"/>
+        <MetricEdge length="0.051176921968917946" index="137"/>
+        <MetricEdge length="0.010016627156124102" index="138"/>
+        <MetricEdge length="0.010016627156123937" index="139"/>
+        <MetricEdge length="0.05238489709333147" index="140"/>
+        <MetricEdge length="0.04267695732707322" index="141"/>
+        <MetricEdge length="0.003594446784657085" index="142"/>
+        <MetricEdge length="0.003866315309035198" index="143"/>
+        <MetricEdge length="0.0035884801626658394" index="144"/>
+        <MetricEdge length="0.014590908601269556" index="145"/>
+        <MetricEdge length="0.01" index="146"/>
+        <MetricEdge length="0.0035158804617188215" index="147"/>
+        <MetricEdge length="0.0398063073288974" index="148"/>
+        <MetricEdge length="0.010056678256964187" index="149"/>
+        <MetricEdge length="0.010056678256964097" index="150"/>
+        <MetricEdge length="0.04071071890361179" index="151"/>
+        <MetricEdge length="0.00444285358039869" index="152"/>
+        <MetricEdge length="0.005140625519713228" index="153"/>
+        <MetricEdge length="0.004417814179669197" index="154"/>
+        <MetricEdge length="0.01751678674842217" index="155"/>
+        <MetricEdge length="0.010268746230347998" index="156"/>
+        <MetricEdge length="0.004210275020030095" index="157"/>
+        <MetricEdge length="0.03990577955390753" index="158"/>
+        <MetricEdge length="0.03575767532241892" index="159"/>
+        <MetricEdge length="0.009999999999999997" index="160"/>
+        <MetricEdge length="0.00973828720243001" index="161"/>
+        <MetricEdge length="0.0357759940266285" index="162"/>
+        <MetricEdge length="0.010439214080401845" index="163"/>
+        <MetricEdge length="0.010439214080402008" index="164"/>
+        <MetricEdge length="0.0362784776339486" index="165"/>
+        <MetricEdge length="0.00472676992623583" index="166"/>
+        <MetricEdge length="0.004625909229900603" index="167"/>
+        <MetricEdge length="0.004527898259227775" index="168"/>
+        <MetricEdge length="0.015176391037994817" index="169"/>
+        <MetricEdge length="0.00986924889826497" index="170"/>
+        <MetricEdge length="0.004325461469630131" index="171"/>
+        <MetricEdge length="0.03511461331133145" index="172"/>
+        <MetricEdge length="0.010000000000000005" index="173"/>
+        <MetricEdge length="0.010132483335948992" index="174"/>
+        <MetricEdge length="0.03726083939548662" index="175"/>
+        <MetricEdge length="0.038537817454711965" index="176"/>
+        <MetricEdge length="0.010646348650897927" index="177"/>
+        <MetricEdge length="0.010646348650897825" index="178"/>
+        <MetricEdge length="0.03832387709821948" index="179"/>
+        <MetricEdge length="0.0037884026240400112" index="180"/>
+        <MetricEdge length="0.003355805537455827" index="181"/>
+        <MetricEdge length="0.0035584055606900046" index="182"/>
+        <MetricEdge length="0.012408296721630206" index="183"/>
+        <MetricEdge length="0.009999999999999995" index="184"/>
+        <MetricEdge length="0.0034682908208015424" index="185"/>
+        <MetricEdge length="0.037276858159425164" index="186"/>
+        <MetricEdge length="0.010473875038385119" index="187"/>
+        <MetricEdge length="0.010473875038384976" index="188"/>
+        <MetricEdge length="0.03874877085913785" index="189"/>
+        <MetricEdge length="0.04753262044432024" index="190"/>
+        <MetricEdge length="0.002660862446759748" index="191"/>
+        <MetricEdge length="0.0023733502144348334" index="192"/>
+        <MetricEdge length="0.002540475647272999" index="193"/>
+        <MetricEdge length="0.011197255439075245" index="194"/>
+        <MetricEdge length="0.009999999999999995" index="195"/>
+        <MetricEdge length="0.002512841443796363" index="196"/>
+        <MetricEdge length="0.04624323977738383" index="197"/>
+        <MetricEdge length="0.01045770321790752" index="198"/>
+        <MetricEdge length="0.010457703217907668" index="199"/>
+        <MetricEdge length="0.04725394095628803" index="200"/>
+        <MetricEdge length="0.0019088312825575782" index="201"/>
+        <MetricEdge length="0.0017510117205250266" index="202"/>
+        <MetricEdge length="0.0018252872956740038" index="203"/>
+        <MetricEdge length="0.008426166280221347" index="204"/>
+        <MetricEdge length="0.010300688848495923" index="205"/>
+        <MetricEdge length="0.010368199987066826" index="206"/>
+        <MetricEdge length="0.001815483969810139" index="207"/>
+        <MetricEdge length="0.05942362741008874" index="208"/>
+        <MetricEdge length="0.001458920688807958" index="209"/>
+        <MetricEdge length="0.01" index="210"/>
+        <MetricEdge length="0.0014071108684514208" index="211"/>
+        <MetricEdge length="0.008167509429802256" index="212"/>
+        <MetricEdge length="0.009965562564019906" index="213"/>
+        <MetricEdge length="0.008505141903098546" index="214"/>
+        <MetricEdge length="0.001124708171852968" index="215"/>
+        <MetricEdge length="1.5689583972476397E-4" index="216"/>
+        <MetricEdge length="0.008276343916818741" index="217"/>
+        <MetricEdge length="0.010268835503105134" index="218"/>
+        <MetricEdge length="0.0011549443205756222" index="219"/>
+        <MetricEdge length="0.07500655031698775" index="220"/>
+        <MetricEdge length="0.08881906267034403" index="221"/>
+        <MetricEdge length="9.77957934039431E-4" index="222"/>
+        <MetricEdge length="0.010000000000000047" index="223"/>
+        <MetricEdge length="9.523552439258645E-4" index="224"/>
+        <MetricEdge length="0.008302655110033504" index="225"/>
+        <MetricEdge length="0.008889044471875426" index="226"/>
+        <MetricEdge length="0.010687641946939665" index="227"/>
+        <MetricEdge length="0.014637384176122377" index="228"/>
+        <MetricEdge length="0.00243802444172352" index="229"/>
+        <MetricEdge length="7.63389049684524E-5" index="230"/>
+        <MetricEdge length="0.007337127432095983" index="231"/>
+        <MetricEdge length="0.014308431922778423" index="232"/>
+        <MetricEdge length="9.931544832264515E-4" index="233"/>
+        <MetricEdge length="0.029081481238920966" index="234"/>
+        <MetricEdge length="8.067225846677062E-4" index="235"/>
+        <MetricEdge length="0.16935248416728413" index="236"/>
+        <MetricEdge length="0.16739729802071007" index="237"/>
+        <MetricEdge length="0.0016141018056502116" index="238"/>
+        <MetricEdge length="0.0020707404802863152" index="239"/>
+        <MetricEdge length="5.550273703012026E-4" index="240"/>
+        <MetricEdge length="0.009221440351525247" index="241"/>
+        <MetricEdge length="0.008881930264845446" index="242"/>
+        <MetricEdge length="0.002127928219576376" index="243"/>
+        <MetricEdge length="0.0029677497579575964" index="244"/>
+        <MetricEdge length="3.262538624127728E-5" index="245"/>
+        <MetricEdge length="0.009093554231197426" index="246"/>
+        <MetricEdge length="0.008848855230786197" index="247"/>
+        <MetricEdge length="0.003016003054730866" index="248"/>
+        <MetricEdge length="0.004215228656325072" index="249"/>
+        <MetricEdge length="3.488975993763692E-5" index="250"/>
+        <MetricEdge length="0.008999086351789731" index="251"/>
+        <MetricEdge length="0.0013330515543954376" index="252"/>
+        <MetricEdge length="0.010089165650132096" index="253"/>
+        <MetricEdge length="0.0014433450379550772" index="254"/>
+        <MetricEdge length="0.0012925436874276686" index="255"/>
+        <MetricEdge length="0.0032077667554180128" index="256"/>
+        <MetricEdge length="8.628483660776534E-5" index="257"/>
+        <MetricEdge length="0.009759049268112819" index="258"/>
+        <MetricEdge length="0.00879683375310112" index="259"/>
+        <MetricEdge length="0.0014333776106537556" index="260"/>
+        <MetricEdge length="0.009689662138569373" index="261"/>
+        <MetricEdge length="0.00884441267453843" index="262"/>
+        <MetricEdge length="0.009928899703611353" index="263"/>
+        <MetricEdge length="0.009707781831009047" index="264"/>
+        <MetricEdge length="0.009018691100333945" index="265"/>
+        <MetricEdge length="0.01001870002501692" index="266"/>
+        <MetricEdge length="0.009812653502524674" index="267"/>
+        <MetricEdge length="0.009311013065530973" index="268"/>
+        <MetricEdge length="0.010108028459375355" index="269"/>
+        <MetricEdge length="0.009999999999999997" index="270"/>
+        <MetricEdge length="0.009706957307163021" index="271"/>
+        <MetricEdge length="0.0101909233801307" index="272"/>
+        <MetricEdge length="0.04511336434544915" index="273"/>
+        <MetricEdge length="0.0021516810922886094" index="274"/>
+        <MetricEdge length="0.00945547156648382" index="275"/>
+        <MetricEdge length="0.0021516810922886116" index="276"/>
+        <MetricEdge length="0.0021232544916482653" index="277"/>
+        <MetricEdge length="4.8712296165455036E-4" index="278"/>
+        <MetricEdge length="1.0342860163180183E-4" index="279"/>
+        <MetricEdge length="4.8353507799519597E-4" index="280"/>
+        <MetricEdge length="4.910511071130816E-4" index="281"/>
+        <MetricEdge length="2.3744043537755346E-5" index="282"/>
+        <MetricEdge length="4.841473909654479E-4" index="283"/>
+        <MetricEdge length="4.883849384852748E-4" index="284"/>
+        <MetricEdge length="2.364502937544647E-5" index="285"/>
+        <MetricEdge length="4.786526688359053E-4" index="286"/>
+        <MetricEdge length="2.2945744129584067E-5" index="287"/>
+        <MetricEdge length="4.7938193231824346E-4" index="288"/>
+        <MetricEdge length="4.675130110834514E-4" index="289"/>
+        <MetricEdge length="2.173227135490662E-5" index="290"/>
+        <MetricEdge length="4.6484848206774403E-4" index="291"/>
+        <MetricEdge length="0.08744035975888018" index="292"/>
+        <MetricEdge length="0.010154326692713267" index="293"/>
+        <MetricEdge length="4.528574029162241E-4" index="294"/>
+        <MetricEdge length="0.22546150671180337" index="295"/>
+        <MetricEdge length="0.09024919865208886" index="296"/>
+        <MetricEdge length="0.012029581832091504" index="297"/>
+        <MetricEdge length="0.0014192801855563795" index="298"/>
+        <MetricEdge length="0.0013757470652297698" index="299"/>
+        <MetricEdge length="0.012649075883679728" index="300"/>
+        <MetricEdge length="0.001441380982127047" index="301"/>
+        <MetricEdge length="0.009676218255322635" index="302"/>
+        <MetricEdge length="0.0013733264840898318" index="303"/>
+        <MetricEdge length="0.010012983712616875" index="304"/>
+        <MetricEdge length="0.001715442392273365" index="305"/>
+        <MetricEdge length="0.0017728438394098273" index="306"/>
+        <MetricEdge length="0.009624368518608626" index="307"/>
+        <MetricEdge length="0.001763848681883101" index="308"/>
+        <MetricTriangle edge1="5" edge2="2" edge3="4"/>
+        <MetricTriangle edge1="6" edge2="308" edge3="5"/>
+        <MetricTriangle edge1="8" edge2="3" edge3="7"/>
+        <MetricTriangle edge1="10" edge2="7" edge3="9"/>
+        <MetricTriangle edge1="12" edge2="9" edge3="11"/>
+        <MetricTriangle edge1="14" edge2="11" edge3="13"/>
+        <MetricTriangle edge1="16" edge2="13" edge3="15"/>
+        <MetricTriangle edge1="18" edge2="15" edge3="17"/>
+        <MetricTriangle edge1="20" edge2="17" edge3="19"/>
+        <MetricTriangle edge1="29" edge2="25" edge3="30"/>
+        <MetricTriangle edge1="30" edge2="28" edge3="31"/>
+        <MetricTriangle edge1="32" edge2="26" edge3="33"/>
+        <MetricTriangle edge1="33" edge2="29" edge3="34"/>
+        <MetricTriangle edge1="35" edge2="27" edge3="36"/>
+        <MetricTriangle edge1="36" edge2="32" edge3="37"/>
+        <MetricTriangle edge1="38" edge2="31" edge3="39"/>
+        <MetricTriangle edge1="39" edge2="35" edge3="40"/>
+        <MetricTriangle edge1="41" edge2="34" edge3="42"/>
+        <MetricTriangle edge1="42" edge2="38" edge3="43"/>
+        <MetricTriangle edge1="44" edge2="37" edge3="45"/>
+        <MetricTriangle edge1="45" edge2="41" edge3="46"/>
+        <MetricTriangle edge1="47" edge2="40" edge3="48"/>
+        <MetricTriangle edge1="48" edge2="44" edge3="49"/>
+        <MetricTriangle edge1="50" edge2="43" edge3="51"/>
+        <MetricTriangle edge1="51" edge2="47" edge3="52"/>
+        <MetricTriangle edge1="53" edge2="46" edge3="54"/>
+        <MetricTriangle edge1="54" edge2="50" edge3="55"/>
+        <MetricTriangle edge1="56" edge2="49" edge3="57"/>
+        <MetricTriangle edge1="57" edge2="53" edge3="58"/>
+        <MetricTriangle edge1="59" edge2="55" edge3="60"/>
+        <MetricTriangle edge1="60" edge2="52" edge3="61"/>
+        <MetricTriangle edge1="61" edge2="56" edge3="62"/>
+        <MetricTriangle edge1="63" edge2="58" edge3="64"/>
+        <MetricTriangle edge1="64" edge2="59" edge3="65"/>
+        <MetricTriangle edge1="66" edge2="65" edge3="67"/>
+        <MetricTriangle edge1="67" edge2="62" edge3="68"/>
+        <MetricTriangle edge1="68" edge2="63" edge3="69"/>
+        <MetricTriangle edge1="71" edge2="73" edge3="70"/>
+        <MetricTriangle edge1="70" edge2="69" edge3="72"/>
+        <MetricTriangle edge1="72" edge2="66" edge3="73"/>
+        <MetricTriangle edge1="75" edge2="74" edge3="76"/>
+        <MetricTriangle edge1="76" edge2="71" edge3="74"/>
+        <MetricTriangle edge1="78" edge2="79" edge3="77"/>
+        <MetricTriangle edge1="77" edge2="75" edge3="79"/>
+        <MetricTriangle edge1="81" edge2="78" edge3="80"/>
+        <MetricTriangle edge1="82" edge2="80" edge3="81"/>
+        <MetricTriangle edge1="84" edge2="82" edge3="83"/>
+        <MetricTriangle edge1="87" edge2="83" edge3="86"/>
+        <MetricTriangle edge1="86" edge2="84" edge3="85"/>
+        <MetricTriangle edge1="90" edge2="85" edge3="89"/>
+        <MetricTriangle edge1="89" edge2="87" edge3="88"/>
+        <MetricTriangle edge1="92" edge2="88" edge3="91"/>
+        <MetricTriangle edge1="95" edge2="91" edge3="93"/>
+        <MetricTriangle edge1="93" edge2="90" edge3="94"/>
+        <MetricTriangle edge1="97" edge2="94" edge3="96"/>
+        <MetricTriangle edge1="100" edge2="96" edge3="98"/>
+        <MetricTriangle edge1="98" edge2="92" edge3="99"/>
+        <MetricTriangle edge1="103" edge2="99" edge3="101"/>
+        <MetricTriangle edge1="101" edge2="95" edge3="102"/>
+        <MetricTriangle edge1="105" edge2="102" edge3="104"/>
+        <MetricTriangle edge1="107" edge2="104" edge3="106"/>
+        <MetricTriangle edge1="106" edge2="97" edge3="108"/>
+        <MetricTriangle edge1="111" edge2="108" edge3="109"/>
+        <MetricTriangle edge1="109" edge2="100" edge3="110"/>
+        <MetricTriangle edge1="114" edge2="110" edge3="112"/>
+        <MetricTriangle edge1="112" edge2="103" edge3="113"/>
+        <MetricTriangle edge1="117" edge2="113" edge3="115"/>
+        <MetricTriangle edge1="115" edge2="105" edge3="116"/>
+        <MetricTriangle edge1="120" edge2="116" edge3="118"/>
+        <MetricTriangle edge1="118" edge2="107" edge3="119"/>
+        <MetricTriangle edge1="122" edge2="119" edge3="121"/>
+        <MetricTriangle edge1="127" edge2="124" edge3="125"/>
+        <MetricTriangle edge1="126" edge2="2" edge3="127"/>
+        <MetricTriangle edge1="129" edge2="125" edge3="128"/>
+        <MetricTriangle edge1="128" edge2="14" edge3="130"/>
+        <MetricTriangle edge1="131" edge2="126" edge3="129"/>
+        <MetricTriangle edge1="133" edge2="130" edge3="132"/>
+        <MetricTriangle edge1="134" edge2="131" edge3="133"/>
+        <MetricTriangle edge1="136" edge2="132" edge3="135"/>
+        <MetricTriangle edge1="137" edge2="134" edge3="136"/>
+        <MetricTriangle edge1="139" edge2="135" edge3="138"/>
+        <MetricTriangle edge1="140" edge2="137" edge3="139"/>
+        <MetricTriangle edge1="141" edge2="1" edge3="140"/>
+        <MetricTriangle edge1="144" edge2="138" edge3="142"/>
+        <MetricTriangle edge1="142" edge2="16" edge3="143"/>
+        <MetricTriangle edge1="145" edge2="141" edge3="144"/>
+        <MetricTriangle edge1="147" edge2="143" edge3="146"/>
+        <MetricTriangle edge1="148" edge2="145" edge3="147"/>
+        <MetricTriangle edge1="150" edge2="146" edge3="149"/>
+        <MetricTriangle edge1="151" edge2="148" edge3="150"/>
+        <MetricTriangle edge1="154" edge2="149" edge3="152"/>
+        <MetricTriangle edge1="152" edge2="18" edge3="153"/>
+        <MetricTriangle edge1="155" edge2="151" edge3="154"/>
+        <MetricTriangle edge1="157" edge2="153" edge3="156"/>
+        <MetricTriangle edge1="158" edge2="155" edge3="157"/>
+        <MetricTriangle edge1="159" edge2="0" edge3="158"/>
+        <MetricTriangle edge1="161" edge2="156" edge3="160"/>
+        <MetricTriangle edge1="162" edge2="159" edge3="161"/>
+        <MetricTriangle edge1="164" edge2="160" edge3="163"/>
+        <MetricTriangle edge1="165" edge2="162" edge3="164"/>
+        <MetricTriangle edge1="168" edge2="163" edge3="166"/>
+        <MetricTriangle edge1="166" edge2="20" edge3="167"/>
+        <MetricTriangle edge1="169" edge2="165" edge3="168"/>
+        <MetricTriangle edge1="171" edge2="167" edge3="170"/>
+        <MetricTriangle edge1="172" edge2="169" edge3="171"/>
+        <MetricTriangle edge1="174" edge2="170" edge3="173"/>
+        <MetricTriangle edge1="175" edge2="172" edge3="174"/>
+        <MetricTriangle edge1="176" edge2="123" edge3="175"/>
+        <MetricTriangle edge1="178" edge2="173" edge3="177"/>
+        <MetricTriangle edge1="179" edge2="176" edge3="178"/>
+        <MetricTriangle edge1="182" edge2="177" edge3="180"/>
+        <MetricTriangle edge1="180" edge2="21" edge3="181"/>
+        <MetricTriangle edge1="183" edge2="179" edge3="182"/>
+        <MetricTriangle edge1="185" edge2="181" edge3="184"/>
+        <MetricTriangle edge1="186" edge2="183" edge3="185"/>
+        <MetricTriangle edge1="188" edge2="184" edge3="187"/>
+        <MetricTriangle edge1="189" edge2="186" edge3="188"/>
+        <MetricTriangle edge1="190" edge2="122" edge3="189"/>
+        <MetricTriangle edge1="193" edge2="187" edge3="191"/>
+        <MetricTriangle edge1="191" edge2="22" edge3="192"/>
+        <MetricTriangle edge1="194" edge2="190" edge3="193"/>
+        <MetricTriangle edge1="196" edge2="192" edge3="195"/>
+        <MetricTriangle edge1="197" edge2="194" edge3="196"/>
+        <MetricTriangle edge1="199" edge2="195" edge3="198"/>
+        <MetricTriangle edge1="200" edge2="197" edge3="199"/>
+        <MetricTriangle edge1="203" edge2="198" edge3="201"/>
+        <MetricTriangle edge1="201" edge2="23" edge3="202"/>
+        <MetricTriangle edge1="204" edge2="200" edge3="203"/>
+        <MetricTriangle edge1="205" edge2="120" edge3="204"/>
+        <MetricTriangle edge1="207" edge2="202" edge3="206"/>
+        <MetricTriangle edge1="208" edge2="205" edge3="207"/>
+        <MetricTriangle edge1="211" edge2="206" edge3="209"/>
+        <MetricTriangle edge1="209" edge2="24" edge3="210"/>
+        <MetricTriangle edge1="212" edge2="208" edge3="211"/>
+        <MetricTriangle edge1="213" edge2="117" edge3="212"/>
+        <MetricTriangle edge1="216" edge2="210" edge3="214"/>
+        <MetricTriangle edge1="214" edge2="25" edge3="215"/>
+        <MetricTriangle edge1="217" edge2="213" edge3="216"/>
+        <MetricTriangle edge1="219" edge2="215" edge3="218"/>
+        <MetricTriangle edge1="220" edge2="217" edge3="219"/>
+        <MetricTriangle edge1="221" edge2="114" edge3="220"/>
+        <MetricTriangle edge1="224" edge2="218" edge3="222"/>
+        <MetricTriangle edge1="222" edge2="26" edge3="223"/>
+        <MetricTriangle edge1="225" edge2="221" edge3="224"/>
+        <MetricTriangle edge1="230" edge2="223" edge3="226"/>
+        <MetricTriangle edge1="226" edge2="27" edge3="227"/>
+        <MetricTriangle edge1="227" edge2="28" edge3="228"/>
+        <MetricTriangle edge1="228" edge2="24" edge3="229"/>
+        <MetricTriangle edge1="231" edge2="225" edge3="230"/>
+        <MetricTriangle edge1="232" edge2="121" edge3="233"/>
+        <MetricTriangle edge1="233" edge2="111" edge3="231"/>
+        <MetricTriangle edge1="235" edge2="229" edge3="234"/>
+        <MetricTriangle edge1="236" edge2="232" edge3="235"/>
+        <MetricTriangle edge1="237" edge2="123" edge3="236"/>
+        <MetricTriangle edge1="240" edge2="234" edge3="238"/>
+        <MetricTriangle edge1="238" edge2="23" edge3="239"/>
+        <MetricTriangle edge1="241" edge2="237" edge3="240"/>
+        <MetricTriangle edge1="242" edge2="0" edge3="241"/>
+        <MetricTriangle edge1="245" edge2="239" edge3="243"/>
+        <MetricTriangle edge1="243" edge2="22" edge3="244"/>
+        <MetricTriangle edge1="246" edge2="242" edge3="245"/>
+        <MetricTriangle edge1="247" edge2="1" edge3="246"/>
+        <MetricTriangle edge1="250" edge2="244" edge3="248"/>
+        <MetricTriangle edge1="248" edge2="21" edge3="249"/>
+        <MetricTriangle edge1="251" edge2="247" edge3="250"/>
+        <MetricTriangle edge1="252" edge2="4" edge3="251"/>
+        <MetricTriangle edge1="257" edge2="249" edge3="253"/>
+        <MetricTriangle edge1="253" edge2="19" edge3="254"/>
+        <MetricTriangle edge1="255" edge2="3" edge3="256"/>
+        <MetricTriangle edge1="256" edge2="252" edge3="257"/>
+        <MetricTriangle edge1="260" edge2="254" edge3="258"/>
+        <MetricTriangle edge1="259" edge2="255" edge3="260"/>
+        <MetricTriangle edge1="263" edge2="258" edge3="261"/>
+        <MetricTriangle edge1="262" edge2="259" edge3="263"/>
+        <MetricTriangle edge1="266" edge2="261" edge3="264"/>
+        <MetricTriangle edge1="265" edge2="262" edge3="266"/>
+        <MetricTriangle edge1="269" edge2="264" edge3="267"/>
+        <MetricTriangle edge1="268" edge2="265" edge3="269"/>
+        <MetricTriangle edge1="272" edge2="267" edge3="270"/>
+        <MetricTriangle edge1="271" edge2="268" edge3="272"/>
+        <MetricTriangle edge1="276" edge2="270" edge3="274"/>
+        <MetricTriangle edge1="274" edge2="271" edge3="273"/>
+        <MetricTriangle edge1="275" edge2="273" edge3="276"/>
+        <MetricTriangle edge1="279" edge2="275" edge3="277"/>
+        <MetricTriangle edge1="278" edge2="277" edge3="279"/>
+        <MetricTriangle edge1="282" edge2="278" edge3="280"/>
+        <MetricTriangle edge1="281" edge2="280" edge3="282"/>
+        <MetricTriangle edge1="285" edge2="281" edge3="283"/>
+        <MetricTriangle edge1="284" edge2="283" edge3="285"/>
+        <MetricTriangle edge1="287" edge2="284" edge3="286"/>
+        <MetricTriangle edge1="288" edge2="286" edge3="287"/>
+        <MetricTriangle edge1="290" edge2="288" edge3="289"/>
+        <MetricTriangle edge1="291" edge2="289" edge3="290"/>
+        <MetricTriangle edge1="294" edge2="291" edge3="293"/>
+        <MetricTriangle edge1="295" edge2="293" edge3="294"/>
+        <MetricTriangle edge1="296" edge2="292" edge3="295"/>
+        <MetricTriangle edge1="299" edge2="292" edge3="297"/>
+        <MetricTriangle edge1="297" edge2="10" edge3="298"/>
+        <MetricTriangle edge1="300" edge2="296" edge3="299"/>
+        <MetricTriangle edge1="301" edge2="8" edge3="300"/>
+        <MetricTriangle edge1="303" edge2="298" edge3="302"/>
+        <MetricTriangle edge1="306" edge2="6" edge3="304"/>
+        <MetricTriangle edge1="304" edge2="301" edge3="303"/>
+        <MetricTriangle edge1="306" edge2="302" edge3="305"/>
+        <MetricTriangle edge1="305" edge2="12" edge3="307"/>
+        <MetricTriangle edge1="307" edge2="124" edge3="308"/>
+    </DiscreteMetric>
+    <DiscreteEmbedding name="Output Klein Model Fuchsian Embedding">
+        <EmbeddedVertex x="0.0" y="0.0" z="0.0" w="1.0" index="0"/>
+        <EmbeddedVertex x="2.0276447367439387" y="-0.657140015421661" z="0.0" w="2.3543950769388253" index="1"/>
+        <EmbeddedVertex x="1.6976257014085816" y="-0.38126114827975005" z="0.0" w="2.006811671600146" index="2"/>
+        <EmbeddedVertex x="1.364861046145695" y="-0.16617268484513284" z="0.0" w="1.7001350053670914" index="3"/>
+        <EmbeddedVertex x="1.074744496249406" y="0.0" z="0.0" w="1.468017619859649" index="4"/>
+        <EmbeddedVertex x="0.8319286379415721" y="0.14034943776865505" z="0.0" w="1.3083589810557716" index="5"/>
+        <EmbeddedVertex x="0.625562016106089" y="0.27353256895594574" z="0.0" w="1.210845944897349" index="6"/>
+        <EmbeddedVertex x="0.4408233305786103" y="0.4113991292976141" z="0.0" w="1.1677219071205498" index="7"/>
+        <EmbeddedVertex x="0.26271635217362627" y="0.559858132177521" z="0.0" w="1.1757810212215196" index="8"/>
+        <EmbeddedVertex x="0.07698423228999163" y="0.7154164461746071" z="0.0" w="1.231968856537528" index="9"/>
+        <EmbeddedVertex x="-0.1267613311532233" y="0.8588299799855792" z="0.0" w="1.3242572898035214" index="10"/>
+        <EmbeddedVertex x="-0.34375897320242443" y="0.9701405801291619" z="0.0" w="1.4350411063347739" index="11"/>
+        <EmbeddedVertex x="-0.5627044124021201" y="1.047367221187063" z="0.0" w="1.5535811378083624" index="12"/>
+        <EmbeddedVertex x="-0.7785328914696359" y="1.1151814829364677" z="0.0" w="1.6881182431880921" index="13"/>
+        <EmbeddedVertex x="-0.9919245825372544" y="1.187801378448835" z="0.0" w="1.8424946382789447" index="14"/>
+        <EmbeddedVertex x="-1.2060845890543639" y="1.2722073768413706" z="0.0" w="2.0182050554004753" index="15"/>
+        <EmbeddedVertex x="-1.4239577967936266" y="1.3695086230216804" z="0.0" w="2.214319235245925" index="16"/>
+        <EmbeddedVertex x="-1.6488377425198135" y="1.4812993456083288" z="0.0" w="2.4316483406235982" index="17"/>
+        <EmbeddedVertex x="-1.8837081210775215" y="1.6081649384850967" z="0.0" w="2.6710579841677307" index="18"/>
+        <EmbeddedVertex x="-2.131777038290202" y="1.7511050466458256" z="0.0" w="2.9344236615338666" index="19"/>
+        <EmbeddedVertex x="-2.3964326968690224" y="1.9107525311671698" z="0.0" w="3.223951753048529" index="20"/>
+        <EmbeddedVertex x="-2.681633373074737" y="2.088489603330748" z="0.0" w="3.543013741267287" index="21"/>
+        <EmbeddedVertex x="-2.992176846130253" y="2.286547206971017" z="0.0" w="3.8963342269657706" index="22"/>
+        <EmbeddedVertex x="-3.3340340695825335" y="2.508105077886119" z="0.0" w="4.290265056946389" index="23"/>
+        <EmbeddedVertex x="-3.7148003059451518" y="2.757500045265413" z="0.0" w="4.733238617763629" index="24"/>
+        <EmbeddedVertex x="-4.144315557595862" y="3.0405671539629893" z="0.0" w="5.236449184198171" index="25"/>
+        <EmbeddedVertex x="-4.635511569901494" y="3.365129338779141" z="0.0" w="5.81481409689104" index="26"/>
+        <EmbeddedVertex x="-5.205596591783626" y="3.7414276860733318" z="0.0" w="6.4881828740029635" index="27"/>
+        <EmbeddedVertex x="-5.877971626690696" y="4.183315359753014" z="0.0" w="7.283589626230075" index="28"/>
+        <EmbeddedVertex x="-6.684592006904079" y="4.7098056738302825" z="0.0" w="8.238084715758259" index="29"/>
+        <EmbeddedVertex x="-7.6672960652263535" y="5.344483631269449" z="0.0" w="9.399517766180486" index="30"/>
+        <EmbeddedVertex x="-8.878170578248028" y="6.115456425257089" z="0.0" w="10.826851809537578" index="31"/>
+        <EmbeddedVertex x="-10.368975487238512" y="7.047702816113564" z="0.0" w="12.577192359155847" index="32"/>
+        <EmbeddedVertex x="-12.156735831662248" y="8.139725541627625" z="0.0" w="14.66428852600241" index="33"/>
+        <EmbeddedVertex x="-14.179995303937947" y="9.34176383909811" z="0.0" w="17.010021118305037" index="34"/>
+        <EmbeddedVertex x="-16.315513675644542" y="10.576047348160134" z="0.0" w="19.46917471313741" index="35"/>
+        <EmbeddedVertex x="-18.483653069204504" y="11.803667156650986" z="0.0" w="21.953860460696067" index="36"/>
+        <EmbeddedVertex x="-20.683595275144327" y="13.035885924715089" z="0.0" w="24.469275333531183" index="37"/>
+        <EmbeddedVertex x="-22.96410912558543" y="14.310229565858677" z="0.0" w="27.076428460182335" index="38"/>
+        <EmbeddedVertex x="-25.37651130455022" y="15.66054877033272" z="0.0" w="29.836556667583725" index="39"/>
+        <EmbeddedVertex x="-27.99627858849548" y="17.13384638093776" z="0.0" w="32.83839683374059" index="40"/>
+        <EmbeddedVertex x="-30.88747378845467" y="18.767780720187925" z="0.0" w="36.156128528833555" index="41"/>
+        <EmbeddedVertex x="-34.13862561147373" y="20.614265835911063" z="0.0" w="39.892276377689704" index="42"/>
+        <EmbeddedVertex x="-37.85711237285363" y="22.735705846715046" z="0.0" w="44.17095513523813" index="43"/>
+        <EmbeddedVertex x="-42.18284060167522" y="25.213187264038506" z="0.0" w="49.153808125493306" index="44"/>
+        <EmbeddedVertex x="-47.32021855860104" y="28.165695360088318" z="0.0" w="55.07730457775753" index="45"/>
+        <EmbeddedVertex x="-53.587832542049895" y="31.77938167352373" z="0.0" w="62.31039155795988" index="46"/>
+        <EmbeddedVertex x="-61.467127650560926" y="36.33487344387186" z="0.0" w="71.41029904567363" index="47"/>
+        <EmbeddedVertex x="-71.57814794429932" y="42.18910146713472" z="0.0" w="83.09242772804384" index="48"/>
+        <EmbeddedVertex x="-84.65443187583551" y="49.75863975569172" z="0.0" w="98.20028037921877" index="49"/>
+        <EmbeddedVertex x="-101.16541860858695" y="59.2949073158464" z="0.0" w="117.26605628162586" index="50"/>
+        <EmbeddedVertex x="-61.0464608212999" y="5.304059321449685" z="0.0" w="61.2846100101156" index="51"/>
+        <EmbeddedVertex x="-273.9081959505505" y="151.02923413927172" z="0.0" w="312.7883139977901" index="52"/>
+        <EmbeddedVertex x="-260.39546141763714" y="143.62951303646562" z="0.0" w="297.3823016623491" index="53"/>
+        <EmbeddedVertex x="-248.05938929930733" y="136.8763606851343" z="0.0" w="283.3188993589243" index="54"/>
+        <EmbeddedVertex x="-236.78145636837516" y="130.7047852284143" z="0.0" w="270.4629345428587" index="55"/>
+        <EmbeddedVertex x="-226.42925370131914" y="125.04187693743826" z="0.0" w="258.66325197015095" index="56"/>
+        <EmbeddedVertex x="-216.8237757950634" y="119.7887101877223" z="0.0" w="247.7153302451547" index="57"/>
+        <EmbeddedVertex x="-207.99570532771398" y="114.96320087279457" z="0.0" w="237.6546885497775" index="58"/>
+        <EmbeddedVertex x="-199.84524294192985" y="110.51043533912978" z="0.0" w="228.36741765270054" index="59"/>
+        <EmbeddedVertex x="-192.30652583474145" y="106.39425586354865" z="0.0" w="219.7783828300371" index="60"/>
+        <EmbeddedVertex x="-185.34504895709216" y="102.59595031599335" z="0.0" w="211.84833299827653" index="61"/>
+        <EmbeddedVertex x="-178.93629137095158" y="99.10246197665221" z="0.0" w="204.54949117371052" index="62"/>
+        <EmbeddedVertex x="-173.0209418994878" y="95.88130668080015" z="0.0" w="197.81423433768256" index="63"/>
+        <EmbeddedVertex x="-167.56767406163428" y="92.91551442042658" z="0.0" w="191.60693674926958" index="64"/>
+        <EmbeddedVertex x="-162.56351832140422" y="90.19834827765887" z="0.0" w="185.9129891133252" index="65"/>
+        <EmbeddedVertex x="-157.9732412611286" y="87.71063339210131" z="0.0" w="180.69228031266402" index="66"/>
+        <EmbeddedVertex x="-153.78147481840313" y="85.44425363753044" z="0.0" w="175.92743525953475" index="67"/>
+        <EmbeddedVertex x="-150.0058002842333" y="83.40946578458987" z="0.0" w="171.63880418304" index="68"/>
+        <EmbeddedVertex x="-146.63893763811333" y="81.60260245725934" z="0.0" w="167.8182432259139" index="69"/>
+        <EmbeddedVertex x="-143.6494176445408" y="80.00643031241655" z="0.0" w="164.429875877078" index="70"/>
+        <EmbeddedVertex x="-141.0344917594934" y="78.61980951581255" z="0.0" w="161.4707475493975" index="71"/>
+        <EmbeddedVertex x="-138.8988707300305" y="77.5017361316958" z="0.0" w="159.06104297880333" index="72"/>
+        <EmbeddedVertex x="-137.2427900646682" y="76.65268506461624" z="0.0" w="157.2012008616659" index="73"/>
+        <EmbeddedVertex x="-136.10769254119757" y="76.09625246947527" z="0.0" w="155.93890986148162" index="74"/>
+        <EmbeddedVertex x="-135.5277496154775" y="75.85207391849266" z="0.0" w="155.31357968179097" index="75"/>
+        <EmbeddedVertex x="-135.62188188487804" y="75.98726455485816" z="0.0" w="155.46176128079154" index="76"/>
+        <EmbeddedVertex x="-136.39729917220464" y="76.50650048204794" z="0.0" w="156.39203252557817" index="77"/>
+        <EmbeddedVertex x="-138.06462060531464" y="77.52846028448268" z="0.0" w="158.34614493877672" index="78"/>
+        <EmbeddedVertex x="-140.63679741751113" y="79.06126029597021" z="0.0" w="161.3393680024848" index="79"/>
+        <EmbeddedVertex x="-144.3664539874129" y="81.24736432000266" z="0.0" w="165.66172534972299" index="80"/>
+        <EmbeddedVertex x="0.3872654746486738" y="-2.4928630917459924" z="0.0" w="2.7137319215508833" index="81"/>
+        <EmbeddedVertex x="0.29753993415832786" y="-2.3687229055544954" z="0.0" w="2.5883157102095318" index="82"/>
+        <EmbeddedVertex x="0.20608205616764377" y="-2.2684144275806934" z="0.0" w="2.4876040338306513" index="83"/>
+        <EmbeddedVertex x="0.11293530250960579" y="-2.194357035690357" z="0.0" w="2.4141162322135004" index="84"/>
+        <EmbeddedVertex x="0.018166492718397133" y="-2.148128118535815" z="0.0" w="2.3695536362576624" index="85"/>
+        <EmbeddedVertex x="-0.07824158724934673" y="-2.127450697948769" z="0.0" w="2.352056168159681" index="86"/>
+        <EmbeddedVertex x="-0.1767237418344548" y="-2.134741503571188" z="0.0" w="2.3639696630873557" index="87"/>
+        <EmbeddedVertex x="-0.27745540326178075" y="-2.169850345108908" z="0.0" w="2.4052509268199866" index="88"/>
+        <EmbeddedVertex x="-0.3806158660177335" y="-2.231810536194783" z="0.0" w="2.4750447888744302" index="89"/>
+        <EmbeddedVertex x="-0.48644988390169297" y="-2.319090247126037" z="0.0" w="2.571927888542576" index="90"/>
+        <EmbeddedVertex x="-0.5953103569267811" y="-2.4301159564548773" z="0.0" w="2.6944123631843913" index="91"/>
+        <EmbeddedVertex x="-0.707584192371626" y="-2.564565161137893" z="0.0" w="2.842124180083698" index="92"/>
+        <EmbeddedVertex x="-0.823559990287619" y="-2.7190382540583617" z="0.0" w="3.0118798257293213" index="93"/>
+        <EmbeddedVertex x="-0.9433064433389665" y="-2.8912319444078265" z="0.0" w="3.2014136256361927" index="94"/>
+        <EmbeddedVertex x="-1.0667435590825456" y="-3.078714679194241" z="0.0" w="3.408287824807376" index="95"/>
+        <EmbeddedVertex x="-62.97797270914195" y="5.084106666788856" z="0.0" w="63.19076821144617" index="96"/>
+        <EmbeddedVertex x="-62.13835729674032" y="5.0959607481213025" z="0.0" w="62.35498587509866" index="97"/>
+        <EmbeddedVertex x="-61.481801742487676" y="5.119354803294654" z="0.0" w="61.702672058060635" index="98"/>
+        <EmbeddedVertex x="-61.09278588409682" y="5.162382644339804" z="0.0" w="61.3186650347729" index="99"/>
+        <EmbeddedVertex x="-60.952364113292425" y="5.224161286397029" z="0.0" w="61.18400568895165" index="100"/>
+        <EmbeddedVertex x="-2.1925049496230704" y="-1.1456821802407147" z="0.0" w="2.668270153534454" index="101"/>
+        <EmbeddedVertex x="-21.319931148144693" y="0.8963095185337945" z="0.0" w="21.362182353744775" index="102"/>
+        <EmbeddedVertex x="-2.1953262888879497" y="-1.2539369244713803" z="0.0" w="2.718789312402725" index="103"/>
+        <EmbeddedVertex x="-12.081962732651204" y="0.5380536203412033" z="0.0" w="12.135210141218604" index="104"/>
+        <EmbeddedVertex x="-12.901709775115844" y="0.5743320132034603" z="0.0" w="12.953145269883683" index="105"/>
+        <EmbeddedVertex x="-3.241803356506085" y="-0.2720753572142683" z="0.0" w="3.403426802835253" index="106"/>
+        <EmbeddedVertex x="-7.007710087748687" y="0.24591835814928842" z="0.0" w="7.082970881827029" index="107"/>
+        <EmbeddedVertex x="-6.618208680294295" y="0.21499642025952947" z="0.0" w="6.696783526189805" index="108"/>
+        <EmbeddedVertex x="-19.72981888749408" y="0.8393584798562989" z="0.0" w="19.772968315127216" index="109"/>
+        <EmbeddedVertex x="-11.328409945728568" y="0.5030819927328595" z="0.0" w="11.383583064654731" index="110"/>
+        <EmbeddedVertex x="-6.252006924663174" y="0.18381559206018644" z="0.0" w="6.33414388516086" index="111"/>
+        <EmbeddedVertex x="-5.907123132089969" y="0.1521981138361053" z="0.0" w="5.993101698079857" index="112"/>
+        <EmbeddedVertex x="-3.993699789909715" y="-0.09488346469128862" z="0.0" w="4.118087041794615" index="113"/>
+        <EmbeddedVertex x="-2.503848535080061" y="-0.6326460863738208" z="0.0" w="2.769385953099835" index="114"/>
+        <EmbeddedVertex x="-2.4157183937301254" y="-0.704494862506814" z="0.0" w="2.7077681527606" index="115"/>
+        <EmbeddedVertex x="-2.6022300277110353" y="-0.5641667868308722" z="0.0" w="2.844272363977129" index="116"/>
+        <EmbeddedVertex x="-9.400916781063463" y="0.40273459950219714" z="0.0" w="9.462527753307613" index="117"/>
+        <EmbeddedVertex x="-3.784678345374985" y="-0.13605761467537972" z="0.0" w="3.9169250506566358" index="118"/>
+        <EmbeddedVertex x="-4.985378166599149" y="0.05354194105079534" z="0.0" w="5.084964326664935" index="119"/>
+        <EmbeddedVertex x="-4.218130579077688" y="-0.05561431463582051" z="0.0" w="4.335402926389045" index="120"/>
+        <EmbeddedVertex x="-2.304652088306755" y="-1.6287552689043523" z="0.0" w="2.994038238586872" index="121"/>
+        <EmbeddedVertex x="-2.213930066604424" y="-1.3698321667873814" z="0.0" w="2.788893419437265" index="122"/>
+        <EmbeddedVertex x="-2.2502717341437006" y="-1.4946519555609077" z="0.0" w="2.8805741347426115" index="123"/>
+        <EmbeddedVertex x="-8.851290231145779" y="0.37062893982066314" z="0.0" w="8.915307317586382" index="124"/>
+        <EmbeddedVertex x="-8.341203645862377" y="0.33898852220567827" z="0.0" w="8.407769709021235" index="125"/>
+        <EmbeddedVertex x="-3.088217723280889" y="-0.3227782765395683" z="0.0" w="3.262096645133625" index="126"/>
+        <EmbeddedVertex x="-2.946412814843219" y="-0.3763785740474698" z="0.0" w="3.1341680405610592" index="127"/>
+        <EmbeddedVertex x="-2.37706664506571" y="-1.772240711144091" z="0.0" w="3.12910258274165" index="128"/>
+        <EmbeddedVertex x="-2.4671355599156892" y="-1.9249390782981999" z="0.0" w="3.2851405337001984" index="129"/>
+        <EmbeddedVertex x="-2.2366605773545607" y="-0.9511926082866969" z="0.0" w="2.6281967042729675" index="130"/>
+        <EmbeddedVertex x="-2.2064521143359745" y="-1.0449944784463054" z="0.0" w="2.638265413646049" index="131"/>
+        <EmbeddedVertex x="-2.3422603091273704" y="-0.7815289107589938" z="0.0" w="2.664014037888236" index="132"/>
+        <EmbeddedVertex x="-2.282258009418224" y="-0.8635793184144734" z="0.0" w="2.6371330760405023" index="133"/>
+        <EmbeddedVertex x="-18.299901997147106" y="0.7870903372843727" z="0.0" w="18.344097805676764" index="134"/>
+        <EmbeddedVertex x="-5.58162348783441" y="0.12012480265392038" z="0.0" w="5.6717678662086835" index="135"/>
+        <EmbeddedVertex x="-5.274429320678672" y="0.08737631696509016" z="0.0" w="5.369100416233734" index="136"/>
+        <EmbeddedVertex x="-10.634754528971646" y="0.4686823980173029" z="0.0" w="10.691944027242855" index="137"/>
+        <EmbeddedVertex x="-9.994021268075219" y="0.4353505003080032" z="0.0" w="10.053357208657127" index="138"/>
+        <EmbeddedVertex x="-14.76959640539809" y="0.652314111192538" z="0.0" w="14.81777620555828" index="139"/>
+        <EmbeddedVertex x="-13.794696637325613" y="0.6123337104967349" z="0.0" w="13.84444321339263" index="140"/>
+        <EmbeddedVertex x="-3.5896165009354943" y="-0.17902790470847688" z="0.0" w="3.7306028486630267" index="141"/>
+        <EmbeddedVertex x="-3.409538997906783" y="-0.22449051824142718" z="0.0" w="3.560246082931276" index="142"/>
+        <EmbeddedVertex x="-4.713992212715145" y="0.018333834642453743" z="0.0" w="4.818927132778802" index="143"/>
+        <EmbeddedVertex x="-4.45811869839631" y="-0.017932311026267127" z="0.0" w="4.568932467958961" index="144"/>
+        <EmbeddedVertex x="-7.866256773163579" y="0.3078106387752044" z="0.0" w="7.93553671850147" index="145"/>
+        <EmbeddedVertex x="-7.4227677677942685" y="0.27683385734326954" z="0.0" w="7.4949395140439306" index="146"/>
+        <EmbeddedVertex x="-2.824342886680154" y="-0.4361353420334561" z="0.0" w="3.0277263380483093" index="147"/>
+        <EmbeddedVertex x="-2.7094434619143146" y="-0.4987266978991246" z="0.0" w="2.930838138230699" index="148"/>
+        <EmbeddedVertex x="-17.007915120627104" y="0.7389036561684231" z="0.0" w="17.053303356345804" index="149"/>
+        <EmbeddedVertex x="-15.836462934514392" y="0.6943454808445421" z="0.0" w="15.883188405449879" index="150"/>
+        <EmbeddedVertex x="-32.83739979534135" y="18.7038567313866" z="0.0" w="37.80382364189263" index="151"/>
+        <EmbeddedVertex x="-6.659186917317628" y="4.166151477163348" z="0.0" w="7.918433464419879" index="152"/>
+        <EmbeddedVertex x="-9.397669972158234" y="0.6710737456750858" z="0.0" w="9.474520614666417" index="153"/>
+        <EmbeddedVertex x="-7.4658398518781075" y="0.5048030682049891" z="0.0" w="7.549409965789412" index="154"/>
+        <EmbeddedVertex x="-4.531592565388818" y="2.6909962352181918" z="0.0" w="5.364400424711572" index="155"/>
+        <EmbeddedVertex x="-20.668019025968857" y="12.131870727183662" z="0.0" w="23.986439873372337" index="156"/>
+        <EmbeddedVertex x="-13.49073121940444" y="8.219380221004332" z="0.0" w="15.829025240097724" index="157"/>
+        <EmbeddedVertex x="-11.340563309398558" y="7.003467468394709" z="0.0" w="13.366260986354403" index="158"/>
+        <EmbeddedVertex x="-4.129421250084329" y="2.3751606225845046" z="0.0" w="4.867597748759036" index="159"/>
+        <EmbeddedVertex x="-3.256136367094356" y="1.5287720202161332" z="0.0" w="3.7335730782870917" index="160"/>
+        <EmbeddedVertex x="-23.31849378284122" y="13.560090406388385" z="0.0" w="26.993114013204018" index="161"/>
+        <EmbeddedVertex x="-28.037025649886093" y="2.638158454385007" z="0.0" w="28.17862110400035" index="162"/>
+        <EmbeddedVertex x="-3.828224823428736" y="0.54018001332937" z="0.0" w="3.9933819934382053" index="163"/>
+        <EmbeddedVertex x="-72.34160918832421" y="40.28605338826861" z="0.0" w="82.80866209255323" index="164"/>
+        <EmbeddedVertex x="-5.744583876753265" y="3.5583808508614503" z="0.0" w="6.8309822278228065" index="165"/>
+        <EmbeddedVertex x="-5.05531775536575" y="3.07726282544215" z="0.0" w="6.00214829078426" index="166"/>
+        <EmbeddedVertex x="-123.57901882933695" y="68.2474064965667" z="0.0" w="141.1753604150853" index="167"/>
+        <EmbeddedVertex x="-4.288025511079786" y="0.4716665787057382" z="0.0" w="4.428276430524526" index="168"/>
+        <EmbeddedVertex x="-18.16581326370829" y="1.597838163802135" z="0.0" w="18.26334740209534" index="169"/>
+        <EmbeddedVertex x="-22.507597947783356" y="2.056295678122517" z="0.0" w="22.62344618520633" index="170"/>
+        <EmbeddedVertex x="-164.3655854074811" y="90.22737095033654" z="0.0" w="187.50473096685747" index="171"/>
+        <EmbeddedVertex x="-144.1282406314669" y="79.34698891951277" z="0.0" w="164.52931166851488" index="172"/>
+        <EmbeddedVertex x="-3.394536128227516" y="1.6970060924909878" z="0.0" w="3.9246280338133177" index="173"/>
+        <EmbeddedVertex x="-29.327020684818553" y="16.803147401565266" z="0.0" w="33.81449252682206" index="174"/>
+        <EmbeddedVertex x="-26.183722135060457" y="15.105202607928893" z="0.0" w="30.244907846985363" index="175"/>
+        <EmbeddedVertex x="-18.16741078443716" y="10.781029903644086" z="0.0" w="21.149123395397538" index="176"/>
+        <EmbeddedVertex x="-15.780304364430085" y="9.482832566041184" z="0.0" w="18.437519337199962" index="177"/>
+        <EmbeddedVertex x="-4.978562065244075" y="0.42703131671552363" z="0.0" w="5.095923467139508" index="178"/>
+        <EmbeddedVertex x="-6.002358485968105" y="0.42725175068068155" z="0.0" w="6.10006979079199" index="179"/>
+        <EmbeddedVertex x="-103.42647102894448" y="57.2907233909584" z="0.0" w="118.23815753030152" index="180"/>
+        <EmbeddedVertex x="-86.04147073718701" y="47.79075369302606" z="0.0" w="98.42809977422958" index="181"/>
+        <EmbeddedVertex x="-3.818955309588543" y="2.112185566173667" z="0.0" w="4.477247762028242" index="182"/>
+        <EmbeddedVertex x="-3.5788948860859624" y="1.8892305958152014" z="0.0" w="4.1686545611043995" index="183"/>
+        <EmbeddedVertex x="-11.783486001071289" y="0.9158156406217948" z="0.0" w="11.861250382023412" index="184"/>
+        <EmbeddedVertex x="-14.666244770424521" y="1.2242656110489858" z="0.0" w="14.751188492877505" index="185"/>
+        <EmbeddedVertex x="-41.43694824723006" y="23.377415812142956" z="0.0" w="47.587017663407465" index="186"/>
+        <EmbeddedVertex x="-36.82551972321329" y="20.8685767223685" z="0.0" w="42.339300859864835" index="187"/>
+        <EmbeddedVertex x="-9.433661893567006" y="5.887765088590256" z="0.0" w="11.16511327576037" index="188"/>
+        <EmbeddedVertex x="-7.869619392325003" y="4.9353706549944745" z="0.0" w="9.34284715074791" index="189"/>
+        <EmbeddedVertex x="-46.88300107243826" y="26.346928671718494" z="0.0" w="53.788255595351565" index="190"/>
+        <EmbeddedVertex x="-3.063089325669878" y="1.1226429309264268" z="0.0" w="3.412161099272985" index="191"/>
+        <EmbeddedVertex x="-3.066198596131781" y="1.0096809357763898" z="0.0" w="3.37950135715179" index="192"/>
+        <EmbeddedVertex x="-3.3166403653300516" y="0.7098855933461768" z="0.0" w="3.5361053248704444" index="193"/>
+        <EmbeddedVertex x="-3.520324857336718" y="0.6210116942132695" z="0.0" w="3.7119189950122053" index="194"/>
+        <EmbeddedVertex x="-3.1049640847291125" y="0.9041528966337434" z="0.0" w="3.3850102552206374" index="195"/>
+        <EmbeddedVertex x="-3.1845076270121084" y="0.8043796726967818" z="0.0" w="3.4333825135492946" index="196"/>
+        <EmbeddedVertex x="-3.1571209937898" y="1.3794321471426878" z="0.0" w="3.5875125111975543" index="197"/>
+        <EmbeddedVertex x="-3.093418425164887" y="1.2450752784513528" z="0.0" w="3.4813000448338722" index="198"/>
+        <EmbeddedVertex x="-61.757903973895466" y="34.48509300841285" z="0.0" w="70.74079687880098" index="199"/>
+        <EmbeddedVertex x="-53.49087306232062" y="29.958073579908202" z="0.0" w="61.31687918989755" index="200"/>
+        <EmbeddedVertex x="-2.574112773184002" y="-2.0864520253996024" z="0.0" w="3.461118117511036" index="201"/>
+        <EmbeddedVertex x="-1.1936720843033255" y="-3.2790966990078703" z="0.0" w="3.6300589811033865" index="202"/>
+        <EmbeddedVertex x="-288.6979625048485" y="159.13026096718895" z="0.0" w="329.65126044038806" index="203"/>
+        <EmbeddedVertex x="-187.10711864413972" y="102.46410869816287" z="0.0" w="213.32830899489434" index="204"/>
+        <EmbeddedVertex x="0.4753217141607317" y="-2.6376558092857674" z="0.0" w="2.860622117689027" index="205"/>
+        <EmbeddedVertex x="2.301960163390651" y="-0.9668194153385778" z="0.0" w="2.6895650904399284" index="206"/>
+        <Identification>
+            <Vertex>91</Vertex>
+            <Vertex>103</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>90</Vertex>
+            <Vertex>101</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>86</Vertex>
+            <Vertex>132</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>85</Vertex>
+            <Vertex>115</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>78</Vertex>
+            <Vertex>106</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>77</Vertex>
+            <Vertex>142</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>98</Vertex>
+            <Vertex>109</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>97</Vertex>
+            <Vertex>102</Vertex>
+            <Vertex>201</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>81</Vertex>
+            <Vertex>147</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>80</Vertex>
+            <Vertex>127</Vertex>
+            <Vertex>205</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>89</Vertex>
+            <Vertex>131</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>60</Vertex>
+            <Vertex>124</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>59</Vertex>
+            <Vertex>117</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>55</Vertex>
+            <Vertex>104</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>54</Vertex>
+            <Vertex>105</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>70</Vertex>
+            <Vertex>119</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>69</Vertex>
+            <Vertex>136</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>68</Vertex>
+            <Vertex>135</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>67</Vertex>
+            <Vertex>112</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>96</Vertex>
+            <Vertex>129</Vertex>
+            <Vertex>202</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>92</Vertex>
+            <Vertex>122</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>56</Vertex>
+            <Vertex>110</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>88</Vertex>
+            <Vertex>130</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>87</Vertex>
+            <Vertex>133</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>74</Vertex>
+            <Vertex>113</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>73</Vertex>
+            <Vertex>120</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>53</Vertex>
+            <Vertex>140</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>84</Vertex>
+            <Vertex>114</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>83</Vertex>
+            <Vertex>116</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>79</Vertex>
+            <Vertex>126</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>65</Vertex>
+            <Vertex>108</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>64</Vertex>
+            <Vertex>107</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>63</Vertex>
+            <Vertex>146</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>66</Vertex>
+            <Vertex>111</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>62</Vertex>
+            <Vertex>145</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>61</Vertex>
+            <Vertex>125</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>99</Vertex>
+            <Vertex>134</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>57</Vertex>
+            <Vertex>137</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>52</Vertex>
+            <Vertex>139</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>51</Vertex>
+            <Vertex>150</Vertex>
+            <Vertex>203</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>75</Vertex>
+            <Vertex>118</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>82</Vertex>
+            <Vertex>148</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>95</Vertex>
+            <Vertex>128</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>94</Vertex>
+            <Vertex>121</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>58</Vertex>
+            <Vertex>138</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>76</Vertex>
+            <Vertex>141</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>71</Vertex>
+            <Vertex>143</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>72</Vertex>
+            <Vertex>144</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>93</Vertex>
+            <Vertex>123</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>100</Vertex>
+            <Vertex>149</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>6</Vertex>
+            <Vertex>169</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>7</Vertex>
+            <Vertex>185</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>35</Vertex>
+            <Vertex>157</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>36</Vertex>
+            <Vertex>177</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>30</Vertex>
+            <Vertex>165</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>31</Vertex>
+            <Vertex>152</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>8</Vertex>
+            <Vertex>184</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>9</Vertex>
+            <Vertex>153</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>42</Vertex>
+            <Vertex>151</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>43</Vertex>
+            <Vertex>187</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>28</Vertex>
+            <Vertex>155</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>29</Vertex>
+            <Vertex>166</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>41</Vertex>
+            <Vertex>174</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>32</Vertex>
+            <Vertex>189</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>33</Vertex>
+            <Vertex>188</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>34</Vertex>
+            <Vertex>158</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>20</Vertex>
+            <Vertex>191</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>21</Vertex>
+            <Vertex>198</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>44</Vertex>
+            <Vertex>186</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>45</Vertex>
+            <Vertex>190</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>10</Vertex>
+            <Vertex>154</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>22</Vertex>
+            <Vertex>197</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>23</Vertex>
+            <Vertex>160</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>11</Vertex>
+            <Vertex>179</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>37</Vertex>
+            <Vertex>176</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>38</Vertex>
+            <Vertex>156</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>27</Vertex>
+            <Vertex>159</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>47</Vertex>
+            <Vertex>199</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>48</Vertex>
+            <Vertex>164</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>39</Vertex>
+            <Vertex>161</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>50</Vertex>
+            <Vertex>180</Vertex>
+            <Vertex>206</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>1</Vertex>
+            <Vertex>167</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>13</Vertex>
+            <Vertex>168</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>14</Vertex>
+            <Vertex>163</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>4</Vertex>
+            <Vertex>162</Vertex>
+            <Vertex>204</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>5</Vertex>
+            <Vertex>170</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>26</Vertex>
+            <Vertex>182</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>24</Vertex>
+            <Vertex>173</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>40</Vertex>
+            <Vertex>175</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>3</Vertex>
+            <Vertex>171</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>15</Vertex>
+            <Vertex>194</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>49</Vertex>
+            <Vertex>181</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>2</Vertex>
+            <Vertex>172</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>12</Vertex>
+            <Vertex>178</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>16</Vertex>
+            <Vertex>193</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>17</Vertex>
+            <Vertex>196</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>25</Vertex>
+            <Vertex>183</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>18</Vertex>
+            <Vertex>195</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>19</Vertex>
+            <Vertex>192</Vertex>
+        </Identification>
+        <Identification>
+            <Vertex>46</Vertex>
+            <Vertex>200</Vertex>
+        </Identification>
+        <EmbeddedTriangle vertex1="204" vertex2="203" vertex3="171"/>
+        <EmbeddedTriangle vertex1="162" vertex2="100" vertex3="51"/>
+        <EmbeddedTriangle vertex1="5" vertex2="4" vertex3="0"/>
+        <EmbeddedTriangle vertex1="6" vertex2="5" vertex3="0"/>
+        <EmbeddedTriangle vertex1="7" vertex2="6" vertex3="0"/>
+        <EmbeddedTriangle vertex1="8" vertex2="7" vertex3="0"/>
+        <EmbeddedTriangle vertex1="9" vertex2="8" vertex3="0"/>
+        <EmbeddedTriangle vertex1="10" vertex2="9" vertex3="0"/>
+        <EmbeddedTriangle vertex1="11" vertex2="10" vertex3="0"/>
+        <EmbeddedTriangle vertex1="192" vertex2="16" vertex3="15"/>
+        <EmbeddedTriangle vertex1="192" vertex2="15" vertex3="195"/>
+        <EmbeddedTriangle vertex1="191" vertex2="17" vertex3="16"/>
+        <EmbeddedTriangle vertex1="191" vertex2="16" vertex3="192"/>
+        <EmbeddedTriangle vertex1="198" vertex2="18" vertex3="17"/>
+        <EmbeddedTriangle vertex1="198" vertex2="17" vertex3="191"/>
+        <EmbeddedTriangle vertex1="197" vertex2="19" vertex3="18"/>
+        <EmbeddedTriangle vertex1="197" vertex2="18" vertex3="198"/>
+        <EmbeddedTriangle vertex1="160" vertex2="20" vertex3="19"/>
+        <EmbeddedTriangle vertex1="160" vertex2="19" vertex3="197"/>
+        <EmbeddedTriangle vertex1="173" vertex2="21" vertex3="20"/>
+        <EmbeddedTriangle vertex1="173" vertex2="20" vertex3="160"/>
+        <EmbeddedTriangle vertex1="183" vertex2="22" vertex3="21"/>
+        <EmbeddedTriangle vertex1="183" vertex2="21" vertex3="173"/>
+        <EmbeddedTriangle vertex1="182" vertex2="23" vertex3="22"/>
+        <EmbeddedTriangle vertex1="182" vertex2="22" vertex3="183"/>
+        <EmbeddedTriangle vertex1="159" vertex2="24" vertex3="23"/>
+        <EmbeddedTriangle vertex1="159" vertex2="23" vertex3="182"/>
+        <EmbeddedTriangle vertex1="155" vertex2="25" vertex3="24"/>
+        <EmbeddedTriangle vertex1="155" vertex2="24" vertex3="159"/>
+        <EmbeddedTriangle vertex1="166" vertex2="27" vertex3="26"/>
+        <EmbeddedTriangle vertex1="166" vertex2="26" vertex3="25"/>
+        <EmbeddedTriangle vertex1="166" vertex2="25" vertex3="155"/>
+        <EmbeddedTriangle vertex1="165" vertex2="28" vertex3="27"/>
+        <EmbeddedTriangle vertex1="165" vertex2="27" vertex3="166"/>
+        <EmbeddedTriangle vertex1="152" vertex2="30" vertex3="29"/>
+        <EmbeddedTriangle vertex1="152" vertex2="29" vertex3="28"/>
+        <EmbeddedTriangle vertex1="152" vertex2="28" vertex3="165"/>
+        <EmbeddedTriangle vertex1="189" vertex2="32" vertex3="31"/>
+        <EmbeddedTriangle vertex1="189" vertex2="31" vertex3="30"/>
+        <EmbeddedTriangle vertex1="189" vertex2="30" vertex3="152"/>
+        <EmbeddedTriangle vertex1="188" vertex2="33" vertex3="32"/>
+        <EmbeddedTriangle vertex1="188" vertex2="32" vertex3="189"/>
+        <EmbeddedTriangle vertex1="158" vertex2="34" vertex3="33"/>
+        <EmbeddedTriangle vertex1="158" vertex2="33" vertex3="188"/>
+        <EmbeddedTriangle vertex1="35" vertex2="34" vertex3="158"/>
+        <EmbeddedTriangle vertex1="157" vertex2="35" vertex3="158"/>
+        <EmbeddedTriangle vertex1="36" vertex2="35" vertex3="157"/>
+        <EmbeddedTriangle vertex1="37" vertex2="36" vertex3="157"/>
+        <EmbeddedTriangle vertex1="37" vertex2="157" vertex3="177"/>
+        <EmbeddedTriangle vertex1="38" vertex2="37" vertex3="177"/>
+        <EmbeddedTriangle vertex1="38" vertex2="177" vertex3="176"/>
+        <EmbeddedTriangle vertex1="39" vertex2="38" vertex3="176"/>
+        <EmbeddedTriangle vertex1="40" vertex2="39" vertex3="176"/>
+        <EmbeddedTriangle vertex1="40" vertex2="176" vertex3="156"/>
+        <EmbeddedTriangle vertex1="41" vertex2="40" vertex3="156"/>
+        <EmbeddedTriangle vertex1="42" vertex2="41" vertex3="156"/>
+        <EmbeddedTriangle vertex1="42" vertex2="156" vertex3="161"/>
+        <EmbeddedTriangle vertex1="43" vertex2="42" vertex3="161"/>
+        <EmbeddedTriangle vertex1="43" vertex2="161" vertex3="175"/>
+        <EmbeddedTriangle vertex1="44" vertex2="43" vertex3="175"/>
+        <EmbeddedTriangle vertex1="45" vertex2="44" vertex3="175"/>
+        <EmbeddedTriangle vertex1="45" vertex2="175" vertex3="174"/>
+        <EmbeddedTriangle vertex1="46" vertex2="45" vertex3="174"/>
+        <EmbeddedTriangle vertex1="46" vertex2="174" vertex3="151"/>
+        <EmbeddedTriangle vertex1="47" vertex2="46" vertex3="151"/>
+        <EmbeddedTriangle vertex1="47" vertex2="151" vertex3="187"/>
+        <EmbeddedTriangle vertex1="48" vertex2="47" vertex3="187"/>
+        <EmbeddedTriangle vertex1="48" vertex2="187" vertex3="186"/>
+        <EmbeddedTriangle vertex1="49" vertex2="48" vertex3="186"/>
+        <EmbeddedTriangle vertex1="49" vertex2="186" vertex3="190"/>
+        <EmbeddedTriangle vertex1="50" vertex2="49" vertex3="190"/>
+        <EmbeddedTriangle vertex1="139" vertex2="150" vertex3="185"/>
+        <EmbeddedTriangle vertex1="52" vertex2="171" vertex3="203"/>
+        <EmbeddedTriangle vertex1="140" vertex2="139" vertex3="185"/>
+        <EmbeddedTriangle vertex1="140" vertex2="185" vertex3="184"/>
+        <EmbeddedTriangle vertex1="53" vertex2="171" vertex3="52"/>
+        <EmbeddedTriangle vertex1="105" vertex2="140" vertex3="184"/>
+        <EmbeddedTriangle vertex1="54" vertex2="171" vertex3="53"/>
+        <EmbeddedTriangle vertex1="104" vertex2="105" vertex3="184"/>
+        <EmbeddedTriangle vertex1="55" vertex2="171" vertex3="54"/>
+        <EmbeddedTriangle vertex1="110" vertex2="104" vertex3="184"/>
+        <EmbeddedTriangle vertex1="56" vertex2="171" vertex3="55"/>
+        <EmbeddedTriangle vertex1="56" vertex2="172" vertex3="171"/>
+        <EmbeddedTriangle vertex1="137" vertex2="110" vertex3="184"/>
+        <EmbeddedTriangle vertex1="137" vertex2="184" vertex3="153"/>
+        <EmbeddedTriangle vertex1="57" vertex2="172" vertex3="56"/>
+        <EmbeddedTriangle vertex1="138" vertex2="137" vertex3="153"/>
+        <EmbeddedTriangle vertex1="58" vertex2="172" vertex3="57"/>
+        <EmbeddedTriangle vertex1="117" vertex2="138" vertex3="153"/>
+        <EmbeddedTriangle vertex1="59" vertex2="172" vertex3="58"/>
+        <EmbeddedTriangle vertex1="124" vertex2="117" vertex3="153"/>
+        <EmbeddedTriangle vertex1="124" vertex2="153" vertex3="154"/>
+        <EmbeddedTriangle vertex1="60" vertex2="172" vertex3="59"/>
+        <EmbeddedTriangle vertex1="125" vertex2="124" vertex3="154"/>
+        <EmbeddedTriangle vertex1="61" vertex2="172" vertex3="60"/>
+        <EmbeddedTriangle vertex1="61" vertex2="167" vertex3="172"/>
+        <EmbeddedTriangle vertex1="145" vertex2="125" vertex3="154"/>
+        <EmbeddedTriangle vertex1="62" vertex2="167" vertex3="61"/>
+        <EmbeddedTriangle vertex1="146" vertex2="145" vertex3="154"/>
+        <EmbeddedTriangle vertex1="63" vertex2="167" vertex3="62"/>
+        <EmbeddedTriangle vertex1="107" vertex2="146" vertex3="154"/>
+        <EmbeddedTriangle vertex1="107" vertex2="154" vertex3="179"/>
+        <EmbeddedTriangle vertex1="64" vertex2="167" vertex3="63"/>
+        <EmbeddedTriangle vertex1="108" vertex2="107" vertex3="179"/>
+        <EmbeddedTriangle vertex1="65" vertex2="167" vertex3="64"/>
+        <EmbeddedTriangle vertex1="111" vertex2="108" vertex3="179"/>
+        <EmbeddedTriangle vertex1="66" vertex2="167" vertex3="65"/>
+        <EmbeddedTriangle vertex1="66" vertex2="180" vertex3="167"/>
+        <EmbeddedTriangle vertex1="112" vertex2="111" vertex3="179"/>
+        <EmbeddedTriangle vertex1="67" vertex2="180" vertex3="66"/>
+        <EmbeddedTriangle vertex1="135" vertex2="112" vertex3="179"/>
+        <EmbeddedTriangle vertex1="135" vertex2="179" vertex3="178"/>
+        <EmbeddedTriangle vertex1="68" vertex2="180" vertex3="67"/>
+        <EmbeddedTriangle vertex1="136" vertex2="135" vertex3="178"/>
+        <EmbeddedTriangle vertex1="69" vertex2="180" vertex3="68"/>
+        <EmbeddedTriangle vertex1="119" vertex2="136" vertex3="178"/>
+        <EmbeddedTriangle vertex1="70" vertex2="180" vertex3="69"/>
+        <EmbeddedTriangle vertex1="70" vertex2="181" vertex3="180"/>
+        <EmbeddedTriangle vertex1="143" vertex2="119" vertex3="178"/>
+        <EmbeddedTriangle vertex1="143" vertex2="178" vertex3="168"/>
+        <EmbeddedTriangle vertex1="71" vertex2="181" vertex3="70"/>
+        <EmbeddedTriangle vertex1="144" vertex2="143" vertex3="168"/>
+        <EmbeddedTriangle vertex1="72" vertex2="181" vertex3="71"/>
+        <EmbeddedTriangle vertex1="120" vertex2="144" vertex3="168"/>
+        <EmbeddedTriangle vertex1="73" vertex2="181" vertex3="72"/>
+        <EmbeddedTriangle vertex1="113" vertex2="120" vertex3="168"/>
+        <EmbeddedTriangle vertex1="113" vertex2="168" vertex3="163"/>
+        <EmbeddedTriangle vertex1="74" vertex2="181" vertex3="73"/>
+        <EmbeddedTriangle vertex1="74" vertex2="164" vertex3="181"/>
+        <EmbeddedTriangle vertex1="118" vertex2="113" vertex3="163"/>
+        <EmbeddedTriangle vertex1="75" vertex2="164" vertex3="74"/>
+        <EmbeddedTriangle vertex1="141" vertex2="118" vertex3="163"/>
+        <EmbeddedTriangle vertex1="141" vertex2="163" vertex3="194"/>
+        <EmbeddedTriangle vertex1="76" vertex2="164" vertex3="75"/>
+        <EmbeddedTriangle vertex1="76" vertex2="199" vertex3="164"/>
+        <EmbeddedTriangle vertex1="142" vertex2="141" vertex3="194"/>
+        <EmbeddedTriangle vertex1="142" vertex2="194" vertex3="193"/>
+        <EmbeddedTriangle vertex1="77" vertex2="199" vertex3="76"/>
+        <EmbeddedTriangle vertex1="106" vertex2="142" vertex3="193"/>
+        <EmbeddedTriangle vertex1="78" vertex2="199" vertex3="77"/>
+        <EmbeddedTriangle vertex1="78" vertex2="200" vertex3="199"/>
+        <EmbeddedTriangle vertex1="126" vertex2="106" vertex3="193"/>
+        <EmbeddedTriangle vertex1="126" vertex2="193" vertex3="196"/>
+        <EmbeddedTriangle vertex1="79" vertex2="200" vertex3="78"/>
+        <EmbeddedTriangle vertex1="127" vertex2="126" vertex3="196"/>
+        <EmbeddedTriangle vertex1="127" vertex2="196" vertex3="195"/>
+        <EmbeddedTriangle vertex1="127" vertex2="195" vertex3="15"/>
+        <EmbeddedTriangle vertex1="127" vertex2="15" vertex3="14"/>
+        <EmbeddedTriangle vertex1="80" vertex2="200" vertex3="79"/>
+        <EmbeddedTriangle vertex1="80" vertex2="50" vertex3="190"/>
+        <EmbeddedTriangle vertex1="80" vertex2="190" vertex3="200"/>
+        <EmbeddedTriangle vertex1="147" vertex2="127" vertex3="14"/>
+        <EmbeddedTriangle vertex1="81" vertex2="206" vertex3="205"/>
+        <EmbeddedTriangle vertex1="81" vertex2="1" vertex3="206"/>
+        <EmbeddedTriangle vertex1="148" vertex2="147" vertex3="14"/>
+        <EmbeddedTriangle vertex1="148" vertex2="14" vertex3="13"/>
+        <EmbeddedTriangle vertex1="82" vertex2="1" vertex3="81"/>
+        <EmbeddedTriangle vertex1="82" vertex2="2" vertex3="1"/>
+        <EmbeddedTriangle vertex1="116" vertex2="148" vertex3="13"/>
+        <EmbeddedTriangle vertex1="116" vertex2="13" vertex3="12"/>
+        <EmbeddedTriangle vertex1="83" vertex2="2" vertex3="82"/>
+        <EmbeddedTriangle vertex1="83" vertex2="3" vertex3="2"/>
+        <EmbeddedTriangle vertex1="114" vertex2="116" vertex3="12"/>
+        <EmbeddedTriangle vertex1="114" vertex2="12" vertex3="11"/>
+        <EmbeddedTriangle vertex1="84" vertex2="3" vertex3="83"/>
+        <EmbeddedTriangle vertex1="84" vertex2="4" vertex3="3"/>
+        <EmbeddedTriangle vertex1="115" vertex2="114" vertex3="11"/>
+        <EmbeddedTriangle vertex1="115" vertex2="11" vertex3="0"/>
+        <EmbeddedTriangle vertex1="85" vertex2="0" vertex3="4"/>
+        <EmbeddedTriangle vertex1="85" vertex2="4" vertex3="84"/>
+        <EmbeddedTriangle vertex1="132" vertex2="115" vertex3="0"/>
+        <EmbeddedTriangle vertex1="86" vertex2="0" vertex3="85"/>
+        <EmbeddedTriangle vertex1="133" vertex2="132" vertex3="0"/>
+        <EmbeddedTriangle vertex1="87" vertex2="0" vertex3="86"/>
+        <EmbeddedTriangle vertex1="130" vertex2="133" vertex3="0"/>
+        <EmbeddedTriangle vertex1="88" vertex2="0" vertex3="87"/>
+        <EmbeddedTriangle vertex1="131" vertex2="130" vertex3="0"/>
+        <EmbeddedTriangle vertex1="89" vertex2="0" vertex3="88"/>
+        <EmbeddedTriangle vertex1="101" vertex2="131" vertex3="0"/>
+        <EmbeddedTriangle vertex1="90" vertex2="0" vertex3="89"/>
+        <EmbeddedTriangle vertex1="103" vertex2="101" vertex3="0"/>
+        <EmbeddedTriangle vertex1="103" vertex2="0" vertex3="90"/>
+        <EmbeddedTriangle vertex1="91" vertex2="103" vertex3="90"/>
+        <EmbeddedTriangle vertex1="122" vertex2="103" vertex3="91"/>
+        <EmbeddedTriangle vertex1="92" vertex2="122" vertex3="91"/>
+        <EmbeddedTriangle vertex1="123" vertex2="122" vertex3="92"/>
+        <EmbeddedTriangle vertex1="93" vertex2="123" vertex3="92"/>
+        <EmbeddedTriangle vertex1="121" vertex2="123" vertex3="93"/>
+        <EmbeddedTriangle vertex1="94" vertex2="121" vertex3="93"/>
+        <EmbeddedTriangle vertex1="128" vertex2="121" vertex3="94"/>
+        <EmbeddedTriangle vertex1="95" vertex2="128" vertex3="94"/>
+        <EmbeddedTriangle vertex1="129" vertex2="128" vertex3="95"/>
+        <EmbeddedTriangle vertex1="202" vertex2="129" vertex3="95"/>
+        <EmbeddedTriangle vertex1="201" vertex2="129" vertex3="202"/>
+        <EmbeddedTriangle vertex1="97" vertex2="102" vertex3="96"/>
+        <EmbeddedTriangle vertex1="97" vertex2="170" vertex3="102"/>
+        <EmbeddedTriangle vertex1="109" vertex2="102" vertex3="170"/>
+        <EmbeddedTriangle vertex1="109" vertex2="170" vertex3="169"/>
+        <EmbeddedTriangle vertex1="98" vertex2="170" vertex3="97"/>
+        <EmbeddedTriangle vertex1="98" vertex2="162" vertex3="170"/>
+        <EmbeddedTriangle vertex1="134" vertex2="109" vertex3="169"/>
+        <EmbeddedTriangle vertex1="99" vertex2="100" vertex3="162"/>
+        <EmbeddedTriangle vertex1="99" vertex2="162" vertex3="98"/>
+        <EmbeddedTriangle vertex1="149" vertex2="134" vertex3="169"/>
+        <EmbeddedTriangle vertex1="149" vertex2="169" vertex3="185"/>
+        <EmbeddedTriangle vertex1="149" vertex2="185" vertex3="150"/>
+    </DiscreteEmbedding>
+    <DiscreteMap name="Uniformizing Map">
+        <Domain name="Uniformizing Map_domain">
+            <EmbeddedVertex x="0.0" y="0.0" z="0.0" w="1.0" index="0"/>
+            <EmbeddedVertex x="2.0276447367439387" y="-0.657140015421661" z="0.0" w="2.3543950769388253" index="1"/>
+            <EmbeddedVertex x="1.6976257014085816" y="-0.38126114827975005" z="0.0" w="2.006811671600146" index="2"/>
+            <EmbeddedVertex x="1.364861046145695" y="-0.16617268484513284" z="0.0" w="1.7001350053670914" index="3"/>
+            <EmbeddedVertex x="1.074744496249406" y="0.0" z="0.0" w="1.468017619859649" index="4"/>
+            <EmbeddedVertex x="0.8319286379415721" y="0.14034943776865505" z="0.0" w="1.3083589810557716" index="5"/>
+            <EmbeddedVertex x="0.625562016106089" y="0.27353256895594574" z="0.0" w="1.210845944897349" index="6"/>
+            <EmbeddedVertex x="0.4408233305786103" y="0.4113991292976141" z="0.0" w="1.1677219071205498" index="7"/>
+            <EmbeddedVertex x="0.26271635217362627" y="0.559858132177521" z="0.0" w="1.1757810212215196" index="8"/>
+            <EmbeddedVertex x="0.07698423228999163" y="0.7154164461746071" z="0.0" w="1.231968856537528" index="9"/>
+            <EmbeddedVertex x="-0.1267613311532233" y="0.8588299799855792" z="0.0" w="1.3242572898035214" index="10"/>
+            <EmbeddedVertex x="-0.34375897320242443" y="0.9701405801291619" z="0.0" w="1.4350411063347739" index="11"/>
+            <EmbeddedVertex x="-0.5627044124021201" y="1.047367221187063" z="0.0" w="1.5535811378083624" index="12"/>
+            <EmbeddedVertex x="-0.7785328914696359" y="1.1151814829364677" z="0.0" w="1.6881182431880921" index="13"/>
+            <EmbeddedVertex x="-0.9919245825372544" y="1.187801378448835" z="0.0" w="1.8424946382789447" index="14"/>
+            <EmbeddedVertex x="-1.2060845890543639" y="1.2722073768413706" z="0.0" w="2.0182050554004753" index="15"/>
+            <EmbeddedVertex x="-1.4239577967936266" y="1.3695086230216804" z="0.0" w="2.214319235245925" index="16"/>
+            <EmbeddedVertex x="-1.6488377425198135" y="1.4812993456083288" z="0.0" w="2.4316483406235982" index="17"/>
+            <EmbeddedVertex x="-1.8837081210775215" y="1.6081649384850967" z="0.0" w="2.6710579841677307" index="18"/>
+            <EmbeddedVertex x="-2.131777038290202" y="1.7511050466458256" z="0.0" w="2.9344236615338666" index="19"/>
+            <EmbeddedVertex x="-2.3964326968690224" y="1.9107525311671698" z="0.0" w="3.223951753048529" index="20"/>
+            <EmbeddedVertex x="-2.681633373074737" y="2.088489603330748" z="0.0" w="3.543013741267287" index="21"/>
+            <EmbeddedVertex x="-2.992176846130253" y="2.286547206971017" z="0.0" w="3.8963342269657706" index="22"/>
+            <EmbeddedVertex x="-3.3340340695825335" y="2.508105077886119" z="0.0" w="4.290265056946389" index="23"/>
+            <EmbeddedVertex x="-3.7148003059451518" y="2.757500045265413" z="0.0" w="4.733238617763629" index="24"/>
+            <EmbeddedVertex x="-4.144315557595862" y="3.0405671539629893" z="0.0" w="5.236449184198171" index="25"/>
+            <EmbeddedVertex x="-4.635511569901494" y="3.365129338779141" z="0.0" w="5.81481409689104" index="26"/>
+            <EmbeddedVertex x="-5.205596591783626" y="3.7414276860733318" z="0.0" w="6.4881828740029635" index="27"/>
+            <EmbeddedVertex x="-5.877971626690696" y="4.183315359753014" z="0.0" w="7.283589626230075" index="28"/>
+            <EmbeddedVertex x="-6.684592006904079" y="4.7098056738302825" z="0.0" w="8.238084715758259" index="29"/>
+            <EmbeddedVertex x="-7.6672960652263535" y="5.344483631269449" z="0.0" w="9.399517766180486" index="30"/>
+            <EmbeddedVertex x="-8.878170578248028" y="6.115456425257089" z="0.0" w="10.826851809537578" index="31"/>
+            <EmbeddedVertex x="-10.368975487238512" y="7.047702816113564" z="0.0" w="12.577192359155847" index="32"/>
+            <EmbeddedVertex x="-12.156735831662248" y="8.139725541627625" z="0.0" w="14.66428852600241" index="33"/>
+            <EmbeddedVertex x="-14.179995303937947" y="9.34176383909811" z="0.0" w="17.010021118305037" index="34"/>
+            <EmbeddedVertex x="-16.315513675644542" y="10.576047348160134" z="0.0" w="19.46917471313741" index="35"/>
+            <EmbeddedVertex x="-18.483653069204504" y="11.803667156650986" z="0.0" w="21.953860460696067" index="36"/>
+            <EmbeddedVertex x="-20.683595275144327" y="13.035885924715089" z="0.0" w="24.469275333531183" index="37"/>
+            <EmbeddedVertex x="-22.96410912558543" y="14.310229565858677" z="0.0" w="27.076428460182335" index="38"/>
+            <EmbeddedVertex x="-25.37651130455022" y="15.66054877033272" z="0.0" w="29.836556667583725" index="39"/>
+            <EmbeddedVertex x="-27.99627858849548" y="17.13384638093776" z="0.0" w="32.83839683374059" index="40"/>
+            <EmbeddedVertex x="-30.88747378845467" y="18.767780720187925" z="0.0" w="36.156128528833555" index="41"/>
+            <EmbeddedVertex x="-34.13862561147373" y="20.614265835911063" z="0.0" w="39.892276377689704" index="42"/>
+            <EmbeddedVertex x="-37.85711237285363" y="22.735705846715046" z="0.0" w="44.17095513523813" index="43"/>
+            <EmbeddedVertex x="-42.18284060167522" y="25.213187264038506" z="0.0" w="49.153808125493306" index="44"/>
+            <EmbeddedVertex x="-47.32021855860104" y="28.165695360088318" z="0.0" w="55.07730457775753" index="45"/>
+            <EmbeddedVertex x="-53.587832542049895" y="31.77938167352373" z="0.0" w="62.31039155795988" index="46"/>
+            <EmbeddedVertex x="-61.467127650560926" y="36.33487344387186" z="0.0" w="71.41029904567363" index="47"/>
+            <EmbeddedVertex x="-71.57814794429932" y="42.18910146713472" z="0.0" w="83.09242772804384" index="48"/>
+            <EmbeddedVertex x="-84.65443187583551" y="49.75863975569172" z="0.0" w="98.20028037921877" index="49"/>
+            <EmbeddedVertex x="-101.16541860858695" y="59.2949073158464" z="0.0" w="117.26605628162586" index="50"/>
+            <EmbeddedVertex x="-61.0464608212999" y="5.304059321449685" z="0.0" w="61.2846100101156" index="51"/>
+            <EmbeddedVertex x="-273.9081959505505" y="151.02923413927172" z="0.0" w="312.7883139977901" index="52"/>
+            <EmbeddedVertex x="-260.39546141763714" y="143.62951303646562" z="0.0" w="297.3823016623491" index="53"/>
+            <EmbeddedVertex x="-248.05938929930733" y="136.8763606851343" z="0.0" w="283.3188993589243" index="54"/>
+            <EmbeddedVertex x="-236.78145636837516" y="130.7047852284143" z="0.0" w="270.4629345428587" index="55"/>
+            <EmbeddedVertex x="-226.42925370131914" y="125.04187693743826" z="0.0" w="258.66325197015095" index="56"/>
+            <EmbeddedVertex x="-216.8237757950634" y="119.7887101877223" z="0.0" w="247.7153302451547" index="57"/>
+            <EmbeddedVertex x="-207.99570532771398" y="114.96320087279457" z="0.0" w="237.6546885497775" index="58"/>
+            <EmbeddedVertex x="-199.84524294192985" y="110.51043533912978" z="0.0" w="228.36741765270054" index="59"/>
+            <EmbeddedVertex x="-192.30652583474145" y="106.39425586354865" z="0.0" w="219.7783828300371" index="60"/>
+            <EmbeddedVertex x="-185.34504895709216" y="102.59595031599335" z="0.0" w="211.84833299827653" index="61"/>
+            <EmbeddedVertex x="-178.93629137095158" y="99.10246197665221" z="0.0" w="204.54949117371052" index="62"/>
+            <EmbeddedVertex x="-173.0209418994878" y="95.88130668080015" z="0.0" w="197.81423433768256" index="63"/>
+            <EmbeddedVertex x="-167.56767406163428" y="92.91551442042658" z="0.0" w="191.60693674926958" index="64"/>
+            <EmbeddedVertex x="-162.56351832140422" y="90.19834827765887" z="0.0" w="185.9129891133252" index="65"/>
+            <EmbeddedVertex x="-157.9732412611286" y="87.71063339210131" z="0.0" w="180.69228031266402" index="66"/>
+            <EmbeddedVertex x="-153.78147481840313" y="85.44425363753044" z="0.0" w="175.92743525953475" index="67"/>
+            <EmbeddedVertex x="-150.0058002842333" y="83.40946578458987" z="0.0" w="171.63880418304" index="68"/>
+            <EmbeddedVertex x="-146.63893763811333" y="81.60260245725934" z="0.0" w="167.8182432259139" index="69"/>
+            <EmbeddedVertex x="-143.6494176445408" y="80.00643031241655" z="0.0" w="164.429875877078" index="70"/>
+            <EmbeddedVertex x="-141.0344917594934" y="78.61980951581255" z="0.0" w="161.4707475493975" index="71"/>
+            <EmbeddedVertex x="-138.8988707300305" y="77.5017361316958" z="0.0" w="159.06104297880333" index="72"/>
+            <EmbeddedVertex x="-137.2427900646682" y="76.65268506461624" z="0.0" w="157.2012008616659" index="73"/>
+            <EmbeddedVertex x="-136.10769254119757" y="76.09625246947527" z="0.0" w="155.93890986148162" index="74"/>
+            <EmbeddedVertex x="-135.5277496154775" y="75.85207391849266" z="0.0" w="155.31357968179097" index="75"/>
+            <EmbeddedVertex x="-135.62188188487804" y="75.98726455485816" z="0.0" w="155.46176128079154" index="76"/>
+            <EmbeddedVertex x="-136.39729917220464" y="76.50650048204794" z="0.0" w="156.39203252557817" index="77"/>
+            <EmbeddedVertex x="-138.06462060531464" y="77.52846028448268" z="0.0" w="158.34614493877672" index="78"/>
+            <EmbeddedVertex x="-140.63679741751113" y="79.06126029597021" z="0.0" w="161.3393680024848" index="79"/>
+            <EmbeddedVertex x="-144.3664539874129" y="81.24736432000266" z="0.0" w="165.66172534972299" index="80"/>
+            <EmbeddedVertex x="0.3872654746486738" y="-2.4928630917459924" z="0.0" w="2.7137319215508833" index="81"/>
+            <EmbeddedVertex x="0.29753993415832786" y="-2.3687229055544954" z="0.0" w="2.5883157102095318" index="82"/>
+            <EmbeddedVertex x="0.20608205616764377" y="-2.2684144275806934" z="0.0" w="2.4876040338306513" index="83"/>
+            <EmbeddedVertex x="0.11293530250960579" y="-2.194357035690357" z="0.0" w="2.4141162322135004" index="84"/>
+            <EmbeddedVertex x="0.018166492718397133" y="-2.148128118535815" z="0.0" w="2.3695536362576624" index="85"/>
+            <EmbeddedVertex x="-0.07824158724934673" y="-2.127450697948769" z="0.0" w="2.352056168159681" index="86"/>
+            <EmbeddedVertex x="-0.1767237418344548" y="-2.134741503571188" z="0.0" w="2.3639696630873557" index="87"/>
+            <EmbeddedVertex x="-0.27745540326178075" y="-2.169850345108908" z="0.0" w="2.4052509268199866" index="88"/>
+            <EmbeddedVertex x="-0.3806158660177335" y="-2.231810536194783" z="0.0" w="2.4750447888744302" index="89"/>
+            <EmbeddedVertex x="-0.48644988390169297" y="-2.319090247126037" z="0.0" w="2.571927888542576" index="90"/>
+            <EmbeddedVertex x="-0.5953103569267811" y="-2.4301159564548773" z="0.0" w="2.6944123631843913" index="91"/>
+            <EmbeddedVertex x="-0.707584192371626" y="-2.564565161137893" z="0.0" w="2.842124180083698" index="92"/>
+            <EmbeddedVertex x="-0.823559990287619" y="-2.7190382540583617" z="0.0" w="3.0118798257293213" index="93"/>
+            <EmbeddedVertex x="-0.9433064433389665" y="-2.8912319444078265" z="0.0" w="3.2014136256361927" index="94"/>
+            <EmbeddedVertex x="-1.0667435590825456" y="-3.078714679194241" z="0.0" w="3.408287824807376" index="95"/>
+            <EmbeddedVertex x="-62.97797270914195" y="5.084106666788856" z="0.0" w="63.19076821144617" index="96"/>
+            <EmbeddedVertex x="-62.13835729674032" y="5.0959607481213025" z="0.0" w="62.35498587509866" index="97"/>
+            <EmbeddedVertex x="-61.481801742487676" y="5.119354803294654" z="0.0" w="61.702672058060635" index="98"/>
+            <EmbeddedVertex x="-61.09278588409682" y="5.162382644339804" z="0.0" w="61.3186650347729" index="99"/>
+            <EmbeddedVertex x="-60.952364113292425" y="5.224161286397029" z="0.0" w="61.18400568895165" index="100"/>
+            <EmbeddedVertex x="-2.1925049496230704" y="-1.1456821802407147" z="0.0" w="2.668270153534454" index="101"/>
+            <EmbeddedVertex x="-21.319931148144693" y="0.8963095185337945" z="0.0" w="21.362182353744775" index="102"/>
+            <EmbeddedVertex x="-2.1953262888879497" y="-1.2539369244713803" z="0.0" w="2.718789312402725" index="103"/>
+            <EmbeddedVertex x="-12.081962732651204" y="0.5380536203412033" z="0.0" w="12.135210141218604" index="104"/>
+            <EmbeddedVertex x="-12.901709775115844" y="0.5743320132034603" z="0.0" w="12.953145269883683" index="105"/>
+            <EmbeddedVertex x="-3.241803356506085" y="-0.2720753572142683" z="0.0" w="3.403426802835253" index="106"/>
+            <EmbeddedVertex x="-7.007710087748687" y="0.24591835814928842" z="0.0" w="7.082970881827029" index="107"/>
+            <EmbeddedVertex x="-6.618208680294295" y="0.21499642025952947" z="0.0" w="6.696783526189805" index="108"/>
+            <EmbeddedVertex x="-19.72981888749408" y="0.8393584798562989" z="0.0" w="19.772968315127216" index="109"/>
+            <EmbeddedVertex x="-11.328409945728568" y="0.5030819927328595" z="0.0" w="11.383583064654731" index="110"/>
+            <EmbeddedVertex x="-6.252006924663174" y="0.18381559206018644" z="0.0" w="6.33414388516086" index="111"/>
+            <EmbeddedVertex x="-5.907123132089969" y="0.1521981138361053" z="0.0" w="5.993101698079857" index="112"/>
+            <EmbeddedVertex x="-3.993699789909715" y="-0.09488346469128862" z="0.0" w="4.118087041794615" index="113"/>
+            <EmbeddedVertex x="-2.503848535080061" y="-0.6326460863738208" z="0.0" w="2.769385953099835" index="114"/>
+            <EmbeddedVertex x="-2.4157183937301254" y="-0.704494862506814" z="0.0" w="2.7077681527606" index="115"/>
+            <EmbeddedVertex x="-2.6022300277110353" y="-0.5641667868308722" z="0.0" w="2.844272363977129" index="116"/>
+            <EmbeddedVertex x="-9.400916781063463" y="0.40273459950219714" z="0.0" w="9.462527753307613" index="117"/>
+            <EmbeddedVertex x="-3.784678345374985" y="-0.13605761467537972" z="0.0" w="3.9169250506566358" index="118"/>
+            <EmbeddedVertex x="-4.985378166599149" y="0.05354194105079534" z="0.0" w="5.084964326664935" index="119"/>
+            <EmbeddedVertex x="-4.218130579077688" y="-0.05561431463582051" z="0.0" w="4.335402926389045" index="120"/>
+            <EmbeddedVertex x="-2.304652088306755" y="-1.6287552689043523" z="0.0" w="2.994038238586872" index="121"/>
+            <EmbeddedVertex x="-2.213930066604424" y="-1.3698321667873814" z="0.0" w="2.788893419437265" index="122"/>
+            <EmbeddedVertex x="-2.2502717341437006" y="-1.4946519555609077" z="0.0" w="2.8805741347426115" index="123"/>
+            <EmbeddedVertex x="-8.851290231145779" y="0.37062893982066314" z="0.0" w="8.915307317586382" index="124"/>
+            <EmbeddedVertex x="-8.341203645862377" y="0.33898852220567827" z="0.0" w="8.407769709021235" index="125"/>
+            <EmbeddedVertex x="-3.088217723280889" y="-0.3227782765395683" z="0.0" w="3.262096645133625" index="126"/>
+            <EmbeddedVertex x="-2.946412814843219" y="-0.3763785740474698" z="0.0" w="3.1341680405610592" index="127"/>
+            <EmbeddedVertex x="-2.37706664506571" y="-1.772240711144091" z="0.0" w="3.12910258274165" index="128"/>
+            <EmbeddedVertex x="-2.4671355599156892" y="-1.9249390782981999" z="0.0" w="3.2851405337001984" index="129"/>
+            <EmbeddedVertex x="-2.2366605773545607" y="-0.9511926082866969" z="0.0" w="2.6281967042729675" index="130"/>
+            <EmbeddedVertex x="-2.2064521143359745" y="-1.0449944784463054" z="0.0" w="2.638265413646049" index="131"/>
+            <EmbeddedVertex x="-2.3422603091273704" y="-0.7815289107589938" z="0.0" w="2.664014037888236" index="132"/>
+            <EmbeddedVertex x="-2.282258009418224" y="-0.8635793184144734" z="0.0" w="2.6371330760405023" index="133"/>
+            <EmbeddedVertex x="-18.299901997147106" y="0.7870903372843727" z="0.0" w="18.344097805676764" index="134"/>
+            <EmbeddedVertex x="-5.58162348783441" y="0.12012480265392038" z="0.0" w="5.6717678662086835" index="135"/>
+            <EmbeddedVertex x="-5.274429320678672" y="0.08737631696509016" z="0.0" w="5.369100416233734" index="136"/>
+            <EmbeddedVertex x="-10.634754528971646" y="0.4686823980173029" z="0.0" w="10.691944027242855" index="137"/>
+            <EmbeddedVertex x="-9.994021268075219" y="0.4353505003080032" z="0.0" w="10.053357208657127" index="138"/>
+            <EmbeddedVertex x="-14.76959640539809" y="0.652314111192538" z="0.0" w="14.81777620555828" index="139"/>
+            <EmbeddedVertex x="-13.794696637325613" y="0.6123337104967349" z="0.0" w="13.84444321339263" index="140"/>
+            <EmbeddedVertex x="-3.5896165009354943" y="-0.17902790470847688" z="0.0" w="3.7306028486630267" index="141"/>
+            <EmbeddedVertex x="-3.409538997906783" y="-0.22449051824142718" z="0.0" w="3.560246082931276" index="142"/>
+            <EmbeddedVertex x="-4.713992212715145" y="0.018333834642453743" z="0.0" w="4.818927132778802" index="143"/>
+            <EmbeddedVertex x="-4.45811869839631" y="-0.017932311026267127" z="0.0" w="4.568932467958961" index="144"/>
+            <EmbeddedVertex x="-7.866256773163579" y="0.3078106387752044" z="0.0" w="7.93553671850147" index="145"/>
+            <EmbeddedVertex x="-7.4227677677942685" y="0.27683385734326954" z="0.0" w="7.4949395140439306" index="146"/>
+            <EmbeddedVertex x="-2.824342886680154" y="-0.4361353420334561" z="0.0" w="3.0277263380483093" index="147"/>
+            <EmbeddedVertex x="-2.7094434619143146" y="-0.4987266978991246" z="0.0" w="2.930838138230699" index="148"/>
+            <EmbeddedVertex x="-17.007915120627104" y="0.7389036561684231" z="0.0" w="17.053303356345804" index="149"/>
+            <EmbeddedVertex x="-15.836462934514392" y="0.6943454808445421" z="0.0" w="15.883188405449879" index="150"/>
+            <EmbeddedVertex x="-32.83739979534135" y="18.7038567313866" z="0.0" w="37.80382364189263" index="151"/>
+            <EmbeddedVertex x="-6.659186917317628" y="4.166151477163348" z="0.0" w="7.918433464419879" index="152"/>
+            <EmbeddedVertex x="-9.397669972158234" y="0.6710737456750858" z="0.0" w="9.474520614666417" index="153"/>
+            <EmbeddedVertex x="-7.4658398518781075" y="0.5048030682049891" z="0.0" w="7.549409965789412" index="154"/>
+            <EmbeddedVertex x="-4.531592565388818" y="2.6909962352181918" z="0.0" w="5.364400424711572" index="155"/>
+            <EmbeddedVertex x="-20.668019025968857" y="12.131870727183662" z="0.0" w="23.986439873372337" index="156"/>
+            <EmbeddedVertex x="-13.49073121940444" y="8.219380221004332" z="0.0" w="15.829025240097724" index="157"/>
+            <EmbeddedVertex x="-11.340563309398558" y="7.003467468394709" z="0.0" w="13.366260986354403" index="158"/>
+            <EmbeddedVertex x="-4.129421250084329" y="2.3751606225845046" z="0.0" w="4.867597748759036" index="159"/>
+            <EmbeddedVertex x="-3.256136367094356" y="1.5287720202161332" z="0.0" w="3.7335730782870917" index="160"/>
+            <EmbeddedVertex x="-23.31849378284122" y="13.560090406388385" z="0.0" w="26.993114013204018" index="161"/>
+            <EmbeddedVertex x="-28.037025649886093" y="2.638158454385007" z="0.0" w="28.17862110400035" index="162"/>
+            <EmbeddedVertex x="-3.828224823428736" y="0.54018001332937" z="0.0" w="3.9933819934382053" index="163"/>
+            <EmbeddedVertex x="-72.34160918832421" y="40.28605338826861" z="0.0" w="82.80866209255323" index="164"/>
+            <EmbeddedVertex x="-5.744583876753265" y="3.5583808508614503" z="0.0" w="6.8309822278228065" index="165"/>
+            <EmbeddedVertex x="-5.05531775536575" y="3.07726282544215" z="0.0" w="6.00214829078426" index="166"/>
+            <EmbeddedVertex x="-123.57901882933695" y="68.2474064965667" z="0.0" w="141.1753604150853" index="167"/>
+            <EmbeddedVertex x="-4.288025511079786" y="0.4716665787057382" z="0.0" w="4.428276430524526" index="168"/>
+            <EmbeddedVertex x="-18.16581326370829" y="1.597838163802135" z="0.0" w="18.26334740209534" index="169"/>
+            <EmbeddedVertex x="-22.507597947783356" y="2.056295678122517" z="0.0" w="22.62344618520633" index="170"/>
+            <EmbeddedVertex x="-164.3655854074811" y="90.22737095033654" z="0.0" w="187.50473096685747" index="171"/>
+            <EmbeddedVertex x="-144.1282406314669" y="79.34698891951277" z="0.0" w="164.52931166851488" index="172"/>
+            <EmbeddedVertex x="-3.394536128227516" y="1.6970060924909878" z="0.0" w="3.9246280338133177" index="173"/>
+            <EmbeddedVertex x="-29.327020684818553" y="16.803147401565266" z="0.0" w="33.81449252682206" index="174"/>
+            <EmbeddedVertex x="-26.183722135060457" y="15.105202607928893" z="0.0" w="30.244907846985363" index="175"/>
+            <EmbeddedVertex x="-18.16741078443716" y="10.781029903644086" z="0.0" w="21.149123395397538" index="176"/>
+            <EmbeddedVertex x="-15.780304364430085" y="9.482832566041184" z="0.0" w="18.437519337199962" index="177"/>
+            <EmbeddedVertex x="-4.978562065244075" y="0.42703131671552363" z="0.0" w="5.095923467139508" index="178"/>
+            <EmbeddedVertex x="-6.002358485968105" y="0.42725175068068155" z="0.0" w="6.10006979079199" index="179"/>
+            <EmbeddedVertex x="-103.42647102894448" y="57.2907233909584" z="0.0" w="118.23815753030152" index="180"/>
+            <EmbeddedVertex x="-86.04147073718701" y="47.79075369302606" z="0.0" w="98.42809977422958" index="181"/>
+            <EmbeddedVertex x="-3.818955309588543" y="2.112185566173667" z="0.0" w="4.477247762028242" index="182"/>
+            <EmbeddedVertex x="-3.5788948860859624" y="1.8892305958152014" z="0.0" w="4.1686545611043995" index="183"/>
+            <EmbeddedVertex x="-11.783486001071289" y="0.9158156406217948" z="0.0" w="11.861250382023412" index="184"/>
+            <EmbeddedVertex x="-14.666244770424521" y="1.2242656110489858" z="0.0" w="14.751188492877505" index="185"/>
+            <EmbeddedVertex x="-41.43694824723006" y="23.377415812142956" z="0.0" w="47.587017663407465" index="186"/>
+            <EmbeddedVertex x="-36.82551972321329" y="20.8685767223685" z="0.0" w="42.339300859864835" index="187"/>
+            <EmbeddedVertex x="-9.433661893567006" y="5.887765088590256" z="0.0" w="11.16511327576037" index="188"/>
+            <EmbeddedVertex x="-7.869619392325003" y="4.9353706549944745" z="0.0" w="9.34284715074791" index="189"/>
+            <EmbeddedVertex x="-46.88300107243826" y="26.346928671718494" z="0.0" w="53.788255595351565" index="190"/>
+            <EmbeddedVertex x="-3.063089325669878" y="1.1226429309264268" z="0.0" w="3.412161099272985" index="191"/>
+            <EmbeddedVertex x="-3.066198596131781" y="1.0096809357763898" z="0.0" w="3.37950135715179" index="192"/>
+            <EmbeddedVertex x="-3.3166403653300516" y="0.7098855933461768" z="0.0" w="3.5361053248704444" index="193"/>
+            <EmbeddedVertex x="-3.520324857336718" y="0.6210116942132695" z="0.0" w="3.7119189950122053" index="194"/>
+            <EmbeddedVertex x="-3.1049640847291125" y="0.9041528966337434" z="0.0" w="3.3850102552206374" index="195"/>
+            <EmbeddedVertex x="-3.1845076270121084" y="0.8043796726967818" z="0.0" w="3.4333825135492946" index="196"/>
+            <EmbeddedVertex x="-3.1571209937898" y="1.3794321471426878" z="0.0" w="3.5875125111975543" index="197"/>
+            <EmbeddedVertex x="-3.093418425164887" y="1.2450752784513528" z="0.0" w="3.4813000448338722" index="198"/>
+            <EmbeddedVertex x="-61.757903973895466" y="34.48509300841285" z="0.0" w="70.74079687880098" index="199"/>
+            <EmbeddedVertex x="-53.49087306232062" y="29.958073579908202" z="0.0" w="61.31687918989755" index="200"/>
+            <EmbeddedVertex x="-2.574112773184002" y="-2.0864520253996024" z="0.0" w="3.461118117511036" index="201"/>
+            <EmbeddedVertex x="-1.1936720843033255" y="-3.2790966990078703" z="0.0" w="3.6300589811033865" index="202"/>
+            <EmbeddedVertex x="-288.6979625048485" y="159.13026096718895" z="0.0" w="329.65126044038806" index="203"/>
+            <EmbeddedVertex x="-187.10711864413972" y="102.46410869816287" z="0.0" w="213.32830899489434" index="204"/>
+            <EmbeddedVertex x="0.4753217141607317" y="-2.6376558092857674" z="0.0" w="2.860622117689027" index="205"/>
+            <EmbeddedVertex x="2.301960163390651" y="-0.9668194153385778" z="0.0" w="2.6895650904399284" index="206"/>
+            <Identification>
+                <Vertex>91</Vertex>
+                <Vertex>103</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>90</Vertex>
+                <Vertex>101</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>86</Vertex>
+                <Vertex>132</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>85</Vertex>
+                <Vertex>115</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>78</Vertex>
+                <Vertex>106</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>77</Vertex>
+                <Vertex>142</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>98</Vertex>
+                <Vertex>109</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>97</Vertex>
+                <Vertex>102</Vertex>
+                <Vertex>201</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>81</Vertex>
+                <Vertex>147</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>80</Vertex>
+                <Vertex>127</Vertex>
+                <Vertex>205</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>89</Vertex>
+                <Vertex>131</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>60</Vertex>
+                <Vertex>124</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>59</Vertex>
+                <Vertex>117</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>55</Vertex>
+                <Vertex>104</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>54</Vertex>
+                <Vertex>105</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>70</Vertex>
+                <Vertex>119</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>69</Vertex>
+                <Vertex>136</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>68</Vertex>
+                <Vertex>135</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>67</Vertex>
+                <Vertex>112</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>96</Vertex>
+                <Vertex>129</Vertex>
+                <Vertex>202</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>92</Vertex>
+                <Vertex>122</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>56</Vertex>
+                <Vertex>110</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>88</Vertex>
+                <Vertex>130</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>87</Vertex>
+                <Vertex>133</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>74</Vertex>
+                <Vertex>113</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>73</Vertex>
+                <Vertex>120</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>53</Vertex>
+                <Vertex>140</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>84</Vertex>
+                <Vertex>114</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>83</Vertex>
+                <Vertex>116</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>79</Vertex>
+                <Vertex>126</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>65</Vertex>
+                <Vertex>108</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>64</Vertex>
+                <Vertex>107</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>63</Vertex>
+                <Vertex>146</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>66</Vertex>
+                <Vertex>111</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>62</Vertex>
+                <Vertex>145</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>61</Vertex>
+                <Vertex>125</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>99</Vertex>
+                <Vertex>134</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>57</Vertex>
+                <Vertex>137</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>52</Vertex>
+                <Vertex>139</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>51</Vertex>
+                <Vertex>150</Vertex>
+                <Vertex>203</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>75</Vertex>
+                <Vertex>118</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>82</Vertex>
+                <Vertex>148</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>95</Vertex>
+                <Vertex>128</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>94</Vertex>
+                <Vertex>121</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>58</Vertex>
+                <Vertex>138</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>76</Vertex>
+                <Vertex>141</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>71</Vertex>
+                <Vertex>143</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>72</Vertex>
+                <Vertex>144</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>93</Vertex>
+                <Vertex>123</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>100</Vertex>
+                <Vertex>149</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>6</Vertex>
+                <Vertex>169</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>7</Vertex>
+                <Vertex>185</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>35</Vertex>
+                <Vertex>157</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>36</Vertex>
+                <Vertex>177</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>30</Vertex>
+                <Vertex>165</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>31</Vertex>
+                <Vertex>152</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>8</Vertex>
+                <Vertex>184</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>9</Vertex>
+                <Vertex>153</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>42</Vertex>
+                <Vertex>151</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>43</Vertex>
+                <Vertex>187</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>28</Vertex>
+                <Vertex>155</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>29</Vertex>
+                <Vertex>166</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>41</Vertex>
+                <Vertex>174</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>32</Vertex>
+                <Vertex>189</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>33</Vertex>
+                <Vertex>188</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>34</Vertex>
+                <Vertex>158</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>20</Vertex>
+                <Vertex>191</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>21</Vertex>
+                <Vertex>198</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>44</Vertex>
+                <Vertex>186</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>45</Vertex>
+                <Vertex>190</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>10</Vertex>
+                <Vertex>154</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>22</Vertex>
+                <Vertex>197</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>23</Vertex>
+                <Vertex>160</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>11</Vertex>
+                <Vertex>179</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>37</Vertex>
+                <Vertex>176</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>38</Vertex>
+                <Vertex>156</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>27</Vertex>
+                <Vertex>159</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>47</Vertex>
+                <Vertex>199</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>48</Vertex>
+                <Vertex>164</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>39</Vertex>
+                <Vertex>161</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>50</Vertex>
+                <Vertex>180</Vertex>
+                <Vertex>206</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>1</Vertex>
+                <Vertex>167</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>13</Vertex>
+                <Vertex>168</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>14</Vertex>
+                <Vertex>163</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>4</Vertex>
+                <Vertex>162</Vertex>
+                <Vertex>204</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>5</Vertex>
+                <Vertex>170</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>26</Vertex>
+                <Vertex>182</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>24</Vertex>
+                <Vertex>173</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>40</Vertex>
+                <Vertex>175</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>3</Vertex>
+                <Vertex>171</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>15</Vertex>
+                <Vertex>194</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>49</Vertex>
+                <Vertex>181</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>2</Vertex>
+                <Vertex>172</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>12</Vertex>
+                <Vertex>178</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>16</Vertex>
+                <Vertex>193</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>17</Vertex>
+                <Vertex>196</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>25</Vertex>
+                <Vertex>183</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>18</Vertex>
+                <Vertex>195</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>19</Vertex>
+                <Vertex>192</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>46</Vertex>
+                <Vertex>200</Vertex>
+            </Identification>
+            <EmbeddedTriangle vertex1="204" vertex2="203" vertex3="171"/>
+            <EmbeddedTriangle vertex1="162" vertex2="100" vertex3="51"/>
+            <EmbeddedTriangle vertex1="5" vertex2="4" vertex3="0"/>
+            <EmbeddedTriangle vertex1="6" vertex2="5" vertex3="0"/>
+            <EmbeddedTriangle vertex1="7" vertex2="6" vertex3="0"/>
+            <EmbeddedTriangle vertex1="8" vertex2="7" vertex3="0"/>
+            <EmbeddedTriangle vertex1="9" vertex2="8" vertex3="0"/>
+            <EmbeddedTriangle vertex1="10" vertex2="9" vertex3="0"/>
+            <EmbeddedTriangle vertex1="11" vertex2="10" vertex3="0"/>
+            <EmbeddedTriangle vertex1="192" vertex2="16" vertex3="15"/>
+            <EmbeddedTriangle vertex1="192" vertex2="15" vertex3="195"/>
+            <EmbeddedTriangle vertex1="191" vertex2="17" vertex3="16"/>
+            <EmbeddedTriangle vertex1="191" vertex2="16" vertex3="192"/>
+            <EmbeddedTriangle vertex1="198" vertex2="18" vertex3="17"/>
+            <EmbeddedTriangle vertex1="198" vertex2="17" vertex3="191"/>
+            <EmbeddedTriangle vertex1="197" vertex2="19" vertex3="18"/>
+            <EmbeddedTriangle vertex1="197" vertex2="18" vertex3="198"/>
+            <EmbeddedTriangle vertex1="160" vertex2="20" vertex3="19"/>
+            <EmbeddedTriangle vertex1="160" vertex2="19" vertex3="197"/>
+            <EmbeddedTriangle vertex1="173" vertex2="21" vertex3="20"/>
+            <EmbeddedTriangle vertex1="173" vertex2="20" vertex3="160"/>
+            <EmbeddedTriangle vertex1="183" vertex2="22" vertex3="21"/>
+            <EmbeddedTriangle vertex1="183" vertex2="21" vertex3="173"/>
+            <EmbeddedTriangle vertex1="182" vertex2="23" vertex3="22"/>
+            <EmbeddedTriangle vertex1="182" vertex2="22" vertex3="183"/>
+            <EmbeddedTriangle vertex1="159" vertex2="24" vertex3="23"/>
+            <EmbeddedTriangle vertex1="159" vertex2="23" vertex3="182"/>
+            <EmbeddedTriangle vertex1="155" vertex2="25" vertex3="24"/>
+            <EmbeddedTriangle vertex1="155" vertex2="24" vertex3="159"/>
+            <EmbeddedTriangle vertex1="166" vertex2="27" vertex3="26"/>
+            <EmbeddedTriangle vertex1="166" vertex2="26" vertex3="25"/>
+            <EmbeddedTriangle vertex1="166" vertex2="25" vertex3="155"/>
+            <EmbeddedTriangle vertex1="165" vertex2="28" vertex3="27"/>
+            <EmbeddedTriangle vertex1="165" vertex2="27" vertex3="166"/>
+            <EmbeddedTriangle vertex1="152" vertex2="30" vertex3="29"/>
+            <EmbeddedTriangle vertex1="152" vertex2="29" vertex3="28"/>
+            <EmbeddedTriangle vertex1="152" vertex2="28" vertex3="165"/>
+            <EmbeddedTriangle vertex1="189" vertex2="32" vertex3="31"/>
+            <EmbeddedTriangle vertex1="189" vertex2="31" vertex3="30"/>
+            <EmbeddedTriangle vertex1="189" vertex2="30" vertex3="152"/>
+            <EmbeddedTriangle vertex1="188" vertex2="33" vertex3="32"/>
+            <EmbeddedTriangle vertex1="188" vertex2="32" vertex3="189"/>
+            <EmbeddedTriangle vertex1="158" vertex2="34" vertex3="33"/>
+            <EmbeddedTriangle vertex1="158" vertex2="33" vertex3="188"/>
+            <EmbeddedTriangle vertex1="35" vertex2="34" vertex3="158"/>
+            <EmbeddedTriangle vertex1="157" vertex2="35" vertex3="158"/>
+            <EmbeddedTriangle vertex1="36" vertex2="35" vertex3="157"/>
+            <EmbeddedTriangle vertex1="37" vertex2="36" vertex3="157"/>
+            <EmbeddedTriangle vertex1="37" vertex2="157" vertex3="177"/>
+            <EmbeddedTriangle vertex1="38" vertex2="37" vertex3="177"/>
+            <EmbeddedTriangle vertex1="38" vertex2="177" vertex3="176"/>
+            <EmbeddedTriangle vertex1="39" vertex2="38" vertex3="176"/>
+            <EmbeddedTriangle vertex1="40" vertex2="39" vertex3="176"/>
+            <EmbeddedTriangle vertex1="40" vertex2="176" vertex3="156"/>
+            <EmbeddedTriangle vertex1="41" vertex2="40" vertex3="156"/>
+            <EmbeddedTriangle vertex1="42" vertex2="41" vertex3="156"/>
+            <EmbeddedTriangle vertex1="42" vertex2="156" vertex3="161"/>
+            <EmbeddedTriangle vertex1="43" vertex2="42" vertex3="161"/>
+            <EmbeddedTriangle vertex1="43" vertex2="161" vertex3="175"/>
+            <EmbeddedTriangle vertex1="44" vertex2="43" vertex3="175"/>
+            <EmbeddedTriangle vertex1="45" vertex2="44" vertex3="175"/>
+            <EmbeddedTriangle vertex1="45" vertex2="175" vertex3="174"/>
+            <EmbeddedTriangle vertex1="46" vertex2="45" vertex3="174"/>
+            <EmbeddedTriangle vertex1="46" vertex2="174" vertex3="151"/>
+            <EmbeddedTriangle vertex1="47" vertex2="46" vertex3="151"/>
+            <EmbeddedTriangle vertex1="47" vertex2="151" vertex3="187"/>
+            <EmbeddedTriangle vertex1="48" vertex2="47" vertex3="187"/>
+            <EmbeddedTriangle vertex1="48" vertex2="187" vertex3="186"/>
+            <EmbeddedTriangle vertex1="49" vertex2="48" vertex3="186"/>
+            <EmbeddedTriangle vertex1="49" vertex2="186" vertex3="190"/>
+            <EmbeddedTriangle vertex1="50" vertex2="49" vertex3="190"/>
+            <EmbeddedTriangle vertex1="139" vertex2="150" vertex3="185"/>
+            <EmbeddedTriangle vertex1="52" vertex2="171" vertex3="203"/>
+            <EmbeddedTriangle vertex1="140" vertex2="139" vertex3="185"/>
+            <EmbeddedTriangle vertex1="140" vertex2="185" vertex3="184"/>
+            <EmbeddedTriangle vertex1="53" vertex2="171" vertex3="52"/>
+            <EmbeddedTriangle vertex1="105" vertex2="140" vertex3="184"/>
+            <EmbeddedTriangle vertex1="54" vertex2="171" vertex3="53"/>
+            <EmbeddedTriangle vertex1="104" vertex2="105" vertex3="184"/>
+            <EmbeddedTriangle vertex1="55" vertex2="171" vertex3="54"/>
+            <EmbeddedTriangle vertex1="110" vertex2="104" vertex3="184"/>
+            <EmbeddedTriangle vertex1="56" vertex2="171" vertex3="55"/>
+            <EmbeddedTriangle vertex1="56" vertex2="172" vertex3="171"/>
+            <EmbeddedTriangle vertex1="137" vertex2="110" vertex3="184"/>
+            <EmbeddedTriangle vertex1="137" vertex2="184" vertex3="153"/>
+            <EmbeddedTriangle vertex1="57" vertex2="172" vertex3="56"/>
+            <EmbeddedTriangle vertex1="138" vertex2="137" vertex3="153"/>
+            <EmbeddedTriangle vertex1="58" vertex2="172" vertex3="57"/>
+            <EmbeddedTriangle vertex1="117" vertex2="138" vertex3="153"/>
+            <EmbeddedTriangle vertex1="59" vertex2="172" vertex3="58"/>
+            <EmbeddedTriangle vertex1="124" vertex2="117" vertex3="153"/>
+            <EmbeddedTriangle vertex1="124" vertex2="153" vertex3="154"/>
+            <EmbeddedTriangle vertex1="60" vertex2="172" vertex3="59"/>
+            <EmbeddedTriangle vertex1="125" vertex2="124" vertex3="154"/>
+            <EmbeddedTriangle vertex1="61" vertex2="172" vertex3="60"/>
+            <EmbeddedTriangle vertex1="61" vertex2="167" vertex3="172"/>
+            <EmbeddedTriangle vertex1="145" vertex2="125" vertex3="154"/>
+            <EmbeddedTriangle vertex1="62" vertex2="167" vertex3="61"/>
+            <EmbeddedTriangle vertex1="146" vertex2="145" vertex3="154"/>
+            <EmbeddedTriangle vertex1="63" vertex2="167" vertex3="62"/>
+            <EmbeddedTriangle vertex1="107" vertex2="146" vertex3="154"/>
+            <EmbeddedTriangle vertex1="107" vertex2="154" vertex3="179"/>
+            <EmbeddedTriangle vertex1="64" vertex2="167" vertex3="63"/>
+            <EmbeddedTriangle vertex1="108" vertex2="107" vertex3="179"/>
+            <EmbeddedTriangle vertex1="65" vertex2="167" vertex3="64"/>
+            <EmbeddedTriangle vertex1="111" vertex2="108" vertex3="179"/>
+            <EmbeddedTriangle vertex1="66" vertex2="167" vertex3="65"/>
+            <EmbeddedTriangle vertex1="66" vertex2="180" vertex3="167"/>
+            <EmbeddedTriangle vertex1="112" vertex2="111" vertex3="179"/>
+            <EmbeddedTriangle vertex1="67" vertex2="180" vertex3="66"/>
+            <EmbeddedTriangle vertex1="135" vertex2="112" vertex3="179"/>
+            <EmbeddedTriangle vertex1="135" vertex2="179" vertex3="178"/>
+            <EmbeddedTriangle vertex1="68" vertex2="180" vertex3="67"/>
+            <EmbeddedTriangle vertex1="136" vertex2="135" vertex3="178"/>
+            <EmbeddedTriangle vertex1="69" vertex2="180" vertex3="68"/>
+            <EmbeddedTriangle vertex1="119" vertex2="136" vertex3="178"/>
+            <EmbeddedTriangle vertex1="70" vertex2="180" vertex3="69"/>
+            <EmbeddedTriangle vertex1="70" vertex2="181" vertex3="180"/>
+            <EmbeddedTriangle vertex1="143" vertex2="119" vertex3="178"/>
+            <EmbeddedTriangle vertex1="143" vertex2="178" vertex3="168"/>
+            <EmbeddedTriangle vertex1="71" vertex2="181" vertex3="70"/>
+            <EmbeddedTriangle vertex1="144" vertex2="143" vertex3="168"/>
+            <EmbeddedTriangle vertex1="72" vertex2="181" vertex3="71"/>
+            <EmbeddedTriangle vertex1="120" vertex2="144" vertex3="168"/>
+            <EmbeddedTriangle vertex1="73" vertex2="181" vertex3="72"/>
+            <EmbeddedTriangle vertex1="113" vertex2="120" vertex3="168"/>
+            <EmbeddedTriangle vertex1="113" vertex2="168" vertex3="163"/>
+            <EmbeddedTriangle vertex1="74" vertex2="181" vertex3="73"/>
+            <EmbeddedTriangle vertex1="74" vertex2="164" vertex3="181"/>
+            <EmbeddedTriangle vertex1="118" vertex2="113" vertex3="163"/>
+            <EmbeddedTriangle vertex1="75" vertex2="164" vertex3="74"/>
+            <EmbeddedTriangle vertex1="141" vertex2="118" vertex3="163"/>
+            <EmbeddedTriangle vertex1="141" vertex2="163" vertex3="194"/>
+            <EmbeddedTriangle vertex1="76" vertex2="164" vertex3="75"/>
+            <EmbeddedTriangle vertex1="76" vertex2="199" vertex3="164"/>
+            <EmbeddedTriangle vertex1="142" vertex2="141" vertex3="194"/>
+            <EmbeddedTriangle vertex1="142" vertex2="194" vertex3="193"/>
+            <EmbeddedTriangle vertex1="77" vertex2="199" vertex3="76"/>
+            <EmbeddedTriangle vertex1="106" vertex2="142" vertex3="193"/>
+            <EmbeddedTriangle vertex1="78" vertex2="199" vertex3="77"/>
+            <EmbeddedTriangle vertex1="78" vertex2="200" vertex3="199"/>
+            <EmbeddedTriangle vertex1="126" vertex2="106" vertex3="193"/>
+            <EmbeddedTriangle vertex1="126" vertex2="193" vertex3="196"/>
+            <EmbeddedTriangle vertex1="79" vertex2="200" vertex3="78"/>
+            <EmbeddedTriangle vertex1="127" vertex2="126" vertex3="196"/>
+            <EmbeddedTriangle vertex1="127" vertex2="196" vertex3="195"/>
+            <EmbeddedTriangle vertex1="127" vertex2="195" vertex3="15"/>
+            <EmbeddedTriangle vertex1="127" vertex2="15" vertex3="14"/>
+            <EmbeddedTriangle vertex1="80" vertex2="200" vertex3="79"/>
+            <EmbeddedTriangle vertex1="80" vertex2="50" vertex3="190"/>
+            <EmbeddedTriangle vertex1="80" vertex2="190" vertex3="200"/>
+            <EmbeddedTriangle vertex1="147" vertex2="127" vertex3="14"/>
+            <EmbeddedTriangle vertex1="81" vertex2="206" vertex3="205"/>
+            <EmbeddedTriangle vertex1="81" vertex2="1" vertex3="206"/>
+            <EmbeddedTriangle vertex1="148" vertex2="147" vertex3="14"/>
+            <EmbeddedTriangle vertex1="148" vertex2="14" vertex3="13"/>
+            <EmbeddedTriangle vertex1="82" vertex2="1" vertex3="81"/>
+            <EmbeddedTriangle vertex1="82" vertex2="2" vertex3="1"/>
+            <EmbeddedTriangle vertex1="116" vertex2="148" vertex3="13"/>
+            <EmbeddedTriangle vertex1="116" vertex2="13" vertex3="12"/>
+            <EmbeddedTriangle vertex1="83" vertex2="2" vertex3="82"/>
+            <EmbeddedTriangle vertex1="83" vertex2="3" vertex3="2"/>
+            <EmbeddedTriangle vertex1="114" vertex2="116" vertex3="12"/>
+            <EmbeddedTriangle vertex1="114" vertex2="12" vertex3="11"/>
+            <EmbeddedTriangle vertex1="84" vertex2="3" vertex3="83"/>
+            <EmbeddedTriangle vertex1="84" vertex2="4" vertex3="3"/>
+            <EmbeddedTriangle vertex1="115" vertex2="114" vertex3="11"/>
+            <EmbeddedTriangle vertex1="115" vertex2="11" vertex3="0"/>
+            <EmbeddedTriangle vertex1="85" vertex2="0" vertex3="4"/>
+            <EmbeddedTriangle vertex1="85" vertex2="4" vertex3="84"/>
+            <EmbeddedTriangle vertex1="132" vertex2="115" vertex3="0"/>
+            <EmbeddedTriangle vertex1="86" vertex2="0" vertex3="85"/>
+            <EmbeddedTriangle vertex1="133" vertex2="132" vertex3="0"/>
+            <EmbeddedTriangle vertex1="87" vertex2="0" vertex3="86"/>
+            <EmbeddedTriangle vertex1="130" vertex2="133" vertex3="0"/>
+            <EmbeddedTriangle vertex1="88" vertex2="0" vertex3="87"/>
+            <EmbeddedTriangle vertex1="131" vertex2="130" vertex3="0"/>
+            <EmbeddedTriangle vertex1="89" vertex2="0" vertex3="88"/>
+            <EmbeddedTriangle vertex1="101" vertex2="131" vertex3="0"/>
+            <EmbeddedTriangle vertex1="90" vertex2="0" vertex3="89"/>
+            <EmbeddedTriangle vertex1="103" vertex2="101" vertex3="0"/>
+            <EmbeddedTriangle vertex1="103" vertex2="0" vertex3="90"/>
+            <EmbeddedTriangle vertex1="91" vertex2="103" vertex3="90"/>
+            <EmbeddedTriangle vertex1="122" vertex2="103" vertex3="91"/>
+            <EmbeddedTriangle vertex1="92" vertex2="122" vertex3="91"/>
+            <EmbeddedTriangle vertex1="123" vertex2="122" vertex3="92"/>
+            <EmbeddedTriangle vertex1="93" vertex2="123" vertex3="92"/>
+            <EmbeddedTriangle vertex1="121" vertex2="123" vertex3="93"/>
+            <EmbeddedTriangle vertex1="94" vertex2="121" vertex3="93"/>
+            <EmbeddedTriangle vertex1="128" vertex2="121" vertex3="94"/>
+            <EmbeddedTriangle vertex1="95" vertex2="128" vertex3="94"/>
+            <EmbeddedTriangle vertex1="129" vertex2="128" vertex3="95"/>
+            <EmbeddedTriangle vertex1="202" vertex2="129" vertex3="95"/>
+            <EmbeddedTriangle vertex1="201" vertex2="129" vertex3="202"/>
+            <EmbeddedTriangle vertex1="97" vertex2="102" vertex3="96"/>
+            <EmbeddedTriangle vertex1="97" vertex2="170" vertex3="102"/>
+            <EmbeddedTriangle vertex1="109" vertex2="102" vertex3="170"/>
+            <EmbeddedTriangle vertex1="109" vertex2="170" vertex3="169"/>
+            <EmbeddedTriangle vertex1="98" vertex2="170" vertex3="97"/>
+            <EmbeddedTriangle vertex1="98" vertex2="162" vertex3="170"/>
+            <EmbeddedTriangle vertex1="134" vertex2="109" vertex3="169"/>
+            <EmbeddedTriangle vertex1="99" vertex2="100" vertex3="162"/>
+            <EmbeddedTriangle vertex1="99" vertex2="162" vertex3="98"/>
+            <EmbeddedTriangle vertex1="149" vertex2="134" vertex3="169"/>
+            <EmbeddedTriangle vertex1="149" vertex2="169" vertex3="185"/>
+            <EmbeddedTriangle vertex1="149" vertex2="185" vertex3="150"/>
+        </Domain>
+        <Image name="Uniformizing Map_image">
+            <EmbeddedVertex x="0.0" y="0.0" z="0.0" w="1.0" index="0"/>
+            <EmbeddedVertex x="0.033733422263363955" y="-0.66041749001051" z="0.0" w="1.0" index="1"/>
+            <EmbeddedVertex x="0.028498043272817908" y="-0.5772035238706449" z="0.0" w="1.0" index="2"/>
+            <EmbeddedVertex x="0.012874471355324268" y="-0.4953018916864192" z="0.0" w="1.0" index="3"/>
+            <EmbeddedVertex x="-0.012890900426908325" y="-0.4160042311230419" z="0.0" w="1.0" index="4"/>
+            <EmbeddedVertex x="-0.04839173676938736" y="-0.3405611136577235" z="0.0" w="1.0" index="5"/>
+            <EmbeddedVertex x="-0.09306816827582" y="-0.27016232232042636" z="0.0" w="1.0" index="6"/>
+            <EmbeddedVertex x="-0.14621562093294332" y="-0.20591808810473883" z="0.0" w="1.0" index="7"/>
+            <EmbeddedVertex x="-0.2069959276636052" y="-0.14884158096188763" z="0.0" w="1.0" index="8"/>
+            <EmbeddedVertex x="-0.27445054672226793" y="-0.09983293150536833" z="0.0" w="1.0" index="9"/>
+            <EmbeddedVertex x="-0.3475156784709398" y="-0.05966503541345813" z="0.0" w="1.0" index="10"/>
+            <EmbeddedVertex x="-0.42503904213495064" y="-0.02897136440266479" z="0.0" w="1.0" index="11"/>
+            <EmbeddedVertex x="-0.505798047959106" y="-0.008235976000338652" z="0.0" w="1.0" index="12"/>
+            <EmbeddedVertex x="-0.5885190781784673" y="0.002214120331695102" z="0.0" w="1.0" index="13"/>
+            <EmbeddedVertex x="-0.6718975727313272" y="0.002214120331695102" z="0.0" w="1.0" index="14"/>
+            <EmbeddedVertex x="-0.7546186029506887" y="-0.00823597600033854" z="0.0" w="1.0" index="15"/>
+            <EmbeddedVertex x="-0.8353776087748439" y="-0.02897136440266468" z="0.0" w="1.0" index="16"/>
+            <EmbeddedVertex x="-0.9129009724388548" y="-0.05966503541345824" z="0.0" w="1.0" index="17"/>
+            <EmbeddedVertex x="-0.985966104187527" y="-0.09983293150536832" z="0.0" w="1.0" index="18"/>
+            <EmbeddedVertex x="-1.0534207232461896" y="-0.1488415809618876" z="0.0" w="1.0" index="19"/>
+            <EmbeddedVertex x="-1.1142010299768512" y="-0.20591808810473863" z="0.0" w="1.0" index="20"/>
+            <EmbeddedVertex x="-1.1673484826339748" y="-0.2701623223204263" z="0.0" w="1.0" index="21"/>
+            <EmbeddedVertex x="-1.2120249141404074" y="-0.3405611136577236" z="0.0" w="1.0" index="22"/>
+            <EmbeddedVertex x="-1.2475257504828863" y="-0.41600423112304175" z="0.0" w="1.0" index="23"/>
+            <EmbeddedVertex x="-1.2732911222651189" y="-0.49530189168641886" z="0.0" w="1.0" index="24"/>
+            <EmbeddedVertex x="-1.2889146941826124" y="-0.5772035238706448" z="0.0" w="1.0" index="25"/>
+            <EmbeddedVertex x="-1.294150073173159" y="-0.6604174900105101" z="0.0" w="1.0" index="26"/>
+            <EmbeddedVertex x="-1.2889146941826126" y="-0.7436314561503753" z="0.0" w="1.0" index="27"/>
+            <EmbeddedVertex x="-1.2732911222651193" y="-0.825533088334601" z="0.0" w="1.0" index="28"/>
+            <EmbeddedVertex x="-1.2475257504828865" y="-0.9048307488979783" z="0.0" w="1.0" index="29"/>
+            <EmbeddedVertex x="-1.2120249141404074" y="-0.9802738663632966" z="0.0" w="1.0" index="30"/>
+            <EmbeddedVertex x="-1.1673484826339753" y="-1.0506726577005938" z="0.0" w="1.0" index="31"/>
+            <EmbeddedVertex x="-1.1142010299768517" y="-1.1149168919162813" z="0.0" w="1.0" index="32"/>
+            <EmbeddedVertex x="-1.0534207232461892" y="-1.1719933990591327" z="0.0" w="1.0" index="33"/>
+            <EmbeddedVertex x="-0.9859661041875266" y="-1.221002048515652" z="0.0" w="1.0" index="34"/>
+            <EmbeddedVertex x="-0.9129009724388546" y="-1.2611699446075622" z="0.0" w="1.0" index="35"/>
+            <EmbeddedVertex x="-0.8353776087748441" y="-1.2918636156183554" z="0.0" w="1.0" index="36"/>
+            <EmbeddedVertex x="-0.7546186029506888" y="-1.3125990040206819" z="0.0" w="1.0" index="37"/>
+            <EmbeddedVertex x="-0.6718975727313271" y="-1.323049100352715" z="0.0" w="1.0" index="38"/>
+            <EmbeddedVertex x="-0.5885190781784678" y="-1.3230491003527152" z="0.0" w="1.0" index="39"/>
+            <EmbeddedVertex x="-0.5057980479591061" y="-1.3125990040206814" z="0.0" w="1.0" index="40"/>
+            <EmbeddedVertex x="-0.42503904213495086" y="-1.2918636156183558" z="0.0" w="1.0" index="41"/>
+            <EmbeddedVertex x="-0.3475156784709404" y="-1.2611699446075622" z="0.0" w="1.0" index="42"/>
+            <EmbeddedVertex x="-0.27445054672226776" y="-1.2210020485156519" z="0.0" w="1.0" index="43"/>
+            <EmbeddedVertex x="-0.20699592766360547" y="-1.171993399059133" z="0.0" w="1.0" index="44"/>
+            <EmbeddedVertex x="-0.14621562093294352" y="-1.1149168919162815" z="0.0" w="1.0" index="45"/>
+            <EmbeddedVertex x="-0.09306816827581997" y="-1.050672657700594" z="0.0" w="1.0" index="46"/>
+            <EmbeddedVertex x="-0.04839173676938768" y="-0.9802738663632972" z="0.0" w="1.0" index="47"/>
+            <EmbeddedVertex x="-0.012890900426908325" y="-0.9048307488979784" z="0.0" w="1.0" index="48"/>
+            <EmbeddedVertex x="0.01287447135532416" y="-0.8255330883346015" z="0.0" w="1.0" index="49"/>
+            <EmbeddedVertex x="0.0284980432728178" y="-0.7436314561503757" z="0.0" w="1.0" index="50"/>
+            <EmbeddedVertex x="1.2047925160598085" y="0.36198036755974305" z="0.0" w="1.0" index="51"/>
+            <EmbeddedVertex x="1.2365401055831067" y="0.35252200478885676" z="0.0" w="1.0" index="52"/>
+            <EmbeddedVertex x="1.266522077296483" y="0.3399673500756327" z="0.0" w="1.0" index="53"/>
+            <EmbeddedVertex x="1.2945540629545795" y="0.3245922980342947" z="0.0" w="1.0" index="54"/>
+            <EmbeddedVertex x="1.3204826962547793" y="0.30665470377431026" z="0.0" w="1.0" index="55"/>
+            <EmbeddedVertex x="1.3441769326329134" y="0.2863942855431949" z="0.0" w="1.0" index="56"/>
+            <EmbeddedVertex x="1.3655205399209607" y="0.26403399140432016" z="0.0" w="1.0" index="57"/>
+            <EmbeddedVertex x="1.3844057345313876" y="0.23978248486653184" z="0.0" w="1.0" index="58"/>
+            <EmbeddedVertex x="1.400727906017538" y="0.21383750364052362" z="0.0" w="1.0" index="59"/>
+            <EmbeddedVertex x="1.414381371548229" y="0.1863899285834915" z="0.0" w="1.0" index="60"/>
+            <EmbeddedVertex x="1.4252561226577103" y="0.15762846476067788" z="0.0" w="1.0" index="61"/>
+            <EmbeddedVertex x="1.4332355638211398" y="0.12774488286014665" z="0.0" w="1.0" index="62"/>
+            <EmbeddedVertex x="1.4381952921381644" y="0.09693979629026583" z="0.0" w="1.0" index="63"/>
+            <EmbeddedVertex x="1.4400030269794042" y="0.06542895556556733" z="0.0" w="1.0" index="64"/>
+            <EmbeddedVertex x="1.4385198653084885" y="0.03345002396250208" z="0.0" w="1.0" index="65"/>
+            <EmbeddedVertex x="1.4336031089750876" y="0.0012697520799391695" z="0.0" w="1.0" index="66"/>
+            <EmbeddedVertex x="1.4251109786032787" y="-0.030808612589151272" z="0.0" w="1.0" index="67"/>
+            <EmbeddedVertex x="1.4129095846721278" y="-0.062437969105996964" z="0.0" w="1.0" index="68"/>
+            <EmbeddedVertex x="1.3968825538470626" y="-0.09322052114337598" z="0.0" w="1.0" index="69"/>
+            <EmbeddedVertex x="1.3769436835251145" y="-0.1227021374373325" z="0.0" w="1.0" index="70"/>
+            <EmbeddedVertex x="1.35305288693634" y="-0.15036887600078186" z="0.0" w="1.0" index="71"/>
+            <EmbeddedVertex x="1.3252354542155735" y="-0.1756469336430978" z="0.0" w="1.0" index="72"/>
+            <EmbeddedVertex x="1.2936042483108259" y="-0.19790756393702266" z="0.0" w="1.0" index="73"/>
+            <EmbeddedVertex x="1.2583838445849758" y="-0.2164786915262948" z="0.0" w="1.0" index="74"/>
+            <EmbeddedVertex x="1.2199348059757273" y="-0.230664922965518" z="0.0" w="1.0" index="75"/>
+            <EmbeddedVertex x="1.1787753178616978" y="-0.23977726867203045" z="0.0" w="1.0" index="76"/>
+            <EmbeddedVertex x="1.1355964366494449" y="-0.2431730002839009" z="0.0" w="1.0" index="77"/>
+            <EmbeddedVertex x="1.091266494473246" y="-0.2403045815734026" z="0.0" w="1.0" index="78"/>
+            <EmbeddedVertex x="1.0468201079229271" y="-0.23077457600785137" z="0.0" w="1.0" index="79"/>
+            <EmbeddedVertex x="1.003428141325409" y="-0.2143911205851099" z="0.0" w="1.0" index="80"/>
+            <EmbeddedVertex x="0.962347127578168" y="-0.19121649800825294" z="0.0" w="1.0" index="81"/>
+            <EmbeddedVertex x="0.9248499865769447" y="-0.1616002689847338" z="0.0" w="1.0" index="82"/>
+            <EmbeddedVertex x="0.892143870777491" y="-0.12618905909692021" z="0.0" w="1.0" index="83"/>
+            <EmbeddedVertex x="0.8652846221639503" y="-0.0859078058154352" z="0.0" w="1.0" index="84"/>
+            <EmbeddedVertex x="0.8450994571064924" y="-0.04191179528261625" z="0.0" w="1.0" index="85"/>
+            <EmbeddedVertex x="0.832129172619764" y="0.004485836580851892" z="0.0" w="1.0" index="86"/>
+            <EmbeddedVertex x="0.8265981712521634" y="0.05190175864095559" z="0.0" w="1.0" index="87"/>
+            <EmbeddedVertex x="0.8284156269637681" y="0.09897319440461896" z="0.0" w="1.0" index="88"/>
+            <EmbeddedVertex x="0.837205549878339" y="0.14443979174555752" z="0.0" w="1.0" index="89"/>
+            <EmbeddedVertex x="0.8523588869800763" y="0.18720729228427116" z="0.0" w="1.0" index="90"/>
+            <EmbeddedVertex x="0.8730982037731221" y="0.22638791652502502" z="0.0" w="1.0" index="91"/>
+            <EmbeddedVertex x="0.8985452313402394" y="0.2613168823170862" z="0.0" w="1.0" index="92"/>
+            <EmbeddedVertex x="0.9277831996430191" y="0.29154811806745506" z="0.0" w="1.0" index="93"/>
+            <EmbeddedVertex x="0.959908562634177" y="0.31683441334442375" z="0.0" w="1.0" index="94"/>
+            <EmbeddedVertex x="0.9940695769695714" y="0.33709792172587305" z="0.0" w="1.0" index="95"/>
+            <EmbeddedVertex x="1.0294915892195993" y="0.3523964372933563" z="0.0" w="1.0" index="96"/>
+            <EmbeddedVertex x="1.0654905156014656" y="0.3628897026220276" z="0.0" w="1.0" index="97"/>
+            <EmbeddedVertex x="1.1014768463662992" y="0.36880862889449484" z="0.0" w="1.0" index="98"/>
+            <EmbeddedVertex x="1.1369527277535176" y="0.3704290364806249" z="0.0" w="1.0" index="99"/>
+            <EmbeddedVertex x="1.1715044816840778" y="0.36805052186241144" z="0.0" w="1.0" index="100"/>
+            <EmbeddedVertex x="0.1800267354836188" y="0.8920751433633123" z="0.0" w="1.0" index="101"/>
+            <EmbeddedVertex x="0.4323024381461071" y="1.075364170130045" z="0.0" w="1.0" index="102"/>
+            <EmbeddedVertex x="0.22456817368026508" y="0.9035114409202272" z="0.0" w="1.0" index="103"/>
+            <EmbeddedVertex x="0.4323024381461073" y="1.4281883009803424" z="0.0" w="1.0" index="104"/>
+            <EmbeddedVertex x="0.45188240067463104" y="1.3865787625808657" z="0.0" w="1.0" index="105"/>
+            <EmbeddedVertex x="-0.24327274655792872" y="1.160709163307321" z="0.0" w="1.0" index="106"/>
+            <EmbeddedVertex x="0.08841699311948822" y="1.6172409242051076" z="0.0" w="1.0" index="107"/>
+            <EmbeddedVertex x="0.04279342931409358" y="1.6114773277470755" z="0.0" w="1.0" index="108"/>
+            <EmbeddedVertex x="0.451882400674631" y="1.1169737085295226" z="0.0" w="1.0" index="109"/>
+            <EmbeddedVertex x="0.40766181147564795" y="1.4670157157246055" z="0.0" w="1.0" index="110"/>
+            <EmbeddedVertex x="-0.001748008882552554" y="1.6000410301901606" z="0.0" w="1.0" index="111"/>
+            <EmbeddedVertex x="-0.04450487638232394" y="1.583112388778548" z="0.0" w="1.0" index="112"/>
+            <EmbeddedVertex x="-0.2432727465579286" y="1.3428433078030673" z="0.0" w="1.0" index="113"/>
+            <EmbeddedVertex x="-0.08480287184303409" y="0.9425940928104081" z="0.0" w="1.0" index="114"/>
+            <EmbeddedVertex x="-0.04450487638232373" y="0.9204400823318395" z="0.0" w="1.0" index="115"/>
+            <EmbeddedVertex x="-0.12200647180341243" y="0.9696240903765216" z="0.0" w="1.0" index="116"/>
+            <EmbeddedVertex x="0.3076230366407466" y="1.5609583782999794" z="0.0" w="1.0" index="117"/>
+            <EmbeddedVertex x="-0.2518896971490384" y="1.2976716708950875" z="0.0" w="1.0" index="118"/>
+            <EmbeddedVertex x="-0.15552895326773022" y="1.502448675288764" z="0.0" w="1.0" index="119"/>
+            <EmbeddedVertex x="-0.22906223587691835" y="1.3865787625808654" z="0.0" w="1.0" index="120"/>
+            <EmbeddedVertex x="0.34482663660112484" y="0.9696240903765214" z="0.0" w="1.0" index="121"/>
+            <EmbeddedVertex x="0.267325041180036" y="0.9204400823318394" z="0.0" w="1.0" index="122"/>
+            <EmbeddedVertex x="0.30762303664074675" y="0.9425940928104085" z="0.0" w="1.0" index="123"/>
+            <EmbeddedVertex x="0.2673250411800364" y="1.5831123887785485" z="0.0" w="1.0" index="124"/>
+            <EmbeddedVertex x="0.22456817368026516" y="1.6000410301901609" z="0.0" w="1.0" index="125"/>
+            <EmbeddedVertex x="-0.22906223587691843" y="1.1169737085295226" z="0.0" w="1.0" index="126"/>
+            <EmbeddedVertex x="-0.20948227334839478" y="1.0753641701300451" z="0.0" w="1.0" index="127"/>
+            <EmbeddedVertex x="0.37834911806544264" y="1.0011037958216242" z="0.0" w="1.0" index="128"/>
+            <EmbeddedVertex x="0.4076618114756479" y="1.0365367553857825" z="0.0" w="1.0" index="129"/>
+            <EmbeddedVertex x="0.08841699311948828" y="0.8863115469052804" z="0.0" w="1.0" index="130"/>
+            <EmbeddedVertex x="0.13440317167822408" y="0.8863115469052805" z="0.0" w="1.0" index="131"/>
+            <EmbeddedVertex x="-0.001748008882552721" y="0.9035114409202273" z="0.0" w="1.0" index="132"/>
+            <EmbeddedVertex x="0.042793429314093565" y="0.8920751433633123" z="0.0" w="1.0" index="133"/>
+            <EmbeddedVertex x="0.46609291135564107" y="1.1607091633073208" z="0.0" w="1.0" index="134"/>
+            <EmbeddedVertex x="-0.08480287184303431" y="1.5609583782999796" z="0.0" w="1.0" index="135"/>
+            <EmbeddedVertex x="-0.12200647180341251" y="1.5339283807338664" z="0.0" w="1.0" index="136"/>
+            <EmbeddedVertex x="0.37834911806544275" y="1.5024486752887638" z="0.0" w="1.0" index="137"/>
+            <EmbeddedVertex x="0.344826636601125" y="1.5339283807338664" z="0.0" w="1.0" index="138"/>
+            <EmbeddedVertex x="0.47470986194675097" y="1.2976716708950877" z="0.0" w="1.0" index="139"/>
+            <EmbeddedVertex x="0.4660929113556411" y="1.342843307803067" z="0.0" w="1.0" index="140"/>
+            <EmbeddedVertex x="-0.2547771931919093" y="1.251776235555194" z="0.0" w="1.0" index="141"/>
+            <EmbeddedVertex x="-0.25188969714903847" y="1.2058808002153003" z="0.0" w="1.0" index="142"/>
+            <EmbeddedVertex x="-0.1848416466779354" y="1.4670157157246055" z="0.0" w="1.0" index="143"/>
+            <EmbeddedVertex x="-0.20948227334839478" y="1.4281883009803427" z="0.0" w="1.0" index="144"/>
+            <EmbeddedVertex x="0.18002673548361903" y="1.6114773277470762" z="0.0" w="1.0" index="145"/>
+            <EmbeddedVertex x="0.13440317167822435" y="1.6172409242051078" z="0.0" w="1.0" index="146"/>
+            <EmbeddedVertex x="-0.18484164667793557" y="1.0365367553857827" z="0.0" w="1.0" index="147"/>
+            <EmbeddedVertex x="-0.1555289532677304" y="1.0011037958216245" z="0.0" w="1.0" index="148"/>
+            <EmbeddedVertex x="0.47470986194675097" y="1.2058808002153003" z="0.0" w="1.0" index="149"/>
+            <EmbeddedVertex x="0.4775973579896218" y="1.2517762355551938" z="0.0" w="1.0" index="150"/>
+            <EmbeddedVertex x="0.5094717850966684" y="-1.7585912276461522" z="0.0" w="1.0" index="151"/>
+            <EmbeddedVertex x="-1.5712271508275304" y="-1.102244005786734" z="0.0" w="1.0" index="152"/>
+            <EmbeddedVertex x="0.44590962435389697" y="1.7641665274682676" z="0.0" w="1.0" index="153"/>
+            <EmbeddedVertex x="0.19217709311643658" y="1.8207016775918379" z="0.0" w="1.0" index="154"/>
+            <EmbeddedVertex x="-1.831937289680946" y="-0.602607195416478" z="0.0" w="1.0" index="155"/>
+            <EmbeddedVertex x="-0.39673409163021567" y="-1.8287664463524191" z="0.0" w="1.0" index="156"/>
+            <EmbeddedVertex x="-0.9875610908664012" y="-1.6187312778332463" z="0.0" w="1.0" index="157"/>
+            <EmbeddedVertex x="-1.1572445709403274" y="-1.5108247226694107" z="0.0" w="1.0" index="158"/>
+            <EmbeddedVertex x="-1.8831008204603223" y="-0.42287150959569925" z="0.0" w="1.0" index="159"/>
+            <EmbeddedVertex x="-1.9002552897544591" y="0.32525797655455707" z="0.0" w="1.0" index="160"/>
+            <EmbeddedVertex x="-0.1777989264204761" y="-1.8532783408992342" z="0.0" w="1.0" index="161"/>
+            <EmbeddedVertex x="1.5100515439085291" y="0.9319796309868993" z="0.0" w="1.0" index="162"/>
+            <EmbeddedVertex x="-0.7648979831351735" y="1.7103578646069748" z="0.0" w="1.0" index="163"/>
+            <EmbeddedVertex x="1.6235329610223839" y="-0.7200930572215082" z="0.0" w="1.0" index="164"/>
+            <EmbeddedVertex x="-1.6756794965554502" y="-0.9437159908154253" z="0.0" w="1.0" index="165"/>
+            <EmbeddedVertex x="-1.7626917999378824" y="-0.7766859449066501" z="0.0" w="1.0" index="166"/>
+            <EmbeddedVertex x="1.7625381860580704" y="0.11348068278298098" z="0.0" w="1.0" index="167"/>
+            <EmbeddedVertex x="-0.5427794787576443" y="1.7827822842173116" z="0.0" w="1.0" index="168"/>
+            <EmbeddedVertex x="1.1522012664811443" y="1.368776793923276" z="0.0" w="1.0" index="169"/>
+            <EmbeddedVertex x="1.3468286253788277" y="1.1654347429334977" z="0.0" w="1.0" index="170"/>
+            <EmbeddedVertex x="1.6363148830377183" y="0.6740828147689332" z="0.0" w="1.0" index="171"/>
+            <EmbeddedVertex x="1.7213574495582569" y="0.3986583544390101" z="0.0" w="1.0" index="172"/>
+            <EmbeddedVertex x="-1.9248042182949543" y="0.13665106398576782" z="0.0" w="1.0" index="173"/>
+            <EmbeddedVertex x="0.2787025432134242" y="-1.820236447495004" z="0.0" w="1.0" index="174"/>
+            <EmbeddedVertex x="0.0483744673544591" y="-1.8511632892952175" z="0.0" w="1.0" index="175"/>
+            <EmbeddedVertex x="-0.6059278944897758" y="-1.7799481319442976" z="0.0" w="1.0" index="176"/>
+            <EmbeddedVertex x="-0.8033890451738842" y="-1.709170831677662" z="0.0" w="1.0" index="177"/>
+            <EmbeddedVertex x="-0.30683162756627097" y="1.8274148874453797" z="0.0" w="1.0" index="178"/>
+            <EmbeddedVertex x="-0.06043437585691952" y="1.8410181405141386" z="0.0" w="1.0" index="179"/>
+            <EmbeddedVertex x="1.7590218819146903" y="-0.17329165628107113" z="0.0" w="1.0" index="180"/>
+            <EmbeddedVertex x="1.711797777556459" y="-0.4536259256417537" z="0.0" w="1.0" index="181"/>
+            <EmbeddedVertex x="-1.9158614006452617" y="-0.2388385142549052" z="0.0" w="1.0" index="182"/>
+            <EmbeddedVertex x="-1.9298816571999282" y="-0.051867180560832206" z="0.0" w="1.0" index="183"/>
+            <EmbeddedVertex x="0.6948843069635137" y="1.6699753107245427" z="0.0" w="1.0" index="184"/>
+            <EmbeddedVertex x="0.9326007323445732" y="1.5378234609597314" z="0.0" w="1.0" index="185"/>
+            <EmbeddedVertex x="0.9542755224973808" y="-1.5379925162978823" z="0.0" w="1.0" index="186"/>
+            <EmbeddedVertex x="0.7363216413863813" y="-1.664775047639433" z="0.0" w="1.0" index="187"/>
+            <EmbeddedVertex x="-1.3115233212451833" y="-1.3875160960009987" z="0.0" w="1.0" index="188"/>
+            <EmbeddedVertex x="-1.4496978435500092" y="-1.250728373783273" z="0.0" w="1.0" index="189"/>
+            <EmbeddedVertex x="1.1578356527549842" y="-1.3783233742641694" z="0.0" w="1.0" index="190"/>
+            <EmbeddedVertex x="-1.7060958033255886" y="0.8752883316871811" z="0.0" w="1.0" index="191"/>
+            <EmbeddedVertex x="-1.6001828200915493" y="1.047107012330336" z="0.0" w="1.0" index="192"/>
+            <EmbeddedVertex x="-1.1580279662164938" y="1.4956433860270624" z="0.0" w="1.0" index="193"/>
+            <EmbeddedVertex x="-0.9706055180266939" y="1.613522622118835" z="0.0" w="1.0" index="194"/>
+            <EmbeddedVertex x="-1.4734101318620227" y="1.2095141236295621" z="0.0" w="1.0" index="195"/>
+            <EmbeddedVertex x="-1.325891222425229" y="1.3599602693898634" z="0.0" w="1.0" index="196"/>
+            <EmbeddedVertex x="-1.8558560155881068" y="0.5123933516044068" z="0.0" w="1.0" index="197"/>
+            <EmbeddedVertex x="-1.7912425208394298" y="0.6963597709992562" z="0.0" w="1.0" index="198"/>
+            <EmbeddedVertex x="1.4982896763204059" y="-0.9662564459763425" z="0.0" w="1.0" index="199"/>
+            <EmbeddedVertex x="1.3411546614565575" y="-1.1869343784471809" z="0.0" w="1.0" index="200"/>
+            <EmbeddedVertex x="0.4323024381461071" y="1.075364170130045" z="0.0" w="1.0" index="201"/>
+            <EmbeddedVertex x="1.0294915892195993" y="0.3523964372933563" z="0.0" w="1.0" index="202"/>
+            <EmbeddedVertex x="1.2047925160598085" y="0.36198036755974305" z="0.0" w="1.0" index="203"/>
+            <EmbeddedVertex x="1.5100515439085291" y="0.9319796309868993" z="0.0" w="1.0" index="204"/>
+            <EmbeddedVertex x="1.003428141325409" y="-0.2143911205851099" z="0.0" w="1.0" index="205"/>
+            <EmbeddedVertex x="0.0284980432728178" y="-0.7436314561503757" z="0.0" w="1.0" index="206"/>
+            <Identification>
+                <Vertex>91</Vertex>
+                <Vertex>103</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>90</Vertex>
+                <Vertex>101</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>86</Vertex>
+                <Vertex>132</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>85</Vertex>
+                <Vertex>115</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>78</Vertex>
+                <Vertex>106</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>77</Vertex>
+                <Vertex>142</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>98</Vertex>
+                <Vertex>109</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>97</Vertex>
+                <Vertex>102</Vertex>
+                <Vertex>201</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>81</Vertex>
+                <Vertex>147</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>80</Vertex>
+                <Vertex>127</Vertex>
+                <Vertex>205</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>89</Vertex>
+                <Vertex>131</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>60</Vertex>
+                <Vertex>124</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>59</Vertex>
+                <Vertex>117</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>55</Vertex>
+                <Vertex>104</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>54</Vertex>
+                <Vertex>105</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>70</Vertex>
+                <Vertex>119</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>69</Vertex>
+                <Vertex>136</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>68</Vertex>
+                <Vertex>135</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>67</Vertex>
+                <Vertex>112</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>96</Vertex>
+                <Vertex>129</Vertex>
+                <Vertex>202</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>92</Vertex>
+                <Vertex>122</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>56</Vertex>
+                <Vertex>110</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>88</Vertex>
+                <Vertex>130</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>87</Vertex>
+                <Vertex>133</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>74</Vertex>
+                <Vertex>113</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>73</Vertex>
+                <Vertex>120</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>53</Vertex>
+                <Vertex>140</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>84</Vertex>
+                <Vertex>114</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>83</Vertex>
+                <Vertex>116</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>79</Vertex>
+                <Vertex>126</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>65</Vertex>
+                <Vertex>108</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>64</Vertex>
+                <Vertex>107</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>63</Vertex>
+                <Vertex>146</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>66</Vertex>
+                <Vertex>111</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>62</Vertex>
+                <Vertex>145</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>61</Vertex>
+                <Vertex>125</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>99</Vertex>
+                <Vertex>134</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>57</Vertex>
+                <Vertex>137</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>52</Vertex>
+                <Vertex>139</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>51</Vertex>
+                <Vertex>150</Vertex>
+                <Vertex>203</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>75</Vertex>
+                <Vertex>118</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>82</Vertex>
+                <Vertex>148</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>95</Vertex>
+                <Vertex>128</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>94</Vertex>
+                <Vertex>121</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>58</Vertex>
+                <Vertex>138</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>76</Vertex>
+                <Vertex>141</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>71</Vertex>
+                <Vertex>143</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>72</Vertex>
+                <Vertex>144</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>93</Vertex>
+                <Vertex>123</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>100</Vertex>
+                <Vertex>149</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>6</Vertex>
+                <Vertex>169</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>7</Vertex>
+                <Vertex>185</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>35</Vertex>
+                <Vertex>157</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>36</Vertex>
+                <Vertex>177</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>30</Vertex>
+                <Vertex>165</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>31</Vertex>
+                <Vertex>152</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>8</Vertex>
+                <Vertex>184</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>9</Vertex>
+                <Vertex>153</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>42</Vertex>
+                <Vertex>151</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>43</Vertex>
+                <Vertex>187</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>28</Vertex>
+                <Vertex>155</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>29</Vertex>
+                <Vertex>166</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>41</Vertex>
+                <Vertex>174</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>32</Vertex>
+                <Vertex>189</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>33</Vertex>
+                <Vertex>188</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>34</Vertex>
+                <Vertex>158</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>20</Vertex>
+                <Vertex>191</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>21</Vertex>
+                <Vertex>198</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>44</Vertex>
+                <Vertex>186</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>45</Vertex>
+                <Vertex>190</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>10</Vertex>
+                <Vertex>154</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>22</Vertex>
+                <Vertex>197</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>23</Vertex>
+                <Vertex>160</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>11</Vertex>
+                <Vertex>179</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>37</Vertex>
+                <Vertex>176</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>38</Vertex>
+                <Vertex>156</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>27</Vertex>
+                <Vertex>159</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>47</Vertex>
+                <Vertex>199</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>48</Vertex>
+                <Vertex>164</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>39</Vertex>
+                <Vertex>161</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>50</Vertex>
+                <Vertex>180</Vertex>
+                <Vertex>206</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>1</Vertex>
+                <Vertex>167</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>13</Vertex>
+                <Vertex>168</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>14</Vertex>
+                <Vertex>163</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>4</Vertex>
+                <Vertex>162</Vertex>
+                <Vertex>204</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>5</Vertex>
+                <Vertex>170</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>26</Vertex>
+                <Vertex>182</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>24</Vertex>
+                <Vertex>173</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>40</Vertex>
+                <Vertex>175</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>3</Vertex>
+                <Vertex>171</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>15</Vertex>
+                <Vertex>194</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>49</Vertex>
+                <Vertex>181</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>2</Vertex>
+                <Vertex>172</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>12</Vertex>
+                <Vertex>178</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>16</Vertex>
+                <Vertex>193</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>17</Vertex>
+                <Vertex>196</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>25</Vertex>
+                <Vertex>183</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>18</Vertex>
+                <Vertex>195</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>19</Vertex>
+                <Vertex>192</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>46</Vertex>
+                <Vertex>200</Vertex>
+            </Identification>
+            <EmbeddedTriangle vertex1="204" vertex2="203" vertex3="171"/>
+            <EmbeddedTriangle vertex1="162" vertex2="100" vertex3="51"/>
+            <EmbeddedTriangle vertex1="5" vertex2="4" vertex3="0"/>
+            <EmbeddedTriangle vertex1="6" vertex2="5" vertex3="0"/>
+            <EmbeddedTriangle vertex1="7" vertex2="6" vertex3="0"/>
+            <EmbeddedTriangle vertex1="8" vertex2="7" vertex3="0"/>
+            <EmbeddedTriangle vertex1="9" vertex2="8" vertex3="0"/>
+            <EmbeddedTriangle vertex1="10" vertex2="9" vertex3="0"/>
+            <EmbeddedTriangle vertex1="11" vertex2="10" vertex3="0"/>
+            <EmbeddedTriangle vertex1="192" vertex2="16" vertex3="15"/>
+            <EmbeddedTriangle vertex1="192" vertex2="15" vertex3="195"/>
+            <EmbeddedTriangle vertex1="191" vertex2="17" vertex3="16"/>
+            <EmbeddedTriangle vertex1="191" vertex2="16" vertex3="192"/>
+            <EmbeddedTriangle vertex1="198" vertex2="18" vertex3="17"/>
+            <EmbeddedTriangle vertex1="198" vertex2="17" vertex3="191"/>
+            <EmbeddedTriangle vertex1="197" vertex2="19" vertex3="18"/>
+            <EmbeddedTriangle vertex1="197" vertex2="18" vertex3="198"/>
+            <EmbeddedTriangle vertex1="160" vertex2="20" vertex3="19"/>
+            <EmbeddedTriangle vertex1="160" vertex2="19" vertex3="197"/>
+            <EmbeddedTriangle vertex1="173" vertex2="21" vertex3="20"/>
+            <EmbeddedTriangle vertex1="173" vertex2="20" vertex3="160"/>
+            <EmbeddedTriangle vertex1="183" vertex2="22" vertex3="21"/>
+            <EmbeddedTriangle vertex1="183" vertex2="21" vertex3="173"/>
+            <EmbeddedTriangle vertex1="182" vertex2="23" vertex3="22"/>
+            <EmbeddedTriangle vertex1="182" vertex2="22" vertex3="183"/>
+            <EmbeddedTriangle vertex1="159" vertex2="24" vertex3="23"/>
+            <EmbeddedTriangle vertex1="159" vertex2="23" vertex3="182"/>
+            <EmbeddedTriangle vertex1="155" vertex2="25" vertex3="24"/>
+            <EmbeddedTriangle vertex1="155" vertex2="24" vertex3="159"/>
+            <EmbeddedTriangle vertex1="166" vertex2="27" vertex3="26"/>
+            <EmbeddedTriangle vertex1="166" vertex2="26" vertex3="25"/>
+            <EmbeddedTriangle vertex1="166" vertex2="25" vertex3="155"/>
+            <EmbeddedTriangle vertex1="165" vertex2="28" vertex3="27"/>
+            <EmbeddedTriangle vertex1="165" vertex2="27" vertex3="166"/>
+            <EmbeddedTriangle vertex1="152" vertex2="30" vertex3="29"/>
+            <EmbeddedTriangle vertex1="152" vertex2="29" vertex3="28"/>
+            <EmbeddedTriangle vertex1="152" vertex2="28" vertex3="165"/>
+            <EmbeddedTriangle vertex1="189" vertex2="32" vertex3="31"/>
+            <EmbeddedTriangle vertex1="189" vertex2="31" vertex3="30"/>
+            <EmbeddedTriangle vertex1="189" vertex2="30" vertex3="152"/>
+            <EmbeddedTriangle vertex1="188" vertex2="33" vertex3="32"/>
+            <EmbeddedTriangle vertex1="188" vertex2="32" vertex3="189"/>
+            <EmbeddedTriangle vertex1="158" vertex2="34" vertex3="33"/>
+            <EmbeddedTriangle vertex1="158" vertex2="33" vertex3="188"/>
+            <EmbeddedTriangle vertex1="35" vertex2="34" vertex3="158"/>
+            <EmbeddedTriangle vertex1="157" vertex2="35" vertex3="158"/>
+            <EmbeddedTriangle vertex1="36" vertex2="35" vertex3="157"/>
+            <EmbeddedTriangle vertex1="37" vertex2="36" vertex3="157"/>
+            <EmbeddedTriangle vertex1="37" vertex2="157" vertex3="177"/>
+            <EmbeddedTriangle vertex1="38" vertex2="37" vertex3="177"/>
+            <EmbeddedTriangle vertex1="38" vertex2="177" vertex3="176"/>
+            <EmbeddedTriangle vertex1="39" vertex2="38" vertex3="176"/>
+            <EmbeddedTriangle vertex1="40" vertex2="39" vertex3="176"/>
+            <EmbeddedTriangle vertex1="40" vertex2="176" vertex3="156"/>
+            <EmbeddedTriangle vertex1="41" vertex2="40" vertex3="156"/>
+            <EmbeddedTriangle vertex1="42" vertex2="41" vertex3="156"/>
+            <EmbeddedTriangle vertex1="42" vertex2="156" vertex3="161"/>
+            <EmbeddedTriangle vertex1="43" vertex2="42" vertex3="161"/>
+            <EmbeddedTriangle vertex1="43" vertex2="161" vertex3="175"/>
+            <EmbeddedTriangle vertex1="44" vertex2="43" vertex3="175"/>
+            <EmbeddedTriangle vertex1="45" vertex2="44" vertex3="175"/>
+            <EmbeddedTriangle vertex1="45" vertex2="175" vertex3="174"/>
+            <EmbeddedTriangle vertex1="46" vertex2="45" vertex3="174"/>
+            <EmbeddedTriangle vertex1="46" vertex2="174" vertex3="151"/>
+            <EmbeddedTriangle vertex1="47" vertex2="46" vertex3="151"/>
+            <EmbeddedTriangle vertex1="47" vertex2="151" vertex3="187"/>
+            <EmbeddedTriangle vertex1="48" vertex2="47" vertex3="187"/>
+            <EmbeddedTriangle vertex1="48" vertex2="187" vertex3="186"/>
+            <EmbeddedTriangle vertex1="49" vertex2="48" vertex3="186"/>
+            <EmbeddedTriangle vertex1="49" vertex2="186" vertex3="190"/>
+            <EmbeddedTriangle vertex1="50" vertex2="49" vertex3="190"/>
+            <EmbeddedTriangle vertex1="139" vertex2="150" vertex3="185"/>
+            <EmbeddedTriangle vertex1="52" vertex2="171" vertex3="203"/>
+            <EmbeddedTriangle vertex1="140" vertex2="139" vertex3="185"/>
+            <EmbeddedTriangle vertex1="140" vertex2="185" vertex3="184"/>
+            <EmbeddedTriangle vertex1="53" vertex2="171" vertex3="52"/>
+            <EmbeddedTriangle vertex1="105" vertex2="140" vertex3="184"/>
+            <EmbeddedTriangle vertex1="54" vertex2="171" vertex3="53"/>
+            <EmbeddedTriangle vertex1="104" vertex2="105" vertex3="184"/>
+            <EmbeddedTriangle vertex1="55" vertex2="171" vertex3="54"/>
+            <EmbeddedTriangle vertex1="110" vertex2="104" vertex3="184"/>
+            <EmbeddedTriangle vertex1="56" vertex2="171" vertex3="55"/>
+            <EmbeddedTriangle vertex1="56" vertex2="172" vertex3="171"/>
+            <EmbeddedTriangle vertex1="137" vertex2="110" vertex3="184"/>
+            <EmbeddedTriangle vertex1="137" vertex2="184" vertex3="153"/>
+            <EmbeddedTriangle vertex1="57" vertex2="172" vertex3="56"/>
+            <EmbeddedTriangle vertex1="138" vertex2="137" vertex3="153"/>
+            <EmbeddedTriangle vertex1="58" vertex2="172" vertex3="57"/>
+            <EmbeddedTriangle vertex1="117" vertex2="138" vertex3="153"/>
+            <EmbeddedTriangle vertex1="59" vertex2="172" vertex3="58"/>
+            <EmbeddedTriangle vertex1="124" vertex2="117" vertex3="153"/>
+            <EmbeddedTriangle vertex1="124" vertex2="153" vertex3="154"/>
+            <EmbeddedTriangle vertex1="60" vertex2="172" vertex3="59"/>
+            <EmbeddedTriangle vertex1="125" vertex2="124" vertex3="154"/>
+            <EmbeddedTriangle vertex1="61" vertex2="172" vertex3="60"/>
+            <EmbeddedTriangle vertex1="61" vertex2="167" vertex3="172"/>
+            <EmbeddedTriangle vertex1="145" vertex2="125" vertex3="154"/>
+            <EmbeddedTriangle vertex1="62" vertex2="167" vertex3="61"/>
+            <EmbeddedTriangle vertex1="146" vertex2="145" vertex3="154"/>
+            <EmbeddedTriangle vertex1="63" vertex2="167" vertex3="62"/>
+            <EmbeddedTriangle vertex1="107" vertex2="146" vertex3="154"/>
+            <EmbeddedTriangle vertex1="107" vertex2="154" vertex3="179"/>
+            <EmbeddedTriangle vertex1="64" vertex2="167" vertex3="63"/>
+            <EmbeddedTriangle vertex1="108" vertex2="107" vertex3="179"/>
+            <EmbeddedTriangle vertex1="65" vertex2="167" vertex3="64"/>
+            <EmbeddedTriangle vertex1="111" vertex2="108" vertex3="179"/>
+            <EmbeddedTriangle vertex1="66" vertex2="167" vertex3="65"/>
+            <EmbeddedTriangle vertex1="66" vertex2="180" vertex3="167"/>
+            <EmbeddedTriangle vertex1="112" vertex2="111" vertex3="179"/>
+            <EmbeddedTriangle vertex1="67" vertex2="180" vertex3="66"/>
+            <EmbeddedTriangle vertex1="135" vertex2="112" vertex3="179"/>
+            <EmbeddedTriangle vertex1="135" vertex2="179" vertex3="178"/>
+            <EmbeddedTriangle vertex1="68" vertex2="180" vertex3="67"/>
+            <EmbeddedTriangle vertex1="136" vertex2="135" vertex3="178"/>
+            <EmbeddedTriangle vertex1="69" vertex2="180" vertex3="68"/>
+            <EmbeddedTriangle vertex1="119" vertex2="136" vertex3="178"/>
+            <EmbeddedTriangle vertex1="70" vertex2="180" vertex3="69"/>
+            <EmbeddedTriangle vertex1="70" vertex2="181" vertex3="180"/>
+            <EmbeddedTriangle vertex1="143" vertex2="119" vertex3="178"/>
+            <EmbeddedTriangle vertex1="143" vertex2="178" vertex3="168"/>
+            <EmbeddedTriangle vertex1="71" vertex2="181" vertex3="70"/>
+            <EmbeddedTriangle vertex1="144" vertex2="143" vertex3="168"/>
+            <EmbeddedTriangle vertex1="72" vertex2="181" vertex3="71"/>
+            <EmbeddedTriangle vertex1="120" vertex2="144" vertex3="168"/>
+            <EmbeddedTriangle vertex1="73" vertex2="181" vertex3="72"/>
+            <EmbeddedTriangle vertex1="113" vertex2="120" vertex3="168"/>
+            <EmbeddedTriangle vertex1="113" vertex2="168" vertex3="163"/>
+            <EmbeddedTriangle vertex1="74" vertex2="181" vertex3="73"/>
+            <EmbeddedTriangle vertex1="74" vertex2="164" vertex3="181"/>
+            <EmbeddedTriangle vertex1="118" vertex2="113" vertex3="163"/>
+            <EmbeddedTriangle vertex1="75" vertex2="164" vertex3="74"/>
+            <EmbeddedTriangle vertex1="141" vertex2="118" vertex3="163"/>
+            <EmbeddedTriangle vertex1="141" vertex2="163" vertex3="194"/>
+            <EmbeddedTriangle vertex1="76" vertex2="164" vertex3="75"/>
+            <EmbeddedTriangle vertex1="76" vertex2="199" vertex3="164"/>
+            <EmbeddedTriangle vertex1="142" vertex2="141" vertex3="194"/>
+            <EmbeddedTriangle vertex1="142" vertex2="194" vertex3="193"/>
+            <EmbeddedTriangle vertex1="77" vertex2="199" vertex3="76"/>
+            <EmbeddedTriangle vertex1="106" vertex2="142" vertex3="193"/>
+            <EmbeddedTriangle vertex1="78" vertex2="199" vertex3="77"/>
+            <EmbeddedTriangle vertex1="78" vertex2="200" vertex3="199"/>
+            <EmbeddedTriangle vertex1="126" vertex2="106" vertex3="193"/>
+            <EmbeddedTriangle vertex1="126" vertex2="193" vertex3="196"/>
+            <EmbeddedTriangle vertex1="79" vertex2="200" vertex3="78"/>
+            <EmbeddedTriangle vertex1="127" vertex2="126" vertex3="196"/>
+            <EmbeddedTriangle vertex1="127" vertex2="196" vertex3="195"/>
+            <EmbeddedTriangle vertex1="127" vertex2="195" vertex3="15"/>
+            <EmbeddedTriangle vertex1="127" vertex2="15" vertex3="14"/>
+            <EmbeddedTriangle vertex1="80" vertex2="200" vertex3="79"/>
+            <EmbeddedTriangle vertex1="80" vertex2="50" vertex3="190"/>
+            <EmbeddedTriangle vertex1="80" vertex2="190" vertex3="200"/>
+            <EmbeddedTriangle vertex1="147" vertex2="127" vertex3="14"/>
+            <EmbeddedTriangle vertex1="81" vertex2="206" vertex3="205"/>
+            <EmbeddedTriangle vertex1="81" vertex2="1" vertex3="206"/>
+            <EmbeddedTriangle vertex1="148" vertex2="147" vertex3="14"/>
+            <EmbeddedTriangle vertex1="148" vertex2="14" vertex3="13"/>
+            <EmbeddedTriangle vertex1="82" vertex2="1" vertex3="81"/>
+            <EmbeddedTriangle vertex1="82" vertex2="2" vertex3="1"/>
+            <EmbeddedTriangle vertex1="116" vertex2="148" vertex3="13"/>
+            <EmbeddedTriangle vertex1="116" vertex2="13" vertex3="12"/>
+            <EmbeddedTriangle vertex1="83" vertex2="2" vertex3="82"/>
+            <EmbeddedTriangle vertex1="83" vertex2="3" vertex3="2"/>
+            <EmbeddedTriangle vertex1="114" vertex2="116" vertex3="12"/>
+            <EmbeddedTriangle vertex1="114" vertex2="12" vertex3="11"/>
+            <EmbeddedTriangle vertex1="84" vertex2="3" vertex3="83"/>
+            <EmbeddedTriangle vertex1="84" vertex2="4" vertex3="3"/>
+            <EmbeddedTriangle vertex1="115" vertex2="114" vertex3="11"/>
+            <EmbeddedTriangle vertex1="115" vertex2="11" vertex3="0"/>
+            <EmbeddedTriangle vertex1="85" vertex2="0" vertex3="4"/>
+            <EmbeddedTriangle vertex1="85" vertex2="4" vertex3="84"/>
+            <EmbeddedTriangle vertex1="132" vertex2="115" vertex3="0"/>
+            <EmbeddedTriangle vertex1="86" vertex2="0" vertex3="85"/>
+            <EmbeddedTriangle vertex1="133" vertex2="132" vertex3="0"/>
+            <EmbeddedTriangle vertex1="87" vertex2="0" vertex3="86"/>
+            <EmbeddedTriangle vertex1="130" vertex2="133" vertex3="0"/>
+            <EmbeddedTriangle vertex1="88" vertex2="0" vertex3="87"/>
+            <EmbeddedTriangle vertex1="131" vertex2="130" vertex3="0"/>
+            <EmbeddedTriangle vertex1="89" vertex2="0" vertex3="88"/>
+            <EmbeddedTriangle vertex1="101" vertex2="131" vertex3="0"/>
+            <EmbeddedTriangle vertex1="90" vertex2="0" vertex3="89"/>
+            <EmbeddedTriangle vertex1="103" vertex2="101" vertex3="0"/>
+            <EmbeddedTriangle vertex1="103" vertex2="0" vertex3="90"/>
+            <EmbeddedTriangle vertex1="91" vertex2="103" vertex3="90"/>
+            <EmbeddedTriangle vertex1="122" vertex2="103" vertex3="91"/>
+            <EmbeddedTriangle vertex1="92" vertex2="122" vertex3="91"/>
+            <EmbeddedTriangle vertex1="123" vertex2="122" vertex3="92"/>
+            <EmbeddedTriangle vertex1="93" vertex2="123" vertex3="92"/>
+            <EmbeddedTriangle vertex1="121" vertex2="123" vertex3="93"/>
+            <EmbeddedTriangle vertex1="94" vertex2="121" vertex3="93"/>
+            <EmbeddedTriangle vertex1="128" vertex2="121" vertex3="94"/>
+            <EmbeddedTriangle vertex1="95" vertex2="128" vertex3="94"/>
+            <EmbeddedTriangle vertex1="129" vertex2="128" vertex3="95"/>
+            <EmbeddedTriangle vertex1="202" vertex2="129" vertex3="95"/>
+            <EmbeddedTriangle vertex1="201" vertex2="129" vertex3="202"/>
+            <EmbeddedTriangle vertex1="97" vertex2="102" vertex3="96"/>
+            <EmbeddedTriangle vertex1="97" vertex2="170" vertex3="102"/>
+            <EmbeddedTriangle vertex1="109" vertex2="102" vertex3="170"/>
+            <EmbeddedTriangle vertex1="109" vertex2="170" vertex3="169"/>
+            <EmbeddedTriangle vertex1="98" vertex2="170" vertex3="97"/>
+            <EmbeddedTriangle vertex1="98" vertex2="162" vertex3="170"/>
+            <EmbeddedTriangle vertex1="134" vertex2="109" vertex3="169"/>
+            <EmbeddedTriangle vertex1="99" vertex2="100" vertex3="162"/>
+            <EmbeddedTriangle vertex1="99" vertex2="162" vertex3="98"/>
+            <EmbeddedTriangle vertex1="149" vertex2="134" vertex3="169"/>
+            <EmbeddedTriangle vertex1="149" vertex2="169" vertex3="185"/>
+            <EmbeddedTriangle vertex1="149" vertex2="185" vertex3="150"/>
+        </Image>
+    </DiscreteMap>
+</ConformalDataList>
