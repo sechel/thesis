@@ -1,0 +1,79 @@
+\documentclass[twoside]{article}
+%\usepackage[reviewing]{aag10} % for reviewing
+%\usepackage[reviewing,debug]{aag10}\def\extrapage{3} % to produce guidelines
+\usepackage[final]{aag10} % for the final version
+\usepackage{graphicx} % for graphics
+
+
+\begin{document}
+
+
+\title{Stress-based Optimisation of regular and irregular elastic gridshells}
+
+\author{Elisa Lafuente Hern\'andez \affiliation{Department of Architecture, University of the Arts, Berlin Germany}
+Christoph Gengnagel \affiliation{Department of Architecture, University of the Arts, Berlin Germany}
+Stefan Sechelmann \affiliation{Technische Universit\"at Berlin, DFG Research Center \textsc{Matheon}}}
+
+\maketitle
+
+\def\shortauthor{E. L. Hern\'andez and S. Sechelmann}  % for the running head
+\def\shorttitle{Variational Gridshells}   % for the running head
+
+
+\begin{abstract}
+
+Gridshells composed of elastically-bent profiles offer significant cost and time advantages during the production, transport and construction processes. Nevertheless, the shaping of the initially flat grid also generates important bending stresses on the structure, reducing therewith its bearing capacity against external loads. An optimisation of the grid topology in order to minimize the profiles curvature and, with it, the initial stresses is therefore crucial. In this paper a topology optimisation method based on a non-linear algorithm is presented. The optimisation results of diverse double-curved gridshells with regular and irregular meshes are shown.  
+
+\end{abstract}
+
+\section{Introduction}
+
+
+\section{Algorithm-based Typology Optimisation}
+
+\subsection{VaryLab Algorithm }
+
+Definition of energies, Visual information (histograms, points)
+
+\begin{eqnarray}
+E&=&\lambda_1 E_{\textrm{\scriptsize{ref}}} + \lambda_2 E_{\textrm{\scriptsize{len}}} + \lambda_3 E_{\textrm{\scriptsize{curv}}}
+\end{eqnarray}
+
+\begin{eqnarray}
+E_{\textrm{\scriptsize{ref}}} &=& \sum_{i\in V}  \left<v_i-cp_i,v_i-cp_i\right>\\
+E_{\textrm{\scriptsize{len}}} &=& \sum_{ij\in E} \left(\Vert v_i-v_j \Vert - l \right)^2\\
+E_{\textrm{\scriptsize{curv}}} &=& \sum_{i\in V} \sum_{ij\in E} \left(\pi - \angle(e_{ij}, \tilde e_{ij}) \right)^2
+\end{eqnarray}
+
+Here $cp_i$ is a closest point on the reference surface from the vertex $v_i$, $l$ is the required edge length constant, and $\tilde e_{ij}$ is the opposite edge of edge $e_{ij}$.
+
+\subsection{Comparison with an explicite solution}
+
+
+
+\section{Case Study of Gridhells with Regular Meshes}
+
+\subsection{Comparison with compass method}
+
+\subsection{Optimisation by tolerating more distance to reference surface}
+
+\section{Case Study of Gridhells with Irregular Meshes}
+
+\subsection{Optimisation by tolerating variation on the mesh size}
+
+\subsection{Erection process of irregular meshes}
+
+\section*{Acknowledgments}
+
+\nocite{*}
+\bibliographystyle{acmsiggraph1} % use ACM SIGGRAPH bibliography style
+\bibliography{Paper} % input your .bib file here
+
+\ifreviewing\else\vfill
+
+\noindent{\it Authors' address:} \\[1ex]
+Elisa Lafuente Hern\'andez (lafuente@udk-berlin.de), Christoph Gengnagel (gengnagel@udk-berlin.de): Universit\"at der K\"unste Berlin~/ 
+Hardenbergstrasse 33 -- 10623 Berlin, Germany. \\
+Stefan Sechelmann (sechel@math.tu-berlin.de): Technische Universit\"at Berlin / 
+MA 8-3 Stra\ss e des 17. Juni 136 -- 10623  Berlin, Germany.\fi
+\end{document}

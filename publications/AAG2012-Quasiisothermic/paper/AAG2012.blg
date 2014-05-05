@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: AAG2012.aux
+The style file: acmsiggraph1.bst
+Database file #1: AAG2012.bib
+Warning--empty organization in CohMor03
+You've used 19 entries,
+            2748 wiz_defined-function locations,
+            728 strings with 8109 characters,
+and the built_in function-call counts, 8291 in all, are:
+= -- 835
+> -- 424
+< -- 0
++ -- 146
+- -- 152
+* -- 733
+:= -- 1387
+add.period$ -- 78
+call.type$ -- 19
+change.case$ -- 144
+chr.to.int$ -- 19
+cite$ -- 20
+duplicate$ -- 246
+empty$ -- 593
+format.name$ -- 170
+if$ -- 1671
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 16
+newline$ -- 117
+num.names$ -- 59
+pop$ -- 126
+preamble$ -- 1
+purify$ -- 126
+quote$ -- 0
+skip$ -- 172
+stack$ -- 0
+substring$ -- 466
+swap$ -- 58
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 148
+warning$ -- 1
+while$ -- 67
+width$ -- 22
+write$ -- 274
+(There was 1 warning)

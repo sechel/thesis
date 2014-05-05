@@ -1,0 +1,35 @@
+\begin{thebibliography}{\protect\citename{Pottmann et~al\mbox{.} }2007}
+
+\bibitem[\protect\citename{Chu and S{\'e}quin }2002]{chusequin:2002}
+{\sc Chu, C.~H., and S{\'e}quin, C.}
+\newblock 2002.
+\newblock Developable {B}{\'e}zier patches: properties and design.
+\newblock {\em Comput. Aided Design 34\/}, 511--528.
+
+\bibitem[\protect\citename{Dandelin }1822]{dandelin-1822}
+{\sc Dandelin, G.~P.}
+\newblock 1822.
+\newblock {M\'emoire sur quelques propri\'et\'es remarquables de la focale
+  parabolique}.
+\newblock {\em Nouv.\ M\`em.\ Ac.\ Sc.\ de Belgique 2\/}, 172.
+
+\bibitem[\protect\citename{Pauly et~al\mbox{.} }2008]{pauly-2008-sr}
+{\sc Pauly, M., Mitra, N.~J., Wallner, J., Pottmann, H., and Guibas, L.}
+\newblock 2008.
+\newblock Discovering structural regularity in {3D} geometry.
+\newblock {\em ACM Trans. Graphics 27}, 3, \#43, 1--11.
+\newblock Proc.\ SIGGRAPH.
+
+\bibitem[\protect\citename{Pottmann et~al\mbox{.} }2007]{archgeom:2007}
+{\sc Pottmann, H., Asperl, A., Hofer, M., and Kilian, A.}
+\newblock 2007.
+\newblock {\em Architectural Geometry}.
+\newblock Bentley Institute Press.
+
+\bibitem[\protect\citename{Schiftner et~al\mbox{.} }2008]{schiftner-2008-afs}
+{\sc Schiftner, A., Raynaud, J., Baldassini, N., Bo, P., and Pottmann, H.}
+\newblock 2008.
+\newblock Architectural freeform structures from single curved panels.
+\newblock In {\em Advances in Architectural Geometry}. TU Wien, Vienna, 45--48.
+
+\end{thebibliography}

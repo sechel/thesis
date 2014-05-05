@@ -1,0 +1,63 @@
+\documentclass[twoside]{article}
+%\usepackage[reviewing]{aag10} % for reviewing
+%\usepackage[reviewing,debug]{aag10}\def\extrapage{3} % to produce guidelines
+\usepackage[final]{aag10} % for the final version
+\usepackage{graphicx} % for graphics
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{color}
+
+\DeclareMathOperator{\sn}{sn}
+\DeclareMathOperator{\cn}{cn}
+
+\begin{document}
+
+\title{Topology Optimisation of Regular and Irregular Elastic Gridshells by Means of a Non-linear Variational Method}
+
+\author{Elisa Lafuente Hern\'andez 
+\affiliation{Department of Architecture, University of the Arts, Berlin Germany}
+Stefan Sechelmann
+\affiliation{Institut f\"{u}r Mathematik, Technische Universit\"at Berlin}
+Thilo R\"orig
+\affiliation{Institut f\"{u}r Mathematik, Technische Universit\"at Berlin}
+Christoph Gengnagel
+\affiliation{Department of Architecture, University of the Arts, Berlin Germany}
+}
+
+\maketitle
+\def\shortauthor{E. Lafuente Hern\'andez, S. Sechelmann, T. R\"orig and C. Gengnagel}  % for the running head
+\def\shorttitle{Topology Optimisation of Elastic Gridshells}   % for the running head
+
+\begin{abstract}
+Gridshells composed of elastically-bent profiles offer significant cost and time advantages during the production, transport and construction processes. Nevertheless, the shaping of the initially flat grid also generates important bending stresses on the structures, reducing therewith their bearing capacity against external loads. An optimisation of the grid topology in order to minimise the profiles curvature and, with it, the initial stresses is therefore crucial. In this paper a non-linear variational method for optimising topologies of elastic gridshells with regular and irregular meshes is presented. Different case studies of double-curved gridshells show the advantages and capacity of this method.  
+\end{abstract}
+\ifreviewing\else
+\fi
+
+\input{Chapter1_Introduction}
+\input{Chapter2_AlgorithmBasedOptimisation}
+\input{Chapter3_CaseStudies_RegularGridshells}
+\input{Chapter4_CaseStudies_IrregularGridshells}
+\input{Chapter5_Conclusion}
+
+\ifreviewing\else
+\section*{Acknowledgements}
+Stefan Sechelmann is supported by DFG Research Center \textsc{Matheon}, Thilo R\"orig by SFB/TR 109: Discretization in Geometry and Dynamics.
+We thank Andrew Furnas for pointing us to the Chebyshev parameterisations of the sphere by Voss. 
+\fi
+
+\nocite{*}
+%\let\otb=\thebibliography\def\thebibliography#1{\otb{#1}\itemsep-2pt\footnotesize}
+\bibliographystyle{acmsiggraph1} % use ACM SIGGRAPH bibliography style
+\bibliography{Paper} % input your .bib file here
+
+%\ifreviewing
+%\else\vfill
+%\noindent{\it Authors' address:} \\[1ex]
+%Elisa Lafuente Hern\'andez (lafuente@udk-berlin.de): Universit\"at der K\"unste Berlin~/ 
+%Hardenbergstrasse 33 -- 10623 Berlin, Germany. \\
+%Stefan Sechelmann (sechel@math.tu-berlin.de), Thilo R\"orig (roerig@math.tu-berlin.de): 
+%Technische Universit\"at Berlin~/ MA 8-3 / Stra\ss e des 17. Juni 136 -- 10623  Berlin, Germany.
+%\fi
+\end{document}

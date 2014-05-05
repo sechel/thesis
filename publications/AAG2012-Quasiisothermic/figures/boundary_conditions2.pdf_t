@@ -1,0 +1,53 @@
+\begin{picture}(0,0)%
+\includegraphics{boundary_conditions2.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 4.9 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{1776sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6412,8127)(-14,-7357)
+%  METADATA <id>18</id> 
+\put(3541,-2326){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi(j)$}%
+}}}}
+%  METADATA <id>18</id> 
+\put(  1,-61){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi(i)$}%
+}}}}
+%  METADATA <id>16</id> 
+\put(6001,539){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi(k)$}%
+}}}}
+%  METADATA <id>12</id> 
+\put(2101,-1036){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{ij}$}}%
+}}}}
+%  METADATA <id>12</id> 
+\put(4276,-961){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{jk}$}}%
+}}}}
+%  METADATA <id>18</id> 
+\put(3301,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\theta_j$}}%
+}}}}
+%  METADATA <id>18</id> 
+\put(376,-2836){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi(i)$}%
+}}}}
+%  METADATA <id>12</id> 
+\put(2476,-3811){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{ij}$}}%
+}}}}
+%  METADATA <id>18</id> 
+\put(4501,-4786){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\theta_j$}}%
+}}}}
+%  METADATA <id>16</id> 
+\put(2026,-7261){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi(k)$}%
+}}}}
+%  METADATA <id>18</id> 
+\put(3901,-5236){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\Phi(j)$}}%
+}}}}
+%  METADATA <id>12</id> 
+\put(3151,-6211){\makebox(0,0)[lb]{\smash{{\SetFigFont{8}{9.6}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{jk}$}}%
+}}}}
+\end{picture}%

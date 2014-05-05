@@ -1,0 +1,99 @@
+\message{ !name(article.tex)} %\documentclass{egpublplain}
+%\usepackage{egsgp11}
+\documentclass[twoside]{article}
+\usepackage[reviewing]{aag10} % for the final version
+% \usepackage[final]{aag10} % for the final version
+\usepackage{subfiles}
+\usepackage{color}
+\usepackage{url}
+\usepackage{contour}
+\contournumber{32}
+\contourlength{0.1em}
+\usepackage{ifsym}
+\usepackage[multiple]{footmisc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{paralist}
+\usepackage{xspace}
+\newcommand{\Epl}{E_{pl}}
+\newcommand{\Ereg}{E_{reg}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\VaryLab}{{\sc VaryLab}\xspace}
+\newcommand{\nurbs}{{\sc nurbs}\xspace}
+
+
+% for including postscript figures
+% mind: package option 'draft' will replace PS figure by a filname within a frame
+\ifpdf \usepackage[pdftex]{graphicx} \pdfcompresslevel=9
+\else \usepackage[dvips]{graphicx} \fi
+
+\usepackage[percent]{overpic}
+% TODO: remove package import
+\usepackage{showlabels}
+\renewcommand{\showlabelfont}{\scriptsize\ttfamily\color{blue}}
+% \PrintedOrElectronic
+
+% prepare for electronic version of your document
+% \usepackage{t1enc,dfadobe}
+
+%\usepackage{egweblnk}
+\usepackage{cite}
+
+% ams packages
+% \usepackage{amssymb}
+% \newtheorem{definition}{Definition}[section]
+
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+% For backwards compatibility to old LaTeX type font selection.
+% Uncomment if your document adheres to LaTeX2e recommendations.
+% \let\rm=\rmfamily    \let\sf=\sffamily    \let\tt=\ttfamily
+% \let\it=\itshape     \let\sl=\slshape     \let\sc=\scshape \let\bf=\bfseries
+% end of prologue
+
+
+% ------------------------------------------------------------------------
+
+% if the Editors-in-Chief have given you the data, you may uncomment
+% the following five lines and insert it here
+%
+% \volume{27}   % the volume in which the issue will be published;
+% \issue{1}     % the issue number of the publication
+% \pStartPage{1}      % set starting page
+
+
+\newtheorem{definition}{Definition}
+
+%-------------------------------------------------------------------------
+\def\mainbibliography {
+	\bibliographystyle{acmsiggraph1} % use ACM SIGGRAPH bibliography style
+	\bibliography{article}
+}
+\def\subfilebibliography {
+	\bibliographystyle{acmsiggraph1} % use ACM SIGGRAPH bibliography style
+	\bibliography{article}
+}
+
+\begin{document}
+
+\message{ !name(hexagons.tex) !offset(-80) }
+
+
+\newcommand{\Ealpha}{E_\alpha}
+\newcommand{\Eedge}{E_\ell}
+
+
+\message{ !name(article.tex) !offset(43) }
+
+\end{document}
+
+% TODO:
+% * introduction 
+% * conclusion
+% * references
+% * figures and captions
+% * reading
+% * spell-check
+% * 

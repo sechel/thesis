@@ -1,0 +1,84 @@
+\begin{thebibliography}{\protect\citename{{Lafuente Hern\'andez} et~al\mbox{.}
+  }2011}
+
+\bibitem[\protect\citename{Alpermann et~al\mbox{.} }2012]{Alpermann2012}
+{\sc Alpermann, H., Lafuente~Hern\'andez, E., and Gengnagel, C.}
+\newblock 2012.
+\newblock Case-studies of arched structures using actively-bent elements.
+\newblock In {\em Conference Proceedings IASS Symposium 2012}.
+
+\bibitem[\protect\citename{Balay et~al\mbox{.} }2011]{petsc-web-page}
+{\sc Balay, S., Brown, J., Buschelman, K., Gropp, W.~D., Kaushik, D., Knepley,
+  M.~G., McInnes, L.~C., Smith, B.~F., and Zhang, H.}, 2011.
+\newblock {PETSc} {W}eb page.
+\newblock {\http:// www. mcs. anl. gov/ petsc}.
+
+\bibitem[\protect\citename{Benson et~al\mbox{.} }2007]{tao-user-ref}
+{\sc Benson, S., McInnes, L.~C., Mor\'{e}, J., Munson, T., and Sarich, J.},
+  2007.
+\newblock {TAO} user manual (revision 1.9).
+\newblock {\http:// www. mcs. anl. gov/ tao}.
+
+\bibitem[\protect\citename{Bouhaya et~al\mbox{.} }2011]{Bouhaya2011}
+{\sc Bouhaya, L., Baverel, O., and Caron, J.-F.}
+\newblock 2011.
+\newblock Optimisation structurelle des gridshells.
+\newblock In {\em 10\`eme Colloque national en calcul des structures (CSMA)}.
+
+\bibitem[\protect\citename{Gengnagel et~al\mbox{.}
+  }2012]{gengnagel2012computational}
+{\sc Gengnagel, C., Kilian, A., Palz, N., and Scheurer, F.}
+\newblock 2012.
+\newblock {\em Computational Design Modeling: Proceedings of the Design
+  Modeling Symposium Berlin 2011}.
+\newblock Springer.
+
+\bibitem[\protect\citename{Kuijvenhoven }2009]{Kuijvenhoven2009}
+{\sc Kuijvenhoven, M.}, 2009.
+\newblock A design method for timber grid shells.
+\newblock Master's thesis, Delft University of Technology.
+
+\bibitem[\protect\citename{{Lafuente Hern\'andez} et~al\mbox{.}
+  }2011]{Henandez2011}
+{\sc {Lafuente Hern\'andez}, E., Gengnagel, C., Sechelmann, S., and R\"orig,
+  T.}
+\newblock 2011.
+\newblock On the materiality and structural behaviour of highly-elastic
+  gridshell structures.
+\newblock In {\em Computational Design Modeling: Proceedings of the Design
+  Modeling Symposium Berlin 2011}.
+
+\bibitem[\protect\citename{Otto et~al\mbox{.} }1974]{IL1974}
+{\sc Otto, F., Schauer, E., Hennicke, J., and Hasegawa, T.}
+\newblock 1974.
+\newblock {\em Gitterschalen: Bericht \"uber das japanisch-deutsche
+  Forschungsprojekt S.T.T., durchgef\"uhrt von Mai 1971 bis Mai 1973 am
+  Institut f\"ur Leich\-te Fl{\"a}\-chen\-trag\-wer\-ke.}
+\newblock Seibu Construction Company / Institut f\"ur Leich\-te
+  Fl{\"a}\-chen\-trag\-wer\-ke / Kr\"amer.
+
+\bibitem[\protect\citename{Schiftner and Balzer }2010]{aag2010221}
+{\sc Schiftner, A., and Balzer, J.}
+\newblock 2010.
+\newblock Statics-sensitive layout of planar quadrilateral meshes.
+\newblock In {\em Advances in Architectural Geometry 2010}, C.~Ceccato et~al.,
+  Eds. Springer, 221--236.
+
+\bibitem[\protect\citename{Sommer }2010]{jpetsctao-web-page}
+{\sc Sommer, H.}, 2010.
+\newblock {jPETScTao JNI library} web page.
+\newblock {\http:// jpetsctao. zwoggel. net/}.
+
+\bibitem[\protect\citename{Springborn et~al\mbox{.} }2008]{springbornetal:2008}
+{\sc Springborn, B., Schr{\"o}der, P., and Pinkall, U.}
+\newblock 2008.
+\newblock Conformal equivalence of triangle meshes.
+\newblock {\em ACM Trans.\ Graphics 27}, 3, \#{}77, 1--11.
+
+\bibitem[\protect\citename{Voss }1881]{voss}
+{\sc Voss, A.}
+\newblock 1881.
+\newblock {U}eber ein neues {P}rincip der {A}bbildung krummer {O}berfl\"achen.
+\newblock {\em Mathematische Annalen 19\/}, 1--26.
+
+\end{thebibliography}

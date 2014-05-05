@@ -1,0 +1,25 @@
+\begin{picture}(0,0)%
+\includegraphics{triangle_angles.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 4.9 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{2171sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(4013,4212)(1407,-3903)
+\put(3679,-1974){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{ki}$}}%
+}}}}
+\put(3551,-871){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{ij}$}}%
+}}}}
+\put(3880,-115){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{jk}$}}%
+}}}}
+\put(3373,-2781){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{jk}$}}%
+}}}}
+\end{picture}%

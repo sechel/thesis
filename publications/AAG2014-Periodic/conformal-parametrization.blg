@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: conformal-parametrization.aux
+The style file: acmsiggraph1.bst
+Database file #1: article.bib
+You've used 3 entries,
+            2748 wiz_defined-function locations,
+            623 strings with 5026 characters,
+and the built_in function-call counts, 1512 in all, are:
+= -- 150
+> -- 79
+< -- 0
++ -- 26
+- -- 26
+* -- 140
+:= -- 259
+add.period$ -- 14
+call.type$ -- 3
+change.case$ -- 22
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 43
+empty$ -- 109
+format.name$ -- 29
+if$ -- 303
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 3
+newline$ -- 22
+num.names$ -- 11
+pop$ -- 18
+preamble$ -- 1
+purify$ -- 19
+quote$ -- 0
+skip$ -- 25
+stack$ -- 0
+substring$ -- 105
+swap$ -- 9
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 0
+while$ -- 13
+width$ -- 5
+write$ -- 47

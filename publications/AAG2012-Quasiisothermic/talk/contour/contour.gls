@@ -1,0 +1,26 @@
+
+ \begin{theglossary} 
+
+    \makeatletter\scan@allowedfalse
+
+  \item 1.04\efill 
+ \subitem General:\ Avoide usage of \cs  {textversion} etc.\pfill 1
+  \item 2.00\efill 
+ \subitem General:\ Allow arbitrary numbers of text copies\pfill 1
+  \item 2.10\efill 
+ \subitem General:\ Bugfix: enable switching colors inside \cs  {contour} argument\pfill 4
+      \subsubitem Print text with real outlines for vector fonts\pfill 
+		1
+  \item 2.11\efill 
+ \subitem General:\ Restricted outline support for VT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m \pfill 
+		1
+  \item 2.12\efill 
+ \subitem General:\ Full outline support for VT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m \pfill 
+		1
+  \item 2.13\efill 
+ \subitem \verb*+\@contour@outline+:\ More robust mechanism to change Postscript internals for dvips\pfill 8
+  \item 2.14\efill 
+ \subitem General:\ Add support for DVIPSONE\pfill 10
+      \subsubitem Full outline support for Y\&Y DVIPSONE\pfill 1
+
+ \end{theglossary}

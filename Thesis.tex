@@ -5,7 +5,14 @@
 \usepackage[german, english]{babel}
 
 \usepackage[]{graphicx}
-\graphicspath{{image/}{figures/}{data/}}
+\graphicspath{
+	{image/}
+	{figures/}
+	{data/}
+	{publications/AAG2012-Gridshells/}
+	{publications/AAG2014-Periodic/images/}
+	{publications/AAG2014-Periodic/}
+}
 \usepackage{color}
 
 \usepackage{contour}
@@ -54,6 +61,15 @@
    breaklines=true,
  }
 
+% AAG2014
+\usepackage[percent]{overpic}
+%\usepackage{paralist}
+\usepackage{xspace}
+\newcommand{\Epl}{E_{pl}}
+\newcommand{\Ereg}{E_{reg}}
+\newcommand{\VaryLab}{{\sc VaryLab}\xspace}
+\newcommand{\nurbs}{{\sc nurbs}\xspace}
+
 %\usepackage{hyperref}
 \usepackage[nottoc,numbib,notlof]{tocbibind}
 
@@ -81,6 +97,9 @@
 \newcommand{\N}{\mathbb N}
 \renewcommand{\S}{\mathbb S}
 \newcommand{\Chat}{\hat{\mathbb C}}
+
+\DeclareMathOperator{\sn}{sn}
+\DeclareMathOperator{\cn}{cn}
 
 \def\TReg{\textsuperscript{\textregistered} }
 
@@ -120,17 +139,24 @@ Tag der wissenschaftlichen Aussprache: NN\\
 	\backmatter
 	\setcounter{secnumdepth}{-1} 
 	\bibliographystyle{amsalpha}
-	\bibliography{Thesis}
+	\bibliography{Thesis,publications/AAG2012-Gridshells/Paper,publications/AAG2014-Periodic/article}
 }
 \def\subfilebibliography {
 	\backmatter
 	\setcounter{secnumdepth}{-1} 
 	\bibliographystyle{amsalpha}
-	\bibliography{Thesis}
+	\bibliography{Thesis,publications/AAG2012-Gridshells/Paper,publications/AAG2014-Periodic/article}
+}
+\def\subfilebibliographytwo {
+	\backmatter
+	\setcounter{secnumdepth}{-1} 
+	\bibliographystyle{amsalpha}
+	\bibliography{Thesis,publications/AAG2012-Gridshells/Paper,publications/AAG2014-Periodic/article}
 }
 
 \begin{document}
 \def\subfilebibliography{}
+\def\subfilebibliographytwo{}
 
 \frontmatter
 \maketitle
@@ -151,6 +177,7 @@ Tag der wissenschaftlichen Aussprache: NN\\
 \subfile{Chapter1_02_Examples.tex}
 \part{Variational Methods for Discrete Surface Parameterization}
 \subfile{Chapter2_Quasiisothermic.tex}
+\subfile{Chapter2_PeriodicPanelization.tex}
 \subfile{Chapter2_Interpolation.tex}
 \subfile{Chapter2_Tschebyscheff.tex}
 \part{Software Packages}

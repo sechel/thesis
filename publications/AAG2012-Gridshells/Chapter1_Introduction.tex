@@ -1,0 +1,18 @@
+%!TEX root = ./Paper.tex
+
+\section{Introduction}
+
+Elastic gridshells make use of the principle of active-bending \cite{Alpermann2012} since their final geometry results from the elastic deformation of initially flat grids. This construction principle has the advantage of reducing costs and time during the production, transport and construction processes. Nevertheless, the shaping of the profiles induces significant stresses on the grids reducing therewith their bearing capacity against external loads.  
+
+In order to diminish the initial stresses, profiles with low sections and materials with low modulus of elasticity are usually chosen. However, this leads to a reduction of the global stiffness of the gridshell which can result in stability problems. With an optimisation of the grid topology (orientation and arrangement of the grid profiles) a minimisation of the profiles curvature can be obtained and the load-bearing capacity of the gridshells improved \cite{Henandez2011}.  
+
+In \cite{Kuijvenhoven2009}, M. Kuijvenhoven proposed a design methodology for elastic gridshells based on particle-spring models. In this method, the gridshell topology results from an iterative process, where the initially flat grid is progressively approached, vertically, towards the reference surface by shaping springs until achieving the maximum allowable curvature on the grid. Material and sectional properties of the grid profiles are given as input information. Dynamic relaxation is used here to calculate the equilibrium of forces on the grids. 
+
+\cite{Bouhaya2011}, Laboratoire Navier of the Paris-Est University, presented a topology optimisation method based on the geometric compass method, described by Frei Otto's Institute for Lightweight Surface Structures in \cite{IL1974}, combined with genetic algorithms. This method consists on mapping grids, differing on the orientation and angle between the crossing profiles, on an imposed surface as in the compass method and selecting the one with lowest curvature using stochastic genetic algorithms.
+
+In this paper a non-linear variational method for optimising topologies of regular and irregular elastic gridshells is proposed. The optimisation parameters {\it mesh size}, {\it reference surface} and {\it profiles curvature} are defined as penalising energies (the difference to the desired values will be considered) with corresponding weighting factors. The resulting grid definition is calculated by minimizing the linear combination of these three energies. In the context of discrete differential geometry a mesh with constant edge lengths is called a discrete Chebyshev net. So we aim for meshes with the Chebyshev property that approximate a given surface with low curvature in the parameter curves. 
+
+The advantage of this method is that the grid must not stay on the reference surface and displacements of the grid nodes are possible in all directions, so that a further optimisation of the grid can be achieved. Moreover, different grid configurations can be calculated by defining priorities between the optimisation parameters. For example, a higher reduction of the profiles curvature can be achieved by tolerating a larger distance from the reference surface or variation on the mesh size (irregular meshes). Several double-curved surfaces with regular and irregular meshes have been optimised with the variational method and the results presented in the following chapters.
+
+\bigskip
+

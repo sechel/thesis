@@ -1,0 +1,25 @@
+\begin{thebibliography}{\protect\citename{Sechelmann and R{\"o}rig }2013}
+
+\bibitem[\protect\citename{Balay et~al\mbox{.} }2011]{petsc-web-page}
+{\sc Balay, S., Brown, J., Buschelman, K., Gropp, W.~D., Kaushik, D., Knepley,
+  M.~G., McInnes, L.~C., Smith, B.~F., and Zhang, H.}, 2011.
+\newblock {PETSc} {W}eb page.
+\newblock \url{http://www.mcs.anl.gov/petsc}.
+
+\bibitem[\protect\citename{Benson et~al\mbox{.} }2007]{tao-user-ref}
+{\sc Benson, S., McInnes, L.~C., Mor\'{e}, J., Munson, T., and Sarich, J.},
+  2007.
+\newblock {TAO} user manual (revision 1.9).
+\newblock \url{http://www.mcs.anl.gov/tao}.
+
+\bibitem[\protect\citename{Sechelmann and R{\"o}rig }2013]{varylab-web-page}
+{\sc Sechelmann, S., and R{\"o}rig, T.}, 2013.
+\newblock {\sc VaryLab} web page.
+\newblock \url{http://www.varylab.com}.
+
+\bibitem[\protect\citename{Sommer }2010]{jpetsctao-web-page}
+{\sc Sommer, H.}, 2010.
+\newblock {\sc JpetscTao}, {JNI} wrapper.
+\newblock \url{http://jpetsctao. zwoggel.net/}.
+
+\end{thebibliography}

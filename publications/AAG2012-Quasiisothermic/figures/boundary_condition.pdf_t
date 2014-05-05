@@ -1,0 +1,35 @@
+\begin{picture}(0,0)%
+\includegraphics{boundary_condition.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 4.9 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{2171sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6221,3192)(1036,-2572)
+%  METADATA <id>18</id> 
+\put(4591,-2476){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi(j)$}%
+}}}}
+%  METADATA <id>18</id> 
+\put(1051,-211){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi(i)$}%
+}}}}
+%  METADATA <id>16</id> 
+\put(7051,389){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi(k)$}%
+}}}}
+%  METADATA <id>12</id> 
+\put(3151,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{ij}$}}%
+}}}}
+%  METADATA <id>12</id> 
+\put(5326,-1111){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\alpha_{jk}$}}%
+}}}}
+%  METADATA <id>18</id> 
+\put(4351,-1486){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$\theta_j$}}%
+}}}}
+\end{picture}%

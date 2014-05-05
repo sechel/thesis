@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformalDataList xmlns="http://www.varylab.com/conformallab/types">
+    <DiscreteMetric name="Input Discrete Metric">
+        <MetricEdge length="1.4142135623730951" index="0"/>
+        <MetricEdge length="1.4142135623730951" index="1"/>
+        <MetricEdge length="1.4142135623730951" index="2"/>
+        <MetricEdge length="1.4142135623730951" index="3"/>
+        <MetricEdge length="1.4142135623730951" index="4"/>
+        <MetricEdge length="1.4142135623730951" index="5"/>
+        <MetricEdge length="1.4142135623730951" index="6"/>
+        <MetricEdge length="1.4142135623730951" index="7"/>
+        <MetricEdge length="1.4142135623730951" index="8"/>
+        <MetricEdge length="1.4142135623730951" index="9"/>
+        <MetricEdge length="1.4142135623730951" index="10"/>
+        <MetricEdge length="1.4142135623730951" index="11"/>
+        <MetricTriangle edge1="8" edge2="0" edge3="1"/>
+        <MetricTriangle edge1="10" edge2="0" edge3="3"/>
+        <MetricTriangle edge1="2" edge2="5" edge3="3"/>
+        <MetricTriangle edge1="4" edge2="5" edge3="1"/>
+        <MetricTriangle edge1="7" edge2="2" edge3="6"/>
+        <MetricTriangle edge1="6" edge2="9" edge3="4"/>
+        <MetricTriangle edge1="9" edge2="8" edge3="11"/>
+        <MetricTriangle edge1="10" edge2="11" edge3="7"/>
+    </DiscreteMetric>
+    <DiscreteEmbedding name="Input Discrete Position Embedding">
+        <EmbeddedVertex x="0.5" y="-0.5" z="-0.5" w="1.0" index="0"/>
+        <EmbeddedVertex x="0.5" y="0.5" z="0.5" w="1.0" index="1"/>
+        <EmbeddedVertex x="-0.5" y="0.5" z="-0.5" w="1.0" index="2"/>
+        <EmbeddedVertex x="-0.5" y="-0.5" z="0.5" w="1.0" index="3"/>
+        <EmbeddedTriangle vertex1="3" vertex2="2" vertex3="1"/>
+        <EmbeddedTriangle vertex1="0" vertex2="1" vertex3="2"/>
+        <EmbeddedTriangle vertex1="2" vertex2="3" vertex3="0"/>
+        <EmbeddedTriangle vertex1="1" vertex2="0" vertex3="3"/>
+        <EmbeddedTriangle vertex1="1" vertex2="3" vertex3="2"/>
+        <EmbeddedTriangle vertex1="1" vertex2="2" vertex3="0"/>
+        <EmbeddedTriangle vertex1="0" vertex2="2" vertex3="3"/>
+        <EmbeddedTriangle vertex1="1" vertex2="0" vertex3="3"/>
+    </DiscreteEmbedding>
+    <DiscreteMap name="Uniformizing Map">
+        <Domain name="Uniformizing Map_domain">
+            <EmbeddedVertex x="-9.992007221626409E-16" y="2.4494897427831788" z="0.0" w="1.0" index="0"/>
+            <EmbeddedVertex x="-0.7071067811865479" y="1.2247448713915892" z="0.0" w="1.0" index="1"/>
+            <EmbeddedVertex x="0.7071067811865471" y="1.2247448713915894" z="0.0" w="1.0" index="2"/>
+            <EmbeddedVertex x="1.4142135623730931" y="2.4494897427831797" z="0.0" w="1.0" index="3"/>
+            <EmbeddedVertex x="0.0" y="0.0" z="0.0" w="1.0" index="4"/>
+            <EmbeddedVertex x="-1.4142135623730951" y="1.7319121124709868E-16" z="0.0" w="1.0" index="5"/>
+            <EmbeddedVertex x="2.8284271247461885" y="2.4494897427831797" z="0.0" w="1.0" index="6"/>
+            <EmbeddedVertex x="2.1213203435596424" y="1.2247448713915894" z="0.0" w="1.0" index="7"/>
+            <EmbeddedVertex x="1.4142135623730951" y="0.0" z="0.0" w="1.0" index="8"/>
+            <Identification>
+                <Vertex>3</Vertex>
+                <Vertex>4</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>0</Vertex>
+                <Vertex>5</Vertex>
+                <Vertex>6</Vertex>
+                <Vertex>8</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>1</Vertex>
+                <Vertex>7</Vertex>
+            </Identification>
+            <EmbeddedTriangle vertex1="3" vertex2="2" vertex3="7"/>
+            <EmbeddedTriangle vertex1="8" vertex2="7" vertex3="2"/>
+            <EmbeddedTriangle vertex1="2" vertex2="4" vertex3="8"/>
+            <EmbeddedTriangle vertex1="7" vertex2="6" vertex3="3"/>
+            <EmbeddedTriangle vertex1="1" vertex2="4" vertex3="2"/>
+            <EmbeddedTriangle vertex1="1" vertex2="2" vertex3="0"/>
+            <EmbeddedTriangle vertex1="0" vertex2="2" vertex3="3"/>
+            <EmbeddedTriangle vertex1="1" vertex2="5" vertex3="4"/>
+        </Domain>
+        <Image name="Uniformizing Map_image">
+            <EmbeddedVertex x="0.5" y="-0.5" z="-0.5" w="0.8660254037844385" index="0"/>
+            <EmbeddedVertex x="0.5" y="0.5" z="0.5" w="0.8660254037844385" index="1"/>
+            <EmbeddedVertex x="-0.5" y="0.5" z="-0.5" w="0.8660254037844385" index="2"/>
+            <EmbeddedVertex x="-0.5" y="-0.5" z="0.5" w="0.8660254037844385" index="3"/>
+            <EmbeddedVertex x="-0.5" y="-0.5" z="0.5" w="0.8660254037844385" index="4"/>
+            <EmbeddedVertex x="0.5" y="-0.5" z="-0.5" w="0.8660254037844385" index="5"/>
+            <EmbeddedVertex x="0.5" y="-0.5" z="-0.5" w="0.8660254037844385" index="6"/>
+            <EmbeddedVertex x="0.5" y="0.5" z="0.5" w="0.8660254037844385" index="7"/>
+            <EmbeddedVertex x="0.5" y="-0.5" z="-0.5" w="0.8660254037844385" index="8"/>
+            <Identification>
+                <Vertex>3</Vertex>
+                <Vertex>4</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>0</Vertex>
+                <Vertex>5</Vertex>
+                <Vertex>6</Vertex>
+                <Vertex>8</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>1</Vertex>
+                <Vertex>7</Vertex>
+            </Identification>
+            <EmbeddedTriangle vertex1="3" vertex2="2" vertex3="7"/>
+            <EmbeddedTriangle vertex1="8" vertex2="7" vertex3="2"/>
+            <EmbeddedTriangle vertex1="2" vertex2="4" vertex3="8"/>
+            <EmbeddedTriangle vertex1="7" vertex2="6" vertex3="3"/>
+            <EmbeddedTriangle vertex1="1" vertex2="4" vertex3="2"/>
+            <EmbeddedTriangle vertex1="1" vertex2="2" vertex3="0"/>
+            <EmbeddedTriangle vertex1="0" vertex2="2" vertex3="3"/>
+            <EmbeddedTriangle vertex1="1" vertex2="5" vertex3="4"/>
+        </Image>
+    </DiscreteMap>
+    <UniformizationData name="Direct Uniformization">
+        <UniformizingGroup>
+            <IsometryPSL2R m11="1.0" m12="-3.7525083169412276E-16" m13="1.414213562373094" m21="3.7525083169412276E-16" m22="1.0" m23="2.449489742783179" m31="0.0" m32="0.0" m33="1.0"/>
+            <IsometryPSL2R m11="0.9999999999999999" m12="-3.885780586188048E-16" m13="2.8284271247461903" m21="3.885780586188048E-16" m22="0.9999999999999999" m23="8.881784197001252E-16" m31="0.0" m32="0.0" m33="1.0"/>
+            <IsometryPSL2R m11="1.0" m12="3.7525083169412276E-16" m13="-1.4142135623730943" m21="-3.7525083169412276E-16" m22="1.0" m23="-2.4494897427831788" m31="0.0" m32="0.0" m33="1.0"/>
+            <IsometryPSL2R m11="0.9999999999999999" m12="4.996003610813204E-16" m13="-2.82842712474619" m21="-4.440892098500626E-16" m22="1.0" m23="8.393250260221926E-16" m31="0.0" m32="0.0" m33="1.0"/>
+        </UniformizingGroup>
+        <FundamentalPolygon>
+            <FundamentalVertex index="0"/>
+            <FundamentalEdge index="0" nextEdge="1" previousEdge="3" identifiedEdge="2" startVertex="0">
+                <StartPosition re="-9.992007221626409E-16" im="2.4494897427831788"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="1" nextEdge="2" previousEdge="0" identifiedEdge="3" startVertex="0">
+                <StartPosition re="2.8284271247461885" im="2.4494897427831797"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="2" nextEdge="3" previousEdge="1" identifiedEdge="0" startVertex="0">
+                <StartPosition re="1.4142135623730951" im="0.0"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="3" nextEdge="0" previousEdge="2" identifiedEdge="1" startVertex="0">
+                <StartPosition re="-1.4142135623730951" im="1.7319121124709868E-16"/>
+            </FundamentalEdge>
+        </FundamentalPolygon>
+    </UniformizationData>
+    <UniformizationData name="Minimal Uniformization">
+        <UniformizingGroup>
+            <IsometryPSL2R m11="1.0" m12="-3.7525083169412276E-16" m13="1.414213562373094" m21="3.7525083169412276E-16" m22="1.0" m23="2.449489742783179" m31="0.0" m32="0.0" m33="1.0"/>
+            <IsometryPSL2R m11="0.9999999999999999" m12="-3.885780586188048E-16" m13="2.8284271247461903" m21="3.885780586188048E-16" m22="0.9999999999999999" m23="8.881784197001252E-16" m31="0.0" m32="0.0" m33="1.0"/>
+            <IsometryPSL2R m11="1.0" m12="3.7525083169412276E-16" m13="-1.4142135623730943" m21="-3.7525083169412276E-16" m22="1.0" m23="-2.4494897427831788" m31="0.0" m32="0.0" m33="1.0"/>
+            <IsometryPSL2R m11="0.9999999999999999" m12="4.996003610813204E-16" m13="-2.82842712474619" m21="-4.440892098500626E-16" m22="1.0" m23="8.393250260221926E-16" m31="0.0" m32="0.0" m33="1.0"/>
+        </UniformizingGroup>
+        <FundamentalPolygon>
+            <FundamentalVertex index="0"/>
+            <FundamentalEdge index="0" nextEdge="1" previousEdge="3" identifiedEdge="2" startVertex="0">
+                <StartPosition re="-9.992007221626409E-16" im="2.4494897427831788"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="1" nextEdge="2" previousEdge="0" identifiedEdge="3" startVertex="0">
+                <StartPosition re="2.8284271247461885" im="2.4494897427831797"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="2" nextEdge="3" previousEdge="1" identifiedEdge="0" startVertex="0">
+                <StartPosition re="1.4142135623730951" im="0.0"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="3" nextEdge="0" previousEdge="2" identifiedEdge="1" startVertex="0">
+                <StartPosition re="-1.4142135623730951" im="1.7319121124709868E-16"/>
+            </FundamentalEdge>
+        </FundamentalPolygon>
+    </UniformizationData>
+</ConformalDataList>

@@ -1,0 +1,142 @@
+
+ \begin{theindex} 
+ \makeatletter\scan@allowedfalse
+{\bfseries\hfil Symbols\hfil}\nopagebreak
+
+  \item \verb*+\@contour+\pfill 61, 62
+  \item \verb*+\@contour@outline+\pfill 69, \main{126}, \main{153}, 
+		\main{175}, \main{199}
+  \item \verb*+\@declaredcolor+\pfill 14
+  \item \verb*+\@empty+\pfill 94, 110
+  \item \verb*+\@ifstar+\pfill 61
+  \item \verb*+\@ifundefined+\pfill 43, 235, 242
+  \item \verb*+\@namedef+\pfill 44
+  \item \verb*+\@tempcnta+\pfill 42--44, 46, 50, 73, 75, 81
+  \item \verb*+\@tempcntb+\pfill 48, 50, 54, 77, 81, 87
+  \item \verb*+\@tempdima+\pfill 45, 46, 55, 74, 75, 88
+  \item \verb*+\@tempdimb+\pfill 47, 51, 55, 76, 82, 88
+  \item \verb*+\@undeclaredcolor+\pfill 13
+  \item \verb*+\@undefined+\pfill 58, 59
+
+  \indexspace
+{\bfseries\hfil A\hfil}\nopagebreak
+
+  \item \verb*+\advance+\pfill 54, 55, 87, 88
+
+  \indexspace
+{\bfseries\hfil B\hfil}\nopagebreak
+
+  \item \verb*+\begingroup+\pfill 71, 128, 155, 177, 202, 232
+
+  \indexspace
+{\bfseries\hfil C\hfil}\nopagebreak
+
+  \item \verb*+\CalculateCos+\pfill 53
+  \item \verb*+\CalculateSin+\pfill 52
+  \item \verb*+\chardef+\pfill 233, 238, 243
+  \item \verb*+\color+\pfill 78, 131, 158, 180, 205
+  \item \verb*+\con@base@length+\pfill 19, 66
+  \item \verb*+\con@coloroff+\pfill 12, 79, 132, 159, 181, 206
+  \item \verb*+\con@default@copies+\pfill 21, 62
+  \item \verb*+\con@define@copyangles+\pfill 24, 72
+  \item \verb*+\con@driver+\pfill 94, 97, 99--101, 110, 119, 120, 122
+  \item \verb*+\con@length+\pfill 23, 66, 84, 85, 129, 130, 139, 
+		156, 157, 165, 178, 179, 187, 203, 204, 214
+  \item \verb*+\con@outlinefalse+\pfill 103
+  \item \verb*+\con@outlinetrue+\pfill 102
+  \item \verb*+\con@put+\pfill 16, 83
+  \item \verb*+\con@temp@fdim+\pfill 51--53, 82, 84, 85
+  \item \verb*+\con@tempa+\pfill 25, 27, 58
+  \item \verb*+\con@tempb+\pfill 26, 27, 29, 32, 35, 37, 42, 59
+  \item \verb*+\contour+\pfill \usage{2}, \main{61}
+  \item \verb*+\contourlength+\pfill \usage{2}, \main{19}
+  \item \verb*+\contournumber+\pfill \usage{3}, \main{21}, 96
+
+  \indexspace
+{\bfseries\hfil D\hfil}\nopagebreak
+
+  \item \verb*+\DeclareOption+\pfill 96--103
+  \item \verb*+\divide+\pfill 46, 75
+
+  \indexspace
+{\bfseries\hfil E\hfil}\nopagebreak
+
+  \item \verb*+\endgroup+\pfill 90, 149, 171, 195, 226, 245
+  \item \verb*+\ExecuteOptions+\pfill 98, 248, 251, 254
+  \item \verb*+\expandafter+\pfill 28, 31, 34, 110, 245
+
+  \indexspace
+{\bfseries\hfil F\hfil}\nopagebreak
+
+  \item \verb*+\f@size+\pfill 28, 31, 34
+
+  \indexspace
+{\bfseries\hfil H\hfil}\nopagebreak
+
+  \item \verb*+\hskip+\pfill 17
+
+  \indexspace
+{\bfseries\hfil I\hfil}\nopagebreak
+
+  \item \verb*+\ifcase+\pfill 236, 246
+  \item \verb*+\ifcon@outline+\pfill 67, 95, 111
+  \item \verb*+\ifvmode+\pfill 63
+  \item \verb*+\InputIfFileExists+\pfill 104, 119
+
+  \indexspace
+{\bfseries\hfil L\hfil}\nopagebreak
+
+  \item \verb*+\leavevmode+\pfill 64
+  \item \verb*+\loop+\pfill 49, 80
+
+  \indexspace
+{\bfseries\hfil M\hfil}\nopagebreak
+
+  \item \verb*+\mbox+\pfill 91, 150, 172, 196, 227
+
+  \indexspace
+{\bfseries\hfil N\hfil}\nopagebreak
+
+  \item \verb*+\newif+\pfill 95
+
+  \indexspace
+{\bfseries\hfil O\hfil}\nopagebreak
+
+  \item \verb*+\on@line+\pfill 68, 73
+  \item \verb*+\or+\pfill 249
+
+  \indexspace
+{\bfseries\hfil P\hfil}\nopagebreak
+
+  \item \verb*+\PackageError+\pfill 112, 122
+  \item \verb*+\PackageWarning+\pfill 115
+  \item \verb*+\pdfliteral+\pfill 160, 168
+  \item \verb*+\pdfoutput+\pfill 236
+  \item \verb*+\ProcessOptions+\pfill 109
+  \item \verb*+\providecommand+\pfill 94
+  \item \verb*+\ProvidesFile+\pfill 2--6
+
+  \indexspace
+{\bfseries\hfil R\hfil}\nopagebreak
+
+  \item \verb*+\raisebox+\pfill 17
+  \item \verb*+\repeat+\pfill 56, 89
+  \item \verb*+\rlap+\pfill 17, 143, 167, 190, 201, 218
+
+  \indexspace
+{\bfseries\hfil S\hfil}\nopagebreak
+
+  \item \verb*+\special+\pfill 133, 144, 182, 191, 207, 219
+
+  \indexspace
+{\bfseries\hfil U\hfil}\nopagebreak
+
+  \item \verb*+\UseCos+\pfill 85
+  \item \verb*+\UseSin+\pfill 84
+
+  \indexspace
+{\bfseries\hfil X\hfil}\nopagebreak
+
+  \item \verb*+\x+\pfill 233, 238, 243, 246
+
+ \end{theindex}

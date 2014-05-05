@@ -1,0 +1,67 @@
+	How to create a regular hex mesh with VaryLab
+
+1.  Nurbs Manager
+      import pin_doublycurved_nurbs.obj u 200 v 20
+1.1 Press the e key to encompass the geometry
+
+2.  Topology->Identify Vertices
+	use a distance of 0.1
+
+3.  Discrete Conformal Parametrization
+      x Expert Mode
+      Target Geometry	Euclidean
+      Boundary		Conformal, Straight
+      ->Unwrap
+
+4.  Select Vertex for orthogonal cut at head of pin
+	->Discrete Conformal->Visualization->Cut along line
+	Select the newly created layer and disable the old one
+	both are called Default Layer (we have to fix that)
+
+5.  ContentAppearance 
+      Select triangle/hex pattern preview
+      Texture Scale u 35.025 v 60.605
+
+6.  Surface Remeshing
+      Pattern	Boundary Aligned Triangles
+      -> Remesh
+
+7.  Topology->Identify Vertices
+      Distance 0.3 (29 pairs found)
+
+8.  Create new layer pin_doublycurved_nurbs.obj in
+      load surface into the layer as above
+      reselect the mesh layer
+
+9.  NURBS->Project to Nurbs Surface 
+      Select newly created Layer with Nurbs Surface from 8.
+
+10. Remove the cut:
+      1. Select an edge 
+      2. Selection->Geodesic
+      3. Editing->Remove edge and fill
+      4. Texture Remeshing->Collapse 1,2-valent vertices
+
+11. Create hex mesh
+      1. Select Vertex inside a hexagon to be removed
+      2. Selection->Lattice
+      3. Editing->Remove vertex and fill
+
+12. Topology Explode
+
+13. Planarize Polygons
+      1. Optimizer Plugins
+      	 x Planar N-Gons
+      2. Optimization
+      	 No Constraints
+	 100 Iterations, CG
+
+14. Regularize hexagons
+      1. Optimizer Plugins
+      	 x Regular n-gons
+	 x Spring Energy
+	     const. length 1.65, Strength 1 
+	     (maybe measure edge lengths first with an edge length histogram)
+
+
+

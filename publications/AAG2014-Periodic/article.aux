@@ -1,0 +1,86 @@
+\relax 
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip For a cylindrical {\sc  nurbs}\xspace  surface (top-left) we create a seamless periodic conformal parameterization (top-right). A new mesh (bottom-left) is then rationalized and the panels are optimized for quantized regular hexagons (bottom-right).}}{1}}
+\newlabel{fig:teaser}{{1}{1}}
+\citation{Ceccato}
+\citation{SSP08}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}}
+\newlabel{sec:introduction}{{1}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Flow diagram of the algorithms described in this paper. From a {\sc  nurbs}\xspace  surface a triangle mesh is created. The parameterization part described in Section\nobreakspace  {}3\hbox {}. A pattern-mesh is created using this parameterization. The creation and optimization of panels is described in Section\nobreakspace  {}5\hbox {}.}}{3}}
+\newlabel{fig:algorithm_diagram}{{2}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip State of the art unroll methods can create patterns on a closed surface. The {\tt  ApplyCrv} command of Rhinoceros produces boundary alinged periodic patterns but introduces unacceptable non-isotropic stretch (left). The {\tt  SquishBack} method creates sufficiently regular elements but does not respect the periodicity of the surface (middle). Non-periodic conformal maps align with the boundary of a cut surface. Along the cut the map is not continuous (right).}}{3}}
+\newlabel{fig:failure}{{3}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}}
+\newlabel{sec:parameterization}{{2}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{Rhinoceros CreateUVCrv/ApplyCrv.}{3}}
+\citation{panelingtools}
+\citation{TangentPlanes,Troche}
+\citation{SHWP09}
+\citation{SHWP09}
+\citation{NieserPPZ12}
+\citation{Bommes2009,ARAP,SSP08}
+\citation{bo-2011-cas}
+\citation{SRB12}
+\citation{SSP08}
+\citation{SSP08}
+\citation{SSP08}
+\@writefile{toc}{\contentsline {subsubsection}{Rhinoceros Squish/SquishBack.}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{PanelingTools for Rhino.}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{Hexagonal tilings.}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{Mesh parameterizations.}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Periodic conformal parametrization}{4}}
+\newlabel{sec:conformal-parameterization}{{3}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip A discrete periodic map from a cylinder to a triangulated surface. On the cylinder all edges of the triangulation are geodesic arcs. If the cylinder is cut at the vertical orange path, then it can be unrolled to the plane creating a rectangular domain.}}{5}}
+\newlabel{fig:discrete_map}{{4}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Periodic domains of parameterization of the surfaces shown in Figure\nobreakspace  {}1\hbox {}. Left: Map to a cylinder with geodesic boundary curves. Middle: Map to a cone of revolution with hex-pattern-adapted angle. The domain is a polygon with quantized angles. Right: Isometric boundary on a cone with hex-pattern-adapted angle. Panelizations created with the help of these maps are shown in Figure\nobreakspace  {}6\hbox {}.}}{5}}
+\newlabel{fig:cone_maps_teaser}{{5}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Periodic boundary conditions}{6}}
+\newlabel{sec:boundary}{{3.1}{6}}
+\newlabel{eq:theta}{{1}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Quantized periodic hexagonal panelizations. Boundary conditions affect the amount of stretch in the interior of the surface. Top: Hexagonal pattern aligns with the boundary, a strong condition that produces large deviation of edge lengths. Middle: Map to a pattern-adapted polygon on a cone of revolution. The pattern contains exceptional points at the boundary. The stretch is minimized while at the same time the pattern alignes with the boundary. Bottom: Conformal map with the least stretch in the interior, pattern can be optimized to consist of congruent hexagons alone. In all images, panels with the same color are congruent. The corresponding domains of parameterization are shown in Figure\nobreakspace  {}5\hbox {}.}}{7}}
+\newlabel{fig:hex_example}{{6}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{Straight cylinder.}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{Cone of revolution.}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{Design and structural opportunities.}{8}}
+\citation{Ceccato}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip A periodic conformal map onto a cylinder with special vertices creates the opportunity to incorporate entrances (left) or concentration of support structure (right).}}{9}}
+\newlabel{fig:entrance}{{7}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Case Study: Hexagonal surface panelization}{9}}
+\newlabel{sec:panelization}{{4}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Rendering of Case Study - A project where the method of conformal mapping was utilized for the facade design.}}{10}}
+\newlabel{fig:overview02}{{8}{10}}
+\citation{varylab-web-page}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip The data for the component-like construction of each panel was derived from the mesh.}}{11}}
+\newlabel{fig:panel_construction}{{9}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Close-up rendering of facade.}}{12}}
+\newlabel{fig:detail}{{10}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Rationalization: Hexagon optimization}{12}}
+\newlabel{sec:regular_hexagons}{{5}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{Planarity.}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{Regularity.}{12}}
+\citation{varylab-web-page}
+\citation{tao-user-ref,petsc-web-page,jpetsctao-web-page}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Panelization of a doubly curved design alternative of the case study shown in Figure\nobreakspace  {}8\hbox {}. Left: Unquantized panelization. Right: Quantization to $11$ panel sizes}}{13}}
+\newlabel{fig:quantization}{{11}{13}}
+\bibstyle{acmsiggraph1}
+\bibdata{article}
+\bibcite{ARAP}{\citename {Alexa et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2000}
+\bibcite{petsc-web-page}{\citename {Balay et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2011}
+\bibcite{tao-user-ref}{\citename {Benson et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2007}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Grasshopper networks connecting Rhino and {\sc  VaryLab}\xspace  {}. In the first step we send mesh data to {\sc  VaryLab}\xspace  {} running on the same machine at {\tt  localhost:6789} (left). In the second step we collect the result from this {\sc  VaryLab}\xspace  {} instance and create polygons from the mesh's faces (right).}}{14}}
+\newlabel{fig:grasshopper}{{12}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Implementation}{14}}
+\newlabel{sec:implementation}{{6}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{14}}
+\newlabel{sec:conclusion}{{7}{14}}
+\bibcite{bo-2011-cas}{\citename {Bo et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2011}
+\bibcite{Bommes2009}{\citename {Bommes et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2009}
+\bibcite{Ceccato}{\citename {Glymph et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2004}
+\bibcite{panelingtools}{\citename {McNeel}}
+\bibcite{NieserPPZ12}{\citename {Nieser et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2012}
+\bibcite{SHWP09}{\citename {Schiftner et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2009}
+\bibcite{varylab-web-page}{\citename {Sechelmann and R{\"o}rig }2013}
+\bibcite{SRB12}{\citename {Sechelmann et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2013}
+\bibcite{jpetsctao-web-page}{\citename {Sommer }2010}
+\bibcite{SSP08}{\citename {Springborn et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2008}
+\bibcite{Troche}{\citename {Troche }2008}
+\bibcite{TangentPlanes}{\citename {Zimmer et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2013}

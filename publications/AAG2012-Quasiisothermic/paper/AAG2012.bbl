@@ -1,0 +1,131 @@
+\begin{thebibliography}{\protect\citename{K{\"a}lberer et~al\mbox{.} }2007}
+
+\bibitem[\protect\citename{Alliez et~al\mbox{.} }2003]{AlliezCDLD03}
+{\sc Alliez, P., Cohen-Steiner, D., Devillers, O., L{\'e}vy, B., and Desbrun,
+  M.}
+\newblock 2003.
+\newblock Anisotropic polygonal remeshing.
+\newblock {\em ACM Trans. Graph. 22}, 3, 485--493.
+
+\bibitem[\protect\citename{Balay et~al\mbox{.} }2011]{petsc-web-page}
+{\sc Balay, S., Brown, J., Buschelman, K., Gropp, W.~D., Kaushik, D., Knepley,
+  M.~G., McInnes, L.~C., Smith, B.~F., and Zhang, H.}, 2011.
+\newblock {PETSc} {W}eb page.
+\newblock {\http:// www. mcs. anl. gov/ petsc}.
+
+\bibitem[\protect\citename{Benson et~al\mbox{.} }2007]{tao-user-ref}
+{\sc Benson, S., McInnes, L.~C., Mor\'{e}, J., Munson, T., and Sarich, J.},
+  2007.
+\newblock {TAO} user manual (revision 1.9).
+\newblock {\http:// www.mcs.anl.gov/ tao}.
+
+\bibitem[\protect\citename{Bobenko and Pinkall
+  }1999]{BobPin:DiscSurfIntSys:1996}
+{\sc Bobenko, A.~I., and Pinkall, U.}
+\newblock 1999.
+\newblock Discretization of surfaces and integrable systems.
+\newblock In {\em Discrete integrable geometry and physics ({V}ienna, 1996)},
+  vol.~16 of {\em Oxford Lecture Ser. Math. Appl.} Oxford Univ. Press, New
+  York, 3--58.
+
+\bibitem[\protect\citename{Bobenko and Suris }2008]{ddg-book}
+{\sc Bobenko, A.~I., and Suris, Y.~B.}
+\newblock 2008.
+\newblock {\em Discrete differential geometry -- Integrable structure}, vol.~98
+  of {\em Graduate Studies in Mathematics}.
+\newblock American Mathematical Society, Providence, RI.
+
+\bibitem[\protect\citename{Bobenko et~al\mbox{.} }2006]{BobHofSpr06}
+{\sc Bobenko, A.~I., Hoffmann, T., and Springborn, B.}
+\newblock 2006.
+\newblock Minimal surfaces from circle patterns: geometry from combinatorics.
+\newblock {\em Ann. of Math. (2) 164}, 1, 231--264.
+
+\bibitem[\protect\citename{Bobenko et~al\mbox{.}
+  }2010]{bobpinspr:discrConformalMaps}
+{\sc Bobenko, A.~I., Pinkall, U., and Springborn, B.}
+\newblock 2010.
+\newblock Discrete conformal maps and ideal hyperbolic polyhedra.
+\newblock Preprint; {{\http:// arxiv. org/ abs/ 1005.2698}}.
+
+\bibitem[\protect\citename{Cohen-Steiner and Morvan }2003]{CohMor03}
+{\sc Cohen-Steiner, D., and Morvan, J.-M.}
+\newblock 2003.
+\newblock Restricted {D}elaunay triangulations and normal cycle.
+\newblock In {\em Symposium on Computational Geometry}, 312--321.
+
+\bibitem[\protect\citename{Floater and Hormann }2005]{Floater:2005:SPA}
+{\sc Floater, M.~S., and Hormann, K.}
+\newblock 2005.
+\newblock Surface parameterization: a tutorial and survey.
+\newblock In {\em Advances in Multiresolution for Geometric Modelling}, N.~A.
+  Dodgson, M.~S. Floater, and M.~A. Sabin, Eds., Mathematics and Visualization.
+  Springer, Berlin, Heidelberg, 157--186.
+
+\bibitem[\protect\citename{K{\"a}lberer et~al\mbox{.}
+  }2007]{KalbererNP:QuadCover07}
+{\sc K{\"a}lberer, F., Nieser, M., and Polthier, K.}
+\newblock 2007.
+\newblock Quadcover - surface parameterization using branched coverings.
+\newblock {\em Comput. Graph. Forum 26}, 3, 375--384.
+
+\bibitem[\protect\citename{Liu et~al\mbox{.} }2006]{LiuPWYW06}
+{\sc Liu, Y., Pottmann, H., Wallner, J., Yang, Y.-L., and Wang, W.}
+\newblock 2006.
+\newblock Geometric modeling with conical meshes and developable surfaces.
+\newblock {\em ACM Trans. Graph. 25}, 3, 681--689.
+
+\bibitem[\protect\citename{Pottmann et~al\mbox{.} }2007]{pottmann-2007-pm}
+{\sc Pottmann, H., Liu, Y., Wallner, J., Bobenko, A., and Wang, W.}
+\newblock 2007.
+\newblock Geometry of multi-layer freeform structures for architecture.
+\newblock {\em ACM Trans. Graphics 26}, 3, \#{}65,1--11.
+\newblock Proc. SIGGRAPH.
+
+\bibitem[\protect\citename{Pottmann et~al\mbox{.} }2008]{PottmannSBSWBW08}
+{\sc Pottmann, H., Schiftner, A., Bo, P., Schmiedhofer, H., Wang, W.,
+  Baldassini, N., and Wallner, J.}
+\newblock 2008.
+\newblock Freeform surfaces from single curved panels.
+\newblock {\em ACM Trans. Graph. 27}, 3, \#{}76, 1--10.
+
+\bibitem[\protect\citename{Schiftner et~al\mbox{.} }2009]{schiftner-2009-cp}
+{\sc Schiftner, A., H{\"o}binger, M., Wallner, J., and Pottmann, H.}
+\newblock 2009.
+\newblock Packing circles and spheres on surfaces.
+\newblock {\em ACM Trans. Graphics 28}, 5, \#139,1--8.
+\newblock {P}roc.\ SIGGRAPH Asia.
+
+\bibitem[\protect\citename{Sheffer and de~Sturler }2001]{Sheffer2001}
+{\sc Sheffer, A., and de~Sturler, E.}
+\newblock 2001.
+\newblock {Parameterization of Faceted Surfaces for Meshing using Angle-Based
+  Flattening}.
+\newblock {\em Engineering with Computers 17\/}, 326--337.
+
+\bibitem[\protect\citename{Sheffer et~al\mbox{.} }2006]{ShefferPR06}
+{\sc Sheffer, A., Praun, E., and Rose, K.}
+\newblock 2006.
+\newblock Mesh parameterization methods and their applications.
+\newblock {\em Foundations and Trends in Computer Graphics and Vision 2}, 2,
+  105--171.
+
+\bibitem[\protect\citename{Sommer }2010]{jpetsctao-web-page}
+{\sc Sommer, H.}, 2010.
+\newblock {jPETScTao JNI library} web page.
+\newblock {\http:// jpetsctao. zwoggel.net/}.
+
+\bibitem[\protect\citename{Springborn et~al\mbox{.} }2008]{Springborn:2008:CET}
+{\sc Springborn, B., Schr{\"o}der, P., and Pinkall, U.}
+\newblock 2008.
+\newblock Conformal equivalence of triangle meshes.
+\newblock {\em ACM Trans. Graph. 27}, 3, \#{}77, 1--11.
+
+\bibitem[\protect\citename{Zadravec et~al\mbox{.} }2010]{zadravec-2010-vf}
+{\sc Zadravec, M., Schiftner, A., and Wallner, J.}
+\newblock 2010.
+\newblock Designing quad-dominant meshes with planar faces.
+\newblock {\em Computer Graphics Forum 29}, 5, 1671--1679.
+\newblock {P}roc. Symp.\ Geometry Processing.
+
+\end{thebibliography}

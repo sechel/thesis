@@ -1,0 +1,9 @@
+\glossaryentry{2.14> =General:>Full outline support for Y\&Y DVIPSONE}{1}
+\glossaryentry{2.12> =General:>Full outline support for VT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m }{1}
+\glossaryentry{2.11> =General:>Restricted outline support for VT\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m }{1}
+\glossaryentry{2.10> =General:>Print text with real outlines for vector fonts}{1}
+\glossaryentry{2.00> =General:>Allow arbitrary numbers of text copies}{1}
+\glossaryentry{1.04> =General:>Avoide usage of \cs  {textversion} etc.}{1}
+\glossaryentry{2.10> =General:>Bugfix: enable switching colors inside \cs  {contour} argument}{4}
+\glossaryentry{2.13>@contour@outline=\verb!*+\@contour@outline+:>More robust mechanism to change Postscript internals for dvips}{8}
+\glossaryentry{2.14> =General:>Add support for DVIPSONE}{10}
