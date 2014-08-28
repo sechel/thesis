@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     10.07.2014 18:32:46                                                        
+
+     AAG2014    
+     Surface panelization using periodic conformal maps
+                   
+     sechel                                                                
+     ====================================================================== -->
+<project name="AAG2014" default="All">
+
+	<target name="All" description="PDFLaTeX and BibTeX">
+		<antcall target="PDFLaTeX"/>
+		<antcall target="BibTeX"/>
+		<antcall target="PDFLaTeX"/>
+		<antcall target="PDFLaTeX"/>
+	</target>
+
+	<target name="PDFLaTeX">
+		<exec executable="/usr/texbin/pdflatex">
+    		<arg value="article.tex"/>
+    	</exec>
+	</target>
+	
+	<target name="BibTeX">
+    	<exec executable="/usr/texbin/bibtex">
+			<arg value="article.aux"/>
+    	</exec>
+	</target>
+	
+</project>
