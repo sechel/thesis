@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformalDataList xmlns="http://www.varylab.com/conformallab/types">
+    <DiscreteMetric name="Input Discrete Metric">
+        <MetricEdge length="1.6329931618554523" index="0"/>
+        <MetricEdge length="1.6329931618554523" index="1"/>
+        <MetricEdge length="1.6329931618554523" index="2"/>
+        <MetricEdge length="1.6329931618554523" index="3"/>
+        <MetricEdge length="1.6329931618554523" index="4"/>
+        <MetricEdge length="1.6329931618554523" index="5"/>
+        <MetricEdge length="1.6329931618554523" index="6"/>
+        <MetricEdge length="1.6329931618554523" index="7"/>
+        <MetricEdge length="1.6329931618554523" index="8"/>
+        <MetricEdge length="1.6329931618554523" index="9"/>
+        <MetricEdge length="1.6329931618554523" index="10"/>
+        <MetricEdge length="1.6329931618554523" index="11"/>
+        <MetricTriangle edge1="8" edge2="0" edge3="1"/>
+        <MetricTriangle edge1="10" edge2="0" edge3="3"/>
+        <MetricTriangle edge1="2" edge2="5" edge3="3"/>
+        <MetricTriangle edge1="4" edge2="5" edge3="1"/>
+        <MetricTriangle edge1="6" edge2="7" edge3="2"/>
+        <MetricTriangle edge1="6" edge2="9" edge3="4"/>
+        <MetricTriangle edge1="9" edge2="8" edge3="11"/>
+        <MetricTriangle edge1="7" edge2="10" edge3="11"/>
+    </DiscreteMetric>
+    <HalfedgeEmbedding name="Input Discrete Position Embedding">
+        <Vertex x="0.5773502691896258" y="0.5773502691896258" z="0.5773502691896258" w="1.0" index="0"/>
+        <Vertex x="-0.5773502691896258" y="0.5773502691896258" z="-0.5773502691896258" w="1.0" index="1"/>
+        <Vertex x="-0.5773502691896258" y="-0.5773502691896258" z="0.5773502691896258" w="1.0" index="2"/>
+        <Vertex x="0.5773502691896258" y="-0.5773502691896258" z="-0.5773502691896258" w="1.0" index="3"/>
+        <Halfedge left="0" target="0" next="2" opposite="1" index="0"/>
+        <Halfedge left="1" target="1" next="6" opposite="0" index="1"/>
+        <Halfedge left="0" target="2" next="4" opposite="3" index="2"/>
+        <Halfedge left="3" target="0" next="9" opposite="2" index="3"/>
+        <Halfedge left="0" target="1" next="0" opposite="17" index="4"/>
+        <Halfedge left="2" target="2" next="10" opposite="16" index="5"/>
+        <Halfedge left="1" target="3" next="8" opposite="7" index="6"/>
+        <Halfedge left="2" target="1" next="5" opposite="6" index="7"/>
+        <Halfedge left="1" target="0" next="1" opposite="21" index="8"/>
+        <Halfedge left="3" target="3" next="11" opposite="20" index="9"/>
+        <Halfedge left="2" target="3" next="7" opposite="11" index="10"/>
+        <Halfedge left="3" target="2" next="3" opposite="10" index="11"/>
+        <Halfedge left="4" target="0" next="14" opposite="13" index="12"/>
+        <Halfedge left="5" target="1" next="18" opposite="12" index="13"/>
+        <Halfedge left="4" target="2" next="16" opposite="15" index="14"/>
+        <Halfedge left="7" target="0" next="21" opposite="14" index="15"/>
+        <Halfedge left="4" target="1" next="12" opposite="5" index="16"/>
+        <Halfedge left="6" target="2" next="22" opposite="4" index="17"/>
+        <Halfedge left="5" target="3" next="20" opposite="19" index="18"/>
+        <Halfedge left="6" target="1" next="17" opposite="18" index="19"/>
+        <Halfedge left="5" target="0" next="13" opposite="9" index="20"/>
+        <Halfedge left="7" target="3" next="23" opposite="8" index="21"/>
+        <Halfedge left="6" target="3" next="19" opposite="23" index="22"/>
+        <Halfedge left="7" target="2" next="15" opposite="22" index="23"/>
+        <Face index="0"/>
+        <Face index="1"/>
+        <Face index="2"/>
+        <Face index="3"/>
+        <Face index="4"/>
+        <Face index="5"/>
+        <Face index="6"/>
+        <Face index="7"/>
+        <Selection>
+            <VertexSelection>
+                <Vertex index="2" channel="0"/>
+                <Vertex index="1" channel="0"/>
+                <Vertex index="0" channel="0"/>
+            </VertexSelection>
+            <EdgeSelection>
+                <Edge index="21" channel="8723784"/>
+                <Edge index="16" channel="8723784"/>
+                <Edge index="4" channel="8723784"/>
+                <Edge index="9" channel="8723784"/>
+            </EdgeSelection>
+            <FaceSelection/>
+        </Selection>
+    </HalfedgeEmbedding>
+    <HalfedgeMap name="Uniformizing Map">
+        <Domain name="Uniformizing Map_domain">
+            <Vertex x="-0.7071067811865468" y="1.2247448713915896" z="0.0" w="1.0" index="0"/>
+            <Vertex x="0.7071067811865482" y="1.2247448713915887" z="0.0" w="1.0" index="1"/>
+            <Vertex x="-1.4142135623730936" y="2.449489742783179" z="0.0" w="1.0" index="2"/>
+            <Vertex x="1.4432899320127035E-15" y="2.4494897427831783" z="0.0" w="1.0" index="3"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="1.0" index="4"/>
+            <Vertex x="1.4142135623730951" y="0.0" z="0.0" w="1.0" index="5"/>
+            <Vertex x="1.4142135623730954" y="2.449489742783178" z="0.0" w="1.0" index="6"/>
+            <Vertex x="2.1213203435596424" y="1.2247448713915894" z="0.0" w="1.0" index="7"/>
+            <Vertex x="2.8284271247461903" y="6.280369834735101E-16" z="0.0" w="1.0" index="8"/>
+            <Identification>
+                <Vertex>2</Vertex>
+                <Vertex>4</Vertex>
+                <Vertex>6</Vertex>
+                <Vertex>8</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>3</Vertex>
+                <Vertex>5</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>0</Vertex>
+                <Vertex>7</Vertex>
+            </Identification>
+            <Halfedge left="0" target="7" next="2" opposite="1" index="0"/>
+            <Halfedge left="1" target="1" next="6" opposite="0" index="1"/>
+            <Halfedge left="0" target="6" next="4" opposite="28" index="2"/>
+            <Halfedge left="3" target="0" next="9" opposite="29" index="3"/>
+            <Halfedge left="0" target="1" next="0" opposite="17" index="4"/>
+            <Halfedge left="2" target="4" next="10" opposite="16" index="5"/>
+            <Halfedge left="1" target="5" next="8" opposite="7" index="6"/>
+            <Halfedge left="2" target="1" next="5" opposite="6" index="7"/>
+            <Halfedge left="1" target="7" next="1" opposite="21" index="8"/>
+            <Halfedge left="3" target="3" next="11" opposite="20" index="9"/>
+            <Halfedge left="2" target="5" next="7" opposite="24" index="10"/>
+            <Halfedge left="3" target="2" next="3" opposite="25" index="11"/>
+            <Halfedge left="4" target="0" next="14" opposite="13" index="12"/>
+            <Halfedge left="5" target="1" next="18" opposite="12" index="13"/>
+            <Halfedge left="4" target="4" next="16" opposite="31" index="14"/>
+            <Halfedge left="7" target="7" next="21" opposite="30" index="15"/>
+            <Halfedge left="4" target="1" next="12" opposite="5" index="16"/>
+            <Halfedge left="6" target="6" next="22" opposite="4" index="17"/>
+            <Halfedge left="5" target="3" next="20" opposite="19" index="18"/>
+            <Halfedge left="6" target="1" next="17" opposite="18" index="19"/>
+            <Halfedge left="5" target="0" next="13" opposite="9" index="20"/>
+            <Halfedge left="7" target="5" next="23" opposite="8" index="21"/>
+            <Halfedge left="6" target="3" next="19" opposite="27" index="22"/>
+            <Halfedge left="7" target="8" next="15" opposite="26" index="23"/>
+            <Halfedge left="-1" target="4" next="31" opposite="10" index="24"/>
+            <Halfedge left="-1" target="3" next="27" opposite="11" index="25"/>
+            <Halfedge left="-1" target="5" next="24" opposite="23" index="26"/>
+            <Halfedge left="-1" target="6" next="28" opposite="22" index="27"/>
+            <Halfedge left="-1" target="7" next="30" opposite="2" index="28"/>
+            <Halfedge left="-1" target="2" next="25" opposite="3" index="29"/>
+            <Halfedge left="-1" target="8" next="26" opposite="15" index="30"/>
+            <Halfedge left="-1" target="0" next="29" opposite="14" index="31"/>
+            <EdgeIdentification edge1="24" edge2="25" edge3="10" edge4="11"/>
+            <EdgeIdentification edge1="26" edge2="27" edge3="23" edge4="22"/>
+            <EdgeIdentification edge1="28" edge2="29" edge3="2" edge4="3"/>
+            <EdgeIdentification edge1="30" edge2="31" edge3="15" edge4="14"/>
+            <Face index="0"/>
+            <Face index="1"/>
+            <Face index="2"/>
+            <Face index="3"/>
+            <Face index="4"/>
+            <Face index="5"/>
+            <Face index="6"/>
+            <Face index="7"/>
+        </Domain>
+        <Image name="Uniformizing Map_image">
+            <Vertex x="0.5" y="0.5" z="0.5" w="0.8660254037844385" index="0"/>
+            <Vertex x="-0.5" y="0.5" z="-0.5" w="0.8660254037844385" index="1"/>
+            <Vertex x="-0.5" y="-0.5" z="0.5" w="0.8660254037844385" index="2"/>
+            <Vertex x="0.5" y="-0.5" z="-0.5" w="0.8660254037844385" index="3"/>
+            <Vertex x="-0.5" y="-0.5" z="0.5" w="0.8660254037844385" index="4"/>
+            <Vertex x="0.5" y="-0.5" z="-0.5" w="0.8660254037844385" index="5"/>
+            <Vertex x="-0.5" y="-0.5" z="0.5" w="0.8660254037844385" index="6"/>
+            <Vertex x="0.5" y="0.5" z="0.5" w="0.8660254037844385" index="7"/>
+            <Vertex x="-0.5" y="-0.5" z="0.5" w="0.8660254037844385" index="8"/>
+            <Identification>
+                <Vertex>2</Vertex>
+                <Vertex>4</Vertex>
+                <Vertex>6</Vertex>
+                <Vertex>8</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>3</Vertex>
+                <Vertex>5</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>0</Vertex>
+                <Vertex>7</Vertex>
+            </Identification>
+            <Halfedge left="0" target="7" next="2" opposite="1" index="0"/>
+            <Halfedge left="1" target="1" next="6" opposite="0" index="1"/>
+            <Halfedge left="0" target="6" next="4" opposite="28" index="2"/>
+            <Halfedge left="3" target="0" next="9" opposite="29" index="3"/>
+            <Halfedge left="0" target="1" next="0" opposite="17" index="4"/>
+            <Halfedge left="2" target="4" next="10" opposite="16" index="5"/>
+            <Halfedge left="1" target="5" next="8" opposite="7" index="6"/>
+            <Halfedge left="2" target="1" next="5" opposite="6" index="7"/>
+            <Halfedge left="1" target="7" next="1" opposite="21" index="8"/>
+            <Halfedge left="3" target="3" next="11" opposite="20" index="9"/>
+            <Halfedge left="2" target="5" next="7" opposite="24" index="10"/>
+            <Halfedge left="3" target="2" next="3" opposite="25" index="11"/>
+            <Halfedge left="4" target="0" next="14" opposite="13" index="12"/>
+            <Halfedge left="5" target="1" next="18" opposite="12" index="13"/>
+            <Halfedge left="4" target="4" next="16" opposite="31" index="14"/>
+            <Halfedge left="7" target="7" next="21" opposite="30" index="15"/>
+            <Halfedge left="4" target="1" next="12" opposite="5" index="16"/>
+            <Halfedge left="6" target="6" next="22" opposite="4" index="17"/>
+            <Halfedge left="5" target="3" next="20" opposite="19" index="18"/>
+            <Halfedge left="6" target="1" next="17" opposite="18" index="19"/>
+            <Halfedge left="5" target="0" next="13" opposite="9" index="20"/>
+            <Halfedge left="7" target="5" next="23" opposite="8" index="21"/>
+            <Halfedge left="6" target="3" next="19" opposite="27" index="22"/>
+            <Halfedge left="7" target="8" next="15" opposite="26" index="23"/>
+            <Halfedge left="-1" target="4" next="31" opposite="10" index="24"/>
+            <Halfedge left="-1" target="3" next="27" opposite="11" index="25"/>
+            <Halfedge left="-1" target="5" next="24" opposite="23" index="26"/>
+            <Halfedge left="-1" target="6" next="28" opposite="22" index="27"/>
+            <Halfedge left="-1" target="7" next="30" opposite="2" index="28"/>
+            <Halfedge left="-1" target="2" next="25" opposite="3" index="29"/>
+            <Halfedge left="-1" target="8" next="26" opposite="15" index="30"/>
+            <Halfedge left="-1" target="0" next="29" opposite="14" index="31"/>
+            <EdgeIdentification edge1="24" edge2="25" edge3="10" edge4="11"/>
+            <EdgeIdentification edge1="26" edge2="27" edge3="23" edge4="22"/>
+            <EdgeIdentification edge1="28" edge2="29" edge3="2" edge4="3"/>
+            <EdgeIdentification edge1="30" edge2="31" edge3="15" edge4="14"/>
+            <Face index="0"/>
+            <Face index="1"/>
+            <Face index="2"/>
+            <Face index="3"/>
+            <Face index="4"/>
+            <Face index="5"/>
+            <Face index="6"/>
+            <Face index="7"/>
+        </Image>
+    </HalfedgeMap>
+    <UniformizationData name="Direct Uniformization">
+        <UniformizingGroup>
+            <IsometryPSL2R m11="1.0" m12="6.93072342530164E-16" m13="-1.4142135623730936" m21="-6.93072342530164E-16" m22="1.0" m23="2.449489742783179" m31="0.0" m32="0.0" m33="1.0"/>
+            <IsometryPSL2R m11="1.0000000000000002" m12="-7.771561172376096E-16" m13="2.8284271247461907" m21="7.771561172376096E-16" m22="1.0000000000000002" m23="-4.440892098500626E-16" m31="0.0" m32="0.0" m33="1.0"/>
+            <IsometryPSL2R m11="1.0" m12="-6.93072342530164E-16" m13="1.4142135623730965" m21="6.93072342530164E-16" m22="1.0" m23="-2.4494897427831788" m31="0.0" m32="0.0" m33="1.0"/>
+            <IsometryPSL2R m11="0.9999999999999999" m12="7.771561172376096E-16" m13="-2.82842712474619" m21="-8.326672684688674E-16" m22="1.0" m23="1.5543122344752192E-15" m31="0.0" m32="0.0" m33="1.0"/>
+        </UniformizingGroup>
+        <FundamentalPolygon>
+            <FundamentalVertex index="0"/>
+            <FundamentalEdge index="0" nextEdge="1" previousEdge="3" identifiedEdge="2" startVertex="0">
+                <StartPosition re="-1.4142135623730936" im="2.449489742783179"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="1" nextEdge="2" previousEdge="0" identifiedEdge="3" startVertex="0">
+                <StartPosition re="1.4142135623730954" im="2.449489742783178"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="2" nextEdge="3" previousEdge="1" identifiedEdge="0" startVertex="0">
+                <StartPosition re="2.8284271247461903" im="6.280369834735101E-16"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="3" nextEdge="0" previousEdge="2" identifiedEdge="1" startVertex="0">
+                <StartPosition re="0.0" im="0.0"/>
+            </FundamentalEdge>
+        </FundamentalPolygon>
+    </UniformizationData>
+</ConformalDataList>
