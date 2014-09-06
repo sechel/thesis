@@ -47,31 +47,36 @@ A discrete branched cover of $\Chat$ is a triangulation of $\pi(C)$ with vertice
 
 Let $C$ be an elliptic algebraic curve and $R$ the corresponding Riemann surface. Let $\lambda_1, \ldots, \lambda_4 \in \Chat$ be the branch points of $C$. 
 
+\begin{example}
+\label{ex:wente_elliptic}
 An example of a discrete elliptic curve is given by the equation
 \begin{equation}
 	\mu^2=z(z^3-1).
 \end{equation}
 This surface is also known as the Wente torus. Its modulus is $\tau=\sin(\frac{\pi}{3})i$. On the Riemann sphere
 we can normalize the brach points to form a regular tetrahedron. The conformal structure is equivalent to that of 
-the polygonal branched tetrahedron as its structure is flat by definition see Figure~\ref{fig:wente_uniform}.
+the polygonal branched tetrahedron as its structure is flat by definition see Figure~\ref{fig:wente_elliptic}.
+\end{example}
 
 \begin{figure}
 	\centering
 	\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_image.pdf}
 	\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_domain.pdf}
-	\caption{Uniformization of a discrete wente torus. Points on the sphere are chosen to form a regular subdivision
-of the elliptic lattice. Red points are branch points of the surface.}
-	\label{fig:wente_uniform}
+	\caption{Uniformization of a discrete wente torus. Points on the sphere are chosen to 
+form a regular subdivision of the elliptic lattice. Red points are branch points of the surface.
+Stereographic projection of the branched sphere (left), ellptic lattice of the torus (right).}
+	\label{fig:wente_elliptic}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[height=5cm]{elliptic_square_uniform/square_uniform_fine_image.pdf}
-	\includegraphics[height=5cm]{elliptic_square_uniform/square_uniform_fine_domain.pdf}
-	\caption{Uniformization of a square surface. Points on the sphere are chosen to form a regular subdivision
-of the elliptic lattice. Red points are branch points of the surface. Red edges represent the boundary of the 
-fundamental domain.}
-	\label{fig:wente_uniform}
+	\includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_image.pdf}
+	\includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_domain.pdf}
+	\caption{Uniformization of a square surface. Points on the sphere are chosen to form a 
+regular subdivision of the elliptic lattice. Red points are branch points of the surface. Red 
+edges represent the boundary of the fundamental domain. Stereographic projection of the 
+branched sphere (left), ellptic lattice of the torus (right).}
+	\label{fig:square_elliptic}
 \end{figure}	
 
 
@@ -79,7 +84,7 @@ fundamental domain.}
 	\includegraphics[width=\textwidth]{elliptic_curves/tetrahedron}
 	\includegraphics[width=\textwidth]{elliptic_curves/square}
 	\includegraphics[width=\textwidth]{elliptic_curves/generic}
-	\caption{Discrete Weierstrass $\wp$ functions with randomized data. Regular tetrahedron $\tau=\sin(\frac{\pi}{3})i$ (top), Square $\tau=i$ (middle), generic position branch points $\tau \approx 0.18+i\cdot 0.67$.}
+	\caption{Discrete Weierstrass $\wp$ functions with randomized data. Regular tetrahedron $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$ (top), Square $\tau=i$ (middle), generic position branch points $\tau \approx 0.18+0.67i$.}
 \end{figure}
 
 \subsection{The moduli space}
@@ -107,7 +112,7 @@ roots of unity and at zero and at infinity. This surface admits a regular fundam
 The cuts on the surface to create a regular polygon are shown in Figure~\ref{fig:regular_branchdata}.
 \end{example}
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \includegraphics[width=0.2\linewidth]{data/hyperelliptic_g3/curve}
 \caption{Branch (grey) points and cuts (black lines) of the surface~\ref{eq:regular_hyperelliptic}.
@@ -208,10 +213,31 @@ The idea to define the conformal structure is to use length cross-ratios instead
 \subsection{Hyperelliptic data}
 
 \section{Conformal maps to $\Chat$}
-\subsection{Selection of Branch Data}
+
+
+
 \subsection{Examples}
 
+\begin{example}
+\label{ex:wente_branched}
+Wente torus $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$. The conformal structure of the wente torus is equivalent to the two sheeted tetrahedron branched at all four vertices.
+\end{example}
 
+\begin{example}
+\label{ex:square_branched}
+The torus $\tau=i$.
+\end{example}
+
+\begin{figure}
+\centering
+\includegraphics[height=5cm]{elliptic_square_uniform/square_branched_domain.pdf}
+\includegraphics[height=5cm]{elliptic_square_uniform/square_branched_image2.pdf}
+\caption{Flat structure on a square. Four sheets are connected to form the torus $\tau=i$ (left).
+Stereographic projection of the branched cover of the sphere (right). Branch points are the corners 
+of the square. The data of this example was used to create the elliptic lattice of
+Figure~\ref{fig:square_elliptic}.}
+\label{fig:square_branched}
+\end{figure}
 
 \section{Surfaces with boundary}
 \label{sec:surfaces_with_boundary}
