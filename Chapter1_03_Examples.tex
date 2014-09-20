@@ -122,7 +122,7 @@ Figure~\ref{fig:regular_cover} shows the uniformization of this surface.}
 
 \begin{figure}
 \centering
-\includegraphics[width=\linewidth]{data/hyperelliptic_g3/cover}
+\includegraphics[width=\linewidth]{data/hyperelliptic_g3/cover_mesh}
 \caption{Uniformization of Surface~\ref{eq:regular_hyperelliptic}. The surface admits
 a regular fundamental polygon (red) with opposite sides identified. In this normalization
 the axes of the identification motions meet in a point.}
@@ -137,7 +137,49 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 \subsection{The Wente torus}
 \subsection{Lawsons surface}
 
+Lawsons surface as an abstract Riemann surface has various representations. 
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\linewidth]{lawson_curve/curve_opposite_cuts.png}
+	\includegraphics[width=0.5\linewidth]{lawson_curve/curve_opposite_uniformization.pdf}
+	\caption{Uniformization of Lawson's surface given as a triangulation
+of the branched cover of $\Chat$. A fundamental domain is shown and
+teh axes of the generators of the uniformizing group.}
+	\label{fig:lawson_curve_opposite}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\linewidth]{lawson_embedding/embedding_opposite_cuts.png}
+	\includegraphics[width=0.5\linewidth]{lawson_embedding/embedding_opposite_uniformization.pdf}
+	\caption{Uniformization of Lawson's surface given as a triangulated embedding. A fundamental domain is shown and
+teh axes of the generators of the uniformizing group. Compare this figure visually to Figure~\ref{fig:lawson_curve_opposite}, that was created from a 
+completely different input data set.}
+	\label{fig:lawson_embedding_opposite}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\linewidth]{lawson_curve/curve_canonical_cuts.png}
+	\includegraphics[width=0.5\linewidth]{lawson_curve/curve_canonical_uniformization.pdf}
+	\caption{Uniformization of Lawson's surface given as a triangulation
+of the branched cover of $\Chat$. A fundamental domain is shown and
+teh axes of the generators of the uniformizing group.}
+	\label{fig:lawson_curve_canonical}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\linewidth]{lawson_embedding/embedding_canonical_cuts.png}
+	\includegraphics[width=0.5\linewidth]{lawson_embedding/embedding_canonical_uniformization.pdf}
+	\caption{Uniformization of Lawson's surface given as a triangulated embedding. A fundamental domain is shown and
+teh axes of the generators of the uniformizing group. Compare this figure visually to Figure~\ref{fig:lawson_curve_canonical}, that was created from a 
+completely different input data set.}
+	\label{fig:lawson_embedding_canonical}
+\end{figure}
 
 \section{Schottky to Fuchsian Uniformization}
 
@@ -147,21 +189,41 @@ A hyperelliptic surface comes together with a holomorphic involution $h$ called 
 	\quad
 	\includegraphics[width=0.68\linewidth]{data/schottky_g1/res50_cover}
 	\caption{Uniformization of a genus $1$ discrete Riemann surface given by Schottky data.
-	The boundary of the fundamental domain consists of circular polygons in the Schottky domain.}
-	\label{fig:fuchsian_to_schottky_genus_1}
+	The boundary of the fundamental domain consists of circular polygons in the Schottky domain. $\mu$ is real and the elliptic lattice is a rectangle.}
+	\label{fig:fuchsian_to_schottky_genus1}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\linewidth]{data/schottky_g2/genus2_image}
-	\includegraphics[width=0.45\linewidth]{data/schottky_g2/genus2_domain}
+	\includegraphics[width=0.28\linewidth]{data/schottky_g1/res40_nonrect_image}
+	\quad
+	\includegraphics[width=0.68\linewidth]{data/schottky_g1/res40_nonrect_cover}
+	\caption{Uniformization of a genus $1$ discrete Riemann surface given by Schottky data. $\mu$ is a complex number and the elliptic lattice is a 
+parallelogram.}
+	\label{fig:fuchsian_to_schottky_genus1}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\linewidth]{data/schottky_g2/genus2_fine_image2}
+	\includegraphics[width=0.45\linewidth]{data/schottky_g2/genus2_fine_domain2}
+	\caption{Fuchsian uniformization of a genus $1$ Riemann surface (right) given by Schottky data (left). In this exampe $\mu$ is real and the elliptic lattice is a rectangle.}
+	\label{fig:fuchsian_to_schottky_genus2}
+\end{figure}
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\linewidth]{data/schottky_g3/genus3_image2}
+	\includegraphics[width=0.45\linewidth]{data/schottky_g3/genus3_domain2}
 	\caption{Fuchsian uniformization of a Riemann surface (right) given by Schottky data (left).}
-	\label{fig:fuchsian_to_schottky}
+	\label{fig:fuchsian_to_schottky_genus3}
 \end{figure}
 
 In this section we show how to use the discrete theory to calculate a Fuchsian uniformization of a Riemann surface 
 given by Schottky data. For a triangulated fundametal domain of a Schottky group we show how to obtain a discretely
-conformally equivalent triangulation either in the unit disk for genus greater that $1$ or in $\C$, see Figure~\ref{fig:fuchsian_to_schottky}. These triangulations build
+conformally equivalent triangulation either in the unit disk for genus greater that $1$ or in $\C$, see Figure~\ref{fig:fuchsian_to_schottky_genus2}. These triangulations build
 a fundamental domain for the corresponding uniformizing Fuchsian or translation group of the given Riemann surface. We only consider classical Schottky groups here.
 
 Let $C_1,C'_1\ldots,C_g,C'_g$ be disjoint circles in $\hat{\C}$. 
@@ -212,11 +274,7 @@ The idea to define the conformal structure is to use length cross-ratios instead
 \subsection{Images of isometric circles}
 \subsection{Hyperelliptic data}
 
-\section{Conformal maps to $\Chat$}
-
-
-
-\subsection{Examples}
+\section{Conformal maps to $\Chat$ and branched covers of $\Chat$}
 
 \begin{example}
 \label{ex:wente_branched}
@@ -233,10 +291,17 @@ The torus $\tau=i$.
 \includegraphics[height=5cm]{elliptic_square_uniform/square_branched_domain.pdf}
 \includegraphics[height=5cm]{elliptic_square_uniform/square_branched_image2.pdf}
 \caption{Flat structure on a square. Four sheets are connected to form the torus $\tau=i$ (left).
-Stereographic projection of the branched cover of the sphere (right). Branch points are the corners 
-of the square. The data of this example was used to create the elliptic lattice of
+Stereographic projection of the branched cover of the sphere (right). Branch points are the corners are at $1$, $0$, $-1$, and $\infty$. The data of this example was used to create the elliptic lattice of
 Figure~\ref{fig:square_elliptic}.}
 \label{fig:square_branched}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[height=4.5cm]{branched_genus_2/mercator_texture.png}
+\includegraphics[height=4.5cm]{branched_genus_2/image_mercator_closeup.pdf}
+\caption{A genus $2$ surface mapped to a branched cover of $\Chat$.  Surface and branch points with texture after Mercator projection using the purple branch points as poles (left). A closeup of the stereographic image of the red and blue branch points (right).}
+\label{fig:genus2_branched}
 \end{figure}
 
 \section{Surfaces with boundary}

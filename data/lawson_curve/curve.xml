@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<HyperEllipticAlgebraicCurve xmlns="http://www.varylab.com/conformallab/types" name="Hyperelliptic Curve g2">
+    <BranchPoint re="-0.5" im="-0.8660254037844386"/>
+    <BranchPoint re="0.5" im="-0.8660254037844386"/>
+    <BranchPoint re="1.0" im="0.0"/>
+    <BranchPoint re="0.5" im="0.8660254037844386"/>
+    <BranchPoint re="-0.5" im="0.8660254037844386"/>
+    <BranchPoint re="-1.0" im="0.0"/>
+</HyperEllipticAlgebraicCurve>
