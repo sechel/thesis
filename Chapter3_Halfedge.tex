@@ -3,22 +3,21 @@
 
 \chapter{The {\sc Jtem} libraries {\sc HalfEdge} and {\sc HalfEdgeTools}}
 
-This chapter describes the implementation of a half-edge data structure and a set of tools
+This chapter describes the {\sc Java} implementation of a half-edge data structure and a set of tools
 combined in the package {\sc HalfEdgeTools}. Both packages are part of the {\sc Jtem} project
 \cite{JtemWebsite}. This is joint work with Boris~Springborn ({\sc HalfEdge}), Thilo~R{\"o}rig, 
 Felix~Kn{\"o}ppel, and Kristoffer Josefsson ({\sc HalfEdgeTools}), and
 other contributers to the {\sc Jtem} project.
 
 This particular implementation of a half-edge data structure was inspired by an implementation 
-contained in the {\sc Cgal} library \cite{CgalWebsite}.
+contained in the {\sc Cgal} library \cite{Kettner2000}.
+This specific implementation is however different from existing libraries as is uses the generic
+programming concept of {\sc Java} to achive compatibility and flexibility.
 
+The code presented in this section is compatible with {\sc Java} version 1.7 or later.
 
 \label{sec:halfedge_halfedgetools}
 \section{The {\sc HalfEdge} data structure}
-
-This section is taken from the documentation of the package.
-
-{\bf Cell decompositions of surfaces}
 
 Half-edge data structures are used primarily to represent cell decompositions of oriented surfaces.
 We say "primarily" because half-edge data structures can be used to represent somewhat more general
@@ -54,7 +53,7 @@ Every half-edge object holds references to:
 
 The face and vertex objects hold back references to a half-edge referencing them. Finally, there 
 is the class {\tt de.jtem.halfedge.HalfEdgeDataStructure} representing a whole half-edge data 
-structure. It acts as a container for (and sort of factory of) its vertices, edges, and faces.
+structure. It acts as a container for (and sort of factory of) its vertices, half-edges, and faces.
 
 {\bf Use of Generics}
 
@@ -92,7 +91,7 @@ additional functionality or properties.
 Instantiate a {\tt de.jtem.halfedge.HalfEdgeDataStructure}:
 
 \begin{lstlisting}[numbers=none]
-HalfEdgeDataStructure heds = new HalfEdgeDataStructure(MyVertex.class, MyEdge.class, MyFace.class);
+HalfEdgeDataStructure<MyVertex, MyEdge, MyFace> heds = new HalfEdgeDataStructure<>(MyVertex.class, MyEdge.class, MyFace.class);
 \end{lstlisting}
 
 The parameters of the constructor serve as run time type tokens. Alternatively you can create a subclass
@@ -120,14 +119,57 @@ MyFace f = heds.addNewFace();
 
 \end{itemize}
 
-{\bf Half-Edge Utilities}
+{\bf Linkage and incidence.}
+
+Node classes provide methods to create a valid data structure. Most of the methods are bidirectional linkage methods that affect the target and the caller. The corresponding methods are:
+\begin{itemize}
+\item {\tt E.linkNextEdge} sets the {\tt nextEdge} property of this edge as well as the 
+{\tt previousEdge} property of the given edge.
+\item {\tt E.linkOppositeEdge} sets the {\tt oppositeEdge} property of this edge and of the given edge accordingly.
+\item {\tt E.linkPreviousEdge} sets {\tt previousEdge} and {\tt nextEdge} properties of this and the given edge.
+\item {\tt E.setLeftFace} sets the {\tt leftFace} property of this edge and the {\tt boundaryEdge} property of the given face.
+\item {\tt E.setTargetVertex} sets the {\tt targetVertex} property of this edge and the 
+{\tt incommingEdge} property of the given vertex.
+\end{itemize}
+
+{\bf Node indices.}
+
+During algorithm development it is often necessary to access consistent indices on vertices,
+half-edges, or faces. We support this operation by the {\tt index} field of nodes accessible via
+the {\tt getIndex()} method of all node types. Nodes are required to have indices $0,\ldots,\#V$,
+$0,\ldots,\#E$, and $0,\ldots,\#F$ respectively. Note that $\#E$ is the number of half-edges
+in the data structure. The running time of a {\tt getIndex} operation is $\mathcal{O}(1)$ if
+no {\tt remove} operation has invalidated the indices. Otherwise it is $\mathcal{O}(n)$ where
+$n$ is the numer of nodes in the data structure, e.g., $n=\#V$.
+
+{\bf Iterating and directly accessing nodes.}
+
+Nodes can be directly accessed via the corresponding {\tt get} method. It takes the node index
+and returns the node with the given index. It is guaranteed that for a given $i\in \{0,\ldots,\#N\}$
+it is {\tt getNode($i$).getIndex()$ = i$}.
+Nodes in the data structure can be interated over using one of the methods {\tt getVertices}, 
+{\tt getEdges}, or {\tt getFaces}. These return unmodifyable instances of {\tt java.util.List} containing the respective node instances.
+
+{\bf Undirected edges}
+
+A half-edge has the {\tt positive} property. In a pair of opposite edges it is required that the boolean
+value of this property is different, i.e., \url{e.isPositive()} $!=$ \url{e.getOppositeEdge().isPositive()}.
+Using this property it is possible to iterate over undirected edges, i.e., the positive or the negative
+haf-edges. The methods {\tt getPositiveEdges} and {\tt getNegativeEdge} of the data structure 
+implement this.
+
+{\bf Removing nodes from a data structure.}
+
+A node can be deleted from the data structure using the {\tt removeVertex/Edge/Face} methods.
+The running time of a remove operation is always $\mathcal{O}(1)$. Node indices however will
+get invalidated and reindexed on the next access of any index related operation that in turn will
+then have running time $\mathcal{O}(n)$.
+
+{\bf Half-Edge utilities.}
 
 To work efficiently with half-edge data a set of algorithms is implemented as static ulitity methods
 in the class {\tt de.jtem.half\-edge.util.Half\-Edge\-Utils}. It contains methods that help iterating 
-over incoming edges at a vertex, or iterating over the boundary edges of a surface or a face, and many 
-more.
-
-
+over incoming edges at a vertex, or iterating over the boundary edges of a surface or a face, and many more.
 
 
 \section{Data, Algorithms and Tools}
@@ -197,9 +239,9 @@ double valued weights on edges.
 
 \lstinputlisting[
 	caption={Algorithm that uses data from the {\tt AdapterSet}. The {\tt get} method of the
-		{\tt AdapterSet} takes the data class type to find a matching adapter (Line 11 and 12).
+		{\tt AdapterSet} takes the data class type to find a matching adapter (Line~12 and 13).
 		The corresponding {\tt getDefault} method takes a default value that is returned if no
-		matching adapter is found (Line~13). It uses {\tt @FunctionValue} and {\tt @Weight} annotated 
+		matching adapter is found (Line~14). It uses {\tt @FunctionValue} and {\tt @Weight} annotated 
 		adapters to aquire the data needed for calculation of the output value.
 	},
 	label=alg:dirichlet,
@@ -209,7 +251,7 @@ double valued weights on edges.
 ]{java/de/sechel/thesis/MyUtility.java}
 
 This method requires the {\tt AdapterSet} to contain adapters that provide
-{\tt @FunctionValue} data on vertices (Line 11 and 12) and {\tt @Weight} data on half-edges (Line 13). 
+{\tt @FunctionValue} data on vertices (Line~12 and 13) and {\tt @Weight} data on half-edges (Line 14). 
 
 The classes {\tt FunctionValue} and {\tt Weight} are runtime annotation classes, e.g.,
 
