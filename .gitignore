@@ -1,0 +1,9 @@
+/bin/
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.pdf
+*.synctex.gz
+*.toc
