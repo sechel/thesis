@@ -4,6 +4,8 @@
 \chapter{Examples}
 \label{chp:conformal_examples}
 
+The data of all examples is contained on the accompanied data disk. Its format is described in detail in Chapter~\ref{chp:conformallab}.
+
 \section{Branched coverings of $\Chat$}
 In this section we discuss Riemann surfaces that arise as branched double coverings of $\hat{\C}$. A Riemann surface that can be represented as a double cover of $\Chat$ is called elliptic for $g=1$ and hyperelliptic for $g>1$~\cite[p.~235]{Jost2007}. Such a double cover of $\Chat$ can be described by the
 set of solutions of an algebraic equation.
@@ -63,6 +65,7 @@ the polygonal branched tetrahedron as its structure is flat by definition see Fi
 	\centering
 	\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_image.pdf}
 	\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_domain.pdf}
+	{\scriptsize\tt data/wente\_uniform/wente\_uniform.xml}
 	\caption{Uniformization of a discrete wente torus. Points on the sphere are chosen to 
 form a regular subdivision of the elliptic lattice. Red points are branch points of the surface.
 Stereographic projection of the branched sphere (left), ellptic lattice of the torus (right).}
@@ -73,6 +76,7 @@ Stereographic projection of the branched sphere (left), ellptic lattice of the t
 	\centering
 	\includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_image.pdf}
 	\includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_domain.pdf}
+	{\scriptsize\tt data/elliptic\_square\_uniform/square\_uniform\_fine.xml}
 	\caption{Uniformization of a square surface. Points on the sphere are chosen to form a 
 regular subdivision of the elliptic lattice. Red points are branch points of the surface. Red 
 edges represent the boundary of the fundamental domain. Stereographic projection of the 
@@ -82,9 +86,11 @@ branched sphere (left), ellptic lattice of the torus (right).}
 
 
 \begin{figure}[p]
+	\centering
 	\includegraphics[width=\textwidth]{elliptic_curves/tetrahedron}
 	\includegraphics[width=\textwidth]{elliptic_curves/square}
 	\includegraphics[width=\textwidth]{elliptic_curves/generic}
+	{\scriptsize\tt data/elliptic\_curves/\{tetrahedron|square|generic\}.xml}
 	\caption{Discrete Weierstrass $\wp$ functions with randomized data. Regular tetrahedron $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$ (top), Square $\tau=i$ (middle), generic position branch points $\tau \approx 0.18+0.67i$.}
 \end{figure}
 
@@ -124,6 +130,7 @@ Figure~\ref{fig:regular_cover} shows the uniformization of this surface.}
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{data/hyperelliptic_g3/cover_mesh}
+{\scriptsize\tt data/hyperelliptic\_g3/data.xml}
 \caption{Uniformization of Surface~\ref{eq:regular_hyperelliptic}. The surface admits
 a regular fundamental polygon (red) with opposite sides identified. In this normalization
 the axes of the identification motions meet in a point.}
@@ -144,6 +151,7 @@ Lawsons surface as an abstract Riemann surface has various representations.
 	\centering
 	\includegraphics[width=0.45\linewidth]{lawson_curve/curve_opposite_cuts.png}
 	\includegraphics[width=0.5\linewidth]{lawson_curve/curve_opposite_uniformization.pdf}
+	{\scriptsize\tt data/lawson\_curve/curve\_opposite.xml}
 	\caption{Uniformization of Lawson's surface given as a triangulation
 of the branched cover of $\Chat$. A fundamental domain is shown and
 teh axes of the generators of the uniformizing group.}
@@ -155,9 +163,9 @@ teh axes of the generators of the uniformizing group.}
 	\centering
 	\includegraphics[width=0.45\linewidth]{lawson_embedding/embedding_opposite_cuts.png}
 	\includegraphics[width=0.5\linewidth]{lawson_embedding/embedding_opposite_uniformization.pdf}
-	\caption{Uniformization of Lawson's surface given as a triangulated embedding. A fundamental domain is shown and
-teh axes of the generators of the uniformizing group. Compare this figure visually to Figure~\ref{fig:lawson_curve_opposite}, that was created from a 
-completely different input data set.}
+	{\scriptsize\tt data/lawson\_embedding/embedding5k\_opposite.xml}
+	\caption{Uniformization of Lawson's surface given as a triangulated embedding. A fundamental domain is shown and the axes of the generators of the uniformizing group. Compare this figure visually to Figure~\ref{fig:lawson_curve_opposite}, that was created 
+from a completely different input data set.}
 	\label{fig:lawson_embedding_opposite}
 \end{figure}
 
@@ -165,6 +173,7 @@ completely different input data set.}
 	\centering
 	\includegraphics[width=0.45\linewidth]{lawson_curve/curve_canonical_cuts.png}
 	\includegraphics[width=0.5\linewidth]{lawson_curve/curve_canonical_uniformization.pdf}
+	{\scriptsize\tt data/lawson\_curve/curve\_canonical.xml}
 	\caption{Uniformization of Lawson's surface given as a triangulation
 of the branched cover of $\Chat$. A fundamental domain is shown and
 teh axes of the generators of the uniformizing group.}
@@ -176,6 +185,7 @@ teh axes of the generators of the uniformizing group.}
 	\centering
 	\includegraphics[width=0.45\linewidth]{lawson_embedding/embedding_canonical_cuts.png}
 	\includegraphics[width=0.5\linewidth]{lawson_embedding/embedding_canonical_uniformization.pdf}
+	{\scriptsize\tt data/lawson\_embedding/embedding5k\_canonical.xml}
 	\caption{Uniformization of Lawson's surface given as a triangulated embedding. A fundamental domain is shown and
 teh axes of the generators of the uniformizing group. Compare this figure visually to Figure~\ref{fig:lawson_curve_canonical}, that was created from a 
 completely different input data set.}
@@ -189,6 +199,7 @@ completely different input data set.}
 	\includegraphics[width=0.28\linewidth]{data/schottky_g1/res50_image}
 	\quad
 	\includegraphics[width=0.68\linewidth]{data/schottky_g1/res50_cover}
+	{\scriptsize\tt data/schottky\_g1/res50.xml}
 	\caption{Uniformization of a genus $1$ discrete Riemann surface given by Schottky data.
 	The boundary of the fundamental domain consists of circular polygons in the Schottky domain. $\mu$ is real and the elliptic lattice is a rectangle.}
 	\label{fig:fuchsian_to_schottky_genus1}
@@ -199,6 +210,7 @@ completely different input data set.}
 	\includegraphics[width=0.28\linewidth]{data/schottky_g1/res40_nonrect_image}
 	\quad
 	\includegraphics[width=0.68\linewidth]{data/schottky_g1/res40_nonrect_cover}
+	{\scriptsize\tt data/schottky\_g1/res40\_nonrect.xml}
 	\caption{Uniformization of a genus $1$ discrete Riemann surface given by Schottky data. $\mu$ is a complex number and the elliptic lattice is a 
 parallelogram.}
 	\label{fig:fuchsian_to_schottky_genus1}
@@ -208,6 +220,7 @@ parallelogram.}
 	\centering
 	\includegraphics[width=0.45\linewidth]{data/schottky_g2/genus2_fine_image2}
 	\includegraphics[width=0.45\linewidth]{data/schottky_g2/genus2_fine_domain2}
+	{\scriptsize\tt data/schottky\_g2/genus2\_fine.xml}
 	\caption{Fuchsian uniformization of a genus $1$ Riemann surface (right) given by Schottky data (left). In this exampe $\mu$ is real and the elliptic lattice is a rectangle.}
 	\label{fig:fuchsian_to_schottky_genus2}
 \end{figure}
@@ -218,6 +231,7 @@ parallelogram.}
 	\centering
 	\includegraphics[width=0.45\linewidth]{data/schottky_g3/genus3_image2}
 	\includegraphics[width=0.45\linewidth]{data/schottky_g3/genus3_domain2}
+	{\scriptsize\tt data/schottky\_g3/schottky.xml}
 	\caption{Fuchsian uniformization of a Riemann surface (right) given by Schottky data (left).}
 	\label{fig:fuchsian_to_schottky_genus3}
 \end{figure}
@@ -291,6 +305,7 @@ The torus $\tau=i$.
 \centering
 \includegraphics[height=5cm]{elliptic_square_uniform/square_branched_domain.pdf}
 \includegraphics[height=5cm]{elliptic_square_uniform/square_branched_image2.pdf}
+{\scriptsize\tt data/elliptic\_square\_uniform/square\_uniform\_fine.xml}
 \caption{Flat structure on a square. Four sheets are connected to form the torus $\tau=i$ (left).
 Stereographic projection of the branched cover of the sphere (right). Branch points are the corners are at $1$, $0$, $-1$, and $\infty$. The data of this example was used to create the elliptic lattice of
 Figure~\ref{fig:square_elliptic}.}
@@ -301,6 +316,7 @@ Figure~\ref{fig:square_elliptic}.}
 \centering
 \includegraphics[height=4.5cm]{branched_genus_2/mercator_texture.png}
 \includegraphics[height=4.5cm]{branched_genus_2/image_mercator_closeup.pdf}
+{\scriptsize\tt data/branched\_genus\_2/data.xml}
 \caption{A genus $2$ surface mapped to a branched cover of $\Chat$.  Surface and branch points with texture after Mercator projection using the purple branch points as poles (left). A closeup of the stereographic image of the red and blue branch points (right).}
 \label{fig:genus2_branched}
 \end{figure}
