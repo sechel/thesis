@@ -343,7 +343,7 @@ There is a set of generic adapters implemented in the package
 the data itself. Instead it asks for other adapters to provide data and converts, merges, or recalculates its
 output based on the data aquired from other adapter implementations.
 
-The most important example of a pre-defined generic adapter are position and texture position adapters.
+The most important example of pre-defined generic adapters are position and texture position adapters.
 These adapters come in three versions, e.g., {\tt @Position2D}, {\tt @Position3D}, and {\tt @Position4D}. The implementations, e.g, {\tt de.jtem.half\-edge\-tools.adapter.generic.Position\-3dAdapter} obtain position
 data from the {\tt AdapterSet} using the adapter annotated with {\tt @Position} and convert if the lengths
 of arrays is not equal to $3$.
