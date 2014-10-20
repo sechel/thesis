@@ -11,7 +11,7 @@
 
 \usepackage{paralist}
 
-\usepackage[draft]{graphicx}
+\usepackage[]{graphicx}
 \graphicspath{
 	{image/}
 	{figures/}
@@ -179,6 +179,7 @@ Tag der wissenschaftlichen Aussprache: NN\\
 \chapter{Introduction}
 \setcounter{secnumdepth}{2} 
 \part{Variational Methods for Discrete Surface Parameterization} 
+\label{part:variational}
 %\subfile{Chapter1_Background.tex}
 %\subfile{Chapter2_Interpolation.tex}
 \subfile{Chapter1_00_Preliminaries.tex}
@@ -187,10 +188,12 @@ Tag der wissenschaftlichen Aussprache: NN\\
 \subfile{Chapter1_02_DiscreteUniformization.tex}
 \subfile{Chapter1_03_Examples.tex}
 \part{Applications}
+\label{part:applications}
 \subfile{Chapter2_PeriodicPanelization.tex}
 \subfile{Chapter2_Quasiisothermic.tex}
 %\subfile{Chapter2_Tschebyscheff.tex}
 \part{Implementation}
+\label{part:implementation}
 \subfile{Chapter3_JRworkspace.tex}
 \subfile{Chapter3_Halfedge.tex}
 \subfile{Chapter3_ConformalLab.tex}

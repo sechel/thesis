@@ -8,8 +8,18 @@
 \centering
 \includegraphics[width=0.7\linewidth]{conformllab/conformallab.png}
 \caption{The window of {\sc ConformalLab}.}
-\label{fig:conformal_main}
+\label{fig:conformal_window}
 \end{figure}
+
+This chapter enables the reader to reproduce examples contained in this work that involve uniformization of
+Riemann surfaces, see Chapter~\ref{chp:conformal_examples}, and applications of conformal mappings of 
+Part~\ref{part:applications}. The author has written {\sc Java} software, {\sc ConformalLab}, to calculate the corresponding data.
+The software and the correponding data is included on the accompanying CD. 
+
+{\sc ConformalLab} is designed to be used via a graphical user interface, see Figure~\ref{fig:conformal_window}. To store
+resulting data an XML format is used. We describe this format in Section~\ref{sec:conformal_data}. The graphical user interface
+is described in Section~\ref{sec:conformallab_ui}.
+
 
 \section{Data format}
 \label{sec:conformal_data}
@@ -22,7 +32,8 @@ All XML data is contained in the XML namespace
 
 {\bf Schottky data} 
 
-A Riemann surface can be given by Schottky data, see Section~\ref{sec:schottky_examples}. An example is shown in Listing~\ref{lst:schottky_xml}. {\tt SchottkyData} can include one or more {\tt SchottkyGenerator}s. A {\tt SchottkyGenerator} defines fix points $A$ and $B$, the complex number $\mu$, and a {\tt Circle}. This circle is required to contain $A$ and must not contain $B$.
+A Riemann surface can be given by Schottky data, see Section~\ref{sec:schottky_examples}. An example is shown in Listing~\ref{lst:schottky_xml}. {\tt SchottkyData} can include one or more {\tt SchottkyGenerator}s. A {\tt SchottkyGenerator} defines fix points $A$ and $B$, the complex number $\mu$, and a {\tt Circle}. This circle is required to contain $A$ and must not contain $B$. If there are more that one generator, then the circles
+an their images must not intersect.
 
 \begin{lstlisting}[label=lst:schottky_xml, caption={A torus given by schotty data}, numbers=none, language=XML, captionpos=b]
 <SchottkyData name="Schottky">
@@ -39,7 +50,8 @@ A Riemann surface can be given by Schottky data, see Section~\ref{sec:schottky_e
 
 {\bf Hyperelliptic data} 
 
-Hyperelliptic algebraic curves as used in the examples of Section~\ref{sec:examples_elliptic} and \ref{sec:examples_hyperelliptic} are given by the location of their branch points in the complex plane.
+Hyperelliptic algebraic curves as used in the examples of Section~\ref{sec:examples_elliptic} and \ref{sec:examples_hyperelliptic} are given by the location of their branch points in the complex plane. All points must be distinct. Listing~\ref{lst:hyperelliptic_xml} shows the XML representation
+of an elliptic algebraic curve defining a Riemann surface of genus~$1$.
 
 \begin{lstlisting}[label=lst:hyperelliptic_xml, caption={A torus given as hyperelliptic data}, numbers=none, language=XML, captionpos=b]
 <HyperEllipticAlgebraicCurve name="Curve g2">
@@ -50,7 +62,17 @@ Hyperelliptic algebraic curves as used in the examples of Section~\ref{sec:examp
 </HyperEllipticAlgebraicCurve>
 \end{lstlisting}
 
-\begin{lstlisting}[label=lst:hyperelliptic_xml, caption={A torus given as {\tt HalfedegeEmbedding}
+{\bf Discrete data} 
+
+To specify discrete data we use the concept of half edge data structure, see also Chapter~\ref{chp:halfedge}. Listing~\ref{lst:halfedge_xml}
+shows the structure of a {\tt HalfedgeEmbedding}. {\tt Vertices} are assigned coordinates in $\mathbb RP^3$ and their index. {\tt Halfedge}
+nodes specify indices of incident faces, edges, and vertices as defined in Section~\ref{sec:halfedge}. In addition the data needed to specify 
+the combinatorics of the half edge datastructure one can specify identifications of vertices and edges. An {\tt Identification} node contains
+all vertices that are identified. Consider a parallelogram fundamental domain of a flat torus. In the parallelogram all four vertices are identified
+to form the topological torus. Also the edges of the parallelogram are identified. An {\tt EdgeIdentification} node defines the four half edges
+that belong to the pair of half edges on the torus.
+
+\begin{lstlisting}[label=lst:halfedge_xml, caption={A torus given as {\tt HalfedegeEmbedding}
 with identified edge pairs and vertices.}, numbers=none, language=XML, captionpos=b]
 <HalfedgeEmbedding name="Uniformizing Map_domain">
 	<Vertex x="0.0" y="0.0" z="0.0" w="1.0" index="0"/>
@@ -77,7 +99,11 @@ with identified edge pairs and vertices.}, numbers=none, language=XML, captionpo
 </HalfedgeEmbedding>
 \end{lstlisting}
 
-\begin{lstlisting}[label=lst:hyperelliptic_xml, caption={A discrete map is given by a pair of embeddings, the {\tt Domain} and {\tt Image} of the map. Both are of type {\tt HalfedgeEmbedding}.}, numbers=none, language=XML, captionpos=b]
+The {\tt HalfedgeEmbedding} data type can be used to define disceret maps between discrete embeddings. A discrete map consists of
+a domain {\tt HalfedgeEmbedding} and the correponding image. Both nodes must define the same number of vertices. The map is defined
+via vertex indices. A vertex $i$ from the domain is mapped to the vertex with index $i$ in the image data structure, see Listing~\ref{lst:halfedgemap_xml}.
+
+\begin{lstlisting}[label=lst:halfedgemap_xml, caption={A discrete map is given by a pair of {\tt HalfedgeEmbedding}s, the {\tt Domain} and {\tt Image} of the map. Both are of type {\tt HalfedgeEmbedding}.}, numbers=none, language=XML, captionpos=b]
 <HalfedgeMap name="Uniformizing Map">
 	<Domain name="Uniformizing Map_domain">
 		...
@@ -87,6 +113,24 @@ with identified edge pairs and vertices.}, numbers=none, language=XML, captionpo
 	</Image>
 </HalfedgeMap>
 \end{lstlisting}
+
+A way of defining a discrete Riemann surface is to specify its discrete metric. A {\tt DiscreteMetric} defines non-oriented {\tt MetricEdges}
+and their lengths. {\tt MetricTriangles} are glues along those edges. All triangles are oriented by the order of edges defined by attributes
+{\tt edge1}, {\tt edge2}, and {\tt edge3} respectively. By that we can ony encode oriented discrete Riemann surfaces using a {\tt DiscreteMetric}.
+A simple example featurering a Wente torus is shows in Listing~\ref{lst:discretemetric_xml}.
+
+\begin{lstlisting}[label=lst:discretemetric_xml, caption={A wente torus given by a discrete metric. Vertices are given implictly
+by following the order of triangle glueings.}, numbers=none, language=XML, captionpos=b]
+<DiscreteMetric name="Wente Torus">
+	<MetricEdge length="1.0" index="0"/>
+	<MetricEdge length="1.0" index="1"/>
+	<MetricEdge length="1.0" index="2"/>
+	<MetricTriangle edge1="0" edge2="1" edge3="2"/>
+	<MetricTriangle edge1="0" edge2="1" edge3="2"/>
+</DiscreteMetric>
+\end{lstlisting}
+
+{\bf Uniformization data} 
 
 \begin{lstlisting}[label=lst:hyperelliptic_xml, caption={A torus given by its uniformizing group and a fundamental polygon. The elements of the group are either euclidean motions or hyperbolic motions given as elements of $\mathbb PSL_2$.}, numbers=none, language=XML, captionpos=b]
 <UniformizationData name="Direct Uniformization">
@@ -130,34 +174,10 @@ with identified edge pairs and vertices.}, numbers=none, language=XML, captionpo
 </UniformizationData>
 \end{lstlisting}
 
-\begin{lstlisting}[label=lst:hyperelliptic_xml, caption={A wente torus given by a discrete metric. Vertices are given implitly
-by following the order of triangle glueings.}, numbers=none, language=XML, captionpos=b]
-<DiscreteMetric name="Torus Discrete Metric">
-	<MetricEdge length="1.0" index="0"/>
-	<MetricEdge length="1.0" index="1"/>
-	<MetricEdge length="1.0" index="2"/>
-	<MetricEdge length="1.0" index="3"/>
-	<MetricEdge length="1.0" index="4"/>
-	<MetricEdge length="1.0" index="5"/>
-	<MetricEdge length="1.0" index="6"/>
-	<MetricEdge length="1.0" index="7"/>
-	<MetricEdge length="1.0" index="8"/>
-	<MetricEdge length="1.0" index="9"/>
-	<MetricEdge length="1.0" index="10"/>
-	<MetricEdge length="1.0" index="11"/>
-	<MetricTriangle edge1="2" edge2="6" edge3="1"/>
-	<MetricTriangle edge1="4" edge2="0" edge3="3"/>
-	<MetricTriangle edge1="2" edge2="11" edge3="3"/>
-	<MetricTriangle edge1="4" edge2="5" edge3="1"/>
-	<MetricTriangle edge1="0" edge2="7" edge3="8"/>
-	<MetricTriangle edge1="6" edge2="9" edge3="10"/>
-	<MetricTriangle edge1="9" edge2="8" edge3="5"/>
-	<MetricTriangle edge1="7" edge2="10" edge3="11"/>
-</DiscreteMetric>
-\end{lstlisting}
 
 
 \section{User interface}
+\label{sec:conformallab_ui}
 
 The user interface of {\sc ConformalLab} is devided into panels which serve
 separate purposes.
@@ -175,7 +195,7 @@ Loadable are {\tt ConformalDataList} as well as single data instances. The entri
 to save the data to disk (blue disk), load it into the program (gear with green arrow), or delete 
 it from the list (red circle).
 The function of the load button depends on the data type. A {\tt HalfedgeEmbedding} is
-loaded as geometry. A {\tt HalfedgeMap} defined geometry together with texture coordinates
+loaded as geometry. A {\tt HalfedgeMap} defines geometry together with texture coordinates
 and boundary identifications. If suitable boundary identification is given a uniformizing
 group is calculated and visualized.
 
