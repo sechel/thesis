@@ -14,14 +14,16 @@
 This chapter enables the reader to reproduce examples contained in this work that involve uniformization of
 Riemann surfaces, see Chapter~\ref{chp:conformal_examples}, and applications of conformal mappings of 
 Part~\ref{part:applications}. The author has written {\sc Java} software, {\sc ConformalLab}, to calculate the corresponding data.
-The software and the correponding data is included on the accompanying CD. 
+The software and the data is included on the accompanying CD. 
 
 {\sc ConformalLab} is designed to be used via a graphical user interface, see Figure~\ref{fig:conformal_window}. To store
 resulting data an XML format is used. We describe this format in Section~\ref{sec:conformal_data}. The graphical user interface
-is described in Section~\ref{sec:conformallab_ui}.
+is described in Section~\ref{sec:conformallab_ui}. {\sc ConformalLab} uses {\sc JRworkspace}, see Chapter~\ref{chp:jrworkspace}, to implement its user
+interface. This allows the user interface to be devided into panels which serve separate purposes. 
+{\sc ConformalLab} uses {\sc HalfEdge} and {\sc HalfEdgeTools}, see Chapter~\ref{chp:halfedge}, to work with discrete surfaces.
 
 
-\section{Data format}
+\section{XML data format}
 \label{sec:conformal_data}
 To store and process data {\sc ConformalLab} uses an {\sc XML} data format.
 All examples presented in Chapter~\ref{chp:conformal_examples} are stored
@@ -50,8 +52,9 @@ an their images must not intersect.
 
 {\bf Hyperelliptic data} 
 
-Hyperelliptic algebraic curves as used in the examples of Section~\ref{sec:examples_elliptic} and \ref{sec:examples_hyperelliptic} are given by the location of their branch points in the complex plane. All points must be distinct. Listing~\ref{lst:hyperelliptic_xml} shows the XML representation
-of an elliptic algebraic curve defining a Riemann surface of genus~$1$.
+{\tt HyperEllipticAlgebraicCurve}s as used in the examples of Section~\ref{sec:examples_elliptic} and \ref{sec:examples_hyperelliptic} are given by the location of their branch points in the complex plane. All points must be distinct. Listing~\ref{lst:hyperelliptic_xml} shows the XML representation
+of an elliptic algebraic curve defining a Riemann surface of genus~$1$. The point at infinity cannot be
+specified and is implicitly given if an odd number of branch points is listed.
 
 \begin{lstlisting}[label=lst:hyperelliptic_xml, caption={A torus given as hyperelliptic data}, numbers=none, language=XML, captionpos=b]
 <HyperEllipticAlgebraicCurve name="Curve g2">
@@ -60,6 +63,58 @@ of an elliptic algebraic curve defining a Riemann surface of genus~$1$.
 	<BranchPoint re="1.0" im="0.0"/>
 	<BranchPoint re="-1.0" im="0.0"/>
 </HyperEllipticAlgebraicCurve>
+\end{lstlisting}
+
+{\bf Fuchsian data}
+
+A Riemann surface given by Fuchsian data ({\tt UniformizationData}) is represented by generators of the corresponding Fuchsian group
+and their inverse elements as elements of $PSL(2,\mathbb R)$ ({\tt UniformizingGroup} and {\tt IsometryPSL2R}
+XML nodes). In addition to the group a fundamental polygon
+is defined by its vertices and edges. In Listing~\ref{lst:fuchsian_xml} the uniformizing group of euclidean
+motions defines the structure of a flat torus. The {\tt FundamentalPolygon} is a parallelogram. There is only
+one {\tt FundamentalVertex} since all vertices of the parallelogram are indentified. There are four
+{\tt FundamentalEdge}s each of which is identified with its opposite edge of the parallelogram. Each {\tt FundamentalEdge} defines a {\tt StartPosition} in $\mathbb C$ that is interpreted as an element of $\mathbb R P^2$. The polygon is positively oriented.
+
+\begin{lstlisting}[label=lst:fuchsian_xml, caption={A torus given by its Fuchsian uniformizing group and a corresponding fundamental polygon. The elements of the group are either euclidean motions or hyperbolic motions given as elements of $PSL(2, \mathbb R)$.}, numbers=none, language=XML, captionpos=b]
+<UniformizationData name="Direct Uniformization">
+	<UniformizingGroup>
+		<IsometryPSL2R 
+			m11="1.0" m12="0.0" m13="1.0" 
+			m21="0.0" m22="1.0" m23="0.0" 
+			m31="0.0" m32="0.0" m33="1.0"
+		/>
+		<IsometryPSL2R 
+			m11="1.0" m12="0.0" m13="0.0" 
+			m21="0.0" m22="1.0" m23="1.0" 
+			m31="0.0" m32="0.0" m33="1.0"
+		/>
+		<IsometryPSL2R 
+			m11="1.0" m12="0.0" m13="-1.0" 
+			m21="0.0" m22="1.0" m23="0.0" 
+			m31="0.0" m32="0.0" m33="1.0"
+		/>
+		<IsometryPSL2R 
+			m11="1.0" m12="0.0" m13="0.0" 
+			m21="0.0" m22="1.0" m23="-1.0" 
+			m31="0.0" m32="0.0" m33="1.0"
+		/>
+	</UniformizingGroup>
+	<FundamentalPolygon>
+		<FundamentalVertex index="0"/>
+		<FundamentalEdge index="0" nextEdge="1" previousEdge="3" identifiedEdge="2" startVertex="0">
+			<StartPosition re="0.0" im="0.0"/>
+		</FundamentalEdge>
+		<FundamentalEdge index="1" nextEdge="2" previousEdge="0" identifiedEdge="3" startVertex="0">
+			<StartPosition re="1.0" im="0.0"/>
+		</FundamentalEdge>
+		<FundamentalEdge index="2" nextEdge="3" previousEdge="1" identifiedEdge="0" startVertex="0">
+			<StartPosition re="1.0" im="1.0"/>
+		</FundamentalEdge>
+		<FundamentalEdge index="3" nextEdge="0" previousEdge="2" identifiedEdge="1" startVertex="0">
+			<StartPosition re="0.0" im="1.0"/>
+		</FundamentalEdge>
+	</FundamentalPolygon>
+</UniformizationData>
 \end{lstlisting}
 
 {\bf Discrete data} 
@@ -130,60 +185,51 @@ by following the order of triangle glueings.}, numbers=none, language=XML, capti
 </DiscreteMetric>
 \end{lstlisting}
 
-{\bf Uniformization data} 
+{\bf Data lists}
 
-\begin{lstlisting}[label=lst:hyperelliptic_xml, caption={A torus given by its uniformizing group and a fundamental polygon. The elements of the group are either euclidean motions or hyperbolic motions given as elements of $\mathbb PSL_2$.}, numbers=none, language=XML, captionpos=b]
-<UniformizationData name="Direct Uniformization">
-	<UniformizingGroup>
-		<IsometryPSL2R 
-			m11="1.0" m12="0.0" m13="1.0" 
-			m21="0.0" m22="1.0" m23="0.0" 
-			m31="0.0" m32="0.0" m33="1.0"
-		/>
-		<IsometryPSL2R 
-			m11="1.0" m12="0.0" m13="0.0" 
-			m21="0.0" m22="1.0" m23="1.0" 
-			m31="0.0" m32="0.0" m33="1.0"
-		/>
-		<IsometryPSL2R 
-			m11="1.0" m12="0.0" m13="-1.0" 
-			m21="0.0" m22="1.0" m23="0.0" 
-			m31="0.0" m32="0.0" m33="1.0"
-		/>
-		<IsometryPSL2R 
-			m11="1.0" m12="0.0" m13="0.0" 
-			m21="0.0" m22="1.0" m23="-1.0" 
-			m31="0.0" m32="0.0" m33="1.0"
-		/>
-	</UniformizingGroup>
-	<FundamentalPolygon>
-		<FundamentalVertex index="0"/>
-		<FundamentalEdge index="0" nextEdge="1" previousEdge="3" identifiedEdge="2" startVertex="0">
-			<StartPosition re="0.0" im="0.0"/>
-		</FundamentalEdge>
-		<FundamentalEdge index="1" nextEdge="2" previousEdge="0" identifiedEdge="3" startVertex="0">
-			<StartPosition re="1.0" im="0.0"/>
-		</FundamentalEdge>
-		<FundamentalEdge index="2" nextEdge="3" previousEdge="1" identifiedEdge="0" startVertex="0">
-			<StartPosition re="1.0" im="1.0"/>
-		</FundamentalEdge>
-		<FundamentalEdge index="3" nextEdge="0" previousEdge="2" identifiedEdge="1" startVertex="0">
-			<StartPosition re="0.0" im="1.0"/>
-		</FundamentalEdge>
-	</FundamentalPolygon>
-</UniformizationData>
+Each of the data nodes as described above can appear in an element of type {\tt ConformalDataList}. A typical 
+XML file representing the data of an example of Chapter~\ref{chp:conformal_examples} contains input
+data, e.g. {\tt SchottkyData} and {\tt DiscreteMetric}, as well as the resulting ouput embedding and uniformization data represented as {\tt HalfedgeEmbedding} and {\tt UniformizationData}.
+
+\begin{lstlisting}[label=lst:datalist_xml, caption={A list of data XML nodes as the result of an algorithm calculating the Fuchsian uniformization of a genus $1$ Riemann surface given by Schottky data.}, numbers=none, language=XML, captionpos=b]
+<ConformalDataList>
+	<SchottkyData name="Schottky Data g1">
+		...
+	</SchottkyData>
+	<DiscreteMetric name="Input Schottky Data Metric">
+		...
+	</DiscreteMetric>
+	<HalfedgeEmbedding name="Output Euclidean Embedding">
+		...
+	</HalfedgeEmbedding>
+	<HalfedgeMap name="Uniformizing Map">
+		<Domain name="Uniformizing Map_domain">
+			...
+		</Domain>
+		<Image name="Uniformizing Map_image">
+			...
+		</Image>
+	</HalfedgeMap>
+	<UniformizationData name="Direct Uniformization">
+		...
+	</UniformizationData>
+	<UniformizationData name="Minimal Uniformization">
+		...
+	</UniformizationData>
+</ConformalDataList>
 \end{lstlisting}
 
-
-
-\section{User interface}
+\section{Uniformization and conformal mappings}
 \label{sec:conformallab_ui}
 
-The user interface of {\sc ConformalLab} is devided into panels which serve
-separate purposes.
-\begin{wrapfigure}{R}{0.4\textwidth}
+The user interface of {\sc ConformalLab} is devided into panels which serve separate purposes in the 
+workflow of performing experiments with discrete Riemann surfaces and conformal mappings.
+
+{\bf Data import and export}
+
+\begin{wrapfigure}{R}{0.45\textwidth}
 \centering
-\includegraphics[width=\linewidth]{conformllab/conformal_data.png}
+\includegraphics[width=0.9\linewidth]{conformllab/conformal_data.png}
 \caption{XML data import and export interface of {\sc ConformalLab}.}
 \label{fig:conformal_data}
 \end{wrapfigure}
@@ -197,7 +243,14 @@ it from the list (red circle).
 The function of the load button depends on the data type. A {\tt HalfedgeEmbedding} is
 loaded as geometry. A {\tt HalfedgeMap} defines geometry together with texture coordinates
 and boundary identifications. If suitable boundary identification is given a uniformizing
-group is calculated and visualized.
+group is calculated and visualized. {\tt HyperEllipticAlgebraicCurve}s are loaded into 
+the hypeelliptic curve panel of the user interface, see Figure~\ref{fig:conformal_hyperelliptic}. 
+{\tt SchottkyData} is loaded into the Schottky modeler panel, see Figure~\ref{fig:conformal_schottky}.
+
+{\bf Hyperelliptic curves}
+
+Hyperelliptic curves are defined vie their branch points, see Section~\ref{sec:examples_hyperelliptic}.
+In the hyperelliptic curve panel the user can 
 
 \begin{wrapfigure}{R}{0.4\textwidth}
 \centering
@@ -209,7 +262,7 @@ group is calculated and visualized.
 \begin{wrapfigure}{R}{0.4\textwidth}
 \centering
 \includegraphics[width=\linewidth]{conformllab/schottky_modeller.png}
-\caption{The Schottky modeller user interface of {\sc ConformalLab}.}
+\caption{The Schottky modeler user interface of {\sc ConformalLab}.}
 \label{fig:conformal_schottky}
 \end{wrapfigure}
 
