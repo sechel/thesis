@@ -7,6 +7,8 @@
 The data of all examples is contained on the accompanied data disk. Its format is described in detail in Chapter~\ref{chp:conformallab}.
 
 \section{Branched coverings of $\Chat$}
+\label{sec:branched_coverings}
+
 In this section we discuss Riemann surfaces that arise as branched double coverings of $\hat{\C}$. A Riemann surface that can be represented as a double cover of $\Chat$ is called elliptic for $g=1$ and hyperelliptic for $g>1$~\cite[p.~235]{Jost2007}. Such a double cover of $\Chat$ can be described by the
 set of solutions of an algebraic equation.
 
@@ -44,6 +46,18 @@ Let $\Chat_V$ be the discrete Riemann sphere with vertex set $V\subset S^2$. Let
 \end{definition}
 
 A discrete branched cover of $\Chat$ is a triangulation of $\pi(C)$ with vertices at $\lambda_i$.
+
+
+To create a suitable triangulation with vertices on the sphere we minimize the following energy on a given set
+of initial points on the sphere. A good start is to choose points uniformly distributed on the sphere. To achieve this we choose $x$, $y$, and $z$ to be normally distributed and project the resulting vectors to the sphere, see~ \cite{Muller1959}. The functional and its gradient that we minimize is
+
+\begin{eqnarray*}
+	E &=& n^2\sum_{v\in V}\left( \left<v,v\right> - 1\right)^2 + \sum_{v\in V}\sum_{\substack{w\in V\\w\neq v}} \frac{1}{<w-v, w-v>}\\
+	\frac{\partial E}{\partial v} &=& 4n^2<v,v>v + 4\sum_{\substack{w\in V\\w\neq v}}\frac{w-v}{<w-v,w-v>^2}.
+\end{eqnarray*}
+
+There is however no guarantee that the points of the minimizer will lie on the sphere and so we project 
+after optimization.
 
 
 \subsection{Elliptic curves}

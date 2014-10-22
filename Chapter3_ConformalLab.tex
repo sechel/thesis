@@ -234,23 +234,29 @@ workflow of performing experiments with discrete Riemann surfaces and conformal 
 \label{fig:conformal_data}
 \end{wrapfigure}
 The data import and export panel, see Figure~\ref{fig:conformal_data},
-provides functions to import and export data as described in Section~\ref{sec:conformal_data}.
-Data can be loaded into memory via the Import button. A table lists the entries of the loaded file.
+provides functions to import and export XML data as described in Section~\ref{sec:conformal_data}.
+Data files can be loaded into memory via the Import button. A table lists the entries of the loaded file.
 Loadable are {\tt ConformalDataList} as well as single data instances. The entries of a
 {\tt ConformalDataList} are listed in the table of the panel. Each of the rows contains buttons
 to save the data to disk (blue disk), load it into the program (gear with green arrow), or delete 
 it from the list (red circle).
 The function of the load button depends on the data type. A {\tt HalfedgeEmbedding} is
-loaded as geometry. A {\tt HalfedgeMap} defines geometry together with texture coordinates
-and boundary identifications. If suitable boundary identification is given a uniformizing
+loaded as geometry and is displayed in the 3D viewer. A {\tt HalfedgeMap} defines geometry 
+together with texture coordinates and boundary identifications. If suitable boundary identification is given a uniformizing
 group is calculated and visualized. {\tt HyperEllipticAlgebraicCurve}s are loaded into 
-the hypeelliptic curve panel of the user interface, see Figure~\ref{fig:conformal_hyperelliptic}. 
+the hyperelliptic curve panel of the user interface, see Figure~\ref{fig:conformal_hyperelliptic}. 
 {\tt SchottkyData} is loaded into the Schottky modeler panel, see Figure~\ref{fig:conformal_schottky}.
 
 {\bf Hyperelliptic curves}
 
-Hyperelliptic curves are defined vie their branch points, see Section~\ref{sec:examples_hyperelliptic}.
-In the hyperelliptic curve panel the user can 
+The Hyperelliptic curve panel (Figure~\ref{fig:conformal_hyperelliptic}) is used to create branched 
+triangulations of the doubly covered sphere.
+Hyperelliptic curves are defined vie their branch points, see Section~\ref{sec:branched_coverings} of Chapter~\ref{chp:conformal_examples}.
+In the hyperelliptic curve panel the user can add branch points by double-clicking at the desired location in
+the graph paper view. Double-clicking an existing point brings up a coordinate editor. The lower section
+of the panel defines parameters of the mesh creation. The user can choose to add extra normally disctributed random points to the triangulation. These points can be further optimized to form a more regular triangulation.
+The number of point equalizer iterations defined the numer of gradient decent steps in the optimization of 
+the functional defined in Section~\ref{sec:branched_coverings}.
 
 \begin{wrapfigure}{R}{0.4\textwidth}
 \centering
