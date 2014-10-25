@@ -221,18 +221,11 @@ data, e.g. {\tt SchottkyData} and {\tt DiscreteMetric}, as well as the resulting
 
 \section{Uniformization and conformal mappings}
 \label{sec:conformallab_ui}
-
 The user interface of {\sc ConformalLab} is devided into panels which serve separate purposes in the 
 workflow of performing experiments with discrete Riemann surfaces and conformal mappings.
 
 {\bf Data import and export}
 
-\begin{wrapfigure}{R}{0.45\textwidth}
-\centering
-\includegraphics[width=0.9\linewidth]{conformllab/conformal_data.png}
-\caption{XML data import and export interface of {\sc ConformalLab}.}
-\label{fig:conformal_data}
-\end{wrapfigure}
 The data import and export panel, see Figure~\ref{fig:conformal_data},
 provides functions to import and export XML data as described in Section~\ref{sec:conformal_data}.
 Data files can be loaded into memory via the Import button. A table lists the entries of the loaded file.
@@ -247,6 +240,13 @@ group is calculated and visualized. {\tt HyperEllipticAlgebraicCurve}s are loade
 the hyperelliptic curve panel of the user interface, see Figure~\ref{fig:conformal_hyperelliptic}. 
 {\tt SchottkyData} is loaded into the Schottky modeler panel, see Figure~\ref{fig:conformal_schottky}.
 
+\begin{wrapfigure}{R}{0.45\textwidth}
+\centering
+\includegraphics[width=0.9\linewidth]{conformllab/conformal_data.png}
+\caption{XML data import and export interface of {\sc ConformalLab}.}
+\label{fig:conformal_data}
+\end{wrapfigure}
+
 {\bf Hyperelliptic curves}
 
 The Hyperelliptic curve panel (Figure~\ref{fig:conformal_hyperelliptic}) is used to create branched 
@@ -255,26 +255,36 @@ Hyperelliptic curves are defined vie their branch points, see Section~\ref{sec:b
 In the hyperelliptic curve panel the user can add branch points by double-clicking at the desired location in
 the graph paper view. Double-clicking an existing point brings up a coordinate editor. The lower section
 of the panel defines parameters of the mesh creation. The user can choose to add extra normally disctributed random points to the triangulation. These points can be further optimized to form a more regular triangulation.
-The number of point equalizer iterations defined the numer of gradient decent steps in the optimization of 
-the functional defined in Section~\ref{sec:branched_coverings}.
+The number of point equalizer iterations defines the numer of gradient decent steps in the optimization of 
+the functional defined in Section~\ref{sec:branched_coverings}. 
+The location of the branch points can be normalized via a Mobius tranform that fixes the unit sphere such
+that the center of mass of the points is the center of the sphere.
 
-\begin{wrapfigure}{R}{0.4\textwidth}
+\begin{wrapfigure}{R}{0.45\textwidth}
 \centering
-\includegraphics[width=\linewidth]{conformllab/hyperelliptic_curve.png}
+\includegraphics[width=0.9\linewidth]{conformllab/hyperelliptic_curve.png}
 \caption{Hyperelliptic curve interface of {\sc ConformalLab}.}
 \label{fig:conformal_hyperelliptic}
 \end{wrapfigure}
 
-\begin{wrapfigure}{R}{0.4\textwidth}
+{\bf Schottky modeler}
+
+The Schottky modeler panel defines Schottky data for a Riemann surface, see 
+Section~\ref{sec:schottky_examples}. In the graph-paper view the circles and fix points 
+of the generators are shown and can be modified. New generators can be added
+from the right-click menu. The parameter $\mu$ of each generator can be edited
+in the table below.
+
+\begin{wrapfigure}{R}{0.45\textwidth}
 \centering
-\includegraphics[width=\linewidth]{conformllab/schottky_modeller.png}
+\includegraphics[width=0.9\linewidth]{conformllab/schottky_modeller.png}
 \caption{The Schottky modeler user interface of {\sc ConformalLab}.}
 \label{fig:conformal_schottky}
 \end{wrapfigure}
 
-\begin{wrapfigure}{R}{0.3\textwidth}
+\begin{wrapfigure}{R}{0.45\textwidth}
 \centering
-\includegraphics[width=\linewidth]{conformllab/main_interface.png}
+\includegraphics[width=0.9\linewidth]{conformllab/main_interface.png}
 \caption{The main interface of {\sc ConformalLab}.}
 \label{fig:conformal_main}
 \end{wrapfigure}
