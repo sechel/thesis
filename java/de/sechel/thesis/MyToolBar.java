@@ -44,7 +44,7 @@ public class MyToolBar extends ToolBarAggregator {
 		addTool(MyToolBar.class, 2.0, new JButton("Button"));
 		addSeparator(MyToolBar.class, 1.0);
 		addTool(MyToolBar.class, 3.0, new JCheckBox("Checker"));
-		addTool(MyToolBar.class, 4.0, new JComboBox(testItems));
+		addTool(MyToolBar.class, 4.0, new JComboBox<Object>(testItems));
 		addTool(MyToolBar.class, 5.0, new JButton("Button2"));
 		super.install(c);
 	}
