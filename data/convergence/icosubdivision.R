@@ -1,0 +1,5 @@
+data = read.table("icosubdivision.dat")
+pdf('icosubdivision.pdf', width=7.0, height=6.0)
+par(mfrow=c(1,1))
+plot(data$V1, data$V2, log="xy", pch=20, cex=1.0, xlim=c(10,11000), xlab=expression(n), ylab=expression(abs(tau)-hat(abs(tau))))
+dev.off()

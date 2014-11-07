@@ -1,0 +1,7 @@
+data = read.table("randomPoints.dat")
+pdf('randomPoints.pdf', width=7.0, height=2.5)
+par(mfrow=c(1,3))
+plot(data$V1, data$V7, log="", pch=20, cex=0.2, xlim=c(0, 1500), xlab=expression(n), ylab=expression(Re(tau)))
+plot(data$V1, data$V8, log="", pch=20, cex=0.2, xlim=c(0, 1500), xlab=expression(n), ylab=expression(Im(tau)))
+plot(data$V1, data$V2, log="", pch=20, cex=0.2, xlim=c(0, 1500), xlab=expression(n), ylab=expression(group("|",tau-hat(tau),"|")))
+dev.off()
