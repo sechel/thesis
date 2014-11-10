@@ -191,7 +191,7 @@ Lawsons surface as an abstract Riemann surface has various representations.
 \includegraphics[width=0.5\linewidth]{lawson_curve/curve_opposite_uniformization.pdf}
 {\scriptsize\tt data/lawson\_curve/curve\_opposite.xml}
 \caption{Uniformization of Lawson's surface given as a triangulation of the
-branched cover of $\Chat$. A fundamental domain is shown and teh axes of the
+branched cover of $\Chat$. A fundamental domain is shown and the axes of the
 generators of the uniformizing group.} 
 \label{fig:lawson_curve_opposite}
 \end{figure}
@@ -255,8 +255,23 @@ with given branch points. (Data at {\tt convergence/icosubdivision.dat})}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{convergence/randomPoints.pdf}
-\caption{Increasing the number of uniformly spread extra points on $\Chat$ improves the quality of appoximation for the torus $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$.}
+\caption{Increasing the number of uniformly distributed extra points on $\Chat$ improves the quality of appoximation for the torus $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$.}
 \label{fig:convergence_random}
+\end{figure}
+
+Define the following quality measures for edges or faces of the triangulation.
+\begin{eqnarray}
+	Q_{\lcr}(e) &:=& \frac{1}{2}\left(\lcr(e) + \frac{1}{\lcr(e)}\right) - 1\label{eq:quality_lcr}\\
+	Q_{\lmr}(f) &:=& \frac{1}{2}\left(\lmr(f) + \frac{1}{\lmr(f)}\right) - 1\label{eq:quality_lmr}\\
+	Q_{\mathrm{rad}}(f) &:=& \mathrm{rad}(\tilde{f})\label{eq:quality_rad}
+\end{eqnarray}
+$\lcr$ is the length cross-ratio of an edge. $\lmr$ is the length multi-ratio defined on faces as $\lmr(f)=\prod_{e \in f}\lcr(e)$. $\mathrm{rad}(\tilde{f})$ is the circumcircle radius of a face $f$ after uniformization.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{convergence/qualityComparison.pdf}
+\caption{Different quality measures on a random dataset. We plot the imaginary part of $\tau$ against the maximum, mean, or sum of the quality measures defined in Equations~\ref{eq:quality_lcr}, \ref{eq:quality_lmr}, and \ref{eq:quality_rad}.}
+\label{fig:convergence_quality}
 \end{figure}
 
 
