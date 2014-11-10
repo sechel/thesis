@@ -8,5 +8,6 @@
 *.synctex.gz
 *.toc
 *.bak
+*.history
 /Chapter1_Background.dvi
 /Thesis.dvi
