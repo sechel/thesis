@@ -300,8 +300,9 @@ These points can be further optimized to form a more regular triangulation.
 The number of point equalizer iterations defines the numer of gradient decent
 steps in the optimization of the functional defined in
 Section~\ref{sec:branched_coverings}.  The location of the branch points can be
-normalized via a Mobius tranform that fixes the unit sphere such that the
-center of mass of the points is the center of the sphere.
+normalized via a M{\"o}bius transformation on the sphere such that the
+center of mass of the points is the center of the sphere. For the detains see also~
+\ref{sec:branched_coverings}.
 
 \begin{wrapfigure}{R}{0.45\textwidth}
 \centering
@@ -315,12 +316,15 @@ center of mass of the points is the center of the sphere.
 The Schottky modeler panel defines Schottky data for a Riemann surface, see
 Section~\ref{sec:schottky_examples}. In the graph-paper view the circles and
 fix points of the generators are shown and can be modified. Moving a fix point
-of a generator moves also changes the corresponding circle as the image of the
-second circle. Moving a circle causes the image circle to be recalculated. 
+of a generator transforms the corresponding circle as the image of the
+circle around the other fix point. Moving a circle causes the image circle to be recalculated. 
 New generators can be added from the right-click menu. The parameter $\mu$ of
 each generator can be edited in the table below.
 The "Generate Surface" button creates a triangulated surface together with
-a metric calculated from the Schottky data see~\ref{sec:}.
+a metric calculated from the Schottky data, see~\ref{sec:}. Similar to the 
+generation of hyperelliptic data additional points can be added and modified my
+a regularization process. In addition to this the number of points that discretize the
+circles can be given.
 
 \begin{wrapfigure}{R}{0.45\textwidth}
 \centering

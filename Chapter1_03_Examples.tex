@@ -59,21 +59,37 @@ A discrete branched cover of $\Chat$ is a triangulation of $\pi(C)$ with
 vertices at $\lambda_i$.
 
 
-To create a suitable triangulation with vertices on the sphere we minimize the
-following energy on a given set of initial points on the sphere. A good start
-is to choose points uniformly distributed on the sphere. To achieve this we
-choose $x$, $y$, and $z$ to be normally distributed and project the resulting
-vectors to the sphere, see~ \cite{Muller1959}. The functional and its gradient
-that we minimize is
+In order to distribute branch points reasonably on the sphere we choose
+a suitable normalization such that the center of mass of the points is the 
+center of the sphere. This can be achieved by applying a M{\"o}bius tranformation
+to the points on the sphere, see~\cite{Springborn05}. 
+To find the point of minimum hyperbolic distance sum as stated by
+Springborn we minimize the following functional. 
+%For points $v_1,\ldots,v_n$ we sum over the hyperbolic distances to the point $x$ in the interior of the sphere.
+
+\begin{eqnarray*} 
+	E(x) &=& \sum_{v\in V}\log\left(\frac{-\left<x,v\right>}{\sqrt{-\left<x,x\right>}}\right)\\
+	\frac{\mathrm d}{\mathrm dx}E &=& \sum_{v\in V}\left(\frac{v}{\left<x,v\right>} - \frac{x}{\left<x,x\right>}\right)\\
+	\frac{\mathrm d^2}{\mathrm dx^2}E &=& \sum_{v\in V}\left(2\frac{x^Tx}{\left<x,x\right>^2}-\frac{v^Tv}{\left<x,v\right>^2} - \mathrm{diag}\left(\frac{1}{\left<x,x\right>}\right)\right)
+\end{eqnarray*}
+
+Here $\left<.,.\right>$ is the Minkowski scalar product. Note that the problem is
+ $3$-dimensional and as such we define $\left<x,y\right>:=x_1y_1+x_2y_2+x_3y_3-1$ in
+the implementation.
+
+
+To create a suitable triangulation with vertices on the sphere we minimize the following energy on a given set of initial points on the sphere while fixing the branch points. 
+A good start is to choose points uniformly distributed on the sphere. 
+To achieve this we choose $x$, $y$, and $z$ to be normally distributed and project the resulting vectors to the sphere, see~ \cite{Muller1959}. 
+The functional and its gradient that we minimize is
 
 \begin{eqnarray*}
 	E &=& n^2\sum_{v\in V}\left( \left<v,v\right> - 1\right)^2 + \sum_{v\in
-V}\sum_{\substack{w\in V\\w\neq v}} \frac{1}{<w-v, w-v>}\\ \frac{\partial
+V}\sum_{\substack{w\in V\\w\neq v}} \frac{1}{\left<w-v, w-v\right>}\\ \frac{\partial
 E}{\partial v} &=& 4n^2<v,v>v + 4\sum_{\substack{w\in V\\w\neq
-v}}\frac{w-v}{<w-v,w-v>^2}.  \end{eqnarray*}
+v}}\frac{w-v}{\left<w-v,w-v\right>^2}.  \end{eqnarray*}
 
-There is however no guarantee that the points of the minimizer will lie on the
-sphere and so we project after optimization.
+$\left<.,.\right>$ is the standard euclidean scalar product. There is however no guarantee that the points of the minimizer will lie on the sphere and so we project after optimization.
 
 
 \subsection{Elliptic curves}
@@ -240,28 +256,7 @@ different input data set.}
 \end{figure}
 
 
-
-
-
 \section{Numerical convergence analysis}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.4\textwidth]{convergence/icosubdivision.pdf}
-\caption{For a regular subdivision of the icosahedron and a torus created from choosing
-four of the original vertices we calculate the quatity $|\tau|-|\hat\tau|$. $\tau$ is the 
-half period ratio of the discrete torus, $\hat\tau$ is the modulus of the smooth torus
-with given branch points. (Data at {\tt convergence/icosubdivision.dat})}
-\label{fig:convergence_subdivision}
-\end{figure}
-
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{convergence/randomPoints.pdf}
-\caption{Increasing the number of uniformly distributed extra points on $\Chat$ improves the quality of appoximation for the torus $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$.}
-\label{fig:convergence_random}
-\end{figure}
 
 Define the following quality measures for edges or faces of the triangulation.
 \begin{eqnarray}
@@ -270,6 +265,23 @@ Define the following quality measures for edges or faces of the triangulation.
 	Q_{\mathrm{rad}}(f) &:=& \mathrm{rad}(\tilde{f})\label{eq:quality_rad}
 \end{eqnarray}
 $\lcr$ is the length cross-ratio of an edge. $\lmr$ is the length multi-ratio defined on faces as $\lmr(f)=\prod_{e \in f}\lcr(e)$. $\mathrm{rad}(\tilde{f})$ is the circumcircle radius of a face $f$ after uniformization.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{convergence/randomPoints.pdf}
+\caption{Increasing the number of uniformly distributed extra points on $\Chat$ improves the quality of appoximation for the torus $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$.}
+\label{fig:convergence_random}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.56\textwidth]{convergence/icosubdivision.pdf}
+\caption{For a regular subdivision of the icosahedron and a torus created from choosing
+four of the original vertices we calculate the quatity $|\tau|-|\hat\tau|$. $\tau$ is the 
+half period ratio of the discrete torus, $\hat\tau$ is the modulus of the smooth torus
+with given branch points. (Data at {\tt convergence/icosubdivision.dat})}
+\label{fig:convergence_subdivision}
+\end{figure}
 
 \begin{figure}
 \centering

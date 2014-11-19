@@ -9,5 +9,6 @@
 *.toc
 *.bak
 *.history
+.DS_Store
 /Chapter1_Background.dvi
 /Thesis.dvi
