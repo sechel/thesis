@@ -259,9 +259,23 @@ user interface of {\sc ConformalLab} is devided into panels which serve
 separate purposes in the workflow of performing experiments with discrete
 Riemann surfaces and conformal mappings.
 
+\newpage
+
 {\bf Data import and export}
 
-The data import and export panel, see Figure~\ref{fig:conformal_data}, provides
+\begin{figure}
+\resizebox{\textwidth}{!}{
+\includegraphics[width=0.5\linewidth]{conformllab/conformal_data.png}
+\includegraphics[width=0.5\linewidth]{conformllab/hyperelliptic_curve.png}
+\includegraphics[width=0.5\linewidth]{conformllab/schottky_modeller.png}
+}
+\caption{The data import and export interface (left).
+Hyperelliptic curve interface (middle).
+Schottky modeler user interface (right).}
+\label{fig:data_interfaces}
+\end{figure}
+
+The data import and export panel, see Figure~\ref{fig:data_interfaces} left, provides
 functions to import and export XML data as described in
 Section~\ref{sec:conformal_data}.  Data files can be loaded into memory via the
 Import button. A table lists the entries of the loaded file.  Loadable are {\tt
@@ -275,15 +289,9 @@ defines geometry together with texture coordinates and boundary
 identifications. If suitable boundary identification is given a uniformizing
 group is calculated and visualized. {\tt HyperEllipticAlgebraicCurve}s are
 loaded into the hyperelliptic curve panel of the user interface, see
-Figure~\ref{fig:conformal_hyperelliptic}.  {\tt SchottkyData} is loaded into
-the Schottky modeler panel, see Figure~\ref{fig:conformal_schottky}.
+Figure~\ref{fig:data_interfaces}, middle.  {\tt SchottkyData} is loaded into
+the Schottky modeler panel, see Figure~\ref{fig:data_interfaces}, right.
 
-\begin{wrapfigure}{R}{0.45\textwidth}
-\centering
-\includegraphics[width=0.9\linewidth]{conformllab/conformal_data.png}
-\caption{XML data import and export interface of {\sc ConformalLab}.}
-\label{fig:conformal_data}
-\end{wrapfigure}
 
 {\bf Hyperelliptic curves}
 
@@ -304,12 +312,7 @@ normalized via a M{\"o}bius transformation on the sphere such that the
 center of mass of the points is the center of the sphere. For the detains see also~
 \ref{sec:branched_coverings}.
 
-\begin{wrapfigure}{R}{0.45\textwidth}
-\centering
-\includegraphics[width=0.9\linewidth]{conformllab/hyperelliptic_curve.png}
-\caption{Hyperelliptic curve interface of {\sc ConformalLab}.}
-\label{fig:conformal_hyperelliptic}
-\end{wrapfigure}
+\newpage
 
 {\bf Schottky modeler}
 
@@ -320,24 +323,21 @@ of a generator transforms the corresponding circle as the image of the
 circle around the other fix point. Moving a circle causes the image circle to be recalculated. 
 New generators can be added from the right-click menu. The parameter $\mu$ of
 each generator can be edited in the table below.
-The "Generate Surface" button creates a triangulated surface together with
-a metric calculated from the Schottky data, see~\ref{sec:}. Similar to the 
-generation of hyperelliptic data additional points can be added and modified my
+Similar to the generation of hyperelliptic data additional points can be added and modified my
 a regularization process. In addition to this the number of points that discretize the
 circles can be given.
+The "Generate Surface" button creates a triangulated surface together with
+a metric calculated from the Schottky data. This surface can then be uniformized
+via the main interface. The "Uniformize" button directly creates a uniformization and 
+introduces cuts along the circles of the schottky data to. The corresponding fundamental
+domain is then bounded by the preimages of the circles and curves connecting them.
+Most of the examples of Section~\ref{sec:schottky_examples} use this fundamental domain.
 
-\begin{wrapfigure}{R}{0.45\textwidth}
+{\bf Main interface}
+
+\begin{wrapfigure}{r}{0pt}
 \centering
-\includegraphics[width=0.9\linewidth]{conformllab/schottky_modeller.png}
-\caption{The Schottky modeler user interface of {\sc ConformalLab}.}
-\label{fig:conformal_schottky}
-\end{wrapfigure}
-
-
-
-\begin{wrapfigure}{R}{0.45\textwidth}
-\centering
-\includegraphics[width=0.9\linewidth]{conformllab/main_interface.png}
+\includegraphics[width=0.5\linewidth]{conformllab/main_interface.png}
 \caption{The main interface of {\sc ConformalLab}.}
 \label{fig:conformal_main}
 \end{wrapfigure}
