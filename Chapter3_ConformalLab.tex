@@ -259,7 +259,6 @@ user interface of {\sc ConformalLab} is devided into panels which serve
 separate purposes in the workflow of performing experiments with discrete
 Riemann surfaces and conformal mappings.
 
-\newpage
 
 {\bf Data import and export}
 
@@ -280,7 +279,9 @@ functions to import and export XML data as described in
 Section~\ref{sec:conformal_data}.  Data files can be loaded into memory via the
 Import button. A table lists the entries of the loaded file.  Loadable are {\tt
 ConformalDataList} as well as single data instances. The entries of a {\tt
-ConformalDataList} are listed in the table of the panel. Each of the rows
+ConformalDataList} are listed in the table of the panel. 
+
+Each of the rows
 contains buttons to save the data to disk (blue disk), load it into the program
 (gear with green arrow), or delete it from the list (red circle).  The function
 of the load button depends on the data type. A {\tt HalfedgeEmbedding} is
@@ -295,12 +296,13 @@ the Schottky modeler panel, see Figure~\ref{fig:data_interfaces}, right.
 
 {\bf Hyperelliptic curves}
 
-The Hyperelliptic curve panel (Figure~\ref{fig:conformal_hyperelliptic}) is
+The hyperelliptic curve panel (Figure~\ref{fig:data_interfaces} middle) is
 used to create branched triangulations of the doubly covered sphere.
 Hyperelliptic curves are defined vie their branch points, see
 Section~\ref{sec:branched_coverings} of Chapter~\ref{chp:conformal_examples}.
+
 In the hyperelliptic curve panel the user can add branch points by
-double-clicking at the desired location in the graph paper view.
+double-clicking in the graph paper view.
 Double-clicking an existing point brings up a coordinate editor. The lower
 section of the panel defines parameters of the mesh creation. The user can
 choose to add extra normally disctributed random points to the triangulation.
@@ -312,12 +314,18 @@ normalized via a M{\"o}bius transformation on the sphere such that the
 center of mass of the points is the center of the sphere. For the detains see also~
 \ref{sec:branched_coverings}.
 
-\newpage
+\begin{figure}
+\centering
+\includegraphics[width=0.45\linewidth]{conformllab/main_interface.png}
+\caption{The main interface of {\sc ConformalLab}.}
+\label{fig:conformal_main}
+\end{figure}
 
 {\bf Schottky modeler}
 
-The Schottky modeler panel defines Schottky data for a Riemann surface, see
-Section~\ref{sec:schottky_examples}. In the graph-paper view the circles and
+The Schottky modeler panel (See Figure~\ref{fig:data_interfaces} right) defines Schottky data for a Riemann surface, see Section~\ref{sec:schottky_examples}. 
+
+In the graph-paper view the circles and
 fix points of the generators are shown and can be modified. Moving a fix point
 of a generator transforms the corresponding circle as the image of the
 circle around the other fix point. Moving a circle causes the image circle to be recalculated. 
@@ -326,6 +334,7 @@ each generator can be edited in the table below.
 Similar to the generation of hyperelliptic data additional points can be added and modified my
 a regularization process. In addition to this the number of points that discretize the
 circles can be given.
+
 The "Generate Surface" button creates a triangulated surface together with
 a metric calculated from the Schottky data. This surface can then be uniformized
 via the main interface. The "Uniformize" button directly creates a uniformization and 
@@ -335,12 +344,15 @@ Most of the examples of Section~\ref{sec:schottky_examples} use this fundamental
 
 {\bf Main interface}
 
-\begin{wrapfigure}{r}{0pt}
-\centering
-\includegraphics[width=0.5\linewidth]{conformllab/main_interface.png}
-\caption{The main interface of {\sc ConformalLab}.}
-\label{fig:conformal_main}
-\end{wrapfigure}
+The main interface of {\sc ConformalLab} offers all functions to create the conformal mapping  examples described in this work (see Figure~\ref{fig:conformal_main}). It is divided into sections that we cover briefly from top to bottom. 
+
+The user interface comes in two modi, normal mode and expert mode, that can be switched with the "Expert Mode" check box. In normal mode we show only user interface elements that are needed by users of {\sc VaryLab} for surface parameterization and remeshing of discrete surfaces, see Chapter~\ref{chp:varylab}. All other elements are hidden in normal mode.
+
+{\sc ConformalLab} uses two numerical libraries to implement energy minimization. They can be chosen from the drop-down box at the top of the panel. "Petsc/Tao Numerics" selects the {\sc PETSc/TAO} C++ library, see~\cite{petsc-web-page, tao-user-ref}. We use the Newton Trust Region method as implemented by {\sc PETSc/TAO} whenever we have calculated the Hessian metrix for the minimized energy. Otherwise we use the LMVM method with default configuration.
+
+"Java/MTJ Numerics" implements a version of Newtons method using the linear algebra package
+MTJ, see~\cite{mtj-website}.
+
 
 
 
