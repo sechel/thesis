@@ -311,7 +311,7 @@ The number of point equalizer iterations defines the numer of gradient decent
 steps in the optimization of the functional defined in
 Section~\ref{sec:branched_coverings}.  The location of the branch points can be
 normalized via a M{\"o}bius transformation on the sphere such that the
-center of mass of the points is the center of the sphere. For the detains see also~
+center of mass of the points is the center of the sphere. For the details see also~
 \ref{sec:branched_coverings}.
 
 \begin{figure}
@@ -351,8 +351,7 @@ The user interface comes in two modi, normal mode and expert mode, that can be s
 {\sc ConformalLab} uses two numerical libraries to implement energy minimization. They can be chosen from the drop-down box at the top of the panel. "Petsc/Tao Numerics" selects the {\sc PETSc/TAO} C++ library, see~\cite{petsc-web-page, tao-user-ref}. We use the Newton Trust Region method as implemented by {\sc PETSc/TAO} whenever we have calculated the Hessian metrix for the minimized energy. Otherwise we use the LMVM method with default configuration.
 
 "Java/MTJ Numerics" implements a version of Newtons method using the linear algebra package
-MTJ, see~\cite{mtj-website}.
-
+MTJ, see~\cite{mtj-website}. We implement a backtracking line search as described in~\cite[pp.~464]{boyd2004convex}.
 
 
 
