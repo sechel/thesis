@@ -8,6 +8,7 @@
 /*.synctex.gz
 /*.toc
 /*.bak
+/*.dvi
 *.history
 *.blend1
 .DS_Store
