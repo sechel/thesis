@@ -8,6 +8,6 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="de.varylab.discreteconformal.Convergence"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-M Subdivision&#13;&#10;-base . &#13;&#10;-name tetrasubdivision02&#13;&#10;-tre 0.4695598259936395&#13;&#10;-tim 0.9770398489839791&#13;&#10;-pin ../ConformalLabData/convergence/random02.obj &#13;&#10;-bpi 0,1,2,3&#13;&#10;-max 9"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-M Subdivision&#13;&#10;-base . &#13;&#10;-name tetrasubdivision02&#13;&#10;-tre 0.38153329692495785&#13;&#10;-tim 0.7858110070276617&#13;&#10;-pin ../ConformalLabData/convergence/icosahedron1-4-7-11.obj &#13;&#10;-bpi 0,1,2,3&#13;&#10;-max 8"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ConformalLab"/>
 </launchConfiguration>
