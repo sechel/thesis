@@ -10,5 +10,5 @@ print(lm)
 yp = predict(lm, newdata=list(log(x)))
 matlines(x, exp(yp))
 alpha=coefficients(lm)[2]
-text(500,2e-2,labels=bquote(alpha == .(alpha)))
+text(500,1e-1,labels=bquote(alpha == .(alpha)))
 dev.off()
