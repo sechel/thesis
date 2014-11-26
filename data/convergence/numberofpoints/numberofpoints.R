@@ -1,0 +1,7 @@
+data = read.table("numberofpoints.dat")
+#pdf('numberofpoints.pdf', width=7.0, height=2.5)
+par(mfrow=c(1,1), mar=c(5.1, 5.0, 2.1, 2.1))
+library(rgl)
+plot(data$V1, data$V2, log="xy", pch=20, cex=0.3, xlab=expression(n), ylab=expression(group("|",tau-hat(tau),"|")))
+plot3d(log(data$V1), log(data$V12), log(data$V2), size=0.05, ylim=c(0.0, 1.5), log="xy", pch=20, cex=0.1, xlab=expression(n), ylab=expression(group("|",tau-hat(tau),"|")))
+#dev.off()
