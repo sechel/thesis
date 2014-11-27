@@ -10,5 +10,7 @@
 /*.bak
 /*.dvi
 *.history
+.RData
+.Rhistory
 *.blend1
 .DS_Store
