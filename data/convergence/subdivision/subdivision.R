@@ -1,7 +1,7 @@
 plotSubdivision <- function(data, name, write_pdf=FALSE) { 
 	if (write_pdf) {
 		pdfFilename = paste(name, "pdf", sep=".")
-		pdf(pdfFilename, width=7.0, height=6.0)
+		pdf(pdfFilename, width=7.0, height=5.0)
 	}
 	par(mfrow=c(1,1), mar=c(5.1, 5.0, 2.1, 2.1))
 	x = data$V1
