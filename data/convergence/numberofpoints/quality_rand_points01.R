@@ -3,7 +3,7 @@ pdf('quality_rand_points01.pdf', width=12.0, height=3)
 par(mfrow=c(1,3), mar=c(5.1, 5.0, 2.1, 2.1))
 with(d, 
 	plot(V2, V3, 
-		log='', 
+		log='xy', 
 		xlim=c(20,1500), 
 		ylim=c(1e-4,1e-2), 
 		xlab=expression(n), 
@@ -15,7 +15,7 @@ with(d,
 df = d[d$V14 < 0.035,]
 with(df, 
 	plot(V2, V3, 
-		log='', 
+		log='xy', 
 		xlim=c(20,1500), 
 		ylim=c(1e-4,1e-2), 
 		xlab=expression(n), 

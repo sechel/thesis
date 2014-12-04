@@ -8,8 +8,8 @@ plotSubdivision <- function(data, name, write_pdf=FALSE) {
 	y = abs(data$V2)
 	plot(x, y, log="xy", pch=1, cex=1.0, xlab=expression(n), ylab=expression(abs(tau-hat(tau))), main=name)
 	# create a linear model
-	xlm = tail(x, 5)
-	ylm = tail(y, 5)
+	xlm = tail(x, 4)
+	ylm = tail(y, 4)
 	lm = lm(log(ylm) ~ log(xlm))
 	ylmp = predict(lm)
 	matlines(xlm, exp(ylmp))
