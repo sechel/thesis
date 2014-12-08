@@ -1,5 +1,5 @@
 d = read.table("quality_rand_points01.dat")
-pdf('quality_rand_points01.pdf', width=12.0, height=3)
+pdf('quality_rand_points01_maxcrossratio.pdf', width=12.0, height=3)
 par(mfrow=c(1,3), mar=c(5.1, 5.0, 2.1, 2.1))
 with(d, 
 	plot(V2, V3, 
@@ -12,7 +12,7 @@ with(d,
 		pch=20, cex=0.5
 	)
 )
-df = d[d$V14 < 0.03,]
+df = d[d$V10 < 0.25,]
 with(df, 
 	plot(V2, V3, 
 		log='xy', 
@@ -20,7 +20,7 @@ with(df,
 		ylim=c(1e-4,1e-2), 
 		xlab=expression(n), 
 		ylab=expression(group("|",tau-hat(tau),"|")),
-		main='Quality filtered MeanMultiRatio < 0.03',
+		main='Quality filtered MaxCrossRatio < 0.25',
 		pch=20, cex=0.5
 	)
 )
@@ -31,5 +31,5 @@ lines(df2$V2, exp(predict(lm)), type='l', col="red", lwd=2.0)
 alpha=coefficients(lm)[2]
 text(1000, 5e-3, labels=bquote(alpha == .(alpha)))
 
-with(d[d$V14 < 0.2,], hist(V14, breaks=80, main='', xlab='MeanMultiRatio'))
+with(d[d$V10 < 1.0,], hist(V10, breaks=80, main='', xlab='MacCrossRatio'))
 dev.off()
