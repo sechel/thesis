@@ -356,14 +356,50 @@ All other elements are hidden in normal mode.
 {\sc ConformalLab} uses two \emph{numerical libraries} to implement energy minimization. 
 They can be chosen from the drop-down box at the top of the panel. 
 "Petsc/Tao Numerics" selects the {\sc PETSc/TAO} C++ library, see~\cite{petsc-web-page, tao-user-ref}. 
-We use the Newton Trust Region method as implemented by {\sc PETSc/TAO} whenever we have calculated the Hessian metrix for the corresponding energy. 
+We use the Newton Trust Region (NTR) method as implemented by {\sc PETSc/TAO} whenever we have calculated the Hessian matrix for the corresponding energy. 
 Otherwise we use  LMVM method with default configuration. 
 "Java/MTJ Numerics" implements a version of Newtons method using the linear algebra package MTJ, see~\cite{mtj-website}. 
 We implement a backtracking line search as described in~\cite[pp.~464]{boyd2004convex}.
 
 The \emph{tolerance} and \emph{number of iterations} options are used during energy minimization. 
 Tolerance means absolute tolerance as defined by {\sc PETSc/TAO}. 
-The minimizer converges if the Frobenius norm of the gradient is less than ten to the selected exponent.
+The minimizer converges if the Frobenius norm of the gradient is less than ten to the selected exponent. The "Max Iterations" value means the maximum number of Newton steps carried out by the optimization library.
+
+For surfaces with genus one or higher a \emph{cut strategy} can be chosen from a drop down menu: \emph{Automatic} creates cuts along precomputed edge cycles such that the resulting surface is simply connected and the number of edges that have been cut is small. \emph{Selection} uses selected edges a cutting cycles. This is primarily used to create manual cutting curves. \emph{NoCuts} does not cut the mesh. This is needed, e.g., in the workflow of creating periodic maps as described in Chapter~\ref{chp:periodic_conformal_maps}.
+
+The \emph{target geometry} defines the geometry for the domain of parameterization. A value of "Automatic" selects spherical geometry for surface of genus zero, euclidean geometry for genus one surfaces, and hyperbolic geometry for surfaces of higher genus.
+
+The \emph{Create Uniformization} check box defines whether a uniformization is calculated when pressing the \emph{Unwrap} button. The program manages two instances of the surface: The input surface and the "unwrapped" surface. Pressing the \emph{Reset} button reloads the input surface.
+
+To check boundary conditions and internal cone angles pressing \emph{Check Gau\ss-Bonnet} prints the integrals over boundary and Gaussian curvature to the console. 
+\[\sum_{v \in \partial S} \left(\pi - \theta_v\right) + \sum_{v \in \mathring{S}}2\left(\pi - \theta_v\right)\]
+By default all interior angles are set to $2\pi$ unless otherwise defined by manual settings in the \emph{Selected Nodes} section. The angle at a boundary vertex is defined either manually or calculated via settings in the \emph{Boundary} section.
+
+The \emph{Boundary} section contains the settings that define boundary conditions at vertices of the mesh. 
+The default mode is \emph{Isometric}. In this mode boundary edges on the surface and in texture space have the same length. If boundary angles on the surface are not far away from desired angles in the domain then \emph{Quantized Angles} mode can be used to define boundary angles via angles on the surface and a quantization function selected from the \emph{Quantization} drop down:
+
+\begin{eqnarray*}
+	Q_{\mathrm{AllAngles}}(\theta) &=& \theta \\
+	Q_{\mathrm{Quads}}(\theta) &=& \mathrm{round}\left(\theta, \frac{\pi}{4}\right) \\
+	Q_{\mathrm{QuadsStrict}}(\theta) &=& \mathrm{round}\left(\theta, \frac{\pi}{2}\right) \\
+	Q_{\mathrm{Hexagons}}(\theta) &=& \mathrm{round}\left(\theta, \frac{\pi}{3}\right) \\
+	Q_{\mathrm{Triangles}}(\theta) &=& \mathrm{round}\left(\theta, \frac{\pi}{6}\right).
+\end{eqnarray*}
+
+Here $\mathrm{round(x,y)}$ maps $x$ to the nearest multiple of $y$.
+\emph{Conformal Curvature} boundary mode defines angles via a vector field on boundary edges as described in Chapter~\ref{chp:quasiisothermic}. The \emph{Circle} option creates a map to the unit circle. Using this option we invoke the method described in Section~\ref{sec:disk_mapping}. 
+In \emph{Read Isometric Angles} mode the program performs conformal parameterization with isometric boundary and reads the resulting angles back into manual boundary conditions for later usage, e.g., with \emph{QuantizedAnglePeriods} boundary conditions, that modifies boundary angles as described in Section~\ref{sec:boundary}.
+
+The \emph{Cones} section lets you specify automatically placed cones as introduced by~\cite{Springborn2008SIGGRAPH}. You can prescribe the number and quantization function.
+
+Manual boundary conditions can be specified in the \emph{Selected Nodes} section. Here the currently selected vertices and edges are listed. Selected vertices can have manually prescribed angles~$\theta$ or boundary modes as described above. Edges can be set circular with a certain intersection angle of circum-circles, see Section~\ref{sec:multiply_connected_regions}. The default angle is $180\degree$, i.e., the two adjacent triangles form a circular quadrilateral.
+
+The \emph{Tools} section include commands that operate on a readily computed uniformization of a surface of higher genus $g\geq 2$. The \emph{Draw Curves On Surface} check box calculates, if activated, images of the edges of fundamental domains. These curves are displayed on the surface, see e.g., Figure~\ref{fig:lawson_embedding_canonical} left. The \emph{Extract Cut-Prepared} button creates a new surface as a copy of the current input data including edges of a fundamental polygon. You can use this to create uniformized surfaces where the triangulation fits perfectly into the fundamental polygon. The \emph{Center Selected Vertex} button applies a hyperbolic motion to the texture coordinates such that the selected vertex becomes the center of the unit disk.
+
+{\bf Visualization}
+
+The \emph{Visualization Interface}, see Figure~\ref{fig:visualization_interfaces}, shows the domain of uniformization. Additionally depending on the geometry one can visualize extra structures like fundamental polygons, universal cover, or identification maps. It is divided into two sections. The generic \emph{Texture Space Options} define options for the mapping of the mesh of the surface. The \emph{Uniformization} section   
+
 
 \subfilebibliography
 \end{document}
