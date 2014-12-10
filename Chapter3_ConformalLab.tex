@@ -274,30 +274,23 @@ Section~\ref{sec:conformal_data}.}
 \resizebox{\textwidth}{!}{
 \includegraphics[width=0.7\linewidth]{conformllab/visualization.png}
 }
-\caption{Visualization interface. It shows the domain of parameterization for 
-euclidean and hyperbolic geometry. For hyperbolic images Klein, Poinar\'e, and 
-Halfplane models are supported.}
+\caption{Visualization interface. It shows the domain of parameterization for euclidean and hyperbolic geometry. 
+For hyperbolic images Klein, Poinar\'e, and Halfplane models are supported.}
 \label{fig:visualization_interfaces}
 \end{figure}
 
-The data import and export panel, see Figure~\ref{fig:data_interface}, provides
-functions to import and export XML data as described in
-Section~\ref{sec:conformal_data}.  Data files can be loaded into memory via the
-Import button. A table lists the entries of the loaded file.  Loadable are {\tt
-ConformalDataList} as well as single data instances. The entries of a {\tt
-ConformalDataList} are listed in the table of the panel. 
+The data import and export panel, see Figure~\ref{fig:data_interface}, provides functions to import and export XML data as described in Section~\ref{sec:conformal_data}.  
+Data files can be loaded into memory via the Import button. A table lists the entries of the loaded file.  
+Loadable are {\tt ConformalDataList} as well as single data instances. 
+The entries of a {\tt ConformalDataList} are listed in the table of the panel. 
 
-Each of the rows
-contains buttons to save the data to disk (blue disk), load it into the program
-(gear with green arrow), or delete it from the list (red circle).  The function
-of the load button depends on the data type. A {\tt HalfedgeEmbedding} is
-loaded as geometry and is displayed in the 3D viewer. A {\tt HalfedgeMap}
-defines geometry together with texture coordinates and boundary
-identifications. If suitable boundary identification is given a uniformizing
-group is calculated and visualized. {\tt HyperEllipticAlgebraicCurve}s are
-loaded into the hyperelliptic curve panel of the user interface, see
-Figure~\ref{fig:conformal_main_generators}, right-top.  {\tt SchottkyData} is loaded into
-the Schottky modeler panel, see Figure~\ref{fig:conformal_main_generators}, right-bottom.
+Each of the rows contains buttons to save the data to disk (blue disk), load it into the program (gear with green arrow), or delete it from the list (red circle).  
+The function of the load button depends on the data type. 
+A {\tt HalfedgeEmbedding} is loaded as geometry and is displayed in the 3D viewer. 
+A {\tt HalfedgeMap} defines geometry together with texture coordinates and boundary identifications. 
+If suitable boundary identification is given a uniformizing group is calculated and visualized. 
+{\tt HyperEllipticAlgebraicCurve}s are loaded into the hyperelliptic curve panel of the user interface, see Figure~\ref{fig:conformal_main_generators}, right-top.  
+{\tt SchottkyData} is loaded into the Schottky modeler panel, see Figure~\ref{fig:conformal_main_generators}, right-bottom.
 
 
 {\bf Hyperelliptic curves}
@@ -337,9 +330,9 @@ The parameter $\mu$ of each generator can be edited in the table below.
 Similar to the generation of hyperelliptic data additional points can be added and modified my a regularization process. 
 In addition to this the number of points that discretize the circles can be given.
 
-The "Generate Surface" button creates a triangulated surface together with a metric calculated from the Schottky data. 
+The \emph{Generate Surface} button creates a triangulated surface together with a metric calculated from the Schottky data. 
 This surface can then be uniformized via the main interface. 
-The "Uniformize" button directly creates a uniformization and introduces cuts along the circles of the schottky data. 
+The \emph{Uniformize} button directly creates a uniformization and introduces cuts along the circles of the schottky data. 
 The corresponding fundamental domain is then bounded by the preimages of the circles and curves connecting them.
 Most of the examples of Section~\ref{sec:schottky_examples} use this fundamental domain.
 
@@ -348,30 +341,38 @@ Most of the examples of Section~\ref{sec:schottky_examples} use this fundamental
 The main interface of {\sc ConformalLab} offers all functions to create the conformal mapping examples described in this work (see Figure~\ref{fig:conformal_main_generators} left). 
 It is divided into sections that we cover briefly from top to bottom. 
 
-The user interface comes in two modi, normal mode and \emph{expert mode}, that can be switched with the "Expert Mode" check box. 
+The user interface comes in two modi, normal mode and expert mode, that can be switched with the \emph{Expert Mode} check box. 
 In normal mode we show only user interface elements that are needed by users of {\sc VaryLab}.
 It supports basic surface parameterization and remeshing of discrete surfaces, see Chapter~\ref{chp:varylab}. 
 All other elements are hidden in normal mode.
 
-{\sc ConformalLab} uses two \emph{numerical libraries} to implement energy minimization. 
+{\sc ConformalLab} uses two numerical libraries to implement energy minimization. 
 They can be chosen from the drop-down box at the top of the panel. 
-"Petsc/Tao Numerics" selects the {\sc PETSc/TAO} C++ library, see~\cite{petsc-web-page, tao-user-ref}. 
+\emph{Petsc/Tao Numerics} selects the {\sc PETSc/TAO} C++ library, see~\cite{petsc-web-page, tao-user-ref}. 
 We use the Newton Trust Region (NTR) method as implemented by {\sc PETSc/TAO} whenever we have calculated the Hessian matrix for the corresponding energy. 
 Otherwise we use  LMVM method with default configuration. 
-"Java/MTJ Numerics" implements a version of Newtons method using the linear algebra package MTJ, see~\cite{mtj-website}. 
+\emph{Java/MTJ Numerics} implements a version of Newtons method using the linear algebra package MTJ, see~\cite{mtj-website}. 
 We implement a backtracking line search as described in~\cite[pp.~464]{boyd2004convex}.
 
-The \emph{tolerance} and \emph{number of iterations} options are used during energy minimization. 
+The \emph{Tolerance Exp} and \emph{Max Iterations} options are used during energy minimization. 
 Tolerance means absolute tolerance as defined by {\sc PETSc/TAO}. 
-The minimizer converges if the Frobenius norm of the gradient is less than ten to the selected exponent. The "Max Iterations" value means the maximum number of Newton steps carried out by the optimization library.
+The minimizer converges if the Frobenius norm of the gradient is less than ten to the selected exponent. The \emph{Max Iterations} value means the maximum number of Newton steps carried out by the optimization library.
 
-For surfaces with genus one or higher a \emph{cut strategy} can be chosen from a drop down menu: \emph{Automatic} creates cuts along precomputed edge cycles such that the resulting surface is simply connected and the number of edges that have been cut is small. \emph{Selection} uses selected edges a cutting cycles. This is primarily used to create manual cutting curves. \emph{NoCuts} does not cut the mesh. This is needed, e.g., in the workflow of creating periodic maps as described in Chapter~\ref{chp:periodic_conformal_maps}.
+For surfaces with genus one or higher a \emph{Cut Strategy} can be chosen from a drop down menu. 
+\emph{Automatic} creates cuts along precomputed edge cycles such that the resulting surface is simply connected. 
+At the same time the number of edges that have been cut is small. 
+\emph{Selection} uses user selected edges as cutting cycles. 
+This is primarily used to create manual cutting curves. 
+\emph{NoCuts} does not cut the mesh. 
+This is needed, e.g., in the workflow of creating periodic maps as described in Chapter~\ref{chp:periodic_conformal_maps}.
 
-The \emph{target geometry} defines the geometry for the domain of parameterization. A value of "Automatic" selects spherical geometry for surface of genus zero, euclidean geometry for genus one surfaces, and hyperbolic geometry for surfaces of higher genus.
+The \emph{Target Geometry} defines the geometry for the domain of parameterization. 
+A value of "Automatic" selects spherical geometry for surfaces of genus zero, euclidean geometry for genus one, and hyperbolic geometry for surfaces of higher genus.
 
-The \emph{Create Uniformization} check box defines whether a uniformization is calculated when pressing the \emph{Unwrap} button. The program manages two instances of the surface: The input surface and the "unwrapped" surface. Pressing the \emph{Reset} button reloads the input surface.
+The \emph{Create Uniformization} check box defines whether a uniformization is calculated when pressing the \emph{Unwrap} button. 
+The program manages two instances of the surface: The input surface and the "unwrapped" surface. Pressing the \emph{Reset} button reloads the input surface.
 
-To check boundary conditions and internal cone angles pressing \emph{Check Gau\ss-Bonnet} prints the integrals over boundary and Gaussian curvature to the console. 
+To check boundary conditions and internal cone angles pressing \emph{Check Gau\ss-Bonnet} prints the integrals over boundary curvature and Gaussian curvature to the console. 
 \[\sum_{v \in \partial S} \left(\pi - \theta_v\right) + \sum_{v \in \mathring{S}}2\left(\pi - \theta_v\right)\]
 By default all interior angles are set to $2\pi$ unless otherwise defined by manual settings in the \emph{Selected Nodes} section. The angle at a boundary vertex is defined either manually or calculated via settings in the \emph{Boundary} section.
 
@@ -387,18 +388,42 @@ The default mode is \emph{Isometric}. In this mode boundary edges on the surface
 \end{eqnarray*}
 
 Here $\mathrm{round(x,y)}$ maps $x$ to the nearest multiple of $y$.
-\emph{Conformal Curvature} boundary mode defines angles via a vector field on boundary edges as described in Chapter~\ref{chp:quasiisothermic}. The \emph{Circle} option creates a map to the unit circle. Using this option we invoke the method described in Section~\ref{sec:disk_mapping}. 
-In \emph{Read Isometric Angles} mode the program performs conformal parameterization with isometric boundary and reads the resulting angles back into manual boundary conditions for later usage, e.g., with \emph{QuantizedAnglePeriods} boundary conditions, that modifies boundary angles as described in Section~\ref{sec:boundary}.
+\emph{Conformal Curvature} boundary mode defines angles via a vector field on boundary edges as described in Chapter~\ref{chp:quasiisothermic}. 
+The \emph{Circle} option creates a map to the unit circle. 
+Using this option we invoke the method described in Section~\ref{sec:disk_mapping}. 
+In \emph{Read Isometric Angles} mode the program performs conformal parameterization with isometric boundary. 
+Additionally resulting boundary angles are read into manual boundary conditions for later usage, e.g., with \emph{QuantizedAnglePeriods} boundary conditions, that modifies boundary angles as described in Section~\ref{sec:boundary}.
 
-The \emph{Cones} section lets you specify automatically placed cones as introduced by~\cite{Springborn2008SIGGRAPH}. You can prescribe the number and quantization function.
+The \emph{Cones} section lets you specify automatically placed cones as introduced by~\cite{Springborn2008SIGGRAPH}. You can prescribe the number and quantization function as defined above.
 
-Manual boundary conditions can be specified in the \emph{Selected Nodes} section. Here the currently selected vertices and edges are listed. Selected vertices can have manually prescribed angles~$\theta$ or boundary modes as described above. Edges can be set circular with a certain intersection angle of circum-circles, see Section~\ref{sec:multiply_connected_regions}. The default angle is $180\degree$, i.e., the two adjacent triangles form a circular quadrilateral.
+Manual boundary conditions can be specified in the \emph{Selected Nodes} section. 
+Here the currently selected vertices and edges are listed. 
+Selected vertices can have manually prescribed angles~$\theta$ or boundary modes as described above. 
+Edges can be set circular with a certain intersection angle of circum-circles, see Section~\ref{sec:multiply_connected_regions}. 
+The default angle is $180\degree$, i.e., the two adjacent triangles form a circular quadrilateral.
 
-The \emph{Tools} section include commands that operate on a readily computed uniformization of a surface of higher genus $g\geq 2$. The \emph{Draw Curves On Surface} check box calculates, if activated, images of the edges of fundamental domains. These curves are displayed on the surface, see e.g., Figure~\ref{fig:lawson_embedding_canonical} left. The \emph{Extract Cut-Prepared} button creates a new surface as a copy of the current input data including edges of a fundamental polygon. You can use this to create uniformized surfaces where the triangulation fits perfectly into the fundamental polygon. The \emph{Center Selected Vertex} button applies a hyperbolic motion to the texture coordinates such that the selected vertex becomes the center of the unit disk.
+The \emph{Tools} section include commands that operate on a readily computed uniformization of a surface of higher genus $g\geq 2$. 
+The \emph{Draw Curves On Surface} check box calculates, if activated, images of the edges of fundamental domains. 
+These curves are displayed on the surface, see e.g., Figure~\ref{fig:lawson_embedding_canonical} left. 
+The \emph{Extract Cut-Prepared} button creates a new surface as a copy of the current input data including edges of a fundamental polygon. 
+You can use this to create uniformized surfaces where the triangulation fits perfectly into the fundamental polygon. 
+The \emph{Center Selected Vertex} button applies a hyperbolic motion to the texture coordinates such that the selected vertex becomes the center of the unit disk.
 
 {\bf Visualization}
 
-The \emph{Visualization Interface}, see Figure~\ref{fig:visualization_interfaces}, shows the domain of uniformization. Additionally depending on the geometry one can visualize extra structures like fundamental polygons, universal cover, or identification maps. It is divided into two sections. The generic \emph{Texture Space Options} define options for the mapping of the mesh of the surface. The \emph{Uniformization} section   
+The \emph{Visualization Interface}, see Figure~\ref{fig:visualization_interfaces}, shows the domain of uniformization. 
+Additionally depending on the geometry one can visualize extra structures like fundamental polygons, universal cover, or identification maps. 
+It is divided into two sections. The generic \emph{Texture Space Options} define options for the mapping of the mesh. 
+
+The \emph{Uniformization} section defines the visualization of the current uniformization. 
+\emph{Triangulation} activates the visualization of the mesh across the universal cover of the surface using as many group elements as specifies in the \emph{Cover Elements} and \emph{Cover Distance} input fields. 
+The fundamental polygon corresponding to the identity group element can be visualized with the \emph{Fundamental Domain} check box. Its axes of identification can be shown with the \emph{Axes} check box. 
+The \emph{Polygon} box enables the visualization of polygon edges for all group elements defined by \emph{Cover Elements} and \emph{Cover Distance}. 
+If the triangulation exhibits a circle pattern face circles through vertices of faces can be shown.
+
+The \emph{Geometry} option is set automatically during calculation of uniformization but can be adjusted from the check box. The automatic value depends on the genus of the surface alone and may not be the correct choice. The program calculates four different fundamental domains that can be selected from the \emph{Domain} drop down see Section~\ref{sec:fundamental_domains}. If the selected geometry is \emph{Hyperbolic} you can choose the corresponding model. {\sc ConformalLab} supports visualization of \emph{Poicar\'e}, \emph{Klein}, and \emph{HalfPlane} model.
+
+The \emph{Interpolation} option lets you select how textures are interpolated on the current model, see Section~\ref{chp:projective_interpolation}. If a texture image is active the 3D visualization is updated accordingly.
 
 
 \subfilebibliography
