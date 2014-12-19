@@ -1,0 +1,1499 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformalDataList xmlns="http://www.varylab.com/conformallab/types">
+    <HalfedgeEmbedding name="Input Discrete Position Embedding">
+        <Vertex x="1.0" y="1.0" z="1.0" w="1.0" index="0"/>
+        <Vertex x="1.0" y="-1.0" z="-1.0" w="1.0" index="1"/>
+        <Vertex x="-1.0" y="-1.0" z="1.0" w="1.0" index="2"/>
+        <Vertex x="0.0" y="0.0" z="-1.0" w="1.0" index="3"/>
+        <Vertex x="1.0" y="0.0" z="0.0" w="1.0" index="4"/>
+        <Vertex x="0.0" y="-1.0" z="0.0" w="1.0" index="5"/>
+        <Vertex x="0.0" y="1.0" z="0.0" w="1.0" index="6"/>
+        <Vertex x="-1.0" y="0.0" z="0.0" w="1.0" index="7"/>
+        <Vertex x="0.0" y="0.0" z="1.0" w="1.0" index="8"/>
+        <Vertex x="-1.0" y="1.0" z="-1.0" w="1.0" index="9"/>
+        <Vertex x="0.0" y="0.0" z="-1.0" w="1.0" index="10"/>
+        <Vertex x="1.0" y="0.0" z="0.0" w="1.0" index="11"/>
+        <Vertex x="0.0" y="-1.0" z="0.0" w="1.0" index="12"/>
+        <Vertex x="0.0" y="1.0" z="0.0" w="1.0" index="13"/>
+        <Vertex x="-1.0" y="0.0" z="0.0" w="1.0" index="14"/>
+        <Vertex x="0.0" y="0.0" z="1.0" w="1.0" index="15"/>
+        <Vertex x="-0.19441945158786056" y="0.7160096485504728" z="0.21129162516202463" w="1.0" index="16"/>
+        <Vertex x="1.0" y="1.0" z="1.0" w="1.0" index="17"/>
+        <Vertex x="1.0" y="-1.0" z="-1.0" w="1.0" index="18"/>
+        <Vertex x="-1.0" y="-1.0" z="1.0" w="1.0" index="19"/>
+        <Vertex x="0.0" y="0.0" z="-1.0" w="1.0" index="20"/>
+        <Vertex x="1.0" y="0.0" z="0.0" w="1.0" index="21"/>
+        <Vertex x="0.0" y="-1.0" z="0.0" w="1.0" index="22"/>
+        <Vertex x="0.0" y="1.0" z="0.0" w="1.0" index="23"/>
+        <Vertex x="-1.0" y="0.0" z="0.0" w="1.0" index="24"/>
+        <Vertex x="0.0" y="0.0" z="1.0" w="1.0" index="25"/>
+        <Vertex x="-1.0" y="1.0" z="-1.0" w="1.0" index="26"/>
+        <Vertex x="0.0" y="0.0" z="-1.0" w="1.0" index="27"/>
+        <Vertex x="1.0" y="0.0" z="0.0" w="1.0" index="28"/>
+        <Vertex x="0.0" y="-1.0" z="0.0" w="1.0" index="29"/>
+        <Vertex x="0.0" y="1.0" z="0.0" w="1.0" index="30"/>
+        <Vertex x="-1.0" y="0.0" z="0.0" w="1.0" index="31"/>
+        <Vertex x="0.0" y="0.0" z="1.0" w="1.0" index="32"/>
+        <Vertex x="0.7507090585274008" y="-0.13341335738828758" z="0.15900093127667078" w="1.0" index="33"/>
+        <Vertex x="0.2079350041749048" y="0.17473589137255885" z="-0.6179340602722606" w="1.0" index="34"/>
+        <Vertex x="-0.11106148664058421" y="-0.48484271671488693" z="-0.4548996303952539" w="1.0" index="35"/>
+        <Halfedge left="1" target="4" next="28" opposite="14" index="0"/>
+        <Halfedge left="2" target="10" next="29" opposite="60" index="1"/>
+        <Halfedge left="0" target="23" next="27" opposite="18" index="2"/>
+        <Halfedge left="4" target="3" next="34" opposite="61" index="3"/>
+        <Halfedge left="5" target="22" next="35" opposite="16" index="4"/>
+        <Halfedge left="3" target="7" next="33" opposite="20" index="5"/>
+        <Halfedge left="7" target="4" next="40" opposite="15" index="6"/>
+        <Halfedge left="8" target="8" next="41" opposite="70" index="7"/>
+        <Halfedge left="6" target="5" next="39" opposite="17" index="8"/>
+        <Halfedge left="10" target="6" next="46" opposite="19" index="9"/>
+        <Halfedge left="11" target="7" next="47" opposite="21" index="10"/>
+        <Halfedge left="9" target="15" next="45" opposite="71" index="11"/>
+        <Halfedge left="5" target="1" next="4" opposite="49" index="12"/>
+        <Halfedge left="0" target="9" next="2" opposite="51" index="13"/>
+        <Halfedge left="8" target="0" next="7" opposite="0" index="14"/>
+        <Halfedge left="2" target="1" next="1" opposite="6" index="15"/>
+        <Halfedge left="7" target="1" next="6" opposite="4" index="16"/>
+        <Halfedge left="3" target="2" next="5" opposite="8" index="17"/>
+        <Halfedge left="11" target="9" next="10" opposite="2" index="18"/>
+        <Halfedge left="1" target="0" next="0" opposite="9" index="19"/>
+        <Halfedge left="9" target="2" next="11" opposite="5" index="20"/>
+        <Halfedge left="4" target="9" next="3" opposite="10" index="21"/>
+        <Halfedge left="10" target="0" next="9" opposite="55" index="22"/>
+        <Halfedge left="6" target="2" next="8" opposite="59" index="23"/>
+        <Halfedge left="32" target="23" next="105" opposite="27" index="24"/>
+        <Halfedge left="33" target="4" next="107" opposite="28" index="25"/>
+        <Halfedge left="31" target="10" next="103" opposite="29" index="26"/>
+        <Halfedge left="0" target="10" next="13" opposite="24" index="27"/>
+        <Halfedge left="1" target="6" next="19" opposite="25" index="28"/>
+        <Halfedge left="2" target="4" next="15" opposite="26" index="29"/>
+        <Halfedge left="38" target="7" next="117" opposite="33" index="30"/>
+        <Halfedge left="39" target="3" next="119" opposite="34" index="31"/>
+        <Halfedge left="37" target="22" next="115" opposite="35" index="32"/>
+        <Halfedge left="3" target="5" next="17" opposite="30" index="33"/>
+        <Halfedge left="4" target="7" next="21" opposite="31" index="34"/>
+        <Halfedge left="5" target="3" next="12" opposite="32" index="35"/>
+        <Halfedge left="29" target="5" next="99" opposite="39" index="36"/>
+        <Halfedge left="30" target="4" next="101" opposite="40" index="37"/>
+        <Halfedge left="28" target="8" next="97" opposite="41" index="38"/>
+        <Halfedge left="6" target="8" next="23" opposite="36" index="39"/>
+        <Halfedge left="7" target="22" next="16" opposite="37" index="40"/>
+        <Halfedge left="8" target="4" next="14" opposite="38" index="41"/>
+        <Halfedge left="35" target="15" next="111" opposite="45" index="42"/>
+        <Halfedge left="36" target="6" next="113" opposite="46" index="43"/>
+        <Halfedge left="34" target="7" next="109" opposite="47" index="44"/>
+        <Halfedge left="9" target="7" next="20" opposite="42" index="45"/>
+        <Halfedge left="10" target="15" next="22" opposite="43" index="46"/>
+        <Halfedge left="11" target="23" next="18" opposite="44" index="47"/>
+        <Halfedge left="17" target="11" next="76" opposite="62" index="48"/>
+        <Halfedge left="18" target="3" next="77" opposite="12" index="49"/>
+        <Halfedge left="16" target="13" next="75" opposite="66" index="50"/>
+        <Halfedge left="20" target="10" next="82" opposite="13" index="51"/>
+        <Halfedge left="21" target="12" next="83" opposite="64" index="52"/>
+        <Halfedge left="19" target="14" next="81" opposite="68" index="53"/>
+        <Halfedge left="23" target="11" next="88" opposite="63" index="54"/>
+        <Halfedge left="24" target="15" next="89" opposite="22" index="55"/>
+        <Halfedge left="22" target="12" next="87" opposite="65" index="56"/>
+        <Halfedge left="26" target="13" next="94" opposite="67" index="57"/>
+        <Halfedge left="27" target="14" next="95" opposite="69" index="58"/>
+        <Halfedge left="25" target="8" next="93" opposite="23" index="59"/>
+        <Halfedge left="21" target="1" next="52" opposite="1" index="60"/>
+        <Halfedge left="16" target="9" next="50" opposite="3" index="61"/>
+        <Halfedge left="24" target="0" next="55" opposite="48" index="62"/>
+        <Halfedge left="18" target="1" next="49" opposite="54" index="63"/>
+        <Halfedge left="23" target="1" next="54" opposite="52" index="64"/>
+        <Halfedge left="19" target="2" next="53" opposite="56" index="65"/>
+        <Halfedge left="27" target="9" next="58" opposite="50" index="66"/>
+        <Halfedge left="17" target="0" next="48" opposite="57" index="67"/>
+        <Halfedge left="25" target="2" next="59" opposite="53" index="68"/>
+        <Halfedge left="20" target="9" next="51" opposite="58" index="69"/>
+        <Halfedge left="26" target="0" next="57" opposite="7" index="70"/>
+        <Halfedge left="22" target="2" next="56" opposite="11" index="71"/>
+        <Halfedge left="12" target="13" next="73" opposite="75" index="72"/>
+        <Halfedge left="12" target="11" next="74" opposite="76" index="73"/>
+        <Halfedge left="12" target="3" next="72" opposite="77" index="74"/>
+        <Halfedge left="16" target="3" next="61" opposite="72" index="75"/>
+        <Halfedge left="17" target="13" next="67" opposite="73" index="76"/>
+        <Halfedge left="18" target="11" next="63" opposite="74" index="77"/>
+        <Halfedge left="13" target="14" next="79" opposite="81" index="78"/>
+        <Halfedge left="13" target="10" next="80" opposite="82" index="79"/>
+        <Halfedge left="13" target="12" next="78" opposite="83" index="80"/>
+        <Halfedge left="19" target="12" next="65" opposite="78" index="81"/>
+        <Halfedge left="20" target="14" next="69" opposite="79" index="82"/>
+        <Halfedge left="21" target="10" next="60" opposite="80" index="83"/>
+        <Halfedge left="14" target="12" next="85" opposite="87" index="84"/>
+        <Halfedge left="14" target="11" next="86" opposite="88" index="85"/>
+        <Halfedge left="14" target="15" next="84" opposite="89" index="86"/>
+        <Halfedge left="22" target="15" next="71" opposite="84" index="87"/>
+        <Halfedge left="23" target="12" next="64" opposite="85" index="88"/>
+        <Halfedge left="24" target="11" next="62" opposite="86" index="89"/>
+        <Halfedge left="15" target="8" next="91" opposite="93" index="90"/>
+        <Halfedge left="15" target="13" next="92" opposite="94" index="91"/>
+        <Halfedge left="15" target="14" next="90" opposite="95" index="92"/>
+        <Halfedge left="25" target="14" next="68" opposite="90" index="93"/>
+        <Halfedge left="26" target="8" next="70" opposite="91" index="94"/>
+        <Halfedge left="27" target="13" next="66" opposite="92" index="95"/>
+        <Halfedge left="28" target="4" next="38" opposite="101" index="96"/>
+        <Halfedge left="28" target="33" next="96" opposite="98" index="97"/>
+        <Halfedge left="29" target="8" next="36" opposite="97" index="98"/>
+        <Halfedge left="29" target="33" next="98" opposite="220" index="99"/>
+        <Halfedge left="30" target="22" next="37" opposite="219" index="100"/>
+        <Halfedge left="30" target="33" next="100" opposite="96" index="101"/>
+        <Halfedge left="31" target="4" next="26" opposite="107" index="102"/>
+        <Halfedge left="31" target="34" next="102" opposite="104" index="103"/>
+        <Halfedge left="32" target="10" next="24" opposite="103" index="104"/>
+        <Halfedge left="32" target="34" next="104" opposite="226" index="105"/>
+        <Halfedge left="33" target="6" next="25" opposite="225" index="106"/>
+        <Halfedge left="33" target="34" next="106" opposite="102" index="107"/>
+        <Halfedge left="34" target="23" next="44" opposite="233" index="108"/>
+        <Halfedge left="34" target="16" next="108" opposite="110" index="109"/>
+        <Halfedge left="35" target="7" next="42" opposite="109" index="110"/>
+        <Halfedge left="35" target="16" next="110" opposite="112" index="111"/>
+        <Halfedge left="36" target="15" next="43" opposite="111" index="112"/>
+        <Halfedge left="36" target="16" next="112" opposite="228" index="113"/>
+        <Halfedge left="37" target="3" next="32" opposite="119" index="114"/>
+        <Halfedge left="37" target="35" next="114" opposite="236" index="115"/>
+        <Halfedge left="38" target="5" next="30" opposite="235" index="116"/>
+        <Halfedge left="38" target="35" next="116" opposite="118" index="117"/>
+        <Halfedge left="39" target="7" next="31" opposite="117" index="118"/>
+        <Halfedge left="39" target="35" next="118" opposite="114" index="119"/>
+        <Halfedge left="41" target="21" next="148" opposite="134" index="120"/>
+        <Halfedge left="42" target="27" next="149" opposite="180" index="121"/>
+        <Halfedge left="40" target="6" next="147" opposite="138" index="122"/>
+        <Halfedge left="44" target="20" next="154" opposite="181" index="123"/>
+        <Halfedge left="45" target="5" next="155" opposite="136" index="124"/>
+        <Halfedge left="43" target="24" next="153" opposite="140" index="125"/>
+        <Halfedge left="47" target="21" next="160" opposite="135" index="126"/>
+        <Halfedge left="48" target="25" next="161" opposite="190" index="127"/>
+        <Halfedge left="46" target="22" next="159" opposite="137" index="128"/>
+        <Halfedge left="50" target="23" next="166" opposite="139" index="129"/>
+        <Halfedge left="51" target="24" next="167" opposite="141" index="130"/>
+        <Halfedge left="49" target="32" next="165" opposite="191" index="131"/>
+        <Halfedge left="45" target="18" next="124" opposite="169" index="132"/>
+        <Halfedge left="40" target="26" next="122" opposite="171" index="133"/>
+        <Halfedge left="48" target="17" next="127" opposite="120" index="134"/>
+        <Halfedge left="42" target="18" next="121" opposite="126" index="135"/>
+        <Halfedge left="47" target="18" next="126" opposite="124" index="136"/>
+        <Halfedge left="43" target="19" next="125" opposite="128" index="137"/>
+        <Halfedge left="51" target="26" next="130" opposite="122" index="138"/>
+        <Halfedge left="41" target="17" next="120" opposite="129" index="139"/>
+        <Halfedge left="49" target="19" next="131" opposite="125" index="140"/>
+        <Halfedge left="44" target="26" next="123" opposite="130" index="141"/>
+        <Halfedge left="50" target="17" next="129" opposite="175" index="142"/>
+        <Halfedge left="46" target="19" next="128" opposite="179" index="143"/>
+        <Halfedge left="72" target="6" next="225" opposite="147" index="144"/>
+        <Halfedge left="73" target="21" next="227" opposite="148" index="145"/>
+        <Halfedge left="71" target="27" next="223" opposite="149" index="146"/>
+        <Halfedge left="40" target="27" next="133" opposite="144" index="147"/>
+        <Halfedge left="41" target="23" next="139" opposite="145" index="148"/>
+        <Halfedge left="42" target="21" next="135" opposite="146" index="149"/>
+        <Halfedge left="78" target="24" next="237" opposite="153" index="150"/>
+        <Halfedge left="79" target="20" next="239" opposite="154" index="151"/>
+        <Halfedge left="77" target="5" next="235" opposite="155" index="152"/>
+        <Halfedge left="43" target="22" next="137" opposite="150" index="153"/>
+        <Halfedge left="44" target="24" next="141" opposite="151" index="154"/>
+        <Halfedge left="45" target="20" next="132" opposite="152" index="155"/>
+        <Halfedge left="69" target="22" next="219" opposite="159" index="156"/>
+        <Halfedge left="70" target="21" next="221" opposite="160" index="157"/>
+        <Halfedge left="68" target="25" next="217" opposite="161" index="158"/>
+        <Halfedge left="46" target="25" next="143" opposite="156" index="159"/>
+        <Halfedge left="47" target="5" next="136" opposite="157" index="160"/>
+        <Halfedge left="48" target="21" next="134" opposite="158" index="161"/>
+        <Halfedge left="75" target="32" next="231" opposite="165" index="162"/>
+        <Halfedge left="76" target="23" next="233" opposite="166" index="163"/>
+        <Halfedge left="74" target="24" next="229" opposite="167" index="164"/>
+        <Halfedge left="49" target="24" next="140" opposite="162" index="165"/>
+        <Halfedge left="50" target="32" next="142" opposite="163" index="166"/>
+        <Halfedge left="51" target="6" next="138" opposite="164" index="167"/>
+        <Halfedge left="57" target="28" next="196" opposite="182" index="168"/>
+        <Halfedge left="58" target="20" next="197" opposite="132" index="169"/>
+        <Halfedge left="56" target="30" next="195" opposite="186" index="170"/>
+        <Halfedge left="60" target="27" next="202" opposite="133" index="171"/>
+        <Halfedge left="61" target="29" next="203" opposite="184" index="172"/>
+        <Halfedge left="59" target="31" next="201" opposite="188" index="173"/>
+        <Halfedge left="63" target="28" next="208" opposite="183" index="174"/>
+        <Halfedge left="64" target="32" next="209" opposite="142" index="175"/>
+        <Halfedge left="62" target="29" next="207" opposite="185" index="176"/>
+        <Halfedge left="66" target="30" next="214" opposite="187" index="177"/>
+        <Halfedge left="67" target="31" next="215" opposite="189" index="178"/>
+        <Halfedge left="65" target="25" next="213" opposite="143" index="179"/>
+        <Halfedge left="61" target="18" next="172" opposite="121" index="180"/>
+        <Halfedge left="56" target="26" next="170" opposite="123" index="181"/>
+        <Halfedge left="64" target="17" next="175" opposite="168" index="182"/>
+        <Halfedge left="58" target="18" next="169" opposite="174" index="183"/>
+        <Halfedge left="63" target="18" next="174" opposite="172" index="184"/>
+        <Halfedge left="59" target="19" next="173" opposite="176" index="185"/>
+        <Halfedge left="67" target="26" next="178" opposite="170" index="186"/>
+        <Halfedge left="57" target="17" next="168" opposite="177" index="187"/>
+        <Halfedge left="65" target="19" next="179" opposite="173" index="188"/>
+        <Halfedge left="60" target="26" next="171" opposite="178" index="189"/>
+        <Halfedge left="66" target="17" next="177" opposite="127" index="190"/>
+        <Halfedge left="62" target="19" next="176" opposite="131" index="191"/>
+        <Halfedge left="52" target="30" next="193" opposite="195" index="192"/>
+        <Halfedge left="52" target="28" next="194" opposite="196" index="193"/>
+        <Halfedge left="52" target="20" next="192" opposite="197" index="194"/>
+        <Halfedge left="56" target="20" next="181" opposite="192" index="195"/>
+        <Halfedge left="57" target="30" next="187" opposite="193" index="196"/>
+        <Halfedge left="58" target="28" next="183" opposite="194" index="197"/>
+        <Halfedge left="53" target="31" next="199" opposite="201" index="198"/>
+        <Halfedge left="53" target="27" next="200" opposite="202" index="199"/>
+        <Halfedge left="53" target="29" next="198" opposite="203" index="200"/>
+        <Halfedge left="59" target="29" next="185" opposite="198" index="201"/>
+        <Halfedge left="60" target="31" next="189" opposite="199" index="202"/>
+        <Halfedge left="61" target="27" next="180" opposite="200" index="203"/>
+        <Halfedge left="54" target="29" next="205" opposite="207" index="204"/>
+        <Halfedge left="54" target="28" next="206" opposite="208" index="205"/>
+        <Halfedge left="54" target="32" next="204" opposite="209" index="206"/>
+        <Halfedge left="62" target="32" next="191" opposite="204" index="207"/>
+        <Halfedge left="63" target="29" next="184" opposite="205" index="208"/>
+        <Halfedge left="64" target="28" next="182" opposite="206" index="209"/>
+        <Halfedge left="55" target="25" next="211" opposite="213" index="210"/>
+        <Halfedge left="55" target="30" next="212" opposite="214" index="211"/>
+        <Halfedge left="55" target="31" next="210" opposite="215" index="212"/>
+        <Halfedge left="65" target="31" next="188" opposite="210" index="213"/>
+        <Halfedge left="66" target="25" next="190" opposite="211" index="214"/>
+        <Halfedge left="67" target="30" next="186" opposite="212" index="215"/>
+        <Halfedge left="68" target="21" next="158" opposite="221" index="216"/>
+        <Halfedge left="68" target="33" next="216" opposite="218" index="217"/>
+        <Halfedge left="69" target="25" next="156" opposite="217" index="218"/>
+        <Halfedge left="69" target="33" next="218" opposite="100" index="219"/>
+        <Halfedge left="70" target="5" next="157" opposite="99" index="220"/>
+        <Halfedge left="70" target="33" next="220" opposite="216" index="221"/>
+        <Halfedge left="71" target="21" next="146" opposite="227" index="222"/>
+        <Halfedge left="71" target="34" next="222" opposite="224" index="223"/>
+        <Halfedge left="72" target="27" next="144" opposite="223" index="224"/>
+        <Halfedge left="72" target="34" next="224" opposite="106" index="225"/>
+        <Halfedge left="73" target="23" next="145" opposite="105" index="226"/>
+        <Halfedge left="73" target="34" next="226" opposite="222" index="227"/>
+        <Halfedge left="74" target="6" next="164" opposite="113" index="228"/>
+        <Halfedge left="74" target="16" next="228" opposite="230" index="229"/>
+        <Halfedge left="75" target="24" next="162" opposite="229" index="230"/>
+        <Halfedge left="75" target="16" next="230" opposite="232" index="231"/>
+        <Halfedge left="76" target="32" next="163" opposite="231" index="232"/>
+        <Halfedge left="76" target="16" next="232" opposite="108" index="233"/>
+        <Halfedge left="77" target="20" next="152" opposite="239" index="234"/>
+        <Halfedge left="77" target="35" next="234" opposite="116" index="235"/>
+        <Halfedge left="78" target="22" next="150" opposite="115" index="236"/>
+        <Halfedge left="78" target="35" next="236" opposite="238" index="237"/>
+        <Halfedge left="79" target="24" next="151" opposite="237" index="238"/>
+        <Halfedge left="79" target="35" next="238" opposite="234" index="239"/>
+        <Face index="0"/>
+        <Face index="1"/>
+        <Face index="2"/>
+        <Face index="3"/>
+        <Face index="4"/>
+        <Face index="5"/>
+        <Face index="6"/>
+        <Face index="7"/>
+        <Face index="8"/>
+        <Face index="9"/>
+        <Face index="10"/>
+        <Face index="11"/>
+        <Face index="12"/>
+        <Face index="13"/>
+        <Face index="14"/>
+        <Face index="15"/>
+        <Face index="16"/>
+        <Face index="17"/>
+        <Face index="18"/>
+        <Face index="19"/>
+        <Face index="20"/>
+        <Face index="21"/>
+        <Face index="22"/>
+        <Face index="23"/>
+        <Face index="24"/>
+        <Face index="25"/>
+        <Face index="26"/>
+        <Face index="27"/>
+        <Face index="28"/>
+        <Face index="29"/>
+        <Face index="30"/>
+        <Face index="31"/>
+        <Face index="32"/>
+        <Face index="33"/>
+        <Face index="34"/>
+        <Face index="35"/>
+        <Face index="36"/>
+        <Face index="37"/>
+        <Face index="38"/>
+        <Face index="39"/>
+        <Face index="40"/>
+        <Face index="41"/>
+        <Face index="42"/>
+        <Face index="43"/>
+        <Face index="44"/>
+        <Face index="45"/>
+        <Face index="46"/>
+        <Face index="47"/>
+        <Face index="48"/>
+        <Face index="49"/>
+        <Face index="50"/>
+        <Face index="51"/>
+        <Face index="52"/>
+        <Face index="53"/>
+        <Face index="54"/>
+        <Face index="55"/>
+        <Face index="56"/>
+        <Face index="57"/>
+        <Face index="58"/>
+        <Face index="59"/>
+        <Face index="60"/>
+        <Face index="61"/>
+        <Face index="62"/>
+        <Face index="63"/>
+        <Face index="64"/>
+        <Face index="65"/>
+        <Face index="66"/>
+        <Face index="67"/>
+        <Face index="68"/>
+        <Face index="69"/>
+        <Face index="70"/>
+        <Face index="71"/>
+        <Face index="72"/>
+        <Face index="73"/>
+        <Face index="74"/>
+        <Face index="75"/>
+        <Face index="76"/>
+        <Face index="77"/>
+        <Face index="78"/>
+        <Face index="79"/>
+        <Selection>
+            <VertexSelection>
+                <Vertex index="33" channel="0"/>
+            </VertexSelection>
+            <EdgeSelection>
+                <Edge index="2" channel="347434568"/>
+                <Edge index="21" channel="347434567"/>
+                <Edge index="30" channel="347434567"/>
+                <Edge index="145" channel="347434568"/>
+                <Edge index="220" channel="347434572"/>
+                <Edge index="221" channel="347434570"/>
+                <Edge index="66" channel="347434568"/>
+                <Edge index="91" channel="347434568"/>
+                <Edge index="98" channel="347434568"/>
+                <Edge index="153" channel="347434569"/>
+                <Edge index="154" channel="347434569"/>
+                <Edge index="155" channel="347434572"/>
+                <Edge index="219" channel="347434569"/>
+                <Edge index="28" channel="347434570"/>
+                <Edge index="96" channel="347434570"/>
+                <Edge index="138" channel="347434570"/>
+                <Edge index="149" channel="347434570"/>
+                <Edge index="171" channel="347434570"/>
+                <Edge index="25" channel="347434571"/>
+                <Edge index="101" channel="347434571"/>
+                <Edge index="122" channel="347434571"/>
+                <Edge index="189" channel="347434571"/>
+                <Edge index="213" channel="347434571"/>
+                <Edge index="218" channel="347434571"/>
+                <Edge index="196" channel="347434572"/>
+                <Edge index="197" channel="347434572"/>
+                <Edge index="214" channel="347434572"/>
+                <Edge index="217" channel="347434572"/>
+            </EdgeSelection>
+            <FaceSelection/>
+        </Selection>
+    </HalfedgeEmbedding>
+    <HalfedgeMap name="Uniformizing Map">
+        <Domain name="Uniformizing Map_domain">
+            <Vertex x="0.8066812120951858" y="0.0" z="0.0" w="1.2848091601274323" index="0"/>
+            <Vertex x="-0.8263818169322361" y="-0.03031076127087601" z="2.2627204609171053E-17" w="1.2976230768620924" index="1"/>
+            <Vertex x="-0.0696336114085195" y="-1.5441715833843515" z="1.648823636288535E-16" w="1.8410091577093057" index="2"/>
+            <Vertex x="-0.43232270924599225" y="0.8023040553274292" z="0.0" w="1.3529947236130055" index="3"/>
+            <Vertex x="3.0584191658315967" y="0.26356473237646216" z="-4.956270853962017E-16" w="3.228528172724952" index="4"/>
+            <Vertex x="50.10708086567391" y="-44.441831846740065" z="6.73826732605984E-14" w="66.98355000127347" index="5"/>
+            <Vertex x="-8.345195228418222" y="-2.5312312657610105" z="6.573423321952438E-16" w="8.777779623639473" index="6"/>
+            <Vertex x="-0.6047617072209162" y="2.5237916681581787" z="-1.4153231045178336E-16" w="2.781233738250958" index="7"/>
+            <Vertex x="-0.7092977086953518" y="-3.1552320346425713" z="-4.595528273925192E-16" w="3.3850542731240183" index="8"/>
+            <Vertex x="-2.135541166061755" y="-2.934926562703632" z="-1.05433510703247E-15" w="3.7648811402762448" index="9"/>
+            <Vertex x="-1.677006415574781" y="-1.1964808768759283" z="5.080903805520636E-16" w="2.2899600447625206" index="10"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="1.0" index="11"/>
+            <Vertex x="-0.3665180457260604" y="-0.6578774854264863" z="1.0537373709016385E-16" w="1.2518539306460348" index="12"/>
+            <Vertex x="-1.6439108722471494" y="-3.5830585569905935" z="-9.4064573426971E-16" w="4.067032281494198" index="13"/>
+            <Vertex x="-0.8374772175150713" y="-1.691248251630102" z="-1.1446044545972246E-16" w="2.1358110259333953" index="14"/>
+            <Vertex x="0.4035275260137692" y="-0.7139427100190149" z="-1.3590861381230483E-16" w="1.2932705275541108" index="15"/>
+            <Vertex x="1.9972091200294662" y="-1.8016307765733126" z="-4.5922925673679127E-17" w="2.869619787397806" index="16"/>
+            <Vertex x="7.484943016174396" y="-7.479660115516078" z="-9.2251276285129E-16" w="10.62871993228817" index="17"/>
+            <Vertex x="22.074822893280444" y="-19.13735927053208" z="1.9249602200430938E-14" w="29.232453294568327" index="18"/>
+            <Vertex x="10.615066100237527" y="-7.968590767645193" z="3.3444470501888477E-15" w="13.310825186088657" index="19"/>
+            <Vertex x="25.16366324206356" y="-23.111807752635293" z="4.649597249164884E-15" w="34.181363421530655" index="20"/>
+            <Vertex x="66.0252414766077" y="-56.47001299208728" z="4.748566290830176E-14" w="86.88610291278384" index="21"/>
+            <Vertex x="16.59297886876321" y="-11.186859670581217" z="5.5251460326828104E-15" w="20.03678559621026" index="22"/>
+            <Vertex x="-5.184657065356264" y="-5.038873398226497" z="-7.793662500574251E-16" w="7.298692623251323" index="23"/>
+            <Vertex x="6.095968937750676" y="-4.035768532522726" z="7.40361382048611E-16" w="7.378906757651959" index="24"/>
+            <Vertex x="15.671413000521222" y="-16.248474754498094" z="-2.1148520582788353E-15" w="22.59659525858857" index="25"/>
+            <Vertex x="41.20592736062769" y="-32.30945997253217" z="3.085803580007741E-15" w="52.372031212909654" index="26"/>
+            <Vertex x="32.69378545786725" y="-26.782954601699853" z="5.129794476148853E-15" w="42.27540969360046" index="27"/>
+            <Vertex x="11.462461620798024" y="-10.339990652061857" z="-4.9043900000428955E-16" w="15.469435448425203" index="28"/>
+            <Vertex x="12.905418987251966" y="-10.653141282750681" z="6.684795834832902E-15" w="16.764225554041275" index="29"/>
+            <Vertex x="15.299241413208138" y="-14.790364190837858" z="2.3680199830933806E-15" w="21.303090402973034" index="30"/>
+            <Vertex x="19.82924957804398" y="-15.44073920154984" z="1.0138149352126699E-15" w="25.151850149017577" index="31"/>
+            <Vertex x="6.063454306945062" y="-5.119754615390649" z="1.8930993538703323E-15" w="7.998585215788132" index="32"/>
+            <Vertex x="91.04367192703494" y="-78.42024648093388" z="7.714012152706216E-14" w="120.16524146394411" index="33"/>
+            <Vertex x="-3.1811116147859497" y="-1.7798677582634832" z="1.7113891641887156E-16" w="3.7798677678765364" index="34"/>
+            <Vertex x="-1.4714718116817729" y="1.649339078914902" z="-7.314659201678421E-18" w="2.42601498136551" index="35"/>
+            <Vertex x="2.3483503758134625" y="-4.597330185053756" z="-1.9906453931405446E-15" w="5.258345207191101" index="36"/>
+            <Vertex x="0.8094506498958428" y="-2.193432170342465" z="2.659798751856812E-16" w="2.542902876735574" index="37"/>
+            <Vertex x="0.2371865004892345" y="1.6437747413736878" z="-1.0836862639375054E-16" w="1.9386213752026114" index="38"/>
+            <Vertex x="0.3956664807552107" y="0.632393043193469" z="0.0" w="1.2475868406939497" index="39"/>
+            <Vertex x="-3.2100093371318175" y="-0.1939859496473502" z="-5.093049967262314E-16" w="3.367757487280525" index="40"/>
+            <Vertex x="3.8075248661675247" y="0.8084971575656892" z="-3.155493187141711E-16" w="4.018819884030115" index="41"/>
+            <Vertex x="1.3879313366502999" y="0.8596807230580346" z="2.8127143449117385E-17" w="1.9145245730607567" index="42"/>
+            <Vertex x="2.0127660585724367" y="-1.1408750368779355" z="-3.612337400930861E-16" w="2.5204807192899636" index="43"/>
+            <Vertex x="2.610657369948598" y="-3.0297958550259927" z="-2.0657589142007258E-15" w="4.122522871543543" index="44"/>
+            <Vertex x="-10.615169517130782" y="-7.54135724942677" z="1.4197214691055959E-15" w="13.059628365344256" index="45"/>
+            <Vertex x="-4.383047108668958" y="3.0669290870026766" z="2.9493012773840443E-16" w="5.442164641162043" index="46"/>
+            <Vertex x="-2.0484425968628805" y="3.4644655818047947" z="-2.0112995765270516E-16" w="4.147124165027178" index="47"/>
+            <Vertex x="-3.461083867254577" y="3.561726275221265" z="-3.037060385356495E-16" w="5.066063125916558" index="48"/>
+            <Vertex x="-11.947729226493774" y="-4.944821757397206" z="3.698258965901224E-15" w="12.96917483427694" index="49"/>
+            <Vertex x="-5.903098016406534" y="-3.0446728821057225" z="5.521796610504358E-15" w="6.716889097665132" index="50"/>
+            <Vertex x="6.106287663733608" y="-3.0293804803825677" z="8.511393425737028E-16" w="6.889404555343528" index="51"/>
+            <Vertex x="12.237504536239673" y="-6.908429566699514" z="2.1610718860911227E-15" w="14.088396514597912" index="52"/>
+            <Vertex x="21.48401490819478" y="-11.170988780504791" z="7.660669921951601E-16" w="24.23538501674152" index="53"/>
+            <Vertex x="10.866146519883559" y="-4.6244699182315525" z="2.623777282653063E-15" w="11.851534171414523" index="54"/>
+            <Vertex x="12.84142405166913" y="-6.2786971329109305" z="2.3779325646206067E-15" w="14.329138472413838" index="55"/>
+            <Vertex x="21.34880446641053" y="-9.603002726091828" z="2.8234237726719726E-15" w="23.430516714369688" index="56"/>
+            <Vertex x="22.46238590245354" y="-16.46766713116661" z="2.373413636711178E-15" w="27.870106587052167" index="57"/>
+            <Vertex x="52.7537581967065" y="-37.11693728248262" z="3.895915944221055E-15" w="64.51066607242811" index="58"/>
+            <Vertex x="-1.8735634640261036" y="0.9316212562924197" z="-1.3123658934536455E-16" w="2.3190856428578397" index="59"/>
+            <Vertex x="-4.320964550922363" y="0.1899314610377053" z="-8.263171785301535E-16" w="4.439235137973614" index="60"/>
+            <Vertex x="-1.2665845240816254" y="-9.328312620094154" z="-1.1633189993776046E-15" w="9.466871325567435" index="61"/>
+            <Vertex x="0.19842507938607604" y="-3.9602322545849296" z="7.329001872751815E-16" w="4.089353496872605" index="62"/>
+            <Vertex x="11.446080436930094" y="-13.347699298481722" z="-1.4757204379382688E-15" w="17.611752721729978" index="63"/>
+            <Vertex x="17.701119311326032" y="-20.210889687632946" z="-6.391170936395627E-15" w="26.885120175284083" index="64"/>
+            <Identification>
+                <Vertex>23</Vertex>
+                <Vertex>44</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>9</Vertex>
+                <Vertex>36</Vertex>
+                <Vertex>38</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>7</Vertex>
+                <Vertex>37</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>4</Vertex>
+                <Vertex>40</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>6</Vertex>
+                <Vertex>43</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>5</Vertex>
+                <Vertex>47</Vertex>
+                <Vertex>62</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>13</Vertex>
+                <Vertex>39</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>8</Vertex>
+                <Vertex>42</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>33</Vertex>
+                <Vertex>41</Vertex>
+                <Vertex>58</Vertex>
+                <Vertex>60</Vertex>
+                <Vertex>61</Vertex>
+                <Vertex>64</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>26</Vertex>
+                <Vertex>49</Vertex>
+                <Vertex>51</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>21</Vertex>
+                <Vertex>45</Vertex>
+                <Vertex>63</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>27</Vertex>
+                <Vertex>50</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>22</Vertex>
+                <Vertex>59</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>24</Vertex>
+                <Vertex>46</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>20</Vertex>
+                <Vertex>48</Vertex>
+                <Vertex>52</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>31</Vertex>
+                <Vertex>54</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>30</Vertex>
+                <Vertex>55</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>28</Vertex>
+                <Vertex>53</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>25</Vertex>
+                <Vertex>56</Vertex>
+                <Vertex>57</Vertex>
+            </Identification>
+            <Halfedge left="1" target="4" next="28" opposite="14" index="0"/>
+            <Halfedge left="2" target="10" next="29" opposite="60" index="1"/>
+            <Halfedge left="0" target="23" next="27" opposite="241" index="2"/>
+            <Halfedge left="4" target="3" next="34" opposite="61" index="3"/>
+            <Halfedge left="5" target="59" next="35" opposite="16" index="4"/>
+            <Halfedge left="3" target="37" next="33" opposite="20" index="5"/>
+            <Halfedge left="7" target="40" next="40" opposite="15" index="6"/>
+            <Halfedge left="8" target="42" next="41" opposite="70" index="7"/>
+            <Halfedge left="6" target="62" next="39" opposite="17" index="8"/>
+            <Halfedge left="10" target="43" next="46" opposite="19" index="9"/>
+            <Halfedge left="11" target="37" next="47" opposite="242" index="10"/>
+            <Halfedge left="9" target="15" next="45" opposite="71" index="11"/>
+            <Halfedge left="5" target="1" next="4" opposite="49" index="12"/>
+            <Halfedge left="0" target="9" next="2" opposite="51" index="13"/>
+            <Halfedge left="8" target="0" next="7" opposite="0" index="14"/>
+            <Halfedge left="2" target="1" next="1" opposite="6" index="15"/>
+            <Halfedge left="7" target="1" next="6" opposite="4" index="16"/>
+            <Halfedge left="3" target="2" next="5" opposite="8" index="17"/>
+            <Halfedge left="11" target="36" next="10" opposite="240" index="18"/>
+            <Halfedge left="1" target="0" next="0" opposite="9" index="19"/>
+            <Halfedge left="9" target="2" next="11" opposite="5" index="20"/>
+            <Halfedge left="4" target="38" next="3" opposite="243" index="21"/>
+            <Halfedge left="10" target="0" next="9" opposite="55" index="22"/>
+            <Halfedge left="6" target="2" next="8" opposite="59" index="23"/>
+            <Halfedge left="32" target="23" next="105" opposite="27" index="24"/>
+            <Halfedge left="33" target="40" next="107" opposite="245" index="25"/>
+            <Halfedge left="31" target="10" next="103" opposite="29" index="26"/>
+            <Halfedge left="0" target="10" next="13" opposite="24" index="27"/>
+            <Halfedge left="1" target="43" next="19" opposite="244" index="28"/>
+            <Halfedge left="2" target="40" next="15" opposite="26" index="29"/>
+            <Halfedge left="38" target="7" next="117" opposite="247" index="30"/>
+            <Halfedge left="39" target="3" next="119" opposite="34" index="31"/>
+            <Halfedge left="37" target="59" next="115" opposite="35" index="32"/>
+            <Halfedge left="3" target="62" next="17" opposite="246" index="33"/>
+            <Halfedge left="4" target="7" next="21" opposite="31" index="34"/>
+            <Halfedge left="5" target="3" next="12" opposite="32" index="35"/>
+            <Halfedge left="29" target="62" next="99" opposite="39" index="36"/>
+            <Halfedge left="30" target="40" next="101" opposite="40" index="37"/>
+            <Halfedge left="28" target="42" next="97" opposite="41" index="38"/>
+            <Halfedge left="6" target="8" next="23" opposite="36" index="39"/>
+            <Halfedge left="7" target="59" next="16" opposite="37" index="40"/>
+            <Halfedge left="8" target="4" next="14" opposite="38" index="41"/>
+            <Halfedge left="35" target="15" next="111" opposite="45" index="42"/>
+            <Halfedge left="36" target="43" next="113" opposite="46" index="43"/>
+            <Halfedge left="34" target="37" next="109" opposite="47" index="44"/>
+            <Halfedge left="9" target="37" next="20" opposite="42" index="45"/>
+            <Halfedge left="10" target="15" next="22" opposite="43" index="46"/>
+            <Halfedge left="11" target="44" next="18" opposite="44" index="47"/>
+            <Halfedge left="17" target="11" next="76" opposite="62" index="48"/>
+            <Halfedge left="18" target="3" next="77" opposite="12" index="49"/>
+            <Halfedge left="16" target="39" next="75" opposite="248" index="50"/>
+            <Halfedge left="20" target="10" next="82" opposite="13" index="51"/>
+            <Halfedge left="21" target="12" next="83" opposite="64" index="52"/>
+            <Halfedge left="19" target="14" next="81" opposite="68" index="53"/>
+            <Halfedge left="23" target="11" next="88" opposite="63" index="54"/>
+            <Halfedge left="24" target="15" next="89" opposite="22" index="55"/>
+            <Halfedge left="22" target="12" next="87" opposite="65" index="56"/>
+            <Halfedge left="26" target="39" next="94" opposite="67" index="57"/>
+            <Halfedge left="27" target="14" next="95" opposite="69" index="58"/>
+            <Halfedge left="25" target="8" next="93" opposite="23" index="59"/>
+            <Halfedge left="21" target="1" next="52" opposite="1" index="60"/>
+            <Halfedge left="16" target="38" next="50" opposite="3" index="61"/>
+            <Halfedge left="24" target="0" next="55" opposite="48" index="62"/>
+            <Halfedge left="18" target="1" next="49" opposite="54" index="63"/>
+            <Halfedge left="23" target="1" next="54" opposite="52" index="64"/>
+            <Halfedge left="19" target="2" next="53" opposite="56" index="65"/>
+            <Halfedge left="27" target="9" next="58" opposite="249" index="66"/>
+            <Halfedge left="17" target="0" next="48" opposite="57" index="67"/>
+            <Halfedge left="25" target="2" next="59" opposite="53" index="68"/>
+            <Halfedge left="20" target="9" next="51" opposite="58" index="69"/>
+            <Halfedge left="26" target="0" next="57" opposite="7" index="70"/>
+            <Halfedge left="22" target="2" next="56" opposite="11" index="71"/>
+            <Halfedge left="12" target="39" next="73" opposite="75" index="72"/>
+            <Halfedge left="12" target="11" next="74" opposite="76" index="73"/>
+            <Halfedge left="12" target="3" next="72" opposite="77" index="74"/>
+            <Halfedge left="16" target="3" next="61" opposite="72" index="75"/>
+            <Halfedge left="17" target="39" next="67" opposite="73" index="76"/>
+            <Halfedge left="18" target="11" next="63" opposite="74" index="77"/>
+            <Halfedge left="13" target="14" next="79" opposite="81" index="78"/>
+            <Halfedge left="13" target="10" next="80" opposite="82" index="79"/>
+            <Halfedge left="13" target="12" next="78" opposite="83" index="80"/>
+            <Halfedge left="19" target="12" next="65" opposite="78" index="81"/>
+            <Halfedge left="20" target="14" next="69" opposite="79" index="82"/>
+            <Halfedge left="21" target="10" next="60" opposite="80" index="83"/>
+            <Halfedge left="14" target="12" next="85" opposite="87" index="84"/>
+            <Halfedge left="14" target="11" next="86" opposite="88" index="85"/>
+            <Halfedge left="14" target="15" next="84" opposite="89" index="86"/>
+            <Halfedge left="22" target="15" next="71" opposite="84" index="87"/>
+            <Halfedge left="23" target="12" next="64" opposite="85" index="88"/>
+            <Halfedge left="24" target="11" next="62" opposite="86" index="89"/>
+            <Halfedge left="15" target="8" next="91" opposite="93" index="90"/>
+            <Halfedge left="15" target="13" next="92" opposite="251" index="91"/>
+            <Halfedge left="15" target="14" next="90" opposite="95" index="92"/>
+            <Halfedge left="25" target="14" next="68" opposite="90" index="93"/>
+            <Halfedge left="26" target="42" next="70" opposite="250" index="94"/>
+            <Halfedge left="27" target="13" next="66" opposite="92" index="95"/>
+            <Halfedge left="28" target="4" next="38" opposite="253" index="96"/>
+            <Halfedge left="28" target="41" next="96" opposite="254" index="97"/>
+            <Halfedge left="29" target="8" next="36" opposite="255" index="98"/>
+            <Halfedge left="29" target="61" next="98" opposite="284" index="99"/>
+            <Halfedge left="30" target="59" next="37" opposite="282" index="100"/>
+            <Halfedge left="30" target="60" next="100" opposite="252" index="101"/>
+            <Halfedge left="31" target="40" next="26" opposite="107" index="102"/>
+            <Halfedge left="31" target="34" next="102" opposite="104" index="103"/>
+            <Halfedge left="32" target="10" next="24" opposite="103" index="104"/>
+            <Halfedge left="32" target="34" next="104" opposite="226" index="105"/>
+            <Halfedge left="33" target="6" next="25" opposite="225" index="106"/>
+            <Halfedge left="33" target="34" next="106" opposite="102" index="107"/>
+            <Halfedge left="34" target="44" next="44" opposite="233" index="108"/>
+            <Halfedge left="34" target="16" next="108" opposite="110" index="109"/>
+            <Halfedge left="35" target="37" next="42" opposite="109" index="110"/>
+            <Halfedge left="35" target="16" next="110" opposite="112" index="111"/>
+            <Halfedge left="36" target="15" next="43" opposite="111" index="112"/>
+            <Halfedge left="36" target="16" next="112" opposite="228" index="113"/>
+            <Halfedge left="37" target="3" next="32" opposite="119" index="114"/>
+            <Halfedge left="37" target="35" next="114" opposite="236" index="115"/>
+            <Halfedge left="38" target="47" next="30" opposite="235" index="116"/>
+            <Halfedge left="38" target="35" next="116" opposite="118" index="117"/>
+            <Halfedge left="39" target="7" next="31" opposite="117" index="118"/>
+            <Halfedge left="39" target="35" next="118" opposite="114" index="119"/>
+            <Halfedge left="41" target="63" next="148" opposite="134" index="120"/>
+            <Halfedge left="42" target="27" next="149" opposite="180" index="121"/>
+            <Halfedge left="40" target="6" next="147" opposite="257" index="122"/>
+            <Halfedge left="44" target="52" next="154" opposite="181" index="123"/>
+            <Halfedge left="45" target="5" next="155" opposite="136" index="124"/>
+            <Halfedge left="43" target="24" next="153" opposite="140" index="125"/>
+            <Halfedge left="47" target="21" next="160" opposite="135" index="126"/>
+            <Halfedge left="48" target="25" next="161" opposite="190" index="127"/>
+            <Halfedge left="46" target="22" next="159" opposite="137" index="128"/>
+            <Halfedge left="50" target="44" next="166" opposite="139" index="129"/>
+            <Halfedge left="51" target="24" next="167" opposite="141" index="130"/>
+            <Halfedge left="49" target="32" next="165" opposite="191" index="131"/>
+            <Halfedge left="45" target="18" next="124" opposite="169" index="132"/>
+            <Halfedge left="40" target="49" next="122" opposite="268" index="133"/>
+            <Halfedge left="48" target="17" next="127" opposite="120" index="134"/>
+            <Halfedge left="42" target="18" next="121" opposite="126" index="135"/>
+            <Halfedge left="47" target="18" next="126" opposite="124" index="136"/>
+            <Halfedge left="43" target="19" next="125" opposite="128" index="137"/>
+            <Halfedge left="51" target="51" next="130" opposite="256" index="138"/>
+            <Halfedge left="41" target="17" next="120" opposite="129" index="139"/>
+            <Halfedge left="49" target="19" next="131" opposite="125" index="140"/>
+            <Halfedge left="44" target="51" next="123" opposite="130" index="141"/>
+            <Halfedge left="50" target="17" next="129" opposite="175" index="142"/>
+            <Halfedge left="46" target="19" next="128" opposite="179" index="143"/>
+            <Halfedge left="72" target="6" next="225" opposite="147" index="144"/>
+            <Halfedge left="73" target="45" next="227" opposite="259" index="145"/>
+            <Halfedge left="71" target="50" next="223" opposite="260" index="146"/>
+            <Halfedge left="40" target="50" next="133" opposite="144" index="147"/>
+            <Halfedge left="41" target="44" next="139" opposite="258" index="148"/>
+            <Halfedge left="42" target="21" next="135" opposite="261" index="149"/>
+            <Halfedge left="78" target="46" next="237" opposite="262" index="150"/>
+            <Halfedge left="79" target="48" next="239" opposite="264" index="151"/>
+            <Halfedge left="77" target="47" next="235" opposite="266" index="152"/>
+            <Halfedge left="43" target="22" next="137" opposite="263" index="153"/>
+            <Halfedge left="44" target="24" next="141" opposite="265" index="154"/>
+            <Halfedge left="45" target="20" next="132" opposite="267" index="155"/>
+            <Halfedge left="69" target="22" next="219" opposite="159" index="156"/>
+            <Halfedge left="70" target="21" next="221" opposite="160" index="157"/>
+            <Halfedge left="68" target="25" next="217" opposite="161" index="158"/>
+            <Halfedge left="46" target="57" next="143" opposite="156" index="159"/>
+            <Halfedge left="47" target="5" next="136" opposite="157" index="160"/>
+            <Halfedge left="48" target="63" next="134" opposite="158" index="161"/>
+            <Halfedge left="75" target="32" next="231" opposite="165" index="162"/>
+            <Halfedge left="76" target="44" next="233" opposite="166" index="163"/>
+            <Halfedge left="74" target="24" next="229" opposite="167" index="164"/>
+            <Halfedge left="49" target="24" next="140" opposite="162" index="165"/>
+            <Halfedge left="50" target="32" next="142" opposite="163" index="166"/>
+            <Halfedge left="51" target="43" next="138" opposite="164" index="167"/>
+            <Halfedge left="57" target="28" next="196" opposite="182" index="168"/>
+            <Halfedge left="58" target="20" next="197" opposite="132" index="169"/>
+            <Halfedge left="56" target="55" next="195" opposite="186" index="170"/>
+            <Halfedge left="60" target="27" next="202" opposite="269" index="171"/>
+            <Halfedge left="61" target="29" next="203" opposite="184" index="172"/>
+            <Halfedge left="59" target="31" next="201" opposite="188" index="173"/>
+            <Halfedge left="63" target="28" next="208" opposite="183" index="174"/>
+            <Halfedge left="64" target="32" next="209" opposite="142" index="175"/>
+            <Halfedge left="62" target="29" next="207" opposite="185" index="176"/>
+            <Halfedge left="66" target="30" next="214" opposite="187" index="177"/>
+            <Halfedge left="67" target="54" next="215" opposite="270" index="178"/>
+            <Halfedge left="65" target="57" next="213" opposite="143" index="179"/>
+            <Halfedge left="61" target="18" next="172" opposite="121" index="180"/>
+            <Halfedge left="56" target="51" next="170" opposite="123" index="181"/>
+            <Halfedge left="64" target="17" next="175" opposite="168" index="182"/>
+            <Halfedge left="58" target="18" next="169" opposite="174" index="183"/>
+            <Halfedge left="63" target="18" next="174" opposite="172" index="184"/>
+            <Halfedge left="59" target="19" next="173" opposite="176" index="185"/>
+            <Halfedge left="67" target="51" next="178" opposite="170" index="186"/>
+            <Halfedge left="57" target="17" next="168" opposite="177" index="187"/>
+            <Halfedge left="65" target="19" next="179" opposite="173" index="188"/>
+            <Halfedge left="60" target="26" next="171" opposite="271" index="189"/>
+            <Halfedge left="66" target="17" next="177" opposite="127" index="190"/>
+            <Halfedge left="62" target="19" next="176" opposite="131" index="191"/>
+            <Halfedge left="52" target="55" next="193" opposite="195" index="192"/>
+            <Halfedge left="52" target="53" next="194" opposite="272" index="193"/>
+            <Halfedge left="52" target="52" next="192" opposite="274" index="194"/>
+            <Halfedge left="56" target="52" next="181" opposite="192" index="195"/>
+            <Halfedge left="57" target="30" next="187" opposite="273" index="196"/>
+            <Halfedge left="58" target="28" next="183" opposite="275" index="197"/>
+            <Halfedge left="53" target="31" next="199" opposite="201" index="198"/>
+            <Halfedge left="53" target="27" next="200" opposite="202" index="199"/>
+            <Halfedge left="53" target="29" next="198" opposite="203" index="200"/>
+            <Halfedge left="59" target="29" next="185" opposite="198" index="201"/>
+            <Halfedge left="60" target="31" next="189" opposite="199" index="202"/>
+            <Halfedge left="61" target="27" next="180" opposite="200" index="203"/>
+            <Halfedge left="54" target="29" next="205" opposite="207" index="204"/>
+            <Halfedge left="54" target="28" next="206" opposite="208" index="205"/>
+            <Halfedge left="54" target="32" next="204" opposite="209" index="206"/>
+            <Halfedge left="62" target="32" next="191" opposite="204" index="207"/>
+            <Halfedge left="63" target="29" next="184" opposite="205" index="208"/>
+            <Halfedge left="64" target="28" next="182" opposite="206" index="209"/>
+            <Halfedge left="55" target="56" next="211" opposite="276" index="210"/>
+            <Halfedge left="55" target="55" next="212" opposite="278" index="211"/>
+            <Halfedge left="55" target="54" next="210" opposite="215" index="212"/>
+            <Halfedge left="65" target="31" next="188" opposite="277" index="213"/>
+            <Halfedge left="66" target="25" next="190" opposite="279" index="214"/>
+            <Halfedge left="67" target="55" next="186" opposite="212" index="215"/>
+            <Halfedge left="68" target="63" next="158" opposite="286" index="216"/>
+            <Halfedge left="68" target="64" next="216" opposite="281" index="217"/>
+            <Halfedge left="69" target="57" next="156" opposite="280" index="218"/>
+            <Halfedge left="69" target="58" next="218" opposite="283" index="219"/>
+            <Halfedge left="70" target="5" next="157" opposite="285" index="220"/>
+            <Halfedge left="70" target="33" next="220" opposite="287" index="221"/>
+            <Halfedge left="71" target="45" next="146" opposite="227" index="222"/>
+            <Halfedge left="71" target="34" next="222" opposite="224" index="223"/>
+            <Halfedge left="72" target="50" next="144" opposite="223" index="224"/>
+            <Halfedge left="72" target="34" next="224" opposite="106" index="225"/>
+            <Halfedge left="73" target="23" next="145" opposite="105" index="226"/>
+            <Halfedge left="73" target="34" next="226" opposite="222" index="227"/>
+            <Halfedge left="74" target="43" next="164" opposite="113" index="228"/>
+            <Halfedge left="74" target="16" next="228" opposite="230" index="229"/>
+            <Halfedge left="75" target="24" next="162" opposite="229" index="230"/>
+            <Halfedge left="75" target="16" next="230" opposite="232" index="231"/>
+            <Halfedge left="76" target="32" next="163" opposite="231" index="232"/>
+            <Halfedge left="76" target="16" next="232" opposite="108" index="233"/>
+            <Halfedge left="77" target="48" next="152" opposite="239" index="234"/>
+            <Halfedge left="77" target="35" next="234" opposite="116" index="235"/>
+            <Halfedge left="78" target="59" next="150" opposite="115" index="236"/>
+            <Halfedge left="78" target="35" next="236" opposite="238" index="237"/>
+            <Halfedge left="79" target="46" next="151" opposite="237" index="238"/>
+            <Halfedge left="79" target="35" next="238" opposite="234" index="239"/>
+            <Halfedge left="-1" target="44" next="258" opposite="18" index="240"/>
+            <Halfedge left="-1" target="9" next="249" opposite="2" index="241"/>
+            <Halfedge left="-1" target="36" next="240" opposite="10" index="242"/>
+            <Halfedge left="-1" target="7" next="247" opposite="21" index="243"/>
+            <Halfedge left="-1" target="4" next="253" opposite="28" index="244"/>
+            <Halfedge left="-1" target="6" next="257" opposite="25" index="245"/>
+            <Halfedge left="-1" target="37" next="242" opposite="33" index="246"/>
+            <Halfedge left="-1" target="47" next="266" opposite="30" index="247"/>
+            <Halfedge left="-1" target="38" next="243" opposite="50" index="248"/>
+            <Halfedge left="-1" target="13" next="251" opposite="66" index="249"/>
+            <Halfedge left="-1" target="39" next="248" opposite="94" index="250"/>
+            <Halfedge left="-1" target="8" next="255" opposite="91" index="251"/>
+            <Halfedge left="-1" target="40" next="245" opposite="101" index="252"/>
+            <Halfedge left="-1" target="41" next="254" opposite="96" index="253"/>
+            <Halfedge left="-1" target="42" next="250" opposite="97" index="254"/>
+            <Halfedge left="-1" target="61" next="284" opposite="98" index="255"/>
+            <Halfedge left="-1" target="43" next="244" opposite="138" index="256"/>
+            <Halfedge left="-1" target="49" next="268" opposite="122" index="257"/>
+            <Halfedge left="-1" target="63" next="286" opposite="148" index="258"/>
+            <Halfedge left="-1" target="23" next="241" opposite="145" index="259"/>
+            <Halfedge left="-1" target="45" next="259" opposite="146" index="260"/>
+            <Halfedge left="-1" target="27" next="269" opposite="149" index="261"/>
+            <Halfedge left="-1" target="59" next="282" opposite="150" index="262"/>
+            <Halfedge left="-1" target="24" next="265" opposite="153" index="263"/>
+            <Halfedge left="-1" target="46" next="262" opposite="151" index="264"/>
+            <Halfedge left="-1" target="52" next="274" opposite="154" index="265"/>
+            <Halfedge left="-1" target="48" next="264" opposite="152" index="266"/>
+            <Halfedge left="-1" target="5" next="285" opposite="155" index="267"/>
+            <Halfedge left="-1" target="50" next="260" opposite="133" index="268"/>
+            <Halfedge left="-1" target="26" next="271" opposite="171" index="269"/>
+            <Halfedge left="-1" target="51" next="256" opposite="178" index="270"/>
+            <Halfedge left="-1" target="31" next="277" opposite="189" index="271"/>
+            <Halfedge left="-1" target="55" next="278" opposite="193" index="272"/>
+            <Halfedge left="-1" target="28" next="275" opposite="196" index="273"/>
+            <Halfedge left="-1" target="53" next="272" opposite="194" index="274"/>
+            <Halfedge left="-1" target="20" next="267" opposite="197" index="275"/>
+            <Halfedge left="-1" target="54" next="270" opposite="210" index="276"/>
+            <Halfedge left="-1" target="57" next="280" opposite="213" index="277"/>
+            <Halfedge left="-1" target="56" next="276" opposite="211" index="278"/>
+            <Halfedge left="-1" target="30" next="273" opposite="214" index="279"/>
+            <Halfedge left="-1" target="58" next="283" opposite="218" index="280"/>
+            <Halfedge left="-1" target="25" next="279" opposite="217" index="281"/>
+            <Halfedge left="-1" target="60" next="252" opposite="100" index="282"/>
+            <Halfedge left="-1" target="22" next="263" opposite="219" index="283"/>
+            <Halfedge left="-1" target="62" next="246" opposite="99" index="284"/>
+            <Halfedge left="-1" target="33" next="287" opposite="220" index="285"/>
+            <Halfedge left="-1" target="64" next="281" opposite="216" index="286"/>
+            <Halfedge left="-1" target="21" next="261" opposite="221" index="287"/>
+            <EdgeIdentification edge1="18" edge2="2" edge3="240" edge4="241"/>
+            <EdgeIdentification edge1="10" edge2="21" edge3="242" edge4="243"/>
+            <EdgeIdentification edge1="28" edge2="25" edge3="244" edge4="245"/>
+            <EdgeIdentification edge1="33" edge2="30" edge3="246" edge4="247"/>
+            <EdgeIdentification edge1="50" edge2="66" edge3="248" edge4="249"/>
+            <EdgeIdentification edge1="94" edge2="91" edge3="250" edge4="251"/>
+            <EdgeIdentification edge1="101" edge2="96" edge3="252" edge4="253"/>
+            <EdgeIdentification edge1="97" edge2="98" edge3="254" edge4="255"/>
+            <EdgeIdentification edge1="138" edge2="122" edge3="256" edge4="257"/>
+            <EdgeIdentification edge1="148" edge2="145" edge3="258" edge4="259"/>
+            <EdgeIdentification edge1="146" edge2="149" edge3="260" edge4="261"/>
+            <EdgeIdentification edge1="150" edge2="153" edge3="262" edge4="263"/>
+            <EdgeIdentification edge1="151" edge2="154" edge3="264" edge4="265"/>
+            <EdgeIdentification edge1="152" edge2="155" edge3="266" edge4="267"/>
+            <EdgeIdentification edge1="133" edge2="171" edge3="268" edge4="269"/>
+            <EdgeIdentification edge1="178" edge2="189" edge3="270" edge4="271"/>
+            <EdgeIdentification edge1="193" edge2="196" edge3="272" edge4="273"/>
+            <EdgeIdentification edge1="194" edge2="197" edge3="274" edge4="275"/>
+            <EdgeIdentification edge1="210" edge2="213" edge3="276" edge4="277"/>
+            <EdgeIdentification edge1="211" edge2="214" edge3="278" edge4="279"/>
+            <EdgeIdentification edge1="218" edge2="217" edge3="280" edge4="281"/>
+            <EdgeIdentification edge1="100" edge2="219" edge3="282" edge4="283"/>
+            <EdgeIdentification edge1="99" edge2="220" edge3="284" edge4="285"/>
+            <EdgeIdentification edge1="216" edge2="221" edge3="286" edge4="287"/>
+            <Face index="0"/>
+            <Face index="1"/>
+            <Face index="2"/>
+            <Face index="3"/>
+            <Face index="4"/>
+            <Face index="5"/>
+            <Face index="6"/>
+            <Face index="7"/>
+            <Face index="8"/>
+            <Face index="9"/>
+            <Face index="10"/>
+            <Face index="11"/>
+            <Face index="12"/>
+            <Face index="13"/>
+            <Face index="14"/>
+            <Face index="15"/>
+            <Face index="16"/>
+            <Face index="17"/>
+            <Face index="18"/>
+            <Face index="19"/>
+            <Face index="20"/>
+            <Face index="21"/>
+            <Face index="22"/>
+            <Face index="23"/>
+            <Face index="24"/>
+            <Face index="25"/>
+            <Face index="26"/>
+            <Face index="27"/>
+            <Face index="28"/>
+            <Face index="29"/>
+            <Face index="30"/>
+            <Face index="31"/>
+            <Face index="32"/>
+            <Face index="33"/>
+            <Face index="34"/>
+            <Face index="35"/>
+            <Face index="36"/>
+            <Face index="37"/>
+            <Face index="38"/>
+            <Face index="39"/>
+            <Face index="40"/>
+            <Face index="41"/>
+            <Face index="42"/>
+            <Face index="43"/>
+            <Face index="44"/>
+            <Face index="45"/>
+            <Face index="46"/>
+            <Face index="47"/>
+            <Face index="48"/>
+            <Face index="49"/>
+            <Face index="50"/>
+            <Face index="51"/>
+            <Face index="52"/>
+            <Face index="53"/>
+            <Face index="54"/>
+            <Face index="55"/>
+            <Face index="56"/>
+            <Face index="57"/>
+            <Face index="58"/>
+            <Face index="59"/>
+            <Face index="60"/>
+            <Face index="61"/>
+            <Face index="62"/>
+            <Face index="63"/>
+            <Face index="64"/>
+            <Face index="65"/>
+            <Face index="66"/>
+            <Face index="67"/>
+            <Face index="68"/>
+            <Face index="69"/>
+            <Face index="70"/>
+            <Face index="71"/>
+            <Face index="72"/>
+            <Face index="73"/>
+            <Face index="74"/>
+            <Face index="75"/>
+            <Face index="76"/>
+            <Face index="77"/>
+            <Face index="78"/>
+            <Face index="79"/>
+            <Selection>
+                <VertexSelection/>
+                <EdgeSelection/>
+                <FaceSelection/>
+            </Selection>
+        </Domain>
+        <Image name="Uniformizing Map_image">
+            <Vertex x="0.5" y="0.5" z="0.5" w="0.5" index="0"/>
+            <Vertex x="0.5" y="-0.5" z="-0.5" w="0.5" index="1"/>
+            <Vertex x="-0.5" y="-0.5" z="0.5" w="0.5" index="2"/>
+            <Vertex x="0.0" y="0.0" z="-0.5" w="0.5" index="3"/>
+            <Vertex x="0.5" y="0.0" z="0.0" w="0.5" index="4"/>
+            <Vertex x="0.0" y="-0.5" z="0.0" w="0.5" index="5"/>
+            <Vertex x="0.0" y="0.5" z="0.0" w="0.5" index="6"/>
+            <Vertex x="-0.5" y="0.0" z="0.0" w="0.5" index="7"/>
+            <Vertex x="0.0" y="0.0" z="0.5" w="0.5" index="8"/>
+            <Vertex x="-0.5" y="0.5" z="-0.5" w="0.5" index="9"/>
+            <Vertex x="0.0" y="0.0" z="-0.5" w="0.5" index="10"/>
+            <Vertex x="0.5" y="0.0" z="0.0" w="0.5" index="11"/>
+            <Vertex x="0.0" y="-0.5" z="0.0" w="0.5" index="12"/>
+            <Vertex x="0.0" y="0.5" z="0.0" w="0.5" index="13"/>
+            <Vertex x="-0.5" y="0.0" z="0.0" w="0.5" index="14"/>
+            <Vertex x="0.0" y="0.0" z="0.5" w="0.5" index="15"/>
+            <Vertex x="-0.09720972579393028" y="0.3580048242752364" z="0.10564581258101231" w="0.5" index="16"/>
+            <Vertex x="0.5" y="0.5" z="0.5" w="0.5" index="17"/>
+            <Vertex x="0.5" y="-0.5" z="-0.5" w="0.5" index="18"/>
+            <Vertex x="-0.5" y="-0.5" z="0.5" w="0.5" index="19"/>
+            <Vertex x="0.0" y="0.0" z="-0.5" w="0.5" index="20"/>
+            <Vertex x="0.5" y="0.0" z="0.0" w="0.5" index="21"/>
+            <Vertex x="0.0" y="-0.5" z="0.0" w="0.5" index="22"/>
+            <Vertex x="0.0" y="0.5" z="0.0" w="0.5" index="23"/>
+            <Vertex x="-0.5" y="0.0" z="0.0" w="0.5" index="24"/>
+            <Vertex x="0.0" y="0.0" z="0.5" w="0.5" index="25"/>
+            <Vertex x="-0.5" y="0.5" z="-0.5" w="0.5" index="26"/>
+            <Vertex x="0.0" y="0.0" z="-0.5" w="0.5" index="27"/>
+            <Vertex x="0.5" y="0.0" z="0.0" w="0.5" index="28"/>
+            <Vertex x="0.0" y="-0.5" z="0.0" w="0.5" index="29"/>
+            <Vertex x="0.0" y="0.5" z="0.0" w="0.5" index="30"/>
+            <Vertex x="-0.5" y="0.0" z="0.0" w="0.5" index="31"/>
+            <Vertex x="0.0" y="0.0" z="0.5" w="0.5" index="32"/>
+            <Vertex x="0.3753545292637004" y="-0.06670667869414379" z="0.07950046563833539" w="0.5" index="33"/>
+            <Vertex x="0.1039675020874524" y="0.08736794568627942" z="-0.3089670301361303" w="0.5" index="34"/>
+            <Vertex x="-0.055530743320292106" y="-0.24242135835744347" z="-0.22744981519762694" w="0.5" index="35"/>
+            <Vertex x="-0.5" y="0.5" z="-0.5" w="0.5" index="36"/>
+            <Vertex x="-0.5" y="0.0" z="0.0" w="0.5" index="37"/>
+            <Vertex x="-0.5" y="0.5" z="-0.5" w="0.5" index="38"/>
+            <Vertex x="0.0" y="0.5" z="0.0" w="0.5" index="39"/>
+            <Vertex x="0.5" y="0.0" z="0.0" w="0.5" index="40"/>
+            <Vertex x="0.3753545292637004" y="-0.06670667869414379" z="0.07950046563833539" w="0.5" index="41"/>
+            <Vertex x="0.0" y="0.0" z="0.5" w="0.5" index="42"/>
+            <Vertex x="0.0" y="0.5" z="0.0" w="0.5" index="43"/>
+            <Vertex x="0.0" y="0.5" z="0.0" w="0.5" index="44"/>
+            <Vertex x="0.5" y="0.0" z="0.0" w="0.5" index="45"/>
+            <Vertex x="-0.5" y="0.0" z="0.0" w="0.5" index="46"/>
+            <Vertex x="0.0" y="-0.5" z="0.0" w="0.5" index="47"/>
+            <Vertex x="0.0" y="0.0" z="-0.5" w="0.5" index="48"/>
+            <Vertex x="-0.5" y="0.5" z="-0.5" w="0.5" index="49"/>
+            <Vertex x="0.0" y="0.0" z="-0.5" w="0.5" index="50"/>
+            <Vertex x="-0.5" y="0.5" z="-0.5" w="0.5" index="51"/>
+            <Vertex x="0.0" y="0.0" z="-0.5" w="0.5" index="52"/>
+            <Vertex x="0.5" y="0.0" z="0.0" w="0.5" index="53"/>
+            <Vertex x="-0.5" y="0.0" z="0.0" w="0.5" index="54"/>
+            <Vertex x="0.0" y="0.5" z="0.0" w="0.5" index="55"/>
+            <Vertex x="0.0" y="0.0" z="0.5" w="0.5" index="56"/>
+            <Vertex x="0.0" y="0.0" z="0.5" w="0.5" index="57"/>
+            <Vertex x="0.3753545292637004" y="-0.06670667869414379" z="0.07950046563833539" w="0.5" index="58"/>
+            <Vertex x="0.0" y="-0.5" z="0.0" w="0.5" index="59"/>
+            <Vertex x="0.3753545292637004" y="-0.06670667869414379" z="0.07950046563833539" w="0.5" index="60"/>
+            <Vertex x="0.3753545292637004" y="-0.06670667869414379" z="0.07950046563833539" w="0.5" index="61"/>
+            <Vertex x="0.0" y="-0.5" z="0.0" w="0.5" index="62"/>
+            <Vertex x="0.5" y="0.0" z="0.0" w="0.5" index="63"/>
+            <Vertex x="0.3753545292637004" y="-0.06670667869414379" z="0.07950046563833539" w="0.5" index="64"/>
+            <Identification>
+                <Vertex>23</Vertex>
+                <Vertex>44</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>9</Vertex>
+                <Vertex>36</Vertex>
+                <Vertex>38</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>7</Vertex>
+                <Vertex>37</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>4</Vertex>
+                <Vertex>40</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>6</Vertex>
+                <Vertex>43</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>5</Vertex>
+                <Vertex>47</Vertex>
+                <Vertex>62</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>13</Vertex>
+                <Vertex>39</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>8</Vertex>
+                <Vertex>42</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>33</Vertex>
+                <Vertex>41</Vertex>
+                <Vertex>58</Vertex>
+                <Vertex>60</Vertex>
+                <Vertex>61</Vertex>
+                <Vertex>64</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>26</Vertex>
+                <Vertex>49</Vertex>
+                <Vertex>51</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>21</Vertex>
+                <Vertex>45</Vertex>
+                <Vertex>63</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>27</Vertex>
+                <Vertex>50</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>22</Vertex>
+                <Vertex>59</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>24</Vertex>
+                <Vertex>46</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>20</Vertex>
+                <Vertex>48</Vertex>
+                <Vertex>52</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>31</Vertex>
+                <Vertex>54</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>30</Vertex>
+                <Vertex>55</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>28</Vertex>
+                <Vertex>53</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>25</Vertex>
+                <Vertex>56</Vertex>
+                <Vertex>57</Vertex>
+            </Identification>
+            <Halfedge left="1" target="4" next="28" opposite="14" index="0"/>
+            <Halfedge left="2" target="10" next="29" opposite="60" index="1"/>
+            <Halfedge left="0" target="23" next="27" opposite="241" index="2"/>
+            <Halfedge left="4" target="3" next="34" opposite="61" index="3"/>
+            <Halfedge left="5" target="59" next="35" opposite="16" index="4"/>
+            <Halfedge left="3" target="37" next="33" opposite="20" index="5"/>
+            <Halfedge left="7" target="40" next="40" opposite="15" index="6"/>
+            <Halfedge left="8" target="42" next="41" opposite="70" index="7"/>
+            <Halfedge left="6" target="62" next="39" opposite="17" index="8"/>
+            <Halfedge left="10" target="43" next="46" opposite="19" index="9"/>
+            <Halfedge left="11" target="37" next="47" opposite="242" index="10"/>
+            <Halfedge left="9" target="15" next="45" opposite="71" index="11"/>
+            <Halfedge left="5" target="1" next="4" opposite="49" index="12"/>
+            <Halfedge left="0" target="9" next="2" opposite="51" index="13"/>
+            <Halfedge left="8" target="0" next="7" opposite="0" index="14"/>
+            <Halfedge left="2" target="1" next="1" opposite="6" index="15"/>
+            <Halfedge left="7" target="1" next="6" opposite="4" index="16"/>
+            <Halfedge left="3" target="2" next="5" opposite="8" index="17"/>
+            <Halfedge left="11" target="36" next="10" opposite="240" index="18"/>
+            <Halfedge left="1" target="0" next="0" opposite="9" index="19"/>
+            <Halfedge left="9" target="2" next="11" opposite="5" index="20"/>
+            <Halfedge left="4" target="38" next="3" opposite="243" index="21"/>
+            <Halfedge left="10" target="0" next="9" opposite="55" index="22"/>
+            <Halfedge left="6" target="2" next="8" opposite="59" index="23"/>
+            <Halfedge left="32" target="23" next="105" opposite="27" index="24"/>
+            <Halfedge left="33" target="40" next="107" opposite="245" index="25"/>
+            <Halfedge left="31" target="10" next="103" opposite="29" index="26"/>
+            <Halfedge left="0" target="10" next="13" opposite="24" index="27"/>
+            <Halfedge left="1" target="43" next="19" opposite="244" index="28"/>
+            <Halfedge left="2" target="40" next="15" opposite="26" index="29"/>
+            <Halfedge left="38" target="7" next="117" opposite="247" index="30"/>
+            <Halfedge left="39" target="3" next="119" opposite="34" index="31"/>
+            <Halfedge left="37" target="59" next="115" opposite="35" index="32"/>
+            <Halfedge left="3" target="62" next="17" opposite="246" index="33"/>
+            <Halfedge left="4" target="7" next="21" opposite="31" index="34"/>
+            <Halfedge left="5" target="3" next="12" opposite="32" index="35"/>
+            <Halfedge left="29" target="62" next="99" opposite="39" index="36"/>
+            <Halfedge left="30" target="40" next="101" opposite="40" index="37"/>
+            <Halfedge left="28" target="42" next="97" opposite="41" index="38"/>
+            <Halfedge left="6" target="8" next="23" opposite="36" index="39"/>
+            <Halfedge left="7" target="59" next="16" opposite="37" index="40"/>
+            <Halfedge left="8" target="4" next="14" opposite="38" index="41"/>
+            <Halfedge left="35" target="15" next="111" opposite="45" index="42"/>
+            <Halfedge left="36" target="43" next="113" opposite="46" index="43"/>
+            <Halfedge left="34" target="37" next="109" opposite="47" index="44"/>
+            <Halfedge left="9" target="37" next="20" opposite="42" index="45"/>
+            <Halfedge left="10" target="15" next="22" opposite="43" index="46"/>
+            <Halfedge left="11" target="44" next="18" opposite="44" index="47"/>
+            <Halfedge left="17" target="11" next="76" opposite="62" index="48"/>
+            <Halfedge left="18" target="3" next="77" opposite="12" index="49"/>
+            <Halfedge left="16" target="39" next="75" opposite="248" index="50"/>
+            <Halfedge left="20" target="10" next="82" opposite="13" index="51"/>
+            <Halfedge left="21" target="12" next="83" opposite="64" index="52"/>
+            <Halfedge left="19" target="14" next="81" opposite="68" index="53"/>
+            <Halfedge left="23" target="11" next="88" opposite="63" index="54"/>
+            <Halfedge left="24" target="15" next="89" opposite="22" index="55"/>
+            <Halfedge left="22" target="12" next="87" opposite="65" index="56"/>
+            <Halfedge left="26" target="39" next="94" opposite="67" index="57"/>
+            <Halfedge left="27" target="14" next="95" opposite="69" index="58"/>
+            <Halfedge left="25" target="8" next="93" opposite="23" index="59"/>
+            <Halfedge left="21" target="1" next="52" opposite="1" index="60"/>
+            <Halfedge left="16" target="38" next="50" opposite="3" index="61"/>
+            <Halfedge left="24" target="0" next="55" opposite="48" index="62"/>
+            <Halfedge left="18" target="1" next="49" opposite="54" index="63"/>
+            <Halfedge left="23" target="1" next="54" opposite="52" index="64"/>
+            <Halfedge left="19" target="2" next="53" opposite="56" index="65"/>
+            <Halfedge left="27" target="9" next="58" opposite="249" index="66"/>
+            <Halfedge left="17" target="0" next="48" opposite="57" index="67"/>
+            <Halfedge left="25" target="2" next="59" opposite="53" index="68"/>
+            <Halfedge left="20" target="9" next="51" opposite="58" index="69"/>
+            <Halfedge left="26" target="0" next="57" opposite="7" index="70"/>
+            <Halfedge left="22" target="2" next="56" opposite="11" index="71"/>
+            <Halfedge left="12" target="39" next="73" opposite="75" index="72"/>
+            <Halfedge left="12" target="11" next="74" opposite="76" index="73"/>
+            <Halfedge left="12" target="3" next="72" opposite="77" index="74"/>
+            <Halfedge left="16" target="3" next="61" opposite="72" index="75"/>
+            <Halfedge left="17" target="39" next="67" opposite="73" index="76"/>
+            <Halfedge left="18" target="11" next="63" opposite="74" index="77"/>
+            <Halfedge left="13" target="14" next="79" opposite="81" index="78"/>
+            <Halfedge left="13" target="10" next="80" opposite="82" index="79"/>
+            <Halfedge left="13" target="12" next="78" opposite="83" index="80"/>
+            <Halfedge left="19" target="12" next="65" opposite="78" index="81"/>
+            <Halfedge left="20" target="14" next="69" opposite="79" index="82"/>
+            <Halfedge left="21" target="10" next="60" opposite="80" index="83"/>
+            <Halfedge left="14" target="12" next="85" opposite="87" index="84"/>
+            <Halfedge left="14" target="11" next="86" opposite="88" index="85"/>
+            <Halfedge left="14" target="15" next="84" opposite="89" index="86"/>
+            <Halfedge left="22" target="15" next="71" opposite="84" index="87"/>
+            <Halfedge left="23" target="12" next="64" opposite="85" index="88"/>
+            <Halfedge left="24" target="11" next="62" opposite="86" index="89"/>
+            <Halfedge left="15" target="8" next="91" opposite="93" index="90"/>
+            <Halfedge left="15" target="13" next="92" opposite="251" index="91"/>
+            <Halfedge left="15" target="14" next="90" opposite="95" index="92"/>
+            <Halfedge left="25" target="14" next="68" opposite="90" index="93"/>
+            <Halfedge left="26" target="42" next="70" opposite="250" index="94"/>
+            <Halfedge left="27" target="13" next="66" opposite="92" index="95"/>
+            <Halfedge left="28" target="4" next="38" opposite="253" index="96"/>
+            <Halfedge left="28" target="41" next="96" opposite="254" index="97"/>
+            <Halfedge left="29" target="8" next="36" opposite="255" index="98"/>
+            <Halfedge left="29" target="61" next="98" opposite="284" index="99"/>
+            <Halfedge left="30" target="59" next="37" opposite="282" index="100"/>
+            <Halfedge left="30" target="60" next="100" opposite="252" index="101"/>
+            <Halfedge left="31" target="40" next="26" opposite="107" index="102"/>
+            <Halfedge left="31" target="34" next="102" opposite="104" index="103"/>
+            <Halfedge left="32" target="10" next="24" opposite="103" index="104"/>
+            <Halfedge left="32" target="34" next="104" opposite="226" index="105"/>
+            <Halfedge left="33" target="6" next="25" opposite="225" index="106"/>
+            <Halfedge left="33" target="34" next="106" opposite="102" index="107"/>
+            <Halfedge left="34" target="44" next="44" opposite="233" index="108"/>
+            <Halfedge left="34" target="16" next="108" opposite="110" index="109"/>
+            <Halfedge left="35" target="37" next="42" opposite="109" index="110"/>
+            <Halfedge left="35" target="16" next="110" opposite="112" index="111"/>
+            <Halfedge left="36" target="15" next="43" opposite="111" index="112"/>
+            <Halfedge left="36" target="16" next="112" opposite="228" index="113"/>
+            <Halfedge left="37" target="3" next="32" opposite="119" index="114"/>
+            <Halfedge left="37" target="35" next="114" opposite="236" index="115"/>
+            <Halfedge left="38" target="47" next="30" opposite="235" index="116"/>
+            <Halfedge left="38" target="35" next="116" opposite="118" index="117"/>
+            <Halfedge left="39" target="7" next="31" opposite="117" index="118"/>
+            <Halfedge left="39" target="35" next="118" opposite="114" index="119"/>
+            <Halfedge left="41" target="63" next="148" opposite="134" index="120"/>
+            <Halfedge left="42" target="27" next="149" opposite="180" index="121"/>
+            <Halfedge left="40" target="6" next="147" opposite="257" index="122"/>
+            <Halfedge left="44" target="52" next="154" opposite="181" index="123"/>
+            <Halfedge left="45" target="5" next="155" opposite="136" index="124"/>
+            <Halfedge left="43" target="24" next="153" opposite="140" index="125"/>
+            <Halfedge left="47" target="21" next="160" opposite="135" index="126"/>
+            <Halfedge left="48" target="25" next="161" opposite="190" index="127"/>
+            <Halfedge left="46" target="22" next="159" opposite="137" index="128"/>
+            <Halfedge left="50" target="44" next="166" opposite="139" index="129"/>
+            <Halfedge left="51" target="24" next="167" opposite="141" index="130"/>
+            <Halfedge left="49" target="32" next="165" opposite="191" index="131"/>
+            <Halfedge left="45" target="18" next="124" opposite="169" index="132"/>
+            <Halfedge left="40" target="49" next="122" opposite="268" index="133"/>
+            <Halfedge left="48" target="17" next="127" opposite="120" index="134"/>
+            <Halfedge left="42" target="18" next="121" opposite="126" index="135"/>
+            <Halfedge left="47" target="18" next="126" opposite="124" index="136"/>
+            <Halfedge left="43" target="19" next="125" opposite="128" index="137"/>
+            <Halfedge left="51" target="51" next="130" opposite="256" index="138"/>
+            <Halfedge left="41" target="17" next="120" opposite="129" index="139"/>
+            <Halfedge left="49" target="19" next="131" opposite="125" index="140"/>
+            <Halfedge left="44" target="51" next="123" opposite="130" index="141"/>
+            <Halfedge left="50" target="17" next="129" opposite="175" index="142"/>
+            <Halfedge left="46" target="19" next="128" opposite="179" index="143"/>
+            <Halfedge left="72" target="6" next="225" opposite="147" index="144"/>
+            <Halfedge left="73" target="45" next="227" opposite="259" index="145"/>
+            <Halfedge left="71" target="50" next="223" opposite="260" index="146"/>
+            <Halfedge left="40" target="50" next="133" opposite="144" index="147"/>
+            <Halfedge left="41" target="44" next="139" opposite="258" index="148"/>
+            <Halfedge left="42" target="21" next="135" opposite="261" index="149"/>
+            <Halfedge left="78" target="46" next="237" opposite="262" index="150"/>
+            <Halfedge left="79" target="48" next="239" opposite="264" index="151"/>
+            <Halfedge left="77" target="47" next="235" opposite="266" index="152"/>
+            <Halfedge left="43" target="22" next="137" opposite="263" index="153"/>
+            <Halfedge left="44" target="24" next="141" opposite="265" index="154"/>
+            <Halfedge left="45" target="20" next="132" opposite="267" index="155"/>
+            <Halfedge left="69" target="22" next="219" opposite="159" index="156"/>
+            <Halfedge left="70" target="21" next="221" opposite="160" index="157"/>
+            <Halfedge left="68" target="25" next="217" opposite="161" index="158"/>
+            <Halfedge left="46" target="57" next="143" opposite="156" index="159"/>
+            <Halfedge left="47" target="5" next="136" opposite="157" index="160"/>
+            <Halfedge left="48" target="63" next="134" opposite="158" index="161"/>
+            <Halfedge left="75" target="32" next="231" opposite="165" index="162"/>
+            <Halfedge left="76" target="44" next="233" opposite="166" index="163"/>
+            <Halfedge left="74" target="24" next="229" opposite="167" index="164"/>
+            <Halfedge left="49" target="24" next="140" opposite="162" index="165"/>
+            <Halfedge left="50" target="32" next="142" opposite="163" index="166"/>
+            <Halfedge left="51" target="43" next="138" opposite="164" index="167"/>
+            <Halfedge left="57" target="28" next="196" opposite="182" index="168"/>
+            <Halfedge left="58" target="20" next="197" opposite="132" index="169"/>
+            <Halfedge left="56" target="55" next="195" opposite="186" index="170"/>
+            <Halfedge left="60" target="27" next="202" opposite="269" index="171"/>
+            <Halfedge left="61" target="29" next="203" opposite="184" index="172"/>
+            <Halfedge left="59" target="31" next="201" opposite="188" index="173"/>
+            <Halfedge left="63" target="28" next="208" opposite="183" index="174"/>
+            <Halfedge left="64" target="32" next="209" opposite="142" index="175"/>
+            <Halfedge left="62" target="29" next="207" opposite="185" index="176"/>
+            <Halfedge left="66" target="30" next="214" opposite="187" index="177"/>
+            <Halfedge left="67" target="54" next="215" opposite="270" index="178"/>
+            <Halfedge left="65" target="57" next="213" opposite="143" index="179"/>
+            <Halfedge left="61" target="18" next="172" opposite="121" index="180"/>
+            <Halfedge left="56" target="51" next="170" opposite="123" index="181"/>
+            <Halfedge left="64" target="17" next="175" opposite="168" index="182"/>
+            <Halfedge left="58" target="18" next="169" opposite="174" index="183"/>
+            <Halfedge left="63" target="18" next="174" opposite="172" index="184"/>
+            <Halfedge left="59" target="19" next="173" opposite="176" index="185"/>
+            <Halfedge left="67" target="51" next="178" opposite="170" index="186"/>
+            <Halfedge left="57" target="17" next="168" opposite="177" index="187"/>
+            <Halfedge left="65" target="19" next="179" opposite="173" index="188"/>
+            <Halfedge left="60" target="26" next="171" opposite="271" index="189"/>
+            <Halfedge left="66" target="17" next="177" opposite="127" index="190"/>
+            <Halfedge left="62" target="19" next="176" opposite="131" index="191"/>
+            <Halfedge left="52" target="55" next="193" opposite="195" index="192"/>
+            <Halfedge left="52" target="53" next="194" opposite="272" index="193"/>
+            <Halfedge left="52" target="52" next="192" opposite="274" index="194"/>
+            <Halfedge left="56" target="52" next="181" opposite="192" index="195"/>
+            <Halfedge left="57" target="30" next="187" opposite="273" index="196"/>
+            <Halfedge left="58" target="28" next="183" opposite="275" index="197"/>
+            <Halfedge left="53" target="31" next="199" opposite="201" index="198"/>
+            <Halfedge left="53" target="27" next="200" opposite="202" index="199"/>
+            <Halfedge left="53" target="29" next="198" opposite="203" index="200"/>
+            <Halfedge left="59" target="29" next="185" opposite="198" index="201"/>
+            <Halfedge left="60" target="31" next="189" opposite="199" index="202"/>
+            <Halfedge left="61" target="27" next="180" opposite="200" index="203"/>
+            <Halfedge left="54" target="29" next="205" opposite="207" index="204"/>
+            <Halfedge left="54" target="28" next="206" opposite="208" index="205"/>
+            <Halfedge left="54" target="32" next="204" opposite="209" index="206"/>
+            <Halfedge left="62" target="32" next="191" opposite="204" index="207"/>
+            <Halfedge left="63" target="29" next="184" opposite="205" index="208"/>
+            <Halfedge left="64" target="28" next="182" opposite="206" index="209"/>
+            <Halfedge left="55" target="56" next="211" opposite="276" index="210"/>
+            <Halfedge left="55" target="55" next="212" opposite="278" index="211"/>
+            <Halfedge left="55" target="54" next="210" opposite="215" index="212"/>
+            <Halfedge left="65" target="31" next="188" opposite="277" index="213"/>
+            <Halfedge left="66" target="25" next="190" opposite="279" index="214"/>
+            <Halfedge left="67" target="55" next="186" opposite="212" index="215"/>
+            <Halfedge left="68" target="63" next="158" opposite="286" index="216"/>
+            <Halfedge left="68" target="64" next="216" opposite="281" index="217"/>
+            <Halfedge left="69" target="57" next="156" opposite="280" index="218"/>
+            <Halfedge left="69" target="58" next="218" opposite="283" index="219"/>
+            <Halfedge left="70" target="5" next="157" opposite="285" index="220"/>
+            <Halfedge left="70" target="33" next="220" opposite="287" index="221"/>
+            <Halfedge left="71" target="45" next="146" opposite="227" index="222"/>
+            <Halfedge left="71" target="34" next="222" opposite="224" index="223"/>
+            <Halfedge left="72" target="50" next="144" opposite="223" index="224"/>
+            <Halfedge left="72" target="34" next="224" opposite="106" index="225"/>
+            <Halfedge left="73" target="23" next="145" opposite="105" index="226"/>
+            <Halfedge left="73" target="34" next="226" opposite="222" index="227"/>
+            <Halfedge left="74" target="43" next="164" opposite="113" index="228"/>
+            <Halfedge left="74" target="16" next="228" opposite="230" index="229"/>
+            <Halfedge left="75" target="24" next="162" opposite="229" index="230"/>
+            <Halfedge left="75" target="16" next="230" opposite="232" index="231"/>
+            <Halfedge left="76" target="32" next="163" opposite="231" index="232"/>
+            <Halfedge left="76" target="16" next="232" opposite="108" index="233"/>
+            <Halfedge left="77" target="48" next="152" opposite="239" index="234"/>
+            <Halfedge left="77" target="35" next="234" opposite="116" index="235"/>
+            <Halfedge left="78" target="59" next="150" opposite="115" index="236"/>
+            <Halfedge left="78" target="35" next="236" opposite="238" index="237"/>
+            <Halfedge left="79" target="46" next="151" opposite="237" index="238"/>
+            <Halfedge left="79" target="35" next="238" opposite="234" index="239"/>
+            <Halfedge left="-1" target="44" next="258" opposite="18" index="240"/>
+            <Halfedge left="-1" target="9" next="249" opposite="2" index="241"/>
+            <Halfedge left="-1" target="36" next="240" opposite="10" index="242"/>
+            <Halfedge left="-1" target="7" next="247" opposite="21" index="243"/>
+            <Halfedge left="-1" target="4" next="253" opposite="28" index="244"/>
+            <Halfedge left="-1" target="6" next="257" opposite="25" index="245"/>
+            <Halfedge left="-1" target="37" next="242" opposite="33" index="246"/>
+            <Halfedge left="-1" target="47" next="266" opposite="30" index="247"/>
+            <Halfedge left="-1" target="38" next="243" opposite="50" index="248"/>
+            <Halfedge left="-1" target="13" next="251" opposite="66" index="249"/>
+            <Halfedge left="-1" target="39" next="248" opposite="94" index="250"/>
+            <Halfedge left="-1" target="8" next="255" opposite="91" index="251"/>
+            <Halfedge left="-1" target="40" next="245" opposite="101" index="252"/>
+            <Halfedge left="-1" target="41" next="254" opposite="96" index="253"/>
+            <Halfedge left="-1" target="42" next="250" opposite="97" index="254"/>
+            <Halfedge left="-1" target="61" next="284" opposite="98" index="255"/>
+            <Halfedge left="-1" target="43" next="244" opposite="138" index="256"/>
+            <Halfedge left="-1" target="49" next="268" opposite="122" index="257"/>
+            <Halfedge left="-1" target="63" next="286" opposite="148" index="258"/>
+            <Halfedge left="-1" target="23" next="241" opposite="145" index="259"/>
+            <Halfedge left="-1" target="45" next="259" opposite="146" index="260"/>
+            <Halfedge left="-1" target="27" next="269" opposite="149" index="261"/>
+            <Halfedge left="-1" target="59" next="282" opposite="150" index="262"/>
+            <Halfedge left="-1" target="24" next="265" opposite="153" index="263"/>
+            <Halfedge left="-1" target="46" next="262" opposite="151" index="264"/>
+            <Halfedge left="-1" target="52" next="274" opposite="154" index="265"/>
+            <Halfedge left="-1" target="48" next="264" opposite="152" index="266"/>
+            <Halfedge left="-1" target="5" next="285" opposite="155" index="267"/>
+            <Halfedge left="-1" target="50" next="260" opposite="133" index="268"/>
+            <Halfedge left="-1" target="26" next="271" opposite="171" index="269"/>
+            <Halfedge left="-1" target="51" next="256" opposite="178" index="270"/>
+            <Halfedge left="-1" target="31" next="277" opposite="189" index="271"/>
+            <Halfedge left="-1" target="55" next="278" opposite="193" index="272"/>
+            <Halfedge left="-1" target="28" next="275" opposite="196" index="273"/>
+            <Halfedge left="-1" target="53" next="272" opposite="194" index="274"/>
+            <Halfedge left="-1" target="20" next="267" opposite="197" index="275"/>
+            <Halfedge left="-1" target="54" next="270" opposite="210" index="276"/>
+            <Halfedge left="-1" target="57" next="280" opposite="213" index="277"/>
+            <Halfedge left="-1" target="56" next="276" opposite="211" index="278"/>
+            <Halfedge left="-1" target="30" next="273" opposite="214" index="279"/>
+            <Halfedge left="-1" target="58" next="283" opposite="218" index="280"/>
+            <Halfedge left="-1" target="25" next="279" opposite="217" index="281"/>
+            <Halfedge left="-1" target="60" next="252" opposite="100" index="282"/>
+            <Halfedge left="-1" target="22" next="263" opposite="219" index="283"/>
+            <Halfedge left="-1" target="62" next="246" opposite="99" index="284"/>
+            <Halfedge left="-1" target="33" next="287" opposite="220" index="285"/>
+            <Halfedge left="-1" target="64" next="281" opposite="216" index="286"/>
+            <Halfedge left="-1" target="21" next="261" opposite="221" index="287"/>
+            <EdgeIdentification edge1="18" edge2="2" edge3="240" edge4="241"/>
+            <EdgeIdentification edge1="10" edge2="21" edge3="242" edge4="243"/>
+            <EdgeIdentification edge1="28" edge2="25" edge3="244" edge4="245"/>
+            <EdgeIdentification edge1="33" edge2="30" edge3="246" edge4="247"/>
+            <EdgeIdentification edge1="50" edge2="66" edge3="248" edge4="249"/>
+            <EdgeIdentification edge1="94" edge2="91" edge3="250" edge4="251"/>
+            <EdgeIdentification edge1="101" edge2="96" edge3="252" edge4="253"/>
+            <EdgeIdentification edge1="97" edge2="98" edge3="254" edge4="255"/>
+            <EdgeIdentification edge1="138" edge2="122" edge3="256" edge4="257"/>
+            <EdgeIdentification edge1="148" edge2="145" edge3="258" edge4="259"/>
+            <EdgeIdentification edge1="146" edge2="149" edge3="260" edge4="261"/>
+            <EdgeIdentification edge1="150" edge2="153" edge3="262" edge4="263"/>
+            <EdgeIdentification edge1="151" edge2="154" edge3="264" edge4="265"/>
+            <EdgeIdentification edge1="152" edge2="155" edge3="266" edge4="267"/>
+            <EdgeIdentification edge1="133" edge2="171" edge3="268" edge4="269"/>
+            <EdgeIdentification edge1="178" edge2="189" edge3="270" edge4="271"/>
+            <EdgeIdentification edge1="193" edge2="196" edge3="272" edge4="273"/>
+            <EdgeIdentification edge1="194" edge2="197" edge3="274" edge4="275"/>
+            <EdgeIdentification edge1="210" edge2="213" edge3="276" edge4="277"/>
+            <EdgeIdentification edge1="211" edge2="214" edge3="278" edge4="279"/>
+            <EdgeIdentification edge1="218" edge2="217" edge3="280" edge4="281"/>
+            <EdgeIdentification edge1="100" edge2="219" edge3="282" edge4="283"/>
+            <EdgeIdentification edge1="99" edge2="220" edge3="284" edge4="285"/>
+            <EdgeIdentification edge1="216" edge2="221" edge3="286" edge4="287"/>
+            <Face index="0"/>
+            <Face index="1"/>
+            <Face index="2"/>
+            <Face index="3"/>
+            <Face index="4"/>
+            <Face index="5"/>
+            <Face index="6"/>
+            <Face index="7"/>
+            <Face index="8"/>
+            <Face index="9"/>
+            <Face index="10"/>
+            <Face index="11"/>
+            <Face index="12"/>
+            <Face index="13"/>
+            <Face index="14"/>
+            <Face index="15"/>
+            <Face index="16"/>
+            <Face index="17"/>
+            <Face index="18"/>
+            <Face index="19"/>
+            <Face index="20"/>
+            <Face index="21"/>
+            <Face index="22"/>
+            <Face index="23"/>
+            <Face index="24"/>
+            <Face index="25"/>
+            <Face index="26"/>
+            <Face index="27"/>
+            <Face index="28"/>
+            <Face index="29"/>
+            <Face index="30"/>
+            <Face index="31"/>
+            <Face index="32"/>
+            <Face index="33"/>
+            <Face index="34"/>
+            <Face index="35"/>
+            <Face index="36"/>
+            <Face index="37"/>
+            <Face index="38"/>
+            <Face index="39"/>
+            <Face index="40"/>
+            <Face index="41"/>
+            <Face index="42"/>
+            <Face index="43"/>
+            <Face index="44"/>
+            <Face index="45"/>
+            <Face index="46"/>
+            <Face index="47"/>
+            <Face index="48"/>
+            <Face index="49"/>
+            <Face index="50"/>
+            <Face index="51"/>
+            <Face index="52"/>
+            <Face index="53"/>
+            <Face index="54"/>
+            <Face index="55"/>
+            <Face index="56"/>
+            <Face index="57"/>
+            <Face index="58"/>
+            <Face index="59"/>
+            <Face index="60"/>
+            <Face index="61"/>
+            <Face index="62"/>
+            <Face index="63"/>
+            <Face index="64"/>
+            <Face index="65"/>
+            <Face index="66"/>
+            <Face index="67"/>
+            <Face index="68"/>
+            <Face index="69"/>
+            <Face index="70"/>
+            <Face index="71"/>
+            <Face index="72"/>
+            <Face index="73"/>
+            <Face index="74"/>
+            <Face index="75"/>
+            <Face index="76"/>
+            <Face index="77"/>
+            <Face index="78"/>
+            <Face index="79"/>
+            <Selection>
+                <VertexSelection/>
+                <EdgeSelection/>
+                <FaceSelection/>
+            </Selection>
+        </Image>
+    </HalfedgeMap>
+</ConformalDataList>
