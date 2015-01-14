@@ -11,7 +11,7 @@
 
 \usepackage{paralist}
 
-\usepackage[]{graphicx}
+\usepackage[draft]{graphicx}
 \graphicspath{
 	{image/}
 	{figures/}
@@ -151,19 +151,19 @@ Tag der wissenschaftlichen Aussprache: NN\\
 	\backmatter
 	\setcounter{secnumdepth}{-1} 
 	\bibliographystyle{amsalpha}
-	\bibliography{Thesis,publications/AAG2012-Gridshells/Paper,publications/AAG2014-Periodic/article}
+	\bibliography{Thesis}
 }
 \def\subfilebibliography {
 	\backmatter
 	\setcounter{secnumdepth}{-1}
 	\bibliographystyle{amsalpha}
-	\bibliography{Thesis,publications/AAG2012-Gridshells/Paper,publications/AAG2014-Periodic/article}
+	\bibliography{Thesis}
 }
 \def\subfilebibliographytwo {
 	\backmatter
 	\setcounter{secnumdepth}{-1} 
 	\bibliographystyle{amsalpha}
-	\bibliography{Thesis,publications/AAG2012-Gridshells/Paper,publications/AAG2014-Periodic/article}
+	\bibliography{Thesis}
 }
 
 \begin{document}
@@ -196,7 +196,7 @@ Tag der wissenschaftlichen Aussprache: NN\\
 \label{part:applications}
 \subfile{Chapter2_PeriodicPanelization.tex}
 \subfile{Chapter2_Quasiisothermic.tex}
-%\subfile{Chapter2_Tschebyscheff.tex}
+\subfile{Chapter2_Tschebyscheff.tex}
 \part{Implementation}
 \label{part:implementation}
 \subfile{Chapter3_JRworkspace.tex}
