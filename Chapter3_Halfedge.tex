@@ -317,7 +317,7 @@ When writing the adapter for concrete node classes we have a more concise descri
 		on edges or faces implement the corresponding {\tt get/setEdgeValue} or 
 		{\tt get/setFaceValue} methods.
 	},
-	label=lst:adapter,
+	label=lst:adapter_typed,
 	captionpos=b,
 	firstline=9,
 	lastline=50
@@ -332,7 +332,7 @@ required data adapters and the creation of a suitable {\tt AdapterSet}.
 	algorithm. The {\tt AdapterSet} contains the {\tt @FunctionValue} annotated adapter to provide 
 	{\tt Double} values on vertices. In this example a {\tt @Weight} adapter in not needed since the 
 	{\tt computeDirichlet} algorithm uses the {\tt getDefault} method to obtain weight data for edges.},
-	label=alg:dirichlet,
+	label=alg:dirichlet_usage,
 	captionpos=b,
 	firstline=33,
 	lastline=40

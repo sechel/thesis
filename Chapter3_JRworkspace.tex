@@ -44,17 +44,17 @@ within DDG. It is currently beeing used for teaching mathematical visualization 
 TU-Berlin \cite{VisMathHomepage} and for research projects within the geometry group.
 
 Section~\ref{sec:related_work} gives an overview of existing software packages that have a focus 
-similar to the DDG Framework. Section~\ref{chp:jrworkspace} introduces the {\sc JRworkspace} library of the 
+similar to the DDG Framework. Chapter~\ref{chp:jrworkspace} introduces the {\sc JRworkspace} library of the 
 {\sc Jtem} project~\cite{JtemWebsite}. It is the foundation of any application created with 
 the DDG Framework. It is also the user interface basis of {\sc Jreality}, a mathematical 
 visualization library that uses {\sc JRworkspace} as plug-in and user interface 
-tool~\cite{JrealityWebsite}. Section~\ref{chp:halfedge} introduces the 
+tool~\cite{JrealityWebsite}. Chapter~\ref{chp:halfedge} introduces the 
 {\sc HalfEdge} and {\sc HalfEdgeTools} package. They implement half-edge data 
 structure and various user interface tools and algorithms for interaction and editing.  
-In Section~\ref{chp:conformallab} we describe the software 
+In Chapter~\ref{chp:conformallab} we describe the software 
 {\sc ConformalLab}. This package implements the methods of the 
 publications~\cite{Bobenko2010, OWR2012, Sechelmann2012, BobSechSpr}.
-Section~\ref{sec:varylab} introduces {\sc VaryLab}, the software implementation of the 
+Chapter~\ref{chp:varylab} introduces {\sc VaryLab}, the software implementation of the 
 methods described in the publications \cite{Lafuente2011, Lafuente2012, Sechelmann2012}.
 This package is also released to partners of the development group as {\sc VaryLab[Gridshells]},
 {\sc VaryLab[Ultimate]}, or even online as {\sc VaryLab[Service]}\cite{varylab-web-page}.
@@ -74,11 +74,7 @@ Sommer ({\sc Jpetsc/Jtao})~\cite{jpetsctao-web-page}, Ulrich Pinkall and Paul Pe
 
 \section{Related Work}
 \label{sec:related_work}
-JavaView, CGAL, ...
-
-\section{CD Content}
-
-
+JavaView, CGAL, libIGL, ...
 
 
 \chapter{{\sc JRworkspace} - Java API for modular applications}
@@ -339,7 +335,7 @@ and {\tt ShrinkPanels} is used. The tool bar and
 menu bar is created by the aggregators described in Section~\ref{sec:reference_implementation}. This application
 uses a set of predefined user interface features and virtual reality components. In a custom application the developer 
 usually registeres only a subset of these featurs.}
-\label{fig:tool_bar_aggregator}
+\label{fig:jrworkspace_jreality}
 \end{figure}
 
 A custom {\sc Jreality} application is based on the {\tt JRViewer} class. This class uses {\tt SimpleController} to manage

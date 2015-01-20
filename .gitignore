@@ -9,6 +9,7 @@
 /*.toc
 /*.bak
 /*.dvi
+/*.out
 *.history
 .RData
 .Rhistory
