@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformalDataList xmlns="http://www.varylab.com/conformallab/types">
+    <SchottkyData name="Schottky Data g1">
+        <SchottkyGenerator>
+            <A re="-15" im="-2.5"/>
+            <B re="0.1" im="-0.3"/>
+            <Mu re="-0.3" im="0.0"/>
+            <Circle radius="1.5">
+                <Center re="0.1" im="0.0"/>
+            </Circle>
+        </SchottkyGenerator>
+    </SchottkyData>
+</ConformalDataList>
