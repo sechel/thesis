@@ -13,12 +13,15 @@ In its core {\sc VaryLab} is a solver for non-linear optimization problems on th
 \begin{eqnarray*}
 	f(S) = \sum_{i=1}^n \lambda_i f_i(S)
 \end{eqnarray*}
-where $\lambda_1,\ldots,\lambda_n\in \R$ are user defined weights. 
+where $\lambda_1,\ldots,\lambda_n\in \R$ are user defined weights. Correspondingly the first and second  derivatives of $f_i(S)$ are weighted by $\lambda_i$
+\begin{eqnarray*}
+	\nabla f(S) = \sum_{i=1}^n \lambda_i \nabla f_i(S), \quad \nabla\nabla f(S) = \sum_{i=1}^n \lambda_i \nabla\nabla f_i(S).
+\end{eqnarray*}
 
 {\sc VaryLab} uses the numerical library {\sc PETSc}/{\sc TAO} \cite{petsc-user-ref, petsc-web-page, tao-user-ref} and the corresponding {\sc Java} bindings \cite{jpetsctao-web-page} for computations. To run optimization methods we need at least an implementation of the functional's value. Other methods need gradient or Hessian of the functional. The most important methods are
  
 \begin{tabular}{c | c | c}
-	$S$ & $S$, $\nabla S$ & $S$, $\nabla S$, $\nabla\nabla S$\\ \hline
+	$f$ & $f$, $\nabla f$ & $f$, $\nabla f$, $\nabla\nabla f$\\ \hline
 	{\tt NM} Nelder-Mead & {\tt LMVM} Limited-Memory, Variable-Metric & {\tt NLS} Newton Line-Search \\
 	& {\tt CG} Conjugate Gradient & {\tt NTR} Newton Trust-Region.
 \end{tabular}
