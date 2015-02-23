@@ -71,14 +71,45 @@ Remeshing
 
 
 \section{Periodic conformal maps with {\sc VaryLab}}
-In this section we describe how the methods described in Chapter~\ref{chp:periodic_conformal_maps} are implemented in {\sc VaryLab} and {\sc ConformalLab}. 
+In this section we describe how the methods described in Chapter~\ref{chp:periodic_conformal_maps} are implemented in {\sc VaryLab}. The parameterization part of the work is carried out via the {\sc ConformalLab} main user interface. 
 
-The parameterization part of the work is carried out via the {\sc ConformalLab} main user interface. 
+\setkeys{Gin}{draft=false}
+\begin{figure}
+\resizebox{\textwidth}{!}{
+	\includegraphics{periodic/step00.png}
+	\includegraphics{periodic/step01_surface.png}	
+	\includegraphics{periodic/step02_surface.png}		
+}
+\includegraphics[width=\textwidth]{periodic/step01_map.pdf}
+\includegraphics[width=\textwidth]{periodic/step02_map.pdf}	
+\caption{Periodic conformal maps}
+\label{fig:periodic_algorithm}
+\end{figure}
+
+\begin{itemize}
+\item[0] Load a surface with two boundary component.
+\item[1] Create a conformal parameterization with straight boundary. A cut is introduced to uniquely define the map.
+\item[2] Use the [Cut and Glue Texture Domain] command and select [Orthogonal to Boundary] to create a map to a rectangle.
+\item[3] Select a predefined texture for quad or triangle mesh preview.
+\item[4] Perform remeshing either for [Boundary Aligned Triangles] or [Boundary Aligned Quads]
+\item[5] Create a watertight mesh using the [Watertight Mesh Generator] and remove extra edges and vertices.
+\item[6] For hexagonal mesh creation select from the periodic triangle mesh all centers of hexagons. 
+\item[7] Use the [Remove Vertex and Fill] command to create a periodic hexagonal mesh.
+\end{itemize}
+
+\begin{itemize}
+\item[8] [Topology]->[Explode] creates separate faces. Use a [Mean face Edge Length] histogram to show the density of edge lengths. If you want planar panels you should planarize them now. 
+\item[9] Equalize the edge lengths per face using the [Springs] Energy and [F-const] option. Use the [Floor] rounding method. Press [Update] to set target lengths per face.
+\item[10] From the histogram read off the smallest and largest edge lengths and transfer those into the [Springs] energy ui. Select the [discr.] option and the number of discrete steps.
+\item[11] Optimize the surface to consist of a limited number of panel sizes.
+\end{itemize}
+
 
 Load a model with two boundary components. 
 
-\section{{\sc U3D} - 3D content in presentations and online publications}
-\label{sec:u3d}
+\section{Quasiisothermic meshes with {\sc VaryLab}}
+
+\section{Gridshell creation using {\sc VaryLab}}
 
 \subfilebibliography
 \end{document}
