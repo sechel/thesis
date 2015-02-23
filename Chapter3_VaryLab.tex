@@ -1,12 +1,12 @@
 \documentclass[Thesis.tex]{subfiles}
 \begin{document}
-
+\setkeys{Gin}{draft=false}
 \chapter{{\sc VaryLab} - Discrete surface optimization}
 \label{chp:varylab}
 
 \section{Introduction}
 
-{\sc VaryLab} is a software developed at Berlin Institute of Technology by the author, Thilo R\"orig, and others. It is supported by DFG SFB/TRR 109 Discretization in Geometry and Dynamics. It is designed to be an extensible and modular tool for experiments with discrete surfaces in pure mathematics and applications in industrial geometry. {\sc VaryLab} is used to create the result in Chapters~\ref{chp:periodic_conformal_maps}, \ref{chp:quasiisothermic}, and \ref{chp:gridshells}.
+{\sc VaryLab} is a software developed at Berlin Institute of Technology by the author, Thilo R\"orig, and others. It is supported by DFG SFB/TRR 109 Discretization in Geometry and Dynamics. It is designed to be an extensible and modular tool for experiments with discrete surfaces in pure mathematics and applications in industrial geometry. {\sc VaryLab} is used to create the result in Chapters~\ref{chp:periodic_conformal_maps}, \marginpar{bullshit!}\ref{chp:quasiisothermic}, and \ref{chp:gridshells}.
 
 In its core {\sc VaryLab} is a solver for non-linear optimization problems on the coordinates of a given 3D discrete surface. That means given a surface $S$ and functionals $f_1,\ldots,f_n:S\to\R$ we (try to) minimize the combined functional
 
@@ -49,8 +49,6 @@ Remeshing
 
 \section{User interface}
 
-
-
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.5\textwidth]{varylab/optimization_plugins.png}\hfill
@@ -66,14 +64,12 @@ Remeshing
 \end{figure}
 
 
-
-\section{{\sc VaryLab[Service]}}
-
-
 \section{Periodic conformal maps with {\sc VaryLab}}
-In this section we describe how the methods described in Chapter~\ref{chp:periodic_conformal_maps} are implemented in {\sc VaryLab}. The parameterization part of the work is carried out via the {\sc ConformalLab} main user interface. 
+In this section we describe how the methods of Chapter~\ref{chp:periodic_conformal_maps} are implemented in {\sc VaryLab}. We split the process in two parts. Part one describes the creation of periodic triangle, quad, or hexagonal meshes from an initial unstructured triangle mesh. Part two deals with optimization of panels created from a mesh in part one.
 
-\setkeys{Gin}{draft=false}
+\subsection{Periodic meshes}
+The parameterization part of the work is carried out via the {\sc ConformalLab} main user interface. 
+
 \begin{figure}
 \resizebox{\textwidth}{!}{
 	\includegraphics{periodic/step00.png}
@@ -82,9 +78,26 @@ In this section we describe how the methods described in Chapter~\ref{chp:period
 }
 \includegraphics[width=\textwidth]{periodic/step01_map.pdf}
 \includegraphics[width=\textwidth]{periodic/step02_map.pdf}	
-\caption{Periodic conformal maps}
+\resizebox{\textwidth}{!}{
+	\includegraphics{periodic/step03_quads.png}
+	\includegraphics{periodic/step03_triangles.png}
+}
+\resizebox{\textwidth}{!}{
+	\includegraphics{periodic/step04_quads_surface.png}
+	\includegraphics{periodic/step04_triangles_surface.png}
+}
+\includegraphics[width=\textwidth]{periodic/step04_quads_map.pdf}
+\includegraphics[width=\textwidth]{periodic/step04_triangles_map.pdf}	
+\resizebox{\textwidth}{!}{
+	\includegraphics{periodic/step05.png}
+	\includegraphics{periodic/step06.png}
+	\includegraphics{periodic/step07.png}	
+}
+\caption{Periodic patterns via periodic conformal maps.}
 \label{fig:periodic_algorithm}
 \end{figure}
+
+\subsection{Panel optimization}
 
 \begin{itemize}
 \item[0] Load a surface with two boundary component.
@@ -96,6 +109,25 @@ In this section we describe how the methods described in Chapter~\ref{chp:period
 \item[6] For hexagonal mesh creation select from the periodic triangle mesh all centers of hexagons. 
 \item[7] Use the [Remove Vertex and Fill] command to create a periodic hexagonal mesh.
 \end{itemize}
+
+\begin{figure}
+\resizebox{\textwidth}{!}{
+	\includegraphics[width=5cm]{periodic/step08_surface.png}
+	\includegraphics[width=5cm]{periodic/step08_histogram.png}		
+}
+\resizebox{\textwidth}{!}{
+	\includegraphics[width=13cm]{periodic/step09_surface.png}
+	\includegraphics[width=5cm]{periodic/step09_fconst.png}
+}
+\resizebox{\textwidth}{!}{
+	\includegraphics[width=13cm]{periodic/step11_surface1.png}
+	\includegraphics[width=5cm]{periodic/step10_springs.png}
+}
+\caption{Quantized panelization}
+\label{fig:quantization_algorithm}
+\end{figure}
+
+
 
 \begin{itemize}
 \item[8] [Topology]->[Explode] creates separate faces. Use a [Mean face Edge Length] histogram to show the density of edge lengths. If you want planar panels you should planarize them now. 
