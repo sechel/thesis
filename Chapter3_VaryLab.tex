@@ -1,6 +1,6 @@
 \documentclass[Thesis.tex]{subfiles}
 \begin{document}
-\setkeys{Gin}{draft=false}
+%\setkeys{Gin}{draft=false}
 \chapter{{\sc VaryLab} - Discrete surface optimization}
 \label{chp:varylab}
 
@@ -67,79 +67,111 @@ Remeshing
 \section{Periodic conformal maps with {\sc VaryLab}}
 In this section we describe how the methods of Chapter~\ref{chp:periodic_conformal_maps} are implemented in {\sc VaryLab}. We split the process in two parts. Part one describes the creation of periodic triangle, quad, or hexagonal meshes from an initial unstructured triangle mesh. Part two deals with optimization of panels created from a mesh in part one.
 
-\subsection{Periodic meshes}
-The parameterization part of the work is carried out via the {\sc ConformalLab} main user interface. 
+\subsection{Periodic Parameterization}
 
-\begin{figure}
-\resizebox{\textwidth}{!}{
+\setkeys{Gin}{draft=false}
+\begin{itemize}
+\item[0] Load a surface with two boundary component.
+\item[1] Create a conformal parameterization with straight boundary using the [Discrete Conformal Parameterization] panel and [Quantized Angles/Straight] boundary mode. A cut is introduced automatically to uniquely define the map.
+\item[2] Use the [Cut and Glue Texture Domain] command and select [Orthogonal to Boundary] to create a map to a rectangle.\\
+\resizebox{\linewidth}{!}{
 	\includegraphics{periodic/step00.png}
 	\includegraphics{periodic/step01_surface.png}	
 	\includegraphics{periodic/step02_surface.png}		
 }
-\includegraphics[width=\textwidth]{periodic/step01_map.pdf}
-\includegraphics[width=\textwidth]{periodic/step02_map.pdf}	
+\resizebox{\linewidth}{!}{
+\includegraphics[width=3.2cm]{periodic/step01_ui.png}
+\begin{minipage}[b]{10cm}
+\includegraphics[width=\linewidth]{periodic/step01_map.pdf}\\
+\includegraphics[width=\linewidth]{periodic/step02_map.pdf}
+\end{minipage}
+}
+\item[3] Select a predefined texture for quad or triangle mesh preview from the [Content Appearance->Texture] panel. Adjust the texture scale to a reasonable value.
+\item[4] Perform remeshing either for [Boundary Aligned Triangles] or [Boundary Aligned Quads] using the [Surface Remeshing] panel.\\
 \resizebox{\textwidth}{!}{
-	\includegraphics{periodic/step03_quads.png}
-	\includegraphics{periodic/step03_triangles.png}
+	\includegraphics[width=2cm]{periodic/step03_ui.png}
+	\includegraphics[width=5cm]{periodic/step03_quads.png}
+	\includegraphics[width=5cm]{periodic/step03_triangles.png}
 }
 \resizebox{\textwidth}{!}{
-	\includegraphics{periodic/step04_quads_surface.png}
-	\includegraphics{periodic/step04_triangles_surface.png}
+	\includegraphics[width=2cm]{periodic/step04_ui.png}
+	\includegraphics[width=5cm]{periodic/step04_quads_surface.png}
+	\includegraphics[width=5cm]{periodic/step04_triangles_surface.png}
 }
-\includegraphics[width=\textwidth]{periodic/step04_quads_map.pdf}
-\includegraphics[width=\textwidth]{periodic/step04_triangles_map.pdf}	
-\resizebox{\textwidth}{!}{
+\includegraphics[width=\linewidth]{periodic/step04_quads_map.pdf}
+\includegraphics[width=\linewidth]{periodic/step04_triangles_map.pdf}
+\item[5] Create a watertight mesh using the [Watertight Mesh Generator] and remove extra edges and vertices.
+\item[6] For hexagonal mesh creation select from the periodic triangle mesh all centers of hexagons. 
+\item[7] Use the [Remove Vertex and Fill] command to create a periodic hexagonal mesh.
+\resizebox{\linewidth}{!}{
 	\includegraphics{periodic/step05.png}
 	\includegraphics{periodic/step06.png}
 	\includegraphics{periodic/step07.png}	
 }
-\caption{Periodic patterns via periodic conformal maps.}
-\label{fig:periodic_algorithm}
-\end{figure}
+\end{itemize}
 
 \subsection{Panel optimization}
 
 \begin{itemize}
-\item[0] Load a surface with two boundary component.
-\item[1] Create a conformal parameterization with straight boundary. A cut is introduced to uniquely define the map.
-\item[2] Use the [Cut and Glue Texture Domain] command and select [Orthogonal to Boundary] to create a map to a rectangle.
-\item[3] Select a predefined texture for quad or triangle mesh preview.
-\item[4] Perform remeshing either for [Boundary Aligned Triangles] or [Boundary Aligned Quads]
-\item[5] Create a watertight mesh using the [Watertight Mesh Generator] and remove extra edges and vertices.
-\item[6] For hexagonal mesh creation select from the periodic triangle mesh all centers of hexagons. 
-\item[7] Use the [Remove Vertex and Fill] command to create a periodic hexagonal mesh.
-\end{itemize}
-
-\begin{figure}
-\resizebox{\textwidth}{!}{
+\item[8] [Topology]->[Explode] creates separate faces. Use a [Mean face Edge Length] histogram to show the density of edge lengths. If you want planar panels you should planarize them now. \\
+\resizebox{\linewidth}{!}{
 	\includegraphics[width=5cm]{periodic/step08_surface.png}
 	\includegraphics[width=5cm]{periodic/step08_histogram.png}		
 }
-\resizebox{\textwidth}{!}{
+\item[9] Equalize the edge lengths per face using the [Springs] Energy and [F-const] option. Use the [Floor] rounding method. Press [Update] to set target lengths per face.\\
+\resizebox{\linewidth}{!}{
 	\includegraphics[width=13cm]{periodic/step09_surface.png}
 	\includegraphics[width=5cm]{periodic/step09_fconst.png}
 }
-\resizebox{\textwidth}{!}{
+\item[10] From the histogram read off the smallest and largest edge lengths and transfer those into the [Springs] energy ui. Select the [discr.] option and the number of discrete steps.
+\item[11] Optimize the surface to consist of a limited number of panel sizes.\\
+\resizebox{\linewidth}{!}{
 	\includegraphics[width=13cm]{periodic/step11_surface1.png}
 	\includegraphics[width=5cm]{periodic/step10_springs.png}
 }
-\caption{Quantized panelization}
-\label{fig:quantization_algorithm}
-\end{figure}
-
-
-
-\begin{itemize}
-\item[8] [Topology]->[Explode] creates separate faces. Use a [Mean face Edge Length] histogram to show the density of edge lengths. If you want planar panels you should planarize them now. 
-\item[9] Equalize the edge lengths per face using the [Springs] Energy and [F-const] option. Use the [Floor] rounding method. Press [Update] to set target lengths per face.
-\item[10] From the histogram read off the smallest and largest edge lengths and transfer those into the [Springs] energy ui. Select the [discr.] option and the number of discrete steps.
-\item[11] Optimize the surface to consist of a limited number of panel sizes.
 \end{itemize}
 
 
-Load a model with two boundary components. 
 
 \section{Quasiisothermic meshes with {\sc VaryLab}}
+\setkeys{Gin}{draft=true}
+\begin{itemize}
+\item[0] Load a genus $0$ surface with one boundary component.
+\item[1] Calculate curvature direction estimates on interior vertices to find singularity locations and indices with the [Vector Field->Curvature Vector Fields] command. Visualize directions using the [Halfedge Data Visualization] interface. The data is called, e.g., [Kmax Vec V] for maximum curvature direction with respect to the surface normal.
+\item[2] Select singularity vertices and assign corresponding cone angles in the [Selected Nodes] panel of the [Discrete Conformal Parameterization] panel.
+\item[3] Calculate curvature direction estimates on boundary edges of the surface, again using the [Vector Field->Curvature Vector Fields] command. Check singularity indices with the [Check Gau{\ss}-Bonnet] button in the [Discrete Conformal Parameterization] panel. It prints the left side of the Gau{\ss}-Bonnet equation to the console. It should give $2\pi$ for a genus $0$ surface in this case.\\
+\resizebox{\linewidth}{!}{
+\includegraphics[width=5cm]{quasiisothermic/step00.png}
+%\includegraphics[width=5cm]{quasiisothermic/step01.png}
+\includegraphics[width=5cm]{quasiisothermic/step02_surface.png}
+\includegraphics[width=2.6cm]{quasiisothermic/step02_ui.png}
+\includegraphics[width=5cm]{quasiisothermic/step03_surface.png}
+}
+\item[4] Create a discrete conformal parameterization. Use [Conformal Curvature] as boundary mode. Select a quad texture to visualize the parameterization on the surface.
+\item[5] Move the texture such that singularities lie either in the middle or at a corner of a quad of the texture. Use the [Texture Remeshing->Transform Texture] command to transform the texture such that two selected vertices lie on $(0,0)$ and $(1,0)$ respectively. This method woks for one or two singularities. We do not implement methods to distort the mapping to match more that two singularities.
+\resizebox{\linewidth}{!}{
+\includegraphics[width=5cm]{quasiisothermic/step04_surface.png}
+\includegraphics[width=4cm]{quasiisothermic/step04_map.pdf}
+\includegraphics[width=5cm]{quasiisothermic/step05_surface.png}
+}
+\item[6] Create a subdivision quad-mesh using the [Surface Remeshing] panel and the [Quads With Singularities] mode. This mode is available in the [Expert] mode of the panel. Press the [Lift/Flat] button to lift the subdivision to the surface.
+\item[7] Use the [Texture Remeshing->TextureGeometry] command to extract a quad mesh from the subdivision mesh. Disable the layer of the original mesh as we will continue to work with the quad-mesh.
+\resizebox{\linewidth}{!}{
+\includegraphics[width=4cm]{quasiisothermic/step06_ui.png}
+\includegraphics[width=4cm]{quasiisothermic/step06_flat_rotate.png}
+\includegraphics[width=5cm]{quasiisothermic/step06_surface.png}
+\includegraphics[width=5cm]{quasiisothermic/step07_surface.png}
+}
+\item[8] Sew up the path from the boundary to the singularity using the [Topology-> Stitch Cut Path] command. Select the two boundary vertices and a connected edge on the path.
+\item[9] Remove extra vertices with the [Texture Remeshing->Collapse 1,2-Valent Vertices] command.
+\item[10] Clean up the mesh from extra edges and vertices with the [Selection->Geodesic], [Edit->Remove Edge And Fill], and [Texture Remeshing->Collapse 1,2-Valent Vertices] command.
+\resizebox{\linewidth}{!}{
+\includegraphics[width=3cm]{quasiisothermic/step08_selection.png}
+\includegraphics[width=3cm]{quasiisothermic/step09.png}
+\includegraphics[width=3cm]{quasiisothermic/step10_selection.png}
+\includegraphics[width=5cm]{quasiisothermic/step10_surface.png}
+}
+\end{itemize}
 
 \section{Gridshell creation using {\sc VaryLab}}
 
