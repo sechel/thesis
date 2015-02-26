@@ -72,8 +72,10 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 
 \setkeys{Gin}{draft=false}
 \begin{itemize}
-\item[0] Load a surface with two boundary component.
-\item[1] Create a conformal parameterization with straight boundary using the [Discrete Conformal Parameterization] panel and [Quantized Angles/Straight] boundary mode. A cut is introduced automatically to uniquely define the map.
+\item[0] Load a surface with two boundary component. You can map the surface using the three methods described in the article, map to a cylinder, polygonal map to a cone of revolution, and isometric boundary to an adapted cone of revolution.
+\item[1a] For the map to the cylinder create a conformal parameterization with straight boundary using the [Discrete Conformal Parameterization] panel and [Quantized Angles/Straight] boundary mode. A cut is introduced automatically to uniquely define the map.
+\item[1b] For a polygonal map, select boundary vertices to specify boundary angles for the domain. Use multiples of $\frac{\pi}{3}$ for triangle/hexagonal panels and multiples of $\frac{\pi}{4}$ for quadrilaterals.
+\item[1c]
 \item[2] Use the [Cut and Glue Texture Domain] command and select [Orthogonal to Boundary] to create a map to a rectangle.\\
 \resizebox{\linewidth}{!}{
 	\includegraphics{periodic/step00.png}
@@ -110,6 +112,8 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 	\includegraphics{periodic/step07.png}	
 }
 \end{itemize}
+
+
 
 \begin{figure}
 \resizebox{\textwidth}{!}{
