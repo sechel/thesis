@@ -68,6 +68,7 @@ Remeshing
 In this section we describe how the methods of Chapter~\ref{chp:periodic_conformal_maps} are implemented in {\sc VaryLab}. We split the process in two parts. Part one describes the creation of periodic triangle, quad, or hexagonal meshes from an initial unstructured triangle mesh. Part two deals with optimization of panels created from a mesh in part one.
 
 \subsection{Periodic Parameterization}
+The parameterization part of the work is carried out via the {\sc ConformalLab} main user interface. 
 
 \setkeys{Gin}{draft=false}
 \begin{itemize}
@@ -109,6 +110,14 @@ In this section we describe how the methods of Chapter~\ref{chp:periodic_conform
 	\includegraphics{periodic/step07.png}	
 }
 \end{itemize}
+
+\begin{figure}
+\resizebox{\textwidth}{!}{
+	\includegraphics[draft=false]{periodic/step13_map.pdf}
+	\includegraphics[draft=false]{periodic/step14_map.pdf}	
+}
+\caption{Mapping the surface from Figure~\ref{fig:periodic_algorithm1} to a hex pattern adapted domain with polygonal boundary curve. Cut orthogonal to the boundary to create a domain that can easily be meshed with boundary aligned hexagons. The domain is identified along the cut via a rotation by $\pi$.}
+\end{figure}
 
 \subsection{Panel optimization}
 
