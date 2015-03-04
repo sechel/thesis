@@ -70,58 +70,102 @@ In this section we describe how the methods of Chapter~\ref{chp:periodic_conform
 \subsection{Periodic Parameterization}
 The parameterization part of the work is carried out via the {\sc ConformalLab} main user interface. 
 
-\setkeys{Gin}{draft=false}
 \begin{itemize}
-\item[0] Load a surface with two boundary component. You can map the surface using the three methods described in the article, map to a cylinder, polygonal map to a cone of revolution, and isometric boundary to an adapted cone of revolution.
-\item[1a] For the map to the cylinder create a conformal parameterization with straight boundary using the [Discrete Conformal Parameterization] panel and [Quantized Angles/Straight] boundary mode. A cut is introduced automatically to uniquely define the map.
-\item[1b] For a polygonal map, select boundary vertices to specify boundary angles for the domain. Use multiples of $\frac{\pi}{3}$ for triangle/hexagonal panels and multiples of $\frac{\pi}{4}$ for quadrilaterals.
-\item[1c]
-\item[2] Use the [Cut and Glue Texture Domain] command and select [Orthogonal to Boundary] to create a map to a rectangle.\\
-\resizebox{\linewidth}{!}{
-	\includegraphics{periodic/step00.png}
-	\includegraphics{periodic/step01_surface.png}	
-	\includegraphics{periodic/step02_surface.png}		
-}
-\resizebox{\linewidth}{!}{
-\includegraphics[width=3.2cm]{periodic/step01_ui.png}
-\begin{minipage}[b]{10cm}
-\includegraphics[width=\linewidth]{periodic/step01_map.pdf}\\
-\includegraphics[width=\linewidth]{periodic/step02_map.pdf}
+\item[0] Load a surface with two boundary components. You can map the surface using the three methods described in the article, map to a cylinder (a), polygonal map to a cone of revolution (b), and isometric boundary (c) to an adapted cone of revolution.
+\item[1(a)] For the map to the cylinder create a conformal parameterization with straight boundary using the [Discrete Conformal Parameterization] panel and [Quantized Angles/Straight] boundary mode. A cut is introduced automatically to uniquely define the map.\\
+
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{\linewidth}{!}{
+            	\includegraphics{periodic/step00.png}
+            	\includegraphics{periodic/step01_surface.png}	
+            	\includegraphics{periodic/step02_surface.png}		
+            }
+            \resizebox{\linewidth}{!}{
+                \includegraphics[width=3.2cm]{periodic/step01_ui.png}
+                \begin{minipage}[b]{10cm}
+                    \includegraphics[width=\linewidth]{periodic/step01a_map.pdf}\\
+                    \includegraphics[width=\linewidth]{periodic/step02a_map.pdf}
+                \end{minipage}
+            }
+            \captionof{figure}{Map to cylinder. Start with an automatically cut mesh (top-middle and upper domain image) and modify the cut (top-right and lower domain image) such that the remeshing algorithm can handle the complete boundary.}
+            \label{fig:periodic_algorithm1a}
 \end{minipage}
-}
-\item[3] Select a predefined texture for quad or triangle mesh preview from the [Content Appearance->Texture] panel. Adjust the texture scale to a reasonable value.
-\item[4] Perform remeshing either for [Boundary Aligned Triangles] or [Boundary Aligned Quads] using the [Surface Remeshing] panel.\\
-\resizebox{\textwidth}{!}{
-	\includegraphics[width=2cm]{periodic/step03_ui.png}
-	\includegraphics[width=5cm]{periodic/step03_quads.png}
-	\includegraphics[width=5cm]{periodic/step03_triangles.png}
-}
-\resizebox{\textwidth}{!}{
-	\includegraphics[width=2cm]{periodic/step04_ui.png}
-	\includegraphics[width=5cm]{periodic/step04_quads_surface.png}
-	\includegraphics[width=5cm]{periodic/step04_triangles_surface.png}
-}
-\includegraphics[width=\linewidth]{periodic/step04_quads_map.pdf}
-\includegraphics[width=\linewidth]{periodic/step04_triangles_map.pdf}
-\item[5] Create a watertight mesh using the [Watertight Mesh Generator] and remove extra edges and vertices.
-\item[6] For hexagonal mesh creation select from the periodic triangle mesh all centers of hexagons. 
-\item[7] Use the [Remove Vertex and Fill] command to create a periodic hexagonal mesh.
-\resizebox{\linewidth}{!}{
-	\includegraphics{periodic/step05.png}
-	\includegraphics{periodic/step06.png}
-	\includegraphics{periodic/step07.png}	
-}
+\end{center}            
+
+\item[1(b)] For a polygonal map to a cone of revolution, select boundary vertices to specify boundary angles for the domain. Use multiples of $\frac{\pi}{3}$ for triangle/hexagonal panels and multiples of $\frac{\pi}{4}$ for quadrilaterals.
+
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{0.7\textwidth}{!}{
+            	\includegraphics{periodic/step01b_map.pdf}
+            	\includegraphics{periodic/step02b_map.pdf}	
+            }
+            \captionof{figure}{Mapping the surface from Figure~\ref{fig:periodic_algorithm1a} to a hex pattern adapted domain with polygonal boundary curve. Cut orthogonal to the boundary to create a domain that can easily be meshed with boundary aligned hexagons. The domain is identified along the cut via a rotation by $\pi$.}
+\end{minipage}
+\end{center}
+
+\item[1(c)] Create an isometric boundary and a map to cone of revolution using the [Read Isometric Angles] boundary mode and the [NoCuts] cut strategy. It creates a map to an arbitrary cone of revolution and reads off the resulting boundary angles. Those are set as new boundary conditions (red vertex selection). In a second step choose the [Quantized Angle Periods] boundary mode and the desired quantization for the final map to the pattern adapted cone of revolution.
+
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{\linewidth}{!}{
+            	\includegraphics[width=5cm]{periodic/step01c_map.pdf}
+            	\includegraphics[width=5cm]{periodic/step02c_map_hexadapted.pdf}	
+            	\includegraphics[width=6cm]{periodic/step02c_surface.png}		
+            }
+            \captionof{figure}{Map to cylinder with isometric boundary. Create a map with isometric boundary without cutting the mesh (left). Modify the resulting boundary angles to support a periodic pattern (middle). Periodic hexagonal pattern on the surface (right)}
+\end{minipage}
+\end{center}    
+
+\item[2] Use the [Cut and Glue Texture Domain] command and select [Orthogonal to Boundary] to create a map to a rectangle (a), a map to a polygonal region (b). In the isometric boundary case (c) we do not need a polygon as boundary curve.
+\item[3] Select a predefined texture for quadrilateral, triangle, or hexagonal mesh preview from the [Content Appearance->Texture] panel. Adjust the texture scale to a reasonable value. In the isometric case (c) close the period with the texture transformation user interface manually. For cases (a) and (b) periods will be closed automatically by the remeshing algorithm.
+
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{\linewidth}{!}{
+            	\includegraphics[width=5cm]{periodic/step03_quads.png}
+            	\includegraphics[width=5cm]{periodic/step03_triangles.png}	
+            	\includegraphics[width=1.5cm]{periodic/step03_ui.png}	
+            }
+            \captionof{figure}{Pattern preview.}
+\end{minipage}
+\end{center}    
+
+\item[4] Perform remeshing in cases (a) and (b) either for [Boundary Aligned Triangles] or [Boundary Aligned Quads] using the [Surface Remeshing] panel. For non-boundary aligned parameterization (c) use the [Quads With Singularities/Triangles With Singularities] remeshing mode.\\
+
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{\linewidth}{!}{
+            	\includegraphics[width=5cm]{periodic/step04_quads_surface.png}
+            	\includegraphics[width=5cm]{periodic/step04_triangles_surface.png}	
+            	\includegraphics[width=2cm]{periodic/step04_ui.png}	
+            }
+            \includegraphics[width=\linewidth]{periodic/step04_quads_map.pdf}
+            \includegraphics[width=\linewidth]{periodic/step04_triangles_map.pdf}
+            \captionof{figure}{New mesh and domain.}
+\end{minipage}
+\end{center}    
+
+\item[5] Create a watertight mesh using the [Watertight Mesh Generator] and remove extra edges and vertices. In the isometric case (c) use a combination of [Topology->Stitch] and [Topology->Stitch Cut Path] to remove the cut path from the mesh.
+\item[6] For hexagonal mesh creation select from the periodic triangle mesh all centers of hexagons using the [Selection->Lattice] command. The [Remove Vertex and Fill] command then creates a periodic hexagonal mesh.
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{\linewidth}{!}{
+            	\includegraphics{periodic/step05.png}
+            	\includegraphics{periodic/step06.png}
+            	\includegraphics{periodic/step07.png}	
+            }
+            \captionof{figure}{Creating a periodic hexagonal mesh from a triangle mesh.}
+\end{minipage}
+\end{center}                
 \end{itemize}
-
-
-
-\begin{figure}
-\resizebox{\textwidth}{!}{
-	\includegraphics[draft=false]{periodic/step13_map.pdf}
-	\includegraphics[draft=false]{periodic/step14_map.pdf}	
-}
-\caption{Mapping the surface from Figure~\ref{fig:periodic_algorithm1} to a hex pattern adapted domain with polygonal boundary curve. Cut orthogonal to the boundary to create a domain that can easily be meshed with boundary aligned hexagons. The domain is identified along the cut via a rotation by $\pi$.}
-\end{figure}
 
 \subsection{Panel optimization}
 
