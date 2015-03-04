@@ -9,7 +9,7 @@
 %\setcaptionwidth{1.0\textwidth}
 
 \usepackage{wrapfig}
-\usepackage[skip=2pt,font=footnotesize]{caption}
+\usepackage[skip=2pt]{caption}
 \usepackage{paralist}
 
 \usepackage[draft]{graphicx}
@@ -71,6 +71,8 @@
    xleftmargin=17pt,
    breaklines=true,
  }
+\DeclareCaptionFormat{listing}{\rule{\dimexpr\textwidth+17pt\relax}{0.4pt}\vskip1pt#1#2#3}
+\captionsetup[lstlisting]{format=listing,singlelinecheck=false, margin=0pt, labelsep=space,labelfont=bf}
 
 % AAG2014
 \usepackage[percent]{overpic}
