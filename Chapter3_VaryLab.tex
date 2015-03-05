@@ -291,8 +291,81 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
             
 \end{itemize}
 
-\section{Gridshell creation using {\sc VaryLab}}
+\section{Gridshells with {\sc VaryLab}}
 \label{sec:gridshells_varylab}
+
+{\sc VaryLab} supports the creation of gridshell meshes, i.e., quadrilateral meshes with equal edge lengths. In this Section we describe how the results of Chapter~\ref{chp:gridshells} were created using the features of {\sc VaryLab}.
+
+\begin{itemize}
+
+\item[0] Design the target surface. The surface must be a topological disk. 
+\item[1] Create an extended reference surface.
+
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{0.8\linewidth}{!}{
+                \includegraphics[width=3cm]{gridshells/step0_target.png}
+                \includegraphics[width=3cm]{gridshells/step1_extended.png}            
+            }
+            \captionof{figure}{The target shape design (left) and the extended surface used as reference surface (right).}
+\end{minipage}
+\end{center}    
+
+\item[2] Discrete conformal parameterization using isometric boundary. 
+
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{0.8\linewidth}{!}{
+                \includegraphics[width=3cm]{gridshells/step2_0degree.png}
+                \includegraphics[width=3cm]{gridshells/step2_40degree.png}            
+            }
+            \captionof{figure}{Conformal parameterization with orthogonal parameter lines visualized with a quadrilateral texture (left). Parameter lines sheared by $40^\circ$ (right).}
+\end{minipage}
+\end{center}    
+
+\item[3] Create a new quadrilateral mesh using the parameterization from step 2. You are free to shear the meshing pattern in the domain by an angle $\alpha$. From the [Surface Remeshing] panel choose the [Quads] mode and press [Remesh].
+
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{0.8\linewidth}{!}{
+                \includegraphics[width=3cm]{gridshells/step3_0degree.png}
+                \includegraphics[width=3cm]{gridshells/step3_40degree.png}            
+            }
+            \captionof{figure}{New quadrilateral meshes with orthogonal parameter lines (left) and parameter lines sheared by $40^\circ$ (right).}
+\end{minipage}
+\end{center}   
+
+\item[4] Remove all boundary vertices and analyze the remaining edge lengths with node colors and histogram.
+
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{0.9\linewidth}{!}{
+                \includegraphics[width=3cm]{gridshells/step4_surface.png}
+                \includegraphics[width=4.5cm]{gridshells/step4_hist.png}            
+            }
+            \captionof{figure}{Edge length analysis. Target edge length should be below the mean edge length.}
+\end{minipage}
+\end{center}   
+
+\item[5] Configure the optimization using the [Reference Surface] energy with the surface from step 1. Add the [Springs] energy with a constant edge length depending on the size of target surface. Finally add the [Opposite Edges Curvature] energy as a fairing term and to control the local curvature of curves.
+
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+            \centering
+            \resizebox{\linewidth}{!}{
+                \includegraphics[width=5cm]{gridshells/step5_ref.png}
+                \includegraphics[width=5cm]{gridshells/step5_equal.png}            
+                \includegraphics[width=7cm]{gridshells/step5_hist.png}                            
+            }
+            \captionof{figure}{Reference surface visualization (left). Optimized mesh (middle). Optimized histogram (right).}
+\end{minipage}
+\end{center}   
+
+\end{itemize}
 
 \subfilebibliography
 \end{document}
