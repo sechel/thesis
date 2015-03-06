@@ -1,14 +1,24 @@
 \documentclass[Thesis.tex]{subfiles}
 \begin{document}
-\setkeys{Gin}{draft=true}
+\setkeys{Gin}{draft=false}
 \chapter{{\sc VaryLab} - Discrete surface optimization}
 \label{chp:varylab}
 
 \section{Introduction}
 
+\begin{figure}
+    \begin{center}
+    \includegraphics[width=0.8\textwidth]{varylab/varylab_main.png}
+    \caption{{\sc VaryLab} main user interface window. Visualization interface (top), energy configuration and optimization tools (right), layers, selections, etc. (left).}
+    \label{fig:varylab_main_ui}
+    \end{center}
+\end{figure}
+
 In this chapter we introduce the {\sc Java} software {\sc VaryLab}. It is a software developed at Berlin Institute of Technology by the author, Thilo R\"orig, and others. It is supported by DFG \mbox{SFB/TRR}~109 Discretization in Geometry and Dynamics. It is designed to be an extensible and modular tool for experiments with discrete surfaces in pure mathematics and applications in industrial geometry. The purpose of this chapter is to enable the reader to reproduce the results presented in Part~\ref{part:applications} of this work.
 
 We start with a general description of {\sc VaryLab} and its features in Section~\ref{sec:general_varylab}. Section~\ref{sec:ui_varylab} introduces the user interface which is based on {\sc JRWorkspace}, see Chapter~\ref{chp:jrworkspace}. Section~\ref{sec:periodic_varylab}, gives details on the use of {\sc VaryLab} when calculating the examples of Chapter~\ref{chp:periodic_conformal_maps}. Section~\ref{sec:quasiisothermic_varylab} explains the steps needed to reproduce results presented in Chapter~ref{chp:quasiisothermic}. Finally, in Section~\ref{sec:gridshells_varylab} we present the capabilities of {\sc VaryLab} when calculating gridshell nets as explained in Chapter~\ref{chp:gridshells}.
+
+In this chapter words in [Brackets] describe ui elements.
 
 \section{Non-linear discrete surface optimization}
 \label{sec:general_varylab}
@@ -30,7 +40,48 @@ where $\lambda_1,\ldots,\lambda_n\in \R$ are user defined weights. Corresponding
 	& {\tt CG} Conjugate Gradient & {\tt NTR} Newton Trust-Region.
 \end{tabular}
 
-In {\sc VaryLab} a functional can choose to implement just the value, see Section~\ref{sec:plugin-api}. Additionally it can implement the gradient and the Hessian of $S$. In principle all methods can be used with all functionals even if those do not implement all data needed for the algorithm. {\sc VaryLab} approximates the values of the gradient or the Hessian if they are missing. 
+In {\sc VaryLab} a functional can choose to implement just the value, see Section~\ref{sec:plugin-api}. Additionally it can implement the gradient and the Hessian of $S$. In principle all methods can be used with all functionals even if those do not implement all data needed for the algorithm. {\sc VaryLab} approximates the values of the gradient or the Hessian if they are missing.
+
+\section{Geometry Processing}
+
+The geometry processing core of {\sc VaryLab} is based on {\sc HalfEdge} and {\sc HalfEdgeTools} (Chapter~\ref{chp:halfedge}), i.e., all geometry processing is done with the help of the half-edge data structure and algorithms that run on top of it. Frequently used geometry processing features include
+
+\begin{figure}
+    \begin{center}
+    \includegraphics[width=\textwidth]{varylab/tools.png}
+    \caption{{\sc VaryLab} tools tool bar.}
+    \label{fig:varylab_tools_ui}
+    \end{center}
+\end{figure}
+
+\begin{itemize}
+\item Mesh Generators - Regular Planar Meshes, Convex Hull, Primitive Meshes such as cube, cylinder, sphere, etc.
+\item Mesh Editing - Vertex/Edge/Face operations based on user selection.
+\item Subdivision - CatmullClark, Doo Sabin, Loop, Sqrt3, etc.
+\item Remeshing - Quadritalerals, Triangles, Singularties.
+\end{itemize}
+
+All tools are available via the tools tool bar at the top of the main window, see Figure~\ref{fig:varylab_main_ui} and~\ref{fig:varylab_tools_ui}.
+
+\section{Data Visualization}
+
+{\sc VaryLab} adds data sources corresponding to the energies of the optimization core. Their data can be visualized on the surface using the [Halfedge Data Visualization] interface, see Section~\ref{sec:halfedge_tools_visualization}. 
+
+\begin{figure}
+    \begin{center}
+    \resizebox{\textwidth}{!}{
+        \includegraphics[width=\textwidth]{varylab/edge_visualization.png}
+        \includegraphics[width=\textwidth]{varylab/edge_histogram.png}    
+    }
+    \caption{Visualization interface (left), Visualizing mesh edge length data as node colors on a surface and as histogram (right).}
+    \label{fig:visualizing_edge_lengths}
+    \end{center}
+\end{figure}
+
+\begin{example}[Analyzing edge length density] Load some mesh geometry. In the [Halfedge Data Visualization] select the [Edge Length] data source. It provides scalar data for edges of the mesh. Select the [Histogram] and [Node Colors] visualizers to create colored edges and a corresponding histogram for the edge lengths of the mesh, see Figure~\ref{fig:visualizing_edge_lengths}.
+\end{example}
+
+\setkeys{Gin}{draft=true}
 
 %Derivatives and numerical substitutes, 
 %Boundary Conditions
@@ -40,35 +91,32 @@ In {\sc VaryLab} a functional can choose to implement just the value, see Sectio
 %Data Visualization (scalar, vector)
 %Remeshing
 
-%\setkeys{Gin}{draft=false}
 \section{User interface}
 \label{sec:ui_varylab}
 
-\begin{figure}
-    \begin{center}
-    \includegraphics[width=\textwidth]{varylab/varylab_main.png}
-    \caption{{\sc VaryLab} user interface. Visualization interface (top), energy configuration and optimization tools (right), layers, selections, etc. (left).}
-    \label{fig:varylab_main_ui}
-    \end{center}
-\end{figure}
-
-The user interface of {\sc VaryLab} is based on {\sc JRWorkspace}, see Chapter~\ref{chp:jrworkspace}. Thus it inherits the ability for the user to freely move around all interface components of the main window, see Figure~\ref{fig:varylab_main_ui}. The most important interface component are shown in Figure~\ref{fig:user_interface_varylab}.
+The user interface of {\sc VaryLab}, see Figure~\ref{fig:varylab_main_ui}, is based on {\sc JRWorkspace}, Chapter~\ref{chp:jrworkspace}. Thus it inherits the ability for the user to freely move around all interface components of the main window, see Figure~\ref{fig:varylab_main_ui}. 
+The most important interface components are shown in Figure~\ref{fig:optimization_interface_varylab} and \ref{fig:protocol_interface_varylab}.
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.5\textwidth]{varylab/optimization_plugins.png}\hfill
-\begin{minipage}[b]{0.47\linewidth}
-\includegraphics[width=\linewidth]{varylab/optimization.png}\\
-\includegraphics[width=\linewidth]{varylab/remeshing.png}
-\end{minipage}\\
-\vskip 0.05cm
-\includegraphics[width=\textwidth]{varylab/protocol.png}
-\caption{The main user interface panels of {\sc VaryLab}. List of optimization functional plug-ins and their options (left). Main optimization controls with global constraints and minimizer settings (top right). Remeshing ui for different patterns (right middle). Optimization protocol panel (bottom) shows the progress of the optimization for each activated energy.}
-\label{fig:user_interface_varylab}
+    \resizebox{\linewidth}{!}{
+        \includegraphics[width=\textwidth]{varylab/optimization_plugins2.png}
+        \includegraphics[width=\linewidth]{varylab/optimization2.png}
+    }
+\caption{The main user interface panels of {\sc VaryLab}. List of optimization functional plug-ins and their options (left). Main optimization controls with global constraints and minimizer settings (right).}
+\label{fig:optimization_interface_varylab}
 \end{center}
 \end{figure}
 
-%\setkeys{Gin}{draft=true}
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{varylab/protocol.png}
+\caption{Optimization protocol panel (bottom) shows the progress of the optimization for each activated energy in the Optimizer Plug-ins panel.}
+\label{fig:protocol_interface_varylab}
+\end{center}
+\end{figure}
+
+\setkeys{Gin}{draft=true}
 
 \section{Periodic conformal maps with {\sc VaryLab}}
 \label{sec:periodic_varylab}
@@ -220,6 +268,8 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 
 \section{Quasiisothermic meshes with {\sc VaryLab}}
 \label{sec:quasiisothermic_varylab}
+
+\marginpar{\color{red}\footnotesize Split into two subsections: \\Parameterization and optimization \\for touching incircles.}
 
 \begin{itemize}
 \item[0] Load a genus $0$ surface with one boundary component.
