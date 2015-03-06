@@ -269,7 +269,9 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 \section{Quasiisothermic meshes with {\sc VaryLab}}
 \label{sec:quasiisothermic_varylab}
 
-\marginpar{\color{red}\footnotesize Split into two subsections: \\Parameterization and optimization \\for touching incircles.}
+The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. The Parameterization part where we create the coordinates of the triangle mesh based on curvature direction data on the boundary of the mesh. And the optimization part where a quadrilateral mesh from part 1 is optimized towards touching incircles, the defining property of discrete s-isothermic meshes.
+
+\subsection{Quasiisothermic paramerization}
 
 \begin{itemize}
 \item[0] Load a genus $0$ surface with one boundary component.
@@ -340,6 +342,8 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 \end{center}    
             
 \end{itemize}
+
+\subsection{Optimization towards touching incircles}
 
 \section{Gridshells with {\sc VaryLab}}
 \label{sec:gridshells_varylab}
