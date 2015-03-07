@@ -24,13 +24,13 @@ In this chapter words in [Brackets] describe ui elements.
 \label{sec:general_varylab}
 In its core {\sc VaryLab} is a solver for non-linear optimization problems on the coordinates of a given 3D discrete surface. That means given a surface $S$ and functionals $f_1,\ldots,f_n:S\to\R$ we (try to) minimize the combined functional
 
-\begin{eqnarray*}
-	f(S) = \sum_{i=1}^n \lambda_i f_i(S)
-\end{eqnarray*}
+\begin{eqnarray}
+	f(S) = \sum_{i=1}^n \lambda_i f_i(S) \label{eq:varylab_functional}
+\end{eqnarray}
 where $\lambda_1,\ldots,\lambda_n\in \R$ are user defined weights. Correspondingly the first and second  derivatives of $f_i(S)$ are weighted by $\lambda_i$
-\begin{eqnarray*}
-	\nabla f(S) = \sum_{i=1}^n \lambda_i \nabla f_i(S), \quad \nabla\nabla f(S) = \sum_{i=1}^n \lambda_i \nabla\nabla f_i(S).
-\end{eqnarray*}
+\begin{eqnarray}
+	\nabla f(S) = \sum_{i=1}^n \lambda_i \nabla f_i(S), \quad \nabla\nabla f(S) = \sum_{i=1}^n \lambda_i \nabla\nabla f_i(S). \label{eq:varylab_derivatives}
+\end{eqnarray}
 
 {\sc VaryLab} uses the numerical library {\sc PETSc}/{\sc TAO} \cite{petsc-user-ref, petsc-web-page, tao-user-ref} and the corresponding {\sc Java} bindings \cite{jpetsctao-web-page} for computations. To run optimization methods we need at least an implementation of the functional's value. Other methods need gradient or Hessian of the functional. The most important methods are
  
@@ -40,7 +40,15 @@ where $\lambda_1,\ldots,\lambda_n\in \R$ are user defined weights. Corresponding
 	& {\tt CG} Conjugate Gradient & {\tt NTR} Newton Trust-Region.
 \end{tabular}
 
-In {\sc VaryLab} a functional can choose to implement just the value, see Section~\ref{sec:plugin-api}. Additionally it can implement the gradient and the Hessian of $S$. In principle all methods can be used with all functionals even if those do not implement all data needed for the algorithm. {\sc VaryLab} approximates the values of the gradient or the Hessian if they are missing.
+In {\sc VaryLab} a functional can choose to implement just the value. Additionally it can implement the gradient and the Hessian of $S$. In principle all methods can be used with all functionals even if those do not implement all data needed for the algorithm. {\sc VaryLab} approximates the values of the gradient or the Hessian if they are missing.
+
+{\sc VaryLab} has the option to normalize the energies before optimization and calculates a $\mu_i$ for each of the energies such that 	$\left\Vert\mu_i\nabla f_i(S)\right\Vert = 1$ for each functional $f_i$ and for the current mesh geometry. Then it uses a modified energy
+\begin{eqnarray}
+	\hat{\mathit f}(S) = \sum_{i=1}^n \mu_i\lambda_i f_i(S). \label{eq:varylab_normalized_functional}
+\end{eqnarray}
+for optimization.
+
+{\sc VaryLab} can handle constraints on vertex positions. We implement this by modifying the gradient and Hessian of the selected energies to be zero at the constraint variables. Even if the derivative does not match the energy anymore we can still calculate solutions for the rest of the variables using conjugate gradient methods. Here the line search step of the algorithm minimizes the energy over the remaining variables in the direction of the gradient, i.e., the update will not include constraint variables.
 
 \section{Geometry Processing}
 
@@ -107,6 +115,22 @@ The most important interface components are shown in Figure~\ref{fig:optimizatio
 \label{fig:optimization_interface_varylab}
 \end{center}
 \end{figure}
+
+\subsection*{Optimizer Plug-ins Panel}
+The [Optimizer Plugins] panel, see Figure~\ref{fig:optimization_interface_varylab} (left), has a list with all currently loaded plug-ins that implement energies for the use with the non-linear optimization core. For each energy one can adjust the coefficient $\lambda$ in the sum of functionals, see Equation~(\ref{eq:varylab_functional}).
+The checkbox [Normalize Energies] activates normalization of energies, see Equation~(\ref{eq:varylab_normalized_functional}). For a selected energy options are displayed right under the table.
+
+\subsection*{Optimization Panel}
+In the optimization panel, see Figure~\ref{fig:optimization_interface_varylab} (right), we can configure constraints and run the optimization. Vertices can be fixed either globally in one or all coordinate directions, by selection, or as boundary constraint.
+
+The check box [Allow Inner Boundary Movement] is used in conjunction with boundary constraints. The corresponding gradient part is projected onto an adjacent boundary edge thus any conjugate gradient update will move the vertex along this direction. This mode is meant to be used with straight boundaries, otherwise the behavior is undefined.
+
+Analogously to the inner boundary movement constraint the [Tangential]
+ constraint projects the gradient of a vertex onto the tangent plane at this vertex for current mesh geometry. With this options vertices stay close to the initial surface if the surface is sufficiently smooth but can move freely along tangent directions of the surface.
+
+The options [Smooth Gradient] and [Smooth Surface] apply Laplacian smoothing to either the gradient or the coordinate values of the mesh. We use a graph Laplacian, i.e., all weights are one.
+
+
 
 \begin{figure}
 \begin{center}
@@ -345,6 +369,8 @@ The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. 
 
 \subsection{Optimization towards touching incircles}
 
+In Chapter~\ref{chp:quasiisothermic}, Section~\ref{sec:s-isothermic} we propose to further optimize a new mesh to possess touching incircles, i.e., being a discrete s-isothermic mesh by definition. We propose an energy, implemented as [Touching Incircles] energy, that enforces planar quadrilaterals that possess incircles to additionally possess touching incircles. Thus we superpose three energies to achieve the desired effect. Activate [Incircles], [Planar Quads], and [Touching Incircles] to define the required energy.
+
 \section{Gridshells with {\sc VaryLab}}
 \label{sec:gridshells_varylab}
 
@@ -418,6 +444,8 @@ The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. 
             \captionof{figure}{Reference surface visualization (left). Optimized mesh (middle). Optimized histogram (right).}
 \end{minipage}
 \end{center}   
+
+\item[6] Run optimization. It has been proven successful to switch the reference surface energy off for a few iterations to let the mesh relax towards equal edge length and smooth parameter curves. Switching it back on will then project the mesh back onto the reference surface retaining most of the lengths and curvatures. Since the energy is non-convex there are lots of local minima and the solution depends heavily on the solver in use. The [CG], conjugate gradient, solver converges slower but yields smoother results than, e.g., the [LMVM] solver.
 
 \end{itemize}
 
