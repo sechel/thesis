@@ -1,6 +1,6 @@
 \documentclass[Thesis.tex]{subfiles}
 \begin{document}
-\setkeys{Gin}{draft=false}
+%\setkeys{Gin}{draft=false}
 \chapter{{\sc VaryLab} - Discrete surface optimization}
 \label{chp:varylab}
 
@@ -49,6 +49,26 @@ In {\sc VaryLab} a functional can choose to implement just the value. Additional
 for optimization.
 
 {\sc VaryLab} can handle constraints on vertex positions. We implement this by modifying the gradient and Hessian of the selected energies to be zero at the constraint variables. Even if the derivative does not match the energy anymore we can still calculate solutions for the rest of the variables using conjugate gradient methods. Here the line search step of the algorithm minimizes the energy over the remaining variables in the direction of the gradient, i.e., the update will not include constraint variables.
+
+\section{Build-in Functionals}
+
+{\sc VaryLab} implements a number of energy functionals.
+
+\begin{itemize}
+\item \emph{Circular Quadrilaterals Energy} - Defines an energy functional which is minimal for planar circular quads. Since we are using an angle criterion, the convergence to planarity is relatively slow. If the planar quads energy is added to the optimization, the geometry converges more quickly.
+\item \emph{Conical Quadrilaterals Energy} - This energy implements an angle criterion for conical meshes. So in combination with planarity it optimizes a mesh to have the property, that faces adjacent to one node are tangent to a cone of revolution.
+\item \emph{Cotangent Dirichlet Energy} - Dirichlet energy for the three coordinate functions of vertices of a triangle mesh. Edge weights are defined as $\omega_\mathit{ij}=\frac{1}{2}(\cot\alpha_\mathit{ij}+\cot\alpha_\mathit{ji})$ where $\alpha_\mathit{ij}$ and $\alpha_\mathit{ji}$ are the angles opposite of the edge $e_\mathit{ij}$.
+\item Equal Edge Lengths
+\item \emph{Incircles} - The property for a quadrilateral to possess an incircle tangent to its sides is that the two sums of opposite side lengths is equal $a+c=b+d$. Planarity is not included in this functional, so to get planar quadrilaterals with inscribed incircles you need to add planarity to the optimization.
+\item \emph{Touching Incircles} - In a quad-mesh with incircles, the incircles need not touch. So in combination with the incircles and planarity energies it one can create a mesh with touching incircles.
+\item \emph{Opposite Edges Curvature} - This energy penalizes the deviation of a parameter polyline from a straight line. So using this energy only, will flatten the mesh to the plane. Used together with, e.g., a reference surface energy, this energy smoothes the  parameter lines of the quad mesh.
+\item \emph{Opposite Angles Curvature} - This curvature is based on the intrinsic geometry of the surface. Let $\alpha$, $\beta$, $\gamma$, and $\delta$ denote the angles in the adjacent quads at a node in cyclic order. Then the optimal mesh satisfies $\alpha+\beta=\gamma+\delta$ and $\beta+\gamma=\delta+\alpha$, i.e., the parameter lines are straight from an intrinsic point of view.
+\item \emph{Planar Quadrilaterals} - Energy that enforces planarity of quadrilaterals. Implemented either as the distance of the diagonals or as the determinant of the four homogeneous vertex coordinates.
+\item \emph{Planar $n$-gons} - Generalization of the energy for planar quadrilaterals. Implemented as the sum of all choices of four vertices in each face.
+\item \emph{Planar Vertex Stars} - This energy is dual to the planar faces energy. It computes the volume spanned by a node and its neighbors. Minimization yields meshes such that each node lies in a plane with its neighbors. If used together with face planarity the initial mesh is mapped to a plane.
+\item \emph{Reference Mesh} - Given a reference mesh we compute the closest point to a node and add a spring force between each node and its projection. The projection point is recomputed in each step of the optimization. If combined with other energies it keeps the optimized mesh close to a reference mesh.
+\item \emph{Spring Energy} - The spring energy is computed by adding springs to all the edges of the mesh. These springs can have user specified target lengths and strengths that can be specified by various options.
+\end{itemize}
 
 \section{Geometry Processing}
 
@@ -103,7 +123,7 @@ All tools are available via the tools tool bar at the top of the main window, se
 \label{sec:ui_varylab}
 
 The user interface of {\sc VaryLab}, see Figure~\ref{fig:varylab_main_ui}, is based on {\sc JRWorkspace}, Chapter~\ref{chp:jrworkspace}. Thus it inherits the ability for the user to freely move around all interface components of the main window, see Figure~\ref{fig:varylab_main_ui}. 
-The most important interface components are shown in Figure~\ref{fig:optimization_interface_varylab} and \ref{fig:protocol_interface_varylab}.
+The three most important interface components are shown in Figure~\ref{fig:optimization_interface_varylab} and \ref{fig:protocol_interface_varylab}. It is the list of energies, the optimization controls, and the optimization protocol.
 
 \begin{figure}
 \begin{center}
@@ -121,7 +141,7 @@ The [Optimizer Plugins] panel, see Figure~\ref{fig:optimization_interface_varyla
 The checkbox [Normalize Energies] activates normalization of energies, see Equation~(\ref{eq:varylab_normalized_functional}). For a selected energy options are displayed right under the table.
 
 \subsection*{Optimization Panel}
-In the optimization panel, see Figure~\ref{fig:optimization_interface_varylab} (right), we can configure constraints and run the optimization. Vertices can be fixed either globally in one or all coordinate directions, by selection, or as boundary constraint.
+In the [Optimization Panel], see Figure~\ref{fig:optimization_interface_varylab} (right), we can configure constraints and run the optimization. Vertices can be fixed either globally in one or all coordinate directions, by selection, or as boundary constraint. Constraints are handled as described in Section~\ref{sec:general_varylab}
 
 The check box [Allow Inner Boundary Movement] is used in conjunction with boundary constraints. The corresponding gradient part is projected onto an adjacent boundary edge thus any conjugate gradient update will move the vertex along this direction. This mode is meant to be used with straight boundaries, otherwise the behavior is undefined.
 
@@ -130,12 +150,21 @@ Analogously to the inner boundary movement constraint the [Tangential]
 
 The options [Smooth Gradient] and [Smooth Surface] apply Laplacian smoothing to either the gradient or the coordinate values of the mesh. We use a graph Laplacian, i.e., all weights are one.
 
+The values for [Tolerance] and [Iterations] define stop criteria for the optimization core. If the Frobenius norm of the gradient drops below the tolerance or if the maximum number of iterations are performed the optimizer stops. 
+
+The numerical [Method] can be selected from the drop down field, see Section~\ref{sec:general_varylab} for explanation.
+
+The check box [Live Geometry Updates] updates the coordinates of the surface during optimization if selected. Any visualization is updated accordingly.
+
+\subsection*{Optimization Protocol Panel}
+
+During optimization {\sc VaryLab} logs the energy of each functional as well as the Frobenius norm of the gradient and plots them to the optimization protocol, see Figure~\ref{fig:protocol_interface_varylab}. The energy value is drawn as a green curve, the norm of the gradient is a purple curve. By default the display is logarithmic in the values and linear in time.
 
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=\textwidth]{varylab/protocol.png}
-\caption{Optimization protocol panel (bottom) shows the progress of the optimization for each activated energy in the Optimizer Plug-ins panel.}
+\caption{Optimization protocol panel shows the progress of the optimization for each activated energy in the Optimizer Plug-ins panel, see Figure~\ref{fig:optimization_interface_varylab} (left).}
 \label{fig:protocol_interface_varylab}
 \end{center}
 \end{figure}
