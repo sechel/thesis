@@ -1,6 +1,6 @@
 \documentclass[Thesis.tex]{subfiles}
 \begin{document}
-
+\setkeys{Gin}{draft=false}
 \chapter{Introduction}
 
 In this chapter words printed in {\sc SmallCapitals} are names of software packages, words printed
@@ -13,8 +13,7 @@ in {\tt TeleType} are names of {\sc Java} classes, methods, or fields.
 	\includegraphics[width=\linewidth]{figures/software_architecture}
 	\caption[Software package dependencies]{
 		Software architecture and dependencies of the DDG Framework. 
-		{\sc Jtem} library packages (green), mathematical software packages (red).
-	}
+		{\sc Jtem} library packages (green), application packages (blue). {\sc JReality} is used mainly for 3d-visualization (grey).}
 	\label{fig:software_architecture}
 \end{figure}
 
@@ -36,15 +35,12 @@ visualizations of surfaces and develop algorithms. On the other hand it is resea
 field of discrete differential geometry who need a stable data structure and programming
 infrastructure to get the job done.
 
-This Chapter is the description and getting-started manual of a set of software packages
+This part of the thesis is the description and getting-started manual of a set of software packages
 (Berlin DDG Framework) written in the programming language {\sc Java}. They are 
-specifically designed for the creation of
-custom interactive software for experiments with algorithms and geometries treated 
-within DDG. It is currently beeing used for teaching mathematical visualization courses at 
-TU-Berlin \cite{VisMathHomepage} and for research projects within the geometry group.
+specifically designed for the creation of custom interactive software for experiments with algorithms and geometries treated within DDG. It is currently beeing used for teaching mathematical visualization courses at TU-Berlin \cite{VisMathHomepage} and for research projects within the geometry group.
 
-Section~\ref{sec:related_work} gives an overview of existing software packages that have a focus 
-similar to the DDG Framework. Chapter~\ref{chp:jrworkspace} introduces the {\sc JRworkspace} library of the 
+%Section~\ref{sec:related_work} gives an overview of existing software packages that have a focus similar to the DDG Framework. 
+Chapter~\ref{chp:jrworkspace} introduces the {\sc JRworkspace} library of the 
 {\sc Jtem} project~\cite{JtemWebsite}. It is the foundation of any application created with 
 the DDG Framework. It is also the user interface basis of {\sc Jreality}, a mathematical 
 visualization library that uses {\sc JRworkspace} as plug-in and user interface 
@@ -71,10 +67,16 @@ The development of the described software is joint work with Thilo R{\" o}rig
 Sommer ({\sc Jpetsc/Jtao})~\cite{jpetsctao-web-page}, Ulrich Pinkall and Paul Peters 
 ({\sc JRworkspace}), and Boris Springborn ({\sc Halfedge}).
 
-
-\section{Related Work}
-\label{sec:related_work}
-JavaView, CGAL, libIGL, ...
+%
+%\section{Related Work}
+%\label{sec:related_work}
+%There are many mathematically oriented software frameworks available to the community. So why adding a new one to the list? The answer lies in the history of the software. 
+%JavaView, CGAL, libIGL, ...
+%Do I really want to write about this here??
+%
+%\subsubsection{JavaView} JavaView, see \cite{javaview}, is 3d geometry visualization software. It has a strong focus on web presentation as {\sc Java} applet.
+%
+%\subsubsection{libigl} C++ 
 
 
 \chapter{{\sc JRworkspace} - Java API for modular applications}

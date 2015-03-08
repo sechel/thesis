@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
-  <!--Created by yFiles for Java 2.10-->
+  <!--Created by yFiles for Java 2.11-->
   <key for="graphml" id="d0" yfiles.type="resources"/>
   <key for="port" id="d1" yfiles.type="portgraphics"/>
   <key for="port" id="d2" yfiles.type="portgeometry"/>
@@ -15,203 +15,231 @@
   <graph edgedefault="directed" id="G">
     <data key="d7"/>
     <node id="n0">
+      <data key="d5"/>
       <data key="d6">
-        <y:GenericNode configuration="ShinyPlateNode3">
-          <y:Geometry height="40.0" width="185.0" x="346.0" y="32.0"/>
-          <y:Fill color="#993366" transparent="false"/>
-          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.1513671875" modelName="custom" textColor="#FFFFFF" visible="true" width="59.248046875" x="62.8759765625" y="9.42431640625">VaryLab<y:LabelModel>
+        <y:ShapeNode>
+          <y:Geometry height="40.0" width="197.0" x="483.0" y="-180.0"/>
+          <y:Fill color="#0066CC" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.48828125" modelName="custom" textColor="#FFFFFF" visible="true" width="62.1875" x="67.40625" y="9.755859375">VaryLab<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-        </y:GenericNode>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="5" offsetY="5"/>
+        </y:ShapeNode>
       </data>
     </node>
     <node id="n1">
+      <data key="d5"/>
       <data key="d6">
-        <y:GenericNode configuration="ShinyPlateNode3">
-          <y:Geometry height="40.0" width="139.0" x="141.0" y="102.0"/>
-          <y:Fill color="#993366" transparent="false"/>
-          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.1513671875" modelName="custom" textColor="#FFFFFF" visible="true" width="98.8896484375" x="20.05517578125" y="9.42431640625">ConformalLab<y:LabelModel>
+        <y:ShapeNode>
+          <y:Geometry height="40.0" width="197.0" x="220.0" y="-94.0"/>
+          <y:Fill color="#0066CC" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.48828125" modelName="custom" textColor="#FFFFFF" visible="true" width="105.2265625" x="45.88671875" y="9.755859375">ConformalLab<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-        </y:GenericNode>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="5" offsetY="5"/>
+        </y:ShapeNode>
       </data>
     </node>
     <node id="n2">
+      <data key="d5"/>
       <data key="d6">
-        <y:GenericNode configuration="ShinyPlateNode3">
-          <y:Geometry height="40.0" width="141.5" x="367.75" y="102.0"/>
-          <y:Fill color="#99CC00" transparent="false"/>
-          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.1513671875" modelName="custom" textColor="#333333" visible="true" width="100.455078125" x="20.5224609375" y="9.42431640625">HalfedgeTools<y:LabelModel>
+        <y:ShapeNode>
+          <y:Geometry height="40.0" width="197.0" x="220.0" y="-6.0"/>
+          <y:Fill color="#669900" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.48828125" modelName="custom" textColor="#FFFFFF" visible="true" width="90.173828125" x="53.4130859375" y="9.755859375">jPETSc/jTao<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-        </y:GenericNode>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="5" offsetY="5"/>
+        </y:ShapeNode>
       </data>
     </node>
     <node id="n3">
+      <data key="d5"/>
       <data key="d6">
-        <y:GenericNode configuration="ShinyPlateNode3">
-          <y:Geometry height="40.0" width="139.0" x="141.0" y="172.0"/>
-          <y:Fill color="#99CC00" transparent="false"/>
-          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.1513671875" modelName="custom" textColor="#333333" visible="true" width="84.91015625" x="27.044921875" y="9.42431640625">jPETSc/jTao<y:LabelModel>
+        <y:ShapeNode>
+          <y:Geometry height="40.0" width="197.0" x="483.0" y="-94.0"/>
+          <y:Fill color="#669900" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.48828125" modelName="custom" textColor="#FFFFFF" visible="true" width="108.64453125" x="44.177734375" y="9.755859375">HalfEdgeTools<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-        </y:GenericNode>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="5" offsetY="5"/>
+        </y:ShapeNode>
       </data>
     </node>
     <node id="n4">
+      <data key="d5"/>
       <data key="d6">
-        <y:GenericNode configuration="ShinyPlateNode3">
-          <y:Geometry height="40.0" width="185.0" x="346.0" y="172.0"/>
-          <y:Fill color="#808080" transparent="false"/>
-          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.1513671875" modelName="custom" textColor="#FFFFFF" visible="true" width="53.7998046875" x="65.60009765625" y="9.42431640625">jReality<y:LabelModel>
+        <y:ShapeNode>
+          <y:Geometry height="40.0" width="197.0" x="746.0" y="-8.0"/>
+          <y:Fill color="#669900" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.48828125" modelName="custom" textColor="#FFFFFF" visible="true" width="68.6337890625" x="64.18310546875" y="9.755859375">HalfEdge<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-        </y:GenericNode>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="5" offsetY="5"/>
+        </y:ShapeNode>
       </data>
     </node>
     <node id="n5">
+      <data key="d5"/>
       <data key="d6">
-        <y:GenericNode configuration="ShinyPlateNode3">
-          <y:Geometry height="40.0" width="141.5" x="597.0" y="172.0"/>
-          <y:Fill color="#99CC00" transparent="false"/>
-          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.1513671875" modelName="custom" textColor="#333333" visible="true" width="63.1240234375" x="39.18798828125" y="9.42431640625">Halfedge<y:LabelModel>
+        <y:ShapeNode>
+          <y:Geometry height="40.0" width="197.0" x="483.0" y="-8.0"/>
+          <y:Fill color="#808080" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.48828125" modelName="custom" textColor="#FFFFFF" visible="true" width="57.6962890625" x="69.65185546875" y="9.755859375">jReality<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-        </y:GenericNode>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="5" offsetY="5"/>
+        </y:ShapeNode>
       </data>
     </node>
     <node id="n6">
+      <data key="d5"/>
       <data key="d6">
-        <y:GenericNode configuration="ShinyPlateNode3">
-          <y:Geometry height="40.0" width="141.5" x="367.75" y="242.0"/>
-          <y:Fill color="#99CC00" transparent="false"/>
-          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="21.1513671875" modelName="custom" textColor="#333333" visible="true" width="94.2685546875" x="23.61572265625" y="9.42431640625">JRworkspace<y:LabelModel>
+        <y:ShapeNode>
+          <y:Geometry height="40.0" width="197.0" x="483.0" y="78.0"/>
+          <y:Fill color="#669900" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.48828125" modelName="custom" textColor="#FFFFFF" visible="true" width="97.4130859375" x="49.79345703125" y="9.755859375">JRWorkspace<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-        </y:GenericNode>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="5" offsetY="5"/>
+        </y:ShapeNode>
       </data>
     </node>
-    <edge id="e0" source="n6" target="n4">
+    <edge id="e0" source="n1" target="n0">
+      <data key="d9"/>
       <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e1" source="n4" target="n2">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e2" source="n2" target="n0">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e3" source="n5" target="n2">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="63.86621621621626" ty="-0.6666666666666856">
-            <y:Point x="667.75" y="121.33333333333331"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e4" source="n5" target="n0">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="48.5" ty="0.0">
-            <y:Point x="667.75" y="52.0"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e5" source="n1" target="n0">
-      <data key="d10">
-        <y:PolyLineEdge>
+        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="210.5" y="90.33333333333331"/>
-            <y:Point x="210.0" y="90.33333333333331"/>
-            <y:Point x="210.0" y="52.0"/>
+            <y:Point x="318.5" y="-160.0"/>
           </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="concave"/>
+          <y:StyleProperties>
+            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e6" source="n2" target="n1">
+    <edge id="e1" source="n2" target="n1">
+      <data key="d9"/>
       <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="-62.91013513513515" sy="0.3333333333333144" tx="47.710810810810806" ty="0.3333333333333144"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e7" source="n3" target="n1">
-      <data key="d10">
-        <y:PolyLineEdge>
+        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="concave"/>
+          <y:StyleProperties>
+            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n3" target="n0">
+      <data key="d9"/>
+      <data key="d10">
+        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="concave"/>
+          <y:StyleProperties>
+            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n3" target="n1">
+      <data key="d9"/>
+      <data key="d10">
+        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="concave"/>
+          <y:StyleProperties>
+            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n4" target="n3">
+      <data key="d9"/>
+      <data key="d10">
+        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="844.5" y="-74.0"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="concave"/>
+          <y:StyleProperties>
+            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="n5" target="n3">
+      <data key="d9"/>
+      <data key="d10">
+        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="concave"/>
+          <y:StyleProperties>
+            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
+      </data>
+    </edge>
+    <edge id="e6" source="n6" target="n5">
+      <data key="d9"/>
+      <data key="d10">
+        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="concave"/>
+          <y:StyleProperties>
+            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
       </data>
     </edge>
   </graph>
