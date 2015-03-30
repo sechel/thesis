@@ -43,18 +43,18 @@
 
 \usepackage{listings}
 \usepackage{pxfonts}
-%\usepackage{gfsartemisia-euler}
-%\usepackage{newtxtext,newtxmath}
 \lstset{language=JAVA}
 \definecolor{middlegray}{rgb}{0.5,0.5,0.5}
 \definecolor{lightgray}{rgb}{0.9,0.9,0.9}
 \definecolor{orange}{rgb}{0.8,0.3,0.3}
 \definecolor{yac}{rgb}{0.6,0.6,0.1}
+\definecolor{javared}{rgb}{0.404,0,0.023}
+\definecolor{javagreen}{rgb}{0.004,0.161,0.02}
 \lstset{
-  % backgroundcolor=\color{lightgray}
-   basicstyle=\footnotesize\ttfamily,
-   keywordstyle=\bfseries\ttfamily\color{black},
-   stringstyle=\color{blue}\ttfamily,
+   %backgroundcolor=\color{lightgray},
+   basicstyle=\footnotesize\bfseries\ttfamily\color{javagreen},
+   keywordstyle=\bfseries\ttfamily\color{javared},
+   stringstyle=\normalfont\color{blue}\ttfamily,
    commentstyle=\color{middlegray}\ttfamily,
    emph={square}, 
    emphstyle=\color{blue}\texttt,
@@ -119,36 +119,7 @@
 \def\TReg{\textsuperscript{\textregistered} }
 
 \title{Variational Methods for Discrete Surface Parameterization. Applications and Implementation.}
-\author{
-vorgelegt von\\
-Dipl.-Math. techn. Stefan Sechelmann\\
-\vspace{0.3cm}\\
-von der Fakult{\"a}t II - Mathematik und Naturwissenschaften\\
-der Technischen Universit{\"a}t Berlin\\
-zur Erlangung des akademischen Grades\\
-\vspace{0.3cm}\\
-Doktor der Naturwissenschaften\\
--- Dr. rer. nat. --\\
-\vspace{0.3cm}\\
-vorgelegte Dissertation
-\vspace{1.5cm}\\
-Promotionsausschuss\\
-\vspace{0.3cm}\\
-\begin{tabular}{rl}
-Vorsitzender: & Prof. Dr. Gitta Kutyniok \\
-Gutachter/Berichter: & Prof. Dr. Alexander I. Bobenko \\
-& Prof. Dr. Max Wardetzky 
-\end{tabular}
-\vspace{0.3cm}\\
-Tag der wissenschaftlichen Aussprache: NN\\
-\vspace{1cm}\\
-}
-
-\date{
-	Berlin, den {\selectlanguage{german}\today}\\
-	\vspace{0.3cm}
-	D 83
-}
+\author{Stefan Sechelmann}
 
 \def\mainbibliography {
 	\backmatter
@@ -174,7 +145,45 @@ Tag der wissenschaftlichen Aussprache: NN\\
 \def\subfilebibliographytwo{}
 
 \frontmatter
-\maketitle
+%\maketitle
+
+\begin{titlepage}
+\begin{center}
+\large
+{\Large\bf Variational Methods for Discrete Surface Parameterization. Applications and Implementation.}\\
+\vspace{0.8cm}
+vorgelegt von\\
+%Dipl.-Math. techn. Stefan Sechelmann\\
+Diplom-Technomathematiker Stefan Sechelmann\\
+\vspace{0.8cm}
+von der Fakult{\"a}t II - Mathematik und Naturwissenschaften\\
+der Technischen Universit{\"a}t Berlin\\
+zur Erlangung des akademischen Grades\\
+\vspace{0.8cm}
+Doktor der Naturwissenschaften\\
+-- Dr. rer. nat. --\\
+\vspace{0.8cm}
+vorgelegte Dissertation\\
+\vspace{0.8cm}
+\includegraphics[width=0.4\linewidth]{introduction/title_lawson_cyclic.pdf}\\
+\vspace{0.8cm}
+Promotionsausschuss:\\
+\vspace{0.3cm}
+\begin{tabular}{rl}
+Vorsitzende: & Prof. Dr. Gitta Kutyniok \\
+Gutachter/Berichter: & Prof. Dr. Alexander I. Bobenko \\
+& Prof. Dr. Max Wardetzky 
+\end{tabular}\\
+\vspace{0.3cm}
+Tag der wissenschaftlichen Aussprache: NN\\
+\vspace{0.8cm}
+
+Berlin, den {\selectlanguage{german}\today}\\
+\vspace{0.3cm}
+D 83
+\end{center}
+\end{titlepage}
+
 \newpage
 
 \tableofcontents
@@ -185,10 +194,9 @@ Tag der wissenschaftlichen Aussprache: NN\\
 \mainmatter
 \setcounter{secnumdepth}{-1} 
 \subfile{Chapter0_Introduction.tex}
-\setcounter{secnumdepth}{2} 
+\setcounter{secnumdepth}{2}
 \part{Variational Methods for Discrete Surface Parameterization and Uniformization} 
 \label{part:uniformization}
-%\subfile{Chapter1_Background.tex}
 \subfile{Chapter1_00_Preliminaries.tex}
 \subfile{Chapter1_01_Variational.tex}
 \subfile{Chapter2_Interpolation.tex}
@@ -209,8 +217,10 @@ Tag der wissenschaftlichen Aussprache: NN\\
 \newpage 
 \mainbibliography
 
+\backmatter
 \appendix
 \chapter{CD Content}
+\label{chp:cd_content}
 
 \chapter{Acknowledgements}
 
