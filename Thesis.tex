@@ -1,18 +1,26 @@
 %!TEX TS-program = pdflatex
 %!TEX encoding = UTF-8 Unicode
-\documentclass[a4paper]{book}
+\documentclass[a4paper, draft]{book}
 \sloppy
 \usepackage{subfiles}
 \usepackage[german, english]{babel}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% preliminary version only, comment out if no longer needed
+\usepackage{prelim2e}
+\renewcommand{\PrelimText}{\sf\scriptsize --- INCOMPLETE DRAFT of \today ---}
+\usepackage[colorinlistoftodos,bordercolor=orange,backgroundcolor=orange!20,linecolor=orange,textsize=scriptsize]{todonotes}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\usepackage{caption2}
 %\setcaptionwidth{1.0\textwidth}
 
 \usepackage{wrapfig}
+\usepackage[export]{adjustbox}
 \usepackage[skip=2pt]{caption}
 \usepackage{paralist}
 
-\usepackage[draft]{graphicx}
+\usepackage[]{graphicx}
 \graphicspath{
 	{image/}
 	{figures/}
@@ -24,7 +32,7 @@
 \usepackage{color}
 
 \usepackage{contour}
-\contournumber{32} 
+\contournumber{32}
 \contourlength{0.1em}
 
 \usepackage{amsmath}
@@ -56,7 +64,7 @@
    keywordstyle=\bfseries\ttfamily\color{javared},
    stringstyle=\normalfont\color{blue}\ttfamily,
    commentstyle=\color{middlegray}\ttfamily,
-   emph={square}, 
+   emph={square},
    emphstyle=\color{blue}\texttt,
    emph={[2]root,base},
    emphstyle={[2]\color{yac}\texttt},
@@ -86,9 +94,9 @@
 \usepackage{hyperref}
 \usepackage[nottoc,numbib,notlof]{tocbibind}
 
-% For Milnor's Lobachevsy function $\ML$ 
-\usepackage[OT2,T1]{fontenc} 
-\newcommand{\ML}{\mbox{\fontencoding{OT2}\fontfamily{wncyr}\fontseries{m}\fontshape{n}\selectfont L}} 
+% For Milnor's Lobachevsy function $\ML$
+\usepackage[OT2,T1]{fontenc}
+\newcommand{\ML}{\mbox{\fontencoding{OT2}\fontfamily{wncyr}\fontseries{m}\fontshape{n}\selectfont L}}
 
 \usepackage[a4paper]{geometry}
 %\usepackage{fancyhdr}
@@ -103,6 +111,7 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem*{remark}{Remark}
 \newtheorem{example}{Example}
+\newtheorem{problem}{Problem}[subsection]
 
 \newcommand{\R}{\mathbb R}
 \newcommand{\C}{\mathbb C}
@@ -110,11 +119,33 @@
 \newcommand{\N}{\mathbb N}
 \renewcommand{\S}{\mathbb S}
 \newcommand{\Chat}{\hat{\mathbb C}}
+\newcommand{\RP}{\R\mathrm{P}}
+\newcommand{\T}{{\mathsf T}}
+\newcommand{\cclass}{{\mathcal C}}
+\newcommand{\Teich}{{\mathcal T}}
+\newcommand{\PSL}{{\operatorname{\it PSL}}}
+\newcommand{\ccr}{\operatorname{cr}}
+\newcommand{\lcr}{\operatorname{lcr}}
+\newcommand{\lmr}{\operatorname{lmr}}
+\newcommand{\mean}{\operatorname{mean}}
+\newcommand{\Eint}{E_{\mathit{int}}}
+\newcommand{\Ebdy}{E_{\mathit{bdy}}}
+\newcommand{\Vint}{V_{\mathit{int}}}
+\newcommand{\Vbdy}{V_{\mathit{bdy}}}
+\newcommand{\const}{\textit{const.}}
+\newcommand{\grad}{\operatorname{grad}}
+\newcommand{\hess}{\operatorname{hess}}
+\newcommand{\degrees}{^{\circ}}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\arsinh}{\operatorname{arsinh}}
+\newcommand{\arccot}{\operatorname{arccot}}
+\newcommand{\Ehyp}{E^{\mathit{h}}}
+\newcommand{\Vhyp}{V_{\mathit{h}}}
+\newcommand{\Vhathyp}{\widehat{V}_{\mathit{h}}}
 
 \DeclareMathOperator{\sn}{sn}
 \DeclareMathOperator{\cn}{cn}
-\DeclareMathOperator{\lcr}{lcr}
-\DeclareMathOperator{\lmr}{lmr}
 
 \def\TReg{\textsuperscript{\textregistered} }
 
@@ -123,7 +154,7 @@
 
 \def\mainbibliography {
 	\backmatter
-	\setcounter{secnumdepth}{-1} 
+	\setcounter{secnumdepth}{-1}
 	\bibliographystyle{amsalpha}
 	\bibliography{Thesis}
 }
@@ -135,7 +166,7 @@
 }
 \def\subfilebibliographytwo {
 	\backmatter
-	\setcounter{secnumdepth}{-1} 
+	\setcounter{secnumdepth}{-1}
 	\bibliographystyle{amsalpha}
 	\bibliography{Thesis}
 }
@@ -172,7 +203,7 @@ Promotionsausschuss:\\
 \begin{tabular}{rl}
 Vorsitzende: & Prof. Dr. Gitta Kutyniok \\
 Gutachter/Berichter: & Prof. Dr. Alexander I. Bobenko \\
-& Prof. Dr. Max Wardetzky 
+& Prof. Dr. Max Wardetzky
 \end{tabular}\\
 \vspace{0.3cm}
 Tag der wissenschaftlichen Aussprache: NN\\
@@ -192,15 +223,16 @@ D 83
 
 \newpage
 \mainmatter
-\setcounter{secnumdepth}{-1} 
+\setcounter{secnumdepth}{-1}
 \subfile{Chapter0_Introduction.tex}
 \setcounter{secnumdepth}{2}
-\part{Variational Methods for Discrete Surface Parameterization and Uniformization} 
+\part{Variational Methods for Discrete Surface Parameterization and Uniformization}
 \label{part:uniformization}
-\subfile{Chapter1_00_Preliminaries.tex}
-\subfile{Chapter1_01_Variational.tex}
+\subfile{Chapter1_Uniformization.tex}
+%\subfile{Chapter1_00_Preliminaries.tex}
+%\subfile{Chapter1_01_Variational.tex}
 \subfile{Chapter2_Interpolation.tex}
-\subfile{Chapter1_02_DiscreteUniformization.tex}
+%\subfile{Chapter1_02_DiscreteUniformization.tex}
 \subfile{Chapter1_03_Examples.tex}
 \part{Applications}
 \label{part:applications}
@@ -214,7 +246,7 @@ D 83
 \subfile{Chapter3_ConformalLab.tex}
 \subfile{Chapter3_VaryLab.tex}
 
-\newpage 
+\newpage
 \mainbibliography
 
 \backmatter

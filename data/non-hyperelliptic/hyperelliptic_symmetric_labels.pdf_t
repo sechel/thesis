@@ -1,0 +1,39 @@
+\begin{picture}(0,0)%
+\rotatebox{90}{
+\includegraphics[draft=false,width=17cm]{non-hyperelliptic/tetra_symmetric_hyperelliptic.pdf}%
+}
+\end{picture}%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(7853,7992)(1,-7153)
+\put(601,-4036){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_1$}}%
+}}}}
+\put(5701,-6811){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_4$}}%
+}}}}
+\put(6076,-6286){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_5$}}%
+}}}}
+\put(4651,-6361){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_3$}}%
+}}}}
+\put(6451,-5011){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_6$}}%
+}}}}
+\put(1501,-5611){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_2$}}%
+}}}}
+\put(5851,-1036){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_2^{-1}$}}%
+}}}}
+\put(751,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_6^{-1}$}}%
+}}}}
+\put(2851,-211){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_3^{-1}$}}%
+}}}}
+\put(1201,-286){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_5^{-1}$}}%
+}}}}
+\put(1726,464){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_4^{-1}$}}%
+}}}}
+\put(6826,-2461){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\contour{white}{$T_1^{-1}$}}%
+}}}}
+\end{picture}%

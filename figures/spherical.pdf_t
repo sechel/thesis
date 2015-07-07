@@ -1,5 +1,5 @@
 \begin{picture}(0,0)%
-\includegraphics{spherical.pdf}%
+\includegraphics[draft=false]{spherical.pdf}%
 \end{picture}%
 \setlength{\unitlength}{3947sp}%
 %
@@ -9,13 +9,9 @@
   \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
   \selectfont}%
 \fi\endgroup%
-\begin{picture}(9230,3894)(1039,-4104)
-\put(8926,-2161){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$l$}%
+\begin{picture}(2986,3446)(8,-2604)
+\put(1651,539){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde l$}%
 }}}}
-\put(8926,-1036){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde{l}$}%
-}}}}
-\put(3151,-2986){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde{l}$}%
-}}}}
-\put(3151,-1936){\makebox(0,0)[lb]{\smash{{\SetFigFont{25}{30.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$l$}%
+\put(1651,-580){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$l$}%
 }}}}
 \end{picture}%
