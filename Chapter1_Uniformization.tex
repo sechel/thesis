@@ -4,1002 +4,1024 @@
 \chapter{Discrete uniformization of Riemann surfaces. Boundary value problems, circle domains,
 Fuchsian and Schottky uniformization}
 
-  \section{Introduction}
-
-  \section{Basic definitions}
-
-  \subsection{Cyclic polyhedral surfaces }
-
-
-  A \emph{euclidean polyhedral surface} is a surface obtained from
-  gluing euclidean polygons along their edges. (A \emph{surface} is a
-  two-dimensional manifold, possibly with boundary.)  In other words, a
-  euclidean polyhedral surface is a surface equipped with, first, an
-  intrinsic metric which is flat except at isolated points where it has
-  cone-like singularities, and, second, the structure of a CW complex
-  with geodesic edges. The set of vertices contains all cone-like
-  singularities. If the surface has a boundary, the boundary is
-  polygonal and the set of vertices contains all corners of the
-  boundary.
-
-  \emph{Hyperbolic polyhedral surfaces} and \emph{spherical polyhedral
-    surfaces} are defined analogously. They are glued from polygons in
-  the hyperbolic and elliptic planes, respectively. Their metric is
-  locally hyperbolic or elliptic, except at cone-like singularities.
-
-  We will only be concerned with polyhedral surfaces whose faces are all
-  cyclic, i.e., inscribed in circles. We call them \emph{cyclic
-    polyhedral surfaces}. More precisely, we require the polygons to be
-  cyclic before they are glued together. It is not required that the
-  circumcircles persist after gluing; they may be disturbed by cone-like
-  singularites. A polygon in the hyperbolic plane is considered cyclic
-  if it is inscribed in a curve of constant curvature. This may be a
-  circle (the locus of points at constant distance from its center), a
-  horocycle, or a curve at constant distance from a geodesic.
-
-  A \emph{triangulated surface}, or \emph{triangulation} for short, is a
-  polyhedral surface all of whose faces are triangles.  All
-  triangulations are cyclic.
-
-  \subsection{Notation}
-
-  We will denote the sets of vertices, edges, and faces of a CW
-  complex~$\Sigma$ by $V_{\Sigma}$, $E_{\Sigma}$, and $F_{\Sigma}$, and
-  we will often omit the subscript when there is no danger of confusion.
-  For notational convenience, we require all CW complexes to be
-  \emph{strongly regular}. This means that we require that faces are not
-  glued to themselves along edges or at vertices, that two faces are not
-  glued together along more than one edge or one vertex, and that edges
-  have distinct enpoints and two edges have at most one endpoint in
-  common. This allows us to label edges and faces by their vertices. We
-  will write $\mathit{ij}\in E$ for the edge with vertices $i,j\in V$ and
-  $\mathit{ijkl}\in F$ for the face with vertices $i,j,k,l\in V$. We will always
-  list the vertices of a face in the correct cyclic order, so that for
-  example the face $\mathit{ijkl}$ has edges $\mathit{ij}$, $\mathit{jk}$,
-  $\mathit{kl}$, and $\mathit{li}$.
-
-  The only reason for restricting our discussion to strongly regular CW
-  complexes is to be able to use this simple notation. Everything we
-  discuss applies also to general CW complexes.
-
-  \subsection{Discrete metrics}
-  \label{sec:discrete-metrics}
-
-  The \emph{discrete metric} of a euclidean (or hyperbolic or
-  spherical) cyclic polyhedral surface $\Sigma$ is the function
-  $\ell:E_{\Sigma}\rightarrow\R_{>0}$ that assigns to each edge $ij$ its
-  length $\ell_{ij}$. It satisfies the polygon inequalities (one side is
-  shorter than the sum of the others):
-  \begin{equation}
-    \label{eq:polygon_ineq}
-    % \forall i_{1}i_{2}\ldots i_{n}\in F_{\Sigma}:
-    % \quad
-    \left.
-     \quad
-    \begin{aligned}
-      -\ell_{i_{1}i_{2}}+\ell_{i_{2}i_{3}}+&\ldots+\ell_{i_{n-1}i_{n}}
-      >0\\
-      \ell_{i_{1}i_{2}}-\ell_{i_{2}i_{3}}+&\ldots+\ell_{i_{n-1}i_{n}}
-      >0\\
-      &\vdots\\
-      \ell_{i_{1}i_{2}}+\ell_{i_{2}i_{3}}+&\ldots-\ell_{i_{n-1}i_{n}}
-      >0
-    \end{aligned}
-    \quad
-    \right\}
-    \quad
-    \text{for all $i_{1}i_{2}\ldots i_{n}\in F_{\Sigma}$}
-  \end{equation}
-
-  In euclidean and hyperbolic geometry, the polygon inequalities are
-  sufficient for the existence of a polygon with given edge
-  lengths. Furthermore, a \emph{cyclic} polygon is uniquely determined
-  by its edge lengths. Thus, the discrete metric determines the geometry
-  of a cyclic polyhedral surface:
-
-  If $\Sigma$ is a surface with the structure of a CW~complex and a
-  function $\ell:E_{\Sigma}\rightarrow\R_{>0}$ satisfies the polygon
-  inequalities~\eqref{eq:polygon_ineq}, then there is a unique euclidean
-  cyclic polyhedral surface (and also a unique hyperbolic cyclic
-  polyhedral surface) with CW~complex~$\Sigma$ and discrete
-  metric~$\ell$.
-
-  The edge lengths of a cyclic polygon in the sphere satisfy another
-  independent inequality: The perimeter is less than $2\pi$.  the discrete metric of a
-  spherical cyclic polyhedral surface satisfies the additional
-  inequalities
-  \begin{equation}
-    \label{eq:spherical_polygon_ineq}
-      \ell_{i_{1}i_{2}}+\ell_{i_{2}i_{3}}+\ldots+\ell_{i_{n-1}i_{n}}
-      <2\pi
-    \quad
-    \text{for all $i_{1}i_{2}\ldots i_{n}\in F_{\Sigma}$.}
-  \end{equation}
-  Given a function $\ell:E_{\Sigma}\rightarrow\R_{>0}$ satisfying the
-  inequalities~\eqref{eq:polygon_ineq}
-  and~\eqref{eq:spherical_polygon_ineq}, then there is a unique cyclic
-  spherical polyhedral surface with discrete metric $\ell$.
-
-  \subsection{Discrete conformal equivalence}
-  \label{sec:discr-conf-equiv}
-
-  \begin{figure}
-  \centering
-  \resizebox{0.6\textwidth}{!}{
-  \input{figures/spherical.pdf_t}
-  \input{figures/hyperbolic.pdf_t}
-  }
-  \caption{Relations between euclidean edge lengths $l$ and conformally equivalent spherical (left) and hyperbolic (right) lengths $\tilde l$ respectively.}
-  \label{fig:geometries}
-  \end{figure}
-
-
-  We define discrete conformal equivalence for cyclic polyhedral
-  surfaces that are combinatorially equivalent. Thus, we may assume that
-  the surfaces share the same CW complex $\Sigma$ equipped with
-  different metrics.
-
-  Two \emph{euclidean} cyclic polyhedral surfaces with
-  discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are
-  \emph{discretely conformally equivalent} if there exists a function
-  $u:V_{\Sigma}\rightarrow\R$ such that
-  \begin{equation}
-    \label{eq:tilde_ell_euc}
-    \tilde\ell_\mathit{ij}=e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij}.
-  \end{equation}
-
-  Two \emph{hyperbolic} cyclic polyhedral surfaces with
-  discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are
-  \emph{discretely conformally equivalent} if there exists a function
-  $u:V_{\Sigma}\rightarrow\R$ such that
-  \begin{equation}
-    \label{eq:tilde_ell_hyp}
-    \sinh\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
-    = e^{\frac{1}{2}(u_{i}+u_{j})}\,
-    \sinh\Big(\frac{\ell_\mathit{ij}}{2}\Big).
-  \end{equation}
-
-
-  Two \emph{spherical} cyclic polyhedral surfaces with
-  discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are
-  \emph{discretely conformally equivalent} if there exists a function
-  $u:V_{\Sigma}\rightarrow\R$ such that
-  \begin{equation}
-    \label{eq:tilde_ell_sph}
-    \sin\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
-    = e^{\frac{1}{2}(u_{i}+u_{j})}\,
-    \sin\Big(\frac{\ell_\mathit{ij}}{2}\Big).
-  \end{equation}
-
-  We will also consider ``mixed versions'': For example, a cyclic
-  euclidean polyhedral surface with discrete metric
-  $\ell:E_{\Sigma}\rightarrow\R_{>0}$ and a cyclic hyperbolic polyhedral
-  surface with discrete metric $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$
-  are discretely conformally equivalent if
-  \begin{equation*}
-    \sinh\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
-    = e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij}.
-  \end{equation*}
-
-  % \begin{remark*}[Orientation]
-  %   We need and will only consider oriented surfaces because the
-  %   solutions of the conformal mapping problems that we treat are
-  %   sufficiently unique. The situation is like in the classical smooth
-  %   case: While one could consider the uniformization of nonorientable
-  %   Riemann surfaces (by allowing anticonformal chart transition
-  %   functions and discrete groups containing orientation reversing
-  %   M\"obius transformations), this would not lead to anything
-  %   essentially new: Due to uniqueness, the uniformization of an
-  %   unorientable surface lifts to the oriented double cover.
-  % \end{remark*}
-
-
-
-  \section{Variational principle for discrete conformal maps (euclidean version)}
-  \label{sec:vari-princ}
-
-  %functionals in $u$'s and $\lambda$'s and their Hessian
-
-  \subsection{Mapping problem}
-  \label{sec:mapping_problem}
-
-  We will consider mostly the following discrete conformal mapping problems.
-    % \begin{list}{}{%
-    %     \settowidth{\labelwidth}{\textbf{Given:}}%
-    %     \setlength{\leftmargin}{\labelwidth}%
-    %     \addtolength{\leftmargin}{\labelsep}%
-    %   }
-    % \item[\textbf{Given}]
-    %   \begin{compactitem}
-    %   \item the discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a
-    %     euclidean cyclic polyhedral surface,
-    %   \item a desired cone angle $\Theta_{i}>0$ for each vertex
-    %     $i\in V_{\Sigma}$,
-    %   \end{compactitem}
-    % \item[\textbf{find}] the discrete metric
-    %   $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a discretely
-    %   conformally equivalent euclidean cyclic polyhedral surface that
-    %   has at each vertex $i\in V$ the desired cone angle
-    %   $\Theta_{i}$.% \end{asparadesc}
-    % \end{list}
-  \begin{problem}[prescribed angle sums]
-  \label{prob:total_angles}
-    \textbf{\itshape{Given}}
-
-    \begin{compactitem}
-    \item the discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a
-      euclidean cyclic polyhedral surface,
-    \item a desired total angle $\Theta_{i}>0$ for each vertex
-      $i\in V_{\Sigma}$,
-    \end{compactitem}
-
-    \smallskip\noindent%
-    \textbf{\itshape{find}} the discrete metric
-    $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a discretely
-    conformally equivalent euclidean cyclic polyhedral surface that has
-    the desired total angle $\Theta_{i}$ around each vertex $i\in
-    V$.
-  \end{problem}
-
-  For interior vertices, $\Theta_i$ denotes a desired cone angle. For
-  boundary vertices, $\Theta_i$ denotes a desired interior angle of the
-  polygonal boundary. If $\Theta_{i}=2\pi$ for all interior vertices,
-  then Problem~\ref{prob:total_angles} asks for a flat metric in the
-  discrete conformal class (with prescribed boundary angles if the
-  surface has a boundary).
-
-  It makes sense to prescribe the total angle at some vertices and the
-  discrete conformal factor at other vertices:
-
-  \begin{problem}
-      \textbf{\itshape{Given}}
-
-    \textbf{\itshape{find}}
-  \end{problem}
-
-  \subsection{Variational principle}
-  \label{sec:variational}
-
-  The variational principle involves a function of the logarithmic edge
-  lengths, $x=\log\ell$.
-
-  \begin{equation}
-    \label{eq:S}
-    S(x)=\sum_{i_{1}\ldots i_{n}\in F}
-    2f_{n}(x_{i_{1}i_{2}},\ldots,x_{i_{n}i_{1}})
-    -2\pi
-    \sum_{ij\in E} x_{ij}
-    +
-    \sum_{i\in V} \Theta_{i}u_{i}
-  \end{equation}
-
-  \subsection{The functions $f_n$}
-  \label{sec:f_n}
-
-  For each $n\geq 3$, let
-  \begin{equation}
-    \label{eq:A_n}
-    \mathcal{A}_{n}=\big\{
-    x\in\R^{n}\;\big|\;\ell_{1}=e^{x_{1}},\ldots,\ell_{n}=e^{x_{n}}
-    \text{ satisfy the polygon inequalities~\eqref{eq:polygon_ineq}}
-    \big\},
-  \end{equation}
-  and define the function
-  $ %\begin{equation*}
-  f_{n}:\R^{n}\rightarrow\R
-  $ %\end{equation*}
-  as follows.
-
-  $\bullet$ If $x\in\mathcal{A}_{n}$, then
-  \begin{equation}
-    \label{eq:f_n}
-    f_{n}(x_{1},\ldots,x_{n})=\sum_{k=1}^{n}
-    \big(\alpha_{k}x_{k}+\ML(\alpha_{k})\big),
-  \end{equation}
-  where $2\alpha_{1},\ldots,2\alpha_{n}$ are the central angles of a
-  cyclic euclidean polygon with sides $e^{x_{1}},\ldots,e^{x_{n}}$ as
-  shown in Figure~\ref{fig:cyclicpolygon}, and $\ML(x)$ is Milnor's
-  Lobachevsky function~\cite{milnor_hyperbolic_1982},
-  \begin{equation}
-    \label{eq:ML}
-    \ML(x)=-\int_{0}^{x}\log|2\sin t|\,\mathit{dt}.
-  \end{equation}
-
-  $\bullet$ If $x\not\in\mathcal{A}_{n}$, then one and
-  only one of the polygon inequalities~\eqref{eq:polygon_ineq} is
-  violated. If the $k$th polygon inequality~\eqref{eq:polygon_ineq} is
-  violated, i.e., if the longest side $e^{x_{k}}$ is not shorter than
-  the sum the others, then
-  \begin{equation}
-    \label{eq:f_n_violate}
-    f_{n}(x_{1},\ldots,x_{n})=\pi x_{k}.
-  \end{equation}
-
-
-  \begin{figure}
-    \centering
-    \input{figures/cyclicpolygon.pdf_tex}
-    \caption{A cyclic polygon}
-    \label{fig:cyclicpolygon}
-  \end{figure}
-
-
-  \subsection{Convexity}
-  \label{sec:convexity}
-
-  \section{Conformal uniformization of planar domains}
-  \subsection{Simply connected domains}
-
-  \begin{figure}
-    \centering
-    \includegraphics[width=0.49\textwidth]{uniformization/labyrinth/labyrithflow02.pdf}\hfill
-    \includegraphics[width=0.49\textwidth]{uniformization/labyrinth/triang_orig.pdf}\\
-    \smallskip
-    \includegraphics[width=\textwidth]{uniformization/labyrinth/labyrithrect02}
-    \caption{Mapping a labyrinth (top left) to a rectangle (bottom), and
-      the triangulation that was used.}
-    \label{fig:labyrinth1}
-  \end{figure}
-
-  \begin{figure}
-    \centering
-    \includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow03.pdf}\hfill
-    \includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow04.pdf}\hfill
-    \includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow05.pdf}
-    \caption{The same map from a labyrinth to a rectangle as shown in
-      Figure~\ref{fig:labyrinth1}, but the grid is 100 times, 1\,000
-      times, and 10\,000 times finer, respectively. Numerical artefacts
-      are beginning to show in the last picture.}
-  \end{figure}
-
-  \begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{planar_circles/all.pdf}
-  \caption{
-  Mapping a rectangle to a parallelogram.
-  All quadrilaterals in the image are cyclic quadrilaterals.
-  Note, in addition to the circle pattern generated by the quadrilaterals the upper example yields an S-isothermic circle pattern whereas the lower one does not.
-  }
-  \end{figure}
-  \todo{How to call the circle pattern? S-isothermic?}
-
-  \subsection{Riemann map with cyclic quadrilaterals}
-
-  \begin{figure}
-  \centering
-  \resizebox{0.4\textwidth}{!}{
-  \includegraphics[height=5cm]{planar_circles/riemann_shape_image.pdf}
-  }
-  \resizebox{0.9\textwidth}{!}{
-  \includegraphics[height=5cm]{planar_circles/riemann_shape_halfplane.pdf}
-  }
-  \resizebox{\textwidth}{!}{
-  \includegraphics[height=5cm]{planar_circles/riemann_shape_domain.pdf}
-  \includegraphics[height=5cm]{planar_circles/riemann_shape_circles.pdf}
-  }
-  \caption{
-  Riemann-map with cyclic quadrilaterals.
-  Corners with valence two in the original domain are modeled as triangles, upper left.
-  We first map to the upper half-plane.
-  Quadrilaterals adjacent to the point at infinity are removed.
-  Points opposite to the point at infinity have a prescribed boundary angle of $\pi$.
-  The four vertices in between have a fixed $u=0$.
-  By that quadrilaterals adjacent to the point at infinity are cyclic after the Moebius transformation to the disk, bottom.
-  }
-  \label{fig:circular_riemann}
-  \end{figure}
-
-  In this section we present the discrete conformal map from a domain made of squares to the unit disk.
-  \todo{SSE: Comment on ears in the cyclic Riemann map.}
-  \todo{SSE: Argue why the map is discrete conformal at edges incident to the vertex at infinity.}
-
-
-  \subsection{Multiply connected domains}
-
-  \begin{figure}
-  	\centering
-  	\resizebox{\textwidth}{!}{
-  	\includegraphics[width=0.25\textwidth]{planar_streams/arrow_cylinder.pdf}
-  	\hskip 0.01\textwidth
-  	\includegraphics[width=0.25\textwidth]{planar_streams/arrow_cylinder_image.pdf}\hfill
-  	\hskip 0.01\textwidth
-  	\includegraphics[width=0.46\textwidth]{planar_streams/arrow_cylinder_domain.pdf}
-  	}
-  	\resizebox{\textwidth}{!}{
-  	\includegraphics[width=0.25\textwidth]{planar_streams/triangle_cylinder.pdf}
-  	\hskip 0.01\textwidth
-  	\includegraphics[width=0.25\textwidth]{planar_streams/triangle_cylinder_image.pdf}\hfill
-  	\hskip 0.01\textwidth
-  	\includegraphics[width=0.46\textwidth]{planar_streams/triangle_cylinder_domain.pdf}
-  	}
-          	\resizebox{\textwidth}{!}{
-  	\includegraphics[height=10cm]{planar_streams/circular_stream_03_lines.pdf}
-  	\includegraphics[height=9.9cm]{planar_streams/circular_stream_03_mesh.pdf}
-          	}
-  \caption{
-  Mapping of multiply connected regions.
-  Conformal map of a topological cylinder with boundary components.
-  In all images the vertical boundaries are identified.
-  The boundary of the domain consists of the upper and lower boundary loops and a slit in the interior of the domain.
-  This can be interpreted as modeling a stream of incompressible fluid flowing around an obstacle with periodic boundary conditions.
-  \\
-  Top: Map from an arrow shaped slit to a horizontal slit with straight boundary conditions on the upper and lower boundary loops.
-  The point on the left of the arrow tip is mapped to the left end of the horizontal slit.
-  The point on the right side is mapped to the right end.
-  \\
-  Middle: Same setup as above using a triangle as third boundary component.
-  Note that by symmetry the upper and lower corner of the triangle are mapped to the same point in the image of the map.
-  \\
-  Bottom: Three circular boundary components are mapped to horizontal slits.
-  }
-  \end{figure}
-
-  \subsection{Schwartz-Christoffel comparison}
-  Books: \cite{driscoll2002schwarz, nehari1952conformal, courant2005dirichlet, ford1951automorphic}
-
-  \section{Uniformization of spheres}
-  \subsection{Uniformization with euclidean functional}
-  \subsection{Conformally equivalent spherical meshes, definition through constraint to the round sphere}
-  \subsection{Spherical functional, Hessian, non-convexity}
-  \subsection{Computation with spherical functional}
-
-  \begin{figure}
-      \centering
-      \resizebox{\textwidth}{!}{
-      \includegraphics[height=5cm]{spherical/cube_image.pdf}
-      \includegraphics[height=5cm]{spherical/cube_domain.pdf}
-      \includegraphics[height=5cm]{spherical/tetrahedron_image.pdf}
-      \includegraphics[height=5cm]{spherical/tetrahedron_domain.pdf}
-      }
-  \caption{Mapping conformally to the sphere using the spherical functional and a direct spherical layout process. The map is normalize such that the center of mass of vertices is the center of the sphere.}
-  \label{fig:spherical_examples}
-  \end{figure}
-
-  It is possible to use the spherical functional to calculate spherical uniformizations even if it is non-convex. In this case a numerical optimization has to find a saddle point in the energy landscape. This is due to the fact that the direction $v=(1,\ldots,1)$ is a negative direction of the Hessian. That means shrinking or enlarging all scale factors at once decreases the value of the energy. We use a simple yet effective trick that enables us to find a critical point for certain examples. Define the reduced functional
-  \begin{equation}
-  \label{eq:reduced_spherical}
-  \tilde S_{\it sph}(u)=\max_t \left\{S_{\it sph}(u + tv)\right\}
-  \end{equation}
-  Now minimize the reduced functional $\tilde  S_{\it sph}$. By this we can create examples that would not be possible using simple minimization, see Figure~\ref{fig:spherical_examples}.
-
-  \subsection{Euclidean uniformization of spheres}
-
-  \begin{figure}
-      \centering
-      \resizebox{\textwidth}{!}{
-      \includegraphics[height=10cm]{bear_torus/baer_quads.pdf}
-      \includegraphics[height=10cm]{bear_torus/baer_cuts.pdf}
-      \includegraphics[height=10cm]{bear_torus/cover_triangulation_rectangle.pdf}
-      \includegraphics[height=10cm]{bear_torus/cover_triangulation.pdf}
-  }
-  \caption{
-  A discrete bear model is mapped to the plane.
-  Four cone-like singularities of angle $\pi$ are chosen at the arms and legs to reduce the conformal distortion.
-  The singularities can be interpreted as branch points of a two-sheeted cover of the bear forming a topological torus.
-  The corresponding universal cover is generated by euclidean translations, the fundamental domain can be chosen to be an approximate rectangle, middle.
-  The group of translations is a subgroup of the group generated by the rotations around the singularities about and angle of $\pi$. In a fundamental domain the branch vertices lie in the middle of edges, right.
-  }
-  \label{fig:bear}
-  \end{figure}
-
-  A branched cover of a topological sphere with four branch points is a topological torus.
-  We exploit this fact to calculate parameterizations of triangulations with spherical topology.
-  There are two ways to realize this.
-
-  We pick four vertices of the spherical triangulation. We create a two-sheeted branched cover of the triangulation by glueing two copies along paths connecting the selected vertices.
-  This procedure is parallel to the creation of discrete elliptic curves described in Section~\ref{sec:discrete_algebraic_curves}.
-  The resulting surface is a topological torus and can be uniformized using the euclidean functional and a layout in the plane.
-  The uniformizing group is generated by two translations.
-  This group is a subgroup of the group generated by rotations around the branch vertices.
-  Hence we can as well prescribe cone angles of $\pi$ at the selected vertices and calculate a direct map to the plane.
-  The universal cover is then generated by rotations.
-
-  We apply this procedure to a model of a bear, see Figure~\ref{fig:bear}. To create the triangle layout we cut the model open along an edge tree including the branch vertices, see the second picture in the Figure.
-
-  \section{Uniformization of tori}
-  \label{sec:tori}
-
-  \subsection{Uniformization with euclidean functional}
-
-  \subsection{Tori given by Schottky data}
-
-  \begin{figure}
-  \centering
-      \resizebox{\textwidth}{!}{
-      \includegraphics[height=4cm]{schottky_g1/res50_ni_image.pdf}
-      \includegraphics[height=3.9cm]{schottky_g1/res50_ni_cover.pdf}
-      }
-      \caption{Discrete Riemann surface of genus $1$ given by Schottky data (left). Universal cover and fundamental regions (right). $A=-15-2.5i$, $B=0.1-0.3i$, $\mu=-0.3$}
-  \label{fig:schottky_g1}
-  \end{figure}
-
-  Let $C_1,C'_1\ldots,C_g,C'_g$ be disjoint circles in $\hat{\C}$.
-  \begin{definition} A classical Schottky group $G$ is a Kleinian group with generators $\sigma_1,\ldots,\sigma_g$ satisfying
-  \[
-  \frac{\sigma_i z - B_i}{\sigma_i z - A_i} = \mu_i \frac{z - B_i}{z - A_i},
-  \quad\quad\quad 0 < \left|\mu_i\right|<1,
-  \]
-  where $\sigma_i$ maps the exterior of $C_i$ onto the interior of $C'_i$. The points $A_i$ and $B_i$ lie inside the circles $C_i$ and $C'_i$ respectively.
-  \end{definition}
-
-  \subsection{Algebraic curves}
-  \label{sec:discrete_algebraic_curves}
-
-  \begin{figure}
-      \centering
-      \resizebox{\textwidth}{!}{
-      \includegraphics[width=0.5\textwidth]{elliptic_curves/tetrahedron.pdf}
-      \includegraphics[width=0.5\textwidth]{elliptic_curves/square.pdf}
-      \includegraphics[width=0.5\textwidth]{elliptic_curves/generic.pdf}
-      }
-      \caption{Discrete versions of elliptic functions. Left: The lattice $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$. On the sphere the branch points form a regular tetrahedron. Middle: $\tau=i$, branch points on $\hat \C$ are located in a square on the equator. Right: Branch points in general position.}
-      \label{fig:p_functions}
-  \end{figure}
-
-  Every Riemann surface is conformally equivalent to an algebraic curve
-  \[C=\left\{(\lambda,\mu)\in \C^2 \mid \mathcal P(\lambda,\mu)=0\right\}\]
-  where $\mathcal P$ is an irreducible polynomial.
-  This curve in turn can be represented as branched covering of the Riemann sphere $\hat{\C}$ with branch points at locations $\lambda_i$ with \[\frac{\partial\mathcal P}{\partial \mu}\Bigr|_{\lambda=\lambda_i} = 0.\]
-  In the discrete setting we represent discrete algebraic curves as triangulations of the respective branched covering of $\S^2$.
-  We only cover 2-sheeted coverings here as this includes our main examples, i.e., elliptic curves and hyperelliptic curves, see also Section~\ref{sec:hyperelliptic}.
-  We construct a triangulation of such a 2-sheeted covering as follows.
-  Let $S$ be a Riemann surface with genus $g\geq 1$.
-  Let $\lambda_1,\ldots,\lambda_{2g+2}\in \hat\C$ be the branch points of the corresponding algebraic curve.
-  Let $\sigma :\hat\C\to\S^2$ be the stereographic projection mapping $\infty$ to the north pole of the sphere, $0$ is mapped to the south pole, and the unit circle is mapped to the equator.
-  Choose points $p_1,\ldots,p_n\in\S^2$ such that the convex hull $P$ of $\{\sigma\lambda_1,\ldots,\sigma\lambda_{2g+2},p_1,\ldots,p_n\}$ forms a convex polyhedron.
-  In particular $P$ forms a cyclic polyhedron.
-
-  Take a second copy $\hat P$ of $P$. $P$ and $\hat P$ will serve as the first and second sheet of the 2-sheeted covering.
-  Find non-intersecting edge paths $\gamma_1,\ldots,\gamma_{g+1}$ each connecting a pair of branch points on $P$ and simultaneously on $\hat P$.
-  Note that the resulting surface does not depend on the choice of $\gamma$.
-  We cut the two sheets along $\gamma_1,\ldots,\gamma_{g+1}$ and identify the sides of the cuts transversely across $P$ and $\hat P$.
-  By this procedure the end points $\lambda$ are identified between the two sheets $P$ and $\hat P$.
-
-  We use this construction to calculate discrete versions of elliptic functions.
-  We start with the branch data $\lambda_1,\ldots,\lambda_{4}$ and create a triangulated two-sheeted cover branched at the given $\lambda$s, see Figure~\ref{fig:p_functions}.
-
-  \subsubsection{Normalization of branch data}
-  The description of conformal equivalence is M{\"o}bus invariant. Thus we can apply transformations to the branch data $\lambda_1,\ldots,\lambda_{g+1}$ before creating the discrete algebraic curve as described above. Find the M{\"o}bius transformation $T$ such that
-  \[\sum_{i=1}^{2g+2}\sigma T \lambda_i = 0,\]
-  i.e., the center of mass of the branch points if the origin, see~\cite{Springborn05}.
-
-  \subsection{Discrete elliptic curves - numerical convergence}
-
-  An algebraic curve of genus $g=1$ is called an elliptic curve. We model discrete elliptic curves as described in Section~\ref{sec:discrete_algebraic_curves}.
-
-  The goal of this section is to provide insights into the convergence behavior of discrete uniformization as presented above. In particular we look into the convergence of period matrices as the number of points that approximate a given Riemann surface increases. For genus one algebraic curves we can calculate period matrices explicitly using the invariants $\{g_2,g_3\}$ of the elliptic surface. Let $\lambda_1,\lambda_2,\lambda_3,\lambda_4\in\C$ be the branch points of the curve such that $\lambda_1+\lambda_2+\lambda_3=0$ and $\lambda_4=\infty$. Then the curve is given as
-  \begin{eqnarray*}
-  \mu^2&=&4(z-\lambda_1)(z-\lambda_2)(z-\lambda_3)\\
-  &=&4z^3+4(\lambda_1\lambda_2+\lambda_2\lambda_3+\lambda_3\lambda_1)z - 4\lambda_1\lambda_2\lambda_3\\
-  &=&4z^3-g_2z-g_3.
-  \end{eqnarray*}
-  The period matrix $[\tau]$, also called the modulus of the curve, can be calculated using the periods of the elliptic lattice $\{\omega_1,\omega_3\}$ such that $\tau = \frac{\omega_2}{\omega_1}$. These can be calculated from the invariants $\{g_2,g_3\}$, e.g., using {\sc Mathematica}s build-in function {\tt WeierstrassHalfPeriods[$\{g_2,g_3\}$]}, see~\cite{WeierstrassHalfPeriods_website}.
-
-  Let $\lambda_1, \lambda_2, \lambda_3, \lambda_4 \in \C$ be the branch points of an elliptic curve $C$. We create a discrete version of the curve by choosing $n$ points $p_1,\ldots,p_n$ equally distributed on $\S^2$. The triangulation for one sheet of the discrete curve is the convex hull of $\{\lambda_1,\ldots,\lambda_4,p_1,\ldots, p_4\}$. Choose non-intersecting edge-paths connecting the pairs $(\lambda_1,\lambda_2)$ and $(\lambda_3,\lambda_4)$. To create a doubly covered sphere we glue a second copy of the triangulated sphere transversely along corresponding paths, see Section~\ref{sec:discrete_algebraic_curves}.
-
-  After discrete uniformization we calculate $\hat \tau$. We normalize $\tau$ and $\hat \tau$ such that $|\tau|>1$ and $|\re(\tau)| < \frac{1}{2}$. We can now compare the modulus $\tau$ of the smooth structure with the number $\hat \tau$ derived from the discrete uniformization of a triangulation with the same branch points. The discretization error is defined as $|\tau-\hat \tau|$.
-
-  \subsubsection{Subdivided icosahedron}
-
-  \begin{figure}
-  \resizebox{\textwidth}{!}{
-  \includegraphics[width=0.35\textwidth]{convergence/icosubdivision01.pdf}\hfill
-  \includegraphics[width=0.32\textwidth]{convergence/icosubdivision01_example01.pdf}
-  }
-  \caption{Numerical convergence for seven subdivision steps of an icosahedron.
-  Four vertices of the base icosahedron serve as branch points of a torus.
-  Vertices are projected to the unit sphere after subdivision.
-  The error $|\tau - \hat\tau|$ plotted against the number of vertices of one sheet of the double cover (left).
-  The linear regression of logarithmic data has a slope of $\alpha\approx-0.88$.
-  Universal cover of step three of the series (right).
-  }
-  \label{fig:convergence_subdivision}
-  \end{figure}
-
-  In this experiment we start with a regular icosahedron and choose $\lambda_1,\ldots,\lambda_4$ to be four of the vertices. The remaining points act the role of $p_1,\ldots,p_n$ and we construct the discrete elliptic curve as described above. To study the dependence of $|\tau-\hat \tau|$ on the number of points we increase $n$ by subdivision and subsequent projection onto $\mathbb S^2$. Every triangle is split into four. New vertices are inserted in the middle of each edge then we project onto the unit sphere. By this procedure we yield exponential growth of vertex number while at the same time the shape of the triangles stays almost regular.
-
-  Figure~\ref{fig:convergence_subdivision} shows the result of this convergence experiment. The error $|\tau-\hat \tau|$ depends exponentially on the number of points
-  \[|\tau-\hat \tau|=\mathcal O (n^\alpha)\]
-  with $\alpha \approx -0.88$.
-
-  \subsubsection{Triangle quality}
-
-  \begin{figure}
-  \includegraphics[width=\textwidth]{convergence/quality_rand_points01_maxmultiratio_2.pdf}
-  \caption{Plotting the error $|\tau - \hat\tau|$ against the number of vertices for triangulations with varying quality (left). Requiring a certain level of quality reveals a clear convergence slope of $\alpha\approx -0.63$ (right).}
-  \label{fig:convergence_quality}
-  \end{figure}
-
-  In the second convergence experiment we choose $p_1,\ldots,p_n\in \mathbb S^2$ randomly. We want to analyze how the quality of the triangulation affects the convergence behavior. We define quanities that measure the regularity of the triangulation based on length cross-ratios given at edges or length multi-ratios given at faces of the triangulation
-   \todo{SSE: $\lcr$ not yet defined}
-  \begin{eqnarray*}
-  	Q_{\lcr}(e) &:=& \frac{1}{2}\left(\lcr(e) + \frac{1}{\lcr(e)}\right) - 1\label{eq:quality_lcr}\\
-  	Q_{\lmr}(f) &:=& \frac{1}{2}\left(\lmr(f) + \frac{1}{\lmr(f)}\right) - 1\label{eq:quality_lmr}.
-  \end{eqnarray*}
-  Here $\lcr$ is the length cross-ratio of an edge. $\lmr$ is the length multi-ratio defined on faces as $\lmr(f)=\prod_{e \in f}\lcr(e)$.
-
-  Figure~\ref{fig:convergence_quality} (left) shows a plot of $2600$ samples ranging from $n=20$ to $n=1500$. No clear convergence behavior is visible. Plotting only samples with a certain mesh quality as defined by the quality measures above reveals a linear upper bound for the error $|\tau-\hat \tau|$. For the plot in Figure~\ref{fig:convergence_quality} (right) we selected only samples with $\max_e \{Q_{\lmr}(e)\} < 0.3$. Similar results can be obtained using the quality measures $\max_e \{Q_{\lcr}(e)\} < x$ or $\mean_e \{Q_{\lcr}(e)\} < x$.
-
-  The results from these two experiments assert that there is a exponential dependence of the discretization error on the number of points if a certain quality of the mesh is met. Tests with other subdivision configurations suggest that the constant $\alpha$ is not universal.
-
-  \subsection{Wente torus, conformal immersion}
-
-  \begin{figure}
-      \centering
-      \includegraphics[width=0.48\textwidth,valign=c]{wente_embedding/wente_1240_fundamental.pdf}\hfill
-      \includegraphics[width=0.48\textwidth,valign=c]{wente_embedding/wente_1240_domain.pdf}
-      \caption{Uniformization of the Wente torus. Discretely sampled conformal immersion (left), domain of uniformization (right). Orange curves indicates the lattice of the flat torus in the domain. The faces of the polyhedral surface are approximate conformal squares. In the discrete uniformization their images are approximately squares, as it should be.}
-  \end{figure}
-
-
-  \section{Uniformization of surfaces of higher genus}
-
-  \subsection{Conformally equivalent hyperbolic meshes, definition through constraint to the hyperboloid}
-  \subsection{Hyperbolic functional, Hessian}
-
-  \todo{BS: Hyperbolic Funktional}
-  \begin{equation}
-    \label{eq:hyperbolic_fuctional}
-  \end{equation}
-
-  \begin{figure}
-      \centering
-      \resizebox{\textwidth}{!}{
-          \includegraphics[height=10cm]{genus3/genus3.pdf}
-          \includegraphics[height=10cm]{genus3/canonical_mesh.pdf}
-          \includegraphics[height=10cm]{genus3/canonical_cover.pdf}
-      }
-      \caption{Discrete uniformization of an embedded triangulated surface of genus $3$. Fundamental polygon with mesh and group generators (middle). Fundamental polygon normalized to canonical form. Universal cover (right).}
-      \label{fig:embedded_genus_3}
-  \end{figure}
-
-  \begin{figure}
-      \centering
-      \resizebox{0.8\textwidth}{!}{
-          \includegraphics[height=10cm]{genus5/genus5.pdf}
-          \includegraphics[height=10cm]{genus5/fundamental.pdf}
-      }
-      \caption{An embedded triangulated surface of genus $5$ (left). Discrete uniformization and fundamental polygon with  group generators in the Poincar\'e disk (right).}
-      \label{fig:embedded_genus_5}
-  \end{figure}
-
-
-
-
-
-  \subsection{Computation of fundamental domains and Fuchsian groups}
-  \label{sec:fundamental_domains}
-
-  \begin{figure}
-  \centering
-  \resizebox{0.8\textwidth}{!}{
-  \includegraphics[height=3cm]{algorithm/step1_boundary.pdf}
-  \includegraphics[height=3cm]{algorithm/step2.pdf}
-  }\\
-  \resizebox{0.8\textwidth}{!}{
-  \includegraphics[height=3cm]{algorithm/step3.pdf}
-  \includegraphics[height=3cm]{algorithm/contract_combined.pdf}
-  }\\
-  \resizebox{0.8\textwidth}{!}{
-  \includegraphics[height=3cm]{algorithm/step5.pdf}
-  \includegraphics[height=3cm]{algorithm/step5_5.pdf}
-  }
-  \caption{
-  Creating a fundamental polygon of a hyperelliptic surface:
-  Realizing a hyperbolic metric of a discrete surface (upper-left) creates a fundamental region with polygonal boundary.
-  Straighten the edges between vertices of the cut-graph (points) creates a polygon with geodesic edges (upper-right and middle-right).
-  Cut-and-paste operations lead to a fundamental polygon with only one vertex and opposite sides identified, all vertices are equivalent under the group action (middle-right).
-  We normalize the group such that the intersection of the axes is the origin (bottom).
-  }
-  \label{fig:fundamental_polygon_algorithm}
-  \end{figure}
-
-  In this section we describe how to calculate Fuchsian groups and corresponding fundamental domains for a given surface.
-
-  Let $R$ be a Riemann surface and let $T=(V, E, F)$ be a discretization of $R$ with vertices $v\in V$, edges $e\in E$, and faces $f\in F$. Let $\lcr_R E\to \R^+$ be the euclidean discrete conformal structure of $T$ and $\tilde l:E\to \R^+$ a realization. Let $u:V\to \R$ be the minimizer of the hyperbolic functional~\ref{eq:hyperbolic_fuctional} for $\tilde l$. Then $l:E \to \R^+, e_{\it ij}\mapsto 2\arsinh(\tilde l(e_{\it ij})\exp\{\frac{1}{2}(u_i+u_j)\})$ is the unique hyperbolic metric without cone singularities that is by definition conformally equivalent to~$\tilde l$, see Section~\ref{sec:discr-conf-equiv}.
-
-  For $l$ we create a simply-connected realization by breadth-first enumeration of the triangles of $T$. As a different approach one could use a shortest-path scheme as described in \cite{EricksonH02}.  The resulting domain has boundary edges and vertices. Each boundary edge is identified with a unique partner. Each boundary vertex is identified with one or more other vertices. On the surface the boundary of the domain corresponds to a connected system of loops around surface handles, see, e.g., Figure~\ref{fig:lawson_embedding} (left).
-
-  In a first step we create a simplified domain by connecting vertices that are identified with more than two copies by geodesic arcs, see Figure~\ref{fig:fundamental_polygon_algorithm} (top-left and top-middle). Again a geodesic boundary arc is identified with a unique copy. This identification gives rise to a group of isometries $G$ as identified arcs have the same length. $G$ is a Fuchsian group of the first kind. The domain bounded by geodesic arcs is a fundamental domain of $G$, see Figure~\ref{fig:fundamental_polygon_algorithm} (top-right).
-
-  In addition to breadth first layout we can also predefine the system of loops on the surface to prescribe the combinatorics of the fundamental domain and its identifications. This is however not always possible due to the combinatorics of the triangle mesh, i.e., a small valence at the base point of the loops forces the fundamental polygon to have more than one vertex. In such a situation we proceed by reducing the domain by edge contraction operations to arrive at a fundamental domain with a single identified vertex.
-
-  The algorithm to reduce a given fundamental polygon to a polygon with only one identified vertex is as follows. Select a vertex $v_0$ to be the base vertex of the polygon. Select an edge between $v_0$ and another vertex $v_1$. In the hyperbolic plane move $v_1$ onto $v_0$ by moving all copies of $v_0$ to the corresponding copies of $v_1$, possibly outside of the domain. Move adjacent geodesic arcs correspondingly, see Figure~\ref{fig:fundamental_polygon_algorithm} (bottom-left). In the new domain $v_1$ is not a vertex anymore. Proceed until the domain has only one vertex. This process can also be seen as a sequence of cut-and-paste operations reducing the number of vertices $v\neq v_0$ one by one. A proof that this leads to a valid fundamental domain can be found in \cite[p. 48]{Jost2007}.
-
-  It can be tedious to find a system of loops on a surface that lead to a specific order of sides in the fundamental polygon. We give algorithms that transform a given fundamental polygon and the corresponding group presentation to canonical form, i.e., the order of polygon sides is $aba'b'cdc'd'\cdots$. Here the side $a$ is identified with side $a'$. Additionally we give an algorithm that transforms the domain to opposite identification form, i.e., $abcd\cdots a'b'c'd'\cdots$.
-
-  During all transformations of the polygon and the group presentation we like to minimize the number of group element products. This is due to numerical reasons. Hyperbolic motions tend to accumulate numerical errors quite fast when building products, see~\cite{Floyd2002}.
-
-  \subsubsection*{Canonical Fundamental Domain.}
-
-  \begin{figure}
-  \centering
-  \resizebox{\textwidth}{!}{
-  \includegraphics[width=5cm]{algorithm/canonical_step0_labels.pdf}
-  \includegraphics[width=5cm]{algorithm/canonical_step1_labels.pdf}
-  \includegraphics[width=5cm]{algorithm/canonical_step2_labels.pdf}
-  }
-  \caption{Motions to transform a given fundamental domain into canonical form. The shaded area is the current fundamental polygon. Step~$1$: Choose the linked pair $a$, $b$. Cut at $c$ and $b$ and identify via $B$ to put side $a$ next to side $b$. Choose linked pair $e$, $f$. Cut between $e'$ and $d'$ and identify via $E'$ to put side $e'$ next to $f'$. The remaining handle $cdc'd'$ is already in place and we arrive at canonical form $aba'b'cdc'd'efe'f'$.}
-  \label{fig:canonical_algorithm}
-  \end{figure}
-
-  We start with a fundamental domain with a single vertex as explained above. Then choose sides $a$ and $b$ such that the order in the polygon is $a\cdots b \cdots a' \cdots b' \cdots$. We perform a cut-and-paste operation such that sides $a$ and $b$ are next to each other after transformation, see Figure~\ref{fig:cut-and-paste-canonical}. In order to minimize the number of products we choose $a$ and $b$ such the number of sides in between $a$, $b$, $a'$, and $b'$ is minimal. We proceed cutting as described before to bring $b$ next to $a'$ and analogously $a'$ next to $b'$. We end up with a new polygon and the order $aba'b'\cdots$. Repeat this algorithm for the rest of the sides to arrive at canonical form. A proof can be found in ~\cite{Jost2007}.
-
-  The number of products built during the transformation of a linked pair $a$, $b$ depends on the number of polygon sides between $a$, $b$, $a'$, and $b'$. Let $C$ be the number of sides between $a$ and $b$. Let $D$ and $E$ be the number of sides between $b$, $a'$, and $b'$ respectively. Then the total number of products in this transformation is $\Sigma=6C+4D+2E$. In step $1$, connecting $a$ and $b$, we can perform the cut-and-past operation using transformation $b$ and a cut between the end of $a$ and the end of $b$ in counter-clockwise order. This moves the intermediate sides between $a$ and $b$ out of the way for the next $2$ steps. By this we have a total number of products $\Sigma=2C+4D+2E$. We use a greedy implementation that chooses the smallest $\Sigma$ in each step to select $a$ and $b$. Alternatively one could enumerate the transformation tree and choose the cheapest path of all transformation sequences.
-
-  \begin{figure}
-  \centering
-  \resizebox{0.8\textwidth}{!}{
-  \includegraphics[width=5cm]{keen/canonical01_labels.pdf}
-  \includegraphics[width=5cm]{keen/keen01_labels.pdf}
-  }
-  \caption{The algorithm of Linda Keen to produce and strictly convex fundamental polygons. Start with a given canonical fundamental polygon $aba'b'cdc'd'$ with a corresponding relation $ABA'B'CDC'D'=1$ (left). For convenience labels are chosen such that both coincide. We choose the intersection $p_0$ of the axes of transformations $A$ and $B$ as base point for the new domain. The new vertices of the fundamental domain are calculated as $p_1=p_0\cdot B'A'$, $p_2=p_0\cdot A'$, $p_3=p_0\cdot B'$, and $p_4=p_0\cdot A'B'$. The vertices at the generators $C$ and $D$ are calculated from $p_4$.}
-  \label{fig:keen_polygon}
-  \end{figure}
-
-  By this procedure we get a canonically identified fundamental polygon. This polygon may be non-convex. Following the approach described in \cite{keen1966} we can move from this domain to a strictly convex one by selection of a different base point for the same group of transformations. Let
-  \[G=\left<A,B,C,D,\ldots\in \mathit{PSL}(2,\mathbb R)\mid ABA'B'CDC'D'\ldots=1\right>\]
-  a canonically presented group and $aba'b'cdc'd'\ldots$ be a corresponding fundamental polygon, see Figure~\ref{fig:keen_polygon} (left). The elements are given such that $A(a)=a'$ and $B(b')=b$. Here we use the notation $A':=A^{-1}$. Then the axes of the generators $A$ and $B$ intersect in a point $p_0$. Choosing $p_0$ as the base point of a new fundamental polygon renders it convex and uniquely defined for the given group and presentation. See Figure~\ref{fig:keen_polygon} for an genus $2$ instance of this algorithm.
-
-  \begin{figure}
-  \centering
-  \resizebox{0.5\textwidth}{!} {
-  \input{data/algorithm/cutCanonical.pdf_t}
-  }
-  \caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=A'C_i$. Their inverses $C_i'$ become $\hat{C_i}'=C_i'A$}
-  \label{fig:cut-and-paste-canonical}
-  \end{figure}
-
-  \subsubsection*{Opposite Sides Fundamental Domain.}
-
-  \begin{figure}
-  \resizebox{\textwidth}{!}{
-  \includegraphics[width=5cm]{algorithm/opposite_step0_labels_start.pdf}
-  \includegraphics[width=5cm]{algorithm/opposite_step0_labels.pdf}
-  \includegraphics[width=5cm]{algorithm/opposite_step1_labels.pdf}
-  }
-  \resizebox{0.666666\textwidth}{!}{
-  \includegraphics[width=5cm]{algorithm/opposite_step2_labels.pdf}
-  \includegraphics[width=5cm]{algorithm/opposite_step3_labels.pdf}
-  }
-  \caption{Algorithm example: Start with group relation $ABCDC' EFA'E'D'F'B' = 1$. Step~$1$: Cut from the start of $d'$ to the end of $c'$ and identify via $C'$ to move $C'$ in front of $D'$. The resulting relation is clustered such that the elements of the first half form the inverses of the second half: $ABCDEFA'E'C'D'F'B' = 1$. We now sort elements $A,\ldots,B$ to match the order of $A',\ldots,F'$ or vice versa. Step~$2$: Cut at $a'$ and $b$ and identify via $B$ to move $B$ in front of $A'$. We get relation $ACDEFBA'E'C'D'F'B' = 1$. Step~$3$: Cut between $d'$ and $e$ and identify via $E$ to move $E$ in front of $C$. We get $AECDFBA'E'C'D'F'B' = 1$ as the final relation and a fundamental polygon with oppositely identified sides.}
-  \label{fig:opposite_algorithm}
-  \end{figure}
-
-  \begin{figure}
-  \centering
-  \resizebox{0.3\textwidth}{!} {
-  \input{data/algorithm/moveElement.pdf_t}
-  }
-  \caption{Move element $A$ in front of $B$ in a relation that moves counter-clockwise around the base vertex. Choose the upper cut (dashed lines) and paste via transformation $A'$ moving side $a'$ to $a$. Or cut at the lower one and paste via transformation $A$.}
-  \label{fig:cut-and-paste-motion}
-  \end{figure}
-
-  A fundamental polygon identified by opposite sides has a side ordering $abcd\cdots a'b'c'd'\cdots$. A corresponding relation of the group of hyperbolic translations is $AB'CD'\cdots=1$ given that a transformation $X$ maps side $x$ to $x'$.
-
-  We give two algorithms to transform a given fundamental domain into an opposite sides domain.
-  For the first algorithm we show that it terminates and yields the correct result. However we cannot control the number of products used during the transformation. The second algorithm is heuristic and minimizes the number of products. It has proven to terminate for all of our examples.
-
-  We use the canonical form of fundamental polygons as an intermediate step in the process of transforming a given fundamental domain into opposite sided form. As shown above we can transform any domain into canonical form. In particular we can transform an abstract oppositely identified polygon into canonical form using the algorithm from above. All of the steps conducted during this transformation can be undone. We get a sequence of cut-and-paste operations transforming a canonical fundamental polygon into opposite sides form. Combining the sequence that transforms a general fundamental polygon into canonical form with the transform that creates the opposite form from the canonical one we get required sequence on transformations on any given domain.
-
-  This version of the algorithm is not optimal with respect to the number of products used in the sequence of transformations. In particular if the input polygon is close to opposite sides form already the algorithm destroys this structure first and rebuilds it from the canonical form.
-
-  In all examples we therefor use a different heuristic algorithm. We transform a given fundamental polygon and group presentation to opposite sides form (see, e.g., Figure~\ref{fig:fundamental_polygon_algorithm} bottom-middle) using the following sequence of transformations.
-
-  For a given fundamental polygon and the ordering of its sides, we can reconstruct the relation of the group by moving around the base vertex on the surface. That means if we start with transformation $A$ moving side $a$ to $a'$ the next element in the relation belongs to the side next to $a'$ in counter-clockwise order. We proceed until we get back to element $A$. Note that we could have chosen clockwise orientation, but for drawing pictures we stick to counter-clockwise.
-
-  For an oppositely identified fundamental polygon (and for canonically identified polygons as well) the order of transformations in the relation has the same structure as the sides of the polygon (possibly after renaming of sides). For example the group relation corresponding to a polygon $ab'cd'a'bc'd$ is $ABCDA'B'C'D'=1$.
-
-  For the order of group elements in the relation we give cut-and-paste sequences that move single elements to different locations in the relation leaving all other elements in place. Using these transformations we normalize the polygon as follows.
-
-  \begin{compactitem}
-  \item[1] Find largest sequence of different (excluding inverse) generators in the relation.
-  \item[2] Move missing elements into the sequence such that it forms a basis for the group.
-  \item[3] Sort elements in the sequence to match the order of the corresponding inverse elements.
-  \end{compactitem}
-
-  Let the order of sides in the polygon be $a' \cdots b \cdots a \cdots$. The corresponding cut-and-paste operation that moves the group element $A$ in front of $B$ is one of
-
-  \begin{compactitem}
-  \item Cut from the end of $a$ to the start of $b$ and glue using $A$.
-  \item Cut from the start of $a'$ to the start of $b$ and glue via $A'$.
-  \end{compactitem}
-
-  Choose the one with the lowest number of products, see Figure~\ref{fig:cut-and-paste-motion}. If the order of sides in the polygon is $a' \cdots a \cdots b \cdots$ we can however not perform the operation, the resulting domain would be disconnected. We therefor define the cost for such an operation as infinite. In step 2 we minimize over all possible transformations that move a selected element into the sequence. We do not show here that the cost is always a finite during the algorithm and call this algorithm heuristic due to this fact. Depending on the sort algorithm we use in step 3 we have the freedom to choose between the motion of the inverse elements or their partners. In our examples this gives enough freedom to create all oppositely identified fundamental domains. See Figure~\ref{fig:opposite_algorithm} for an example of this algorithm.
-
-
-
-  \subsection{Uniformization of hyperelliptic curves}
-  \label{sec:hyperelliptic}
-
-  \subsubsection{Fundamental domains domains for hyperelliptic surfaces}
-  \label{sec:hyperelliptic_domain}
-
-  \todo{SSE: speak about the opposite sides domain where the vertex, the center, and the mid-points of edges are branch points}
-
-  \subsubsection{Incidence theorem for hyperelliptic surfaces}
-
-  \subsubsection{Hyperelliptic vs. non-hyperelliptic curves}
-  \label{sec:non-hyperelliptic}
-
-  \begin{figure}
-  \centering
-  \resizebox{!}{7cm}{
-  \rotatebox{90}{
-  \includegraphics[width=0.4\textwidth]{non-hyperelliptic/tetra_symmetric_hyperelliptic.pdf}
-  }
-  \rotatebox{90}{
-  \includegraphics[width=0.4\textwidth]{non-hyperelliptic/non-hyperelliptic-symmetric-with-closeup.pdf}
-  }
-  }
-  \caption{Hyperelliptic vs. non-hyperelliptic. In the hyperelliptic case axes of hyperbolic translations meet in a common point. The fundamental polygon is chosen symmetric with respect to the hyper elliptic involution (left). If the symmetry of the surface is broken the axes do not meet and no symmetric domain can be found (right).}
-  \label{fig:non-hyperelliptic}
-  \end{figure}
-
-  Consider the elliptic-hyperelliptic surface that is constructed as follows. Take two copies $\hat T$ and $\tilde T$ of the elliptic surface $y^2=x(x^3 - 1)$. Each of the copies is conformally equivalent to a torus with the modulus $\tau=\frac{1}{2}+\sin(\frac{\pi}{3})i$. Such a torus can be realized as the double cover of a generating regular tetrahedron branched at its four vertices.
-
-  On both copies of this torus pick four points $\hat\lambda_1,\ldots,\hat\lambda_4$ and $\tilde\lambda_1,\ldots,\tilde\lambda_4$ in the center of the faces of the tetrahedron belonging to one of the sheets of the elliptic surface. On $\hat T$ choose paths connecting the pairs $(\hat\lambda_1,\hat\lambda_2)$ and $(\hat\lambda_3,\hat\lambda_4)$. On $\tilde T$ choose corresponding paths. Cut $\hat T$ and $\tilde T$ along theses paths and glue corresponding sheets transversally. The resulting surface $T$ is a four sheeted cover of the tetrahedron with genus $g = 3$.
-
-  \begin{theorem}
-  $T$ is a hyperelliptic Riemann surface.
-  \begin{proof}
-  Let $e_1,\ldots,e_6$ be the edges of the generating regular tetrahedron. Consider the reflection $\sigma_i$ across a plane through the midpoint of edge $e_i$ containing the opposite edge of $e_i$.  Because of the symmetry of the tetrahedron $\sigma_i$ induces an anti-holomorphic involution on $T$. There are six involutions belonging to the edges of the tetrahedron. Let $e_i$ and $e_j$ be two opposite edges. Then $\sigma_i \circ \sigma_j$ is a holomorphic involution of $T$. Its eight fix points are the mid points of $e_i$ and $e_j$.
-  \end{proof}
-  \end{theorem}
-
-  Figure~\ref{fig:non-hyperelliptic} (left) shows a uniformization of $T$ with an oppositely identified fundamental polygon. The surface is hyperelliptic, thus the generators axes meet in a common point. Disturbing the symmetry a little, e.g., by moving all points of the surface by some random offset destroys the hyperellipticity of the surface, see Figure~\ref{fig:non-hyperelliptic} (right).
-
-
-
-  \subsection{Lawson's surface}
-
-  In this section we present the Fuchsian uniformization of the Riemann surface of Lawson's genus 2 minimal surface in $\mathbb{S}^3$ \cite{Law1970}.
-  We use three different conformally equivalent representations of the surface and compare the resulting uniformizations.
-  Namely a stereographically projected embedded version, see Figure~\ref{fig:lawson_embedding}.
-  The model has been provided by Konrad Polthier~\cite{polthier97}.
-  The conformally equivalent algebraic curve $\mu^2=\lambda^6-1$, see Figure~\ref{fig:lawson_curve}.
-  And a conformally equivalent square-tiled surface glued from six squares, see Figure~\ref{fig:lawson_squares}.
-  All data presented in this section is made available on the {\sc DGD Gallery} \cite{gallery-lawson-webpage}.
-
-  For each of the representations we choose suitable fundamental domains that allow for the comparison of the uniformization.
-
-  \subsubsection{Hyperelliptic curve.}
-  \label{sec:lawson_curve}
-
-  \begin{figure}
-  	\centering
-  	\resizebox{!}{6cm} {
-  	\includegraphics[height=10cm]{lawson_curve/curve_canonical_cuts2.pdf}
-  	\includegraphics[height=10cm]{lawson_curve/curve_canonical_uniformization.pdf}
-  	}
-  	\resizebox{!}{6cm} {
-  	\includegraphics[height=10cm]{lawson_curve/curve_opposite_cuts.pdf}
-  	\includegraphics[height=10cm]{lawson_curve/curve_opposite_uniformization.pdf}
-  	}
-  	\resizebox{!}{6cm} {
-  	\includegraphics[height=10cm]{lawson_curve/curve_cyclic_cuts.pdf}
-  	\includegraphics[height=10cm]{lawson_curve/curve_cyclic_triangulation_cover.pdf}
-  	}
-  	\caption{Uniformization of Lawson's surface represented as algebraic curve $\mu^2=\lambda^6-1$. Triangulated double cover of the sphere branched at the roots of unity (left) with boundary of fundamental domain and axes of generators. Fuchsian uniformization and fundamental domain (right). Canonical domain (top), opposite sides domain (middle), and cyclic identification (bottom).}
-  	\label{fig:lawson_curve}
-  \end{figure}
-
-  Lawson's surface is conformally equivalent to the algebraic curve $\mu^2=\lambda^6-1$.
-  We model the surface as a two-sheeted cover of $\hat \C$ as described in Section~\ref{sec:discrete_algebraic_curves}. $\lambda_1,\ldots,\lambda_6$ are the 6th roots of unity.
-  See Figure~\ref{fig:lawson_curve}.
-
-  \textit{Canonical domain:}
-  For the canonical fundamental domain we pick $0$ to be the vertex of the domain and proceed as described in Section~\ref{sec:fundamental_domains}.
-  The points $p_1,\ldots,p_n$ are chosen such that the triangulation is almost regular on the sphere.
-  The system of loops on the surface is chosen such that each loop starts at vertex $0$ runs around two branch points and returns, see the red curves in Figure~\ref{fig:lawson_curve}, top-left.
-
-  For the visualization we truncate the triangles of the universal cover to fill the fundamental domain only.
-  Figure~\ref{fig:lawson_curve} shows the triangulation on $\hat \C$ (left) and the universal cover (right).
-  Red curves are the boundary of the fundamental domain.
-  We show them also pulled back onto $\hat \C$. Blue curves are closed geodesic loops on the surface.
-  They are the axis of hyperbolic motions identifying pairs of fundamental edges in the hyperbolic plane.
-
-  The branch points are clearly visible as the valence of the triangulation is doubled at these vertices.
-  The blue geodesic loops connect two branch points each.
-
-  \textit{Opposites sides domain:}
-  The opposite sides domain (second row) is chosen as described in Section~\ref{sec:hyperelliptic_domain}.
-  All axes of hyperbolic motions intersect in a branch point of the curve.
-  Red and blue geodesic arcs are dual to each other.
-  For the example model we chose a coarse discretization of the underlying curve and truncate the triangulation to fit into the fundamental domain.
-
-  \textit{Cyclically identified domain:}
-  We call the fundamental domain in the bottom row a cyclically identified domain.
-  This domain is chosen such that is corresponds to the domain suited for the square-tiled surface as described below.
-  You can imagine this system of loops if you take the canonical system of loops meeting at $0$ (top row of the Figure) and deform the loops until they touch at $\infty$.
-  By this move we introduce two more vertices on the fundamental polygon, namely the two vertices corresponding to $\infty$ on the two-sheeted cover.
-  The triangulation of the example model is created by a subdivision process.
-  Starting from  a triangulation with vertices at $0$, $\infty$, at branch points, and the mid-points on the equator in between the branch points we subdivide using a linear 4-to-1 split followed by a projection to the sphere. Thus the boundary of the fundamental domain is contained in the edge set of the triangulation. For the visualization of the universal cover we cut along these edges to draw the triangulation, Figure~\ref{fig:lawson_curve}, bottom-right.
-
-  \subsubsection{Stereographic embedding.}
-
-  \begin{figure}
-  	\centering
-  	\resizebox{!}{6cm} {
-  	\includegraphics[height=10cm]{lawson_embedding/embedding_canonical_cuts.pdf}
-  	\includegraphics[height=10cm]{lawson_embedding/embedding_canonical_uniformization.pdf}
-  	}
-  	\resizebox{!}{6cm} {
-  	\includegraphics[height=10cm]{lawson_embedding/embedding_opposite_cuts.pdf}
-  	\includegraphics[height=10cm]{lawson_embedding/embedding_opposite_uniformization.pdf}
-  	}
-  	\resizebox{!}{6.5cm} {
-  	\includegraphics[height=10cm]{lawson_embedding/embedding_cyclic_cuts.pdf}
-  	\includegraphics[height=10cm]{lawson_embedding/embedding_cyclic_triangulation_cover.pdf}
-  	}
-  	\caption{Uniformization of a euclidean embedding of Lawson's surface. Triangulated embedding with fundamental domain boundary and generator axes (left). Fuchsian uniformization with universal cover and fundamental domain (right). Canonical domain (top), opposite sides domain (middle), and cyclic identification (bottom).}
-  	\label{fig:lawson_embedding}
-  \end{figure}
-
-  Figure~\ref{fig:lawson_embedding}, top row, shows the Fuchsian uniformization of the Lawson surface with a canonical fundamental domain, see also Section~\ref{sec:fundamental_domains}.
-
-  Our embedded model of the Lawson surface of genus 2 realizes its hyperelliptic involution as a rotational symmetry.
-  Its symmetry axis meets the surface in six points. These fix points of the hyperelliptic involution correspond to the branch points of the hyperelliptic algebraic curve as seen in the example above. We uniformize this model and choose fundamental domains corresponding to the domains chosen in Section~\ref{sec:lawson_curve}. By this procedure we can visually compare the surfaces and get evidence on conformal equivalence of the smooth surfaces.
-
-  For the canonical fundamental domain we have to find a point on the surface that corresponds to $0$ or $\infty$ on the algebraic curve. There are of course four candidates as $0$ and $\infty$ correspond to two points each on the curve. We choose this point manually such that the fundamental domain exhibits the two reflectional symmetries seen in the domain of the curve.
-
-  The fundamental domain where opposite sides are identified is chosen as described in Section~\ref{sec:hyperelliptic_domain}. The rotational symmetry of the surface corresponds to the hyperelliptic involution of the surface. Its fix points, i.e. the intersection of the axis of symmetry with the surface, correspond to the branch points of the hyperelliptic curve. Thus the vertex of the fundamental polygon has to be a point on the symmetry axis of the surface. We choose one of the six points and proceed as explained in Section~\ref{sec:fundamental_domains} for oppositely identified polygons. As the system of loops forming the boundary of the polygon and their identifying axes are dual to each other the common intersection of generator axes must lie on an intersection with the symmetry axis as well, see Figure~\ref{fig:lawson_embedding}, middle-left.
-
-  The third fundamental polygon we present for the embedded surface corresponds to the square-tiled segmentation of the surface as described below. As in the uniformization of the hyperelliptic curve we have to deform the canonical polygon and introduce two new vertices corresponding to antipodal points of the current vertex on the curve. The hyperelliptic curve of the Lawson surface admits several anti-holomorphic involutions one of which interchanges $0$ and $\infty$. we also have these involutions on the embedded surface realized as reflections about symmetry planes containing the rotational symmetry axis. Hence we can find the new vertices of the fundamental polygon by reflection of the canonical root vertex about these symmetry planes, see Figure~\ref{fig:lawson_embedding}, bottom-left.
-
-  \subsubsection{Square-tiled surface.}
-
-  \begin{figure}
-  	\centering
-  	\resizebox{!}{6cm} {
-  	\raisebox{0.5cm}{
-  	\includegraphics[height=7.5cm]{lawson_squares/lawson_squares_figure.pdf}
-  	}
-  	\includegraphics[height=10cm]{lawson_squares/lawson_squares_triangulation_cover.pdf}
-  	}
-  	\caption{Uniformization of Lawson's surface given as metric square tiled surface (left). Fuchsian
-  uniformization and fundamental domain (right). Grey circles correspond to the branch points of algebraic curve, see Figure~\ref{fig:lawson_curve}.}
-  \label{fig:lawson_squares}
-  \end{figure}
-
-  The surface depicted in Figure~\ref{fig:lawson_squares}, left, is conformally equivalent to Lawson's surface. We calculate a uniformization using the discrete metric defined by the edge lengths of the squares and its diagonals. An adapted fundamental domain for this square-tiled translational surface arranges all squares around a single vertex, see Figure~\ref{fig:lawson_squares}, right. By comparison with Figure~\ref{fig:lawson_curve}, bottom, we see that the vertices in the center of the squares correspond to the branch points of the hyperelliptic curve representation of the surface. The black, grey, and white vertices correspond to the north and south pole of hyperelliptic realization.
-
-
-  \subsection{From Schottky to Fuchsian uniformization}
-
-  \begin{figure}
-  \resizebox{\textwidth}{!}{
-  \reflectbox{\includegraphics[width=10cm, angle=90]{schottky_g3/genus3_image2.pdf}}
-  \includegraphics[width=10cm]{schottky_g3/genus3_domain2.pdf}
-  }
-  \caption{
-  Left: Discrete version of a Riemann surface of genus $3$ given by Schottky data.
-  Circles with the same color are identified.
-  The Schottky group elements that map the blue and green circles onto each other map the exterior of the source circle onto the interior of the image circle and vice-versa.
-  The map corresponding to the purple circle is defined to map the interior of the outer circle to the interior of the inner circle. Stereographically projected image, the randomly chosen extra points of the triangulation are chosen such that the triangulation is close to regular where possible.
-  \\
-  Right: Fuchsian uniformization and universal cover in the Poicar\'e model of the hyperbolic plane. The boundary of the fundamental domain consists of  the Schottky circles and short paths connecting them (grey edges).}
-  \end{figure}
+\section{Introduction}
+
+\section{Basic definitions}
+
+\subsection{Cyclic polyhedral surfaces }
+
+
+emph{euclidean polyhedral surface} is a surface obtained from
+gluing euclidean polygons along their edges. (A \emph{surface} is a
+two-dimensional manifold, possibly with boundary.)  In other words, a
+euclidean polyhedral surface is a surface equipped with, first, an
+intrinsic metric which is flat except at isolated points where it has
+cone-like singularities, and, second, the structure of a CW complex
+with geodesic edges. The set of vertices contains all cone-like
+singularities. If the surface has a boundary, the boundary is
+polygonal and the set of vertices contains all corners of the
+boundary.
+
+\emph{Hyperbolic polyhedral surfaces} and \emph{spherical polyhedral
+surfaces} are defined analogously. They are glued from polygons in
+the hyperbolic and elliptic planes, respectively. Their metric is
+locally hyperbolic or elliptic, except at cone-like singularities.
+
+We will only be concerned with polyhedral surfaces whose faces are all
+cyclic, i.e., inscribed in circles. We call them \emph{cyclic
+polyhedral surfaces}. More precisely, we require the polygons to be
+cyclic before they are glued together. It is not required that the
+circumcircles persist after gluing; they may be disturbed by cone-like
+singularites. A polygon in the hyperbolic plane is considered cyclic
+if it is inscribed in a curve of constant curvature. This may be a
+circle (the locus of points at constant distance from its center), a
+horocycle, or a curve at constant distance from a geodesic.
+
+emph{triangulated surface}, or \emph{triangulation} for short, is a
+polyhedral surface all of whose faces are triangles.  All
+triangulations are cyclic.
+
+\subsection{Notation}
+
+We will denote the sets of vertices, edges, and faces of a CW
+complex~$\Sigma$ by $V_{\Sigma}$, $E_{\Sigma}$, and $F_{\Sigma}$, and
+we will often omit the subscript when there is no danger of confusion.
+For notational convenience, we require all CW complexes to be
+\emph{strongly regular}. This means that we require that faces are not
+glued to themselves along edges or at vertices, that two faces are not
+glued together along more than one edge or one vertex, and that edges
+have distinct enpoints and two edges have at most one endpoint in
+common. This allows us to label edges and faces by their vertices. We
+will write $\mathit{ij}\in E$ for the edge with vertices $i,j\in V$ and
+$\mathit{ijkl}\in F$ for the face with vertices $i,j,k,l\in V$. We will always
+list the vertices of a face in the correct cyclic order, so that for
+example the face $\mathit{ijkl}$ has edges $\mathit{ij}$, $\mathit{jk}$,
+$\mathit{kl}$, and $\mathit{li}$.
+
+The only reason for restricting our discussion to strongly regular CW
+complexes is to be able to use this simple notation. Everything we
+discuss applies also to general CW complexes.
+
+\subsection{Discrete metrics}
+\label{sec:discrete-metrics}
+
+The \emph{discrete metric} of a euclidean (or hyperbolic or
+spherical) cyclic polyhedral surface $\Sigma$ is the function
+$\ell:E_{\Sigma}\rightarrow\R_{>0}$ that assigns to each edge $ij$ its
+length $\ell_{ij}$. It satisfies the polygon inequalities (one side is
+shorter than the sum of the others):
+\begin{equation}
+\label{eq:polygon_ineq}
+% \forall i_{1}i_{2}\ldots i_{n}\in F_{\Sigma}:
+% \quad
+\left.
+\quad
+\begin{aligned}
+-\ell_{i_{1}i_{2}}+\ell_{i_{2}i_{3}}+&\ldots+\ell_{i_{n-1}i_{n}}
+>0\\
+\ell_{i_{1}i_{2}}-\ell_{i_{2}i_{3}}+&\ldots+\ell_{i_{n-1}i_{n}}
+>0\\
+&\vdots\\
+\ell_{i_{1}i_{2}}+\ell_{i_{2}i_{3}}+&\ldots-\ell_{i_{n-1}i_{n}}
+>0
+\end{aligned}
+\quad
+\right\}
+\quad
+\text{for all $i_{1}i_{2}\ldots i_{n}\in F_{\Sigma}$}
+\end{equation}
+
+In euclidean and hyperbolic geometry, the polygon inequalities are
+sufficient for the existence of a polygon with given edge
+lengths. Furthermore, a \emph{cyclic} polygon is uniquely determined
+by its edge lengths. Thus, the discrete metric determines the geometry
+of a cyclic polyhedral surface:
+
+If $\Sigma$ is a surface with the structure of a CW~complex and a
+function $\ell:E_{\Sigma}\rightarrow\R_{>0}$ satisfies the polygon
+inequalities~\eqref{eq:polygon_ineq}, then there is a unique euclidean
+cyclic polyhedral surface (and also a unique hyperbolic cyclic
+polyhedral surface) with CW~complex~$\Sigma$ and discrete
+metric~$\ell$.
+
+The edge lengths of a cyclic polygon in the sphere satisfy another
+independent inequality: The perimeter is less than $2\pi$.  the discrete metric of a
+spherical cyclic polyhedral surface satisfies the additional
+inequalities
+\begin{equation}
+\label{eq:spherical_polygon_ineq}
+\ell_{i_{1}i_{2}}+\ell_{i_{2}i_{3}}+\ldots+\ell_{i_{n-1}i_{n}}
+<2\pi
+\quad
+\text{for all $i_{1}i_{2}\ldots i_{n}\in F_{\Sigma}$.}
+\end{equation}
+Given a function $\ell:E_{\Sigma}\rightarrow\R_{>0}$ satisfying the
+inequalities~\eqref{eq:polygon_ineq}
+and~\eqref{eq:spherical_polygon_ineq}, then there is a unique cyclic
+spherical polyhedral surface with discrete metric $\ell$.
+
+\subsection{Discrete conformal equivalence}
+\label{sec:discr-conf-equiv}
+
+\begin{figure}
+\centering
+\resizebox{0.6\textwidth}{!}{
+\input{figures/spherical.pdf_t}
+\input{figures/hyperbolic.pdf_t}
+}
+\caption{Relations between euclidean edge lengths $l$ and conformally equivalent spherical (left) and hyperbolic (right) lengths $\tilde l$ respectively.}
+\label{fig:geometries}
+\end{figure}
+
+
+We define discrete conformal equivalence for cyclic polyhedral
+surfaces that are combinatorially equivalent. Thus, we may assume that
+the surfaces share the same CW complex $\Sigma$ equipped with
+different metrics.
+
+Two \emph{euclidean} cyclic polyhedral surfaces with
+discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are
+\emph{discretely conformally equivalent} if there exists a function
+$u:V_{\Sigma}\rightarrow\R$ such that
+\begin{equation}
+\label{eq:tilde_ell_euc}
+\tilde\ell_\mathit{ij}=e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij}.
+\end{equation}
+
+Two \emph{hyperbolic} cyclic polyhedral surfaces with
+discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are
+\emph{discretely conformally equivalent} if there exists a function
+$u:V_{\Sigma}\rightarrow\R$ such that
+\begin{equation}
+\label{eq:tilde_ell_hyp}
+\sinh\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
+= e^{\frac{1}{2}(u_{i}+u_{j})}\,
+\sinh\Big(\frac{\ell_\mathit{ij}}{2}\Big).
+\end{equation}
+
+
+Two \emph{spherical} cyclic polyhedral surfaces with
+discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are
+\emph{discretely conformally equivalent} if there exists a function
+$u:V_{\Sigma}\rightarrow\R$ such that
+\begin{equation}
+\label{eq:tilde_ell_sph}
+\sin\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
+= e^{\frac{1}{2}(u_{i}+u_{j})}\,
+\sin\Big(\frac{\ell_\mathit{ij}}{2}\Big).
+\end{equation}
+
+We will also consider ``mixed versions'': For example, a cyclic
+euclidean polyhedral surface with discrete metric
+$\ell:E_{\Sigma}\rightarrow\R_{>0}$ and a cyclic hyperbolic polyhedral
+surface with discrete metric $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$
+are discretely conformally equivalent if
+\begin{equation*}
+\sinh\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
+= e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij}.
+\end{equation*}
+
+begin{remark*}[Orientation]
+We need and will only consider oriented surfaces because the
+solutions of the conformal mapping problems that we treat are
+sufficiently unique. The situation is like in the classical smooth
+case: While one could consider the uniformization of nonorientable
+Riemann surfaces (by allowing anticonformal chart transition
+functions and discrete groups containing orientation reversing
+M\"obius transformations), this would not lead to anything
+essentially new: Due to uniqueness, the uniformization of an
+unorientable surface lifts to the oriented double cover.
+end{remark*}
+
+
+
+\section{Variational principle for discrete conformal maps (euclidean version)}
+\label{sec:vari-princ}
+
+%functionals in $u$'s and $\lambda$'s and their Hessian
+
+\subsection{Mapping problem}
+\label{sec:mapping_problem}
+
+We will consider mostly the following discrete conformal mapping problems.
+% \begin{list}{}{%
+%     \settowidth{\labelwidth}{\textbf{Given:}}%
+%     \setlength{\leftmargin}{\labelwidth}%
+%     \addtolength{\leftmargin}{\labelsep}%
+%   }
+% \item[\textbf{Given}]
+%   \begin{compactitem}
+%   \item the discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a
+%     euclidean cyclic polyhedral surface,
+%   \item a desired cone angle $\Theta_{i}>0$ for each vertex
+%     $i\in V_{\Sigma}$,
+%   \end{compactitem}
+% \item[\textbf{find}] the discrete metric
+%   $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a discretely
+%   conformally equivalent euclidean cyclic polyhedral surface that
+%   has at each vertex $i\in V$ the desired cone angle
+%   $\Theta_{i}$.% \end{asparadesc}
+% \end{list}
+\begin{problem}[prescribed angle sums]
+\label{prob:total_angles}
+\textbf{\itshape{Given}}
+
+\begin{compactitem}
+\item the discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a
+euclidean cyclic polyhedral surface,
+\item a desired total angle $\Theta_{i}>0$ for each vertex
+$i\in V_{\Sigma}$,
+\end{compactitem}
+
+\smallskip\noindent%
+\textbf{\itshape{find}} the discrete metric
+$\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a discretely
+conformally equivalent euclidean cyclic polyhedral surface that has
+the desired total angle $\Theta_{i}$ around each vertex $i\in
+V$.
+\end{problem}
+
+For interior vertices, $\Theta_i$ denotes a desired cone angle. For
+boundary vertices, $\Theta_i$ denotes a desired interior angle of the
+polygonal boundary. If $\Theta_{i}=2\pi$ for all interior vertices,
+then Problem~\ref{prob:total_angles} asks for a flat metric in the
+discrete conformal class (with prescribed boundary angles if the
+surface has a boundary).
+
+It makes sense to prescribe the total angle at some vertices and the
+discrete conformal factor at other vertices:
+
+\begin{problem}
+\textbf{\itshape{Given}}
+
+\textbf{\itshape{find}}
+\end{problem}
+
+\subsection{Variational principle}
+\label{sec:variational}
+
+The variational principle involves a function of the logarithmic edge
+lengths, $x=\log\ell$.
+
+\begin{equation}
+\label{eq:S}
+S(x)=\sum_{i_{1}\ldots i_{n}\in F}
+2f_{n}(x_{i_{1}i_{2}},\ldots,x_{i_{n}i_{1}})
+-2\pi
+\sum_{ij\in E} x_{ij}
++
+\sum_{i\in V} \Theta_{i}u_{i}
+\end{equation}
+
+\subsection{The functions $f_n$}
+\label{sec:f_n}
+
+For each $n\geq 3$, let
+\begin{equation}
+\label{eq:A_n}
+\mathcal{A}_{n}=\big\{
+x\in\R^{n}\;\big|\;\ell_{1}=e^{x_{1}},\ldots,\ell_{n}=e^{x_{n}}
+\text{ satisfy the polygon inequalities~\eqref{eq:polygon_ineq}}
+\big\},
+\end{equation}
+and define the function
+\begin{equation*}
+f_{n}:\R^{n}\rightarrow\R
+\end{equation*}
+as follows.
+
+$\bullet$ If $x\in\mathcal{A}_{n}$, then
+\begin{equation}
+\label{eq:f_n}
+f_{n}(x_{1},\ldots,x_{n})=\sum_{k=1}^{n}
+\big(\alpha_{k}x_{k}+\ML(\alpha_{k})\big),
+\end{equation}
+where $2\alpha_{1},\ldots,2\alpha_{n}$ are the central angles of a
+cyclic euclidean polygon with sides $e^{x_{1}},\ldots,e^{x_{n}}$ as
+shown in Figure~\ref{fig:cyclicpolygon}, and $\ML(x)$ is Milnor's
+Lobachevsky function~\cite{milnor_hyperbolic_1982},
+\begin{equation}
+\label{eq:ML}
+\ML(x)=-\int_{0}^{x}\log|2\sin t|\,\mathit{dt}.
+\end{equation}
+
+$\bullet$ If $x\not\in\mathcal{A}_{n}$, then one and
+only one of the polygon inequalities~\eqref{eq:polygon_ineq} is
+violated. If the $k$th polygon inequality~\eqref{eq:polygon_ineq} is
+violated, i.e., if the longest side $e^{x_{k}}$ is not shorter than
+the sum the others, then
+\begin{equation}
+\label{eq:f_n_violate}
+f_{n}(x_{1},\ldots,x_{n})=\pi x_{k}.
+\end{equation}
+
+
+\begin{figure}
+\centering
+\input{figures/cyclicpolygon.pdf_tex}
+\caption{A cyclic polygon}
+\label{fig:cyclicpolygon}
+\end{figure}
+
+
+\subsection{Convexity}
+\label{sec:convexity}
+
+\section{Conformal uniformization of planar domains}
+\subsection{Simply connected domains}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.49\textwidth]{uniformization/labyrinth/labyrithflow02.pdf}\hfill
+\includegraphics[width=0.49\textwidth]{uniformization/labyrinth/triang_orig.pdf}\\
+\smallskip
+\includegraphics[width=\textwidth]{uniformization/labyrinth/labyrithrect02}
+\caption{Mapping a labyrinth (top left) to a rectangle (bottom), and
+the triangulation that was used.}
+\label{fig:labyrinth1}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow03.pdf}\hfill
+\includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow04.pdf}\hfill
+\includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow05.pdf}
+\caption{The same map from a labyrinth to a rectangle as shown in
+Figure~\ref{fig:labyrinth1}, but the grid is 100 times, 1\,000
+times, and 10\,000 times finer, respectively. Numerical artefacts
+are beginning to show in the last picture.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{planar_circles/all.pdf}
+\caption{
+Mapping a rectangle to a parallelogram.
+All quadrilaterals in the image are cyclic quadrilaterals.
+Note, in addition to the circle pattern generated by the quadrilaterals the upper example yields an S-isothermic circle pattern whereas the lower one does not.
+}
+\end{figure}
+\todo{How to call the circle pattern? S-isothermic?}
+
+\subsection{Riemann map with cyclic quadrilaterals}
+
+\begin{figure}
+\centering
+\resizebox{0.4\textwidth}{!}{
+\includegraphics[height=5cm]{planar_circles/riemann_shape_image.pdf}
+}
+\resizebox{0.9\textwidth}{!}{
+\includegraphics[height=5cm]{planar_circles/riemann_shape_halfplane.pdf}
+}
+\resizebox{\textwidth}{!}{
+\includegraphics[height=5cm]{planar_circles/riemann_shape_domain.pdf}
+\includegraphics[height=5cm]{planar_circles/riemann_shape_circles.pdf}
+}
+\caption{
+Riemann-map with cyclic quadrilaterals.
+Corners with valence two in the original domain are modeled as triangles, upper left.
+We first map to the upper half-plane.
+Quadrilaterals adjacent to the point at infinity are removed.
+Points opposite to the point at infinity have a prescribed boundary angle of $\pi$.
+The four vertices in between have a fixed $u=0$.
+By that quadrilaterals adjacent to the point at infinity are cyclic after the Moebius transformation to the disk, bottom.
+}
+\label{fig:circular_riemann}
+\end{figure}
+
+In this section we present the discrete conformal map from a domain made of squares to the unit disk.
+\todo{SSE: Comment on ears in the cyclic Riemann map.}
+\todo{SSE: Argue why the map is discrete conformal at edges incident to the vertex at infinity.}
+
+
+\subsection{Multiply connected domains, circle domains}
+
+\begin{figure}
+	\centering
+	\resizebox{\textwidth}{!}{
+	\includegraphics[width=0.25\textwidth]{planar_streams/arrow_cylinder.pdf}
+	\hskip 0.01\textwidth
+	\includegraphics[width=0.25\textwidth]{planar_streams/arrow_cylinder_image.pdf}\hfill
+	\hskip 0.01\textwidth
+	\includegraphics[width=0.46\textwidth]{planar_streams/arrow_cylinder_domain.pdf}
+	}
+	\resizebox{\textwidth}{!}{
+	\includegraphics[width=0.25\textwidth]{planar_streams/triangle_cylinder.pdf}
+	\hskip 0.01\textwidth
+	\includegraphics[width=0.25\textwidth]{planar_streams/triangle_cylinder_image.pdf}\hfill
+	\hskip 0.01\textwidth
+	\includegraphics[width=0.46\textwidth]{planar_streams/triangle_cylinder_domain.pdf}
+	}
+	\resizebox{\textwidth}{!}{
+	\includegraphics[height=10cm]{planar_streams/circular_stream_03_lines.pdf}
+	\includegraphics[height=9.9cm]{planar_streams/circular_stream_03_mesh.pdf}
+	}
+\caption{
+Mapping of multiply connected regions.
+Conformal map of a topological cylinder with boundary components.
+In all images the vertical boundaries are identified.
+The boundary of the domain consists of the upper and lower boundary loops and a slit in the interior of the domain.
+This can be interpreted as modeling a stream of incompressible fluid flowing around an obstacle with periodic boundary conditions.
+\\
+Top: Map from an arrow shaped slit to a horizontal slit with straight boundary conditions on the upper and lower boundary loops.
+The point on the left of the arrow tip is mapped to the left end of the horizontal slit.
+The point on the right side is mapped to the right end.
+\\
+Middle: Same setup as above using a triangle as third boundary component.
+Note that by symmetry the upper and lower corner of the triangle are mapped to the same point in the image of the map.
+\\
+Bottom: Three circular boundary components are mapped to horizontal slits.
+}
+\label{fig:fluid_flows}
+\end{figure}
+
+In this section we show how to conformally map multiply connected planar domains.
+Our examples are inspired by planar potential flows with periodic boundary conditions, see Figure~\ref{fig:fluid_flows}.
+The basic idea is to map a given domain with boundary components to periodic region with parallel slits.
+We do not solve the general problem of discretely mapping an arbitrary region to a domain with parallel slits here but provide a few examples where we could obtain nice results using discrete conformal mappings as defined above.
+
+In general the main challenge for the computation of such a map is to find the points on the boundary components that map to the ends of the slits. As these points may even not be located at vertices of the underlying mesh in general this involves a mesh refinement procedure. To solve the problem for the general case one would also have to solve an optimization problem to find the location of the points such that the slits become parallel and are oriented in a prescribed direction.
+
+In the first two examples we can derive the pre-images of the slit ends by symmetry. 
+We take a rectangle with two identified sides, i.e. a part of a topological cylinder and place a symmetric cut in the shape of an arrow, see Figure~\ref{fig:fluid_flows} upper-left. 
+By symmetry the vertices to the left and to the right of the arrow tip get mapped to the ends of the slits. 
+This implies that we want to calculate a symmetric flow with respect to the configuration.
+The boundary conditions are trivial. 
+All $\theta_i$ at the boundary are equal to $\pi$ except for the vertices at the tip of the arrow where $\theta$ is equal to $2\pi$.
+In the second example we cut a symmetric triangle to form a boundary component. The pre-images of the slit ends are the left corner of the triangle and the mid-point of the right side, see Figure~\ref{fig:fluid_flows} middle row.
+
+The third example is different from the other two as we inverse the direction of calculation. 
+The goal is to create a map from a domain with round holes to a region with parallel slits, see Figure~\ref{fig:fluid_flows} bottom row. 
+As we do not want to solve the global optimization problem for the location of the pre-images of slit ends we use a simple trick.
+We start with a cylinder with parallel slits.
+We add additional edges to triangulate the slits with the condition that none of the edges has zero length.
+Remember that the functional is linearly extended to triangulations with angles greater or equal than $\pi$.
+We treat the additional edges as auxiliary edges in a circular polygon, i.e., the corresponding $\lambda$s in the functional are variables of the optimization. 
+Thus adjacent triangles form a circular polygon in the resulting image.
+
+\section{Uniformization of spheres}
+\subsection{Uniformization with euclidean functional}
+\subsection{Conformally equivalent spherical meshes, definition through constraint to the round sphere}
+\subsection{Spherical functional, Hessian, non-convexity}
+\subsection{Computation with spherical functional}
+
+\begin{figure}
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[height=5cm]{spherical/cube_image.pdf}
+\includegraphics[height=5cm]{spherical/cube_domain.pdf}
+\includegraphics[height=5cm]{spherical/tetrahedron_image.pdf}
+\includegraphics[height=5cm]{spherical/tetrahedron_domain.pdf}
+}
+\caption{Mapping conformally to the sphere using the spherical functional and a direct spherical layout process. The map is normalize such that the center of mass of vertices is the center of the sphere.}
+\label{fig:spherical_examples}
+\end{figure}
+
+It is possible to use the spherical functional to calculate spherical uniformizations even if it is non-convex. In this case a numerical optimization has to find a saddle point in the energy landscape. This is due to the fact that the direction $v=(1,\ldots,1)$ is a negative direction of the Hessian. That means shrinking or enlarging all scale factors at once decreases the value of the energy. We use a simple yet effective trick that enables us to find a critical point for certain examples. Define the reduced functional
+\begin{equation}
+\label{eq:reduced_spherical}
+\tilde S_{\it sph}(u)=\max_t \left\{S_{\it sph}(u + tv)\right\}
+\end{equation}
+Now minimize the reduced functional $\tilde  S_{\it sph}$. By this we can create examples that would not be possible using simple minimization, see Figure~\ref{fig:spherical_examples}.
+
+\subsection{Euclidean uniformization of spheres}
+
+\begin{figure}
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[height=10cm]{bear_torus/baer_quads.pdf}
+\includegraphics[height=10cm]{bear_torus/baer_cuts.pdf}
+\includegraphics[height=10cm]{bear_torus/cover_triangulation_rectangle.pdf}
+\includegraphics[height=10cm]{bear_torus/cover_triangulation.pdf}
+}
+\caption{
+iscrete bear model is mapped to the plane.
+Four cone-like singularities of angle $\pi$ are chosen at the arms and legs to reduce the conformal distortion.
+The singularities can be interpreted as branch points of a two-sheeted cover of the bear forming a topological torus.
+The corresponding universal cover is generated by euclidean translations, the fundamental domain can be chosen to be an approximate rectangle, middle.
+The group of translations is a subgroup of the group generated by the rotations around the singularities about and angle of $\pi$. In a fundamental domain the branch vertices lie in the middle of edges, right.
+}
+\label{fig:bear}
+\end{figure}
+
+ranched cover of a topological sphere with four branch points is a topological torus.
+We exploit this fact to calculate parameterizations of triangulations with spherical topology.
+There are two ways to realize this.
+
+We pick four vertices of the spherical triangulation. We create a two-sheeted branched cover of the triangulation by glueing two copies along paths connecting the selected vertices.
+This procedure is parallel to the creation of discrete elliptic curves described in Section~\ref{sec:discrete_algebraic_curves}.
+The resulting surface is a topological torus and can be uniformized using the euclidean functional and a layout in the plane.
+The uniformizing group is generated by two translations.
+This group is a subgroup of the group generated by rotations around the branch vertices.
+Hence we can as well prescribe cone angles of $\pi$ at the selected vertices and calculate a direct map to the plane.
+The universal cover is then generated by rotations.
+
+We apply this procedure to a model of a bear, see Figure~\ref{fig:bear}. To create the triangle layout we cut the model open along an edge tree including the branch vertices, see the second picture in the Figure.
+
+\section{Uniformization of tori}
+\label{sec:tori}
+
+\subsection{Uniformization with euclidean functional}
+
+\subsection{Tori given by Schottky data}
+
+\begin{figure}
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[height=4cm]{schottky_g1/res50_ni_image.pdf}
+\includegraphics[height=3.9cm]{schottky_g1/res50_ni_cover.pdf}
+}
+\caption{Discrete Riemann surface of genus $1$ given by Schottky data (left). Universal cover and fundamental regions (right). $A=-15-2.5i$, $B=0.1-0.3i$, $\mu=-0.3$}
+\label{fig:schottky_g1}
+\end{figure}
+
+Let $C_1,C'_1\ldots,C_g,C'_g$ be disjoint circles in $\hat{\C}$.
+\begin{definition} A classical Schottky group $G$ is a Kleinian group with generators $\sigma_1,\ldots,\sigma_g$ satisfying
+\[
+\frac{\sigma_i z - B_i}{\sigma_i z - A_i} = \mu_i \frac{z - B_i}{z - A_i},
+\quad\quad\quad 0 < \left|\mu_i\right|<1,
+\]
+where $\sigma_i$ maps the exterior of $C_i$ onto the interior of $C'_i$. The points $A_i$ and $B_i$ lie inside the circles $C_i$ and $C'_i$ respectively.
+\end{definition}
+
+\subsection{Algebraic curves}
+\label{sec:discrete_algebraic_curves}
+
+\begin{figure}
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[width=0.5\textwidth]{elliptic_curves/tetrahedron.pdf}
+\includegraphics[width=0.5\textwidth]{elliptic_curves/square.pdf}
+\includegraphics[width=0.5\textwidth]{elliptic_curves/generic.pdf}
+}
+\caption{Discrete versions of elliptic functions. Left: The lattice $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$. On the sphere the branch points form a regular tetrahedron. Middle: $\tau=i$, branch points on $\hat \C$ are located in a square on the equator. Right: Branch points in general position.}
+\label{fig:p_functions}
+\end{figure}
+
+Every Riemann surface is conformally equivalent to an algebraic curve
+\[C=\left\{(\lambda,\mu)\in \C^2 \mid \mathcal P(\lambda,\mu)=0\right\}\]
+where $\mathcal P$ is an irreducible polynomial.
+This curve in turn can be represented as branched covering of the Riemann sphere $\hat{\C}$ with branch points at locations $\lambda_i$ with \[\frac{\partial\mathcal P}{\partial \mu}\Bigr|_{\lambda=\lambda_i} = 0.\]
+In the discrete setting we represent discrete algebraic curves as triangulations of the respective branched covering of $\S^2$.
+We only cover 2-sheeted coverings here as this includes our main examples, i.e., elliptic curves and hyperelliptic curves, see also Section~\ref{sec:hyperelliptic}.
+We construct a triangulation of such a 2-sheeted covering as follows.
+Let $S$ be a Riemann surface with genus $g\geq 1$.
+Let $\lambda_1,\ldots,\lambda_{2g+2}\in \hat\C$ be the branch points of the corresponding algebraic curve.
+Let $\sigma :\hat\C\to\S^2$ be the stereographic projection mapping $\infty$ to the north pole of the sphere, $0$ is mapped to the south pole, and the unit circle is mapped to the equator.
+Choose points $p_1,\ldots,p_n\in\S^2$ such that the convex hull $P$ of $\{\sigma\lambda_1,\ldots,\sigma\lambda_{2g+2},p_1,\ldots,p_n\}$ forms a convex polyhedron.
+In particular $P$ forms a cyclic polyhedron.
+
+Take a second copy $\hat P$ of $P$. $P$ and $\hat P$ will serve as the first and second sheet of the 2-sheeted covering.
+Find non-intersecting edge paths $\gamma_1,\ldots,\gamma_{g+1}$ each connecting a pair of branch points on $P$ and simultaneously on $\hat P$.
+Note that the resulting surface does not depend on the choice of $\gamma$.
+We cut the two sheets along $\gamma_1,\ldots,\gamma_{g+1}$ and identify the sides of the cuts transversely across $P$ and $\hat P$.
+By this procedure the end points $\lambda$ are identified between the two sheets $P$ and $\hat P$.
+
+We use this construction to calculate discrete versions of elliptic functions.
+We start with the branch data $\lambda_1,\ldots,\lambda_{4}$ and create a triangulated two-sheeted cover branched at the given $\lambda$s, see Figure~\ref{fig:p_functions}.
+
+\subsubsection{Normalization of branch data}
+The description of conformal equivalence is M{\"o}bus invariant. Thus we can apply transformations to the branch data $\lambda_1,\ldots,\lambda_{g+1}$ before creating the discrete algebraic curve as described above. Find the M{\"o}bius transformation $T$ such that
+\[\sum_{i=1}^{2g+2}\sigma T \lambda_i = 0,\]
+i.e., the center of mass of the branch points if the origin, see~\cite{Springborn05}.
+
+\subsection{Discrete elliptic curves - numerical convergence}
+
+An algebraic curve of genus $g=1$ is called an elliptic curve. We model discrete elliptic curves as described in Section~\ref{sec:discrete_algebraic_curves}.
+
+The goal of this section is to provide insights into the convergence behavior of discrete uniformization as presented above. In particular we look into the convergence of period matrices as the number of points that approximate a given Riemann surface increases. For genus one algebraic curves we can calculate period matrices explicitly using the invariants $\{g_2,g_3\}$ of the elliptic surface. Let $\lambda_1,\lambda_2,\lambda_3,\lambda_4\in\C$ be the branch points of the curve such that $\lambda_1+\lambda_2+\lambda_3=0$ and $\lambda_4=\infty$. Then the curve is given as
+\begin{eqnarray*}
+\mu^2&=&4(z-\lambda_1)(z-\lambda_2)(z-\lambda_3)\\
+&=&4z^3+4(\lambda_1\lambda_2+\lambda_2\lambda_3+\lambda_3\lambda_1)z - 4\lambda_1\lambda_2\lambda_3\\
+&=&4z^3-g_2z-g_3.
+\end{eqnarray*}
+The period matrix $[\tau]$, also called the modulus of the curve, can be calculated using the periods of the elliptic lattice $\{\omega_1,\omega_3\}$ such that $\tau = \frac{\omega_2}{\omega_1}$. These can be calculated from the invariants $\{g_2,g_3\}$, e.g., using {\sc Mathematica}s build-in function {\tt WeierstrassHalfPeriods[$\{g_2,g_3\}$]}, see~\cite{WeierstrassHalfPeriods_website}.
+
+Let $\lambda_1, \lambda_2, \lambda_3, \lambda_4 \in \C$ be the branch points of an elliptic curve $C$. We create a discrete version of the curve by choosing $n$ points $p_1,\ldots,p_n$ equally distributed on $\S^2$. The triangulation for one sheet of the discrete curve is the convex hull of $\{\lambda_1,\ldots,\lambda_4,p_1,\ldots, p_4\}$. Choose non-intersecting edge-paths connecting the pairs $(\lambda_1,\lambda_2)$ and $(\lambda_3,\lambda_4)$. To create a doubly covered sphere we glue a second copy of the triangulated sphere transversely along corresponding paths, see Section~\ref{sec:discrete_algebraic_curves}.
+
+After discrete uniformization we calculate $\hat \tau$. We normalize $\tau$ and $\hat \tau$ such that $|\tau|>1$ and $|\re(\tau)| < \frac{1}{2}$. We can now compare the modulus $\tau$ of the smooth structure with the number $\hat \tau$ derived from the discrete uniformization of a triangulation with the same branch points. The discretization error is defined as $|\tau-\hat \tau|$.
+
+\subsubsection{Subdivided icosahedron}
+
+\begin{figure}
+\resizebox{\textwidth}{!}{
+\includegraphics[width=0.35\textwidth]{convergence/icosubdivision01.pdf}\hfill
+\includegraphics[width=0.32\textwidth]{convergence/icosubdivision01_example01.pdf}
+}
+\caption{Numerical convergence for seven subdivision steps of an icosahedron.
+Four vertices of the base icosahedron serve as branch points of a torus.
+Vertices are projected to the unit sphere after subdivision.
+The error $|\tau - \hat\tau|$ plotted against the number of vertices of one sheet of the double cover (left).
+The linear regression of logarithmic data has a slope of $\alpha\approx-0.88$.
+Universal cover of step three of the series (right).
+}
+\label{fig:convergence_subdivision}
+\end{figure}
+
+In this experiment we start with a regular icosahedron and choose $\lambda_1,\ldots,\lambda_4$ to be four of the vertices. The remaining points act the role of $p_1,\ldots,p_n$ and we construct the discrete elliptic curve as described above. To study the dependence of $|\tau-\hat \tau|$ on the number of points we increase $n$ by subdivision and subsequent projection onto $\mathbb S^2$. Every triangle is split into four. New vertices are inserted in the middle of each edge then we project onto the unit sphere. By this procedure we yield exponential growth of vertex number while at the same time the shape of the triangles stays almost regular.
+
+Figure~\ref{fig:convergence_subdivision} shows the result of this convergence experiment. The error $|\tau-\hat \tau|$ depends exponentially on the number of points
+\[|\tau-\hat \tau|=\mathcal O (n^\alpha)\]
+with $\alpha \approx -0.88$.
+
+\subsubsection{Triangle quality}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{convergence/quality_rand_points01_maxmultiratio_2.pdf}
+\caption{Plotting the error $|\tau - \hat\tau|$ against the number of vertices for triangulations with varying quality (left). Requiring a certain level of quality reveals a clear convergence slope of $\alpha\approx -0.63$ (right).}
+\label{fig:convergence_quality}
+\end{figure}
+
+In the second convergence experiment we choose $p_1,\ldots,p_n\in \mathbb S^2$ randomly. We want to analyze how the quality of the triangulation affects the convergence behavior. We define quanities that measure the regularity of the triangulation based on length cross-ratios given at edges or length multi-ratios given at faces of the triangulation
+todo{SSE: $\lcr$ not yet defined}
+\begin{eqnarray*}
+	Q_{\lcr}(e) &:=& \frac{1}{2}\left(\lcr(e) + \frac{1}{\lcr(e)}\right) - 1\label{eq:quality_lcr}\\
+	Q_{\lmr}(f) &:=& \frac{1}{2}\left(\lmr(f) + \frac{1}{\lmr(f)}\right) - 1\label{eq:quality_lmr}.
+\end{eqnarray*}
+Here $\lcr$ is the length cross-ratio of an edge. $\lmr$ is the length multi-ratio defined on faces as $\lmr(f)=\prod_{e \in f}\lcr(e)$.
+
+Figure~\ref{fig:convergence_quality} (left) shows a plot of $2600$ samples ranging from $n=20$ to $n=1500$. No clear convergence behavior is visible. Plotting only samples with a certain mesh quality as defined by the quality measures above reveals a linear upper bound for the error $|\tau-\hat \tau|$. For the plot in Figure~\ref{fig:convergence_quality} (right) we selected only samples with $\max_e \{Q_{\lmr}(e)\} < 0.3$. Similar results can be obtained using the quality measures $\max_e \{Q_{\lcr}(e)\} < x$ or $\mean_e \{Q_{\lcr}(e)\} < x$.
+
+The results from these two experiments assert that there is a exponential dependence of the discretization error on the number of points if a certain quality of the mesh is met. Tests with other subdivision configurations suggest that the constant $\alpha$ is not universal.
+
+\subsection{Wente torus, conformal immersion}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.48\textwidth,valign=c]{wente_embedding/wente_1240_fundamental.pdf}\hfill
+\includegraphics[width=0.48\textwidth,valign=c]{wente_embedding/wente_1240_domain.pdf}
+\caption{Uniformization of the Wente torus. Discretely sampled conformal immersion (left), domain of uniformization (right). Orange curves indicates the lattice of the flat torus in the domain. The faces of the polyhedral surface are approximate conformal squares. In the discrete uniformization their images are approximately squares, as it should be.}
+\end{figure}
+
+
+\section{Uniformization of surfaces of higher genus}
+
+\subsection{Conformally equivalent hyperbolic meshes, definition through constraint to the hyperboloid}
+\subsection{Hyperbolic functional, Hessian}
+
+\todo{BS: Hyperbolic Funktional}
+\begin{equation}
+\label{eq:hyperbolic_fuctional}
+\end{equation}
+
+\begin{figure}
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[height=10cm]{genus3/genus3.pdf}
+\includegraphics[height=10cm]{genus3/canonical_mesh.pdf}
+\includegraphics[height=10cm]{genus3/canonical_cover.pdf}
+}
+\caption{Discrete uniformization of an embedded triangulated surface of genus $3$. Fundamental polygon with mesh and group generators (middle). Fundamental polygon normalized to canonical form. Universal cover (right).}
+\label{fig:embedded_genus_3}
+\end{figure}
+
+\begin{figure}
+\centering
+\resizebox{0.8\textwidth}{!}{
+\includegraphics[height=10cm]{genus5/genus5.pdf}
+\includegraphics[height=10cm]{genus5/fundamental.pdf}
+}
+\caption{An embedded triangulated surface of genus $5$ (left). Discrete uniformization and fundamental polygon with  group generators in the Poincar\'e disk (right).}
+\label{fig:embedded_genus_5}
+\end{figure}
+
+
+
+
+
+\subsection{Computation of fundamental domains and Fuchsian groups}
+\label{sec:fundamental_domains}
+
+\begin{figure}
+\centering
+\resizebox{0.8\textwidth}{!}{
+\includegraphics[height=3cm]{algorithm/step1_boundary.pdf}
+\includegraphics[height=3cm]{algorithm/step2.pdf}
+}\\
+\resizebox{0.8\textwidth}{!}{
+\includegraphics[height=3cm]{algorithm/step3.pdf}
+\includegraphics[height=3cm]{algorithm/contract_combined.pdf}
+}\\
+\resizebox{0.8\textwidth}{!}{
+\includegraphics[height=3cm]{algorithm/step5.pdf}
+\includegraphics[height=3cm]{algorithm/step5_5.pdf}
+}
+\caption{
+Creating a fundamental polygon of a hyperelliptic surface:
+Realizing a hyperbolic metric of a discrete surface (upper-left) creates a fundamental region with polygonal boundary.
+Straighten the edges between vertices of the cut-graph (points) creates a polygon with geodesic edges (upper-right and middle-right).
+Cut-and-paste operations lead to a fundamental polygon with only one vertex and opposite sides identified, all vertices are equivalent under the group action (middle-right).
+We normalize the group such that the intersection of the axes is the origin (bottom).
+}
+\label{fig:fundamental_polygon_algorithm}
+\end{figure}
+
+In this section we describe how to calculate Fuchsian groups and corresponding fundamental domains for a given surface.
+
+Let $R$ be a Riemann surface and let $T=(V, E, F)$ be a discretization of $R$ with vertices $v\in V$, edges $e\in E$, and faces $f\in F$. Let $\lcr_R E\to \R^+$ be the euclidean discrete conformal structure of $T$ and $\tilde l:E\to \R^+$ a realization. Let $u:V\to \R$ be the minimizer of the hyperbolic functional~\ref{eq:hyperbolic_fuctional} for $\tilde l$. Then $l:E \to \R^+, e_{\it ij}\mapsto 2\arsinh(\tilde l(e_{\it ij})\exp\{\frac{1}{2}(u_i+u_j)\})$ is the unique hyperbolic metric without cone singularities that is by definition conformally equivalent to~$\tilde l$, see Section~\ref{sec:discr-conf-equiv}.
+
+For $l$ we create a simply-connected realization by breadth-first enumeration of the triangles of $T$. As a different approach one could use a shortest-path scheme as described in \cite{EricksonH02}.  The resulting domain has boundary edges and vertices. Each boundary edge is identified with a unique partner. Each boundary vertex is identified with one or more other vertices. On the surface the boundary of the domain corresponds to a connected system of loops around surface handles, see, e.g., Figure~\ref{fig:lawson_embedding} (left).
+
+In a first step we create a simplified domain by connecting vertices that are identified with more than two copies by geodesic arcs, see Figure~\ref{fig:fundamental_polygon_algorithm} (top-left and top-middle). Again a geodesic boundary arc is identified with a unique copy. This identification gives rise to a group of isometries $G$ as identified arcs have the same length. $G$ is a Fuchsian group of the first kind. The domain bounded by geodesic arcs is a fundamental domain of $G$, see Figure~\ref{fig:fundamental_polygon_algorithm} (top-right).
+
+In addition to breadth first layout we can also predefine the system of loops on the surface to prescribe the combinatorics of the fundamental domain and its identifications. This is however not always possible due to the combinatorics of the triangle mesh, i.e., a small valence at the base point of the loops forces the fundamental polygon to have more than one vertex. In such a situation we proceed by reducing the domain by edge contraction operations to arrive at a fundamental domain with a single identified vertex.
+
+The algorithm to reduce a given fundamental polygon to a polygon with only one identified vertex is as follows. Select a vertex $v_0$ to be the base vertex of the polygon. Select an edge between $v_0$ and another vertex $v_1$. In the hyperbolic plane move $v_1$ onto $v_0$ by moving all copies of $v_0$ to the corresponding copies of $v_1$, possibly outside of the domain. Move adjacent geodesic arcs correspondingly, see Figure~\ref{fig:fundamental_polygon_algorithm} (bottom-left). In the new domain $v_1$ is not a vertex anymore. Proceed until the domain has only one vertex. This process can also be seen as a sequence of cut-and-paste operations reducing the number of vertices $v\neq v_0$ one by one. A proof that this leads to a valid fundamental domain can be found in \cite[p. 48]{Jost2007}.
+
+It can be tedious to find a system of loops on a surface that lead to a specific order of sides in the fundamental polygon. We give algorithms that transform a given fundamental polygon and the corresponding group presentation to canonical form, i.e., the order of polygon sides is $aba'b'cdc'd'\cdots$. Here the side $a$ is identified with side $a'$. Additionally we give an algorithm that transforms the domain to opposite identification form, i.e., $abcd\cdots a'b'c'd'\cdots$.
+
+During all transformations of the polygon and the group presentation we like to minimize the number of group element products. This is due to numerical reasons. Hyperbolic motions tend to accumulate numerical errors quite fast when building products, see~\cite{Floyd2002}.
+
+\subsubsection*{Canonical Fundamental Domain.}
+
+\begin{figure}
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[width=5cm]{algorithm/canonical_step0_labels.pdf}
+\includegraphics[width=5cm]{algorithm/canonical_step1_labels.pdf}
+\includegraphics[width=5cm]{algorithm/canonical_step2_labels.pdf}
+}
+\caption{Motions to transform a given fundamental domain into canonical form. The shaded area is the current fundamental polygon. Step~$1$: Choose the linked pair $a$, $b$. Cut at $c$ and $b$ and identify via $B$ to put side $a$ next to side $b$. Choose linked pair $e$, $f$. Cut between $e'$ and $d'$ and identify via $E'$ to put side $e'$ next to $f'$. The remaining handle $cdc'd'$ is already in place and we arrive at canonical form $aba'b'cdc'd'efe'f'$.}
+\label{fig:canonical_algorithm}
+\end{figure}
+
+We start with a fundamental domain with a single vertex as explained above. Then choose sides $a$ and $b$ such that the order in the polygon is $a\cdots b \cdots a' \cdots b' \cdots$. We perform a cut-and-paste operation such that sides $a$ and $b$ are next to each other after transformation, see Figure~\ref{fig:cut-and-paste-canonical}. In order to minimize the number of products we choose $a$ and $b$ such the number of sides in between $a$, $b$, $a'$, and $b'$ is minimal. We proceed cutting as described before to bring $b$ next to $a'$ and analogously $a'$ next to $b'$. We end up with a new polygon and the order $aba'b'\cdots$. Repeat this algorithm for the rest of the sides to arrive at canonical form. A proof can be found in ~\cite{Jost2007}.
+
+The number of products built during the transformation of a linked pair $a$, $b$ depends on the number of polygon sides between $a$, $b$, $a'$, and $b'$. Let $C$ be the number of sides between $a$ and $b$. Let $D$ and $E$ be the number of sides between $b$, $a'$, and $b'$ respectively. Then the total number of products in this transformation is $\Sigma=6C+4D+2E$. In step $1$, connecting $a$ and $b$, we can perform the cut-and-past operation using transformation $b$ and a cut between the end of $a$ and the end of $b$ in counter-clockwise order. This moves the intermediate sides between $a$ and $b$ out of the way for the next $2$ steps. By this we have a total number of products $\Sigma=2C+4D+2E$. We use a greedy implementation that chooses the smallest $\Sigma$ in each step to select $a$ and $b$. Alternatively one could enumerate the transformation tree and choose the cheapest path of all transformation sequences.
+
+\begin{figure}
+\centering
+\resizebox{0.8\textwidth}{!}{
+\includegraphics[width=5cm]{keen/canonical01_labels.pdf}
+\includegraphics[width=5cm]{keen/keen01_labels.pdf}
+}
+\caption{The algorithm of Linda Keen to produce and strictly convex fundamental polygons. Start with a given canonical fundamental polygon $aba'b'cdc'd'$ with a corresponding relation $ABA'B'CDC'D'=1$ (left). For convenience labels are chosen such that both coincide. We choose the intersection $p_0$ of the axes of transformations $A$ and $B$ as base point for the new domain. The new vertices of the fundamental domain are calculated as $p_1=p_0\cdot B'A'$, $p_2=p_0\cdot A'$, $p_3=p_0\cdot B'$, and $p_4=p_0\cdot A'B'$. The vertices at the generators $C$ and $D$ are calculated from $p_4$.}
+\label{fig:keen_polygon}
+\end{figure}
+
+By this procedure we get a canonically identified fundamental polygon. This polygon may be non-convex. Following the approach described in \cite{keen1966} we can move from this domain to a strictly convex one by selection of a different base point for the same group of transformations. Let
+\[G=\left<A,B,C,D,\ldots\in \mathit{PSL}(2,\mathbb R)\mid ABA'B'CDC'D'\ldots=1\right>\]
+anonically presented group and $aba'b'cdc'd'\ldots$ be a corresponding fundamental polygon, see Figure~\ref{fig:keen_polygon} (left). The elements are given such that $A(a)=a'$ and $B(b')=b$. Here we use the notation $A':=A^{-1}$. Then the axes of the generators $A$ and $B$ intersect in a point $p_0$. Choosing $p_0$ as the base point of a new fundamental polygon renders it convex and uniquely defined for the given group and presentation. See Figure~\ref{fig:keen_polygon} for an genus $2$ instance of this algorithm.
+
+\begin{figure}
+\centering
+\resizebox{0.5\textwidth}{!} {
+\input{data/algorithm/cutCanonical.pdf_t}
+}
+\caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=A'C_i$. Their inverses $C_i'$ become $\hat{C_i}'=C_i'A$}
+\label{fig:cut-and-paste-canonical}
+\end{figure}
+
+\subsubsection*{Opposite Sides Fundamental Domain.}
+
+\begin{figure}
+\resizebox{\textwidth}{!}{
+\includegraphics[width=5cm]{algorithm/opposite_step0_labels_start.pdf}
+\includegraphics[width=5cm]{algorithm/opposite_step0_labels.pdf}
+\includegraphics[width=5cm]{algorithm/opposite_step1_labels.pdf}
+}
+\resizebox{0.666666\textwidth}{!}{
+\includegraphics[width=5cm]{algorithm/opposite_step2_labels.pdf}
+\includegraphics[width=5cm]{algorithm/opposite_step3_labels.pdf}
+}
+\caption{Algorithm example: Start with group relation $ABCDC' EFA'E'D'F'B' = 1$. Step~$1$: Cut from the start of $d'$ to the end of $c'$ and identify via $C'$ to move $C'$ in front of $D'$. The resulting relation is clustered such that the elements of the first half form the inverses of the second half: $ABCDEFA'E'C'D'F'B' = 1$. We now sort elements $A,\ldots,B$ to match the order of $A',\ldots,F'$ or vice versa. Step~$2$: Cut at $a'$ and $b$ and identify via $B$ to move $B$ in front of $A'$. We get relation $ACDEFBA'E'C'D'F'B' = 1$. Step~$3$: Cut between $d'$ and $e$ and identify via $E$ to move $E$ in front of $C$. We get $AECDFBA'E'C'D'F'B' = 1$ as the final relation and a fundamental polygon with oppositely identified sides.}
+\label{fig:opposite_algorithm}
+\end{figure}
+
+\begin{figure}
+\centering
+\resizebox{0.3\textwidth}{!} {
+\input{data/algorithm/moveElement.pdf_t}
+}
+\caption{Move element $A$ in front of $B$ in a relation that moves counter-clockwise around the base vertex. Choose the upper cut (dashed lines) and paste via transformation $A'$ moving side $a'$ to $a$. Or cut at the lower one and paste via transformation $A$.}
+\label{fig:cut-and-paste-motion}
+\end{figure}
+
+undamental polygon identified by opposite sides has a side ordering $abcd\cdots a'b'c'd'\cdots$. A corresponding relation of the group of hyperbolic translations is $AB'CD'\cdots=1$ given that a transformation $X$ maps side $x$ to $x'$.
+
+We give two algorithms to transform a given fundamental domain into an opposite sides domain.
+For the first algorithm we show that it terminates and yields the correct result. However we cannot control the number of products used during the transformation. The second algorithm is heuristic and minimizes the number of products. It has proven to terminate for all of our examples.
+
+We use the canonical form of fundamental polygons as an intermediate step in the process of transforming a given fundamental domain into opposite sided form. As shown above we can transform any domain into canonical form. In particular we can transform an abstract oppositely identified polygon into canonical form using the algorithm from above. All of the steps conducted during this transformation can be undone. We get a sequence of cut-and-paste operations transforming a canonical fundamental polygon into opposite sides form. Combining the sequence that transforms a general fundamental polygon into canonical form with the transform that creates the opposite form from the canonical one we get required sequence on transformations on any given domain.
+
+This version of the algorithm is not optimal with respect to the number of products used in the sequence of transformations. In particular if the input polygon is close to opposite sides form already the algorithm destroys this structure first and rebuilds it from the canonical form.
+
+In all examples we therefor use a different heuristic algorithm. We transform a given fundamental polygon and group presentation to opposite sides form (see, e.g., Figure~\ref{fig:fundamental_polygon_algorithm} bottom-middle) using the following sequence of transformations.
+
+For a given fundamental polygon and the ordering of its sides, we can reconstruct the relation of the group by moving around the base vertex on the surface. That means if we start with transformation $A$ moving side $a$ to $a'$ the next element in the relation belongs to the side next to $a'$ in counter-clockwise order. We proceed until we get back to element $A$. Note that we could have chosen clockwise orientation, but for drawing pictures we stick to counter-clockwise.
+
+For an oppositely identified fundamental polygon (and for canonically identified polygons as well) the order of transformations in the relation has the same structure as the sides of the polygon (possibly after renaming of sides). For example the group relation corresponding to a polygon $ab'cd'a'bc'd$ is $ABCDA'B'C'D'=1$.
+
+For the order of group elements in the relation we give cut-and-paste sequences that move single elements to different locations in the relation leaving all other elements in place. Using these transformations we normalize the polygon as follows.
+
+\begin{compactitem}
+\item[1] Find largest sequence of different (excluding inverse) generators in the relation.
+\item[2] Move missing elements into the sequence such that it forms a basis for the group.
+\item[3] Sort elements in the sequence to match the order of the corresponding inverse elements.
+\end{compactitem}
+
+Let the order of sides in the polygon be $a' \cdots b \cdots a \cdots$. The corresponding cut-and-paste operation that moves the group element $A$ in front of $B$ is one of
+
+\begin{compactitem}
+\item Cut from the end of $a$ to the start of $b$ and glue using $A$.
+\item Cut from the start of $a'$ to the start of $b$ and glue via $A'$.
+\end{compactitem}
+
+Choose the one with the lowest number of products, see Figure~\ref{fig:cut-and-paste-motion}. If the order of sides in the polygon is $a' \cdots a \cdots b \cdots$ we can however not perform the operation, the resulting domain would be disconnected. We therefor define the cost for such an operation as infinite. In step 2 we minimize over all possible transformations that move a selected element into the sequence. We do not show here that the cost is always a finite during the algorithm and call this algorithm heuristic due to this fact. Depending on the sort algorithm we use in step 3 we have the freedom to choose between the motion of the inverse elements or their partners. In our examples this gives enough freedom to create all oppositely identified fundamental domains. See Figure~\ref{fig:opposite_algorithm} for an example of this algorithm.
+
+
+
+\subsection{Uniformization of hyperelliptic curves}
+\label{sec:hyperelliptic}
+
+\subsubsection{Fundamental domains domains for hyperelliptic surfaces}
+\label{sec:hyperelliptic_domain}
+
+\todo{SSE: speak about the opposite sides domain where the vertex, the center, and the mid-points of edges are branch points}
+
+\subsubsection{Incidence theorem for hyperelliptic surfaces}
+
+\subsubsection{Hyperelliptic vs. non-hyperelliptic curves}
+\label{sec:non-hyperelliptic}
+
+\begin{figure}
+\centering
+\resizebox{!}{7cm}{
+\rotatebox{90}{
+\includegraphics[width=0.4\textwidth]{non-hyperelliptic/tetra_symmetric_hyperelliptic.pdf}
+}
+\rotatebox{90}{
+\includegraphics[width=0.4\textwidth]{non-hyperelliptic/non-hyperelliptic-symmetric-with-closeup.pdf}
+}
+}
+\caption{Hyperelliptic vs. non-hyperelliptic. In the hyperelliptic case axes of hyperbolic translations meet in a common point. The fundamental polygon is chosen symmetric with respect to the hyper elliptic involution (left). If the symmetry of the surface is broken the axes do not meet and no symmetric domain can be found (right).}
+\label{fig:non-hyperelliptic}
+\end{figure}
+
+Consider the elliptic-hyperelliptic surface that is constructed as follows. Take two copies $\hat T$ and $\tilde T$ of the elliptic surface $y^2=x(x^3 - 1)$. Each of the copies is conformally equivalent to a torus with the modulus $\tau=\frac{1}{2}+\sin(\frac{\pi}{3})i$. Such a torus can be realized as the double cover of a generating regular tetrahedron branched at its four vertices.
+
+On both copies of this torus pick four points $\hat\lambda_1,\ldots,\hat\lambda_4$ and $\tilde\lambda_1,\ldots,\tilde\lambda_4$ in the center of the faces of the tetrahedron belonging to one of the sheets of the elliptic surface. On $\hat T$ choose paths connecting the pairs $(\hat\lambda_1,\hat\lambda_2)$ and $(\hat\lambda_3,\hat\lambda_4)$. On $\tilde T$ choose corresponding paths. Cut $\hat T$ and $\tilde T$ along theses paths and glue corresponding sheets transversally. The resulting surface $T$ is a four sheeted cover of the tetrahedron with genus $g = 3$.
+
+\begin{theorem}
+$T$ is a hyperelliptic Riemann surface.
+\begin{proof}
+Let $e_1,\ldots,e_6$ be the edges of the generating regular tetrahedron. Consider the reflection $\sigma_i$ across a plane through the midpoint of edge $e_i$ containing the opposite edge of $e_i$.  Because of the symmetry of the tetrahedron $\sigma_i$ induces an anti-holomorphic involution on $T$. There are six involutions belonging to the edges of the tetrahedron. Let $e_i$ and $e_j$ be two opposite edges. Then $\sigma_i \circ \sigma_j$ is a holomorphic involution of $T$. Its eight fix points are the mid points of $e_i$ and $e_j$.
+\end{proof}
+\end{theorem}
+
+Figure~\ref{fig:non-hyperelliptic} (left) shows a uniformization of $T$ with an oppositely identified fundamental polygon. The surface is hyperelliptic, thus the generators axes meet in a common point. Disturbing the symmetry a little, e.g., by moving all points of the surface by some random offset destroys the hyperellipticity of the surface, see Figure~\ref{fig:non-hyperelliptic} (right).
+
+
+
+\subsection{Lawson's surface}
+
+In this section we present the Fuchsian uniformization of the Riemann surface of Lawson's genus 2 minimal surface in $\mathbb{S}^3$ \cite{Law1970}.
+We use three different conformally equivalent representations of the surface and compare the resulting uniformizations.
+Namely a stereographically projected embedded version, see Figure~\ref{fig:lawson_embedding}.
+The model has been provided by Konrad Polthier~\cite{polthier97}.
+The conformally equivalent algebraic curve $\mu^2=\lambda^6-1$, see Figure~\ref{fig:lawson_curve}.
+And a conformally equivalent square-tiled surface glued from six squares, see Figure~\ref{fig:lawson_squares}.
+All data presented in this section is made available on the {\sc DGD Gallery} \cite{gallery-lawson-webpage}.
+
+For each of the representations we choose suitable fundamental domains that allow for the comparison of the uniformization.
+
+\subsubsection{Hyperelliptic curve.}
+\label{sec:lawson_curve}
+
+\begin{figure}
+	\centering
+	\resizebox{!}{6cm} {
+	\includegraphics[height=10cm]{lawson_curve/curve_canonical_cuts2.pdf}
+	\includegraphics[height=10cm]{lawson_curve/curve_canonical_uniformization.pdf}
+	}
+	\resizebox{!}{6cm} {
+	\includegraphics[height=10cm]{lawson_curve/curve_opposite_cuts.pdf}
+	\includegraphics[height=10cm]{lawson_curve/curve_opposite_uniformization.pdf}
+	}
+	\resizebox{!}{6cm} {
+	\includegraphics[height=10cm]{lawson_curve/curve_cyclic_cuts.pdf}
+	\includegraphics[height=10cm]{lawson_curve/curve_cyclic_triangulation_cover.pdf}
+	}
+	\caption{Uniformization of Lawson's surface represented as algebraic curve $\mu^2=\lambda^6-1$. Triangulated double cover of the sphere branched at the roots of unity (left) with boundary of fundamental domain and axes of generators. Fuchsian uniformization and fundamental domain (right). Canonical domain (top), opposite sides domain (middle), and cyclic identification (bottom).}
+	\label{fig:lawson_curve}
+\end{figure}
+
+Lawson's surface is conformally equivalent to the algebraic curve $\mu^2=\lambda^6-1$.
+We model the surface as a two-sheeted cover of $\hat \C$ as described in Section~\ref{sec:discrete_algebraic_curves}. $\lambda_1,\ldots,\lambda_6$ are the 6th roots of unity.
+See Figure~\ref{fig:lawson_curve}.
+
+\textit{Canonical domain:}
+For the canonical fundamental domain we pick $0$ to be the vertex of the domain and proceed as described in Section~\ref{sec:fundamental_domains}.
+The points $p_1,\ldots,p_n$ are chosen such that the triangulation is almost regular on the sphere.
+The system of loops on the surface is chosen such that each loop starts at vertex $0$ runs around two branch points and returns, see the red curves in Figure~\ref{fig:lawson_curve}, top-left.
+
+For the visualization we truncate the triangles of the universal cover to fill the fundamental domain only.
+Figure~\ref{fig:lawson_curve} shows the triangulation on $\hat \C$ (left) and the universal cover (right).
+Red curves are the boundary of the fundamental domain.
+We show them also pulled back onto $\hat \C$. Blue curves are closed geodesic loops on the surface.
+They are the axis of hyperbolic motions identifying pairs of fundamental edges in the hyperbolic plane.
+
+The branch points are clearly visible as the valence of the triangulation is doubled at these vertices.
+The blue geodesic loops connect two branch points each.
+
+\textit{Opposites sides domain:}
+The opposite sides domain (second row) is chosen as described in Section~\ref{sec:hyperelliptic_domain}.
+All axes of hyperbolic motions intersect in a branch point of the curve.
+Red and blue geodesic arcs are dual to each other.
+For the example model we chose a coarse discretization of the underlying curve and truncate the triangulation to fit into the fundamental domain.
+
+\textit{Cyclically identified domain:}
+We call the fundamental domain in the bottom row a cyclically identified domain.
+This domain is chosen such that is corresponds to the domain suited for the square-tiled surface as described below.
+You can imagine this system of loops if you take the canonical system of loops meeting at $0$ (top row of the Figure) and deform the loops until they touch at $\infty$.
+By this move we introduce two more vertices on the fundamental polygon, namely the two vertices corresponding to $\infty$ on the two-sheeted cover.
+The triangulation of the example model is created by a subdivision process.
+Starting from  a triangulation with vertices at $0$, $\infty$, at branch points, and the mid-points on the equator in between the branch points we subdivide using a linear 4-to-1 split followed by a projection to the sphere. Thus the boundary of the fundamental domain is contained in the edge set of the triangulation. For the visualization of the universal cover we cut along these edges to draw the triangulation, Figure~\ref{fig:lawson_curve}, bottom-right.
+
+\subsubsection{Stereographic embedding.}
+
+\begin{figure}
+	\centering
+	\resizebox{!}{6cm} {
+	\includegraphics[height=10cm]{lawson_embedding/embedding_canonical_cuts.pdf}
+	\includegraphics[height=10cm]{lawson_embedding/embedding_canonical_uniformization.pdf}
+	}
+	\resizebox{!}{6cm} {
+	\includegraphics[height=10cm]{lawson_embedding/embedding_opposite_cuts.pdf}
+	\includegraphics[height=10cm]{lawson_embedding/embedding_opposite_uniformization.pdf}
+	}
+	\resizebox{!}{6.5cm} {
+	\includegraphics[height=10cm]{lawson_embedding/embedding_cyclic_cuts.pdf}
+	\includegraphics[height=10cm]{lawson_embedding/embedding_cyclic_triangulation_cover.pdf}
+	}
+	\caption{Uniformization of a euclidean embedding of Lawson's surface. Triangulated embedding with fundamental domain boundary and generator axes (left). Fuchsian uniformization with universal cover and fundamental domain (right). Canonical domain (top), opposite sides domain (middle), and cyclic identification (bottom).}
+	\label{fig:lawson_embedding}
+\end{figure}
+
+Figure~\ref{fig:lawson_embedding}, top row, shows the Fuchsian uniformization of the Lawson surface with a canonical fundamental domain, see also Section~\ref{sec:fundamental_domains}.
+
+Our embedded model of the Lawson surface of genus 2 realizes its hyperelliptic involution as a rotational symmetry.
+Its symmetry axis meets the surface in six points. These fix points of the hyperelliptic involution correspond to the branch points of the hyperelliptic algebraic curve as seen in the example above. We uniformize this model and choose fundamental domains corresponding to the domains chosen in Section~\ref{sec:lawson_curve}. By this procedure we can visually compare the surfaces and get evidence on conformal equivalence of the smooth surfaces.
+
+For the canonical fundamental domain we have to find a point on the surface that corresponds to $0$ or $\infty$ on the algebraic curve. There are of course four candidates as $0$ and $\infty$ correspond to two points each on the curve. We choose this point manually such that the fundamental domain exhibits the two reflectional symmetries seen in the domain of the curve.
+
+The fundamental domain where opposite sides are identified is chosen as described in Section~\ref{sec:hyperelliptic_domain}. The rotational symmetry of the surface corresponds to the hyperelliptic involution of the surface. Its fix points, i.e. the intersection of the axis of symmetry with the surface, correspond to the branch points of the hyperelliptic curve. Thus the vertex of the fundamental polygon has to be a point on the symmetry axis of the surface. We choose one of the six points and proceed as explained in Section~\ref{sec:fundamental_domains} for oppositely identified polygons. As the system of loops forming the boundary of the polygon and their identifying axes are dual to each other the common intersection of generator axes must lie on an intersection with the symmetry axis as well, see Figure~\ref{fig:lawson_embedding}, middle-left.
+
+The third fundamental polygon we present for the embedded surface corresponds to the square-tiled segmentation of the surface as described below. As in the uniformization of the hyperelliptic curve we have to deform the canonical polygon and introduce two new vertices corresponding to antipodal points of the current vertex on the curve. The hyperelliptic curve of the Lawson surface admits several anti-holomorphic involutions one of which interchanges $0$ and $\infty$. we also have these involutions on the embedded surface realized as reflections about symmetry planes containing the rotational symmetry axis. Hence we can find the new vertices of the fundamental polygon by reflection of the canonical root vertex about these symmetry planes, see Figure~\ref{fig:lawson_embedding}, bottom-left.
+
+\subsubsection{Square-tiled surface.}
+
+\begin{figure}
+	\centering
+	\resizebox{!}{6cm} {
+	\raisebox{0.5cm}{
+	\includegraphics[height=7.5cm]{lawson_squares/lawson_squares_figure.pdf}
+	}
+	\includegraphics[height=10cm]{lawson_squares/lawson_squares_triangulation_cover.pdf}
+	}
+	\caption{Uniformization of Lawson's surface given as metric square tiled surface (left). Fuchsian
+uniformization and fundamental domain (right). Grey circles correspond to the branch points of algebraic curve, see Figure~\ref{fig:lawson_curve}.}
+\label{fig:lawson_squares}
+\end{figure}
+
+The surface depicted in Figure~\ref{fig:lawson_squares}, left, is conformally equivalent to Lawson's surface. We calculate a uniformization using the discrete metric defined by the edge lengths of the squares and its diagonals. An adapted fundamental domain for this square-tiled translational surface arranges all squares around a single vertex, see Figure~\ref{fig:lawson_squares}, right. By comparison with Figure~\ref{fig:lawson_curve}, bottom, we see that the vertices in the center of the squares correspond to the branch points of the hyperelliptic curve representation of the surface. The black, grey, and white vertices correspond to the north and south pole of hyperelliptic realization.
+
+
+\subsection{From Schottky to Fuchsian uniformization}
+
+\begin{figure}
+\resizebox{\textwidth}{!}{
+\reflectbox{\includegraphics[width=10cm, angle=90]{schottky_g3/genus3_image2.pdf}}
+\includegraphics[width=10cm]{schottky_g3/genus3_domain2.pdf}
+}
+\caption{
+Left: Discrete version of a Riemann surface of genus $3$ given by Schottky data.
+Circles with the same color are identified.
+The Schottky group elements that map the blue and green circles onto each other map the exterior of the source circle onto the interior of the image circle and vice-versa.
+The map corresponding to the purple circle is defined to map the interior of the outer circle to the interior of the inner circle. Stereographically projected image, the randomly chosen extra points of the triangulation are chosen such that the triangulation is close to regular where possible.
+\\
+Right: Fuchsian uniformization and universal cover in the Poicar\'e model of the hyperbolic plane. The boundary of the fundamental domain consists of  the Schottky circles and short paths connecting them (grey edges).}
+\end{figure}
 
 \subfilebibliography
 
-  \section{Numerical Data}
+\section{Numerical Data}
 
-  In this section we list the matrices of the group elements for the uniformization of the elliptic-hyperelliptic surface presented in Section~\ref{sec:non-hyperelliptic}, see Figure~\ref{fig:non-hyperelliptic} (left) and Figure~\ref{fig:elliptic-hyperelliptic-data}. It is a genus $3$ surface and we present the uniformizing group using six generators
-  \[
-  \left<T_1,T_2,T_3,T_4,T_5,T_6 \in {\it PSL}(2,\mathbb R) \mid T_1{T_2}^{-1}T_3{T_4}^{-1}T_5{T_6}^{-1} {T_1}^{-1}T_2{T_3}^{-1}T_4{T_5}^{-1}T_6 = 1
-  \right>.
-  \]
+In this section we list the matrices of the group elements for the uniformization of the elliptic-hyperelliptic surface presented in Section~\ref{sec:non-hyperelliptic}, see Figure~\ref{fig:non-hyperelliptic} (left) and Figure~\ref{fig:elliptic-hyperelliptic-data}. It is a genus $3$ surface and we present the uniformizing group using six generators
+\[
+\left<T_1,T_2,T_3,T_4,T_5,T_6 \in {\it PSL}(2,\mathbb R) \mid T_1{T_2}^{-1}T_3{T_4}^{-1}T_5{T_6}^{-1} {T_1}^{-1}T_2{T_3}^{-1}T_4{T_5}^{-1}T_6 = 1
+\right>.
+\]
 
-  \begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth]{non-hyperelliptic/tetra_symmetric_hyperelliptic_labels.pdf}
-  \caption{Uniformization of a discrete version of the elliptic-hyperelliptic curve constructed in Section~\ref{sec:non-hyperelliptic}.  The fundamental domain is identified at opposite edges.}
-  \label{fig:elliptic-hyperelliptic-data}
-  \end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{non-hyperelliptic/tetra_symmetric_hyperelliptic_labels.pdf}
+\caption{Uniformization of a discrete version of the elliptic-hyperelliptic curve constructed in Section~\ref{sec:non-hyperelliptic}.  The fundamental domain is identified at opposite edges.}
+\label{fig:elliptic-hyperelliptic-data}
+\end{figure}
 
-  \todo{SSE: round data to 7 valid digits? The relation is preserved up to $10^-7$}
-  \input{data/non-hyperelliptic/opposite_data_symmetric.tex}
+\todo{SSE: round data to 7 valid digits? The relation is preserved up to $10^-7$}
+\input{data/non-hyperelliptic/opposite_data_symmetric.tex}
 
 
 \end{document}
