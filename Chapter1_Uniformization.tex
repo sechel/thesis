@@ -701,25 +701,33 @@ We start with the branch data $\lambda_1,\ldots,\lambda_{4}$ and create a triang
 
 \begin{figure}
 \centering
-\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_image.pdf}
+\resizebox{\textwidth}{!}{
 \includegraphics[height=4.5cm]{wente_uniform/wente_uniform_domain.pdf}
-\setstretch{0.8}{\scriptsize\tt data/wente\_uniform/wente\_uniform.xml}
-\caption{Uniformization of a discrete wente torus $\mu^2=\lambda(\lambda^3-1)$. Points on the sphere are
-chosen to form a regular subdivision of the elliptic lattice. Red points are
-branch points of the surface.  Stereographic projection of the branched sphere
-(left), ellptic lattice of the torus (right).} \label{fig:wente_elliptic}
+\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_image.pdf}
+}
+\setstretch{0.8}{\scriptsize\tt data/wente\_uniform/wente\_uniform\_branched.xml}
+\caption{
+Map from the torus $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$ to $\Chat$. 
+Left: Regular subdivision of the elliptic lattice. 
+Right: Two-sheeted image of the map, both sheets coincide due to the regular subdivision. 
+Red point correspond to the four branch points under stereographic projection.
+} 
+\label{fig:wente_elliptic}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_image.pdf}
+\resizebox{\textwidth}{!}{
 \includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_domain.pdf}
-\setstretch{0.8}{\scriptsize\tt data/elliptic\_square\_uniform/square\_uniform\_fine.xml}
-\caption{Uniformization of a square surface. Points on the sphere are chosen
-to form a regular subdivision of the elliptic lattice. Red points are branch
-points of the surface. Red edges represent the boundary of the fundamental
-domain. Stereographic projection of the branched sphere (left), ellptic
-lattice of the torus (right).} 
+\includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_image.pdf}
+}
+\setstretch{0.8}{\scriptsize\tt data/elliptic\_square\_uniform/square\_branched.xml}
+\caption{
+Map from the flat torus $\tau=i$ to $\Chat$. 
+Left: Subdivided lattice of the torus. 
+Right: Two-sheeted image of the conformal map to $\Chat$, both sheets coincide due to the regular subdivision. 
+Red point correspond to the four branch points under stereographic projection.
+}
 \label{fig:square_elliptic} 
 \end{figure}
 
