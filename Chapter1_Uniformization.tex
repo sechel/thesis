@@ -1,10 +1,35 @@
 \documentclass[Thesis.tex]{subfiles}
 \begin{document}
 
-\chapter{Discrete uniformization of Riemann surfaces. Boundary value problems, circle domains,
-Fuchsian and Schottky uniformization}
+\chapter{Discrete uniformization of Riemann surfaces.}
 
 \section{Introduction}
+
+\begin{figure}
+\centering
+\resizebox{\linewidth}{!}{
+    \includegraphics[width=0.25\linewidth]{introduction/genus0_image.pdf}
+    \includegraphics[width=0.25\linewidth]{introduction/genus1_image.pdf}
+    \includegraphics[width=0.25\linewidth]{introduction/genus3_image.pdf}
+ }
+\resizebox{\linewidth}{!}{
+    \includegraphics[width=0.25\linewidth]{introduction/genus0_domain.pdf}
+    \includegraphics[width=0.25\linewidth]{introduction/genus1_domain.pdf}
+    \includegraphics[width=0.25\linewidth]{introduction/genus3_domain.pdf}
+}
+{\scriptsize\tt data/introduction/genus\{0/1/3\}\_data.xml} 
+\caption{Uniformization of compact Riemann surfaces}
+\label{fig:intro_uniformization}
+\end{figure}
+
+Some of the material presented here has been published in~\cite{Bobenko2010} and \cite{Springborn2008}. 
+Namely the euclidean and hyperbolic functional together with their gradients and hessian matrices. 
+We generalize the setting in a way such that not only the scaling factors $u$ are variables of the functional but also the $\lambda$s itself can be varied. By this we can formulate the theory of conformally equivalent meshes on cyclic polyhedral surfaces.
+We contribute the corresponding first and second derivatives. 
+In addition to this we also give a spherical version of the functional together with its gradient and hessian matrix. 
+As touched upon in \cite{Bobenko2010} letting the $\lambda$s be variables we are able to create maps to regions bounded by circles.
+This text is accompanied by a data compact disk which contains the data for most of the examples presented in this part of the work. 
+Where applicable we give the path to the data on the disk directly under the corresponding figure.
 
 \section{Basic definitions}
 
@@ -181,7 +206,7 @@ are discretely conformally equivalent if
 = e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij}.
 \end{equation*}
 
-begin{remark*}[Orientation]
+\begin{remark*}[Orientation]
 We need and will only consider oriented surfaces because the
 solutions of the conformal mapping problems that we treat are
 sufficiently unique. The situation is like in the classical smooth
@@ -191,11 +216,11 @@ functions and discrete groups containing orientation reversing
 M\"obius transformations), this would not lead to anything
 essentially new: Due to uniqueness, the uniformization of an
 unorientable surface lifts to the oriented double cover.
-end{remark*}
+\end{remark*}
 
 
 
-\section{Variational principle for discrete conformal maps (euclidean version)}
+\section{Variational principles for discrete conformal maps}
 \label{sec:vari-princ}
 
 %functionals in $u$'s and $\lambda$'s and their Hessian
@@ -254,78 +279,154 @@ discrete conformal factor at other vertices:
 \begin{problem}
 \textbf{\itshape{Given}}
 
-\textbf{\itshape{find}}
+\begin{compactitem}
+\item the discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a
+euclidean cyclic polyhedral surface,
+\item a desired total angle $\Theta_{i}>0$ for each interior vertex $i\in V_{\Sigma}$,
+\end{compactitem}
+
+\textbf{\itshape{find}} the discrete metric
+$\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a discretely
+conformally equivalent euclidean cyclic polyhedral surface that has
+the desired total angle $\Theta_{i}$ around each interior vertex $i\in
+V$ and maps the boundary isometrically.
+
 \end{problem}
+
+Again if $\Theta_{i}=2\pi$ for all interior vertices we ask for a euclidean flat metric. 
+To obtain a isometrically mapped boundary we set $u_i=0$ for all vertices on the boundary of $E_{\Sigma}$.
 
 \subsection{Variational principle}
 \label{sec:variational}
 
-The variational principle involves a function of the logarithmic edge
-lengths, $x=\log\ell$.
+Let $l_{\it ij}$ be the edge lengths of a triangulation. We define
+\begin{eqnarray*}
+\lambda_{ij} &:=& 2\log l_{ij}\\
+\tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
+\tilde l_{\it ij} &:=& e^{\frac{1}{2}(\lambda_{\it ij} + u_i + u_j)}
+\end{eqnarray*}
 
-\begin{equation}
-\label{eq:S}
-S(x)=\sum_{i_{1}\ldots i_{n}\in F}
-2f_{n}(x_{i_{1}i_{2}},\ldots,x_{i_{n}i_{1}})
--2\pi
-\sum_{ij\in E} x_{ij}
-+
-\sum_{i\in V} \Theta_{i}u_{i}
-\end{equation}
+\subsection{Euclidean version}
 
-\subsection{The functions $f_n$}
-\label{sec:f_n}
+\begin{eqnarray*}
+f^{\rm euc}_{\it ijk}(\lambda,u) &:=& \alpha_i \tilde\lambda_{jk} + \alpha_j \tilde\lambda_{ki} + \alpha_k \tilde\lambda_{ij} + 2\left(\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k)\right)
+\end{eqnarray*}
 
-For each $n\geq 3$, let
-\begin{equation}
-\label{eq:A_n}
-\mathcal{A}_{n}=\big\{
-x\in\R^{n}\;\big|\;\ell_{1}=e^{x_{1}},\ldots,\ell_{n}=e^{x_{n}}
-\text{ satisfy the polygon inequalities~\eqref{eq:polygon_ineq}}
-\big\},
-\end{equation}
-and define the function
-\begin{equation*}
-f_{n}:\R^{n}\rightarrow\R
-\end{equation*}
-as follows.
+Where angle $\alpha_i$ is the angle opposite to edge $e_{\it jk}$ in the triangle $\it ijk\in F$ with edge lengths $\tilde l_{\it ij}$, $\tilde l_{\it jk}$, and $\tilde l_{\it ki}$.
+The solution to the euclidean mapping problem is a critical point of the following functional.
 
-$\bullet$ If $x\in\mathcal{A}_{n}$, then
-\begin{equation}
-\label{eq:f_n}
-f_{n}(x_{1},\ldots,x_{n})=\sum_{k=1}^{n}
-\big(\alpha_{k}x_{k}+\ML(\alpha_{k})\big),
-\end{equation}
-where $2\alpha_{1},\ldots,2\alpha_{n}$ are the central angles of a
-cyclic euclidean polygon with sides $e^{x_{1}},\ldots,e^{x_{n}}$ as
-shown in Figure~\ref{fig:cyclicpolygon}, and $\ML(x)$ is Milnor's
-Lobachevsky function~\cite{milnor_hyperbolic_1982},
-\begin{equation}
-\label{eq:ML}
-\ML(x)=-\int_{0}^{x}\log|2\sin t|\,\mathit{dt}.
-\end{equation}
+\begin{definition}{Euclidean functional}
+\begin{eqnarray}
+	E^{\rm euc}(\lambda,u) &:=& \sum_{\it ijk\in F}\left(f^{\rm euc}_{\it ijk}(\lambda,u) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
+\end{eqnarray}
+\end{definition}
 
-$\bullet$ If $x\not\in\mathcal{A}_{n}$, then one and
-only one of the polygon inequalities~\eqref{eq:polygon_ineq} is
-violated. If the $k$th polygon inequality~\eqref{eq:polygon_ineq} is
-violated, i.e., if the longest side $e^{x_{k}}$ is not shorter than
-the sum the others, then
-\begin{equation}
-\label{eq:f_n_violate}
-f_{n}(x_{1},\ldots,x_{n})=\pi x_{k}.
-\end{equation}
+Gradient:
+\begin{eqnarray}
+	\frac{\partial E^{\rm euc}}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alpha_i \\
+	\frac{\partial E^{\rm euc}}{\partial \lambda_{\it ij}} &=& \alpha_k + \alpha_m - \pi
+\end{eqnarray}
 
+In the second term the angles $\alpha_k$ and $\alpha_m$ are the angles opposite to the edge $e_{\it ij}$ in the 
+triangles on both sides of the edge.
 
-\begin{figure}
-\centering
-\input{figures/cyclicpolygon.pdf_tex}
-\caption{A cyclic polygon}
-\label{fig:cyclicpolygon}
-\end{figure}
+We now derive the hessian matrix from the previously calculated hessian with variables $u$ only:
+\[\sum_{i,j\in V}\frac{\partial^2E^{\rm euc}}{\partial u_i \partial u_j} \cdot du_i du_j = \frac{1}{2}\sum_{\it ij \in E} w_{\it ij} (du_i - du_j)^2.\]
+Where $w_{\it ij}=\frac{1}{2}(\cot\alpha_k + \cot\alpha_m)$ for triangles $\it kij\in F$ and $\it mji \in F$.
+From the definition of $\tilde\lambda_{\it ij} := \lambda_{\it ij}+u_i+u_j$ we obtain
+\[du_i-du_j=d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk}.\]
+If now the original $\lambda$s are variables we get extra terms in the hessian coming from 
+\[d\tilde\lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j\] 
+with non-vanishing $d\lambda_{\it ij}$. It is
+
+\begin{eqnarray*}
+	\sum_{i,j\in V}\frac{\partial^2E^{\rm euc}}{\partial u_i \partial u_j} \cdot du_i du_j
+&+& \sum_{\it ij\in E}\frac{\partial^2E^{\rm euc}}{\partial \lambda_{\it ij} \partial u_i} \cdot \lambda_{\it ij} du_i
++ \sum_{\it ij\in E}\frac{\partial^2E^{\rm euc}}{\partial \lambda_{\it ij} \partial u_j} \cdot \lambda_{\it ij} du_j \\
+&=&\frac{1}{2}\sum_{\it ij \in E} w_{\it ij}(d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk})^2.\\
+&=&\frac{1}{2}\sum_{\it ij \in E} w_{\it ij}(d\lambda_{\it ki}-d\lambda_{\it jk} + du_i - du_j)^2
+\end{eqnarray*}
+\todo{this looks asymmetric, check, then again every edge is visited twice}
+
+where again $w_{\it ij}=\frac{1}{2}(\cot\alpha_k + \cot\alpha_m)$.
+
+\subsection{Hyperbolic version}
+
+For the hyperbolic case $\lambda$ and $\tilde\lambda$ are defined as before. We define hyperbolic edge lengths as 
+\[l^{\rm hyp}_{\it ij} = 2\arsinh(\tilde l_{\it ij}).\]
+All angles $\alpha$ are calculated using the hyperbolic edge lengths and hyperbolic trigonometry.
+Further define for the triangle $\it ijk\in F$
+\begin{eqnarray}
+	\beta_i &:=& \frac{1}{2} \left(\pi + \alpha_i - \alpha_j - \alpha_k \right)\\
+	\beta_j &:=& \frac{1}{2} \left(\pi - \alpha_i + \alpha_j - \alpha_k \right)\\
+	\beta_k &:=& \frac{1}{2} \left(\pi - \alpha_i - \alpha_j + \alpha_k \right)\\
+	f^{\rm hyp}_{\it ijk}(\lambda, u) &:=&\beta_i \tilde \lambda_{jk} + \beta_j \tilde \lambda_{ki} + \beta_k \tilde \lambda_{ij}\\ 		
+				&&+\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k) + \ML(\beta_i) + \ML(\beta_j) + \ML(\beta_k)\\
+				&&+\ML\left(\frac{1}{2}\left(\pi - \alpha_i - \alpha_j - \alpha_k\right)\right)
+\end{eqnarray}
+
+The hyperbolic functional is defined as
+
+\begin{definition}
+\begin{eqnarray}
+	E^{\rm hyp}(\lambda, u) &:=& \sum_{\it ijk\in F}\left(f^{\rm hyp}_{\it ijk}(\lambda, u) - \frac{\pi}{2}\left(\tilde \lambda_{\it jk} + \tilde \lambda_{\it ki} + \tilde \lambda_{\it ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
+\end{eqnarray}
+\end{definition}
+
+As in the euclidean case the gradient of $E_{\rm hyp}$ is
+
+\begin{eqnarray}
+	\frac{\partial E^{\rm hyp}}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alpha_i \\
+	\frac{\partial E^{\rm hyp}}{\partial \lambda_{\it ij}} &=& \alpha_k + \alpha_m - \pi
+\end{eqnarray}
+\todo{verify derivative with respect to lambda}
+
+The hessian matrix of $E^{\rm hyp}(u)$ if $\lambda$s are fixed is given by
+
+\[\sum_{i,j\in V}\frac{\partial^2E^{\rm hyp}}{\partial u_i \partial u_j} \cdot du_i du_j = 
+\tfrac{1}{2}\sum_{\it ij\in E} \left(\cot\beta_k+\cot\beta_m\right)
+  \left((du_i-du_j)^2+\tanh^2\left(\tfrac{\tilde l_{\it ij}}{2}\right)(du_i+du_j)^2\right)
+ \]
+ 
+ As in the euclidean case we can derive a version with variable $\lambda$s from the fact that 
+ \[d\tilde \lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j.\]
+ 
+ \begin{eqnarray*}
+	&&\sum_{i,j\in V}\frac{\partial^2E^{\rm hyp}}{\partial u_i \partial u_j} \cdot du_i du_j
++ \sum_{\it ij\in E}\frac{\partial^2E^{\rm hyp}}{\partial \lambda_{\it ij} \partial u_i} \cdot \lambda_{\it ij} du_i
++ \sum_{\it ij\in E}\frac{\partial^2E^{\rm hyp}}{\partial \lambda_{\it ij} \partial u_j} \cdot \lambda_{\it ij} du_j \\
+&=& \tfrac{1}{2}\sum_{\it ij\in E} \left(\cot\beta_k+\cot\beta_m\right)
+  \left((d\lambda_{\it ik}-d\lambda_{\it ki} +  du_i-du_j)^2+\tanh^2\left(\tfrac{\tilde l_{\it ij}}{2}\right)(d\lambda_{\it ij} +du_i+du_j)^2\right)
+\end{eqnarray*}
+
+\subsection{Spherical version}
+
+In the spherical case it is
+\begin{eqnarray}
+	f^{\rm sph}(u_i, u_j, u_k) &:=&-\alpha_i u_i - \alpha_j u_j - \alpha_k u_k +\beta_i \tilde \lambda_{jk} + \beta_j \tilde \lambda_{ki} + \beta_k \tilde \lambda_{ij}\\ 		
+				&&+\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k) + \ML(\beta_i) + \ML(\beta_j) + \ML(\beta_k)\\
+				&&+\ML\left(\frac{\pi - \alpha_i - \alpha_j - \alpha_k}{2}\right)	
+\end{eqnarray}
+
+\begin{definition}
+\begin{eqnarray}
+	E_{Sph}(u) &:=& \sum_{ijk\in F}\left(f_{Sph}(u_i, u_j, u_k) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
+\end{eqnarray}
+\end{definition}
+
+The derivatives of all functionals can be derived from the fact that 
+\begin{eqnarray}
+	\frac{\partial f}{\partial u_i} &=& \alpha_i
+\end{eqnarray}
+where $\alpha$ is calculated in the respective geometry. From that it follows 
+\begin{eqnarray}
+	\frac{\partial E}{\partial u_i} &=& \Theta_i - \sum_{ijk\ni i}\alpha_i.
+\end{eqnarray}
 
 
 \subsection{Convexity}
 \label{sec:convexity}
+
 
 \section{Conformal uniformization of planar domains}
 \subsection{Simply connected domains}
@@ -355,6 +456,7 @@ are beginning to show in the last picture.}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{planar_circles/all.pdf}
+\setstretch{0.0}{\scriptsize\tt data/planar\_circles/circular\_\{non\_\}schramm02.xml}\\
 \caption{
 Mapping a rectangle to a parallelogram.
 All quadrilaterals in the image are cyclic quadrilaterals.
@@ -377,6 +479,7 @@ Note, in addition to the circle pattern generated by the quadrilaterals the uppe
 \includegraphics[height=5cm]{planar_circles/riemann_shape_domain.pdf}
 \includegraphics[height=5cm]{planar_circles/riemann_shape_circles.pdf}
 }
+\setstretch{0.0}{\scriptsize\tt data/planar\_circles/riemann\_shape.xml}
 \caption{
 Riemann-map with cyclic quadrilaterals.
 Corners with valence two in the original domain are modeled as triangles, upper left.
@@ -399,23 +502,26 @@ In this section we present the discrete conformal map from a domain made of squa
 \begin{figure}
 	\centering
 	\resizebox{\textwidth}{!}{
-	\includegraphics[width=0.25\textwidth]{planar_streams/arrow_cylinder.pdf}
+	\includegraphics[height=5cm]{planar_streams/arrow_cylinder.pdf}
 	\hskip 0.01\textwidth
-	\includegraphics[width=0.25\textwidth]{planar_streams/arrow_cylinder_image.pdf}\hfill
+	\includegraphics[height=5cm]{planar_streams/arrow_cylinder_image.pdf}\hfill
 	\hskip 0.01\textwidth
-	\includegraphics[width=0.46\textwidth]{planar_streams/arrow_cylinder_domain.pdf}
+	\includegraphics[height=5cm]{planar_streams/arrow_cylinder_domain.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/planar\_streams/arrow\_cylinder\_planar.xml}
 	\resizebox{\textwidth}{!}{
-	\includegraphics[width=0.25\textwidth]{planar_streams/triangle_cylinder.pdf}
+	\includegraphics[height=5cm]{planar_streams/triangle_cylinder.pdf}
 	\hskip 0.01\textwidth
-	\includegraphics[width=0.25\textwidth]{planar_streams/triangle_cylinder_image.pdf}\hfill
+	\includegraphics[height=5cm]{planar_streams/triangle_cylinder_image.pdf}\hfill
 	\hskip 0.01\textwidth
-	\includegraphics[width=0.46\textwidth]{planar_streams/triangle_cylinder_domain.pdf}
+	\includegraphics[height=5cm]{planar_streams/triangle_cylinder_domain.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/planar\_streams/triangle\_cylinder\_planar.xml}
 	\resizebox{\textwidth}{!}{
-	\includegraphics[height=10cm]{planar_streams/circular_stream_03_lines.pdf}
-	\includegraphics[height=9.9cm]{planar_streams/circular_stream_03_mesh.pdf}
+	\includegraphics[height=5cm]{planar_streams/circular_stream_03_lines.pdf}
+	\includegraphics[height=5cm]{planar_streams/circular_stream_03_mesh.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/planar\_streams/circular\_stream\_03.xml}
 \caption{
 Mapping of multiply connected regions.
 Conformal map of a topological cylinder with boundary components.
@@ -461,6 +567,9 @@ Thus adjacent triangles form a circular polygon in the resulting image.
 
 \section{Uniformization of spheres}
 \subsection{Uniformization with euclidean functional}
+\label{sec:spheres_euclidean}
+
+
 \subsection{Conformally equivalent spherical meshes, definition through constraint to the round sphere}
 \subsection{Spherical functional, Hessian, non-convexity}
 \subsection{Computation with spherical functional}
@@ -473,6 +582,7 @@ Thus adjacent triangles form a circular polygon in the resulting image.
 \includegraphics[height=5cm]{spherical/tetrahedron_image.pdf}
 \includegraphics[height=5cm]{spherical/tetrahedron_domain.pdf}
 }
+\setstretch{0.0}{\scriptsize\tt data/spherical/cube\_data.xml}\quad\quad\quad\quad{\scriptsize\tt data/spherical/tetrahedron\_data.xml}
 \caption{Mapping conformally to the sphere using the spherical functional and a direct spherical layout process. The map is normalize such that the center of mass of vertices is the center of the sphere.}
 \label{fig:spherical_examples}
 \end{figure}
@@ -493,9 +603,10 @@ Now minimize the reduced functional $\tilde  S_{\it sph}$. By this we can create
 \includegraphics[height=10cm]{bear_torus/baer_cuts.pdf}
 \includegraphics[height=10cm]{bear_torus/cover_triangulation_rectangle.pdf}
 \includegraphics[height=10cm]{bear_torus/cover_triangulation.pdf}
-}
+}\\
+\setstretch{0.8}{\scriptsize\tt data/bear\_torus/bear60.xml}
 \caption{
-iscrete bear model is mapped to the plane.
+A discrete bear model is mapped to the plane.
 Four cone-like singularities of angle $\pi$ are chosen at the arms and legs to reduce the conformal distortion.
 The singularities can be interpreted as branch points of a two-sheeted cover of the bear forming a topological torus.
 The corresponding universal cover is generated by euclidean translations, the fundamental domain can be chosen to be an approximate rectangle, middle.
@@ -504,7 +615,7 @@ The group of translations is a subgroup of the group generated by the rotations 
 \label{fig:bear}
 \end{figure}
 
-ranched cover of a topological sphere with four branch points is a topological torus.
+A branched cover of a topological sphere with four branch points is a topological torus.
 We exploit this fact to calculate parameterizations of triangulations with spherical topology.
 There are two ways to realize this.
 
@@ -531,6 +642,12 @@ We apply this procedure to a model of a bear, see Figure~\ref{fig:bear}. To crea
 \includegraphics[height=4cm]{schottky_g1/res50_ni_image.pdf}
 \includegraphics[height=3.9cm]{schottky_g1/res50_ni_cover.pdf}
 }
+\setstretch{0.8}{\scriptsize\tt data/schottky\_g1/res40\_nonrect.xml}
+\resizebox{\textwidth}{!}{
+\includegraphics[height=4cm]{data/schottky_g1/res50_image}
+\includegraphics[height=3.9cm]{data/schottky_g1/res50_cover}
+}
+\setstretch{0.8}{\scriptsize\tt data/schottky\_g1/res50.xml} 
 \caption{Discrete Riemann surface of genus $1$ given by Schottky data (left). Universal cover and fundamental regions (right). $A=-15-2.5i$, $B=0.1-0.3i$, $\mu=-0.3$}
 \label{fig:schottky_g1}
 \end{figure}
@@ -554,6 +671,7 @@ where $\sigma_i$ maps the exterior of $C_i$ onto the interior of $C'_i$. The poi
 \includegraphics[width=0.5\textwidth]{elliptic_curves/square.pdf}
 \includegraphics[width=0.5\textwidth]{elliptic_curves/generic.pdf}
 }
+\setstretch{0.8}{\scriptsize\tt data/elliptic\_curves/\{tetrahedron|square|generic\}.xml}
 \caption{Discrete versions of elliptic functions. Left: The lattice $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$. On the sphere the branch points form a regular tetrahedron. Middle: $\tau=i$, branch points on $\hat \C$ are located in a square on the equator. Right: Branch points in general position.}
 \label{fig:p_functions}
 \end{figure}
@@ -580,10 +698,70 @@ By this procedure the end points $\lambda$ are identified between the two sheets
 We use this construction to calculate discrete versions of elliptic functions.
 We start with the branch data $\lambda_1,\ldots,\lambda_{4}$ and create a triangulated two-sheeted cover branched at the given $\lambda$s, see Figure~\ref{fig:p_functions}.
 
-\subsubsection{Normalization of branch data}
+
+\begin{figure}
+\centering
+\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_image.pdf}
+\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_domain.pdf}
+\setstretch{0.8}{\scriptsize\tt data/wente\_uniform/wente\_uniform.xml}
+\caption{Uniformization of a discrete wente torus $\mu^2=\lambda(\lambda^3-1)$. Points on the sphere are
+chosen to form a regular subdivision of the elliptic lattice. Red points are
+branch points of the surface.  Stereographic projection of the branched sphere
+(left), ellptic lattice of the torus (right).} \label{fig:wente_elliptic}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_image.pdf}
+\includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_domain.pdf}
+\setstretch{0.8}{\scriptsize\tt data/elliptic\_square\_uniform/square\_uniform\_fine.xml}
+\caption{Uniformization of a square surface. Points on the sphere are chosen
+to form a regular subdivision of the elliptic lattice. Red points are branch
+points of the surface. Red edges represent the boundary of the fundamental
+domain. Stereographic projection of the branched sphere (left), ellptic
+lattice of the torus (right).} 
+\label{fig:square_elliptic} 
+\end{figure}
+
+We can also create the inverse construction. 
+Instead of starting at a branched configuration in $\hat \C$ we take the elliptic lattice in $\C$ and subdivide regularly.
+We prescribe angle sums of $4\pi$ at the branch points of the map, i.e., the vertex of the lattice, the mid-points of edges, and the center of the fundamental parallelogram.
+Construct the mapping to the sphere analogously to the construction used for unbranched spheres described in Section~\ref{sec:spheres_euclidean}.
+Use one of the branch points to act the role of the point at infinity.
+Then proceed with the finite part of the branched cover.
+Insert the branch point at the north pole after stereographic projection to arrive at the solution.
+
+In this spirit we calculate examples for the curves $\mu^2=\lambda(\lambda^3-1)$ and $\mu^2=\lambda^4-1$, i.e., the lattices $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$ and $\tau=i$, see Figures~\ref{fig:wente_elliptic} and~\ref{fig:square_elliptic}.
+
+\subsubsection{Normalization of branch data and regular triangulations}
 The description of conformal equivalence is M{\"o}bus invariant. Thus we can apply transformations to the branch data $\lambda_1,\ldots,\lambda_{g+1}$ before creating the discrete algebraic curve as described above. Find the M{\"o}bius transformation $T$ such that
 \[\sum_{i=1}^{2g+2}\sigma T \lambda_i = 0,\]
 i.e., the center of mass of the branch points if the origin, see~\cite{Springborn05}.
+To find the point of minimum hyperbolic distance sum as stated by Springborn we minimize the following functional. 
+
+\begin{eqnarray*} 
+	E(x) &=& \sum_{v\in V}\log\left(\frac{-\left<x,v\right>}{\sqrt{-\left<x,x\right>}}\right)\\
+	\frac{\mathrm d E}{\mathrm dx} &=& \sum_{v\in V}\left(\frac{v}{\left<x,v\right>} - \frac{x}{\left<x,x\right>}\right)\\
+	\frac{\mathrm d^2 E}{\mathrm dx^2} &=& \sum_{v\in V}\left(2\frac{x^Tx}{\left<x,x\right>^2}-\frac{v^Tv}{\left<x,v\right>^2} - \mathrm{diag}\left(\frac{1}{\left<x,x\right>}\right)\right)
+\end{eqnarray*}
+
+Here $\left<.,.\right>$ is the Minkowski scalar product. Note that the problem is
+ $3$-dimensional and as such we define $\left<x,y\right>:=x_1y_1+x_2y_2+x_3y_3-1$ in
+the implementation.
+
+To create a reasonably regular triangulation with vertices on the sphere we minimize the following energy on a given set of initial points on the sphere while fixing the branch points. 
+A good start is to choose points uniformly distributed on the sphere. 
+To achieve this we choose $x$, $y$, and $z$ to be normally distributed and project the resulting vectors to the sphere, see~ \cite{Muller1959}. 
+The functional and its gradient that we minimize is
+
+\begin{eqnarray*}
+	E &=& n^2\sum_{v\in V}\left( \left<v,v\right> - 1\right)^2 + \sum_{v\in
+V}\sum_{\substack{w\in V\\w\neq v}} \frac{1}{\left<w-v, w-v\right>}\\ \frac{\partial
+E}{\partial v} &=& 4n^2\left<v,v\right>v + 4\sum_{\substack{w\in V\\w\neq
+v}}\frac{w-v}{\left<w-v,w-v\right>^2}.  \end{eqnarray*}
+
+$\left<.,.\right>$ is the standard euclidean scalar product. There is however no guarantee that the points of the minimizer will lie on the sphere and so we project after optimization.
+
 
 \subsection{Discrete elliptic curves - numerical convergence}
 
@@ -604,10 +782,14 @@ After discrete uniformization we calculate $\hat \tau$. We normalize $\tau$ and 
 \subsubsection{Subdivided icosahedron}
 
 \begin{figure}
+\centering
 \resizebox{\textwidth}{!}{
 \includegraphics[width=0.35\textwidth]{convergence/icosubdivision01.pdf}\hfill
 \includegraphics[width=0.32\textwidth]{convergence/icosubdivision01_example01.pdf}
 }
+\setstretch{0.8}
+{\scriptsize\tt data/convergence/subdivision/icosubdivision01.dat}\\
+{\scriptsize\tt data/convergence/subdivision/data/icosubdivision01.xml}
 \caption{Numerical convergence for seven subdivision steps of an icosahedron.
 Four vertices of the base icosahedron serve as branch points of a torus.
 Vertices are projected to the unit sphere after subdivision.
@@ -627,7 +809,9 @@ with $\alpha \approx -0.88$.
 \subsubsection{Triangle quality}
 
 \begin{figure}
+\centering
 \includegraphics[width=\textwidth]{convergence/quality_rand_points01_maxmultiratio_2.pdf}
+\setstretch{0.0}{\scriptsize\tt data/convergence/numberofpoints/quality\_rand\_points01.dat}
 \caption{Plotting the error $|\tau - \hat\tau|$ against the number of vertices for triangulations with varying quality (left). Requiring a certain level of quality reveals a clear convergence slope of $\alpha\approx -0.63$ (right).}
 \label{fig:convergence_quality}
 \end{figure}
@@ -650,6 +834,7 @@ The results from these two experiments assert that there is a exponential depend
 \centering
 \includegraphics[width=0.48\textwidth,valign=c]{wente_embedding/wente_1240_fundamental.pdf}\hfill
 \includegraphics[width=0.48\textwidth,valign=c]{wente_embedding/wente_1240_domain.pdf}
+\setstretch{0.5}{\scriptsize\tt data/wente\_embedding/wente\_1240.xml}
 \caption{Uniformization of the Wente torus. Discretely sampled conformal immersion (left), domain of uniformization (right). Orange curves indicates the lattice of the flat torus in the domain. The faces of the polyhedral surface are approximate conformal squares. In the discrete uniformization their images are approximately squares, as it should be.}
 \end{figure}
 
@@ -671,6 +856,7 @@ The results from these two experiments assert that there is a exponential depend
 \includegraphics[height=10cm]{genus3/canonical_mesh.pdf}
 \includegraphics[height=10cm]{genus3/canonical_cover.pdf}
 }
+\setstretch{0.5}{\scriptsize\tt data/genus3/data.xml}
 \caption{Discrete uniformization of an embedded triangulated surface of genus $3$. Fundamental polygon with mesh and group generators (middle). Fundamental polygon normalized to canonical form. Universal cover (right).}
 \label{fig:embedded_genus_3}
 \end{figure}
@@ -680,7 +866,8 @@ The results from these two experiments assert that there is a exponential depend
 \resizebox{0.8\textwidth}{!}{
 \includegraphics[height=10cm]{genus5/genus5.pdf}
 \includegraphics[height=10cm]{genus5/fundamental.pdf}
-}
+}\\
+\setstretch{0.8}{\scriptsize\tt data/genus5/data.xml}
 \caption{An embedded triangulated surface of genus $5$ (left). Discrete uniformization and fundamental polygon with  group generators in the Poincar\'e disk (right).}
 \label{fig:embedded_genus_5}
 \end{figure}
@@ -706,6 +893,7 @@ The results from these two experiments assert that there is a exponential depend
 \includegraphics[height=3cm]{algorithm/step5.pdf}
 \includegraphics[height=3cm]{algorithm/step5_5.pdf}
 }
+\setstretch{0.0}{\scriptsize\tt data/algorithm/data.xml}
 \caption{
 Creating a fundamental polygon of a hyperelliptic surface:
 Realizing a hyperbolic metric of a discrete surface (upper-left) creates a fundamental region with polygonal boundary.
@@ -831,8 +1019,10 @@ Choose the one with the lowest number of products, see Figure~\ref{fig:cut-and-p
 
 
 
-\subsection{Uniformization of hyperelliptic curves}
+\subsection{Uniformization of hyperelliptic surfaces}
 \label{sec:hyperelliptic}
+
+
 
 \subsubsection{Fundamental domains domains for hyperelliptic surfaces}
 \label{sec:hyperelliptic_domain}
@@ -854,6 +1044,7 @@ Choose the one with the lowest number of products, see Figure~\ref{fig:cut-and-p
 \includegraphics[width=0.4\textwidth]{non-hyperelliptic/non-hyperelliptic-symmetric-with-closeup.pdf}
 }
 }
+\setstretch{0.0}{\scriptsize\tt data/non-hyperelliptic/tetrahedron\_g3\_01\_symmetric.xml}
 \caption{Hyperelliptic vs. non-hyperelliptic. In the hyperelliptic case axes of hyperbolic translations meet in a common point. The fundamental polygon is chosen symmetric with respect to the hyper elliptic involution (left). If the symmetry of the surface is broken the axes do not meet and no symmetric domain can be found (right).}
 \label{fig:non-hyperelliptic}
 \end{figure}
@@ -894,14 +1085,17 @@ For each of the representations we choose suitable fundamental domains that allo
 	\includegraphics[height=10cm]{lawson_curve/curve_canonical_cuts2.pdf}
 	\includegraphics[height=10cm]{lawson_curve/curve_canonical_uniformization.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_curve/curve\_canonical.xml}
 	\resizebox{!}{6cm} {
 	\includegraphics[height=10cm]{lawson_curve/curve_opposite_cuts.pdf}
 	\includegraphics[height=10cm]{lawson_curve/curve_opposite_uniformization.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_curve/curve\_opposite.xml}
 	\resizebox{!}{6cm} {
 	\includegraphics[height=10cm]{lawson_curve/curve_cyclic_cuts.pdf}
 	\includegraphics[height=10cm]{lawson_curve/curve_cyclic_triangulation_cover.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_curve/curve\_cyclic.xml}
 	\caption{Uniformization of Lawson's surface represented as algebraic curve $\mu^2=\lambda^6-1$. Triangulated double cover of the sphere branched at the roots of unity (left) with boundary of fundamental domain and axes of generators. Fuchsian uniformization and fundamental domain (right). Canonical domain (top), opposite sides domain (middle), and cyclic identification (bottom).}
 	\label{fig:lawson_curve}
 \end{figure}
@@ -946,14 +1140,17 @@ Starting from  a triangulation with vertices at $0$, $\infty$, at branch points,
 	\includegraphics[height=10cm]{lawson_embedding/embedding_canonical_cuts.pdf}
 	\includegraphics[height=10cm]{lawson_embedding/embedding_canonical_uniformization.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_embedding/embedding5k\_canonical.xml}
 	\resizebox{!}{6cm} {
 	\includegraphics[height=10cm]{lawson_embedding/embedding_opposite_cuts.pdf}
 	\includegraphics[height=10cm]{lawson_embedding/embedding_opposite_uniformization.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_embedding/embedding5k\_opposite.xml}	
 	\resizebox{!}{6.5cm} {
 	\includegraphics[height=10cm]{lawson_embedding/embedding_cyclic_cuts.pdf}
 	\includegraphics[height=10cm]{lawson_embedding/embedding_cyclic_triangulation_cover.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_embedding/embedding5k\_cyclic.xml}	
 	\caption{Uniformization of a euclidean embedding of Lawson's surface. Triangulated embedding with fundamental domain boundary and generator axes (left). Fuchsian uniformization with universal cover and fundamental domain (right). Canonical domain (top), opposite sides domain (middle), and cyclic identification (bottom).}
 	\label{fig:lawson_embedding}
 \end{figure}
@@ -974,11 +1171,12 @@ The third fundamental polygon we present for the embedded surface corresponds to
 \begin{figure}
 	\centering
 	\resizebox{!}{6cm} {
-	\raisebox{0.5cm}{
+	\raisebox{1.0cm}{
 	\includegraphics[height=7.5cm]{lawson_squares/lawson_squares_figure.pdf}
 	}
 	\includegraphics[height=10cm]{lawson_squares/lawson_squares_triangulation_cover.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_squares/lawson\_squares\_branch.xml}	
 	\caption{Uniformization of Lawson's surface given as metric square tiled surface (left). Fuchsian
 uniformization and fundamental domain (right). Grey circles correspond to the branch points of algebraic curve, see Figure~\ref{fig:lawson_curve}.}
 \label{fig:lawson_squares}
@@ -990,10 +1188,12 @@ The surface depicted in Figure~\ref{fig:lawson_squares}, left, is conformally eq
 \subsection{From Schottky to Fuchsian uniformization}
 
 \begin{figure}
+\centering
 \resizebox{\textwidth}{!}{
 \reflectbox{\includegraphics[width=10cm, angle=90]{schottky_g3/genus3_image2.pdf}}
 \includegraphics[width=10cm]{schottky_g3/genus3_domain2.pdf}
 }
+\setstretch{0.0}{\scriptsize\tt data/schottky\_g3/schottky.xml} 
 \caption{
 Left: Discrete version of a Riemann surface of genus $3$ given by Schottky data.
 Circles with the same color are identified.

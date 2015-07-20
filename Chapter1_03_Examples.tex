@@ -10,21 +10,7 @@ is described in detail in Chapter~\ref{chp:conformallab}.
 \section{Discrete Uniformization}
 \label{sec:example_discrete_uniformization}
 
-\begin{figure}
-\centering
-\resizebox{\linewidth}{!}{
-    \includegraphics[width=0.25\linewidth]{introduction/genus0_image.png}
-    \includegraphics[width=0.25\linewidth]{introduction/genus1_image.png}
-    \includegraphics[width=0.25\linewidth]{introduction/genus3_image.png}
-}
-\resizebox{\linewidth}{!}{
-    \includegraphics[width=0.25\linewidth]{introduction/genus0_domain.png}
-    \includegraphics[width=0.25\linewidth]{introduction/genus1_domain.pdf}
-    \includegraphics[width=0.25\linewidth]{introduction/genus3_domain.pdf}
-}
-\caption{Uniformization of compact Riemann surfaces}
-\label{fig:intro_uniformization}
-\end{figure}
+
 
 \section{Branched coverings of $\Chat$}
 \label{sec:branched_coverings}
@@ -78,37 +64,6 @@ A discrete branched cover of $\Chat$ is a triangulation of $\pi(C)$ with
 vertices at $\lambda_i$.
 
 
-In order to distribute branch points reasonably on the sphere we choose
-a suitable normalization such that the center of mass of the points is the 
-center of the sphere. This can be achieved by applying a M{\"o}bius tranformation
-to the points on the sphere, see~\cite{Springborn05}. 
-To find the point of minimum hyperbolic distance sum as stated by
-Springborn we minimize the following functional. 
-%For points $v_1,\ldots,v_n$ we sum over the hyperbolic distances to the point $x$ in the interior of the sphere.
-
-\begin{eqnarray*} 
-	E(x) &=& \sum_{v\in V}\log\left(\frac{-\left<x,v\right>}{\sqrt{-\left<x,x\right>}}\right)\\
-	\frac{\mathrm d}{\mathrm dx}E &=& \sum_{v\in V}\left(\frac{v}{\left<x,v\right>} - \frac{x}{\left<x,x\right>}\right)\\
-	\frac{\mathrm d^2}{\mathrm dx^2}E &=& \sum_{v\in V}\left(2\frac{x^Tx}{\left<x,x\right>^2}-\frac{v^Tv}{\left<x,v\right>^2} - \mathrm{diag}\left(\frac{1}{\left<x,x\right>}\right)\right)
-\end{eqnarray*}
-
-Here $\left<.,.\right>$ is the Minkowski scalar product. Note that the problem is
- $3$-dimensional and as such we define $\left<x,y\right>:=x_1y_1+x_2y_2+x_3y_3-1$ in
-the implementation.
-
-
-To create a suitable triangulation with vertices on the sphere we minimize the following energy on a given set of initial points on the sphere while fixing the branch points. 
-A good start is to choose points uniformly distributed on the sphere. 
-To achieve this we choose $x$, $y$, and $z$ to be normally distributed and project the resulting vectors to the sphere, see~ \cite{Muller1959}. 
-The functional and its gradient that we minimize is
-
-\begin{eqnarray*}
-	E &=& n^2\sum_{v\in V}\left( \left<v,v\right> - 1\right)^2 + \sum_{v\in
-V}\sum_{\substack{w\in V\\w\neq v}} \frac{1}{\left<w-v, w-v\right>}\\ \frac{\partial
-E}{\partial v} &=& 4n^2<v,v>v + 4\sum_{\substack{w\in V\\w\neq
-v}}\frac{w-v}{\left<w-v,w-v\right>^2}.  \end{eqnarray*}
-
-$\left<.,.\right>$ is the standard euclidean scalar product. There is however no guarantee that the points of the minimizer will lie on the sphere and so we project after optimization.
 
 
 \subsection{Elliptic curves}
@@ -129,29 +84,7 @@ structure is equivalent to that of the polygonal branched tetrahedron as its
 structure is flat by definition see Figure~\ref{fig:wente_elliptic}.
 \end{example}
 
-\begin{figure}
-\centering
-\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_image.pdf}
-\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_domain.pdf}
-{\scriptsize\tt data/wente\_uniform/wente\_uniform.xml}
-\caption{Uniformization of a discrete wente torus. Points on the sphere are
-chosen to form a regular subdivision of the elliptic lattice. Red points are
-branch points of the surface.  Stereographic projection of the branched sphere
-(left), ellptic lattice of the torus (right).} \label{fig:wente_elliptic}
-\end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_image.pdf}
-\includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_domain.pdf}
-{\scriptsize\tt data/elliptic\_square\_uniform/square\_uniform\_fine.xml}
-\caption{Uniformization of a square surface. Points on the sphere are chosen
-to form a regular subdivision of the elliptic lattice. Red points are branch
-points of the surface. Red edges represent the boundary of the fundamental
-domain. Stereographic projection of the branched sphere (left), ellptic
-lattice of the torus (right).} 
-\label{fig:square_elliptic} 
-\end{figure}	
 
 
 \begin{figure}[p] 
@@ -202,14 +135,7 @@ Figure~\ref{fig:regular_cover} shows the uniformization of this surface.}
 \label{fig:regular_branchdata}
 \end{figure}
 
-\begin{figure} \centering
-\includegraphics[width=\linewidth]{data/hyperelliptic_g3/cover_mesh}
-{\scriptsize\tt data/hyperelliptic\_g3/data.xml} 
-\caption{Uniformization of Surface~\ref{eq:regular_hyperelliptic}. The surface
-admits a regular fundamental polygon (red) with opposite sides identified. In
-this normalization the axes of the identification motions meet in a point.}
-\label{fig:regular_cover} 
-\end{figure}
+
 
 
 \subsection{Weierstrass points on hyperelliptic surfaces}
@@ -315,9 +241,7 @@ with given branch points. (Data at {\tt convergence/icosubdivision.dat})}
 \label{sec:schottky_examples}
 
 \begin{figure} \centering
-\includegraphics[width=0.28\linewidth]{data/schottky_g1/res50_image} \quad
-\includegraphics[width=0.68\linewidth]{data/schottky_g1/res50_cover}
-{\scriptsize\tt data/schottky\_g1/res50.xml} 
+
 \caption{Uniformization of a genus $1$ discrete Riemann surface given by
 Schottky data.  The boundary of the fundamental domain consists of circular
 polygons in the Schottky domain.  $\mu$ is real and the elliptic lattice is a

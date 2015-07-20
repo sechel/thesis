@@ -3,17 +3,18 @@
 
 \chapter{Introduction}
 
+\begin{figure}
+\centering
+\includegraphics[width=0.4\linewidth]{data/hyperelliptic_g3/cover_mesh}\\
+{\scriptsize\tt data/hyperelliptic\_g3/data.xml} 
+\caption{A hyperelliptic Riemann surface represented as quotient of the hyperbolic plane, here pictured in the Poincar{\'e} disk model, and a group of hyperbolic motions. The surface is the equivalence class of points with respect to a uniformization group of hyperbolic motions. A fundamental domain (blue area) can be chosen such that the axes of the motions (dashed blue lines) intersect in a common point. This particular representation is calculated from a discrete hyperelliptic curve, i.e. a doubly covered Riemann sphere branched at $2g + 2$ points, see Section~\ref{sec:hyperelliptic}.}
+\label{fig:regular_cover} 
+\end{figure}
+
 The notion of discrete conformal equivalence of triangle meshes was introduced in \cite{Springborn2008} and extended to hyperbolic metrics in \cite{Bobenko2010}. Two combinatorially equivalent euclidean triangle meshes are conformally equivalent if there exist scale factors associated to vertices such that corresponding edge lengths are equal up to multiplication with adjacent scale factors.
 The problem of finding a discrete conformal map from a triangulated surface to the plane can be formulated in terms of a variational principle using scale factors as variables. 
 
 Whereas the theoretical foundations of discrete conformal mapping via conformal equivalence where laid out by Springborn and co-authors, this work focuses of the experimental side of the theory. In the spirit of discrete differential geometry we look at theorems and constructions from the geometry of Riemann surfaces, e.g. embedded surfaces and their conformal structure, and find analogous discrete constructions with similar properties.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.35\linewidth]{introduction/hyperelliptic_polygon.pdf}
-\caption{A hyperelliptic Riemann surface represented as quotient of the hyperbolic plane, here pictured as the Poincar{\'e} disk model, and a group of hyperbolic motions. The surface is the equivalence class of points with respect to a uniformization group of hyperbolic motions. A fundamental domain (blue area) can be chosen such that the axes of the motions (dashed blue lines) intersect in a common point. This particular representation is calculated from a discrete hyperelliptic curve, i.e. a doubly covered Riemann sphere branched at $2g + 2$ points, see Section~\ref{sec:branched_coverings}.}
-\label{fig:intro_hyperelliptic_surface}
-\end{figure}
 
 The work is divided into three parts. Part~\ref{part:uniformization} covers discrete uniformization of Riemann surfaces via conformal equivalence of triangle meshes. We build onto the variational principles established in \cite{Bobenko2010} and present a wealth of constructions and examples. Taken from smooth differential geometry and translated to the discrete setting we observe properties known from classic theorems. This culminates in a new conjecture about hyperelliptic Riemann surfaces. A Riemann surface is hyperelliptic if and only if the axes of the uniformization group elements meet in a common point for a suitable representation of the group, see Figure~\ref{fig:intro_hyperelliptic_surface}.
 

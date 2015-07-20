@@ -10,6 +10,8 @@
 /*.bak
 /*.dvi
 /*.out
+/*.fdb_latexmk
+/*.fls
 *.history
 .RData
 .Rhistory

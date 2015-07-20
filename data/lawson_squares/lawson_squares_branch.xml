@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformalDataList xmlns="http://www.varylab.com/conformallab/types">
+    <DiscreteMetric name="Lawson Squares Metric">
+        <MetricEdge length="1.0" index="0"/>
+        <MetricEdge length="1.0" index="1"/>
+        <MetricEdge length="1.0" index="2"/>
+        <MetricEdge length="1.0" index="3"/>
+        <MetricEdge length="1.0" index="4"/>
+        <MetricEdge length="1.0" index="5"/>
+        <MetricEdge length="1.0" index="6"/>
+        <MetricEdge length="1.0" index="7"/>
+        <MetricEdge length="1.0" index="8"/>
+        <MetricEdge length="1.0" index="9"/>
+        <MetricEdge length="1.0" index="10"/>
+        <MetricEdge length="1.0" index="11"/>
+        <MetricEdge length="0.7071067811865476" index="12"/>
+        <MetricEdge length="0.7071067811865476" index="13"/>
+        <MetricEdge length="0.7071067811865476" index="14"/>
+        <MetricEdge length="0.7071067811865476" index="15"/>
+        <MetricEdge length="0.7071067811865476" index="16"/>
+        <MetricEdge length="0.7071067811865476" index="17"/>
+        <MetricEdge length="0.7071067811865476" index="18"/>
+        <MetricEdge length="0.7071067811865476" index="19"/>
+        <MetricEdge length="0.7071067811865476" index="20"/>
+        <MetricEdge length="0.7071067811865476" index="21"/>
+        <MetricEdge length="0.7071067811865476" index="22"/>
+        <MetricEdge length="0.7071067811865476" index="23"/>
+        <MetricEdge length="0.7071067811865476" index="24"/>
+        <MetricEdge length="0.7071067811865476" index="25"/>
+        <MetricEdge length="0.7071067811865476" index="26"/>
+        <MetricEdge length="0.7071067811865476" index="27"/>
+        <MetricEdge length="0.7071067811865476" index="28"/>
+        <MetricEdge length="0.7071067811865476" index="29"/>
+        <MetricEdge length="0.7071067811865476" index="30"/>
+        <MetricEdge length="0.7071067811865476" index="31"/>
+        <MetricEdge length="0.7071067811865476" index="32"/>
+        <MetricEdge length="0.7071067811865476" index="33"/>
+        <MetricEdge length="0.7071067811865476" index="34"/>
+        <MetricEdge length="0.7071067811865476" index="35"/>
+        <MetricTriangle edge1="12" edge2="11" edge3="13"/>
+        <MetricTriangle edge1="13" edge2="1" edge3="14"/>
+        <MetricTriangle edge1="14" edge2="9" edge3="15"/>
+        <MetricTriangle edge1="15" edge2="0" edge3="12"/>
+        <MetricTriangle edge1="16" edge2="2" edge3="17"/>
+        <MetricTriangle edge1="17" edge2="0" edge3="18"/>
+        <MetricTriangle edge1="18" edge2="3" edge3="19"/>
+        <MetricTriangle edge1="19" edge2="1" edge3="16"/>
+        <MetricTriangle edge1="20" edge2="3" edge3="21"/>
+        <MetricTriangle edge1="21" edge2="5" edge3="22"/>
+        <MetricTriangle edge1="22" edge2="2" edge3="23"/>
+        <MetricTriangle edge1="23" edge2="4" edge3="20"/>
+        <MetricTriangle edge1="24" edge2="6" edge3="25"/>
+        <MetricTriangle edge1="25" edge2="4" edge3="26"/>
+        <MetricTriangle edge1="26" edge2="7" edge3="27"/>
+        <MetricTriangle edge1="27" edge2="5" edge3="24"/>
+        <MetricTriangle edge1="28" edge2="7" edge3="29"/>
+        <MetricTriangle edge1="29" edge2="10" edge3="30"/>
+        <MetricTriangle edge1="30" edge2="6" edge3="31"/>
+        <MetricTriangle edge1="31" edge2="8" edge3="28"/>
+        <MetricTriangle edge1="32" edge2="11" edge3="33"/>
+        <MetricTriangle edge1="33" edge2="8" edge3="34"/>
+        <MetricTriangle edge1="34" edge2="9" edge3="35"/>
+        <MetricTriangle edge1="35" edge2="10" edge3="32"/>
+    </DiscreteMetric>
+    <HalfedgeMap name="Uniformizing Map">
+        <Domain name="Uniformizing Map_domain">
+            <Vertex x="2.8284271247013737" y="3.779021540140036E-11" z="-1.764446242305459E-15" w="2.9999999999577467" index="0"/>
+            <Vertex x="4.2426406869398345" y="-2.449489742673438" z="-2.9825007560142544E-15" w="4.999999999793969" index="1"/>
+            <Vertex x="-1.2924697071141025E-25" y="8.881784197001231E-16" z="-2.274228861072142E-16" w="1.0" index="2"/>
+            <Vertex x="1.4142135623477026" y="2.449489742745945" z="-2.3931135325871164E-15" w="2.999999999957629" index="3"/>
+            <Vertex x="1.2247448713730646" y="-0.707106781144098" z="-6.709822004170641E-16" w="1.7320508075384486" index="4"/>
+            <Vertex x="1.2247448713541556" y="0.7071067811768189" z="-1.0745967638338419E-15" w="1.7320508075384362" index="5"/>
+            <Vertex x="1.068258035255581E-9" y="1.4142135605997934" z="-6.568752949462214E-15" w="1.7320508061209827" index="6"/>
+            <Vertex x="-1.2247448707271764" y="0.7071067811883474" z="-1.1288068564347004E-15" w="1.7320508070998013" index="7"/>
+            <Vertex x="-1.2247448712767115" y="-0.7071067810426861" z="-9.850006921033281E-16" w="1.7320508074289156" index="8"/>
+            <Vertex x="4.4712692423121104E-11" y="-1.4142135623358367" z="-4.336083349135775E-16" w="1.7320508075384562" index="9"/>
+            <Vertex x="4.242640686955149" y="2.449489742626493" z="-7.963513040771137E-15" w="4.999999999783967" index="10"/>
+            <Vertex x="3.7841609005911795E-9" y="4.89897947527193" z="-2.2489794580511336E-14" w="4.999999989913563" index="11"/>
+            <Vertex x="-1.4142135622583627" y="-2.4494897424879696" z="-1.2158373439550825E-15" w="2.999999999704878" index="12"/>
+            <Vertex x="-4.24264068642294" y="-2.4494897420093054" z="-3.0843740084352302E-15" w="4.999999999030012" index="13"/>
+            <Vertex x="-2.828427123626909" y="2.7135627078677756E-10" z="1.0616280920570302E-15" w="2.9999999989447317" index="14"/>
+            <Vertex x="-1.4142135599059733" y="2.449489740146953" z="-8.960437213975692E-15" w="2.9999999966845188" index="15"/>
+            <Vertex x="-4.242640683618802" y="2.4494897421995443" z="-4.600067027872795E-15" w="4.999999996743821" index="16"/>
+            <Vertex x="6.546542760045123E-11" y="-4.898979485351224" z="-1.991869128366402E-15" w="4.999999999789214" index="17"/>
+            <Vertex x="1.4142135624132735" y="-2.4494897427083444" z="-7.5103166665707E-16" w="2.9999999999578386" index="18"/>
+            <Identification>
+                <Vertex>1</Vertex>
+                <Vertex>10</Vertex>
+                <Vertex>11</Vertex>
+                <Vertex>13</Vertex>
+                <Vertex>16</Vertex>
+                <Vertex>17</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>0</Vertex>
+                <Vertex>12</Vertex>
+                <Vertex>15</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>3</Vertex>
+                <Vertex>14</Vertex>
+                <Vertex>18</Vertex>
+            </Identification>
+            <Halfedge left="1" target="0" next="27" opposite="6" index="0"/>
+            <Halfedge left="2" target="1" next="29" opposite="73" index="1"/>
+            <Halfedge left="3" target="18" next="31" opposite="75" index="2"/>
+            <Halfedge left="0" target="2" next="25" opposite="23" index="3"/>
+            <Halfedge left="5" target="10" next="35" opposite="74" index="4"/>
+            <Halfedge left="6" target="0" next="37" opposite="77" index="5"/>
+            <Halfedge left="7" target="2" next="39" opposite="0" index="6"/>
+            <Halfedge left="4" target="3" next="33" opposite="9" index="7"/>
+            <Halfedge left="9" target="3" next="43" opposite="79" index="8"/>
+            <Halfedge left="10" target="2" next="45" opposite="7" index="9"/>
+            <Halfedge left="11" target="15" next="47" opposite="12" index="10"/>
+            <Halfedge left="8" target="11" next="41" opposite="76" index="11"/>
+            <Halfedge left="13" target="2" next="51" opposite="10" index="12"/>
+            <Halfedge left="14" target="14" next="53" opposite="19" index="13"/>
+            <Halfedge left="15" target="16" next="55" opposite="78" index="14"/>
+            <Halfedge left="12" target="15" next="49" opposite="80" index="15"/>
+            <Halfedge left="17" target="12" next="59" opposite="22" index="16"/>
+            <Halfedge left="18" target="13" next="61" opposite="81" index="17"/>
+            <Halfedge left="19" target="14" next="63" opposite="83" index="18"/>
+            <Halfedge left="16" target="2" next="57" opposite="13" index="19"/>
+            <Halfedge left="21" target="17" next="67" opposite="82" index="20"/>
+            <Halfedge left="22" target="12" next="69" opposite="72" index="21"/>
+            <Halfedge left="23" target="2" next="71" opposite="16" index="22"/>
+            <Halfedge left="20" target="18" next="65" opposite="3" index="23"/>
+            <Halfedge left="0" target="18" next="3" opposite="31" index="24"/>
+            <Halfedge left="0" target="4" next="24" opposite="26" index="25"/>
+            <Halfedge left="1" target="2" next="0" opposite="25" index="26"/>
+            <Halfedge left="1" target="4" next="26" opposite="28" index="27"/>
+            <Halfedge left="2" target="0" next="1" opposite="27" index="28"/>
+            <Halfedge left="2" target="4" next="28" opposite="30" index="29"/>
+            <Halfedge left="3" target="1" next="2" opposite="29" index="30"/>
+            <Halfedge left="3" target="4" next="30" opposite="24" index="31"/>
+            <Halfedge left="4" target="2" next="7" opposite="39" index="32"/>
+            <Halfedge left="4" target="5" next="32" opposite="34" index="33"/>
+            <Halfedge left="5" target="3" next="4" opposite="33" index="34"/>
+            <Halfedge left="5" target="5" next="34" opposite="36" index="35"/>
+            <Halfedge left="6" target="10" next="5" opposite="35" index="36"/>
+            <Halfedge left="6" target="5" next="36" opposite="38" index="37"/>
+            <Halfedge left="7" target="0" next="6" opposite="37" index="38"/>
+            <Halfedge left="7" target="5" next="38" opposite="32" index="39"/>
+            <Halfedge left="8" target="15" next="11" opposite="47" index="40"/>
+            <Halfedge left="8" target="6" next="40" opposite="42" index="41"/>
+            <Halfedge left="9" target="11" next="8" opposite="41" index="42"/>
+            <Halfedge left="9" target="6" next="42" opposite="44" index="43"/>
+            <Halfedge left="10" target="3" next="9" opposite="43" index="44"/>
+            <Halfedge left="10" target="6" next="44" opposite="46" index="45"/>
+            <Halfedge left="11" target="2" next="10" opposite="45" index="46"/>
+            <Halfedge left="11" target="6" next="46" opposite="40" index="47"/>
+            <Halfedge left="12" target="16" next="15" opposite="55" index="48"/>
+            <Halfedge left="12" target="7" next="48" opposite="50" index="49"/>
+            <Halfedge left="13" target="15" next="12" opposite="49" index="50"/>
+            <Halfedge left="13" target="7" next="50" opposite="52" index="51"/>
+            <Halfedge left="14" target="2" next="13" opposite="51" index="52"/>
+            <Halfedge left="14" target="7" next="52" opposite="54" index="53"/>
+            <Halfedge left="15" target="14" next="14" opposite="53" index="54"/>
+            <Halfedge left="15" target="7" next="54" opposite="48" index="55"/>
+            <Halfedge left="16" target="14" next="19" opposite="63" index="56"/>
+            <Halfedge left="16" target="8" next="56" opposite="58" index="57"/>
+            <Halfedge left="17" target="2" next="16" opposite="57" index="58"/>
+            <Halfedge left="17" target="8" next="58" opposite="60" index="59"/>
+            <Halfedge left="18" target="12" next="17" opposite="59" index="60"/>
+            <Halfedge left="18" target="8" next="60" opposite="62" index="61"/>
+            <Halfedge left="19" target="13" next="18" opposite="61" index="62"/>
+            <Halfedge left="19" target="8" next="62" opposite="56" index="63"/>
+            <Halfedge left="20" target="2" next="23" opposite="71" index="64"/>
+            <Halfedge left="20" target="9" next="64" opposite="66" index="65"/>
+            <Halfedge left="21" target="18" next="20" opposite="65" index="66"/>
+            <Halfedge left="21" target="9" next="66" opposite="68" index="67"/>
+            <Halfedge left="22" target="17" next="21" opposite="67" index="68"/>
+            <Halfedge left="22" target="9" next="68" opposite="70" index="69"/>
+            <Halfedge left="23" target="12" next="22" opposite="69" index="70"/>
+            <Halfedge left="23" target="9" next="70" opposite="64" index="71"/>
+            <Halfedge left="-1" target="17" next="82" opposite="21" index="72"/>
+            <Halfedge left="-1" target="0" next="77" opposite="1" index="73"/>
+            <Halfedge left="-1" target="3" next="79" opposite="4" index="74"/>
+            <Halfedge left="-1" target="1" next="73" opposite="2" index="75"/>
+            <Halfedge left="-1" target="15" next="80" opposite="11" index="76"/>
+            <Halfedge left="-1" target="10" next="74" opposite="5" index="77"/>
+            <Halfedge left="-1" target="14" next="83" opposite="14" index="78"/>
+            <Halfedge left="-1" target="11" next="76" opposite="8" index="79"/>
+            <Halfedge left="-1" target="16" next="78" opposite="15" index="80"/>
+            <Halfedge left="-1" target="12" next="72" opposite="17" index="81"/>
+            <Halfedge left="-1" target="18" next="75" opposite="20" index="82"/>
+            <Halfedge left="-1" target="13" next="81" opposite="18" index="83"/>
+            <EdgeIdentification edge1="21" edge2="1" edge3="72" edge4="73"/>
+            <EdgeIdentification edge1="4" edge2="2" edge3="74" edge4="75"/>
+            <EdgeIdentification edge1="11" edge2="5" edge3="76" edge4="77"/>
+            <EdgeIdentification edge1="14" edge2="8" edge3="78" edge4="79"/>
+            <EdgeIdentification edge1="15" edge2="17" edge3="80" edge4="81"/>
+            <EdgeIdentification edge1="20" edge2="18" edge3="82" edge4="83"/>
+            <Face index="0"/>
+            <Face index="1"/>
+            <Face index="2"/>
+            <Face index="3"/>
+            <Face index="4"/>
+            <Face index="5"/>
+            <Face index="6"/>
+            <Face index="7"/>
+            <Face index="8"/>
+            <Face index="9"/>
+            <Face index="10"/>
+            <Face index="11"/>
+            <Face index="12"/>
+            <Face index="13"/>
+            <Face index="14"/>
+            <Face index="15"/>
+            <Face index="16"/>
+            <Face index="17"/>
+            <Face index="18"/>
+            <Face index="19"/>
+            <Face index="20"/>
+            <Face index="21"/>
+            <Face index="22"/>
+            <Face index="23"/>
+            <Selection>
+                <VertexSelection/>
+                <EdgeSelection/>
+                <FaceSelection/>
+            </Selection>
+        </Domain>
+        <Image name="Uniformizing Map_image">
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="0"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="1"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="2"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="3"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="4"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="5"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="6"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="7"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="8"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="9"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="10"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="11"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="12"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="13"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="14"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="15"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="16"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="17"/>
+            <Vertex x="0.0" y="0.0" z="0.0" w="INF" index="18"/>
+            <Identification>
+                <Vertex>1</Vertex>
+                <Vertex>10</Vertex>
+                <Vertex>11</Vertex>
+                <Vertex>13</Vertex>
+                <Vertex>16</Vertex>
+                <Vertex>17</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>0</Vertex>
+                <Vertex>12</Vertex>
+                <Vertex>15</Vertex>
+            </Identification>
+            <Identification>
+                <Vertex>3</Vertex>
+                <Vertex>14</Vertex>
+                <Vertex>18</Vertex>
+            </Identification>
+            <Halfedge left="1" target="0" next="27" opposite="6" index="0"/>
+            <Halfedge left="2" target="1" next="29" opposite="73" index="1"/>
+            <Halfedge left="3" target="18" next="31" opposite="75" index="2"/>
+            <Halfedge left="0" target="2" next="25" opposite="23" index="3"/>
+            <Halfedge left="5" target="10" next="35" opposite="74" index="4"/>
+            <Halfedge left="6" target="0" next="37" opposite="77" index="5"/>
+            <Halfedge left="7" target="2" next="39" opposite="0" index="6"/>
+            <Halfedge left="4" target="3" next="33" opposite="9" index="7"/>
+            <Halfedge left="9" target="3" next="43" opposite="79" index="8"/>
+            <Halfedge left="10" target="2" next="45" opposite="7" index="9"/>
+            <Halfedge left="11" target="15" next="47" opposite="12" index="10"/>
+            <Halfedge left="8" target="11" next="41" opposite="76" index="11"/>
+            <Halfedge left="13" target="2" next="51" opposite="10" index="12"/>
+            <Halfedge left="14" target="14" next="53" opposite="19" index="13"/>
+            <Halfedge left="15" target="16" next="55" opposite="78" index="14"/>
+            <Halfedge left="12" target="15" next="49" opposite="80" index="15"/>
+            <Halfedge left="17" target="12" next="59" opposite="22" index="16"/>
+            <Halfedge left="18" target="13" next="61" opposite="81" index="17"/>
+            <Halfedge left="19" target="14" next="63" opposite="83" index="18"/>
+            <Halfedge left="16" target="2" next="57" opposite="13" index="19"/>
+            <Halfedge left="21" target="17" next="67" opposite="82" index="20"/>
+            <Halfedge left="22" target="12" next="69" opposite="72" index="21"/>
+            <Halfedge left="23" target="2" next="71" opposite="16" index="22"/>
+            <Halfedge left="20" target="18" next="65" opposite="3" index="23"/>
+            <Halfedge left="0" target="18" next="3" opposite="31" index="24"/>
+            <Halfedge left="0" target="4" next="24" opposite="26" index="25"/>
+            <Halfedge left="1" target="2" next="0" opposite="25" index="26"/>
+            <Halfedge left="1" target="4" next="26" opposite="28" index="27"/>
+            <Halfedge left="2" target="0" next="1" opposite="27" index="28"/>
+            <Halfedge left="2" target="4" next="28" opposite="30" index="29"/>
+            <Halfedge left="3" target="1" next="2" opposite="29" index="30"/>
+            <Halfedge left="3" target="4" next="30" opposite="24" index="31"/>
+            <Halfedge left="4" target="2" next="7" opposite="39" index="32"/>
+            <Halfedge left="4" target="5" next="32" opposite="34" index="33"/>
+            <Halfedge left="5" target="3" next="4" opposite="33" index="34"/>
+            <Halfedge left="5" target="5" next="34" opposite="36" index="35"/>
+            <Halfedge left="6" target="10" next="5" opposite="35" index="36"/>
+            <Halfedge left="6" target="5" next="36" opposite="38" index="37"/>
+            <Halfedge left="7" target="0" next="6" opposite="37" index="38"/>
+            <Halfedge left="7" target="5" next="38" opposite="32" index="39"/>
+            <Halfedge left="8" target="15" next="11" opposite="47" index="40"/>
+            <Halfedge left="8" target="6" next="40" opposite="42" index="41"/>
+            <Halfedge left="9" target="11" next="8" opposite="41" index="42"/>
+            <Halfedge left="9" target="6" next="42" opposite="44" index="43"/>
+            <Halfedge left="10" target="3" next="9" opposite="43" index="44"/>
+            <Halfedge left="10" target="6" next="44" opposite="46" index="45"/>
+            <Halfedge left="11" target="2" next="10" opposite="45" index="46"/>
+            <Halfedge left="11" target="6" next="46" opposite="40" index="47"/>
+            <Halfedge left="12" target="16" next="15" opposite="55" index="48"/>
+            <Halfedge left="12" target="7" next="48" opposite="50" index="49"/>
+            <Halfedge left="13" target="15" next="12" opposite="49" index="50"/>
+            <Halfedge left="13" target="7" next="50" opposite="52" index="51"/>
+            <Halfedge left="14" target="2" next="13" opposite="51" index="52"/>
+            <Halfedge left="14" target="7" next="52" opposite="54" index="53"/>
+            <Halfedge left="15" target="14" next="14" opposite="53" index="54"/>
+            <Halfedge left="15" target="7" next="54" opposite="48" index="55"/>
+            <Halfedge left="16" target="14" next="19" opposite="63" index="56"/>
+            <Halfedge left="16" target="8" next="56" opposite="58" index="57"/>
+            <Halfedge left="17" target="2" next="16" opposite="57" index="58"/>
+            <Halfedge left="17" target="8" next="58" opposite="60" index="59"/>
+            <Halfedge left="18" target="12" next="17" opposite="59" index="60"/>
+            <Halfedge left="18" target="8" next="60" opposite="62" index="61"/>
+            <Halfedge left="19" target="13" next="18" opposite="61" index="62"/>
+            <Halfedge left="19" target="8" next="62" opposite="56" index="63"/>
+            <Halfedge left="20" target="2" next="23" opposite="71" index="64"/>
+            <Halfedge left="20" target="9" next="64" opposite="66" index="65"/>
+            <Halfedge left="21" target="18" next="20" opposite="65" index="66"/>
+            <Halfedge left="21" target="9" next="66" opposite="68" index="67"/>
+            <Halfedge left="22" target="17" next="21" opposite="67" index="68"/>
+            <Halfedge left="22" target="9" next="68" opposite="70" index="69"/>
+            <Halfedge left="23" target="12" next="22" opposite="69" index="70"/>
+            <Halfedge left="23" target="9" next="70" opposite="64" index="71"/>
+            <Halfedge left="-1" target="17" next="82" opposite="21" index="72"/>
+            <Halfedge left="-1" target="0" next="77" opposite="1" index="73"/>
+            <Halfedge left="-1" target="3" next="79" opposite="4" index="74"/>
+            <Halfedge left="-1" target="1" next="73" opposite="2" index="75"/>
+            <Halfedge left="-1" target="15" next="80" opposite="11" index="76"/>
+            <Halfedge left="-1" target="10" next="74" opposite="5" index="77"/>
+            <Halfedge left="-1" target="14" next="83" opposite="14" index="78"/>
+            <Halfedge left="-1" target="11" next="76" opposite="8" index="79"/>
+            <Halfedge left="-1" target="16" next="78" opposite="15" index="80"/>
+            <Halfedge left="-1" target="12" next="72" opposite="17" index="81"/>
+            <Halfedge left="-1" target="18" next="75" opposite="20" index="82"/>
+            <Halfedge left="-1" target="13" next="81" opposite="18" index="83"/>
+            <EdgeIdentification edge1="21" edge2="1" edge3="72" edge4="73"/>
+            <EdgeIdentification edge1="4" edge2="2" edge3="74" edge4="75"/>
+            <EdgeIdentification edge1="11" edge2="5" edge3="76" edge4="77"/>
+            <EdgeIdentification edge1="14" edge2="8" edge3="78" edge4="79"/>
+            <EdgeIdentification edge1="15" edge2="17" edge3="80" edge4="81"/>
+            <EdgeIdentification edge1="20" edge2="18" edge3="82" edge4="83"/>
+            <Face index="0"/>
+            <Face index="1"/>
+            <Face index="2"/>
+            <Face index="3"/>
+            <Face index="4"/>
+            <Face index="5"/>
+            <Face index="6"/>
+            <Face index="7"/>
+            <Face index="8"/>
+            <Face index="9"/>
+            <Face index="10"/>
+            <Face index="11"/>
+            <Face index="12"/>
+            <Face index="13"/>
+            <Face index="14"/>
+            <Face index="15"/>
+            <Face index="16"/>
+            <Face index="17"/>
+            <Face index="18"/>
+            <Face index="19"/>
+            <Face index="20"/>
+            <Face index="21"/>
+            <Face index="22"/>
+            <Face index="23"/>
+            <Selection>
+                <VertexSelection/>
+                <EdgeSelection/>
+                <FaceSelection/>
+            </Selection>
+        </Image>
+    </HalfedgeMap>
+    <UniformizationData name="Direct Uniformization">
+        <UniformizingGroup>
+            <IsometryPSL2R m11="3.9999999995273163" m12="1.7320508068883274" m13="4.242640686395802" m21="-12.124355650169168" m22="-1.9999999977566656" m23="-12.247448710764852" m31="12.727922058529725" m32="2.449489740470284" m33="12.999999996795257"/>
+            <IsometryPSL2R m11="-5.000000000041819" m12="-6.928203230369119" m13="8.485281374339646" m21="6.928203230048626" m22="6.999999999790347" m23="-9.797958970822497" m31="-8.485281374077964" m32="-9.79795897104912" m33="12.999999999832166"/>
+            <IsometryPSL2R m11="3.9999999996632596" m12="12.124355651789099" m13="12.727922060115562" m21="-1.732050807423102" m22="-1.9999999995366853" m23="-2.4494897423018074" m31="4.242640686742291" m32="12.247448712659189" m33="12.99999999869301"/>
+            <IsometryPSL2R m11="3.999999989103972" m12="-12.124355641192535" m13="12.727922046703029" m21="1.7320508056079242" m22="-1.9999999981236565" m23="2.449489739864547" m31="4.2426406760458555" m32="-12.24744870193837" m33="12.999999985101951"/>
+            <IsometryPSL2R m11="-5.000000000041876" m12="6.928203230263746" m13="8.485281374253649" m21="-6.928203230154065" m22="6.999999999790381" m23="9.797958970897081" m31="-8.4852813741641" m32="9.797958970974639" m33="12.999999999832262"/>
+            <IsometryPSL2R m11="4.00000000228883" m12="-1.732050807931899" m13="4.242640689425417" m21="12.124355652849836" m22="-1.9999999997509208" m23="12.24744871374424" m31="12.727922061951135" m32="-2.449489742836501" m33="13.000000000590909"/>
+            <IsometryPSL2R m11="3.99999999139646" m12="1.732050806931496" m13="-4.2426406787475806" m21="-12.124355639868961" m22="-2.0000000004161453" m23="12.247448701002465" m31="-12.727922046162675" m32="-2.4494897426722595" m33="12.999999985101944"/>
+            <IsometryPSL2R m11="-4.999999992697422" m12="-6.9282032243377145" m13="-8.485281365087296" m21="6.928203225399182" m22="6.9999999972497005" m23="9.79795896571972" m31="8.485281365953982" m32="9.797958964969151" m33="12.999999989947124"/>
+            <IsometryPSL2R m11="4.000000009312047" m12="12.124355648794873" m13="-12.727922060295644" m21="-1.7320508119867617" m22="-2.00000000677408" m23="2.4494897514380938" m31="-4.2426406977023605" m32="-12.247448710876904" m33="13.000000000590793"/>
+            <IsometryPSL2R m11="4.000000000098199" m12="-12.124355649839549" m13="-12.727922058395148" m21="1.7320508072179286" m22="-1.9999999983275527" m23="-2.4494897411694723" m31="-4.242640687068595" m32="12.247448710531774" m33="12.999999996795244"/>
+            <IsometryPSL2R m11="-4.999999992697312" m12="6.928203227777301" m13="-8.485281367895624" m21="-6.928203221959457" m22="6.9999999972496525" m23="-9.797958963287426" m31="8.485281363145386" m32="-9.797958967401268" m33="12.99999998994696"/>
+            <IsometryPSL2R m11="3.9999999996609255" m12="-1.7320508074217564" m13="-4.24264068673954" m21="12.124355651790449" m22="-1.999999999534332" m23="-12.24744871266013" m31="-12.727922060116114" m32="2.4494897422989315" m33="12.999999998693001"/>
+        </UniformizingGroup>
+        <FundamentalPolygon>
+            <FundamentalVertex index="0"/>
+            <FundamentalVertex index="1"/>
+            <FundamentalVertex index="2"/>
+            <FundamentalEdge index="0" nextEdge="1" previousEdge="11" identifiedEdge="9" startVertex="1">
+                <StartPosition re="1.3093085520642214E-11" im="-0.9797958971115502"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="1" nextEdge="2" previousEdge="0" identifiedEdge="4" startVertex="2">
+                <StartPosition re="0.4714045208110495" im="-0.8164965809142564"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="2" nextEdge="3" previousEdge="1" identifiedEdge="11" startVertex="1">
+                <StartPosition re="0.8485281374229315" im="-0.48989794855487445"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="3" nextEdge="4" previousEdge="2" identifiedEdge="6" startVertex="0">
+                <StartPosition re="0.9428090415804035" im="1.259673846731087E-11"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="4" nextEdge="5" previousEdge="3" identifiedEdge="1" startVertex="1">
+                <StartPosition re="0.848528137427692" im="0.48989794854646546"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="5" nextEdge="6" previousEdge="4" identifiedEdge="8" startVertex="2">
+                <StartPosition re="0.47140452078922546" im="0.816496580926847"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="6" nextEdge="7" previousEdge="5" identifiedEdge="3" startVertex="1">
+                <StartPosition re="7.568321816449838E-10" im="0.9797958970309159"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="7" nextEdge="8" previousEdge="6" identifiedEdge="10" startVertex="0">
+                <StartPosition re="-0.4714045204896354" im="0.816496580951344"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="8" nextEdge="9" previousEdge="7" identifiedEdge="5" startVertex="1">
+                <StartPosition re="-0.8485281372763523" im="0.489897948758948"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="9" nextEdge="10" previousEdge="8" identifiedEdge="0" startVertex="2">
+                <StartPosition re="-0.9428090415406085" im="9.045209029407627E-11"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="10" nextEdge="11" previousEdge="9" identifiedEdge="7" startVertex="1">
+                <StartPosition re="-0.8485281374492003" im="-0.48989794849690005"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="11" nextEdge="0" previousEdge="10" identifiedEdge="2" startVertex="0">
+                <StartPosition re="-0.47140452079916156" im="-0.8164965809096453"/>
+            </FundamentalEdge>
+        </FundamentalPolygon>
+    </UniformizationData>
+    <UniformizationData name="Minimal Uniformization">
+        <UniformizingGroup>
+            <IsometryPSL2R m11="-5.000000000041819" m12="-6.928203230369119" m13="8.485281374339646" m21="6.928203230048626" m22="6.999999999790347" m23="-9.797958970822497" m31="-8.485281374077964" m32="-9.79795897104912" m33="12.999999999832166"/>
+            <IsometryPSL2R m11="3.999999989103972" m12="-12.124355641192535" m13="12.727922046703029" m21="1.7320508056079242" m22="-1.9999999981236565" m23="2.449489739864547" m31="4.2426406760458555" m32="-12.24744870193837" m33="12.999999985101951"/>
+            <IsometryPSL2R m11="-5.000000000041876" m12="6.928203230263746" m13="8.485281374253649" m21="-6.928203230154065" m22="6.999999999790381" m23="9.797958970897081" m31="-8.4852813741641" m32="9.797958970974639" m33="12.999999999832262"/>
+            <IsometryPSL2R m11="4.00000000228883" m12="-1.732050807931899" m13="4.242640689425417" m21="12.124355652849836" m22="-1.9999999997509208" m23="12.24744871374424" m31="12.727922061951135" m32="-2.449489742836501" m33="13.000000000590909"/>
+            <IsometryPSL2R m11="3.99999999139646" m12="1.732050806931496" m13="-4.2426406787475806" m21="-12.124355639868961" m22="-2.0000000004161453" m23="12.247448701002465" m31="-12.727922046162675" m32="-2.4494897426722595" m33="12.999999985101944"/>
+            <IsometryPSL2R m11="-4.999999992697422" m12="-6.9282032243377145" m13="-8.485281365087296" m21="6.928203225399182" m22="6.9999999972497005" m23="9.79795896571972" m31="8.485281365953982" m32="9.797958964969151" m33="12.999999989947124"/>
+            <IsometryPSL2R m11="4.000000009312047" m12="12.124355648794873" m13="-12.727922060295644" m21="-1.7320508119867617" m22="-2.00000000677408" m23="2.4494897514380938" m31="-4.2426406977023605" m32="-12.247448710876904" m33="13.000000000590793"/>
+            <IsometryPSL2R m11="-4.999999992697312" m12="6.928203227777301" m13="-8.485281367895624" m21="-6.928203221959457" m22="6.9999999972496525" m23="-9.797958963287426" m31="8.485281363145386" m32="-9.797958967401268" m33="12.99999998994696"/>
+        </UniformizingGroup>
+        <FundamentalPolygon>
+            <FundamentalVertex index="1"/>
+            <FundamentalEdge index="0" nextEdge="1" previousEdge="7" identifiedEdge="2" startVertex="1">
+                <StartPosition re="1.3093085520642214E-11" im="-0.9797958971115502"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="1" nextEdge="2" previousEdge="0" identifiedEdge="4" startVertex="1">
+                <StartPosition re="0.8485281374229315" im="-0.48989794855487445"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="2" nextEdge="3" previousEdge="1" identifiedEdge="0" startVertex="1">
+                <StartPosition re="0.848528137427692" im="0.48989794854646546"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="3" nextEdge="4" previousEdge="2" identifiedEdge="6" startVertex="1">
+                <StartPosition re="0.49913419849241647" im="0.8645257915657383"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="4" nextEdge="5" previousEdge="3" identifiedEdge="1" startVertex="1">
+                <StartPosition re="7.568321816449838E-10" im="0.9797958970309159"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="5" nextEdge="6" previousEdge="4" identifiedEdge="7" startVertex="1">
+                <StartPosition re="-0.4991341983790213" im="0.8645257916289222"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="6" nextEdge="7" previousEdge="5" identifiedEdge="3" startVertex="1">
+                <StartPosition re="-0.8485281372763523" im="0.489897948758948"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="7" nextEdge="0" previousEdge="6" identifiedEdge="5" startVertex="1">
+                <StartPosition re="-0.8485281374492003" im="-0.48989794849690005"/>
+            </FundamentalEdge>
+        </FundamentalPolygon>
+    </UniformizationData>
+    <UniformizationData name="Opposite Edges Uniformization">
+        <UniformizingGroup>
+            <IsometryPSL2R m11="48.999999927392416" m12="69.28203220527337" m13="-84.85281362086346" m21="-69.28203225180164" m22="-94.99999993372873" m23="117.57550757002133" m31="-84.85281365885362" m32="-117.57550754260427" m33="144.99999986112118"/>
+            <IsometryPSL2R m11="3.999999989103972" m12="-12.124355641192535" m13="12.727922046703029" m21="1.7320508056079242" m22="-1.9999999981236565" m23="2.449489739864547" m31="4.2426406760458555" m32="-12.24744870193837" m33="12.999999985101951"/>
+            <IsometryPSL2R m11="48.9999999273919" m12="-69.28203227817687" m13="84.85281368038845" m21="69.28203220052805" m22="-94.99999996370104" m23="117.5755075640252" m31="84.8528136169888" m32="-117.57550760978066" m33="144.9999998910929"/>
+            <IsometryPSL2R m11="4.00000000228883" m12="-1.732050807931899" m13="4.242640689425417" m21="12.124355652849836" m22="-1.9999999997509208" m23="12.24744871374424" m31="12.727922061951135" m32="-2.449489742836501" m33="13.000000000590909"/>
+            <IsometryPSL2R m11="3.99999999139646" m12="1.732050806931496" m13="-4.2426406787475806" m21="-12.124355639868961" m22="-2.0000000004161453" m23="12.247448701002465" m31="-12.727922046162675" m32="-2.4494897426722595" m33="12.999999985101944"/>
+            <IsometryPSL2R m11="28.00000005394832" m12="57.15767665643853" m13="-63.63961033651191" m21="-25.9807621754114" m22="-50.00000003397932" m23="56.338264142705086" m31="-38.183766265736466" m32="-75.93418205367009" m33="85.0000000611546"/>
+            <IsometryPSL2R m11="4.000000009312047" m12="12.124355648794873" m13="-12.727922060295644" m21="-1.7320508119867617" m22="-2.00000000677408" m23="2.4494897514380938" m31="-4.2426406977023605" m32="-12.247448710876904" m33="13.000000000590793"/>
+            <IsometryPSL2R m11="27.999999978381656" m12="-25.98076211221013" m13="38.183766167320705" m21="57.15767658329737" m22="-49.99999997657903" m23="75.93418196081872" m31="63.639610237572896" m32="-56.338264062616986" m33="84.99999993399618"/>
+        </UniformizingGroup>
+        <FundamentalPolygon>
+            <FundamentalVertex index="1"/>
+            <FundamentalEdge index="0" nextEdge="5" previousEdge="4" identifiedEdge="2" startVertex="1">
+                <StartPosition re="-0.4991341980974211" im="0.8645257917893407"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="5" nextEdge="6" previousEdge="0" identifiedEdge="7" startVertex="1">
+                <StartPosition re="-0.6060915264772081" im="0.7952888777204677"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="6" nextEdge="1" previousEdge="5" identifiedEdge="3" startVertex="1">
+                <StartPosition re="-0.8485281372763523" im="0.489897948758948"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="1" nextEdge="2" previousEdge="6" identifiedEdge="4" startVertex="1">
+                <StartPosition re="0.8485281374229315" im="-0.48989794855487445"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="2" nextEdge="7" previousEdge="1" identifiedEdge="0" startVertex="1">
+                <StartPosition re="0.848528137427692" im="0.48989794854646546"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="7" nextEdge="3" previousEdge="2" identifiedEdge="5" startVertex="1">
+                <StartPosition re="0.49913419863589537" im="0.8645257914820009"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="3" nextEdge="4" previousEdge="7" identifiedEdge="6" startVertex="1">
+                <StartPosition re="0.3394112551313241" im="0.9406040611703628"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="4" nextEdge="0" previousEdge="3" identifiedEdge="1" startVertex="1">
+                <StartPosition re="7.568321816449838E-10" im="0.9797958970309159"/>
+            </FundamentalEdge>
+        </FundamentalPolygon>
+    </UniformizationData>
+    <UniformizationData name="Canonical Uniformization">
+        <UniformizingGroup>
+            <IsometryPSL2R m11="-5.000000000041819" m12="-6.928203230369119" m13="8.485281374339646" m21="6.928203230048626" m22="6.999999999790347" m23="-9.797958970822497" m31="-8.485281374077964" m32="-9.79795897104912" m33="12.999999999832166"/>
+            <IsometryPSL2R m11="3.999999989103972" m12="-12.124355641192535" m13="12.727922046703029" m21="1.7320508056079242" m22="-1.9999999981236565" m23="2.449489739864547" m31="4.2426406760458555" m32="-12.24744870193837" m33="12.999999985101951"/>
+            <IsometryPSL2R m11="-5.000000000041876" m12="6.928203230263746" m13="8.485281374253649" m21="-6.928203230154065" m22="6.999999999790381" m23="9.797958970897081" m31="-8.4852813741641" m32="9.797958970974639" m33="12.999999999832262"/>
+            <IsometryPSL2R m11="3.99999999139646" m12="1.732050806931496" m13="-4.2426406787475806" m21="-12.124355639868961" m22="-2.0000000004161453" m23="12.247448701002465" m31="-12.727922046162675" m32="-2.4494897426722595" m33="12.999999985101944"/>
+            <IsometryPSL2R m11="-4.999999992697422" m12="-6.9282032243377145" m13="-8.485281365087296" m21="6.928203225399182" m22="6.9999999972497005" m23="9.79795896571972" m31="8.485281365953982" m32="9.797958964969151" m33="12.999999989947124"/>
+            <IsometryPSL2R m11="3.999999973793919" m12="-12.124355607946356" m13="-12.727922010222045" m21="1.7320508031631654" m22="-1.9999999931736383" m23="-2.4494897340941506" m31="-4.242640660613262" m32="12.247448668217913" m33="12.999999948297102"/>
+            <IsometryPSL2R m11="-4.999999992697312" m12="6.928203227777301" m13="-8.485281367895624" m21="-6.928203221959457" m22="6.9999999972496525" m23="-9.797958963287426" m31="8.485281363145386" m32="-9.797958967401268" m33="12.99999998994696"/>
+            <IsometryPSL2R m11="3.999999994490892" m12="1.7320508072179202" m13="4.242640681781964" m21="-12.12435564336478" m22="-2.000000000196671" m23="-12.247448704427299" m31="12.727922050465196" m32="2.4494897426955937" m33="12.999999989318809"/>
+        </UniformizingGroup>
+        <FundamentalPolygon>
+            <FundamentalVertex index="1"/>
+            <FundamentalEdge index="0" nextEdge="1" previousEdge="7" identifiedEdge="2" startVertex="1">
+                <StartPosition re="0.49913419837912454" im="-0.8645257916166572"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="1" nextEdge="2" previousEdge="0" identifiedEdge="3" startVertex="1">
+                <StartPosition re="0.8485281374229315" im="-0.48989794855487445"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="2" nextEdge="3" previousEdge="1" identifiedEdge="0" startVertex="1">
+                <StartPosition re="0.848528137427692" im="0.48989794854646546"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="3" nextEdge="4" previousEdge="2" identifiedEdge="1" startVertex="1">
+                <StartPosition re="7.568321816449838E-10" im="0.9797958970309159"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="4" nextEdge="5" previousEdge="3" identifiedEdge="6" startVertex="1">
+                <StartPosition re="-0.4991341983790213" im="0.8645257916289222"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="5" nextEdge="6" previousEdge="4" identifiedEdge="7" startVertex="1">
+                <StartPosition re="-0.8485281372763523" im="0.489897948758948"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="6" nextEdge="7" previousEdge="5" identifiedEdge="4" startVertex="1">
+                <StartPosition re="-0.8485281374492003" im="-0.48989794849690005"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="7" nextEdge="0" previousEdge="6" identifiedEdge="5" startVertex="1">
+                <StartPosition re="-2.2030064793809082E-11" im="-0.9797958971054666"/>
+            </FundamentalEdge>
+        </FundamentalPolygon>
+    </UniformizationData>
+    <UniformizationData name="Keen Uniformization">
+        <UniformizingGroup>
+            <IsometryPSL2R m11="-5.000000000041825" m12="-6.928203230369138" m13="8.485281374339664" m21="6.928203230048634" m22="6.999999999790373" m23="-9.797958970822522" m31="-8.485281374077973" m32="-9.797958971049153" m33="12.999999999832198"/>
+            <IsometryPSL2R m11="3.999999989103968" m12="-12.124355641192532" m13="12.727922046703025" m21="1.7320508056079242" m22="-1.9999999981236556" m23="2.4494897398645463" m31="4.242640676045852" m32="-12.247448701938367" m33="12.999999985101946"/>
+            <IsometryPSL2R m11="-5.000000000041826" m12="6.92820323026372" m13="8.48528137425359" m21="-6.928203230154052" m22="6.999999999790373" m23="9.797958970897065" m31="-8.485281374164048" m32="9.797958970974612" m33="12.999999999832198"/>
+            <IsometryPSL2R m11="3.999999991396456" m12="1.7320508069314926" m13="-4.242640678747575" m21="-12.124355639868963" m22="-2.000000000416142" m23="12.247448701002462" m31="-12.727922046162679" m32="-2.4494897426722573" m33="12.999999985101944"/>
+            <IsometryPSL2R m11="-4.999999992697414" m12="-6.928203224337696" m13="-8.485281365087276" m21="6.928203225399172" m22="6.9999999972496765" m23="9.797958965719696" m31="8.485281365953968" m32="9.797958964969117" m33="12.99999998994709"/>
+            <IsometryPSL2R m11="3.999999973793733" m12="-12.124355607946455" m13="-12.727922010221958" m21="1.7320508031630755" m22="-1.9999999931734587" m23="-2.449489734093958" m31="-4.242640660613118" m32="12.247448668218066" m33="12.999999948297084"/>
+            <IsometryPSL2R m11="-4.999999992697415" m12="6.928203227777341" m13="-8.485281367895736" m21="-6.928203221959528" m22="6.9999999972496765" m23="-9.7979589632875" m31="8.48528136314551" m32="-9.797958967401316" m33="12.999999989947092"/>
+            <IsometryPSL2R m11="3.9999999944908358" m12="1.732050807217928" m13="4.242640681781921" m21="-12.12435564336472" m22="-2.0000000001966693" m23="-12.247448704427244" m31="12.727922050465136" m32="2.4494897426955995" m33="12.999999989318752"/>
+        </UniformizingGroup>
+        <FundamentalPolygon>
+            <FundamentalVertex index="0"/>
+            <FundamentalEdge index="0" nextEdge="1" previousEdge="7" identifiedEdge="2" startVertex="0">
+                <StartPosition re="0.5407287149921803" im="-0.8405111862676563"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="1" nextEdge="2" previousEdge="0" identifiedEdge="3" startVertex="0">
+                <StartPosition re="0.7071067811794721" im="-0.6804138174218324"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="2" nextEdge="3" previousEdge="1" identifiedEdge="0" startVertex="0">
+                <StartPosition re="0.7071067811177931" im="0.40824829071202395"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="3" nextEdge="4" previousEdge="2" identifiedEdge="1" startVertex="0">
+                <StartPosition re="-0.23570225996972607" im="0.952579344477403"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="4" nextEdge="5" previousEdge="3" identifiedEdge="6" startVertex="0">
+                <StartPosition re="-0.4575396818011643" im="0.8885403969640487"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="5" nextEdge="6" previousEdge="4" identifiedEdge="7" startVertex="0">
+                <StartPosition re="-0.9091372909909968" im="0.4082482879937927"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="6" nextEdge="7" previousEdge="5" identifiedEdge="4" startVertex="0">
+                <StartPosition re="-0.8642416200628973" im="-0.49897013506455745"/>
+            </FundamentalEdge>
+            <FundamentalEdge index="7" nextEdge="0" previousEdge="6" identifiedEdge="5" startVertex="0">
+                <StartPosition re="-0.10101525336353985" im="-0.9914601340674045"/>
+            </FundamentalEdge>
+        </FundamentalPolygon>
+    </UniformizationData>
+</ConformalDataList>
