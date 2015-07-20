@@ -1070,7 +1070,29 @@ Let $e_1,\ldots,e_6$ be the edges of the generating regular tetrahedron. Conside
 
 Figure~\ref{fig:non-hyperelliptic} (left) shows a uniformization of $T$ with an oppositely identified fundamental polygon. The surface is hyperelliptic, thus the generators axes meet in a common point. Disturbing the symmetry a little, e.g., by moving all points of the surface by some random offset destroys the hyperellipticity of the surface, see Figure~\ref{fig:non-hyperelliptic} (right).
 
+\subsubsection{Mapping an embedded hyperelliptic surface to $\Chat$}
 
+\begin{figure} 
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[height=4.5cm]{branched_genus_2/mercator_texture.pdf}
+\includegraphics[height=4.5cm]{branched_genus_2/image_mercator_closeup.pdf}
+}
+\setstretch{0.0}{\scriptsize\tt data/branched\_genus\_2/data.xml} 
+\caption{
+A genus $2$ surface mapped to a branched cover of $\Chat$. 
+The surface exhibits an extrinsic conformal involution, the rotation about the horizontal axis of symmetry. 
+Its fixed points correspond to the branch points of the corresponding hyperelliptic algebraic curve.
+The involution corresponds to the hyperelliptic involution of the curve.  
+Left: Surface and branch points with texture after Mercator projection using the purple
+branch points as poles. 
+Right: A closeup of the stereographic image of one pair of red and blue branch points (right).
+} 
+\label{fig:genus2_branched} 
+\end{figure}
+
+If the hyperelliptic involution of a hyperelliptic surface is realizable as an extrinsic involution on an embedded surface we can easily select the branch points as the fix points of this transformation, see Figure~\ref{fig:genus2_branched}. 
+Once the branch points are known we can proceed as described in Section~\ref{sec:discrete_algebraic_curves} to calculate a map from the surface to $\Chat$.
 
 \subsection{Lawson's surface}
 
