@@ -82,6 +82,10 @@ list the vertices of a face in the correct cyclic order, so that for
 example the face $\mathit{ijkl}$ has edges $\mathit{ij}$, $\mathit{jk}$,
 $\mathit{kl}$, and $\mathit{li}$.
 
+In some formulas we need to iterate over directed edges. We denote the set 
+of directed edges by $\bar E$. For each edge $\it ij\in E$ the set $\bar E$
+contains two half-edges $\it ij\in \bar E$ and $\it ji \in \bar E$.
+
 The only reason for restricting our discussion to strongly regular CW
 complexes is to be able to use this simple notation. Everything we
 discuss applies also to general CW complexes.
@@ -302,13 +306,13 @@ Let $l_{\it ij}$ be the edge lengths of a triangulation. We define
 \begin{eqnarray*}
 \lambda_{ij} &:=& 2\log l_{ij}\\
 \tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
-\tilde l_{\it ij} &:=& e^{\frac{1}{2}(\lambda_{\it ij} + u_i + u_j)}
+\tilde l_{\it ij} &:=& e^{\frac{1}{2}\tilde \lambda_{\it ij}}=e^{\frac{1}{2}(u_i + u_j)}l_{\it ij}
 \end{eqnarray*}
 
 \subsection{Euclidean version}
 
 \begin{eqnarray*}
-f^{\rm euc}_{\it ijk}(\lambda,u) &:=& \alpha_i \tilde\lambda_{jk} + \alpha_j \tilde\lambda_{ki} + \alpha_k \tilde\lambda_{ij} + 2\left(\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k)\right)
+f^{\rm euc}_{\it ijk}( \tilde\lambda) &:=& \alpha_i \tilde\lambda_{jk} + \alpha_j \tilde\lambda_{ki} + \alpha_k \tilde\lambda_{ij} + 2\left(\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k)\right)
 \end{eqnarray*}
 
 Where angle $\alpha_i$ is the angle opposite to edge $e_{\it jk}$ in the triangle $\it ijk\in F$ with edge lengths $\tilde l_{\it ij}$, $\tilde l_{\it jk}$, and $\tilde l_{\it ki}$.
@@ -316,7 +320,7 @@ The solution to the euclidean mapping problem is a critical point of the followi
 
 \begin{definition}{Euclidean functional}
 \begin{eqnarray}
-	E^{\rm euc}(\lambda,u) &:=& \sum_{\it ijk\in F}\left(f^{\rm euc}_{\it ijk}(\lambda,u) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
+	E^{\rm euc}(\tilde\lambda) &:=& \sum_{\it ijk\in F}\left(f^{\rm euc}_{\it ijk}(\tilde\lambda) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
 \end{eqnarray}
 \end{definition}
 
@@ -327,101 +331,152 @@ Gradient:
 \end{eqnarray}
 
 In the second term the angles $\alpha_k$ and $\alpha_m$ are the angles opposite to the edge $e_{\it ij}$ in the 
-triangles on both sides of the edge.
-
+triangles on both sides of the edge. To calculate, e.g., the angle $\alpha_i$ opposite to side $\it jk$ in the triangle $\it ijk \in F$ use the half-angle formula
+\[\tan\left(\frac{\alpha_i}{2}\right) = \sqrt{\frac
+{(-l_{\it ij} +l_{\it jk} +l_{\it ki})(l_{\it ij} +l_{\it jk} -l_{\it ki})}
+{(l_{\it ij} -l_{\it jk} +l_{\it ki})(l_{\it ij} + l_{\it jk} +l_{\it ki})}}.\]
 We now derive the hessian matrix from the previously calculated hessian with variables $u$ only:
-\[\sum_{i,j\in V}\frac{\partial^2E^{\rm euc}}{\partial u_i \partial u_j} \cdot du_i du_j = \frac{1}{2}\sum_{\it ij \in E} w_{\it ij} (du_i - du_j)^2.\]
-Where $w_{\it ij}=\frac{1}{2}(\cot\alpha_k + \cot\alpha_m)$ for triangles $\it kij\in F$ and $\it mji \in F$.
+
+\begin{eqnarray}
+d^2E^{\rm euc}(u)&=&\frac{1}{4}\sum_{\it ij \in \bar E} \cot \alpha_k \cdot (du_i - du_j)^2.
+\end{eqnarray}
+
 From the definition of $\tilde\lambda_{\it ij} := \lambda_{\it ij}+u_i+u_j$ we obtain
 \[du_i-du_j=d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk}.\]
 If now the original $\lambda$s are variables we get extra terms in the hessian coming from 
-\[d\tilde\lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j\] 
+\[d\tilde\lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j\]
 with non-vanishing $d\lambda_{\it ij}$. It is
 
 \begin{eqnarray*}
-	\sum_{i,j\in V}\frac{\partial^2E^{\rm euc}}{\partial u_i \partial u_j} \cdot du_i du_j
-&+& \sum_{\it ij\in E}\frac{\partial^2E^{\rm euc}}{\partial \lambda_{\it ij} \partial u_i} \cdot \lambda_{\it ij} du_i
-+ \sum_{\it ij\in E}\frac{\partial^2E^{\rm euc}}{\partial \lambda_{\it ij} \partial u_j} \cdot \lambda_{\it ij} du_j \\
-&=&\frac{1}{2}\sum_{\it ij \in E} w_{\it ij}(d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk})^2.\\
-&=&\frac{1}{2}\sum_{\it ij \in E} w_{\it ij}(d\lambda_{\it ki}-d\lambda_{\it jk} + du_i - du_j)^2
+d^2E^{\rm euc}(\tilde\lambda)
+&=&\frac{1}{4}\sum_{\it ij \in \bar E} \cot \alpha_k \cdot (d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk})^2.
 \end{eqnarray*}
-\todo{this looks asymmetric, check, then again every edge is visited twice}
-
-where again $w_{\it ij}=\frac{1}{2}(\cot\alpha_k + \cot\alpha_m)$.
+and
+\begin{eqnarray*}
+d^2E^{\rm euc}(\lambda, u)&=&\frac{1}{4}\sum_{\it ij \in \bar E} \cot \alpha_k \cdot (d\lambda_{\it ki}-d\lambda_{\it jk} + du_i - du_j)^2.
+\end{eqnarray*}
 
 \subsection{Hyperbolic version}
 
 For the hyperbolic case $\lambda$ and $\tilde\lambda$ are defined as before. We define hyperbolic edge lengths as 
-\[l^{\rm hyp}_{\it ij} = 2\arsinh(\tilde l_{\it ij}).\]
+\begin{equation}
+l^{\rm hyp}_{\it ij} := 2\arsinh(\tilde l_{\it ij}).\label{eq:hyperbolic_lengths}
+\end{equation}
 All angles $\alpha$ are calculated using the hyperbolic edge lengths and hyperbolic trigonometry.
 Further define for the triangle $\it ijk\in F$
-\begin{eqnarray}
+\begin{eqnarray*}
 	\beta_i &:=& \frac{1}{2} \left(\pi + \alpha_i - \alpha_j - \alpha_k \right)\\
 	\beta_j &:=& \frac{1}{2} \left(\pi - \alpha_i + \alpha_j - \alpha_k \right)\\
 	\beta_k &:=& \frac{1}{2} \left(\pi - \alpha_i - \alpha_j + \alpha_k \right)\\
-	f^{\rm hyp}_{\it ijk}(\lambda, u) &:=&\beta_i \tilde \lambda_{jk} + \beta_j \tilde \lambda_{ki} + \beta_k \tilde \lambda_{ij}\\ 		
+	f^{\rm hyp}_{\it ijk}(\tilde\lambda) &:=&\beta_i \tilde \lambda_{jk} + \beta_j \tilde \lambda_{ki} + \beta_k \tilde \lambda_{ij}\\ 		
 				&&+\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k) + \ML(\beta_i) + \ML(\beta_j) + \ML(\beta_k)\\
 				&&+\ML\left(\frac{1}{2}\left(\pi - \alpha_i - \alpha_j - \alpha_k\right)\right)
-\end{eqnarray}
+\end{eqnarray*}
 
+Here the angles are hyperbolic angles and can be calculated using the hyperbolic half-angle 
+formula with hyperbolic edge lengths as defined in Equation~\ref{eq:hyperbolic_lengths}
+\[
+  \tan\left(\frac{\alpha_k}{2}\right)=
+  \sqrt{\frac{
+      \sinh(\frac{l_{ij}-l_{jk}+l_{ki}}{2})
+      \sinh(\frac{l_{ij}+l_{jk}-l_{ki}}{2})
+    }{
+      \sinh(\frac{-l_{ij}+l_{jk}+l_{ki}}{2})
+      \sinh(\frac{l_{ij}+l_{jk}+l_{ki}}{2})
+    }}.
+\]
 The hyperbolic functional is defined as
 
-\begin{definition}
 \begin{eqnarray}
-	E^{\rm hyp}(\lambda, u) &:=& \sum_{\it ijk\in F}\left(f^{\rm hyp}_{\it ijk}(\lambda, u) - \frac{\pi}{2}\left(\tilde \lambda_{\it jk} + \tilde \lambda_{\it ki} + \tilde \lambda_{\it ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
+	E^{\rm hyp}(\tilde\lambda) &:=& \sum_{\it ijk\in F}\left(f^{\rm hyp}_{\it ijk}(\tilde\lambda) - \frac{\pi}{2}\left(\tilde \lambda_{\it jk} + \tilde \lambda_{\it ki} + \tilde \lambda_{\it ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
 \end{eqnarray}
-\end{definition}
 
-As in the euclidean case the gradient of $E_{\rm hyp}$ is
+The gradient of $E_{\rm hyp}$ is
 
 \begin{eqnarray}
 	\frac{\partial E^{\rm hyp}}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alpha_i \\
-	\frac{\partial E^{\rm hyp}}{\partial \lambda_{\it ij}} &=& \alpha_k + \alpha_m - \pi
+	\frac{\partial E^{\rm hyp}}{\partial \lambda_{\it ij}} &=& 
+	\frac{1}{2}\left(\alpha_k^{\it ij} + \alpha_m^{\it ij} - (\alpha_i^{\it jm} + \alpha_i^{\it kj}) - (\alpha_j^{\it ki} + \alpha_j^{\it im})\right)
 \end{eqnarray}
-\todo{verify derivative with respect to lambda}
+The derivative with respect to $\lambda$...
+\todo{explain why this leads to cyclic hyperbolic polygons}
 
 The hessian matrix of $E^{\rm hyp}(u)$ if $\lambda$s are fixed is given by
 
-\[\sum_{i,j\in V}\frac{\partial^2E^{\rm hyp}}{\partial u_i \partial u_j} \cdot du_i du_j = 
-\tfrac{1}{2}\sum_{\it ij\in E} \left(\cot\beta_k+\cot\beta_m\right)
-  \left((du_i-du_j)^2+\tanh^2\left(\tfrac{\tilde l_{\it ij}}{2}\right)(du_i+du_j)^2\right)
- \]
+\begin{eqnarray*}
+d^2E^{\rm hyp}(u)
+&=&\tfrac{1}{2}\sum_{\it ij\in \bar E} \cot\beta_k \cdot \left((du_i-du_j)^2+
+\tanh^2\left(\tfrac{\tilde l_{\it ij}}{2}\right)(du_i+du_j)^2\right)
+\end{eqnarray*}
  
- As in the euclidean case we can derive a version with variable $\lambda$s from the fact that 
- \[d\tilde \lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j.\]
- 
- \begin{eqnarray*}
-	&&\sum_{i,j\in V}\frac{\partial^2E^{\rm hyp}}{\partial u_i \partial u_j} \cdot du_i du_j
-+ \sum_{\it ij\in E}\frac{\partial^2E^{\rm hyp}}{\partial \lambda_{\it ij} \partial u_i} \cdot \lambda_{\it ij} du_i
-+ \sum_{\it ij\in E}\frac{\partial^2E^{\rm hyp}}{\partial \lambda_{\it ij} \partial u_j} \cdot \lambda_{\it ij} du_j \\
-&=& \tfrac{1}{2}\sum_{\it ij\in E} \left(\cot\beta_k+\cot\beta_m\right)
-  \left((d\lambda_{\it ik}-d\lambda_{\it ki} +  du_i-du_j)^2+\tanh^2\left(\tfrac{\tilde l_{\it ij}}{2}\right)(d\lambda_{\it ij} +du_i+du_j)^2\right)
+As in the euclidean case we can derive a version with variable $\lambda$s from the fact that 
+\begin{equation*}
+d\tilde \lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j.
+\end{equation*}
+
+Writing the functional as a function of $\tilde \lambda$s we get 
+
+\begin{eqnarray*}
+ d^2E^{\rm hyp}(\tilde \lambda) &=&
+ \tfrac{1}{2}\sum_{\it ij\in \bar{E}} \cot\beta_k \cdot \left((d\tilde\lambda_{\it ik}-d\tilde\lambda_{\it kj})^2+\tanh^2\left(\tfrac{\tilde l_{\it ij}}{2}\right)(d\tilde\lambda_{\it ij})^2\right)
+\end{eqnarray*}
+
+With non vanishing $d\lambda_{\it ij}$ we get
+  
+\begin{eqnarray*}
+d^2E^{\rm hyp}(\lambda, u)
+&=& \tfrac{1}{2}\sum_{\it ij\in \bar{E}} \cot\beta_k \cdot 
+ \left((d\lambda_{\it ik}-d\lambda_{\it kj} +  du_i-du_j)^2+\tanh^2\left(\tfrac{\tilde l_{\it ij}}{2}\right)(d\lambda_{\it ij} +du_i+du_j)^2\right)
 \end{eqnarray*}
 
 \subsection{Spherical version}
+We define spherical edge lengths as 
+\begin{equation}
+l^{\rm sph}_{\it ij} := 2\arcsin(\tilde l_{\it ij}).\label{eq:spherical_lengths}
+\end{equation}
 
-In the spherical case it is
+As in the hyperbolic case we define
+\begin{eqnarray*}
+	\beta_i &:=& \frac{1}{2} \left(\pi + \alpha_i - \alpha_j - \alpha_k \right)\\
+	\beta_j &:=& \frac{1}{2} \left(\pi - \alpha_i + \alpha_j - \alpha_k \right)\\
+	\beta_k &:=& \frac{1}{2} \left(\pi - \alpha_i - \alpha_j + \alpha_k \right)\\
+	f^{\rm sph}_{\it ijk}(\lambda, u) &:=& f^{\rm hyp}_{\it ijk}(\lambda, u)
+\end{eqnarray*}	
+
+The angles $\alpha$ are calculated on the sphere using spherical lengths as defined in 
+Equation~\ref{eq:spherical_lengths} and the spherical half-angle formula
+\[
+  \tan\left(\frac{\alpha_k}{2}\right)=
+  \sqrt{\frac{
+      \sin(\frac{\ell_{ij}-\ell_{jk}+\ell_{ki}}{2})
+      \sin(\frac{\ell_{ij}+\ell_{jk}-\ell_{ki}}{2})
+    }{
+      \sin(\frac{-\ell_{ij}+\ell_{jk}+\ell_{ki}}{2})
+      \sin(\frac{\ell_{ij}+\ell_{jk}+\ell_{ki}}{2})
+    }}
+\]
+
 \begin{eqnarray}
-	f^{\rm sph}(u_i, u_j, u_k) &:=&-\alpha_i u_i - \alpha_j u_j - \alpha_k u_k +\beta_i \tilde \lambda_{jk} + \beta_j \tilde \lambda_{ki} + \beta_k \tilde \lambda_{ij}\\ 		
-				&&+\ML(\alpha_i) + \ML(\alpha_j) + \ML(\alpha_k) + \ML(\beta_i) + \ML(\beta_j) + \ML(\beta_k)\\
-				&&+\ML\left(\frac{\pi - \alpha_i - \alpha_j - \alpha_k}{2}\right)	
+	E^{\rm sph}(\lambda, u) &:=& \sum_{ijk\in F}\left(f_{\it ijk}^{\rm sph}(\lambda, u) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
 \end{eqnarray}
 
-\begin{definition}
+The partial derivatives of the spherical functional are given as in the hyperbolic case
 \begin{eqnarray}
-	E_{Sph}(u) &:=& \sum_{ijk\in F}\left(f_{Sph}(u_i, u_j, u_k) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
+	\frac{\partial E^{\rm sph}}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alpha_i \\
+	\frac{\partial E^{\rm sph}}{\partial \lambda_{\it ij}} &=& 
+	\frac{1}{2}\left(\alpha_k^{\it ij} + \alpha_m^{\it ij} - (\alpha_i^{\it jm} + \alpha_i^{\it kj}) - (\alpha_j^{\it ki} + \alpha_j^{\it im})\right)
 \end{eqnarray}
-\end{definition}
+Angles are calculated with the corresponding spherical formulas and spherical lengths.
+And analogously to the hyperbolic case we find the formula for the second derivative
 
-The derivatives of all functionals can be derived from the fact that 
-\begin{eqnarray}
-	\frac{\partial f}{\partial u_i} &=& \alpha_i
-\end{eqnarray}
-where $\alpha$ is calculated in the respective geometry. From that it follows 
-\begin{eqnarray}
-	\frac{\partial E}{\partial u_i} &=& \Theta_i - \sum_{ijk\ni i}\alpha_i.
-\end{eqnarray}
+\begin{eqnarray*}
+d^2E^{\rm sph}(\lambda, u)
+&=& \tfrac{1}{2}\sum_{\it ij\in \bar{E}} \cot\beta_k \cdot 
+ \left((d\lambda_{\it ik}-d\lambda_{\it kj} +  du_i-du_j)^2-\tan^2\left(\tfrac{\tilde l_{\it ij}}{2}\right)(d\lambda_{\it ij} +du_i+du_j)^2\right)
+\end{eqnarray*}
 
+Note the change of the sign in front of the $\tan$ in the formula. Otherwise the hyperbolic and spherical 
+derivatives look the same.
 
 \subsection{Convexity}
 \label{sec:convexity}
@@ -430,27 +485,27 @@ where $\alpha$ is calculated in the respective geometry. From that it follows
 \section{Conformal uniformization of planar domains}
 \subsection{Simply connected domains}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.49\textwidth]{uniformization/labyrinth/labyrithflow02.pdf}\hfill
-\includegraphics[width=0.49\textwidth]{uniformization/labyrinth/triang_orig.pdf}\\
-\smallskip
-\includegraphics[width=\textwidth]{uniformization/labyrinth/labyrithrect02}
-\caption{Mapping a labyrinth (top left) to a rectangle (bottom), and
-the triangulation that was used.}
-\label{fig:labyrinth1}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow03.pdf}\hfill
-\includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow04.pdf}\hfill
-\includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow05.pdf}
-\caption{The same map from a labyrinth to a rectangle as shown in
-Figure~\ref{fig:labyrinth1}, but the grid is 100 times, 1\,000
-times, and 10\,000 times finer, respectively. Numerical artefacts
-are beginning to show in the last picture.}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.49\textwidth]{uniformization/labyrinth/labyrithflow02.pdf}\hfill
+%\includegraphics[width=0.49\textwidth]{uniformization/labyrinth/triang_orig.pdf}\\
+%\smallskip
+%\includegraphics[width=\textwidth]{uniformization/labyrinth/labyrithrect02}
+%\caption{Mapping a labyrinth (top left) to a rectangle (bottom), and
+%the triangulation that was used.}
+%\label{fig:labyrinth1}
+%\end{figure}
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow03.pdf}\hfill
+%\includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow04.pdf}\hfill
+%\includegraphics[width=0.32\textwidth]{uniformization/labyrinth/labyrithflow05.pdf}
+%\caption{The same map from a labyrinth to a rectangle as shown in
+%Figure~\ref{fig:labyrinth1}, but the grid is 100 times, 1\,000
+%times, and 10\,000 times finer, respectively. Numerical artefacts
+%are beginning to show in the last picture.}
+%\end{figure}
 
 \begin{figure}
 \centering
