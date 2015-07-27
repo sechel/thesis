@@ -1,5 +1,6 @@
-\documentclass[Thesis.tex]{subfiles}
+\documentclass[Thesis]{subfiles}
 \begin{document}
+\setkeys{Gin}{draft=true}
 
 \chapter{Discrete uniformization of Riemann surfaces.}
 
@@ -226,7 +227,28 @@ unorientable surface lifts to the oriented double cover.
 \section{Variational principles for discrete conformal maps}
 \label{sec:vari-princ}
 
-%functionals in $u$'s and $\lambda$'s and their Hessian
+Let $\Sigma$ be a cyclic polyhedral surface. Define a derived cyclic polyhedral
+surface $\tilde \Sigma$ by triangulating all faces with more than three vertices. The way of triangulation
+is arbitrary. Let $E_0$ be the set of original edges and let $E_1$ be the set of new edges
+in the triangulation, i.e., $E=E_0\cup E_1$.
+
+\begin{definition}
+Let $l_{\it ij}:E\to R_{>0}$ be the edge lengths of the $\tilde \Sigma$. Define
+\begin{eqnarray*}
+\lambda_{ij} &:=& 2\log l_{ij}\\
+\tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
+\tilde l_{\it ij} &:=& e^{\frac{1}{2}\tilde \lambda_{\it ij}}=e^{\frac{1}{2}(u_i + u_j)}l_{\it ij}
+\end{eqnarray*}
+\end{definition}
+
+We consider three functionals
+\begin{eqnarray*}
+	E^{\rm euc}(\lambda,u) &\to& \R\\
+	E^{\rm hyp}(\lambda,u) &\to& \R\\
+	E^{\rm sph}(\lambda,u) &\to& \R\\		
+\end{eqnarray*}
+By $\lambda, u$ we mean the vector of all $\lambda_{\it ij}$ for $\it ij \in E$ and $u_i$ for all $i\in V$.
+In the functional we 
 
 \subsection{Mapping problem}
 \label{sec:mapping_problem}
@@ -276,39 +298,6 @@ then Problem~\ref{prob:total_angles} asks for a flat metric in the
 discrete conformal class (with prescribed boundary angles if the
 surface has a boundary).
 
-It makes sense to prescribe the total angle at some vertices and the
-discrete conformal factor at other vertices:
-
-\begin{problem}
-\textbf{\itshape{Given}}
-
-\begin{compactitem}
-\item the discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a
-euclidean cyclic polyhedral surface,
-\item a desired total angle $\Theta_{i}>0$ for each interior vertex $i\in V_{\Sigma}$,
-\end{compactitem}
-
-\textbf{\itshape{find}} the discrete metric
-$\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a discretely
-conformally equivalent euclidean cyclic polyhedral surface that has
-the desired total angle $\Theta_{i}$ around each interior vertex $i\in
-V$ and maps the boundary isometrically.
-
-\end{problem}
-
-Again if $\Theta_{i}=2\pi$ for all interior vertices we ask for a euclidean flat metric. 
-To obtain a isometrically mapped boundary we set $u_i=0$ for all vertices on the boundary of $E_{\Sigma}$.
-
-\subsection{Variational principle}
-\label{sec:variational}
-
-Let $l_{\it ij}$ be the edge lengths of a triangulation. We define
-\begin{eqnarray*}
-\lambda_{ij} &:=& 2\log l_{ij}\\
-\tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
-\tilde l_{\it ij} &:=& e^{\frac{1}{2}\tilde \lambda_{\it ij}}=e^{\frac{1}{2}(u_i + u_j)}l_{\it ij}
-\end{eqnarray*}
-
 \subsection{Euclidean version}
 
 \begin{eqnarray*}
@@ -338,7 +327,7 @@ triangles on both sides of the edge. To calculate, e.g., the angle $\alpha_i$ op
 We now derive the hessian matrix from the previously calculated hessian with variables $u$ only:
 
 \begin{eqnarray}
-d^2E^{\rm euc}(u)&=&\frac{1}{4}\sum_{\it ij \in \bar E} \cot \alpha_k \cdot (du_i - du_j)^2.
+d^2E^{\rm euc}(u)&=&\frac{1}{2}\sum_{\it ij \in \bar E} \cot \alpha_k \cdot (du_i - du_j)^2.
 \end{eqnarray}
 
 From the definition of $\tilde\lambda_{\it ij} := \lambda_{\it ij}+u_i+u_j$ we obtain
@@ -349,11 +338,11 @@ with non-vanishing $d\lambda_{\it ij}$. It is
 
 \begin{eqnarray*}
 d^2E^{\rm euc}(\tilde\lambda)
-&=&\frac{1}{4}\sum_{\it ij \in \bar E} \cot \alpha_k \cdot (d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk})^2.
+&=&\frac{1}{2}\sum_{\it ij \in \bar E} \cot \alpha_k \cdot (d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk})^2.
 \end{eqnarray*}
 and
 \begin{eqnarray*}
-d^2E^{\rm euc}(\lambda, u)&=&\frac{1}{4}\sum_{\it ij \in \bar E} \cot \alpha_k \cdot (d\lambda_{\it ki}-d\lambda_{\it jk} + du_i - du_j)^2.
+d^2E^{\rm euc}(\lambda, u)&=&\frac{1}{2}\sum_{\it ij \in \bar E} \cot \alpha_k \cdot (d\lambda_{\it ki}-d\lambda_{\it jk} + du_i - du_j)^2.
 \end{eqnarray*}
 
 \subsection{Hyperbolic version}
@@ -385,11 +374,13 @@ formula with hyperbolic edge lengths as defined in Equation~\ref{eq:hyperbolic_l
       \sinh(\frac{l_{ij}+l_{jk}+l_{ki}}{2})
     }}.
 \]
-The hyperbolic functional is defined as
 
+
+\begin{definition}The hyperbolic functional is defined as
 \begin{eqnarray}
 	E^{\rm hyp}(\tilde\lambda) &:=& \sum_{\it ijk\in F}\left(f^{\rm hyp}_{\it ijk}(\tilde\lambda) - \frac{\pi}{2}\left(\tilde \lambda_{\it jk} + \tilde \lambda_{\it ki} + \tilde \lambda_{\it ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
 \end{eqnarray}
+\end{definition}
 
 The gradient of $E_{\rm hyp}$ is
 
@@ -435,6 +426,7 @@ We define spherical edge lengths as
 l^{\rm sph}_{\it ij} := 2\arcsin(\tilde l_{\it ij}).\label{eq:spherical_lengths}
 \end{equation}
 
+\begin{definition}
 As in the hyperbolic case we define
 \begin{eqnarray*}
 	\beta_i &:=& \frac{1}{2} \left(\pi + \alpha_i - \alpha_j - \alpha_k \right)\\
@@ -442,6 +434,7 @@ As in the hyperbolic case we define
 	\beta_k &:=& \frac{1}{2} \left(\pi - \alpha_i - \alpha_j + \alpha_k \right)\\
 	f^{\rm sph}_{\it ijk}(\lambda, u) &:=& f^{\rm hyp}_{\it ijk}(\lambda, u)
 \end{eqnarray*}	
+\end{definition}
 
 The angles $\alpha$ are calculated on the sphere using spherical lengths as defined in 
 Equation~\ref{eq:spherical_lengths} and the spherical half-angle formula
@@ -481,10 +474,9 @@ derivatives look the same.
 
 \section{Conformal uniformization of planar domains}
 
-The conformal mapping of planar domains has been studied before. In its basic incarnation it amounts
-to the assignment of suitable angles $\theta$ at the boundary vertices of the domain to obtain a map from a 
-planar domain to a polygon with the prescribed boundary angles. In this section we experiment with 
-the generalized notion conformal equivalence of cyclic polyhedral surfaces.
+The conformal mapping of planar domains in the context of discrete conformal equivalence has been studied before for triangulations. 
+In its basic incarnation it amounts to the assignment of suitable angles $\Theta$ at the boundary vertices of the domain to obtain a map from a planar domain to a polygon with the prescribed boundary angles. 
+In this section we experiment with the generalized notion of conformal equivalence of cyclic polyhedral surfaces.
 
 \subsection{Simply connected domains}
 
@@ -546,7 +538,19 @@ In this section we present the discrete conformal map from a domain made of squa
 
 \subsection{Circle domains}
 
-
+\begin{figure}
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[width=0.5\textwidth]{circle_domain_euclidean/three_holes_image.pdf}
+\includegraphics[width=0.5\textwidth]{circle_domain_euclidean/three_holes_domain.pdf}
+\includegraphics[width=0.5\textwidth]{circle_domain_euclidean/three_holes_map.pdf}
+}
+\setstretch{0.8}{\scriptsize\tt data/circle\_domain\_euclidean/three\_holes.xml}
+\caption{
+Discrete conformal map of a multiply-connected domain to a region bounded by circles.
+}
+\label{fig:euclidean_circle_domain}
+\end{figure}
 
 
 \subsection{Multiply connected domains}
@@ -1280,6 +1284,10 @@ The map corresponding to the purple circle is defined to map the interior of the
 \\
 Right: Fuchsian uniformization and universal cover in the Poicar\'e model of the hyperbolic plane. The boundary of the fundamental domain consists of  the Schottky circles and short paths connecting them (grey edges).}
 \end{figure}
+
+\subsection{Circle domains}
+
+
 
 \subfilebibliography
 
