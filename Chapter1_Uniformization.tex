@@ -250,6 +250,47 @@ surface $\tilde \Sigma$ by triangulating all faces with more than three vertices
 is arbitrary. Let $E_0$ be the set of original edges and let $E_1$ be the set of new edges
 in the triangulation, i.e., $E=E_0\cup E_1$.
 
+\begin{definition}
+Let $l_{\it ij}:E\to R_{>0}$ be the edge lengths of the $\tilde \Sigma$. Define
+\begin{eqnarray}
+\lambda_{ij} &:=& 2\log l_{ij}\label{eq:lambda_def}\\
+\tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
+\tilde l_{\it ij} &:=& e^{\frac{1}{2}\tilde \lambda_{\it ij}}=e^{\frac{1}{2}(u_i + u_j)}l_{\it ij}
+\end{eqnarray}
+\end{definition}
+
+We consider three functionals
+\begin{eqnarray*}
+	E^{\rm euc}(\lambda,u) &\to& \R\\
+	E^{\rm hyp}(\lambda,u) &\to& \R\\
+	E^{\rm sph}(\lambda,u) &\to& \R\\		
+\end{eqnarray*}
+By $\lambda, u$ we mean the vector of all $\lambda_{\it ij}$ for $\it ij \in E$ and $u_i$ for all $i\in V$.
+In the functional we treat all $u_i$ $i\in V$ and all $\lambda_{\it ij}$ $\ij \in E_1$ as free variables. The values for $\lambda_{\it ij}$ with $\it ij\in E_0$ are fixed and are given by Equation~\ref{eq:lambda_def}. By allowing the $\lambda$s in $E_1$ to be variable the critical point of each of the functionals has a circular quadrilateral 
+
+\subsection{Mapping problem}
+\label{sec:mapping_problem}
+
+We will consider mostly the following discrete conformal mapping problems.
+% \begin{list}{}{%
+%     \settowidth{\labelwidth}{\textbf{Given:}}%
+%     \setlength{\leftmargin}{\labelwidth}%
+%     \addtolength{\leftmargin}{\labelsep}%
+%   }
+% \item[\textbf{Given}]
+%   \begin{compactitem}
+%   \item the discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a
+%     euclidean cyclic polyhedral surface,
+%   \item a desired cone angle $\Theta_{i}>0$ for each vertex
+%     $i\in V_{\Sigma}$,
+%   \end{compactitem}
+% \item[\textbf{find}] the discrete metric
+%   $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a discretely
+%   conformally equivalent euclidean cyclic polyhedral surface that
+%   has at each vertex $i\in V$ the desired cone angle
+%   $\Theta_{i}$.% \end{asparadesc}
+% \end{list}
+>>>>>>> progress
 \begin{problem}[prescribed angle sums]
 \label{prob:total_angles}
 \textbf{\itshape{Given}}
