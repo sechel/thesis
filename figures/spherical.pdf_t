@@ -10,8 +10,8 @@
   \selectfont}%
 \fi\endgroup%
 \begin{picture}(2986,3446)(8,-2604)
-\put(1651,539){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde l$}%
+\put(1651,539){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde \ell$}%
 }}}}
-\put(1651,-580){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$l$}%
+\put(1651,-580){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\ell$}%
 }}}}
 \end{picture}%
