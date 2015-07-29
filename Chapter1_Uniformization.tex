@@ -227,19 +227,6 @@ Analogously the spherical version for a spherical metric $\tilde\ell:E_{\Sigma}\
 = e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij}.
 \end{equation*}
 
-
-%\begin{remark*}[Orientation]
-%We need and will only consider oriented surfaces because the
-%solutions of the conformal mapping problems that we treat are
-%sufficiently unique. The situation is like in the classical smooth
-%case: While one could consider the uniformization of nonorientable
-%Riemann surfaces (by allowing anticonformal chart transition
-%functions and discrete groups containing orientation reversing
-%M\"obius transformations), this would not lead to anything
-%essentially new: Due to uniqueness, the uniformization of an
-%unorientable surface lifts to the oriented double cover.
-%\end{remark*}
-
 Until now we have only talked about discrete conformal equivalence of discrete euclidean/spherical/hyperbolic metrics.
 We now turn to discrete conformal mappings between discrete cyclic polyhedral surfaces.
 
@@ -250,47 +237,6 @@ surface $\tilde \Sigma$ by triangulating all faces with more than three vertices
 is arbitrary. Let $E_0$ be the set of original edges and let $E_1$ be the set of new edges
 in the triangulation, i.e., $E=E_0\cup E_1$.
 
-\begin{definition}
-Let $l_{\it ij}:E\to R_{>0}$ be the edge lengths of the $\tilde \Sigma$. Define
-\begin{eqnarray}
-\lambda_{ij} &:=& 2\log l_{ij}\label{eq:lambda_def}\\
-\tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
-\tilde l_{\it ij} &:=& e^{\frac{1}{2}\tilde \lambda_{\it ij}}=e^{\frac{1}{2}(u_i + u_j)}l_{\it ij}
-\end{eqnarray}
-\end{definition}
-
-We consider three functionals
-\begin{eqnarray*}
-	E^{\rm euc}(\lambda,u) &\to& \R\\
-	E^{\rm hyp}(\lambda,u) &\to& \R\\
-	E^{\rm sph}(\lambda,u) &\to& \R\\		
-\end{eqnarray*}
-By $\lambda, u$ we mean the vector of all $\lambda_{\it ij}$ for $\it ij \in E$ and $u_i$ for all $i\in V$.
-In the functional we treat all $u_i$ $i\in V$ and all $\lambda_{\it ij}$ $\ij \in E_1$ as free variables. The values for $\lambda_{\it ij}$ with $\it ij\in E_0$ are fixed and are given by Equation~\ref{eq:lambda_def}. By allowing the $\lambda$s in $E_1$ to be variable the critical point of each of the functionals has a circular quadrilateral 
-
-\subsection{Mapping problem}
-\label{sec:mapping_problem}
-
-We will consider mostly the following discrete conformal mapping problems.
-% \begin{list}{}{%
-%     \settowidth{\labelwidth}{\textbf{Given:}}%
-%     \setlength{\leftmargin}{\labelwidth}%
-%     \addtolength{\leftmargin}{\labelsep}%
-%   }
-% \item[\textbf{Given}]
-%   \begin{compactitem}
-%   \item the discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a
-%     euclidean cyclic polyhedral surface,
-%   \item a desired cone angle $\Theta_{i}>0$ for each vertex
-%     $i\in V_{\Sigma}$,
-%   \end{compactitem}
-% \item[\textbf{find}] the discrete metric
-%   $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a discretely
-%   conformally equivalent euclidean cyclic polyhedral surface that
-%   has at each vertex $i\in V$ the desired cone angle
-%   $\Theta_{i}$.% \end{asparadesc}
-% \end{list}
->>>>>>> progress
 \begin{problem}[prescribed angle sums]
 \label{prob:total_angles}
 \textbf{\itshape{Given}}
@@ -332,25 +278,23 @@ Condition~\ref{eq:edge_system} is satisfied if and only if the quadrilateral $\i
 \section{Variational principles for discrete conformal maps}
 \label{sec:vari-princ}
 
-
-
 \begin{definition}
 Let $\ell_{\it ij}:E\to R_{>0}$ be the edge lengths of the $\tilde \Sigma$. Define
 \begin{eqnarray*}
-\lambda_{ij} &:=& 2\log \ell_{ij}\\
+\lambda_{ij} &:=& 2\log \ell_{ij}\label{eq:lambda_def}\\
 \tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
 \tilde \ell_{\it ij} &:=& e^{\frac{1}{2}\tilde \lambda_{\it ij}}=e^{\frac{1}{2}(u_i + u_j)}\ell_{\it ij}
 \end{eqnarray*}
 \end{definition}
 
-We consider three functionals
+We consider three functionals defined on the triangulation $\tilde \Sigma$
 \begin{eqnarray*}
 	E^{\rm euc}(\lambda,u) &\to& \R\\
 	E^{\rm hyp}(\lambda,u) &\to& \R\\
-	E^{\rm sph}(\lambda,u) &\to& \R\\		
+	E^{\rm sph}(\lambda,u) &\to& \R	
 \end{eqnarray*}
 By $\lambda, u$ we mean the vector of all $\lambda_{\it ij}$ for $\it ij \in E$ and $u_i$ for all $i\in V$.
-In the functional we
+In the functional we treat all $u_i$ $i\in V$ and all $\lambda_{\it ij}$ $\ij \in E_1$ as free variables. The values for $\lambda_{\it ij}$ with $\it ij\in E_0$ are fixed and are given by Equation~\ref{eq:lambda_def}. By allowing the $\lambda$s in $E_1$ to be variable the critical point of each of the functionals has a circular quadrilateral at each edge $\it ij\in E_1$.
 
 \subsection{Euclidean version}
 
@@ -386,7 +330,7 @@ d^2E^{\rm euc}(u)&=&\frac{1}{2}\sum_{\it ij \in \bar E} \cot  \alpha_{\it ij}^k 
 
 From the definition of $\tilde\lambda_{\it ij} := \lambda_{\it ij}+u_i+u_j$ we obtain
 \[du_i-du_j=d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk}.\]
-If now the original $\lambda$s are variables we get extra terms in the hessian coming from 
+using $d\lambda = 0$. If now the original $\lambda$s are variables we get extra terms in the hessian coming from 
 \[d\tilde\lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j\]
 with non-vanishing $d\lambda_{\it ij}$. It is
 
@@ -419,7 +363,7 @@ Further define for the triangle $\it ijk\in F$
 Here the angles are hyperbolic angles and can be calculated using the hyperbolic half-angle 
 formula with hyperbolic edge lengths as defined in Equation~\ref{eq:hyperbolic_lengths}
 \[
-  \tan\left(\frac{\alpha_k}{2}\right)=
+  \tan\left(\frac{\alpha^k_{\it ij}}{2}\right)=
   \sqrt{\frac{
       \sinh(\frac{\ell_{ij}-\ell_{jk}+\ell_{ki}}{2})
       \sinh(\frac{\ell_{ij}+\ell_{jk}-\ell_{ki}}{2})
@@ -491,7 +435,7 @@ As in the hyperbolic case we define
 The angles $\alpha$ are calculated on the sphere using spherical lengths as defined in 
 Equation~\ref{eq:spherical_lengths} and the spherical half-angle formula
 \[
-  \tan\left(\frac{\alpha_k}{2}\right)=
+  \tan\left(\frac{\alpha^k_{\it ij}}{2}\right)=
   \sqrt{\frac{
       \sin(\frac{\ell_{ij}-\ell_{jk}+\ell_{ki}}{2})
       \sin(\frac{\ell_{ij}+\ell_{jk}-\ell_{ki}}{2})
@@ -523,6 +467,42 @@ d^2E^{\rm sph}(\lambda, u)
 Note the change of the sign in front of the $\tan$ in the formula and the $\tan$ instead of a $\tanh$. Otherwise the hyperbolic and spherical 
 derivatives look the same.
 
+\subsection{Convexity and extension of the domain}
+
+The most powerful numerical methods for non-linear optimization are applicable for convex unconstraint problems \cite{boyd2004convex}.
+The non-linear part of the euclidean and hyperbolic functionals is convex \cite{Bobenko2010}. 
+However for all geometries the functionals are defined on a domain bounded by the inequalities of Equation~\ref{eq:polygon_ineq}.
+This renders the domain non-convex. 
+It is possible to extend this domain and continue the function smoothly across the boundary.
+Since we only deal with triangulations the inequalities are just ordinary triangle inequalities. 
+Let 
+\[\ell_{\it ij} < \ell_{\it jk} + \ell_{\it ki}\] 
+be a violated triangle inequality of the triangle $\it ijk \in F$. We define the corresponding angles as
+\begin{equation*}
+\alpha^k_{\it ij} = \pi,\quad \alpha^i_{\it jk} = 0,\quad \alpha^j_{\it ki} = 0
+\end{equation*}
+and analogously for thy other two inequalities of the triangle $\it ijk$. 
+For constant $\alpha$ in the extended domain the functionals are linear.
+Thus we replace the corresponding $\cot$ weights in the second derivatives by $0$.
+Considering the extended domain we can use unconstraint convex optimization techniques to find critical points of the euclidean and hyperbolic functionals.
+
+The spherical functional is more delicate to optimize.
+In addition to the ordinary triangle inequalities that we treat as before we have the additional constraint~\ref{eq:spherical_polygon_ineq} for the domain.
+Let 
+\[2\pi < \ell_{\it ij} + \ell_{\it jk} + \ell_{\it ki}\]
+be the violated inequality for the triangle $\it ijk$, i.e., $\it ijk$ is a great circle. 
+Define the corresponding angles as
+\begin{equation*}
+\alpha^k_{\it ij} = \pi,\quad \alpha^i_{\it jk} = \pi,\quad \alpha^j_{\it ki} = \pi.
+\end{equation*}
+Again this extends the functional smoothly across the boundary of the domain. 
+As for the triangle inequalities set the corresponding $\cot$ weights equal to $0$ in the Hessian matrix.
+
+We have another constraint in the spherical case, i.e., Equation~\ref{eq:spherical_lengths} is only defined for $\tilde\ell_{\it ij} <= 1$.
+Thus we have additional linear constraints for each edge $\it ij$ of the triangulation
+\[\lambda_{\it ij} + u_i + u_j <= 0.\]
+We give more details on how we find critical points of the non-convex spherical functional in Section~\ref{sec:spherical_computation}.
+
 
 \section{Conformal uniformization of planar domains}
 
@@ -537,7 +517,7 @@ In particular we aim to find a solution to the following mapping problem:
 
 \begin{compactitem}
 \item the discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a
-euclidean cyclic polyhedral surface,
+euclidean planar cyclic polyhedral surface,
 \item a desired total angle $\Theta_{i}>0$ for each vertex
 $i\in V_{\Sigma}$,
 \end{compactitem}
@@ -545,7 +525,7 @@ $i\in V_{\Sigma}$,
 \smallskip\noindent%
 \textbf{\itshape{find}} the discrete metric
 $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a discretely
-conformally equivalent euclidean cyclic polyhedral surface that has
+conformally equivalent euclidean planar cyclic polyhedral surface that has
 the desired total angle $\Theta_{i}$ around each vertex $i\in
 V$.
 \end{problem}
@@ -707,6 +687,7 @@ Thus adjacent triangles form a circular polygon in the resulting image.
 \label{sec:spheres_euclidean}
 
 \subsection{Computation with spherical functional}
+\label{sec:spherical_computation}
 
 \begin{figure}
 \centering
@@ -724,9 +705,9 @@ Thus adjacent triangles form a circular polygon in the resulting image.
 It is possible to use the spherical functional to calculate spherical uniformizations even if it is non-convex. In this case a numerical optimization has to find a saddle point in the energy landscape. This is due to the fact that the direction $v=(1,\ldots,1)$ is a negative direction of the Hessian. That means shrinking or enlarging all scale factors at once decreases the value of the energy. We use a simple yet effective trick that enables us to find a critical point for certain examples. Define the reduced functional
 \begin{equation}
 \label{eq:reduced_spherical}
-\tilde S_{\it sph}(u)=\max_t \left\{S_{\it sph}(u + tv)\right\}
+\tilde E^{\rm sph}(u)=\max_t \left\{S^{\rm sph}(u + tv)\right\}
 \end{equation}
-Now minimize the reduced functional $\tilde  S_{\it sph}$. 
+Now minimize the reduced functional $\tilde  E^{\rm sph}$. 
 Following this scheme we create examples that would not be possible using simple minimization with arbitrary initialization, see Figure~\ref{fig:spherical_examples}.
 
 \subsection{Euclidean uniformization of spheres}
