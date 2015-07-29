@@ -1,6 +1,6 @@
 \documentclass[Thesis]{subfiles}
 \begin{document}
-\setkeys{Gin}{draft=true}
+\setkeys{Gin}{draft=false}
 
 \chapter{Discrete uniformization of Riemann surfaces.}
 \label{chp:uniformization}
@@ -240,20 +240,12 @@ in the triangulation, i.e., $E=E_0\cup E_1$.
 \begin{problem}[prescribed angle sums]
 \label{prob:total_angles}
 \textbf{\itshape{Given}}
-
 \begin{compactitem}
-\item the discrete metric $\ell:E\rightarrow\R_{>0}$ of a
-euclidean cyclic polyhedral surface,
-\item a desired total angle $\Theta_{i}>0$ for each vertex
-$i\in V$,
+\item the discrete metric $\ell:E\rightarrow\R_{>0}$ of a euclidean cyclic polyhedral surface,
+\item a desired total angle $\Theta_{i}>0$ for each vertex $i\in V$,
 \end{compactitem}
-
 \smallskip\noindent%
-\textbf{\itshape{find}} the discrete metric
-$\tilde\ell:E\rightarrow\R_{>0}$ of a discretely
-conformally equivalent euclidean/hyperbolic/spherical cyclic polyhedral surface that has
-the desired total angle $\Theta_{i}$ around each vertex $i\in
-V$.
+\textbf{\itshape{find}} the discrete metric $\tilde\ell:E\rightarrow\R_{>0}$ of a discretely conformally equivalent euclidean/hyperbolic/spherical cyclic polyhedral surface that has the desired total angle $\Theta_{i}$ around each vertex $i\in V$.
 \end{problem}
 
 For interior vertices, $\Theta_i$ denotes a desired cone angle. 
@@ -261,7 +253,21 @@ For boundary vertices, $\Theta_i$ denotes a desired interior angle of the polygo
 If $\Theta_{i}=2\pi$ for all interior vertices, then Problem~\ref{prob:total_angles} asks for a flat metric in the discrete conformal class (with prescribed boundary angles if the surface has a boundary). 
 Note that the solution of this problem is a discretely conformally equivalent metric only on $E_0$ and for the original complex $\Sigma$.
 
-Solving this problem amounts to the solution of a system of non-linear equations in terms of $u_i$ for $i\in V$ and $\lambda_{\it ij}$ for $\it ij \in E_1$:
+We also consider the more general mapping problem. 
+\begin{problem}[prescribed scale factors and angle sums]
+\label{prob:factors_and_angles}
+\textbf{\itshape{Given}}
+\begin{compactitem}
+\item the discrete metric $\ell:E\rightarrow\R_{>0}$ of a euclidean cyclic polyhedral surface,
+\item a partition $V=V_0\cup V_1$ of the vertex set
+\item a prescribed logarithmic scale factor $u_i\in \R$ for each vertex $i\in V_0$
+\item a prescribed angle $\Theta_{i} > 0$ for each vertex $i\in V_1$,
+\end{compactitem}
+\smallskip\noindent%
+\textbf{\itshape{find}} the discrete metric $\tilde\ell:E\rightarrow\R_{>0}$ of a discretely conformally equivalent euclidean/hyperbolic/spherical cyclic polyhedral surface that has the desired total angles $\Theta_{i}$ around each vertex $i\in V_1$.
+\end{problem}
+
+Solving these problems amounts to the solution of a system of non-linear equations in terms of $u_i$ for $i\in V$ and $\lambda_{\it ij}$ for $\it ij \in E_1$:
 
 \begin{align}
 	\Theta_i &=\sum_{\it ijk \ni i}\alpha_{\it ji}^i & i\in V\label{eq:vertex_system}\\
@@ -466,34 +472,7 @@ We give more details on how we find critical points of the non-convex spherical 
 The conformal mapping of planar domains in the context of discrete conformal equivalence has been studied before for triangulations. 
 In its basic incarnation it amounts to the assignment of suitable angles $\Theta$ at the boundary vertices of the domain to obtain a map from a planar domain to a polygon with the prescribed boundary angles. 
 In this section we experiment with the generalized notion of conformal equivalence of cyclic polyhedral surfaces.
-In particular we aim to find a solution to the following mapping problem:
-
-\begin{problem}[prescribed angle sums]
-\label{prob:total_angles}
-\textbf{\itshape{Given}}
-
-\begin{compactitem}
-\item the discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a
-euclidean planar cyclic polyhedral surface,
-\item a desired total angle $\Theta_{i}>0$ for each vertex
-$i\in V_{\Sigma}$,
-\end{compactitem}
-
-\smallskip\noindent%
-\textbf{\itshape{find}} the discrete metric
-$\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ of a discretely
-conformally equivalent euclidean planar cyclic polyhedral surface that has
-the desired total angle $\Theta_{i}$ around each vertex $i\in
-V$.
-\end{problem}
-
-For interior vertices, $\Theta_i$ denotes a desired cone angle. For
-boundary vertices, $\Theta_i$ denotes a desired interior angle of the
-polygonal boundary. If $\Theta_{i}=2\pi$ for all interior vertices,
-then Problem~\ref{prob:total_angles} asks for a flat metric in the
-discrete conformal class (with prescribed boundary angles if the
-surface has a boundary).
-
+In particular we aim to find a solution to the euclidean version of Problem~\ref{prob:total_angles} involving one ore more boundary components.
 
 \subsection{Simply connected domains}
 
@@ -525,8 +504,12 @@ top-row versus bottom-row.
 
 \begin{figure}
 \centering
-\resizebox{0.4\textwidth}{!}{
+\resizebox{\textwidth}{!}{
 \includegraphics[height=5cm]{planar_circles/riemann_shape_image.pdf}
+\quad
+\raisebox{0.75cm}{
+\includegraphics[height=3.5cm]{planar_circles/riemann_shape_closeup.pdf}
+}
 }
 \resizebox{0.9\textwidth}{!}{
 \includegraphics[height=5cm]{planar_circles/riemann_shape_halfplane.pdf}
@@ -548,9 +531,21 @@ By that quadrilaterals adjacent to the point at infinity are cyclic after the Mo
 \label{fig:circular_riemann}
 \end{figure}
 
-In this section we present the discrete conformal map from a domain made of squares to the unit disk.
-\todo{SSE: Comment on ears in the cyclic Riemann map.}
-\todo{SSE: Argue why the map is discrete conformal at edges incident to the vertex at infinity.}
+We show how to calculate discrete Riemann maps for cyclic quadrilateral domains, i.e., a discrete analog of conformal maps from a simply connected planar region to the unit disk. 
+In particular this yields a method for the generation of circle pattern Riemann maps, see Figure~\ref{fig:circular_riemann}.
+The procedure is in many aspects analogous to the previously described method for triangulations \cite{Bobenko2010}.
+Let $\Sigma$ be a cyclic planar domain that consists solely of quadrilaterals. 
+Proceed as follows:
+\begin{enumerate}
+
+
+\item 
+Choose a vertex $k$ on the boundary of $\Sigma$ and apply a discrete conformal change of metric such that all edges incident with $k$ have the same lengths.
+\item
+Let $\Sigma'$ be the complex with all quadrilaterals that are incident to vertex $k$ removed.
+
+\end{enumerate} 
+
 
 
 \subsection{Circle domains}
@@ -559,9 +554,9 @@ In this section we present the discrete conformal map from a domain made of squa
 \begin{figure}
 \centering
 \resizebox{\textwidth}{!}{
-\includegraphics[width=0.5\textwidth]{circle_domain_euclidean/three_holes_image.pdf}
-\includegraphics[width=0.5\textwidth]{circle_domain_euclidean/three_holes_domain.pdf}
-\includegraphics[width=0.5\textwidth]{circle_domain_euclidean/three_holes_map.pdf}
+\includegraphics[width=0.5\textwidth, draft = false]{circle_domain_euclidean/three_holes_image.pdf}
+\includegraphics[width=0.5\textwidth, draft = false]{circle_domain_euclidean/three_holes_domain.pdf}
+\includegraphics[width=0.5\textwidth, draft = false]{circle_domain_euclidean/three_holes_map.pdf}
 }
 \setstretch{0.8}{\scriptsize\tt data/circle\_domain\_euclidean/three\_holes.xml}
 \caption{
@@ -571,7 +566,7 @@ Discrete conformal map of a multiply-connected domain to a region bounded by cir
 \end{figure}
 
 
-\subsection{Multiply connected domains}
+\subsection{Special multiply connected domains}
 
 \begin{figure}
 	\centering
