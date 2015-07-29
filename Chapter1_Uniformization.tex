@@ -256,19 +256,16 @@ the desired total angle $\Theta_{i}$ around each vertex $i\in
 V$.
 \end{problem}
 
-For interior vertices, $\Theta_i$ denotes a desired cone angle. For
-boundary vertices, $\Theta_i$ denotes a desired interior angle of the
-polygonal boundary. If $\Theta_{i}=2\pi$ for all interior vertices,
-then Problem~\ref{prob:total_angles} asks for a flat metric in the
-discrete conformal class (with prescribed boundary angles if the
-surface has a boundary).
+For interior vertices, $\Theta_i$ denotes a desired cone angle. 
+For boundary vertices, $\Theta_i$ denotes a desired interior angle of the polygonal boundary. 
+If $\Theta_{i}=2\pi$ for all interior vertices, then Problem~\ref{prob:total_angles} asks for a flat metric in the discrete conformal class (with prescribed boundary angles if the surface has a boundary). 
+Note that the solution of this problem is a discretely conformally equivalent metric only on $E_0$ and for the original complex $\Sigma$.
 
-Solving this problem amounts to the solution of a system of non-linear 
-equations in terms of $u_i$ for $i\in V$ and $\lambda_{\it ij}$ for $\it ij \in E_1$:
+Solving this problem amounts to the solution of a system of non-linear equations in terms of $u_i$ for $i\in V$ and $\lambda_{\it ij}$ for $\it ij \in E_1$:
 
 \begin{align}
 	\Theta_i &=\sum_{\it ijk \ni i}\alpha_{\it ji}^i & i\in V\label{eq:vertex_system}\\
-	0 &= \frac{1}{2}\left(\alpha_{\it ij}^k + \alpha_{\it ij}^l - (\alpha^i_{\it jl} + \alpha^i_{\it kj}) - (\alpha^j_{\it ki} + \alpha^j_{\it il})\right)& \textit{ij} \in E_1\label{eq:edge_system}
+	0 &= \alpha_{\it ij}^k + \alpha_{\it ij}^l - (\alpha^i_{\it jl} + \alpha^i_{\it kj}) - (\alpha^j_{\it ki} + \alpha^j_{\it il}) & \textit{ij} \in E_1\label{eq:edge_system}
 \end{align}
 
 The angle $\alpha_{\it ji}^i$ is the angle at vertex $i$ in the triangle $\it ijk\in F$, see Figure~\ref{fig:triangle_notation}.
@@ -287,53 +284,69 @@ Let $\ell_{\it ij}:E\to R_{>0}$ be the edge lengths of the $\tilde \Sigma$. Defi
 \end{eqnarray*}
 \end{definition}
 
-We consider three functionals defined on the triangulation $\tilde \Sigma$
+We consider three functionals defined on the triangulation $\tilde \Sigma$:
 \begin{eqnarray*}
 	E^{\rm euc}(\lambda,u) &\to& \R\\
 	E^{\rm hyp}(\lambda,u) &\to& \R\\
-	E^{\rm sph}(\lambda,u) &\to& \R	
+	E^{\rm sph}(\lambda,u) &\to& \R.
 \end{eqnarray*}
 By $\lambda, u$ we mean the vector of all $\lambda_{\it ij}$ for $\it ij \in E$ and $u_i$ for all $i\in V$.
-In the functional we treat all $u_i$ $i\in V$ and all $\lambda_{\it ij}$ $\ij \in E_1$ as free variables. The values for $\lambda_{\it ij}$ with $\it ij\in E_0$ are fixed and are given by Equation~\ref{eq:lambda_def}. By allowing the $\lambda$s in $E_1$ to be variable the critical point of each of the functionals has a circular quadrilateral at each edge $\it ij\in E_1$.
+In the functional we treat all $u_i$ $i\in V$ and all $\lambda_{\it ij}$ $\ij \in E_1$ as free variables. The values for $\lambda_{\it ij}$ with $\it ij\in E_0$ are fixed and are given by Equation~\ref{eq:lambda_def}. By allowing the $\lambda$s in $E_1$ to be variable the critical point of each of the functionals has a circular quadrilateral at each edge $\it ij\in E_1$, see, e.g., Equation~\ref{eq:lambda_deriv_euc}.
 
-\subsection{Euclidean version}
-
-\begin{eqnarray*}
-f^{\rm euc}_{\it ijk}( \tilde\lambda) &:=& \alpha_{\it jk}^i \tilde\lambda_{jk} + \alpha_{\it ki}^j \tilde\lambda_{ki} + \alpha_{\it ij}^k \tilde\lambda_{ij} + 2\left(\ML(\alpha_{\it jk}^i) + \ML(\alpha_{\it ki}^j) + \ML(\alpha_{\it ij}^k)\right)
-\end{eqnarray*}
-
-Where angle $\alpha_i$ is the angle opposite to edge $e_{\it jk}$ in the triangle $\it ijk\in F$ with edge lengths $\tilde \ell_{\it ij}$, $\tilde \ell_{\it jk}$, and $\tilde \ell_{\it ki}$.
-The solution to the euclidean mapping problem is a critical point of the following functional.
-
-\begin{definition}{Euclidean functional}
+The functionals can be generically defined to be
+\begin{definition}{Generic functional}
 \begin{eqnarray}
-	E^{\rm euc}(\tilde\lambda) &:=& \sum_{\it ijk\in F}\left(f^{\rm euc}_{\it ijk}(\tilde\lambda) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
+	E^*(\tilde\lambda) &:=& \sum_{\it ijk\in F}\left(f^*_{\it ijk}(\tilde\lambda) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i.
 \end{eqnarray}
 \end{definition}
 
-Gradient:
+The function $f^*_{\it ijk}$ is defined as
 \begin{eqnarray}
-	\frac{\partial E^{\rm euc}}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alpha_{\it jk}^i \\
-	\frac{\partial E^{\rm euc}}{\partial \lambda_{\it ij}} &=& \alpha_{\it ij}^k + \alpha_{\it ji}^l - \pi\label{eq:lambda_deriv_euc}
+f^*_{\it ijk}(\tilde\lambda) &:=&\beta_{\it jk}^i \tilde \lambda_{jk} + \beta_{\it ki}^j \tilde \lambda_{ki} + \beta_{\it ij}^k \tilde \lambda_{ij}\\ 		
+				&&+\ML(\alpha_{\it jk}^i) + \ML(\alpha_{\it ki}^j) + \ML(\alpha_{\it ij}^k) + \ML(\beta_{\it jk}^i) + \ML(\beta_{\it ki}^j) + \ML(\beta_{\it ij}^k)\\
+				&&+\ML\left(\frac{1}{2}\left(\pi - \alpha_{\it jk}^i - \alpha_{\it ki}^j - \alpha_{\it ij}^k\right)\right).
+\end{eqnarray}
+The angles $\beta$ are functions of $\alpha$
+\begin{eqnarray*}
+	2\cdot\beta_{\it jk}^i &:=& \pi + \alpha_{\it jk}^i - \alpha_{\it ki}^j - \alpha_{\it ij}^k\\
+	2\cdot\beta_{\it ki}^j &:=& \pi - \alpha_{\it jk}^i + \alpha_{\it ki}^j - \alpha_{\it ij}^k\\
+	2\cdot\beta_{\it ij}^k &:=& \pi - \alpha_{\it jk}^i - \alpha_{\it ki}^j + \alpha_{\it ij}^k.
+\end{eqnarray*}
+The angles $\alpha$ in turn are functions of the new lengths $\tilde \ell$ and are different for each of the geometries.
+Note that using $\alpha_{\it jk}^i + \alpha_{\it ki}^j + \alpha_{\it ij}^k = \pi$ for $\it ijk \in F$ in the euclidean case we get a simplified version of the functional. It is
+\begin{eqnarray*}
+f^{\rm euc}_{\it ijk}( \tilde\lambda) &=& \alpha_{\it jk}^i \tilde\lambda_{jk} + \alpha_{\it ki}^j \tilde\lambda_{ki} + \alpha_{\it ij}^k \tilde\lambda_{ij} + 2\left(\ML(\alpha_{\it jk}^i) + \ML(\alpha_{\it ki}^j) + \ML(\alpha_{\it ij}^k)\right).
+\end{eqnarray*}
+
+The partial derivatives of $E^*$ are
+\begin{eqnarray}
+	\frac{\partial E^*}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alpha_{\it jk}^i \\
+	\frac{\partial E^*}{\partial \lambda_{\it ij}} &=& \frac{1}{2}\left(\alpha_{\it ij}^k + \alpha_{\it ij}^l - (\alpha^i_{\it jl} + \alpha^i_{\it kj}) - (\alpha^j_{\it ki} + \alpha^j_{\it il})\right).\label{eq:lambda_deriv_generic}
+\end{eqnarray}
+In the second term the angles $\alpha_{\it ij}^k$ and $\alpha_{\it ji}^l$ are the angles opposite to the edge $\it ij\in E$ in the 
+triangles on both sides of the edge. Note that in the euclidean case Equation~\ref{eq:lambda_deriv_generic} reduces to
+\begin{eqnarray}
+	\frac{\partial E^{\rm euc}}{\partial \lambda_{\it ij}} &=& \alpha_{\it ij}^k + \alpha_{\it ji}^l - \pi.\label{eq:lambda_deriv_euc}
 \end{eqnarray}
 
-In the second term the angles $\alpha_{\it ij}^k$ and $\alpha_{\it ji}^l$ are the angles opposite to the edge $\it ij\in E$ in the 
-triangles on both sides of the edge. To calculate, e.g., the angle $ \alpha_{\it jk}^i$ opposite to side $\it jk$ in the triangle $\it ijk \in F$ use the half-angle formula
+We give formulas for $\alpha$ and derive the Hessian matrices for the functionals in each of the three cases.
+
+\subsection{Euclidean version}
+
+Let $\alpha^i_{\it jk}$ be the angle opposite to edge $\it jk$ in the triangle $\it ijk\in F$ with edge lengths $\ell_{\it ij}$, $\ell_{\it jk}$, and $\ell_{\it ki}$. In euclidean geometry we calculate $\alpha^i_{\it jk}$ using the half-angle formula
 \[\tan\left(\frac{ \alpha_{\it jk}^i}{2}\right) = \sqrt{\frac
 {(-\ell_{\it ij} +\ell_{\it jk} +\ell_{\it ki})(\ell_{\it ij} +\ell_{\it jk} -\ell_{\it ki})}
 {(\ell_{\it ij} -\ell_{\it jk} +\ell_{\it ki})(\ell_{\it ij} + \ell_{\it jk} +\ell_{\it ki})}}.\]
-We now derive the hessian matrix from the previously calculated hessian with variables $u$ only:
 
+We now derive the hessian matrix from the previously calculated hessian with variables $u$ only:
 \begin{eqnarray}
 d^2E^{\rm euc}(u)&=&\frac{1}{2}\sum_{\it ij \in \bar E} \cot  \alpha_{\it ij}^k \cdot (du_i - du_j)^2.
 \end{eqnarray}
-
 From the definition of $\tilde\lambda_{\it ij} := \lambda_{\it ij}+u_i+u_j$ we obtain
 \[du_i-du_j=d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk}.\]
 using $d\lambda = 0$. If now the original $\lambda$s are variables we get extra terms in the hessian coming from 
 \[d\tilde\lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j\]
 with non-vanishing $d\lambda_{\it ij}$. It is
-
 \begin{eqnarray*}
 d^2E^{\rm euc}(\tilde\lambda)
 &=&\frac{1}{2}\sum_{\it ij \in \bar E} \cot  \alpha_{\it ij}^k \cdot (d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk})^2.
@@ -349,19 +362,8 @@ For the hyperbolic case $\lambda$ and $\tilde\lambda$ are defined as before. We 
 \begin{equation}
 \ell^{\rm hyp}_{\it ij} := 2\arsinh(\tilde \ell_{\it ij}).\label{eq:hyperbolic_lengths}
 \end{equation}
-All angles $\alpha$ are calculated using the hyperbolic edge lengths and hyperbolic trigonometry.
-Further define for the triangle $\it ijk\in F$
-\begin{eqnarray*}
-	\beta_{\it jk}^i &:=& \frac{1}{2} \left(\pi + \alpha_{\it jk}^i - \alpha_{\it ki}^j - \alpha_{\it ij}^k \right)\\
-	\beta_{\it ki}^j &:=& \frac{1}{2} \left(\pi - \alpha_{\it jk}^i + \alpha_{\it ki}^j - \alpha_{\it ij}^k \right)\\
-	\beta_{\it ij}^k &:=& \frac{1}{2} \left(\pi - \alpha_{\it jk}^i - \alpha_{\it ki}^j + \alpha_{\it ij}^k \right)\\
-	f^{\rm hyp}_{\it ijk}(\tilde\lambda) &:=&\beta_{\it jk}^i \tilde \lambda_{jk} + \beta_{\it ki}^j \tilde \lambda_{ki} + \beta_{\it ij}^k \tilde \lambda_{ij}\\ 		
-				&&+\ML(\alpha_{\it jk}^i) + \ML(\alpha_{\it ki}^j) + \ML(\alpha_{\it ij}^k) + \ML(\beta_{\it jk}^i) + \ML(\beta_{\it ki}^j) + \ML(\beta_{\it ij}^k)\\
-				&&+\ML\left(\frac{1}{2}\left(\pi - \alpha_{\it jk}^i - \alpha_{\it ki}^j - \alpha_{\it ij}^k\right)\right)
-\end{eqnarray*}
-
-Here the angles are hyperbolic angles and can be calculated using the hyperbolic half-angle 
-formula with hyperbolic edge lengths as defined in Equation~\ref{eq:hyperbolic_lengths}
+All angles $\alpha$ are calculated using these new hyperbolic edge lengths.
+Thus in the hyperbolic case the function $\alpha$ is defined using the hyperbolic half-angle formula with hyperbolic edge lengths
 \[
   \tan\left(\frac{\alpha^k_{\it ij}}{2}\right)=
   \sqrt{\frac{
@@ -373,43 +375,22 @@ formula with hyperbolic edge lengths as defined in Equation~\ref{eq:hyperbolic_l
     }}.
 \]
 
-
-\begin{definition}The hyperbolic functional is defined as
-\begin{eqnarray}
-	E^{\rm hyp}(\tilde\lambda) &:=& \sum_{\it ijk\in F}\left(f^{\rm hyp}_{\it ijk}(\tilde\lambda) - \frac{\pi}{2}\left(\tilde \lambda_{\it jk} + \tilde \lambda_{\it ki} + \tilde \lambda_{\it ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
-\end{eqnarray}
-\end{definition}
-
-The gradient of $E_{\rm hyp}$ is
-
-\begin{eqnarray}
-	\frac{\partial E^{\rm hyp}}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alpha^i_{\it jk} \\
-	\frac{\partial E^{\rm hyp}}{\partial \lambda_{\it ij}} &=& 
-	\frac{1}{2}\left(\alpha_{\it ij}^k + \alpha_{\it ij}^l - (\alpha^i_{\it jl} + \alpha^i_{\it kj}) - (\alpha^j_{\it ki} + \alpha^j_{\it il})\right)
-\end{eqnarray}
-The derivative with respect to $\lambda_{\it ij}$ involves angles of the triangles $\it ijk\in F$ and $\it jil\in F$.
 The hessian matrix of $E^{\rm hyp}(u)$ if $\lambda$s are fixed is given by
-
 \begin{eqnarray*}
 d^2E^{\rm hyp}(u)
 &=&\tfrac{1}{2}\sum_{\it ij\in \bar E} \cot\beta^k_{\it ij} \cdot \left((du_i-du_j)^2+
-\tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(du_i+du_j)^2\right)
+\tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(du_i+du_j)^2\right).
 \end{eqnarray*}
- 
-As in the euclidean case we can derive a version with variable $\lambda$s from the fact that 
+ As in the euclidean case we can derive a version with variable $\lambda$s from the fact that 
 \begin{equation*}
 d\tilde \lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j.
 \end{equation*}
-
 Writing the functional as a function of $\tilde \lambda$s we get 
-
 \begin{eqnarray*}
  d^2E^{\rm hyp}(\tilde \lambda) &=&
  \tfrac{1}{2}\sum_{\it ij\in \bar{E}} \cot\beta^k_{\it ij} \cdot \left((d\tilde\lambda_{\it ik}-d\tilde\lambda_{\it kj})^2+\tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\tilde\lambda_{\it ij})^2\right)
 \end{eqnarray*}
-
 With non vanishing $d\lambda_{\it ij}$ we get
-  
 \begin{eqnarray*}
 d^2E^{\rm hyp}(\lambda, u)
 &=& \tfrac{1}{2}\sum_{\it ij\in \bar{E}} \cot\beta^k_{\it ij} \cdot 
@@ -417,22 +398,11 @@ d^2E^{\rm hyp}(\lambda, u)
 \end{eqnarray*}
 
 \subsection{Spherical version}
-We define spherical edge lengths as 
+We define new spherical edge lengths as 
 \begin{equation}
 \ell^{\rm sph}_{\it ij} := 2\arcsin(\tilde \ell_{\it ij}).\label{eq:spherical_lengths}
 \end{equation}
-
-\begin{definition}
-As in the hyperbolic case we define
-\begin{eqnarray*}
-	\beta_{\it jk}^i &:=& \frac{1}{2} \left(\pi + \alpha_{\it jk}^i - \alpha_{\it ki}^j - \alpha_{\it ij}^k \right)\\
-	\beta_{\it ki}^j &:=& \frac{1}{2} \left(\pi - \alpha_{\it jk}^i + \alpha_{\it ki}^j - \alpha_{\it ij}^k \right)\\
-	\beta_{\it ij}^k &:=& \frac{1}{2} \left(\pi - \alpha_{\it jk}^i - \alpha_{\it ki}^j + \alpha_{\it ij}^k \right)\\
-	f^{\rm sph}_{\it ijk}(\lambda, u) &:=& f^{\rm hyp}_{\it ijk}(\lambda, u)
-\end{eqnarray*}	
-\end{definition}
-
-The angles $\alpha$ are calculated on the sphere using spherical lengths as defined in 
+In the spherical case the angles $\alpha$ are calculated on the sphere using spherical lengths as defined in 
 Equation~\ref{eq:spherical_lengths} and the spherical half-angle formula
 \[
   \tan\left(\frac{\alpha^k_{\it ij}}{2}\right)=
@@ -445,27 +415,14 @@ Equation~\ref{eq:spherical_lengths} and the spherical half-angle formula
     }}
 \]
 
-\begin{eqnarray}
-	E^{\rm sph}(\lambda, u) &:=& \sum_{ijk\in F}\left(f_{\it ijk}^{\rm sph}(\lambda, u) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i
-\end{eqnarray}
-
-The partial derivatives of the spherical functional are given as in the hyperbolic case
-\begin{eqnarray}
-	\frac{\partial E^{\rm sph}}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alpha^i_{\it jk} \\
-	\frac{\partial E^{\rm sph}}{\partial \lambda_{\it ij}} &=& 
-	\frac{1}{2}\left(\alpha_{\it ij}^k + \alpha_{\it ij}^l - (\alpha^i_{\it jl} + \alpha^i_{\it kj}) - (\alpha^j_{\it ki} + \alpha^j_{\it il})\right)
-\end{eqnarray}
-Angles are calculated with the corresponding spherical formulas and spherical lengths.
-And analogously to the hyperbolic case we find the formula for the second derivative
-
+Analogously to the hyperbolic case we find the formula for the second derivative:
 \begin{eqnarray*}
 d^2E^{\rm sph}(\lambda, u)
 &=& \tfrac{1}{2}\sum_{\it ij\in \bar{E}} \cot\beta^k_{\it ij} \cdot 
- \left((d\lambda_{\it ik}-d\lambda_{\it kj} +  du_i-du_j)^2-\tan^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\lambda_{\it ij} +du_i+du_j)^2\right)
+ \left((d\lambda_{\it ik}-d\lambda_{\it kj} +  du_i-du_j)^2-\tan^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\lambda_{\it ij} +du_i+du_j)^2\right).
 \end{eqnarray*}
-
-Note the change of the sign in front of the $\tan$ in the formula and the $\tan$ instead of a $\tanh$. Otherwise the hyperbolic and spherical 
-derivatives look the same.
+Note the change of the sign in front of the $\tan$ in the formula and the $\tan$ instead of a $\tanh$. 
+Apart from that the hyperbolic and spherical derivatives look the same.
 
 \subsection{Convexity and extension of the domain}
 
