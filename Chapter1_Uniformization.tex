@@ -501,6 +501,7 @@ top-row versus bottom-row.
 
 
 \subsection{Riemann map with cyclic quadrilaterals}
+\label{sec:riemann_map}
 
 \begin{figure}
 \centering
@@ -534,21 +535,32 @@ By that quadrilaterals adjacent to the point at infinity are cyclic after the Mo
 We show how to calculate discrete Riemann maps for cyclic quadrilateral domains, i.e., a discrete analog of conformal maps from a simply connected planar region to the unit disk. 
 In particular this yields a method for the generation of circle pattern Riemann maps, see Figure~\ref{fig:circular_riemann}.
 The procedure is in many aspects analogous to the previously described method for triangulations \cite{Bobenko2010}.
-Let $\Sigma$ be a cyclic planar domain that consists solely of quadrilaterals. 
+Let $\Sigma$ be a cyclic planar domain that consists solely of quadrilaterals and $\ell$ be a discrete metric on $\Sigma$. 
 Proceed as follows:
 \begin{enumerate}
-
-
 \item 
 Choose a vertex $k$ on the boundary of $\Sigma$ and apply a discrete conformal change of metric such that all edges incident with $k$ have the same lengths.
 \item
 Let $\Sigma'$ be the complex with all quadrilaterals that are incident to vertex $k$ removed.
-
+\item
+Solve Problem~\ref{prob:factors_and_angles} for $\Sigma'$ with prescribed $\Theta_i=2\pi$ for interior vertices in $\Sigma'$, $\Theta_i=\pi$ for boundary vertices in $\Sigma'$ that are not neighbors of $k$ in $\Sigma$. 
+The result is a planar cyclic domain. 
+The boundary edges that belong to faces at vertex $k$ in $\Sigma$ are contained in straight lines for each face.
+All other boundary edges are contained in a common straight line. 
+\item
+Apply a M{\"o}bius transformation to the vertices that maps this straight line to a circle and the other vertices to the inside of this circle.
+Reinsert $k$ at the image point of $\infty$ under this M{\"o}bius transformation.
+Each face $\it ijmk \in \Sigma$ incident with $k$ is cyclic because the three vertices $i$, $j$, and $m$ are contained in a line before transformation.
+\item
+Optionally apply a planar version of the M{\"o}bius normalization as described in Section~\ref{sec:moebius_normalization}. 
 \end{enumerate} 
 
+The result is a planar cyclic domain that is conformally equivalent to $(\Sigma, \ell)$ and its boundary polygon is inscribed in a circle.
+\todo{We do not have length cross ratios. What is the argument without $\lcr$?}
+Note that as for triangulations we cannot have ears, i.e., a quadrilateral with two consecutive boundary edges, in the complex $\Sigma$ when solving Problem~\ref{prob:factors_and_angles}. To address this we replace ears by triangles, see Figure~\ref{fig:circular_riemann}.
 
 
-\subsection{Circle domains}
+\subsection{Discrete circle domains}
 \label{sec:circle_domains}
 
 \begin{figure}
@@ -564,6 +576,19 @@ Discrete conformal map of a multiply-connected domain to a region bounded by cir
 }
 \label{fig:euclidean_circle_domain}
 \end{figure}
+
+We call a cyclic planar domain a circle domain if the vertices of each boundary component are inscribed in a circle.
+In this section we present discrete conformal maps from planar domains to circle domains, see Figure~\ref{fig:euclidean_circle_domain}.
+There is an analogous theorem for surfaces with higher genus, see Section~\ref{sec:hyperbolic_circle_domain} and Figure~\ref{fig:hyperbolic_circle_domain}.
+In the smooth setting the corresponding theorem has been conjectured by Koebe. 
+Every domain in $\C$ is conformally equivalent to a domain bounded by circles.
+The process to calculate a discrete map from a discrete planar cyclic domain to a discrete circle domain is as follows.
+Suppose there is a unique exterior boundary component. Fill all interior boundary components by attaching faces. 
+Triangulate the new faces to produce a set of new edges $E_2$. 
+Let $\lambda_{\it ij}$ with $\it ij\in E_2$ be free variables of the mapping problem.
+Map the domain to a circle as described in Section~\ref{sec:riemann_map} by solving Problem~\ref{prob:factors_and_angles} with these extra variables.
+Remove extra edges $\it ij\in E_2$.
+The boundary vertices of the result are inscribed in circles, see Figure~\ref{fig:euclidean_circle_domain}.
 
 
 \subsection{Special multiply connected domains}
@@ -661,6 +686,24 @@ It is possible to use the spherical functional to calculate spherical uniformiza
 \end{equation}
 Now minimize the reduced functional $\tilde  E^{\rm sph}$. 
 Following this scheme we create examples that would not be possible using simple minimization with arbitrary initialization, see Figure~\ref{fig:spherical_examples}.
+
+\subsection{M{\"o}bius normalization}
+\label{sec:moebius_normalization}
+The description of conformal equivalence is M{\"o}bus invariant.  
+To select a unique representative on the sphere we find the M{\"o}bius transformation $T$ such that
+\[\sum_{i=1}^{2g+2}\sigma T \lambda_i = 0,\]
+i.e., the center of mass of the branch points if the origin, see~\cite{Springborn05}.
+To find the point of minimum hyperbolic distance sum as stated by Springborn we minimize the following functional. 
+
+\begin{eqnarray*} 
+	E(x) &=& \sum_{v\in V}\log\left(\frac{-\left<x,v\right>}{\sqrt{-\left<x,x\right>}}\right)\\
+	\frac{\mathrm d E}{\mathrm dx} &=& \sum_{v\in V}\left(\frac{v}{\left<x,v\right>} - \frac{x}{\left<x,x\right>}\right)\\
+	\frac{\mathrm d^2 E}{\mathrm dx^2} &=& \sum_{v\in V}\left(2\frac{x^Tx}{\left<x,x\right>^2}-\frac{v^Tv}{\left<x,v\right>^2} - \mathrm{diag}\left(\frac{1}{\left<x,x\right>}\right)\right)
+\end{eqnarray*}
+
+Here $\left<.,.\right>$ is the Minkowski scalar product. Note that the problem is
+ $3$-dimensional and as such we define $\left<x,y\right>:=x_1y_1+x_2y_2+x_3y_3-1$ in
+the implementation.
 
 \subsection{Euclidean uniformization of spheres}
 
@@ -818,21 +861,7 @@ Insert the branch point at the north pole after stereographic projection to arri
 
 In this spirit we calculate examples for the curves $\mu^2=\lambda(\lambda^3-1)$ and $\mu^2=\lambda^4-1$, i.e., the lattices $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$ and $\tau=i$, see Figures~\ref{fig:wente_elliptic} and~\ref{fig:square_elliptic}.
 
-\subsubsection{Normalization of branch data and regular triangulations}
-The description of conformal equivalence is M{\"o}bus invariant. Thus we can apply transformations to the branch data $\lambda_1,\ldots,\lambda_{g+1}$ before creating the discrete algebraic curve as described above. Find the M{\"o}bius transformation $T$ such that
-\[\sum_{i=1}^{2g+2}\sigma T \lambda_i = 0,\]
-i.e., the center of mass of the branch points if the origin, see~\cite{Springborn05}.
-To find the point of minimum hyperbolic distance sum as stated by Springborn we minimize the following functional. 
-
-\begin{eqnarray*} 
-	E(x) &=& \sum_{v\in V}\log\left(\frac{-\left<x,v\right>}{\sqrt{-\left<x,x\right>}}\right)\\
-	\frac{\mathrm d E}{\mathrm dx} &=& \sum_{v\in V}\left(\frac{v}{\left<x,v\right>} - \frac{x}{\left<x,x\right>}\right)\\
-	\frac{\mathrm d^2 E}{\mathrm dx^2} &=& \sum_{v\in V}\left(2\frac{x^Tx}{\left<x,x\right>^2}-\frac{v^Tv}{\left<x,v\right>^2} - \mathrm{diag}\left(\frac{1}{\left<x,x\right>}\right)\right)
-\end{eqnarray*}
-
-Here $\left<.,.\right>$ is the Minkowski scalar product. Note that the problem is
- $3$-dimensional and as such we define $\left<x,y\right>:=x_1y_1+x_2y_2+x_3y_3-1$ in
-the implementation.
+\subsubsection{Regular triangulations on the sphere}
 
 To create a reasonably regular triangulation with vertices on the sphere we minimize the following energy on a given set of initial points on the sphere while fixing the branch points. 
 A good start is to choose points uniformly distributed on the sphere. 
@@ -1300,7 +1329,8 @@ The map corresponding to the purple circle is defined to map the interior of the
 Right: Fuchsian uniformization and universal cover in the Poicar\'e model of the hyperbolic plane. The boundary of the fundamental domain consists of  the Schottky circles and short paths connecting them (grey edges).}
 \end{figure}
 
-\subsection{Circle domains}
+\subsection{Hyperbolic circle domains}
+\label{sec:hyperbolic_circle_domain}
 
 \begin{figure}
 \centering
@@ -1315,7 +1345,7 @@ Right: Fuchsian uniformization and universal cover in the Poicar\'e model of the
 Uniformization of a genus $2$ surface with three boundary components. 
 The three holes are filled and triangulated (highlighted edges) to visualize the triangulation used during calculation, see Section~\ref{sec:circle_domains}.
 }
-\label{fig:hyperelliptic_circle_domain}
+\label{fig:hyperbolic_circle_domain}
 \end{figure}
 
 
