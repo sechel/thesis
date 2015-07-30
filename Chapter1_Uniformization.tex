@@ -9,18 +9,36 @@
 
 \begin{figure}
 \centering
-\resizebox{\linewidth}{!}{
-    \includegraphics[width=0.25\linewidth]{introduction/genus0_image.pdf}
-    \includegraphics[width=0.25\linewidth]{introduction/genus1_image.pdf}
-    \includegraphics[width=0.25\linewidth]{introduction/genus3_image.pdf}
+\resizebox{0.8\linewidth}{!}{
+\includegraphics[width=0.25\linewidth]{introduction/genus0_image.pdf}
+\quad
+\includegraphics[width=0.25\linewidth]{introduction/genus0_domain.pdf}
  }
-\resizebox{\linewidth}{!}{
-    \includegraphics[width=0.25\linewidth]{introduction/genus0_domain.pdf}
-    \includegraphics[width=0.25\linewidth]{introduction/genus1_domain.pdf}
-    \includegraphics[width=0.25\linewidth]{introduction/genus3_domain.pdf}
+\resizebox{0.8\linewidth}{!}{
+\includegraphics[width=0.25\linewidth]{introduction/genus1_image.pdf}
+\quad    
+\includegraphics[width=0.25\linewidth]{introduction/genus1_domain.pdf}
 }
-{\scriptsize\tt data/introduction/genus\{0/1/3\}\_data.xml} 
-\caption{Uniformization of compact Riemann surfaces}
+\resizebox{0.8\linewidth}{!}{
+\includegraphics[width=0.25\linewidth]{introduction/genus3_image.pdf}    
+\quad   
+\includegraphics[width=0.25\linewidth]{introduction/genus3_domain.pdf}
+}
+\setstretch{0.0}{\scriptsize\tt data/introduction/genus\{0/1/3\}\_data.xml} 
+\caption{
+Uniformization of compact Riemann surfaces. 
+The uniformization of topological spheres (left) is treated in Section~\ref{sec:spheres}.
+All spheres are conformally equivalent, we show a map from a topological sphere (top) to the round sphere. 
+To visualize the conformality we map a grid by Mercator projection with non-standard poles.
+Tori (middle) are covered in Section~\ref{sec:tori}.
+Conformal tori can be parameterized over complex lattices. 
+In this case the torus can be mapped to a rectangle lattice. 
+We adjust ratio of the the mapped grid to match the ratio of the rectangle in order to map the grid seamlessly.
+Uniformizations of surfaces of higher genus (right) are described in Section~\ref{sec:higher_genus}.
+The fundamental domain of the parameterization if a (canonical) hyperbolic polygon. 
+It tessellates the hyperbolic plane by hyperbolic translations that generate the uniformizing group of the corresponding Riemann surface.
+How to find a seamless grid pattern matching this domain is an open problem.
+}
 \label{fig:intro_uniformization}
 \end{figure}
 
@@ -32,6 +50,7 @@ In addition to this we also give a spherical version of the functional together 
 As touched upon in \cite{Bobenko2010} letting the $\lambda$s be variables we are able to create maps to regions bounded by circles.
 This text is accompanied by a data compact disk which contains the data for most of the examples presented in this part of the work. 
 Where applicable we give the path to the data on the disk directly under the corresponding figure.
+\todo{Reference to the ConformalLab section and the description of the XML data format.}
 
 \section{Basic definitions}
 
@@ -660,8 +679,27 @@ We treat the additional edges as auxiliary edges in a circular polygon, i.e., th
 Thus adjacent triangles form a circular polygon in the resulting image.
 
 \section{Uniformization of spheres}
+\label{sec:spheres}
+
+In the smooth setting all topological spheres are conformally equivalent.
+See also Figure~\ref{fig:intro_uniformization}, left.
+
 \subsection{Uniformization with euclidean functional}
 \label{sec:spheres_euclidean}
+
+\begin{figure}
+\centering
+\resizebox{0.7\textwidth}{!}{
+\includegraphics[height=5cm]{spherical_cyclic/cube_cyclic_domain.pdf}
+\includegraphics[height=5cm]{spherical_cyclic/cube_cyclic_image.pdf}
+}
+\setstretch{0.0}{\scriptsize\tt data/spherical\_cyclic/spherical\_circular.xml}
+\caption{Spherical cyclic conformal map.}
+\label{fig:spherical_circular}
+\end{figure}
+
+
+Mapping a discrete cyclic surface with spherical topology to discretely conformally the round sphere amount to a similar procedure as described in Section~\ref{sec:riemann_map}.
 
 \subsection{Computation with spherical functional}
 \label{sec:spherical_computation}
@@ -675,7 +713,7 @@ Thus adjacent triangles form a circular polygon in the resulting image.
 \includegraphics[height=5cm]{spherical/tetrahedron_domain.pdf}
 }
 \setstretch{0.0}{\scriptsize\tt data/spherical/cube\_data.xml}\quad\quad\quad\quad{\scriptsize\tt data/spherical/tetrahedron\_data.xml}
-\caption{Mapping conformally to the sphere using the spherical functional and a direct spherical layout process. The map is normalize such that the center of mass of vertices is the center of the sphere.}
+\caption{Mapping conformally to the sphere using the spherical functional and a direct spherical layout process. The image is normalized such that the center of mass of vertices is the center of the sphere.}
 \label{fig:spherical_examples}
 \end{figure}
 
@@ -691,16 +729,14 @@ Following this scheme we create examples that would not be possible using simple
 \label{sec:moebius_normalization}
 The description of conformal equivalence is M{\"o}bus invariant.  
 To select a unique representative on the sphere we find the M{\"o}bius transformation $T$ such that
-\[\sum_{i=1}^{2g+2}\sigma T \lambda_i = 0,\]
-i.e., the center of mass of the branch points if the origin, see~\cite{Springborn05}.
+\[\sum_{i=1}^{n}\sigma T \lambda_i = 0,\]
+i.e., the center of mass of the points is the origin, see~\cite{Springborn05}.
 To find the point of minimum hyperbolic distance sum as stated by Springborn we minimize the following functional. 
-
 \begin{eqnarray*} 
 	E(x) &=& \sum_{v\in V}\log\left(\frac{-\left<x,v\right>}{\sqrt{-\left<x,x\right>}}\right)\\
 	\frac{\mathrm d E}{\mathrm dx} &=& \sum_{v\in V}\left(\frac{v}{\left<x,v\right>} - \frac{x}{\left<x,x\right>}\right)\\
 	\frac{\mathrm d^2 E}{\mathrm dx^2} &=& \sum_{v\in V}\left(2\frac{x^Tx}{\left<x,x\right>^2}-\frac{v^Tv}{\left<x,v\right>^2} - \mathrm{diag}\left(\frac{1}{\left<x,x\right>}\right)\right)
 \end{eqnarray*}
-
 Here $\left<.,.\right>$ is the Minkowski scalar product. Note that the problem is
  $3$-dimensional and as such we define $\left<x,y\right>:=x_1y_1+x_2y_2+x_3y_3-1$ in
 the implementation.
@@ -742,6 +778,7 @@ We apply this procedure to a model of a bear, see Figure~\ref{fig:bear}. To crea
 
 \section{Uniformization of tori}
 \label{sec:tori}
+See also Figure~\ref{fig:intro_uniformization}, middle.
 
 \subsection{Uniformization with euclidean functional}
 
@@ -954,6 +991,7 @@ The results from these two experiments assert that there is a exponential depend
 
 
 \section{Uniformization of surfaces of higher genus}
+\label{sec:higher_genus}
 
 \begin{figure}
 \centering
@@ -1003,7 +1041,7 @@ The results from these two experiments assert that there is a exponential depend
 \caption{
 Creating a fundamental polygon of a hyperelliptic surface:
 Realizing a hyperbolic metric of a discrete surface (upper-left) creates a fundamental region with polygonal boundary.
-Straighten the edges between vertices of the cut-graph (points) creates a polygon with geodesic edges (upper-right and middle-right).
+Straighten the edges between vertices of the cut-graph (points) creates a polygon with geodesic edges (upper-right and middle-left).
 Cut-and-paste operations lead to a fundamental polygon with only one vertex and opposite sides identified, all vertices are equivalent under the group action (middle-right).
 We normalize the group such that the intersection of the axes is the origin (bottom).
 }
