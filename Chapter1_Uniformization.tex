@@ -50,6 +50,10 @@ In addition to this we also give a spherical version of the functional together 
 As touched upon in \cite{Bobenko2010} letting the $\lambda$s be variables we are able to create maps to regions bounded by circles.
 This text is accompanied by a data compact disk which contains the data for most of the examples presented in this part of the work. 
 Where applicable we give the path to the data on the disk directly under the corresponding figure.
+
+There is no existence, can be remedied using recent techniques developed by Luo et. al.~\cite{Luo13, Luo14}.
+Maybe reference Beardon and Stephenson~\cite{BS90}.
+
 \todo{Reference to the ConformalLab section and the description of the XML data format.}
 
 \section{Basic definitions}
@@ -248,6 +252,8 @@ Analogously the spherical version for a spherical metric $\tilde\ell:E_{\Sigma}\
 
 Until now we have only talked about discrete conformal equivalence of discrete euclidean/spherical/hyperbolic metrics.
 We now turn to discrete conformal mappings between discrete cyclic polyhedral surfaces.
+
+\subsection{Characterization by cross-/multi-ratios and M{\"o}bius invariance}
 
 \subsection{Discrete conformal maps}
 
@@ -518,6 +524,24 @@ the minimizer realizes this pattern in addition to being cyclic. \todo{Why?}
 If it does not exist we get a cyclic solution and no circle pattern, see Figure~\ref{fig:cyclic_parallelogram}
 top-row versus bottom-row.
 
+\begin{conjecture}[Necessary conditions for the existence of a solution]
+Let $\Sigma$ be bipartite. Let $V_w$ be the set of white boundary vertices and $V_b$ be the set of black boundary vertices.
+Let $\alpha_i$ be the sum of angles at boundary vertex $i$ in the domain of the map and $\tilde \alpha_i$ be the corresponding angle sum in the conformally equivalent image.
+A necessary condition for the solvability of the system is that the change of boundary curvature in both sets cancel out:
+\begin{eqnarray}
+\sum_{i\in V_w}(\alpha_i - \tilde\alpha_i) &=& 0\\
+\sum_{i\in V_b}(\alpha_i - \tilde\alpha_i) &=& 0.
+\end{eqnarray}
+\end{conjecture}
+
+In the examples of Figure~\ref{fig:cyclic_parallelogram} this condition is met. 
+In the top example all corners have the same color, thus all curvature changes add up and cancel.
+In the second example the two bottom corners have a different color than the two top corners.
+As the result is a parallelogram again the change of angles cancels out.
+On the contrary, a square made from $7$ squares in each direction does not meet the condition with the given boundary angles.
+Here opposite corners have the same color
+The change of curvature has the same sign for opposite corners, hence the conditions are not true.
+Experiments show that we cannot solve the problem in such a case.
 
 \subsection{Riemann map with cyclic quadrilaterals}
 \label{sec:riemann_map}
@@ -575,9 +599,21 @@ Optionally apply a planar version of the M{\"o}bius normalization as described i
 \end{enumerate} 
 
 The result is a planar cyclic domain that is conformally equivalent to $(\Sigma, \ell)$ and its boundary polygon is inscribed in a circle.
-\todo{We do not have length cross ratios. What is the argument without $\lcr$?}
 Note that as for triangulations we cannot have ears, i.e., a quadrilateral with two consecutive boundary edges, in the complex $\Sigma$ when solving Problem~\ref{prob:factors_and_angles}. To address this we replace ears by triangles, see Figure~\ref{fig:circular_riemann}.
 
+\begin{proposition}
+The result of this procedure is discretely conformally equivalent to $(\Sigma, \ell)$ and its boundary polygon inscribed in a circle.
+\end{proposition}
+\begin{proof}
+We have to show that the cross-ratio of all quadrilaterals agree. 
+Since the quadrilaterals are cyclic their cross-ratios are real and negative.
+After step 1 the cross ratio of the quadrilaterals at vertex $k$ are given by the length ratio of the two edges that are not connected to $k$.
+After step 3 each three vertices $i$, $j$, and $k$ belonging to a face at $k$ lie on a straight line. 
+Thus the cross-ratio of the points $\infty$, $i$, $j$, and $k$ is the ratio of the two lengths $\it ij$ and $\it jk$.
+This ratio is equal to the ratio after step 1 because there is only one scale factor involved. 
+The others are fixed to zero.
+The cross-ratio is invariant under M{\"o}bius transformation therefor the ratios agree.
+\end{proof}
 
 \subsection{Discrete circle domains}
 \label{sec:circle_domains}
@@ -706,6 +742,7 @@ We apply M{\"o}bius normalization to the spherical surface to achieve the symmet
 \end{figure}
 
 Mapping a discrete cyclic surface with spherical topology to discretely conformally the round sphere can be achieved with a similar procedure as described in Section~\ref{sec:riemann_map}. 
+We treat the special case of a quad surface.
 We first remove a vertex and map the remaining part of the surface to the plane.
 Then apply stereographic projection to map the surface to the sphere.
 Again we can apply M{\"o}bius normalization to find a unique map up to rigid motion.
@@ -727,7 +764,9 @@ Each face incident with $k$ is still cyclic because the three vertices are conta
 Optionally apply M{\"o}bius normalization, see Section~\ref{sec:moebius_normalization}. 
 \end{enumerate} 
 
+The result is discretely conformally equivalent to $(\Sigma, \ell)$. The proof is analogous to Section~\ref{sec:riemann_map}.
 We use this procedure to calculate spherical maps of triangulations, see Figure~\ref{fig:intro_uniformization}, as well as cyclic surfaces, see Figure~\ref{fig:spherical_circular}.
+
 
 \subsection{Computation with spherical functional}
 \label{sec:spherical_computation}
