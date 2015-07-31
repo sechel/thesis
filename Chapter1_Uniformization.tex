@@ -562,7 +562,7 @@ Choose a vertex $k$ on the boundary of $\Sigma$ and apply a discrete conformal c
 \item
 Let $\Sigma'$ be the complex with all quadrilaterals that are incident to vertex $k$ removed.
 \item
-Solve Problem~\ref{prob:factors_and_angles} for $\Sigma'$ with prescribed $\Theta_i=2\pi$ for interior vertices in $\Sigma'$, $\Theta_i=\pi$ for boundary vertices in $\Sigma'$ that are not neighbors of $k$ in $\Sigma$. 
+Solve Problem~\ref{prob:factors_and_angles} for $\Sigma'$ with prescribed $\Theta_i=2\pi$ for interior vertices in $\Sigma'$, $\Theta_i=\pi$ for boundary vertices in $\Sigma'$ that are not neighbors of $k$ in $\Sigma$ and $u_i=0$ for neighbors of $k$. 
 The result is a planar cyclic domain. 
 The boundary edges that belong to faces at vertex $k$ in $\Sigma$ are contained in straight lines for each face.
 All other boundary edges are contained in a common straight line. 
@@ -681,8 +681,11 @@ Thus adjacent triangles form a circular polygon in the resulting image.
 \section{Uniformization of spheres}
 \label{sec:spheres}
 
-In the smooth setting all topological spheres are conformally equivalent.
-See also Figure~\ref{fig:intro_uniformization}, left.
+In this section we describe how to calculate discrete conformal maps to the sphere.
+In Section~\ref{sec:spheres_euclidean} we use a similar construction as for the Riemann map to treat meshes without boundary using the euclidean functional.
+As the corresponding spherical version of the variational principle is non-convex it is numerically difficult to find direct solutions.
+If we want to state boundary conditions we however cannot avoid using the spherical version.
+We describe how we proceed with the spherical functional in Section~\ref{sec:spherical_computation}.
 
 \subsection{Uniformization with euclidean functional}
 \label{sec:spheres_euclidean}
@@ -697,12 +700,34 @@ See also Figure~\ref{fig:intro_uniformization}, left.
 \caption{
 Discrete cyclic conformal map to the sphere. 
 The map was calculated with the euclidean functional and stereographic projection.
+We apply M{\"o}bius normalization to the spherical surface to achieve the symmetry
 }
 \label{fig:spherical_circular}
 \end{figure}
 
+Mapping a discrete cyclic surface with spherical topology to discretely conformally the round sphere can be achieved with a similar procedure as described in Section~\ref{sec:riemann_map}. 
+We first remove a vertex and map the remaining part of the surface to the plane.
+Then apply stereographic projection to map the surface to the sphere.
+Again we can apply M{\"o}bius normalization to find a unique map up to rigid motion.
+The process works step by step as follows: Let $\Sigma$ be a discrete cyclic surface with spherical topology and $\ell_{\it ij}$ be a metric on $\Sigma$.
+\begin{enumerate}
+\item 
+Choose a vertex $k$ and apply a discrete conformal change of metric to $\ell_{\it ij}$ such that all edges incident with $k$ have the same lengths.
+\item
+Let $\Sigma'$ be the complex with all faces that are incident to vertex $k$ removed.
+\item
+Solve Problem~\ref{prob:factors_and_angles} for $\Sigma'$ with prescribed $\Theta_i=2\pi$ for interior vertices in $\Sigma'$, $\Theta_i=\pi$ for boundary vertices in $\Sigma'$ that are not neighbors of $k$ in $\Sigma$ and $u_i=0$ for neighbors of $k$ in $\Sigma$ . 
+The result is a planar cyclic domain. 
+The boundary edges that belong to faces at vertex $k$ in $\Sigma$ are contained in straight lines for each face.
+\item
+Apply stereographic projection to the vertices to map the result to the unit sphere.
+Reinsert $k$ at the image point of $\infty$.
+Each face incident with $k$ is still cyclic because the three vertices are contained in a line before projection.
+\item
+Optionally apply M{\"o}bius normalization, see Section~\ref{sec:moebius_normalization}. 
+\end{enumerate} 
 
-Mapping a discrete cyclic surface with spherical topology to discretely conformally the round sphere amount to a similar procedure as described in Section~\ref{sec:riemann_map}.
+We use this procedure to calculate spherical maps of triangulations, see Figure~\ref{fig:intro_uniformization}, as well as cyclic surfaces, see Figure~\ref{fig:spherical_circular}.
 
 \subsection{Computation with spherical functional}
 \label{sec:spherical_computation}
