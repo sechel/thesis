@@ -125,11 +125,9 @@ discuss applies also to general CW complexes.
 \subsection{Discrete metrics}
 \label{sec:discrete-metrics}
 
-The \emph{discrete metric} of a euclidean (or hyperbolic or
-spherical) cyclic polyhedral surface $\Sigma$ is the function
-$\ell:E_{\Sigma}\rightarrow\R_{>0}$ that assigns to each edge $\it ij \in E_{\Sigma}$ its
-length $\ell_{\it ij}$. It satisfies the polygon inequalities (one side is
-shorter than the sum of the others):
+The \emph{discrete metric} of a euclidean (or hyperbolic or spherical) cyclic polyhedral surface $\Sigma$ is the function $\ell:E_{\Sigma}\rightarrow\R_{>0}$ that assigns to each edge $\it ij \in E_{\Sigma}$ its
+length $\ell_{\it ij}$. 
+It satisfies the polygon inequalities (one side is shorter than the sum of the others):
 \begin{equation}
 \label{eq:polygon_ineq}
 % \forall i_{1}i_{2}\ldots i_{n}\in F_{\Sigma}:
@@ -151,34 +149,23 @@ shorter than the sum of the others):
 \text{for all $i_{1}i_{2}\ldots i_{n}\in F_{\Sigma}$}
 \end{equation}
 
-In euclidean and hyperbolic geometry, the polygon inequalities are
-sufficient for the existence of a polygon with given edge
-lengths. Furthermore, a \emph{cyclic} polygon is uniquely determined
-by its edge lengths. Thus, the discrete metric determines the geometry
-of a cyclic polyhedral surface:
+In euclidean and hyperbolic geometry, the polygon inequalities are sufficient for the existence of a polygon with given edge lengths. 
+Furthermore, a \emph{cyclic} polygon is uniquely determined by its edge lengths. 
+Thus, the discrete metric determines the geometry of a cyclic polyhedral surface~\cite{KSS15}:
 
-If $\Sigma$ is a surface with the structure of a CW~complex and a
-function $\ell:E_{\Sigma}\rightarrow\R_{>0}$ satisfies the polygon
-inequalities~\eqref{eq:polygon_ineq}, then there is a unique euclidean
-cyclic polyhedral surface (and also a unique hyperbolic cyclic
-polyhedral surface) with CW~complex~$\Sigma$ and discrete
-metric~$\ell$.
+If $\Sigma$ is a surface with the structure of a CW~complex and a function $\ell:E_{\Sigma}\rightarrow\R_{>0}$ satisfies the polygon inequalities~\eqref{eq:polygon_ineq}, then there is a unique euclidean
+cyclic polyhedral surface (and also a unique hyperbolic cyclic polyhedral surface) with CW~complex~$\Sigma$ and discrete metric~$\ell$.
 
-The edge lengths of a cyclic polygon in the sphere satisfy another
-independent inequality: The perimeter is less than $2\pi$.  the discrete metric of a
-spherical cyclic polyhedral surface satisfies the additional
-inequalities
+The edge lengths of a cyclic polygon in the sphere satisfy another independent inequality: The perimeter is less than $2\pi$.  
+The discrete metric of a spherical cyclic polyhedral surface satisfies the additional inequalities
 \begin{equation}
 \label{eq:spherical_polygon_ineq}
-\ell_{i_{1}i_{2}}+\ell_{i_{2}i_{3}}+\ldots+\ell_{i_{n-1}i_{n}}
-<2\pi
+\ell_{i_{1}i_{2}}+\ell_{i_{2}i_{3}}+\ldots+\ell_{i_{n-1}i_{n}}<2\pi
 \quad
 \text{for all $i_{1}i_{2}\ldots i_{n}\in F_{\Sigma}$.}
 \end{equation}
-Given a function $\ell:E_{\Sigma}\rightarrow\R_{>0}$ satisfying the
-inequalities~\eqref{eq:polygon_ineq}
-and~\eqref{eq:spherical_polygon_ineq}, then there is a unique cyclic
-spherical polyhedral surface with discrete metric $\ell$.
+Given a function $\ell:E_{\Sigma}\rightarrow\R_{>0}$ satisfying the inequalities~\eqref{eq:polygon_ineq}
+and~\eqref{eq:spherical_polygon_ineq}, then there is a unique cyclic spherical polyhedral surface with discrete metric $\ell$.
 
 \subsection{Discrete conformal equivalence}
 \label{sec:discr-conf-equiv}
@@ -197,24 +184,15 @@ For the spherical case we have $\sin(\frac{1}{2}\tilde \ell)=\frac{1}{2}\ell$ an
 \end{figure}
 
 
-We define discrete conformal equivalence for cyclic polyhedral
-surfaces that are combinatorially equivalent. Thus, we may assume that
-the surfaces share the same CW complex $\Sigma$ equipped with
-different metrics.
+We define discrete conformal equivalence for cyclic polyhedral surfaces that are combinatorially equivalent. Thus, we may assume that the surfaces share the same CW complex $\Sigma$ equipped with different metrics.
 
-Two \emph{euclidean} cyclic polyhedral surfaces with
-discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are
-\emph{discretely conformally equivalent} if there exists a function
-$u:V_{\Sigma}\rightarrow\R$ such that
+Two \emph{euclidean} cyclic polyhedral surfaces with discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are \emph{discretely conformally equivalent} if there exists a function $u:V_{\Sigma}\rightarrow\R$ such that
 \begin{equation}
 \label{eq:tilde_ell_euc}
 \tilde\ell_\mathit{ij}=e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij}.
 \end{equation}
 
-Two \emph{hyperbolic} cyclic polyhedral surfaces with
-discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are
-\emph{discretely conformally equivalent} if there exists a function
-$u:V_{\Sigma}\rightarrow\R$ such that
+Two \emph{hyperbolic} cyclic polyhedral surfaces with discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are \emph{discretely conformally equivalent} if there exists a function $u:V_{\Sigma}\rightarrow\R$ such that
 \begin{equation}
 \label{eq:tilde_ell_hyp}
 \sinh\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
@@ -223,10 +201,7 @@ $u:V_{\Sigma}\rightarrow\R$ such that
 \end{equation}
 
 
-Two \emph{spherical} cyclic polyhedral surfaces with
-discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are
-\emph{discretely conformally equivalent} if there exists a function
-$u:V_{\Sigma}\rightarrow\R$ such that
+Two \emph{spherical} cyclic polyhedral surfaces with discrete metrics $\ell,\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are \emph{discretely conformally equivalent} if there exists a function $u:V_{\Sigma}\rightarrow\R$ such that
 \begin{equation}
 \label{eq:tilde_ell_sph}
 \sin\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
@@ -234,26 +209,57 @@ $u:V_{\Sigma}\rightarrow\R$ such that
 \sin\Big(\frac{\ell_\mathit{ij}}{2}\Big).
 \end{equation}
 
-We will also consider ``mixed versions'': For example, a cyclic
-euclidean polyhedral surface with discrete metric
-$\ell:E_{\Sigma}\rightarrow\R_{>0}$ and a cyclic hyperbolic polyhedral
-surface with discrete metric $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$
-are discretely conformally equivalent if
+We will also consider ``mixed versions'': For example, a cyclic euclidean polyhedral surface with discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ and a cyclic hyperbolic polyhedral surface with discrete metric $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are discretely conformally equivalent if
 \begin{equation*}
 \sinh\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
 = e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij},
 \end{equation*}
 see also Figure~\ref{fig:geometries}. 
+
 Analogously the spherical version for a spherical metric $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ reads
 \begin{equation*}
 \sin\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
 = e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij}.
 \end{equation*}
 
+\subsection{Characterization by cross-/multi-ratios and M{\"o}bius invariance}
+
+For triangulations we have an alternative characterization of conformal equivalence in terms of length-cross-ratios. For two adjacent triangles $\it ijk\in F$ and $\it jil\in F$ the length-cross-ratio of the common edge $\it ij\in E$ is defined as
+\begin{equation}
+\lcr_{\it ij}\vcentcolon=\frac{\ell_{\it il}\ell_{\it jk}}{\ell_{\it lj}\ell_{\it ki}}.
+\end{equation}
+
+\begin{proposition}
+Two euclidean triangulations $(\Sigma, \ell)$ and $(\Sigma, \tilde \ell)$ are discretely conformally equivalent if and only if for each interior edge $\it ij\in E$, the induced length-cross-ratios agree.
+\end{proposition}
+
+In addition to this characterization we can recover a representative metric from the length-cross-ratios.
+The length-cross-ratios satisfy the product equation at each vertex $i\in V$
+\begin{equation}
+\prod_{\it ij\ni i} \lcr_{\it ij} = 1.
+\end{equation}
+Define values attached to angles of the triangulation, e.g., 
+\begin{equation}
+c^i_{\it jk}=\frac{\ell_{\it jk}}{\ell_{\it ij}\ell_{\it ki}}\label{eq:angle_parameter}
+\end{equation} 
+is attached to angle at vertex $i$ of the triangle $\it ijk\in F$.
+With this parameter the length-cross-ratios can we written as
+\begin{equation}
+\lcr_{\it ij}=\frac{c^i_{\it jk}}{c^i_{\it lj}}.
+\end{equation}
+for a given function $\lcr$ defined on edges of the triangulation we can find parameters $c$ on angles that satisfy Equation~\ref{eq:angle_parameter} by choosing one of the $c$ at each vertex.
+The corresponding metric $\ell$ is then given by the relations
+\begin{equation}
+\ell_{\it ij} = \frac{1}{\sqrt{c^i_{\it jk}c^j_{\it ki}}} = \frac{1}{\sqrt{c^i_{\it lj}c^j_{\it il}}}.
+\end{equation} 
+
+What is now the generalization of this concept to cyclic polyhedral surfaces?
+
+
+\todo{generalize for cyclic surfaces}
+
 Until now we have only talked about discrete conformal equivalence of discrete euclidean/spherical/hyperbolic metrics.
 We now turn to discrete conformal mappings between discrete cyclic polyhedral surfaces.
-
-\subsection{Characterization by cross-/multi-ratios and M{\"o}bius invariance}
 
 \subsection{Discrete conformal maps}
 
@@ -871,6 +877,8 @@ The polyhedral surface $(\Sigma, \tilde\ell)$ can be laid out to the plane with 
 
 \subsection{Tori given by Schottky data}
 \label{sec:tori:schottky}
+
+\todo{Include the explicit example from Boris.}
 
 \begin{figure}
 \centering
