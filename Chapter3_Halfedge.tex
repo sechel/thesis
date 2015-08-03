@@ -10,10 +10,10 @@ combined in the package {\sc HalfEdgeTools}. Both packages are part of the {\sc 
 Felix~Kn{\"o}ppel, and Kristoffer Josefsson ({\sc HalfEdgeTools}), and
 other contributers to the {\sc Jtem} project.
 
-This particular implementation of a half-edge data structure was inspired by an implementation 
+This implementation of a half-edge data structure was inspired by an implementation 
 contained in the {\sc Cgal} library \cite{Kettner2000}.
-This specific implementation is however different from existing libraries at is uses the generic
-programming concept of {\sc Java} to achive compatibility and flexibility.
+This specific implementation is however different from existing libraries as is uses the generic
+programming concept of {\sc Java} to achieve compatibility and flexibility.
 
 The code presented in this section is compatible with {\sc Java} version 1.7 or later.
 
@@ -149,15 +149,15 @@ $n$ is the numer of nodes in the data structure, e.g., $n=\#V$.
 Nodes can be directly accessed via the corresponding {\tt get} method. It takes the node index
 and returns the node with the given index. It is guaranteed that for a given $i\in \{0,\ldots,\#N\}$
 it is {\tt getNode($i$).getIndex()$ = i$}.
-Nodes in the data structure can be interated over using one of the methods {\tt getVertices}, 
-{\tt getEdges}, or {\tt getFaces}. These return unmodifyable instances of {\tt java.util.List} containing the respective node instances.
+Nodes in the data structure can be iterated over using one of the methods {\tt getVertices}, 
+{\tt getEdges}, or {\tt getFaces}. These return unmodifiable instances of {\tt java.util.List} containing the respective node instances.
 
 {\bf Undirected edges}
 
 A half-edge has the {\tt positive} property. In a pair of opposite edges it is required that the boolean
 value of this property is different, i.e., \url{e.isPositive()} $!=$ \url{e.getOppositeEdge().isPositive()}.
 Using this property it is possible to iterate over undirected edges, i.e., the positive or the negative
-haf-edges. The methods {\tt getPositiveEdges} and {\tt getNegativeEdge} of the data structure 
+half-edges. The methods {\tt getPositiveEdges} and {\tt getNegativeEdge} of the data structure 
 implement this.
 
 {\bf Removing nodes from a data structure.}
@@ -169,7 +169,7 @@ then have running time $\mathcal{O}(n)$.
 
 {\bf Half-Edge utilities.}
 
-To work efficiently with half-edge data a set of algorithms is implemented as static ulitity methods
+To work efficiently with half-edge data a set of algorithms is implemented as static utility methods
 in the class {\tt de.jtem.half\-edge.util.Half\-Edge\-Utils}. It contains methods that help iterating 
 over incoming edges at a vertex, or iterating over the boundary edges of a surface or a face, and many more.
 
@@ -226,7 +226,7 @@ This forces the Vertex implementations that use this algorithm to implement an i
 called {\tt HasCoordinate3D}. It leads to explicit and clean code of the algorithm. A drawback of this
 is that an existing implementation that should use this algorithm has to be adapted to implement the 
 possibly many interfaces required by the algorithm. 
-This is not a feasable solution when is comes to a modular application where algorithms come as 
+This is not a feasible solution when is comes to a modular application where algorithms come as 
 plug-ins without the chance to change the data structure.
 
 {\bf AdapterSet and Adapters}
@@ -244,7 +244,7 @@ double valued weights on edges.
 		{\tt AdapterSet} takes the data class type to find a matching adapter (Line~12 and 13).
 		The corresponding {\tt getDefault} method takes a default value that is returned if no
 		matching adapter is found (Line~14). It uses {\tt @FunctionValue} and {\tt @Weight} annotated 
-		adapters to aquire the data needed for calculation of the output value.
+		adapters to acquire the data needed for calculation of the output value.
 	},
 	label=alg:dirichlet,
 	captionpos=b,
@@ -276,7 +276,7 @@ There are three basic classes that could serve as base class of an adapter. It i
 \item {\tt AbstractAdapter} - A adapter class that knows about the supported data type and implements
 all getter and setter methods. Here only the needed methods can be overwritten. Node type checking
 is done manually thus allows for the creation of generic adapters.
-\item {\tt AbstractTypedAdpter} - If you know which half edge node classes the adpter is supposed to
+\item {\tt AbstractTypedAdpter} - If you know which half edge node classes the adapter is supposed to
 work with this is the adapter base class you should use. Node type checking and casting is done in the
 super class.
 \end{itemize}
@@ -343,7 +343,7 @@ required data adapters and the creation of a suitable {\tt AdapterSet}.
 There is a set of generic adapters implemented in the package 
 {\tt de.jtem.half\-edge\-tools.adap\-ter.generic}. Here generic means that the adapter does not provide
 the data itself. Instead it asks for other adapters to provide data and converts, merges, or recalculates its
-output based on the data aquired from other adapter implementations.
+output based on the data acquired from other adapter implementations.
 
 The most important example of pre-defined generic adapters are position and texture position adapters.
 These adapters come in three versions, e.g., {\tt @Position2D}, {\tt @Position3D}, and {\tt @Position4D}. The implementations, e.g, {\tt de.jtem.half\-edge\-tools.adapter.generic.Position\-3dAdapter} obtain position
@@ -379,7 +379,7 @@ The {\sc HalfEdgeTools} package contains utility classes for the visualization o
 
 A central role plays the plug-in {\tt de.jtem.halfedge\-tools.plugin.Halfedge\-Interface}. This plug-in works 
 as a converter between half-edge data structure and {\tt IndexedFaceSet} data structure used internally 
-by {\sc Jreality}. It creates a user interface that contains gui elements for layer management, import, export,
+by {\sc Jreality}. It creates a user interface that contains GUI elements for layer management, import, export,
 undo, redo, and more features, see Figure~\ref{fig:halfedge_interface}.
 
 \begin{figure}
