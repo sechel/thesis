@@ -1,6 +1,6 @@
 %!TEX TS-program = pdflatex
 %!TEX encoding = UTF-8 Unicode
-\documentclass[a4paper]{book}
+\documentclass[a4paper, draft]{book}
 \sloppy
 \usepackage{subfiles}
 \usepackage[german, english]{babel}
@@ -20,6 +20,7 @@
 \usepackage[export]{adjustbox}
 \usepackage[skip=2pt]{caption}
 \usepackage{paralist}
+\usepackage{bookmark}
 
 \usepackage[]{graphicx}
 \graphicspath{
@@ -252,6 +253,8 @@ D 83
 \subfile{Chapter3_VaryLab.tex}
 
 \newpage
+
+\bookmarksetup{startatroot}
 \mainbibliography
 
 \backmatter

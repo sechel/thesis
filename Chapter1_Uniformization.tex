@@ -370,6 +370,7 @@ triangles on both sides of the edge. Note that in the euclidean case Equation~\r
 We give formulas for $\alpha$ and derive the Hessian matrices for the functionals in each of the three cases.
 
 \subsection{Euclidean version}
+\label{sec:euclidean_fuctional}
 
 Let $\alpha^i_{\it jk}$ be the angle opposite to edge $\it jk$ in the triangle $\it ijk\in F$ with edge lengths $\ell_{\it ij}$, $\ell_{\it jk}$, and $\ell_{\it ki}$. In euclidean geometry we calculate $\alpha^i_{\it jk}$ using the half-angle formula
 \[\tan\left(\frac{ \alpha_{\it jk}^i}{2}\right) = \sqrt{\frac
@@ -395,6 +396,7 @@ d^2E^{\rm euc}(\lambda, u)&=&\frac{1}{2}\sum_{\it ij \in \bar E} \cot  \alpha_{\
 \end{eqnarray*}
 
 \subsection{Hyperbolic version}
+\label{sec:hyperbolic_fuctional}
 
 For the hyperbolic case $\lambda$ and $\tilde\lambda$ are defined as before. We define hyperbolic edge lengths as 
 \begin{equation}
@@ -436,6 +438,7 @@ d^2E^{\rm hyp}(\lambda, u)
 \end{eqnarray*}
 
 \subsection{Spherical version}
+\label{sec:spherical_fuctional}
 We define new spherical edge lengths as 
 \begin{equation}
 \ell^{\rm sph}_{\it ij} := 2\arcsin(\tilde \ell_{\it ij}).\label{eq:spherical_lengths}
@@ -860,7 +863,7 @@ Two lattices are equivalent if their complex edge ratios $\tau = \frac{\omega_1}
 In this section we describe how to use discrete conformal maps to find analog constructions for discrete cyclic tori, see, e.g., Figure~\ref{fig:intro_uniformization}, middle. 
 We show how to find conformally equivalent flat tori and their corresponding lattices for given polyhedral cyclic tori.
 
-Section~\ref{sec:tori:schottky} introduces the discrete uniformization of tori given by Schottky data, i.e., a group of loxodromic transformations together with a set of circles in $\Chat$. 
+Section~\ref{sec:tori_schottky} introduces the discrete uniformization of tori given by Schottky data, i.e., a group of loxodromic transformations together with a set of circles in $\Chat$. 
 In Section~\ref{sec:discrete_algebraic_curves} we treat tori given as algebraic curves, i.e., elliptic curves. 
 We use elliptic curves to gain insight into the convergence behavior of discrete conformal maps in Section~\ref{sec:numerical_convergence}.
 In the last Section~\ref{sec:wente} we investigate the behavior of discrete conformal maps on the discretization of a conformal immersion of the Wente torus.
@@ -885,7 +888,7 @@ We solve Problem~\ref{prob:total_angles} to find a euclidean flat metric $\tilde
 Once we have a solution we can construct the universal cover of $\Sigma$ by laying out the faces into the plane, see Figure~\ref{fig:torus_cyclic}. We construct the uniformizing group, i.e., the group of translations, using an analogous euclidean procedure as described for surfaces of higher genus in Section~\ref{sec:higher_genus}.
 
 \subsection{Tori given by Schottky data}
-\label{sec:tori:schottky}
+\label{sec:tori_schottky}
 \todo{Include the explicit example from Boris.}
 \begin{figure}
 \centering
@@ -1183,7 +1186,7 @@ We normalize the group such that the intersection of the axes is the origin (bot
 
 In this section we describe how to calculate Fuchsian groups and corresponding fundamental domains for a given surface.
 
-Let $R$ be a Riemann surface and let $T=(V, E, F)$ be a discretization of $R$ with vertices $v\in V$, edges $e\in E$, and faces $f\in F$. Let $\lcr_R E\to \R^+$ be the euclidean discrete conformal structure of $T$ and $\tilde l:E\to \R^+$ a realization. Let $u:V\to \R$ be the minimizer of the hyperbolic functional~\ref{eq:hyperbolic_fuctional} for $\tilde l$. Then $l:E \to \R^+, e_{\it ij}\mapsto 2\arsinh(\tilde l(e_{\it ij})\exp\{\frac{1}{2}(u_i+u_j)\})$ is the unique hyperbolic metric without cone singularities that is by definition conformally equivalent to~$\tilde l$, see Section~\ref{sec:discr-conf-equiv}.
+Let $R$ be a Riemann surface and let $T=(V, E, F)$ be a discretization of $R$ with vertices $v\in V$, edges $e\in E$, and faces $f\in F$. Let $\lcr_R E\to \R^+$ be the euclidean discrete conformal structure of $T$ and $\tilde l:E\to \R^+$ a realization. Let $u:V\to \R$ be the minimizer of the hyperbolic functional, see Section~\ref{sec:hyperbolic_fuctional}, for $\tilde l$. Then $l:E \to \R^+, e_{\it ij}\mapsto 2\arsinh(\tilde l(e_{\it ij})\exp\{\frac{1}{2}(u_i+u_j)\})$ is the unique hyperbolic metric without cone singularities that is by definition conformally equivalent to~$\tilde l$, see Section~\ref{sec:discr-conf-equiv}.
 
 For $l$ we create a simply-connected realization by breadth-first enumeration of the triangles of $T$. As a different approach one could use a shortest-path scheme as described in \cite{EricksonH02}.  The resulting domain has boundary edges and vertices. Each boundary edge is identified with a unique partner. Each boundary vertex is identified with one or more other vertices. On the surface the boundary of the domain corresponds to a connected system of loops around surface handles, see, e.g., Figure~\ref{fig:lawson_embedding} (left).
 
@@ -1483,6 +1486,7 @@ The surface depicted in Figure~\ref{fig:lawson_squares}, left, is conformally eq
 
 
 \subsection{From Schottky to Fuchsian uniformization}
+\label{sec:schottky}
 
 \begin{figure}
 \centering

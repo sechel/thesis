@@ -6,17 +6,17 @@
 
 \begin{figure}
 \centering
-\includegraphics[width=1.0\linewidth]{conformllab/conformallab.png}
+\includegraphics[width=1.0\linewidth]{conformllab/conformallab.pdf}
 \caption{The uiser interface window of {\sc ConformalLab}.}
 \label{fig:conformal_window}
 \end{figure}
 
 This chapter enables the reader to reproduce examples contained in this work
-that involve uniformization of Riemann surfaces, see
-Chapter~\ref{chp:conformal_examples}, and applications of conformal mappings of
+that involve discrete uniformization of Riemann surfaces, see
+Chapter~\ref{chp:uniformization}, and applications of conformal mappings of
 Part~\ref{part:applications}. The author has written {\sc Java} software, {\sc
 ConformalLab}, to calculate the corresponding data.  The software and the data
-is included on the accompanying CD. 
+is included on the accompanying CD, see also Section~\ref{chp:cd_content}. 
 
 {\sc ConformalLab} is designed to be used via a graphical user interface, see
 Figure~\ref{fig:conformal_window}. To store resulting data an XML format is
@@ -32,7 +32,7 @@ discrete surfaces.
 \section{XML data format}
 \label{sec:conformal_data}
 To store and process data {\sc ConformalLab} uses an {\sc XML} data format.
-All examples presented in Chapter~\ref{chp:conformal_examples} are stored in
+All examples presented in Chapter~\ref{chp:uniformization} are stored in
 this format.  All XML data is contained in the XML namespace {\tt
 http://www.varylab.com/conformallab/types}.
 
@@ -40,7 +40,7 @@ http://www.varylab.com/conformallab/types}.
 {\bf Schottky data} 
 
 A Riemann surface can be given by Schottky data, see
-Section~\ref{sec:schottky_examples}. An example is shown in
+Sections~\ref{sec:tori_schottky} and~\ref{sec:schottky}. An example is shown in
 Listing~\ref{lst:schottky_xml}. {\tt SchottkyData} can include one or more {\tt
 SchottkyGenerator}s. A {\tt SchottkyGenerator} defines fix points $A$ and
 $B$, the complex number $\mu$, and a {\tt Circle}. This circle is required to
@@ -64,7 +64,7 @@ numbers=none, language=XML, captionpos=b]
 {\bf Hyperelliptic data} 
 
 {\tt HyperEllipticAlgebraicCurve}s as used in the examples of
-Section~\ref{sec:examples_elliptic} and \ref{sec:examples_hyperelliptic} are
+Section~\ref{sec:discrete_algebraic_curves} and \ref{sec:hyperelliptic} are
 given by the location of their branch points in the complex plane. All points
 must be distinct. Listing~\ref{lst:hyperelliptic_xml} shows the XML
 representation of an elliptic algebraic curve defining a Riemann surface of
@@ -202,12 +202,12 @@ A way of defining a discrete Riemann surface is to specify its discrete metric.
 A {\tt DiscreteMetric} defines non-oriented {\tt MetricEdges} and their
 lengths. {\tt MetricTriangles} are glues along those edges. All triangles are
 oriented by the order of edges defined by attributes {\tt edge1}, {\tt edge2},
-and {\tt edge3} respectively. By that we can ony encode oriented discrete
-Riemann surfaces using a {\tt DiscreteMetric}.  A simple example featurering a
+and {\tt edge3} respectively. By that we can only encode oriented discrete
+Riemann surfaces using a {\tt DiscreteMetric}.  A simple example featuring a
 Wente torus is shows in Listing~\ref{lst:discretemetric_xml}.
 
-\begin{lstlisting}[label=lst:discretemetric_xml, caption={A wente torus given by a discrete metric. Vertices are given implictly
-by following the order of triangle glueings.}, numbers=none, language=XML, captionpos=b]
+\begin{lstlisting}[label=lst:discretemetric_xml, caption={
+A Wente torus given by a discrete metric. Vertices are given implicitly by following the order of triangle glueing.}, numbers=none, language=XML, captionpos=b]
 <DiscreteMetric name="Wente Torus">
 	<MetricEdge length="1.0" index="0"/>
 	<MetricEdge length="1.0" index="1"/>
@@ -221,8 +221,8 @@ by following the order of triangle glueings.}, numbers=none, language=XML, capti
 
 Each of the data nodes as described above can appear in an element of type {\tt
 ConformalDataList}. A typical XML file representing the data of an example of
-Chapter~\ref{chp:conformal_examples} contains input data, e.g. {\tt
-SchottkyData} and {\tt DiscreteMetric}, as well as the resulting ouput
+Chapter~\ref{chp:uniformization} contains input data, e.g. {\tt
+SchottkyData} and {\tt DiscreteMetric}, as well as the resulting output
 embedding and uniformization data represented as {\tt HalfedgeEmbedding} and
 {\tt UniformizationData}.
 
@@ -255,7 +255,7 @@ embedding and uniformization data represented as {\tt HalfedgeEmbedding} and
 \end{lstlisting}
 
 \section{Uniformization and conformal mappings} \label{sec:conformallab_ui} The
-user interface of {\sc ConformalLab} is devided into panels which serve
+user interface of {\sc ConformalLab} is divided into panels which serve
 separate purposes in the workflow of performing experiments with discrete
 Riemann surfaces and conformal mappings.
 
@@ -264,7 +264,7 @@ Riemann surfaces and conformal mappings.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.35\linewidth]{conformllab/conformal_data.png}
+\includegraphics[width=0.35\linewidth]{conformllab/conformal_data.pdf}
 \caption{Data import and export interface works with XML data files as described in 
 Section~\ref{sec:conformal_data}.}
 \label{fig:data_interface}
@@ -272,10 +272,10 @@ Section~\ref{sec:conformal_data}.}
 
 \begin{figure}
 \resizebox{\textwidth}{!}{
-\includegraphics[width=0.7\linewidth]{conformllab/visualization.png}
+\includegraphics[width=0.7\linewidth]{conformllab/visualization.pdf}
 }
 \caption{Visualization interface. It shows the domain of parameterization for euclidean and hyperbolic geometry. 
-For hyperbolic images Klein, Poinar\'e, and Halfplane models are supported.}
+For hyperbolic images the Klein model, Poinar\'e disk model, and the half-plane model are supported.}
 \label{fig:visualization_interfaces}
 \end{figure}
 
@@ -296,22 +296,22 @@ If suitable boundary identification is given a uniformizing group is calculated 
 {\bf Hyperelliptic curves}
 
 The hyperelliptic curve panel (Figure~\ref{fig:conformal_main_generators} right-top) is used to create branched triangulations of the doubly covered sphere.
-Hyperelliptic curves are defined vie their branch points, see Section~\ref{sec:branched_coverings} of Chapter~\ref{chp:conformal_examples}.
+Hyperelliptic curves are defined vie their branch points, see Section~\ref{sec:hyperelliptic} of Chapter~\ref{chp:uniformization}.
 The user can add branch points by double-clicking in the graph paper view.
 Double-clicking an existing point brings up a coordinate editor. 
 The lower section of the panel defines parameters of mesh creation. 
-The user can choose to add extra equally disctributed random points to the triangulation.
+The user can choose to add extra equally distributed random points to the triangulation.
 These points can be further optimized to form a more regular triangulation.
-The number of point equalizer iterations defines the numer of gradient decent steps in the optimization of the functional defined in Section~\ref{sec:branched_coverings}.  
-The location of the branch points can be normalized via a M{\"o}bius transformation on the sphere such that the center of mass of the points is the center of the sphere. For the details see Section~\ref{sec:branched_coverings}.
+The number of point equalizer iterations defines the number of gradient decent steps in the optimization of the functional defined in Section~\ref{sec:spherical_triangulations}.
+The location of the branch points can be normalized via a M{\"o}bius transformation on the sphere such that the center of mass of the points is the center of the sphere. For the details see Section~\ref{sec:moebius_normalization}.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.45\linewidth]{conformllab/main_interface.png}\hfill
+\includegraphics[width=0.45\linewidth]{conformllab/main_interface.pdf}\hfill
 \begin{minipage}[b]{0.5\linewidth}
-\includegraphics[width=\linewidth]{conformllab/hyperelliptic_curve.png}\\
+\includegraphics[width=\linewidth]{conformllab/hyperelliptic_curve.pdf}\\
 \vskip 0.1cm
-\includegraphics[width=\linewidth]{conformllab/schottky_modeller.png}
+\includegraphics[width=\linewidth]{conformllab/schottky_modeller.pdf}
 \end{minipage}
 \caption{The main interface of {\sc ConformalLab} (left). Hyperelliptic curve interface (right-top).
 Schottky modeler user interface (right-bottom).}
@@ -320,7 +320,7 @@ Schottky modeler user interface (right-bottom).}
 
 {\bf Schottky modeler}
 
-The Schottky modeler panel (See Figure~\ref{fig:conformal_main_generators} right-bottom) generates Schottky data for Riemann surfaces, see Section~\ref{sec:schottky_examples}. 
+The Schottky modeler panel (See Figure~\ref{fig:conformal_main_generators} right-bottom) generates Schottky data for Riemann surfaces, see Section~\ref{sec:tori_schottky} and Section~\ref{sec:schottky}. 
 
 In the graph-paper view the circles and fix points of the generators are shown and can be modified. 
 Moving a fix point of a generator transforms the corresponding circle as the image of the circle around the other fix point. 
@@ -332,9 +332,9 @@ In addition to this the number of points that discretize the circles can be give
 
 The \emph{Generate Surface} button creates a triangulated surface together with a metric calculated from the Schottky data. 
 This surface can then be uniformized via the main interface. 
-The \emph{Uniformize} button directly creates a uniformization and introduces cuts along the circles of the schottky data. 
-The corresponding fundamental domain is then bounded by the preimages of the circles and curves connecting them.
-Most of the examples of Section~\ref{sec:schottky_examples} use this fundamental domain.
+The \emph{Uniformize} button directly creates a uniformization and introduces cuts along the circles of the Schottky data. 
+The corresponding fundamental domain is then bounded by the pre-images of the circles and curves connecting them.
+The examples of Section~\ref{sec:tori_schottky} and~\ref{sec:schottky} use this fundamental domain.
 
 {\bf Main interface}
 
@@ -350,7 +350,7 @@ All other elements are hidden in normal mode.
 They can be chosen from the drop-down box at the top of the panel. 
 \emph{Petsc/Tao Numerics} selects the {\sc PETSc/TAO} C++ library, see~\cite{petsc-web-page, tao-user-ref}. 
 We use the Newton Trust Region (NTR) method as implemented by {\sc PETSc/TAO} whenever we have calculated the Hessian matrix for the corresponding energy. 
-Otherwise we use  LMVM method with default configuration. 
+Otherwise we use LMVM method with default configuration. 
 \emph{Java/MTJ Numerics} implements a version of Newtons method using the linear algebra package MTJ, see~\cite{mtj-website}. 
 We implement a backtracking line search as described in~\cite[pp.~464]{boyd2004convex}.
 
@@ -390,7 +390,7 @@ The default mode is \emph{Isometric}. In this mode boundary edges on the surface
 Here $\mathrm{round(x,y)}$ maps $x$ to the nearest multiple of $y$.
 \emph{Conformal Curvature} boundary mode defines angles via a vector field on boundary edges as described in Chapter~\ref{chp:quasiisothermic}. 
 The \emph{Circle} option creates a map to the unit circle. 
-Using this option we invoke the method described in Section~\ref{sec:disk_mapping}. 
+Using this option we invoke the method described in Sections~\ref{sec:riemann_map} and~\ref{sec:circle_domains}. 
 In \emph{Read Isometric Angles} mode the program performs conformal parameterization with isometric boundary. 
 Additionally resulting boundary angles are read into manual boundary conditions for later usage, e.g., with \emph{QuantizedAnglePeriods} boundary conditions, that modifies boundary angles as described in Section~\ref{sec:boundary}.
 
@@ -399,12 +399,12 @@ The \emph{Cones} section lets you specify automatically placed cones as introduc
 Manual boundary conditions can be specified in the \emph{Selected Nodes} section. 
 Here the currently selected vertices and edges are listed. 
 Selected vertices can have manually prescribed angles~$\theta$ or boundary modes as described above. 
-Edges can be set circular with a certain intersection angle of circum-circles, see Section~\ref{sec:multiply_connected_regions}. 
+Edges can be set circular with a certain intersection angle of circum-circles, see Section~\ref{sec:riemann_map} or Section~\ref{sec:circle_domains}. 
 The default angle is $180\degree$, i.e., the two adjacent triangles form a circular quadrilateral.
 
 The \emph{Tools} section include commands that operate on a readily computed uniformization of a surface of higher genus $g\geq 2$. 
 The \emph{Draw Curves On Surface} check box calculates, if activated, images of the edges of fundamental domains. 
-These curves are displayed on the surface, see e.g., Figure~\ref{fig:lawson_embedding_canonical} left. 
+These curves are displayed on the surface, see, e.g., Figure~\ref{fig:lawson_embedding} left. 
 The \emph{Extract Cut-Prepared} button creates a new surface as a copy of the current input data including edges of a fundamental polygon. 
 You can use this to create uniformized surfaces where the triangulation fits perfectly into the fundamental polygon. 
 The \emph{Center Selected Vertex} button applies a hyperbolic motion to the texture coordinates such that the selected vertex becomes the center of the unit disk.
@@ -423,7 +423,9 @@ If the triangulation exhibits a circle pattern face circles through vertices of 
 
 The \emph{Geometry} option is set automatically during calculation of uniformization but can be adjusted from the check box. The automatic value depends on the genus of the surface alone and may not be the correct choice. The program calculates four different fundamental domains that can be selected from the \emph{Domain} drop down see Section~\ref{sec:fundamental_domains}. If the selected geometry is \emph{Hyperbolic} you can choose the corresponding model. {\sc ConformalLab} supports visualization of \emph{Poicar\'e}, \emph{Klein}, and \emph{HalfPlane} model.
 
-The \emph{Interpolation} option lets you select how textures are interpolated on the current model, see Section~\ref{chp:projective_interpolation}. If a texture image is active the 3D visualization is updated accordingly.
+The \emph{Interpolation} option lets you select how textures are interpolated on the current model. 
+%see Section~\ref{chp:projective_interpolation}. 
+If a texture image is active the 3D visualization is updated accordingly.
 
 
 \subfilebibliography
