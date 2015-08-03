@@ -223,6 +223,7 @@ Analogously the spherical version for a spherical metric $\tilde\ell:E_{\Sigma}\
 \end{equation*}
 
 \subsection{Characterization by cross-/multi-ratios and M{\"o}bius invariance}
+\label{sec:cross-ratios}
 
 For triangulations we have an alternative characterization of conformal equivalence in terms of length-cross-ratios. For two adjacent triangles $\it ijk\in F$ and $\it jil\in F$ the length-cross-ratio of the common edge $\it ij\in E$ is defined as
 \begin{equation}
@@ -619,6 +620,7 @@ Thus the cross-ratio of the points $\infty$, $i$, $j$, and $k$ is the ratio of t
 This ratio is equal to the ratio after step 1 because there is only one scale factor involved. 
 The others are fixed to zero.
 The cross-ratio is invariant under M{\"o}bius transformation therefor the ratios agree.
+\todo{link to cross-ratio generalization}
 \end{proof}
 
 \subsection{Discrete circle domains}
@@ -855,66 +857,89 @@ We apply this procedure to a model of a bear, see Figure~\ref{fig:bear}. To crea
 Every torus is conformally equivalent to a flat torus.
 The conformal classes of flat tori can be parameterized by parallelogram lattices. 
 Two lattices are equivalent if their complex edge ratios $\tau = \frac{\omega_1}{\omega_2}$ agree.
-In this section we describe how to use discrete conformal maps to find analog constructions for discrete surfaces, see, e.g., Figure~\ref{fig:intro_uniformization}, middle.
-Section~\ref{sec:tori_general} we show how to find conformally equivalent flat tori and their corresponding lattice for a given polyhedral surface.
-Section~\ref{sec:tori:schottky} introduces the discrete uniformization of tori given by Schottky data, i.e., a group of loxodromic transformations together with a set of circles on $\Chat$. 
+In this section we describe how to use discrete conformal maps to find analog constructions for discrete cyclic tori, see, e.g., Figure~\ref{fig:intro_uniformization}, middle. 
+We show how to find conformally equivalent flat tori and their corresponding lattices for given polyhedral cyclic tori.
+
+Section~\ref{sec:tori:schottky} introduces the discrete uniformization of tori given by Schottky data, i.e., a group of loxodromic transformations together with a set of circles in $\Chat$. 
 In Section~\ref{sec:discrete_algebraic_curves} we treat tori given as algebraic curves, i.e., elliptic curves. 
 We use elliptic curves to gain insight into the convergence behavior of discrete conformal maps in Section~\ref{sec:numerical_convergence}.
 In the last Section~\ref{sec:wente} we investigate the behavior of discrete conformal maps on the discretization of a conformal immersion of the Wente torus.
 
-\subsection{Uniformization with euclidean functional}
-\label{sec:tori_general}
+\begin{figure}
+\centering
+\resizebox{0.9\textwidth}{!}{
+\includegraphics[height=5cm]{torus_cyclic/torus_cyclic_image.pdf}\quad
+\includegraphics[height=5cm]{torus_cyclic/torus_cyclic_domain.pdf}
+}
+\setstretch{0.0}{\scriptsize\tt data/torus\_cyclic/torus\_cyclic.xml} 
+\caption{
+Cyclic discrete conformal map from an embedded torus to the corresponding flat cyclic torus.
+Left: Embedding with cuts (green) and circles. 
+Right: Flat representation and universal cover with corresponding cuts and circles.
+}
+\label{fig:torus_cyclic}
+\end{figure}
 
 Let $(\Sigma, \ell)$ be a cyclic polyhedral surface with genus $1$ without boundary. 
 We solve Problem~\ref{prob:total_angles} to find a euclidean flat metric $\tilde \ell$ with $\Theta_1=2\pi$ for all $i\in V$.
-
-\begin{proposition}
-The polyhedral surface $(\Sigma, \tilde\ell)$ can be laid out to the plane with translational periods.
-\end{proposition}
-\begin{proof}
-
-\end{proof}
+Once we have a solution we can construct the universal cover of $\Sigma$ by laying out the faces into the plane, see Figure~\ref{fig:torus_cyclic}. We construct the uniformizing group, i.e., the group of translations, using an analogous euclidean procedure as described for surfaces of higher genus in Section~\ref{sec:higher_genus}.
 
 \subsection{Tori given by Schottky data}
 \label{sec:tori:schottky}
-
 \todo{Include the explicit example from Boris.}
-
 \begin{figure}
 \centering
-\resizebox{\textwidth}{!}{
-\includegraphics[height=4cm]{schottky_g1/res50_ni_image.pdf}
-\includegraphics[height=3.9cm]{schottky_g1/res50_ni_cover.pdf}
-}
-\setstretch{0.8}{\scriptsize\tt data/schottky\_g1/res40\_nonrect.xml}
 \resizebox{\textwidth}{!}{
 \includegraphics[height=4cm]{data/schottky_g1/res50_image}
 \includegraphics[height=3.9cm]{data/schottky_g1/res50_cover}
 }
 \setstretch{0.8}{\scriptsize\tt data/schottky\_g1/res50.xml} 
-\caption{Discrete Riemann surface of genus $1$ given by Schottky data (left). Universal cover and fundamental regions (right). $A=-15-2.5i$, $B=0.1-0.3i$, $\mu=-0.3$}
+\resizebox{\textwidth}{!}{
+\includegraphics[height=4cm]{schottky_g1/res50_ni_image.pdf}
+\includegraphics[height=3.9cm]{schottky_g1/res50_ni_cover.pdf}
+}
+\setstretch{0.8}{\scriptsize\tt data/schottky\_g1/res40\_nonrect.xml}
+\caption{
+Fundamental domains of triangulated Riemann surfaces of genus $1$ given by Schottky data (left). 
+Universal cover and fundamental regions (right). 
+Top: For real $\mu=0.3$ we get a rectangle fundamental lattice. 
+Bottom: $\mu=0.08+0.01i$ yields a parallelogram.
+}
 \label{fig:schottky_g1}
 \end{figure}
 
 \begin{figure} 
 \centering 
 \scalebox{1.0}{\input{figures/schottky2.pdf_t}}
-\caption{Schottky group generating a Riemann surface of genus $2$. The point
-at infinity is not contained in any of the circles. The parameters $A$ and $B$
-lie inside the cirlces by definition.} 
+\caption{
+Schottky group generating a Riemann surface of genus $2$. 
+The point at infinity is not contained in any of the circles. 
+The fixed points to the transformations $A$ and $B$ lie inside of the circles.
+} 
 \label{fig:schottky_group}
 \end{figure}
 
 Let $C_1,C'_1\ldots,C_g,C'_g$ be disjoint circles in $\hat{\C}$.
 \begin{definition} A classical Schottky group $G$ is a Kleinian group with generators $\sigma_1,\ldots,\sigma_g$ satisfying
-\[
+\begin{equation}
 \frac{\sigma_i z - B_i}{\sigma_i z - A_i} = \mu_i \frac{z - B_i}{z - A_i},
 \quad\quad\quad 0 < \left|\mu_i\right|<1,
-\]
-where $\sigma_i$ maps the exterior of $C_i$ onto the interior of $C'_i$. The points $A_i$ and $B_i$ lie inside the circles $C_i$ and $C'_i$ respectively.
+\end{equation}
+where $\sigma_i$ maps the exterior of $C_i$ onto the interior of $C'_i$. The points $A_i$ and $B_i$ lie inside the circles $C_i$ and $C'_i$ respectively, see Figure~\ref{fig:schottky_group}.
 \end{definition}
+Let $G$ be a classical Schottky group. $G$ acts discontinuous on the $\Omega:=\Chat\setminus A$. 
+Where $A$ is the limiting set of $G$, i.e., the orbits of $A_i, B_i$ under $G$.
+Then $R:=\Omega/G$ is a Riemann surface of genus~$g$.
 
-\subsection{Algebraic curves}
+We discretize the notion of Riemann surface given by Schottky data as follows.
+For each pair of circles $(C, C')$ with $\sigma(C) =C'$ we construct two polygons $p_1,\ldots,p_n$ inscribed in $C$ and $p'_1,\ldots,p'_n$ inscribed in $C'$ such that $\sigma(p_i)=p'_i$. E.g., build a regular $n$-gon $C$ and map the points by $\sigma$ onto $C'$.
+Triangulate the outside of the circles.
+Corresponding edges on $C$ and $C'$ are identified on $R$ but do not have the same length in $\Chat$.
+Corresponding edges in $\Chat$ have the same length-cross-ratio as this characterization is invariant under M\"{o}bius traformations.
+That means we have a unique function $\lcr$ defined on $R$.
+We pick a representative metric $\ell$ to feed into the variational principle and calculate the uniformization, see Section~\ref{sec:cross-ratios} and Figure~\ref{fig:schottky_g1}.
+
+\subsection{Tori given as algebraic curves}
 \label{sec:discrete_algebraic_curves}
 
 \begin{figure}
