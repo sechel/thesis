@@ -37,7 +37,7 @@ infrastructure to get the job done.
 
 This part of the thesis is the description and getting-started manual of a set of software packages
 (Berlin DDG Framework) written in the programming language {\sc Java}. They are 
-specifically designed for the creation of custom interactive software for experiments with algorithms and geometries treated within DDG. It is currently beeing used for teaching mathematical visualization courses at TU-Berlin \cite{VisMathHomepage} and for research projects within the geometry group.
+specifically designed for the creation of custom interactive software for experiments with algorithms and geometries treated within DDG. It is currently being used for teaching mathematical visualization courses at TU-Berlin \cite{VisMathHomepage} and for research projects within the geometry group.
 
 %Section~\ref{sec:related_work} gives an overview of existing software packages that have a focus similar to the DDG Framework. 
 Chapter~\ref{chp:jrworkspace} introduces the {\sc JRworkspace} library of the 
@@ -122,7 +122,7 @@ steps:
 \end{tabular}
 \end{center}
 Step 1 instantiates a plugin and initializes its default properties. In step 2 the controller 
-calles the {\tt restoreStates} method. Step 3 is the actual installation of the plug-in. 
+calls the {\tt restoreStates} method. Step 3 is the actual installation of the plug-in. 
 During runtime
 of the application the plug-in can interact with possible user interface it created during 
 installation or offer services to other plug-ins. 
@@ -221,7 +221,7 @@ implementation. For a complete API reference see the documentation on the {\sc J
 {\bf Perspective Flavor}
 
 A plug-in implementing the interface {\tt PerspectiveFlavor} provides the base for a program's user 
-interface. It implements the method {\tt getCenterComponent} that returns a AWT {\tt Conponent}
+interface. It implements the method {\tt getCenterComponent} that returns a AWT {\tt Component}
 that is placed in the main frame of the application. The main program window itself is created and
 managed by the controller.
 A reference implementation of this flavor is the {\tt SideContainerPerspective}. It layouts its content 
@@ -336,7 +336,7 @@ implementation.
 and {\tt ShrinkPanels} is used. The tool bar and 
 menu bar is created by the aggregators described in Section~\ref{sec:reference_implementation}. This application
 uses a set of predefined user interface features and virtual reality components. In a custom application the developer 
-usually registeres only a subset of these featurs.}
+usually registers only a subset of these features.}
 \label{fig:jrworkspace_jreality}
 \end{figure}
 
