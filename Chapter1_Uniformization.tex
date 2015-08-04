@@ -1156,10 +1156,35 @@ Tests with other subdivision configurations suggest that the constant $\alpha$ i
 
 In this section we describe how to calculate uniformizations of cyclic polyhedral surfaces of higher $g>1$ genus. 
 In particular we show how to construct the corresponding Fuchsian groups and fundamental domains in Section~\ref{sec:fundamental_domains}.
-In Section~\ref{sec:hyperelliptic} we treat the special class of hyperelliptic surfaces, i.e., surfaces that are conformally equivalent to a 2-sheeted branched cover of~$\Chat$.
-In Section~\ref{sec:lawson_uniformization} we construct uniformizations of Lawson's minimal surface of genus $2$. We present different conformally equivalent realizations and the corresponding uniformizations together with fundamental domains.
 We revisit surfaces given by Schottky data in Section~\ref{sec:schottky} for genus $g>1$, see also Section~\ref{sec:tori_schottky} for Schottky uniformizations of tori.
 Finally, in Section~\ref{sec:hyperbolic_circle_domain} we construct hyperbolic circle domains analogously to the constructions presented in Section~\ref{sec:circle_domains} for topological spheres or disks.
+
+\subsection{Notation}
+
+Let $R$ be a Riemann surface of genus $g>1$. 
+Then $R$ has a representation as the quotient of the hyperbolic plane modulo a discrete group of hyperbolic isometries $G$
+\begin{equation}
+R=\mathbb{H} / G.
+\end{equation}
+Typically the group $G$ is presented a set of generating elements $A,B,C,D,\ldots$ of hyperbolic isometries together with a relation 
+\begin{equation}
+P(A,B,C,D,\ldots)=1
+\end{equation}
+where $P$ is a product of elements and inverse elements of $G$. 
+$G$ is called a Fuchsian group if it contains only hyperbolic elements.
+In this section we denote the inverse elements of an element $A\in G$ as 
+\begin{equation}
+A':=A^{-1}\in G.
+\end{equation}
+A fundamental domain of $G$ is a simply connected region $D$ of the hyperbolic plane such that $D$ tiles hyperbolic space under the group action of $G$.
+A fundamental polygon of $G$ is a fundamental domain with polygonal boundary, i.e., the boundary consists of geodesic edges.
+Each edge $a$ has a partner edge $a'$ and a corresponding element $A\in G$ such that 
+\begin{equation}
+A\cdot a=a'.
+\end{equation}
+That means an edge $a$ is mapped to $a'$ by the isometry $A$. Conversely we have $A'\cdot a'=a$.
+We denote the ordering of edges in a fundamental polygons in a counter-clockwise fashion. 
+A polygon $abcda'b'c'd'$ together with the corresponding group elements $A$, $B$, $C$, and $D$ that tile the hyperbolic plane gives rise to a Fuchsian group with relation $AB'CD'A'BC'D=1$.
 
 \subsection{Computation of fundamental domains and Fuchsian groups}
 \label{sec:fundamental_domains}
@@ -1297,7 +1322,7 @@ See Figure~\ref{fig:keen_polygon} for a genus $2$ instance of this algorithm.
 
 \begin{figure}
 \centering
-\resizebox{0.5\textwidth}{!} {
+\resizebox{0.4\textwidth}{!} {
 \input{data/algorithm/cutCanonical.pdf_t}
 }
 \caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=A'C_i$. Their inverses $C_i'$ become $\hat{C_i}'=C_i'A$}
@@ -1362,18 +1387,72 @@ Let the order of sides in the polygon be $a' \cdots b \cdots a \cdots$. The corr
 Choose the one with the lowest number of products, see Figure~\ref{fig:cut-and-paste-motion}. If the order of sides in the polygon is $a' \cdots a \cdots b \cdots$ we can however not perform the operation, the resulting domain would be disconnected. We therefor define the cost for such an operation as infinite. In step 2 we minimize over all possible transformations that move a selected element into the sequence. We do not show here that the cost is always a finite during the algorithm and call this algorithm heuristic due to this fact. Depending on the sort algorithm we use in step 3 we have the freedom to choose between the motion of the inverse elements or their partners. In our examples this gives enough freedom to create all oppositely identified fundamental domains. See Figure~\ref{fig:opposite_algorithm} for an example of this algorithm.
 
 
+\subsection{From Schottky to Fuchsian uniformization}
+\label{sec:schottky}
 
-\subsection{Uniformization of hyperelliptic surfaces}
+\begin{figure}
+\centering
+\resizebox{\textwidth}{!}{
+\reflectbox{\includegraphics[width=10cm, angle=90]{schottky_g3/genus3_image2.pdf}}
+\includegraphics[width=10cm, draft=true]{schottky_g3/genus3_domain2.pdf}
+}
+\setstretch{0.0}{\scriptsize\tt data/schottky\_g3/schottky.xml} 
+\caption{
+Left: Discrete version of a Riemann surface of genus $3$ given by Schottky data.
+Circles with the same color are identified.
+The Schottky group elements that map the blue and green circles onto each other map the exterior of the source circle onto the interior of the image circle and vice-versa.
+The map corresponding to the purple circle is defined to map the interior of the outer circle to the interior of the inner circle. Stereographically projected image, the randomly chosen extra points of the triangulation are chosen such that the triangulation is close to regular where possible.
+\\
+Right: Fuchsian uniformization and universal cover in the Poicar\'e model of the hyperbolic plane. The boundary of the fundamental domain consists of  the Schottky circles and short paths connecting them (grey edges).}
+\end{figure}
+
+\subsection{Hyperbolic circle domains}
+\label{sec:hyperbolic_circle_domain}
+
+\begin{figure}
+\centering
+\resizebox{\textwidth}{!}{
+\raisebox{0.75cm}{
+\includegraphics[height=3.5cm]{circle_domain_hyperbolic/brezel_three_holes_edges.pdf}
+}
+\includegraphics[height=5cm, draft=true]{circle_domain_hyperbolic/brezel_three_holes_domain.pdf}
+}
+\setstretch{0.0}{\scriptsize\tt data/circle\_domain\_hyperbolic/brezel\_\{one/two/three\}\_holes.xml}
+\caption{
+Uniformization of a genus $2$ surface with three boundary components. 
+The three holes are filled and triangulated (highlighted edges) to visualize the triangulation used during calculation, see Section~\ref{sec:circle_domains}.
+}
+\label{fig:hyperbolic_circle_domain}
+\end{figure}
+
+
+\section{Uniformization of hyperelliptic surfaces}
 \label{sec:hyperelliptic}
 
+A hyperelliptic surface is a Riemann surface of genus $g>1$ that has a realization as a 2-sheeted branched cover of $\Chat$.
+Any Riemann surface of genus $2$ is hyperelliptic.
+In this section we construct uniformizations of discrete versions of hyperelliptic Riemann surfaces.
+Firstly, we introduce fundamental domains specially designed to match the hyperelliptic structure of the surfaces, i.e., oppositely identified polygons with a branch point at the vertex.
+These objects are the natural generalizations of the euclidean lattices in the elliptic case, see Section~\ref{sec:tori}.
+Secondly, we conjecture a characterization of hyperelliptic Riemann surfaces in terms of the geometry of the fundamental group. 
+We check this characterization with a specifically designed hyperelliptic surface of genus $3$.
+In Section~\ref{sec:lawson_uniformization} we construct uniformizations of Lawson's minimal surface of genus $2$. We present different conformally equivalent realizations and the corresponding uniformizations together with fundamental domains.
 
-
-\subsubsection{Fundamental domains domains for hyperelliptic surfaces}
+\subsection{Fundamental domains domains for hyperelliptic surfaces}
 \label{sec:hyperelliptic_domain}
+
+\begin{conjecture}
+Let $R$ be a Riemann surface and let $G$ be its uniformizing group. Let $A_1,\ldots,A_g$ be generators of $G$ with the relation $A_1A_2\ldots A'_1A'_2\ldots=1$. Then the following statements are equivalent:
+\begin{compactitem}
+\item $R$ is hyperelliptic.
+\item The axes of $A_i$ $i=1\ldots g$ meet in a common point $p_0$.
+\end{compactitem}
+\end{conjecture}
+Note that the point $p_0$ is a branch point of the corresponding hyperelliptic algebraic curve.
 
 \todo{SSE: speak about the opposite sides domain where the vertex, the center, and the mid-points of edges are branch points}
 
-\subsubsection{Hyperelliptic vs. non-hyperelliptic curves}
+\subsection{Hyperelliptic vs. non-hyperelliptic curves}
 \label{sec:non-hyperelliptic}
 
 \begin{figure}
@@ -1395,16 +1474,17 @@ Consider the elliptic-hyperelliptic surface that is constructed as follows. Take
 
 On both copies of this torus pick four points $\hat\lambda_1,\ldots,\hat\lambda_4$ and $\tilde\lambda_1,\ldots,\tilde\lambda_4$ in the center of the faces of the tetrahedron belonging to one of the sheets of the elliptic surface. On $\hat T$ choose paths connecting the pairs $(\hat\lambda_1,\hat\lambda_2)$ and $(\hat\lambda_3,\hat\lambda_4)$. On $\tilde T$ choose corresponding paths. Cut $\hat T$ and $\tilde T$ along theses paths and glue corresponding sheets transversally. The resulting surface $T$ is a four sheeted cover of the tetrahedron with genus $g = 3$.
 
-\begin{theorem}
+\begin{proposition}
 $T$ is a hyperelliptic Riemann surface.
+\end{proposition}
+
 \begin{proof}
 Let $e_1,\ldots,e_6$ be the edges of the generating regular tetrahedron. Consider the reflection $\sigma_i$ across a plane through the midpoint of edge $e_i$ containing the opposite edge of $e_i$.  Because of the symmetry of the tetrahedron $\sigma_i$ induces an anti-holomorphic involution on $T$. There are six involutions belonging to the edges of the tetrahedron. Let $e_i$ and $e_j$ be two opposite edges. Then $\sigma_i \circ \sigma_j$ is a holomorphic involution of $T$. Its eight fix points are the mid points of $e_i$ and $e_j$.
 \end{proof}
-\end{theorem}
 
 Figure~\ref{fig:non-hyperelliptic} (left) shows a uniformization of $T$ with an oppositely identified fundamental polygon. The surface is hyperelliptic, thus the generators axes meet in a common point. Disturbing the symmetry a little, e.g., by moving all points of the surface by some random offset destroys the hyperellipticity of the surface, see Figure~\ref{fig:non-hyperelliptic} (right).
 
-\subsubsection{Mapping an embedded hyperelliptic surface to $\Chat$}
+\subsection{Mapping an embedded hyperelliptic surface to $\Chat$}
 
 \begin{figure} 
 \centering
@@ -1420,7 +1500,7 @@ Its fixed points correspond to the branch points of the corresponding hyperellip
 The involution corresponds to the hyperelliptic involution of the curve.  
 Left: Surface and branch points with texture after Mercator projection using the purple
 branch points as poles. 
-Right: A closeup of the stereographic image of one pair of red and blue branch points (right).
+Right: A closeup of the stereographic projection of one pair of red and blue branch points.
 } 
 \label{fig:genus2_branched} 
 \end{figure}
@@ -1548,46 +1628,6 @@ uniformization and fundamental domain (right). Grey circles correspond to the br
 \end{figure}
 
 The surface depicted in Figure~\ref{fig:lawson_squares}, left, is conformally equivalent to Lawson's surface. We calculate a uniformization using the discrete metric defined by the edge lengths of the squares and its diagonals. An adapted fundamental domain for this square-tiled translational surface arranges all squares around a single vertex, see Figure~\ref{fig:lawson_squares}, right. By comparison with Figure~\ref{fig:lawson_curve}, bottom, we see that the vertices in the center of the squares correspond to the branch points of the hyperelliptic curve representation of the surface. The black, grey, and white vertices correspond to the north and south pole of hyperelliptic realization.
-
-
-\subsection{From Schottky to Fuchsian uniformization}
-\label{sec:schottky}
-
-\begin{figure}
-\centering
-\resizebox{\textwidth}{!}{
-\reflectbox{\includegraphics[width=10cm, angle=90]{schottky_g3/genus3_image2.pdf}}
-\includegraphics[width=10cm]{schottky_g3/genus3_domain2.pdf}
-}
-\setstretch{0.0}{\scriptsize\tt data/schottky\_g3/schottky.xml} 
-\caption{
-Left: Discrete version of a Riemann surface of genus $3$ given by Schottky data.
-Circles with the same color are identified.
-The Schottky group elements that map the blue and green circles onto each other map the exterior of the source circle onto the interior of the image circle and vice-versa.
-The map corresponding to the purple circle is defined to map the interior of the outer circle to the interior of the inner circle. Stereographically projected image, the randomly chosen extra points of the triangulation are chosen such that the triangulation is close to regular where possible.
-\\
-Right: Fuchsian uniformization and universal cover in the Poicar\'e model of the hyperbolic plane. The boundary of the fundamental domain consists of  the Schottky circles and short paths connecting them (grey edges).}
-\end{figure}
-
-\subsection{Hyperbolic circle domains}
-\label{sec:hyperbolic_circle_domain}
-
-\begin{figure}
-\centering
-\resizebox{\textwidth}{!}{
-\raisebox{0.75cm}{
-\includegraphics[height=3.5cm]{circle_domain_hyperbolic/brezel_three_holes_edges.pdf}
-}
-\includegraphics[height=5cm]{circle_domain_hyperbolic/brezel_three_holes_domain.pdf}
-}
-\setstretch{0.0}{\scriptsize\tt data/circle\_domain\_hyperbolic/brezel\_\{one/two/three\}\_holes.xml}
-\caption{
-Uniformization of a genus $2$ surface with three boundary components. 
-The three holes are filled and triangulated (highlighted edges) to visualize the triangulation used during calculation, see Section~\ref{sec:circle_domains}.
-}
-\label{fig:hyperbolic_circle_domain}
-\end{figure}
-
 
 \subfilebibliography
 
