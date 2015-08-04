@@ -632,9 +632,9 @@ The cross-ratio is invariant under M{\"o}bius transformation therefor the ratios
 \begin{figure}
 \centering
 \resizebox{\textwidth}{!}{
-\includegraphics[width=0.5\textwidth, draft = false]{circle_domain_euclidean/three_holes_image.pdf}
-\includegraphics[width=0.5\textwidth, draft = false]{circle_domain_euclidean/three_holes_domain.pdf}
-\includegraphics[width=0.5\textwidth, draft = false]{circle_domain_euclidean/three_holes_map.pdf}
+\includegraphics[width=0.5\textwidth]{circle_domain_euclidean/three_holes_image.pdf}
+\includegraphics[width=0.5\textwidth]{circle_domain_euclidean/three_holes_domain.pdf}
+\includegraphics[width=0.5\textwidth]{circle_domain_euclidean/three_holes_map.pdf}
 }
 \setstretch{0.8}{\scriptsize\tt data/circle\_domain\_euclidean/three\_holes.xml}
 \caption{
@@ -866,7 +866,6 @@ We show how to find conformally equivalent flat tori and their corresponding lat
 Section~\ref{sec:tori_schottky} introduces the discrete uniformization of tori given by Schottky data, i.e., a group of loxodromic transformations together with a set of circles in $\Chat$. 
 In Section~\ref{sec:discrete_algebraic_curves} we treat tori given as algebraic curves, i.e., elliptic curves. 
 We use elliptic curves to gain insight into the convergence behavior of discrete conformal maps in Section~\ref{sec:numerical_convergence}.
-In the last Section~\ref{sec:wente} we investigate the behavior of discrete conformal maps on the discretization of a conformal immersion of the Wente torus.
 
 \begin{figure}
 \centering
@@ -886,6 +885,20 @@ Right: Flat representation and universal cover with corresponding cuts and circl
 Let $(\Sigma, \ell)$ be a cyclic polyhedral surface with genus $1$ without boundary. 
 We solve Problem~\ref{prob:total_angles} to find a euclidean flat metric $\tilde \ell$ with $\Theta_1=2\pi$ for all $i\in V$.
 Once we have a solution we can construct the universal cover of $\Sigma$ by laying out the faces into the plane, see Figure~\ref{fig:torus_cyclic}. We construct the uniformizing group, i.e., the group of translations, using an analogous euclidean procedure as described for surfaces of higher genus in Section~\ref{sec:higher_genus}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.48\textwidth,valign=c]{wente_embedding/wente_1240_fundamental.pdf}\hfill
+\includegraphics[width=0.48\textwidth,valign=c]{wente_embedding/wente_1240_domain.pdf}
+\setstretch{0.5}{\scriptsize\tt data/wente\_embedding/wente\_1240.xml}
+\caption{Uniformization of the Wente torus. Discretely sampled conformal immersion (left), domain of uniformization (right). Orange curves indicates the lattice of the flat torus in the domain. The faces of the polyhedral surface are approximate conformal squares. In the discrete uniformization their images are approximately squares, as it should be.}
+\label{fig:wente_torus_embedded}
+\end{figure}
+
+As a first test we investigate the behavior of discrete conformal maps on the discretization of a conformal immersion of the Wente torus \cite{wente1986}, Figure~\ref{fig:wente_torus_embedded}. 
+The modulus of the Wente torus has been calculated reliably before \cite{Heil95} as $\tau \approx 0.41300+0.91073i$.
+We calculate a the modulus of the discretized surface as $\tilde \tau \approx 0.41341+0.91061i$, see Figure~\ref{fig:wente_torus_embedded}.
+
 
 \subsection{Tori given by Schottky data}
 \label{sec:tori_schottky}
@@ -938,7 +951,7 @@ We discretize the notion of Riemann surface given by Schottky data as follows.
 For each pair of circles $(C, C')$ with $\sigma(C) =C'$ we construct two polygons $p_1,\ldots,p_n$ inscribed in $C$ and $p'_1,\ldots,p'_n$ inscribed in $C'$ such that $\sigma(p_i)=p'_i$. E.g., build a regular $n$-gon $C$ and map the points by $\sigma$ onto $C'$.
 Triangulate the outside of the circles.
 Corresponding edges on $C$ and $C'$ are identified on $R$ but do not have the same length in $\Chat$.
-Corresponding edges in $\Chat$ have the same length-cross-ratio as this characterization is invariant under M\"{o}bius traformations.
+Corresponding edges in $\Chat$ have the same length-cross-ratio as this characterization is invariant under M\"{o}bius transformations.
 That means we have a unique function $\lcr$ defined on $R$.
 We pick a representative metric $\ell$ to feed into the variational principle and calculate the uniformization, see Section~\ref{sec:cross-ratios} and Figure~\ref{fig:schottky_g1}.
 
@@ -983,15 +996,16 @@ We start with the branch data $\lambda_1,\ldots,\lambda_{4}$ and create a triang
 \begin{figure}
 \centering
 \resizebox{\textwidth}{!}{
-\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_domain.pdf}
-\includegraphics[height=4.5cm]{wente_uniform/wente_uniform_image.pdf}
+\includegraphics[height=4.5cm]{elliptic_tetrahedron_uniform/tetrahedron_uniform_domain.pdf}
+\includegraphics[height=4.5cm]{elliptic_tetrahedron_uniform/tetrahedron_uniform_image.pdf}
 }
-\setstretch{0.8}{\scriptsize\tt data/wente\_uniform/wente\_uniform\_branched.xml}
+\setstretch{0.8}{\scriptsize\tt data/elliptic\_tetrahedron\_uniform/tetrahedron\_uniform\_branched.xml}
 \caption{
 Map from the torus $\tau=\frac{1}{2}+\frac{\sqrt 3}{2}i$ to $\Chat$. 
 Left: Regular subdivision of the elliptic lattice. 
 Right: Two-sheeted image of the map, both sheets coincide due to the regular subdivision. 
 Red point correspond to the four branch points under stereographic projection.
+On $\Chat$ the branch points have the symmetry of a tetrahedron.
 } 
 \label{fig:wente_elliptic}
 \end{figure}
@@ -1113,18 +1127,6 @@ Similar results can be obtained using the quality measures $\max_e \{Q_{\lcr}(e)
 
 The results from these two experiments assert that there is a exponential dependence of the discretization error on the number of points if a certain quality of the mesh is met. 
 Tests with other subdivision configurations suggest that the constant $\alpha$ is not universal.
-
-\subsection{Wente torus, conformal immersion}
-\label{sec:wente}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.48\textwidth,valign=c]{wente_embedding/wente_1240_fundamental.pdf}\hfill
-\includegraphics[width=0.48\textwidth,valign=c]{wente_embedding/wente_1240_domain.pdf}
-\setstretch{0.5}{\scriptsize\tt data/wente\_embedding/wente\_1240.xml}
-\caption{Uniformization of the Wente torus. Discretely sampled conformal immersion (left), domain of uniformization (right). Orange curves indicates the lattice of the flat torus in the domain. The faces of the polyhedral surface are approximate conformal squares. In the discrete uniformization their images are approximately squares, as it should be.}
-\end{figure}
-
 
 \section{Uniformization of surfaces of higher genus}
 \label{sec:higher_genus}
