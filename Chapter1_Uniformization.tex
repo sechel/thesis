@@ -328,8 +328,8 @@ We consider three functionals defined on the triangulation $\tilde \Sigma$:
 	E^{\rm hyp}(\lambda,u) &\to& \R\\
 	E^{\rm sph}(\lambda,u) &\to& \R.
 \end{eqnarray*}
-By $\lambda, u$ we mean the vector of all $\lambda_{\it ij}$ for $\it ij \in E$ and $u_i$ for all $i\in V$.
-In the functional we treat all $u_i$ $i\in V$ and all $\lambda_{\it ij}$ $\ij \in E_1$ as free variables. The values for $\lambda_{\it ij}$ with $\it ij\in E_0$ are fixed and are given by Equation~\ref{eq:lambda_def}. By allowing the $\lambda$s in $E_1$ to be variable the critical point of each of the functionals has a circular quadrilateral at each edge $\it ij\in E_1$, see, e.g., Equation~\ref{eq:lambda_deriv_euc}.
+By $\lambda, u$ we mean the vector of all $\lambda_{\it ij}$ for $\it ij \in E_1$ and $u_i$ for all $i\in V$, i.e., $(\lambda, u)\in \R^{\# E_1}\times\R^{\#V}$.
+We treat all $u_i$ with $i\in V$ and all $\lambda_{\it ij}$ $\ij \in E_1$ as free variables. The values for $\lambda_{\it ij}$ with $\it ij\in E_0$ are fixed and are given by Equation~\ref{eq:lambda_def}. By allowing the $\lambda$s in $E_1$ to be variable the critical point of each of the functionals has a circular quadrilateral at each edge $\it ij\in E_1$, see, e.g., Equation~\ref{eq:lambda_deriv_euc}.
 
 The functionals can be generically defined to be
 \begin{definition}{Generic functional}
@@ -1143,20 +1143,23 @@ Tests with other subdivision configurations suggest that the constant $\alpha$ i
 \label{fig:embedded_genus_3}
 \end{figure}
 
-\begin{figure}
-\centering
-\resizebox{0.8\textwidth}{!}{
-\includegraphics[height=10cm]{genus5/genus5.pdf}
-\includegraphics[height=10cm]{genus5/fundamental.pdf}
-}\\
-\setstretch{0.8}{\scriptsize\tt data/genus5/data.xml}
-\caption{An embedded triangulated surface of genus $5$ (left). Discrete uniformization and fundamental polygon with  group generators in the Poincar\'e disk (right).}
-\label{fig:embedded_genus_5}
-\end{figure}
+%\begin{figure}
+%\centering
+%\resizebox{0.8\textwidth}{!}{
+%\includegraphics[height=10cm]{genus5/genus5.pdf}
+%\includegraphics[height=10cm]{genus5/fundamental.pdf}
+%}\\
+%\setstretch{0.8}{\scriptsize\tt data/genus5/data.xml}
+%\caption{An embedded triangulated surface of genus $5$ (left). Discrete uniformization and fundamental polygon with  group generators in the Poincar\'e disk (right).}
+%\label{fig:embedded_genus_5}
+%\end{figure}
 
-
-
-
+In this section we describe how to calculate uniformizations of cyclic polyhedral surfaces of higher $g>1$ genus. 
+In particular we show how to construct the corresponding Fuchsian groups and fundamental domains in Section~\ref{sec:fundamental_domains}.
+In Section~\ref{sec:hyperelliptic} we treat the special class of hyperelliptic surfaces, i.e., surfaces that are conformally equivalent to a 2-sheeted branched cover of~$\Chat$.
+In Section~\ref{sec:lawson_uniformization} we construct uniformizations of Lawson's minimal surface of genus $2$. We present different conformally equivalent realizations and the corresponding uniformizations together with fundamental domains.
+We revisit surfaces given by Schottky data in Section~\ref{sec:schottky} for genus $g>1$, see also Section~\ref{sec:tori_schottky} for Schottky uniformizations of tori.
+Finally, in Section~\ref{sec:hyperbolic_circle_domain} we construct hyperbolic circle domains analogously to the constructions presented in Section~\ref{sec:circle_domains} for topological spheres or disks.
 
 \subsection{Computation of fundamental domains and Fuchsian groups}
 \label{sec:fundamental_domains}
@@ -1179,28 +1182,58 @@ Tests with other subdivision configurations suggest that the constant $\alpha$ i
 \caption{
 Creating a fundamental polygon of a hyperelliptic surface:
 Realizing a hyperbolic metric of a discrete surface (upper-left) creates a fundamental region with polygonal boundary.
-Straighten the edges between vertices of the cut-graph (points) creates a polygon with geodesic edges (upper-right and middle-left).
+Straighten the edges between vertices of the cut-graph (red points) creates a polygon with geodesic edges (upper-right and middle-left).
 Cut-and-paste operations lead to a fundamental polygon with only one vertex and opposite sides identified, all vertices are equivalent under the group action (middle-right).
 We normalize the group such that the intersection of the axes is the origin (bottom).
 }
 \label{fig:fundamental_polygon_algorithm}
 \end{figure}
 
-In this section we describe how to calculate Fuchsian groups and corresponding fundamental domains for a given surface.
+Let $R$ be a Riemann surface and let $\Sigma=(V_{\Sigma}, E_{\Sigma}, F_{\Sigma})$ be a discretization of $R$. 
+Let $\lcr :E\to \R_{>0}$ be the euclidean discrete conformal structure of $\Sigma$ and $\ell:E\to \R_{>0}$ a metric realization. 
+Let $(u, \lambda):V\times E_1\to \R^{\#V}\times\R^{\# E_1}$ be the minimizer of the hyperbolic functional and of the hyperbolic version of Problem~\ref{prob:total_angles}.
+Then 
+\begin{eqnarray}
+\tilde \ell:E &\to& \R_{>0}\\
+{\it ij}&\mapsto& 2\arsinh\left(e^{\frac{1}{2}(u_i+u_j)}\ell_{\it ij}\right)
+\end{eqnarray}
+is the unique hyperbolic metric without cone singularities that is by definition conformally equivalent to~$\ell$, see Section~\ref{sec:discr-conf-equiv}.
 
-Let $R$ be a Riemann surface and let $T=(V, E, F)$ be a discretization of $R$ with vertices $v\in V$, edges $e\in E$, and faces $f\in F$. Let $\lcr_R E\to \R^+$ be the euclidean discrete conformal structure of $T$ and $\tilde l:E\to \R^+$ a realization. Let $u:V\to \R$ be the minimizer of the hyperbolic functional, see Section~\ref{sec:hyperbolic_fuctional}, for $\tilde l$. Then $l:E \to \R^+, e_{\it ij}\mapsto 2\arsinh(\tilde l(e_{\it ij})\exp\{\frac{1}{2}(u_i+u_j)\})$ is the unique hyperbolic metric without cone singularities that is by definition conformally equivalent to~$\tilde l$, see Section~\ref{sec:discr-conf-equiv}.
+Following the combinatorics of $\Sigma$ and the new metric $\tilde \ell$ we create a simply-connected realization by breadth-first enumeration of the triangles of $T$. 
+As a different approach one could use a shortest-path scheme as described in \cite{EricksonH02} and cut the surface open to form a simply connected domain.  
+The resulting domain has boundary edges and vertices. 
+Each boundary edge is identified with a unique partner. 
+Each boundary vertex is identified with one or more other vertices. 
+On the surface the boundary of the domain corresponds to a connected system of loops around surface handles, see, e.g., Figure~\ref{fig:embedded_genus_3} left.
 
-For $l$ we create a simply-connected realization by breadth-first enumeration of the triangles of $T$. As a different approach one could use a shortest-path scheme as described in \cite{EricksonH02}.  The resulting domain has boundary edges and vertices. Each boundary edge is identified with a unique partner. Each boundary vertex is identified with one or more other vertices. On the surface the boundary of the domain corresponds to a connected system of loops around surface handles, see, e.g., Figure~\ref{fig:lawson_embedding} (left).
+In the first step we create a simplified domain by connecting vertices that are identified with more than two copies by geodesic arcs, see Figure~\ref{fig:fundamental_polygon_algorithm} (top-right and middle-left). 
+Again a geodesic boundary arc is identified with a unique copy. 
+This identification gives rise to a group of isometries $G$ as identified arcs have the same length. 
+$G$ is a Fuchsian group of the first kind. 
+The domain bounded by geodesic arcs is a fundamental domain of $G$.
 
-In a first step we create a simplified domain by connecting vertices that are identified with more than two copies by geodesic arcs, see Figure~\ref{fig:fundamental_polygon_algorithm} (top-left and top-middle). Again a geodesic boundary arc is identified with a unique copy. This identification gives rise to a group of isometries $G$ as identified arcs have the same length. $G$ is a Fuchsian group of the first kind. The domain bounded by geodesic arcs is a fundamental domain of $G$, see Figure~\ref{fig:fundamental_polygon_algorithm} (top-right).
+In addition to breadth first layout we can also predefine the system of loops on the surface to prescribe the combinatorics of the fundamental domain and its identifications. 
+This is however not always possible due to the combinatorics of the triangle mesh, i.e., a small valence at the base point of the loops forces the fundamental polygon to have more than one vertex. 
+In such a situation we proceed by reducing the domain by edge contraction operations to arrive at a fundamental domain with a single identified vertex:
 
-In addition to breadth first layout we can also predefine the system of loops on the surface to prescribe the combinatorics of the fundamental domain and its identifications. This is however not always possible due to the combinatorics of the triangle mesh, i.e., a small valence at the base point of the loops forces the fundamental polygon to have more than one vertex. In such a situation we proceed by reducing the domain by edge contraction operations to arrive at a fundamental domain with a single identified vertex.
+The algorithm to reduce a given fundamental polygon to a polygon with only one identified vertex is as follows. 
+Select a vertex $v_0$ to be the base vertex of the polygon. 
+Select an edge between $v_0$ and another vertex $v_1$. 
+In the hyperbolic plane move $v_1$ onto $v_0$ by moving all copies of $v_0$ to the corresponding copies of $v_1$, possibly outside of the domain. 
+Move adjacent geodesic arcs correspondingly, see Figure~\ref{fig:fundamental_polygon_algorithm} (middle-right). 
+In the new domain $v_1$ is not a vertex anymore. 
+Proceed until the domain has only one vertex. 
+This process can also be seen as a sequence of cut-and-paste operations reducing the number of vertices $v\neq v_0$ one by one. 
+A proof that this leads to a valid fundamental domain can be found in \cite[p. 48]{Jost2007}.
 
-The algorithm to reduce a given fundamental polygon to a polygon with only one identified vertex is as follows. Select a vertex $v_0$ to be the base vertex of the polygon. Select an edge between $v_0$ and another vertex $v_1$. In the hyperbolic plane move $v_1$ onto $v_0$ by moving all copies of $v_0$ to the corresponding copies of $v_1$, possibly outside of the domain. Move adjacent geodesic arcs correspondingly, see Figure~\ref{fig:fundamental_polygon_algorithm} (bottom-left). In the new domain $v_1$ is not a vertex anymore. Proceed until the domain has only one vertex. This process can also be seen as a sequence of cut-and-paste operations reducing the number of vertices $v\neq v_0$ one by one. A proof that this leads to a valid fundamental domain can be found in \cite[p. 48]{Jost2007}.
+It can be tedious to find a system of loops on a surface that lead to a specific order of sides in the fundamental polygon. 
+We give algorithms that transform a given fundamental polygon and the corresponding group presentation to canonical form, i.e., the order of polygon sides is $aba'b'cdc'd'\cdots$. 
+Here the side $a$ is identified with side $a'$. 
+Additionally we give an algorithm that transforms the domain to opposite identification form, i.e., $abcd\cdots a'b'c'd'\cdots$.
 
-It can be tedious to find a system of loops on a surface that lead to a specific order of sides in the fundamental polygon. We give algorithms that transform a given fundamental polygon and the corresponding group presentation to canonical form, i.e., the order of polygon sides is $aba'b'cdc'd'\cdots$. Here the side $a$ is identified with side $a'$. Additionally we give an algorithm that transforms the domain to opposite identification form, i.e., $abcd\cdots a'b'c'd'\cdots$.
-
-During all transformations of the polygon and the group presentation we like to minimize the number of group element products. This is due to numerical reasons. Hyperbolic motions tend to accumulate numerical errors quite fast when building products, see~\cite{Floyd2002}.
+During all transformations of the polygon and the group presentation we like to minimize the number of group element products. 
+This is due to numerical reasons. 
+Hyperbolic motions tend to accumulate numerical errors quite fast when building products, see~\cite{Floyd2002}.
 
 \subsubsection*{Canonical Fundamental Domain.}
 
@@ -1215,9 +1248,23 @@ During all transformations of the polygon and the group presentation we like to 
 \label{fig:canonical_algorithm}
 \end{figure}
 
-We start with a fundamental domain with a single vertex as explained above. Then choose sides $a$ and $b$ such that the order in the polygon is $a\cdots b \cdots a' \cdots b' \cdots$. We perform a cut-and-paste operation such that sides $a$ and $b$ are next to each other after transformation, see Figure~\ref{fig:cut-and-paste-canonical}. In order to minimize the number of products we choose $a$ and $b$ such the number of sides in between $a$, $b$, $a'$, and $b'$ is minimal. We proceed cutting as described before to bring $b$ next to $a'$ and analogously $a'$ next to $b'$. We end up with a new polygon and the order $aba'b'\cdots$. Repeat this algorithm for the rest of the sides to arrive at canonical form. A proof can be found in ~\cite{Jost2007}.
+We start with a fundamental polygon with a single vertex as explained above. 
+Then choose sides $a$ and $b$ such that the order in the polygon is $a\cdots b \cdots a' \cdots b' \cdots$. 
+We perform a cut-and-paste operation such that sides $a$ and $b$ are next to each other after transformation, see Figure~\ref{fig:cut-and-paste-canonical}. 
+In order to minimize the number of products we choose $a$ and $b$ such the number of sides in between $a$, $b$, $a'$, and $b'$ is minimal. 
+We proceed cutting as described before to bring $b$ next to $a'$ and analogously $a'$ next to $b'$. 
+We end up with a new polygon and the order $aba'b'\cdots$. 
+Repeat this algorithm for the rest of the sides to arrive at canonical form. 
+A proof that this procedure leads to a valid domain can be found in~\cite{Jost2007}.
 
-The number of products built during the transformation of a linked pair $a$, $b$ depends on the number of polygon sides between $a$, $b$, $a'$, and $b'$. Let $C$ be the number of sides between $a$ and $b$. Let $D$ and $E$ be the number of sides between $b$, $a'$, and $b'$ respectively. Then the total number of products in this transformation is $\Sigma=6C+4D+2E$. In step $1$, connecting $a$ and $b$, we can perform the cut-and-past operation using transformation $b$ and a cut between the end of $a$ and the end of $b$ in counter-clockwise order. This moves the intermediate sides between $a$ and $b$ out of the way for the next $2$ steps. By this we have a total number of products $\Sigma=2C+4D+2E$. We use a greedy implementation that chooses the smallest $\Sigma$ in each step to select $a$ and $b$. Alternatively one could enumerate the transformation tree and choose the cheapest path of all transformation sequences.
+The number of products built during the transformation of a linked pair $a$, $b$ depends on the number of polygon sides between $a$, $b$, $a'$, and $b'$. 
+Let $C$ be the number of sides between $a$ and $b$. Let $D$ and $E$ be the number of sides between $b$, $a'$, and $b'$ respectively. 
+Then the total number of products in this transformation is $\Sigma=6C+4D+2E$. 
+In step $1$, connecting $a$ and $b$, we can perform the cut-and-past operation using transformation $b$ and a cut between the end of $a$ and the end of $b$ in counter-clockwise order. 
+This moves the intermediate sides between $a$ and $b$ out of the way for the next $2$ steps. 
+By this we have a total number of products $\Sigma=2C+4D+2E$. 
+We use a greedy implementation that chooses the smallest $\Sigma$ in each step to select $a$ and $b$.
+Alternatively one could enumerate the transformation tree and choose the cheapest path of all transformation sequences.
 
 \begin{figure}
 \centering
@@ -1225,13 +1272,28 @@ The number of products built during the transformation of a linked pair $a$, $b$
 \includegraphics[width=5cm]{keen/canonical01_labels.pdf}
 \includegraphics[width=5cm]{keen/keen01_labels.pdf}
 }
-\caption{The algorithm of Linda Keen to produce and strictly convex fundamental polygons. Start with a given canonical fundamental polygon $aba'b'cdc'd'$ with a corresponding relation $ABA'B'CDC'D'=1$ (left). For convenience labels are chosen such that both coincide. We choose the intersection $p_0$ of the axes of transformations $A$ and $B$ as base point for the new domain. The new vertices of the fundamental domain are calculated as $p_1=p_0\cdot B'A'$, $p_2=p_0\cdot A'$, $p_3=p_0\cdot B'$, and $p_4=p_0\cdot A'B'$. The vertices at the generators $C$ and $D$ are calculated from $p_4$.}
+\caption{
+The algorithm of Linda Keen to construct strictly convex fundamental polygons. 
+Start with a given canonical fundamental polygon $aba'b'cdc'd'$ with a corresponding relation $ABA'B'CDC'D'=1$ (left). 
+For convenience labels are chosen such that both coincide. 
+We choose the intersection $p_0$ of the axes of transformations $A$ and $B$ as base point for the new domain. 
+The new vertices of the fundamental domain are calculated as $p_1=p_0\cdot B'A'$, $p_2=p_0\cdot A'$, $p_3=p_0\cdot B'$, and $p_4=p_0\cdot A'B'$. 
+The vertices at the generators $C$ and $D$ are calculated from $p_4$.
+}
 \label{fig:keen_polygon}
 \end{figure}
 
-By this procedure we get a canonically identified fundamental polygon. This polygon may be non-convex. Following the approach described in \cite{keen1966} we can move from this domain to a strictly convex one by selection of a different base point for the same group of transformations. Let
-\[G=\left<A,B,C,D,\ldots\in \mathit{PSL}(2,\mathbb R)\mid ABA'B'CDC'D'\ldots=1\right>\]
-anonically presented group and $aba'b'cdc'd'\ldots$ be a corresponding fundamental polygon, see Figure~\ref{fig:keen_polygon} (left). The elements are given such that $A(a)=a'$ and $B(b')=b$. Here we use the notation $A':=A^{-1}$. Then the axes of the generators $A$ and $B$ intersect in a point $p_0$. Choosing $p_0$ as the base point of a new fundamental polygon renders it convex and uniquely defined for the given group and presentation. See Figure~\ref{fig:keen_polygon} for an genus $2$ instance of this algorithm.
+By this procedure we get a canonically identified fundamental polygon. 
+This polygon may be non-convex. Following the approach described in \cite{keen1966} we can transform this domain into a strictly convex fundamental polygon by selection of a different base point for the same group of transformations. Let
+\begin{equation}
+G=\left<A,B,C,D,\ldots\in \mathit{PSL}(2,\mathbb R)\mid ABA'B'CDC'D'\ldots=1\right>
+\end{equation}
+be a canonically presented group and $aba'b'cdc'd'\ldots$ be a corresponding fundamental polygon, see Figure~\ref{fig:keen_polygon} (left). 
+The elements are given such that $A(a)=a'$ and $B(b')=b$. 
+Here we use the notation $A':=A^{-1}$. 
+Then the axes of the generators $A$ and $B$ intersect in a point $p_0$. 
+Choosing $p_0$ as the base point of a new fundamental polygon renders it convex and uniquely defined for the given group and presentation. 
+See Figure~\ref{fig:keen_polygon} for a genus $2$ instance of this algorithm.
 
 \begin{figure}
 \centering
@@ -1267,16 +1329,16 @@ anonically presented group and $aba'b'cdc'd'\ldots$ be a corresponding fundament
 \label{fig:cut-and-paste-motion}
 \end{figure}
 
-undamental polygon identified by opposite sides has a side ordering $abcd\cdots a'b'c'd'\cdots$. A corresponding relation of the group of hyperbolic translations is $AB'CD'\cdots=1$ given that a transformation $X$ maps side $x$ to $x'$.
+A fundamental polygon identified by opposite sides has a side ordering $abcd\cdots a'b'c'd'\cdots$. A corresponding relation of the group of hyperbolic translations is $AB'CD'\cdots=1$ given that a transformation $X$ maps side $x$ to $x'$.
 
 We give two algorithms to transform a given fundamental domain into an opposite sides domain.
 For the first algorithm we show that it terminates and yields the correct result. However we cannot control the number of products used during the transformation. The second algorithm is heuristic and minimizes the number of products. It has proven to terminate for all of our examples.
 
 We use the canonical form of fundamental polygons as an intermediate step in the process of transforming a given fundamental domain into opposite sided form. As shown above we can transform any domain into canonical form. In particular we can transform an abstract oppositely identified polygon into canonical form using the algorithm from above. All of the steps conducted during this transformation can be undone. We get a sequence of cut-and-paste operations transforming a canonical fundamental polygon into opposite sides form. Combining the sequence that transforms a general fundamental polygon into canonical form with the transform that creates the opposite form from the canonical one we get required sequence on transformations on any given domain.
 
-This version of the algorithm is not optimal with respect to the number of products used in the sequence of transformations. In particular if the input polygon is close to opposite sides form already the algorithm destroys this structure first and rebuilds it from the canonical form.
+This version of the algorithm is not optimal with respect to the number of products used in the sequence of transformations. In particular if the input polygon is close to opposite sides form already, the algorithm destroys this structure first and rebuilds it from the canonical form.
 
-In all examples we therefor use a different heuristic algorithm. We transform a given fundamental polygon and group presentation to opposite sides form (see, e.g., Figure~\ref{fig:fundamental_polygon_algorithm} bottom-middle) using the following sequence of transformations.
+In all examples we therefor use a different heuristic algorithm. We transform a given fundamental polygon and group presentation to opposite sides form using the following sequence of transformations. Refer to Figure~\ref{fig:opposite_algorithm} for an instance of this algorithm:
 
 For a given fundamental polygon and the ordering of its sides, we can reconstruct the relation of the group by moving around the base vertex on the surface. That means if we start with transformation $A$ moving side $a$ to $a'$ the next element in the relation belongs to the side next to $a'$ in counter-clockwise order. We proceed until we get back to element $A$. Note that we could have chosen clockwise orientation, but for drawing pictures we stick to counter-clockwise.
 
@@ -1367,6 +1429,7 @@ If the hyperelliptic involution of a hyperelliptic surface is realizable as an e
 Once the branch points are known we can proceed as described in Section~\ref{sec:discrete_algebraic_curves} to calculate a map from the surface to $\Chat$.
 
 \subsection{Lawson's surface}
+\label{sec:lawson_uniformization}
 
 In this section we present the Fuchsian uniformization of the Riemann surface of Lawson's genus 2 minimal surface in $\mathbb{S}^3$ \cite{Law1970}.
 We use three different conformally equivalent representations of the surface and compare the resulting uniformizations.
