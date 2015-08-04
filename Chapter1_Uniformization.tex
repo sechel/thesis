@@ -1441,16 +1441,22 @@ In Section~\ref{sec:lawson_uniformization} we construct uniformizations of Lawso
 \subsection{Fundamental domains domains for hyperelliptic surfaces}
 \label{sec:hyperelliptic_domain}
 
-\begin{conjecture}
-Let $R$ be a Riemann surface and let $G$ be its uniformizing group. Let $A_1,\ldots,A_g$ be generators of $G$ with the relation $A_1A_2\ldots A'_1A'_2\ldots=1$. Then the following statements are equivalent:
+\begin{conjecture}[Characterization of hyperelliptic surfaces]
+Let $R$ be a Riemann surface and let $G$ be its uniformizing Fuchsian group. 
+Let $A_1,\ldots,A_{2g}$ be the generators of $G$ with the relation $A_1\cdots A_{2g}A'_1\cdots A'_{2g}$=1. 
+Then the following statements are equivalent:
 \begin{compactitem}
 \item $R$ is hyperelliptic.
-\item The axes of $A_i$ $i=1\ldots g$ meet in a common point $p_0$.
+\item The hyperbolic axes of $A_1,\ldots,A_{2g}$ meet in a common point $p_0$.
 \end{compactitem}
 \end{conjecture}
-Note that the point $p_0$ is a branch point of the corresponding hyperelliptic algebraic curve.
 
-\todo{SSE: speak about the opposite sides domain where the vertex, the center, and the mid-points of edges are branch points}
+We proof only one direction of this conjecture.
+
+\begin{proof}
+We will construct a fundamental polygon that is symmetric with respect to a $180\degree$ rotation about $p_0$.
+This rotation defines a conformal involution with $2g+2$ fixed points on $R$ thus renders $R$ hyperelliptic.
+\end{proof}
 
 \subsection{Hyperelliptic vs. non-hyperelliptic curves}
 \label{sec:non-hyperelliptic}
