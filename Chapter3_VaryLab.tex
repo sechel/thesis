@@ -50,7 +50,7 @@ for optimization.
 
 {\sc VaryLab} can handle constraints on vertex positions. We implement this by modifying the gradient and Hessian of the selected energies to be zero at the constraint variables. Even if the derivative does not match the energy anymore we can still calculate solutions for the rest of the variables using conjugate gradient methods. Here the line search step of the algorithm minimizes the energy over the remaining variables in the direction of the gradient, i.e., the update will not include constraint variables.
 
-\section{Build-in Functionals}
+\section{Build-in functionals}
 
 {\sc VaryLab} implements a number of energy functionals.
 
@@ -70,7 +70,7 @@ for optimization.
 \item \emph{Spring Energy} - The spring energy is computed by adding springs to all the edges of the mesh. These springs can have user specified target lengths and strengths that can be specified by various options.
 \end{itemize}
 
-\section{Geometry Processing}
+\section{Geometry processing}
 
 The geometry processing core of {\sc VaryLab} is based on {\sc HalfEdge} and {\sc HalfEdgeTools} (Chapter~\ref{chp:halfedge}), i.e., all geometry processing is done with the help of the half-edge data structure and algorithms that run on top of it. Frequently used geometry processing features include
 
@@ -91,7 +91,7 @@ The geometry processing core of {\sc VaryLab} is based on {\sc HalfEdge} and {\s
 
 All tools are available via the tools tool bar at the top of the main window, see Figure~\ref{fig:varylab_main_ui} and~\ref{fig:varylab_tools_ui}.
 
-\section{Data Visualization}
+\section{Data visualization}
 
 {\sc VaryLab} adds data sources corresponding to the energies of the optimization core. Their data can be visualized on the surface using the [Halfedge Data Visualization] interface, see Section~\ref{sec:halfedge_tools_visualization}. 
 
@@ -162,7 +162,7 @@ During optimization {\sc VaryLab} logs the energy of each functional as well as 
 \label{sec:periodic_varylab}
 In this section we describe how the methods of Chapter~\ref{chp:periodic_conformal_maps} are implemented in {\sc VaryLab}. We split the process in two parts. Part one describes the creation of periodic triangle, quad, or hexagonal meshes from an initial unstructured triangle mesh. Part two deals with optimization of panels created from a mesh in part one.
 
-\subsection{Periodic Parameterization}
+\subsection{Periodic parameterization}
 The parameterization part of the work is carried out via the {\sc ConformalLab} main user interface. 
 
 \begin{itemize}

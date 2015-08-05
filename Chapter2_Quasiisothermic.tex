@@ -69,7 +69,7 @@ Not all surface shapes can be approximated by such meshes. A smooth analog of
 a surface with this property is called an isothermic surface. These surfaces admit conformal
 curvature line parameterizations, i.e., angle-preserving parameterizations
 aligned with the principle curvature directions. Their discrete counterpart are 
-so-called S-isothermic meshes. These meshes have the additional property that
+so-called s-isothermic meshes. These meshes have the additional property that
 neighboring quadrilaterals possess touching incircles (see
 Fig.~\ref{fig:s_isothermic}).  
 
@@ -98,8 +98,8 @@ parameterizations.
 \noindent\textbf{Variational principle for circle packing quad-meshes:}
 The obtained parameterizations are used for remeshing and we optimize 
 quadrilaterals to have touching incircles by minimizing a novel energy. These
-S-isothermic meshes have been studied in discrete differential geometry and
-possess some remarkable properties, e.g.,\ minimal S-isothermic surfaces may be
+s-isothermic meshes have been studied in discrete differential geometry and
+possess some remarkable properties, e.g.,\ minimal s-isothermic surfaces may be
 deformed isometrically retaining the same Gau{\ss} map.
 
 The rest of the paper is organized as follows: Section~\ref{sec:previouswork}
@@ -110,14 +110,14 @@ quasiisothermic parameterizations and a corresponding quality measure.
 In Section~\ref{sec:algorithm} we describe an algorithm to
 obtain quasiisothermic parameterizations with small modulus. We describe the 
 connection to discrete conformal maps and discuss how we deal with singularities. %XXX
-A variational principle to generate S-isothermic meshes is presented in
+A variational principle to generate s-isothermic meshes is presented in
 Section~\ref{sec:s-isothermic}. At the end of the section we show the effect of
 our optimization on several examples from different classes of surfaces. In the
 final Section~\ref{sec:future} we sum up the results and propose extensions and
 enhancements subject to further research.
 
 
-\section{Related Work}
+\section{Related work}
 \label{sec:previouswork}
 
 There has been considerable work on conformal parameterizations as well as on
@@ -164,7 +164,7 @@ approximate freeform surfaces with single curved panels. The energy minimized in
 Section~\ref{sec:s-isothermic} is a combination of a new functional with an
 energy recently described by \cite{SchiftnerHWP2009}. They construct circle
 packing triangle meshes that approximate a given surface by minimizing a
-combination of energies. Discrete S-isothermic minimal surfaces are defined in
+combination of energies. Discrete s-isothermic minimal surfaces are defined in
 terms of their Gau{\ss} map in \cite{BobHofSpr06}. This Gau{\ss} map is a Koebe
 polyhedron with edges tangent to a sphere. These Koebe polyhedra also occur in
 the study of edge offset meshes by \cite{PottmannLWB2007}, which again use a
@@ -173,7 +173,7 @@ technique creating quad-dominant meshes guided by conjugate parameter
 directions is given by \cite{ZadravecSW2010}. Their algorithm includes a level
 set approach to circumvent the integration of a vector field.
 
-The notion of discrete S-isothermic meshes was introduced in the mathematical
+The notion of discrete s-isothermic meshes was introduced in the mathematical
 context by \cite{BobenkoP1996} as a special class of quad meshes.
 The mathematical theory of these meshes has since then been an active field of
 research in discrete differential geometry. A good overview of the recent
@@ -266,7 +266,7 @@ parameter space as with curvature directions on the surface. We will now
 create parameterizations that have small $Q$.
 
 
-\section{Minimization of the Functional}
+\section{Minimization of the functional}
 \label{sec:algorithm}
 
 In this section the surface $M$ is a triangulated surface with one boundary
@@ -540,7 +540,7 @@ cannot expect the solution to follow curvature lines as the distance to the boun
 increases.
 
 
-\section{Discrete S-isothermic surfaces}
+\section{Discrete s-isothermic surfaces}
 \label{sec:s-isothermic}
 
 \begin{figure}
@@ -554,13 +554,13 @@ touching circles in a row can be interpreted as discrete curvature line.}
 \end{figure}
 
 Starting with a quasiisothermically parameterized mesh with low modulus 
-we now aim to create discrete S-isothermic surfaces that
+we now aim to create discrete s-isothermic surfaces that
 stay in the vicinity of the input surface. S-isothermic surfaces were
 introduced by \cite{BobenkoP1996}: A quadrilateral mesh
-is \mbox{\emph{S-isothermic}} if (i) all the quadrilaterals are planar, (ii)
+is \mbox{\emph{s-isothermic}} if (i) all the quadrilaterals are planar, (ii)
 all faces have incircles, and (iii) the incircles of adjacent quadrilaterals
 touch.
-Figure~\ref{fig:s_isothermic} displays S-isothermic surfaces derived from our
+Figure~\ref{fig:s_isothermic} displays s-isothermic surfaces derived from our
 parametrizations shown in Figure~\ref{fig:all_mesh}.
 
 \subsubsection{Variational Principle}
@@ -568,15 +568,16 @@ parametrizations shown in Figure~\ref{fig:all_mesh}.
 \begin{figure}
 \centering
 \resizebox{0.4\textwidth}{!}{\input{figures/e_touching_circles.pdf_t}}
-\caption{Labels for the touching-circles-functional at an edge. The circles touch 
+\caption{Labels for the touching-circle
+functional at an edge. The circles touch 
 if the ratio $\cot\left(\beta^i/2\right)/\cot\left(\beta^j/2\right)$ is equal on both sides of the edge.}
 \label{fig:functional}
 \end{figure}
 
-In this section we introduce an energy whose minimizers are S-isothermic
+In this section we introduce an energy whose minimizers are s-isothermic
 surfaces. We denote quadilaterals by $ijkm\in F$ where the indices are in 
 cyclic order.
-The S-isothermic energy $E_S$ consists of three parts:
+The s-isothermic energy $E_S$ consists of three parts:
 \begin{equation}
   E_S := 
   \lambda_1 E_{\mathrm{planar}} + 
@@ -617,7 +618,7 @@ in terms of the vertex coordinates and the derivatives can be calculated explici
 Since all energies are in general non-convex we need a good initial guess to 
 find meaningful minimizers of $E_S$.
 S-isothermic minimal surfaces converge to isothermic parameterizations of
-smooth minimal surfaces~\cite{BobHofSpr06}. For general S-isothermic surfaces
+smooth minimal surfaces~\cite{BobHofSpr06}. For general s-isothermic surfaces
 this is an open conjecture. The parameterizations obtained in
 Section~\ref{sec:parametrization} are good candidates to start from with the
 optimization of the functional.
@@ -629,17 +630,17 @@ $E_S$ for the four models that were discussed in the previous section.
 \begin{figure}
 \centering
 \resizebox{\textwidth}{!}{\includegraphics[width=\textwidth]{image/aag2012/dach_example01_circles.pdf}}
-\caption{The S-isothermic circle packing on the \textsc{Roof} model in detail.}
+\caption{The s-isothermic circle packing on the \textsc{Roof} model in detail.}
 \end{figure}
 
 As seen in the quality analysis of Section~\ref{subsub:examples_quality}, the
 \textsc{Teaser}, the \textsc{Minimal}, and the \textsc{Roof} models are
-quasiisothermic surfaces with low modulus. For these models the corresponding S-isothermic
+quasiisothermic surfaces with low modulus. For these models the corresponding s-isothermic
 surface is also close to the input surface. Figure~\ref{fig:convergence} shows
 the energy during the optimization. Here the three close-to-isothermic meshes
 start with a lower energy than the \textsc{Dome} model. After the \textsc{Dome}
 has passed some iterations it exhibits convergence properties similar to the
-other models. As this surface converges against a discrete S-isothermic surface,
+other models. As this surface converges against a discrete s-isothermic surface,
 we observe a considerable change in shape during the first iterations
 especially around the singularities.
 
@@ -668,7 +669,7 @@ with the initial surface. The mean edge length deviation of this model is $1.28\
 
 Every smooth minimal surface possesses a $1$-parameter (associated) family of
 non-trivial isometric deformations. All surfaces in this family have the same
-Gau{\ss} map. For discrete S-isothermic minimal surfaces this construction is
+Gau{\ss} map. For discrete s-isothermic minimal surfaces this construction is
 discretized in~\cite{BobHofSpr06}: Edge lengths and the conformality of the
 parameterization are preserved. We need to introduce the concept of dual surface
 to construct the family of isometric surfaces.
@@ -677,9 +678,9 @@ to construct the family of isometric surfaces.
 In differential geometry for isothermic surfaces there is a notion of a dual
 surface.  This dual or Christoffel transform is also an isothermic surface. Both
 surfaces are parameterized with isothermic coordinates. This setup can be
-discretized using the definition of discrete S-isothermic surfaces. The dual
-surface can be constructed using the incircle structure of S-isothermic meshes.
-We introduce consistent signs on edges on a discrete S-isothermic surface such
+discretized using the definition of discrete s-isothermic surfaces. The dual
+surface can be constructed using the incircle structure of s-isothermic meshes.
+We introduce consistent signs on edges on a discrete s-isothermic surface such
 that opposite sides of the quads have the same sign and consecutive edges in a
 quad have different signs. The dual mesh of a mesh $M$ will have parallel edges
 calculated as follows: Let $e_{ij}=v_j-v_i$ be an edge vector of~$M$. Then the
@@ -688,7 +689,7 @@ dual edge vector $e_{ij}^*$ satisfies the following equation:
 where $r_i$ and $r_j$ are the distances from the vertex $v_i$ and $v_j$ to the
 touching point of the incircles of incident faces at the edge~$e_{ij}$. For a
 given
-discrete S-isothermic mesh we can easily calculate the dual mesh by enumerating
+discrete s-isothermic mesh we can easily calculate the dual mesh by enumerating
 the vertices along a spanning tree of edges. In Figure~\ref{fig:isometric} the
 dual surface of the \textsc{Minimal} model is shown in the upper left hand
 corner.  Via the dual surface we can now construct isometric deformations of
@@ -696,7 +697,7 @@ minimal surfaces.
 
 \noindent\textbf{Deformation.}
 The dual of a smooth minimal surface coincides with its Gau{\ss} map which is a
-part of a sphere. This sphere may be multiply covered. For discrete S-isothermic
+part of a sphere. This sphere may be multiply covered. For discrete s-isothermic
 minimal surfaces this Gau{\ss} map is a part of a Koebe polyhedron, i.e., a
 polyhedral surfaces with edges tangent to a sphere. On the Koebe polyhedron
 every edge is rotated by a fixed angle in the tangent space of the sphere at the
@@ -719,7 +720,7 @@ surface together
 with its dual and isometrically deformed versions with different turning angles.
 
 
-\section{Conclusions and Future Research}
+\section{Conclusions and future research}
 \label{sec:future}
 The main contributions of this article are, on the one hand, the definition of 
 quasiisothermic parameterizations together with a new algorithm to
@@ -748,7 +749,7 @@ Schiftner \emph{et al.}. For surfaces arising in architectural context (in
 particular for shell-like roofs) we are able to construct aesthetically
 pleasing quad meshes supporting a circle packing. 
 
-\section{A discrete S-isothermic ellipsoid and its dual surface}
+\section{A discrete s-isothermic ellipsoid and its dual surface}
 
 \begin{figure*}
 \centering
@@ -756,7 +757,7 @@ pleasing quad meshes supporting a circle packing.
 $\vcenter{\hbox{\includegraphics[width=0.5\textwidth]{image/ellipsoid01_top.pdf}}}$
 $\vcenter{\hbox{\includegraphics[width=0.5\textwidth]{image/ellipsoid01_disks.pdf}}}$
 }
-\caption{Discrete S-isothermic ellipsoid}
+\caption{Discrete s-isothermic ellipsoid}
 \label{fig:ellipsoid} 
 \end{figure*}
 
@@ -766,18 +767,18 @@ $\vcenter{\hbox{\includegraphics[width=0.5\textwidth]{image/ellipsoid01_disks.pd
 \includegraphics[width=0.5\textwidth]{image/ellipsoid01_dual.pdf}
 \includegraphics[width=0.5\textwidth]{image/ellipsoid01_dual_disks.pdf}
 }
-\caption{Dual surface of discrete S-isothermic ellipsoid of Figure~\ref{fig:ellipsoid}. }
+\caption{Dual surface of discrete s-isothermic ellipsoid of Figure~\ref{fig:ellipsoid}. }
 \label{fig:ellipsoid_dual} 
 \end{figure}
 
-Here we describe the construction of a discrete S-isothermic ellipsoid and 
+Here we describe the construction of a discrete s-isothermic ellipsoid and 
 its dual surface. (See \cite[p.~202]{Hertrich2003} for the smooth analog).
 The rough construction outline is as follows. We start with a discretized version
 of the smooth isothermically parameterized ellipsoid. We obtain this by calculating a 
 quasiisothermic parameterization of half of a triangulated ellipsoid. After remeshing 
 the parameter lines are approximate curvature lines. We complete the surface by reflection
 at the boundary. 
-Optimization of the S-isothermic functional yields the final discrete ellipsoid. Its 
+Optimization of the s-isothermic functional yields the final discrete ellipsoid. Its 
 dual surface is constructed as in Section~\ref{sub:isometric}.
 
 The combinatorics at singularities of the discrete ellipsoid is not unique. If there is a discrete 
@@ -785,7 +786,7 @@ curvature line a the symmetry plane of the ellipsoid we have degenerate quads th
 vertices with angle $\approx\pi$. The singularity is located at this valence $2$ vertex. 
 If there is no discrete curvature line at the symmetry plane then the singularity is located at the 
 mid point of the edge connecting two valence three vertices. We have observed that 
-the convergence behavior of the S-isothermic functional is considerable better in the former 
+the convergence behavior of the s-isothermic functional is considerable better in the former 
 model of singularities. We therefore like to call only the discrete ellipsoid with curvature 
 lines at symmetry planes a discrete ellipsoid, see Figure~\ref{fig:ellipsoid} and~\ref{fig:ellipsoid_dual}.
 
