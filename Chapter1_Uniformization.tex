@@ -42,21 +42,35 @@ How to find a seamless grid pattern matching this domain is an open problem.
 \label{fig:intro_uniformization}
 \end{figure}
 
-Some of the material presented here has been published in~\cite{Bobenko2010} and \cite{Springborn2008}. 
-Namely the euclidean and hyperbolic functional together with their gradients and hessian matrices. 
-We generalize the setting in a way such that not only the scaling factors $u$ are variables of the functional but also the $\lambda$s itself can be varied. By this we can formulate the theory of conformally equivalent meshes on cyclic polyhedral surfaces.
-We contribute the corresponding first and second derivatives. 
-In addition to this we also give a spherical version of the functional together with its gradient and hessian matrix. 
+In this chapter we investigate various mathematical applications of discrete conformal maps. 
+We build upon the work of Bobenko, Pinkall, and Springborn \cite{Bobenko2010} and Springborn, Schr\"{o}der, and Pinkall \cite{Springborn2008} for the euclidean case. We present examples for uniformizations of Riemann surfaces of genus $0$, $1$, and $g>1$ based on this theory, see Figure~\ref{fig:intro_uniformization}.
+
+We generalize the setting in a way such that not only the scaling factors $u$ are variables of the functional but also the $\lambda$s itself can be varied. 
+By this we can formulate the theory of conformally equivalent meshes on cyclic polyhedral surfaces. 
+This was briefly noted in the previous work.
+Namely the state the euclidean, hyperbolic, and spherical variational principles together with the gradients and hessian matrices of the corresponding functional. 
 As touched upon in \cite{Bobenko2010} letting the $\lambda$s be variables we are able to create maps to regions bounded by circles.
+
 This text is accompanied by a data compact disk which contains the data for most of the examples presented in this part of the work. 
 Where applicable we give the path to the data on the disk directly under the corresponding figure.
+We describe the usage of the software and the XML data format that was used to create all the results in Chapter~\ref{chp:conformallab}.
 
-There is no existence, can be remedied using recent techniques developed by Luo et. al.~\cite{Luo13, Luo14}.
-Maybe reference Beardon and Stephenson~\cite{BS90}.
+%There is no existence, can be remedied using recent techniques developed by Luo et. al.~\cite{Luo13, Luo14}.
+%Maybe reference Beardon and Stephenson~\cite{BS90}.
 
-\todo{Reference to the ConformalLab section and the description of the XML data format.}
+This chapter is organized as follows. We review the basic definitions of discrete conformal equivalence and conformal maps in Section~\ref{sec:basic_definitions}. Here we extend the notion of conformal equivalence to cyclic polyhedral surfaces.
+In Section~\ref{sec:vari-princ} we state the variational principles for discrete conformal mappings to spherical, euclidean, and hyperbolic domains.
+We give examples for discrete conformal maps between planar cyclic domains in Section~\ref{sec:planar_domains}. 
+Among others we treat examples for cyclic circle domains and special multiply-connected domains.
+Uniformizations of cyclic spheres are investigated in Section~\ref{sec:spheres}.
+Section~\ref{sec:tori} is about the uniformization of Riemann surfaces of genus $1$.
+We look into the convergence behavior of discrete conformal maps using discrete elliptic curves.
+ Surfaces with genus $g>1$ are treated in Section\ref{sec:higher_genus}.
+ We describe how to construct Fuchsian uniformizations and the corresponding fundamental domains.
+ The uniformization of hyperelliptic Riemann surfaces is a special case of the methods developed in the previous sections, see Section~\ref{sec:hyperelliptic}.
 
 \section{Basic definitions}
+\label{sec:basic_definitions}
 
 \subsection{Cyclic polyhedral surfaces }
 
@@ -503,6 +517,7 @@ We give more details on how we find critical points of the non-convex spherical 
 
 
 \section{Conformal uniformization of planar domains}
+\label{sec:planar_domains}
 
 The conformal mapping of planar domains in the context of discrete conformal equivalence has been studied before for triangulations. 
 In its basic incarnation it amounts to the assignment of suitable angles $\Theta$ at the boundary vertices of the domain to obtain a map from a planar domain to a polygon with the prescribed boundary angles. 
@@ -753,7 +768,7 @@ We apply M{\"o}bius normalization to the spherical surface to achieve the symmet
 \end{figure}
 
 Mapping a discrete cyclic surface with spherical topology to discretely conformally the round sphere can be achieved with a similar procedure as described in Section~\ref{sec:riemann_map}. 
-We treat the special case of a quad surface.
+We treat the special case of a quad surface.\todo{some combinatorics seem not to work, why?}
 We first remove a vertex and map the remaining part of the surface to the plane.
 Then apply stereographic projection to map the surface to the sphere.
 Again we can apply M{\"o}bius normalization to find a unique map up to rigid motion.
@@ -807,7 +822,7 @@ Following this scheme we create examples that would not be possible using simple
 \label{sec:moebius_normalization}
 The description of conformal equivalence is M{\"o}bus invariant.  
 To select a unique representative on the sphere we find the M{\"o}bius transformation $T$ such that
-\[\sum_{i=1}^{n}\sigma T \lambda_i = 0,\]
+\[\sum_{i=1}^{n}T\cdot v_i = 0,\]
 i.e., the center of mass of the points is the origin, see~\cite{Springborn05}.
 To find the point of minimum hyperbolic distance sum as stated by Springborn we minimize the following functional. 
 \begin{eqnarray*} 
