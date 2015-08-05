@@ -993,6 +993,7 @@ where $\mathcal P$ is an irreducible polynomial.
 This curve in turn can be represented as branched covering of the Riemann sphere $\hat{\C}$ with branch points at locations $\lambda_i$ with \[\frac{\partial\mathcal P}{\partial \mu}\Bigr|_{\lambda=\lambda_i} = 0.\]
 In the discrete setting we represent discrete algebraic curves as triangulations of the respective branched covering of $\S^2$.
 We only cover 2-sheeted coverings here as this includes our main examples, i.e., elliptic curves and hyperelliptic curves, see also Section~\ref{sec:hyperelliptic}.
+
 We construct a triangulation of such a 2-sheeted covering as follows.
 Let $S$ be a Riemann surface with genus $g\geq 1$.
 Let $\lambda_1,\ldots,\lambda_{2g+2}\in \hat\C$ be the branch points of the corresponding algebraic curve.
@@ -1060,15 +1061,11 @@ To create a reasonably regular triangulation with vertices on the sphere we mini
 A good start is to choose points uniformly distributed on the sphere. 
 To achieve this we choose $x$, $y$, and $z$ to be normally distributed and project the resulting vectors to the sphere, see~ \cite{Muller1959}. 
 The functional and its gradient that we minimize is
-
 \begin{eqnarray*}
-	E &=& n^2\sum_{v\in V}\left( \left<v,v\right> - 1\right)^2 + \sum_{v\in
-V}\sum_{\substack{w\in V\\w\neq v}} \frac{1}{\left<w-v, w-v\right>}\\ \frac{\partial
-E}{\partial v} &=& 4n^2\left<v,v\right>v + 4\sum_{\substack{w\in V\\w\neq
-v}}\frac{w-v}{\left<w-v,w-v\right>^2}.  \end{eqnarray*}
-
+E &=& n^2\sum_{v\in V}\left( \left<v,v\right> - 1\right)^2 + \sum_{v\in V}\sum_{\substack{w\in V\\w\neq v}} \frac{1}{\left<w-v, w-v\right>}\\ 
+\frac{\partial E}{\partial v} &=& 4n^2\left<v,v\right>v + 4\sum_{\substack{w\in V\\w\neq v}}\frac{w-v}{\left<w-v,w-v\right>^2}.
+\end{eqnarray*}
 $\left<.,.\right>$ is the standard euclidean scalar product. There is however no guarantee that the points of the minimizer will lie on the sphere and so we project after optimization.
-
 
 \subsection{Discrete elliptic curves - numerical convergence}
 \label{sec:numerical_convergence}
