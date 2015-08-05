@@ -954,6 +954,8 @@ Corresponding edges on $C$ and $C'$ are identified on $R$ but do not have the sa
 Corresponding edges in $\Chat$ have the same length-cross-ratio as this characterization is invariant under M\"{o}bius transformations.
 That means we have a unique function $\lcr$ defined on $R$.
 We pick a representative metric $\ell$ to feed into the variational principle and calculate the uniformization, see Section~\ref{sec:cross-ratios} and Figure~\ref{fig:schottky_g1}.
+For tori we have only one generator and one pair of circles. 
+The general case of arbitrary genus leads to hyperbolic uniformization groups, i.e. Fuchsian groups, and is treated in Section~\ref{sec:schottky}.
 
 \subsection{Tori given as algebraic curves}
 \label{sec:discrete_algebraic_curves}
@@ -1403,10 +1405,20 @@ Circles with the same color are identified.
 The Schottky group elements that map the blue and green circles onto each other map the exterior of the source circle onto the interior of the image circle and vice-versa.
 The map corresponding to the purple circle is defined to map the interior of the outer circle to the interior of the inner circle. Stereographically projected image, the randomly chosen extra points of the triangulation are chosen such that the triangulation is close to regular where possible.
 \\
-Right: Fuchsian uniformization and universal cover in the Poicar\'e model of the hyperbolic plane. The boundary of the fundamental domain consists of  the Schottky circles and short paths connecting them (grey edges).}
+Right: Fuchsian uniformization and universal cover in the Poicar\'e model of the hyperbolic plane. The boundary of the fundamental domain consists of  the Schottky circles and short paths connecting them (grey edges).
+}
+\label{fig:schottky_g3}
 \end{figure}
 
-\subsection{Hyperbolic circle domains}
+We have treated Schottky data in the case of tori in Section~\ref{sec:tori_schottky}.
+The general construction for surfaces with genus greater that one is parallel to the construction in the torus case.
+For a given conformal structure, i.e. the length-cross-ratios on edges, we find a critical point of the hyperbolic functional.
+We visualize the Fuchsian uniformization in the Poicar\'{e} model and highlight the images of the circles, Figure~\ref{fig:schottky_g3}.
+Additionally to the vertices on the circles we choose random points in the fundamental domain on $\Chat$ such that the triangulation is close to regular.
+We optimize the vertex location using the process described in Section~\ref{sec:spherical_triangulations}.
+Vertices that land in the interior of the circles are discarded.
+
+\subsection{Hyperbolic uniformization with circular boundaries}
 \label{sec:hyperbolic_circle_domain}
 
 \begin{figure}
@@ -1425,6 +1437,14 @@ The three holes are filled and triangulated (highlighted edges) to visualize the
 \label{fig:hyperbolic_circle_domain}
 \end{figure}
 
+Let R be a Riemann surface with genus $g>1$ and $n$ boundary components.
+There is a Fuchsian uniformization of $R$ that maps the boundary components onto circles.\todo{Find reference}
+In the discrete setting we construct this uniformization using a similar approach as for euclidean circle domains.
+Fill each of the boundary components with a face.
+Treat the extra faces as if they were cyclic faces to begin with, i.e., the corresponding $\lambda$s in the auxiliary triangulation are variables of the variational principle.
+The critical point of the hyperbolic functional is a hyperbolic flat metric with cyclic faces even at the extra faces.
+Remove the extra faces to arrive at the fundamental domain with circular boundary components, see Figure~\ref{fig:hyperbolic_circle_domain}.
+
 
 \section{Uniformization of hyperelliptic surfaces}
 \label{sec:hyperelliptic}
@@ -1432,22 +1452,85 @@ The three holes are filled and triangulated (highlighted edges) to visualize the
 A hyperelliptic surface is a Riemann surface of genus $g>1$ that has a realization as a 2-sheeted branched cover of $\Chat$.
 Any Riemann surface of genus $2$ is hyperelliptic.
 In this section we construct uniformizations of discrete versions of hyperelliptic Riemann surfaces.
-Firstly, we introduce fundamental domains specially designed to match the hyperelliptic structure of the surfaces, i.e., oppositely identified polygons with a branch point at the vertex.
+
+We conjecture a characterization of hyperelliptic Riemann surfaces in terms of the geometry of the fundamental group. 
+We construct fundamental domains specially designed to match the hyperelliptic structure of the surfaces, i.e., oppositely identified polygons with a branch point at the vertex.
 These objects are the natural generalizations of the euclidean lattices in the elliptic case, see Section~\ref{sec:tori}.
-Secondly, we conjecture a characterization of hyperelliptic Riemann surfaces in terms of the geometry of the fundamental group. 
 We check this characterization with a specifically designed hyperelliptic surface of genus $3$.
 In Section~\ref{sec:lawson_uniformization} we construct uniformizations of Lawson's minimal surface of genus $2$. We present different conformally equivalent realizations and the corresponding uniformizations together with fundamental domains.
+
+In order to construct a discrete version of a hyperelliptic surfaces we first treat the case of hyperelliptic algebraic curves:
+\begin{equation}
+C=\left\{(\mu,\lambda)\in \C^2 \mid \mu^2=\prod_{i=1}^{2g+2}(\lambda - \lambda_i)\right\}
+\end{equation}
+with branch points $\lambda_1,\ldots,\lambda_{2g+2}\in \Chat$.
+We always work with the conformally equivalent projection $(\mu, \lambda)\mapsto \lambda$ that defines a two-sheeted covering of $\Chat$ branched at $\lambda_1,\ldots,\lambda_{2g+2}$. 
+As in the elliptic case, see Section~\ref{sec:discrete_algebraic_curves}, we construct a suitable triangulation and glue two copies of it along cuts connecting the vertices that act the role of the branch points.
+
+\begin{figure} 
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[height=4.5cm]{hyperelliptic_g2/cover.pdf}
+\includegraphics[height=4.5cm]{hyperelliptic_g3/cover_mesh.pdf}
+\includegraphics[height=4.5cm]{hyperelliptic_g4/cover.pdf}
+}
+\setstretch{0.0}{\scriptsize\tt data/hyperelliptic\_\{g2,g3,g4\}/data.xml} 
+\caption{
+The hyperelliptic surfaces of Equation~\ref{eq:hyperelliptic_roots_unity} with genus 2, 3, and 4. 
+The fundamental polygons can be chosen to be regular hyperbolic $4g$-gons. 
+The triangulation of the surfaces is a subdivision of the convex hull of the branch points.
+} 
+\label{fig:roots_of_unity_curve} 
+\end{figure}
+
+We calculate the Fuchsian uniformizations of the curves
+\begin{equation}
+	\mu^2=\lambda\prod_{k=1}^{2g}\left(\lambda-e^{\frac{ik\pi}{g}}\right).\label{eq:hyperelliptic_roots_unity}
+\end{equation}
+Thus the corresponding $2$-sheeted cover of $\Chat$ exhibits branch points at the $(2g)$th roots of unity, at $0$, and at $\infty$. 
+In this special case we can choose the fundamental domain to be a regular $4g$-sided hyperbolic polygon, see Figure~\ref{fig:roots_of_unity_curve}.
+
+Note that the regular fundamental polygon is identified by opposite edges and the corresponding axes of the group elements meet in a common point.
+The axis of a hyperbolic motion is the unique geodesic joining the two fixed points of the motion on the circle that represent the points at infinity.
+This property is a characteristic property of hyperelliptic surfaces and investigated further in the next section.
+
+\begin{figure} 
+\centering
+\resizebox{\textwidth}{!}{
+\includegraphics[height=4.5cm]{branched_genus_2/mercator_texture.pdf}
+\includegraphics[height=4.5cm]{branched_genus_2/image_mercator_closeup.pdf}
+}
+\setstretch{0.0}{\scriptsize\tt data/branched\_genus\_2/data.xml} 
+\caption{
+A genus $2$ surface mapped to a branched cover of $\Chat$. 
+The surface exhibits an extrinsic conformal involution, the rotation about the horizontal axis of symmetry. 
+Its fixed points correspond to the branch points of the corresponding hyperelliptic algebraic curve.
+The involution corresponds to the hyperelliptic involution of the curve.  
+Left: Surface and branch points with texture after Mercator projection using the purple
+branch points as poles. 
+Right: A closeup of the stereographic projection of one pair of red and blue branch points.
+} 
+\label{fig:genus2_branched} 
+\end{figure}
+
+As in the elliptic case we can invert this construction if we know the location of the branch points on the surface.
+If the hyperelliptic involution of the surface is realizable as an extrinsic involution on an embedded surface we can easily select the branch points as the fix points of this transformation, see Figure~\ref{fig:genus2_branched}. 
+Once the branch points are known we can proceed as described in Section~\ref{sec:discrete_algebraic_curves} to calculate a map from the surface to $\Chat$.
 
 \subsection{Fundamental domains domains for hyperelliptic surfaces}
 \label{sec:hyperelliptic_domain}
 
+The images in Figure~\ref{fig:roots_of_unity_curve} suggest that we can find special fundamental domains for hyperelliptic surfaces. 
+And indeed for every hyperelliptic Riemann surface we can find a basis of the uniformizing group such that the axes of the transformations meet in a common point.
+Further, we can choose a fundamental polygon with minimal number of sides and a single vertex such that the branch points are located at the vertex, the intersection of the axes, and the mid points of the edges of the polygon.
+We believe that the opposite the also true and state the following
 \begin{conjecture}[Characterization of hyperelliptic surfaces]
 Let $R$ be a Riemann surface and let $G$ be its uniformizing Fuchsian group. 
 Let $A_1,\ldots,A_{2g}$ be the generators of $G$ with the relation $A_1\cdots A_{2g}A'_1\cdots A'_{2g}$=1. 
 Then the following statements are equivalent:
 \begin{compactitem}
 \item $R$ is hyperelliptic.
-\item The hyperbolic axes of $A_1,\ldots,A_{2g}$ meet in a common point $p_0$.
+\item The axes of $A_1,\ldots,A_{2g}$ meet in a common point.
 \end{compactitem}
 \end{conjecture}
 
@@ -1456,6 +1539,7 @@ We proof only one direction of this conjecture.
 \begin{proof}
 We will construct a fundamental polygon that is symmetric with respect to a $180\degree$ rotation about $p_0$.
 This rotation defines a conformal involution with $2g+2$ fixed points on $R$ thus renders $R$ hyperelliptic.
+\todo{complete proof or leave it a conjecture.}
 \end{proof}
 
 \subsection{Hyperelliptic vs. non-hyperelliptic curves}
@@ -1489,30 +1573,6 @@ Let $e_1,\ldots,e_6$ be the edges of the generating regular tetrahedron. Conside
 \end{proof}
 
 Figure~\ref{fig:non-hyperelliptic} (left) shows a uniformization of $T$ with an oppositely identified fundamental polygon. The surface is hyperelliptic, thus the generators axes meet in a common point. Disturbing the symmetry a little, e.g., by moving all points of the surface by some random offset destroys the hyperellipticity of the surface, see Figure~\ref{fig:non-hyperelliptic} (right).
-
-\subsection{Mapping an embedded hyperelliptic surface to $\Chat$}
-
-\begin{figure} 
-\centering
-\resizebox{\textwidth}{!}{
-\includegraphics[height=4.5cm]{branched_genus_2/mercator_texture.pdf}
-\includegraphics[height=4.5cm]{branched_genus_2/image_mercator_closeup.pdf}
-}
-\setstretch{0.0}{\scriptsize\tt data/branched\_genus\_2/data.xml} 
-\caption{
-A genus $2$ surface mapped to a branched cover of $\Chat$. 
-The surface exhibits an extrinsic conformal involution, the rotation about the horizontal axis of symmetry. 
-Its fixed points correspond to the branch points of the corresponding hyperelliptic algebraic curve.
-The involution corresponds to the hyperelliptic involution of the curve.  
-Left: Surface and branch points with texture after Mercator projection using the purple
-branch points as poles. 
-Right: A closeup of the stereographic projection of one pair of red and blue branch points.
-} 
-\label{fig:genus2_branched} 
-\end{figure}
-
-If the hyperelliptic involution of a hyperelliptic surface is realizable as an extrinsic involution on an embedded surface we can easily select the branch points as the fix points of this transformation, see Figure~\ref{fig:genus2_branched}. 
-Once the branch points are known we can proceed as described in Section~\ref{sec:discrete_algebraic_curves} to calculate a map from the surface to $\Chat$.
 
 \subsection{Lawson's surface}
 \label{sec:lawson_uniformization}
