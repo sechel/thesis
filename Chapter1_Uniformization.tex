@@ -473,6 +473,7 @@ Note the change of the sign in front of the $\tan$ in the formula and the $\tan$
 Apart from that the hyperbolic and spherical derivatives look the same.
 
 \subsection{Convexity and extension of the domain}
+\label{sec:convexity_extension}
 
 The most powerful numerical methods for non-linear optimization are applicable for convex unconstraint problems \cite{boyd2004convex}.
 The non-linear part of the euclidean and hyperbolic functionals is convex \cite{Bobenko2010}. 
@@ -960,8 +961,11 @@ For each pair of circles $(C, C')$ with $\sigma(C) =C'$ we construct two polygon
 Triangulate the outside of the circles.
 Corresponding edges on $C$ and $C'$ are identified on $R$ but do not have the same length in $\Chat$.
 Corresponding edges in $\Chat$ have the same length-cross-ratio as this characterization is invariant under M\"{o}bius transformations.
-That means we have a unique function $\lcr$ defined on $R$.
+That means we have a unique function $\lcr$ defined on $E$.
 We pick a representative metric $\ell$ to feed into the variational principle and calculate the uniformization, see Section~\ref{sec:cross-ratios} and Figure~\ref{fig:schottky_g1}.
+Note that the lengths $\ell$ that are a representative for $\lcr$ is not a metric in general, i.e., the polygon inequalities might be violated. 
+We will however find the correct minimizer as the functional is defined even for invalid metrics, see Section~\ref{sec:convexity_extension}.
+
 For tori we have only one generator and one pair of circles. 
 The general case of arbitrary genus leads to hyperbolic uniformization groups, i.e. Fuchsian groups, and is treated in Section~\ref{sec:schottky}.
 
