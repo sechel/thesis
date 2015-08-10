@@ -41,7 +41,7 @@ We generalize the variational principles established in \cite{Bobenko2010} and p
 Taken from smooth differential geometry and translated to the discrete setting we observe properties known from classic theorems. 
 This culminates in a new conjecture about hyperelliptic Riemann surfaces. 
 A Riemann surface is hyperelliptic if and only if the axes of the uniformization group elements meet in a common point for a suitable basis of the group, see Figure~\ref{fig:intro_uniformizations} right.
-The tools created in the development of the methods used in this part lay the foundations for the applications presented in the Applications part.
+The tools created in the development of the methods used in this part lay the foundations for the applications presented in Part~\ref{part:applications}.
 
 \begin{figure}
 \centering
@@ -73,15 +73,20 @@ The resulting map is used to create new meshes with regular faces such as hexago
 We show how these meshes can be optimized towards a facade panel layout that can be fabricated in an efficient manner, see Figure~\ref{fig:intro_applications} left.
 
 In Chapter~\ref{chp:quasiisothermic} we exploit the fact that isothermic surfaces possess a unique conformal curvature line parametrization to create meshes with planar quadrilaterals and touching incircles. 
-This problem is formulated as a boundary value problem. 
+This problem is formulated as a boundary value problem of discrete conformal maps.
+As a result we obtain circle pattern representations of surfaces relevant in the architectural context, see Figure~\ref{fig:intro_applications} right.
 
 In Chapter~\ref{chp:gridshells} we use discrete conformal maps as initialization for discrete Tschebyshev meshes, i.e., meshes with equal edges length. 
 Starting from a discrete conformal map we perform non-linear optimization on quadrilateral meshes.
 In doing so we control the curvature and intersection angles of parameter curves in the resulting gridshell construction.
 
-The third part of this work introduces the reader to the software framework build for calculation with discrete surfaces and in particular with discrete conformal mappings, see Chapter~\ref{chp:conformallab}  about {\sc ConformalLab}, and discrete surface optimization, Chapter~\ref{chp:varylab} about {\sc VaryLab}. The author has implemented the software packages {\sc HalfEdge} and {\sc HalfEdgeTools}, see Chapter~\ref{chp:halfedge}, designed as a general tool for the calculation with discrete surfaces. Together with the user interface library {\sc JRWorkspace}, Chapter~\ref{chp:jrworkspace}, it constitutes a flexible framework for the creation of research applications in the context of discrete differential geometry. 
+The third part of this work introduces the reader to the software framework build for calculation with discrete surfaces and in particular with discrete conformal mappings, see Chapter~\ref{chp:conformallab}  about {\sc ConformalLab}, and discrete surface optimization, Chapter~\ref{chp:varylab} about {\sc VaryLab}. 
+Additionally the author has implemented the software packages {\sc HalfEdge} and {\sc HalfEdgeTools}, see Chapter~\ref{chp:halfedge}, designed as a general tool for the calculation with discrete surfaces. 
+Together with the user interface library {\sc JRWorkspace}, Chapter~\ref{chp:jrworkspace}, it constitutes a flexible framework for the creation of research applications in the context of discrete differential geometry. 
 
-The digital data accompanying this work includes most of the examples presented in Chapter~\ref{chp:uniformization} and the main files for the architectural applications. Additionally we include the current state of the source code of the programming framework presented in Part~\ref{part:implementation}. The organization of the data is presented in the appendix.
+The digital data accompanying this work includes most of the examples presented in Chapter~\ref{chp:uniformization} and the main files for the architectural applications. 
+Additionally we include the current state of the source code of the programming framework presented in Part~\ref{part:implementation}. 
+The organization of the data is presented in the appendix.
 
 \section*{Deutsche \"{U}bersetzung}
 Diskrete konforme \"{A}quivalenz von Dreiecksnetzen wurde in \cite{Springborn2008} behandelt und in \cite{Bobenko2010} auf hyperbolische Metriken erweitert.

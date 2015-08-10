@@ -26,15 +26,15 @@
 }
 \setstretch{0.0}{\scriptsize\tt data/introduction/genus\{0/1/3\}\_data.xml} 
 \caption{
-Uniformization of compact Riemann surfaces. 
-The uniformization of topological spheres (left) is treated in Section~\ref{sec:spheres}.
-All spheres are conformally equivalent, we show a map from a topological sphere (top) to the round sphere. 
+Top: Uniformization of compact Riemann surfaces. 
+The uniformization of topological spheres is treated in Section~\ref{sec:spheres}.
+All spheres are conformally equivalent, we show a map to the round sphere. 
 To visualize the conformality we map a grid by Mercator projection with non-standard poles.
-Tori (middle) are covered in Section~\ref{sec:tori}.
+Middle: Tori are covered in Section~\ref{sec:tori}.
 Conformal tori can be parameterized over complex lattices. 
 In this case the torus can be mapped to a rectangle lattice. 
-We adjust ratio of the the mapped grid to match the ratio of the rectangle in order to map the grid seamlessly.
-Uniformizations of surfaces of higher genus (right) are described in Section~\ref{sec:higher_genus}.
+We adjust the ratio of the the mapped grid to match the ratio of the rectangle in order to map the grid seamlessly onto the embedding.
+Bottom: Uniformizations of surfaces of higher genus are described in Section~\ref{sec:higher_genus}.
 The fundamental domain of the parameterization is a (canonical) hyperbolic polygon. 
 It tessellates the hyperbolic plane by hyperbolic translations that generate the uniformizing group of the corresponding Riemann surface.
 How to find a seamless grid pattern matching this domain is an open problem.
@@ -48,10 +48,10 @@ We build upon the work of Bobenko, Pinkall, and Springborn \cite{Bobenko2010} an
 We generalize the setting in a way such that not only the scaling factors $u$ are variables of the functional but also the $\lambda$s itself can be varied. 
 By this we can formulate the theory of conformally equivalent meshes on cyclic polyhedral surfaces. 
 This was briefly noted in the previous work.
-Namely the state the euclidean, hyperbolic, and spherical variational principles together with the gradients and hessian matrices of the corresponding functional. 
+We state the euclidean, hyperbolic, and spherical variational principles together with the gradients and hessian matrices of the corresponding functional. 
 As touched upon in \cite{Bobenko2010} letting the $\lambda$s be variables we are able to create maps to regions bounded by circles.
 
-This text is accompanied by a data compact disk which contains the data for most of the examples presented in this part of the work. 
+This text is accompanied by a compact disk which contains the data for all of the examples presented in this part of the work. 
 Where applicable we give the path to the data on the disk directly under the corresponding figure.
 We describe the usage of the software and the XML data format that was used to create all the results in Chapter~\ref{chp:conformallab}.
 
@@ -65,7 +65,7 @@ Among others we treat examples for cyclic circle domains and special multiply-co
 Uniformizations of cyclic spheres are investigated in Section~\ref{sec:spheres}.
 Section~\ref{sec:tori} is about the uniformization of Riemann surfaces of genus $1$.
 We look into the convergence behavior of discrete conformal maps using discrete elliptic curves.
- Surfaces with genus $g>1$ are treated in Section\ref{sec:higher_genus}.
+ Surfaces with genus $g>1$ are treated in Section~\ref{sec:higher_genus}.
  We describe how to construct Fuchsian uniformizations and the corresponding fundamental domains.
  The uniformization of hyperelliptic Riemann surfaces is a special case of the methods developed in the previous sections, see Section~\ref{sec:hyperelliptic}.
 
@@ -113,28 +113,19 @@ triangulations are cyclic.
 \label{fig:triangle_notation}	
 \end{figure}
 
-We will denote the sets of vertices, edges, and faces of a CW
-complex~$\Sigma$ by $V_{\Sigma}$, $E_{\Sigma}$, and $F_{\Sigma}$, and
-we will often omit the subscript when there is no danger of confusion.
-For notational convenience, we require all CW complexes to be
-\emph{strongly regular}. This means that we require that faces are not
-glued to themselves along edges or at vertices, that two faces are not
-glued together along more than one edge or one vertex, and that edges
-have distinct enpoints and two edges have at most one endpoint in
-common. This allows us to label edges and faces by their vertices. We
-will write $\mathit{ij}\in E$ for the edge with vertices $i,j\in V$ and
-$\mathit{ijkl}\in F$ for the face with vertices $i,j,k,l\in V$. We will always
-list the vertices of a face in the correct cyclic order, so that for
-example the face $\mathit{ijkl}$ has edges $\mathit{ij}$, $\mathit{jk}$,
-$\mathit{kl}$, and $\mathit{li}$.
+We will denote the sets of vertices, edges, and faces of a CW complex~$\Sigma$ by $V_{\Sigma}$, $E_{\Sigma}$, and $F_{\Sigma}$, and we will often omit the subscript when there is no danger of confusion.
+For notational convenience, we require all CW complexes to be \emph{strongly regular}. 
+This means that we require that faces are not glued to themselves along edges or at vertices, that two faces are not glued together along more than one edge or one vertex, and that edges have distinct end-points and two edges have at most one endpoint in common. 
+This allows us to label edges and faces by their vertices. 
+We will write $\mathit{ij}\in E$ for the edge with vertices $i,j\in V$ and $\mathit{ijkl}\in F$ for the face with vertices $i,j,k,l\in V$. 
+We will always list the vertices of a face in the correct cyclic order, so that for example the face $\mathit{ijkl}$ has edges $\mathit{ij}$, $\mathit{jk}$, $\mathit{kl}$, and $\mathit{li}$.
+The only reason for restricting our discussion to strongly regular CW complexes is to be able to use this simple notation. 
+Everything we discuss applies also to general CW complexes.
 
-In some formulas we need to iterate over directed edges. We denote the set 
-of directed edges by $\bar E$. For each edge $\it ij\in E$ the set $\bar E$
-contains two half-edges $\it ij\in \bar E$ and $\it ji \in \bar E$.
-
-The only reason for restricting our discussion to strongly regular CW
-complexes is to be able to use this simple notation. Everything we
-discuss applies also to general CW complexes.
+In some formulas we need to iterate over directed edges. 
+We denote the set of directed edges by $\vect{E}$. 
+For each edge $\it ij\in E$ the set $\vect{E}$ contains two "half-edges" $\it ij\in \vect{E}$ and $\it ji \in \vect{E}$.
+See also Chapter~\ref{chp:halfedge} for details on the implementation of a half-edge data structure.
 
 \subsection{Discrete metrics}
 \label{sec:discrete-metrics}
@@ -192,7 +183,7 @@ and~\eqref{eq:spherical_polygon_ineq}, then there is a unique cyclic spherical p
 }
 \caption{
 Relations between euclidean edge lengths $l$ and conformally equivalent spherical (left) and hyperbolic (right) lengths $\tilde l$ respectively. 
-For the spherical case we have $\sin(\frac{1}{2}\tilde \ell)=\frac{1}{2}\ell$ and for the hyperbolic case it is $\sinh(\frac{1}{2}\tilde \ell)=\frac{1}{2}\ell$.
+For the spherical case we have $\sin\Big(\frac{\ellt}{2}\Big)=\frac{\ell}{2}$ and for the hyperbolic case it is $\sinh\Big(\frac{\ellt}{2}\Big)=\frac{\ell}{2}$.
 }
 \label{fig:geometries}
 \end{figure}
@@ -226,15 +217,15 @@ Two \emph{spherical} cyclic polyhedral surfaces with discrete metrics $\ell,\til
 We will also consider ``mixed versions'': For example, a cyclic euclidean polyhedral surface with discrete metric $\ell:E_{\Sigma}\rightarrow\R_{>0}$ and a cyclic hyperbolic polyhedral surface with discrete metric $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ are discretely conformally equivalent if
 \begin{equation*}
 \sinh\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
-= e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij},
+= e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij}.
 \end{equation*}
-see also Figure~\ref{fig:geometries}. 
 
 Analogously the spherical version for a spherical metric $\tilde\ell:E_{\Sigma}\rightarrow\R_{>0}$ reads
 \begin{equation*}
 \sin\Big(\frac{\tilde\ell_\mathit{ij}}{2}\Big)
-= e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij}.
+= e^{\frac{1}{2}(u_{i}+u_{j})}\ell_\mathit{ij},
 \end{equation*}
+see also Figure~\ref{fig:geometries}. 
 
 \subsection{Characterization by cross-/multi-ratios and M{\"o}bius invariance}
 \label{sec:cross-ratios}
@@ -316,13 +307,14 @@ We also consider the more general mapping problem.
 Solving these problems amounts to the solution of a system of non-linear equations in terms of $u_i$ for $i\in V$ and $\lambda_{\it ij}$ for $\it ij \in E_1$:
 
 \begin{align}
-	\Theta_i &=\sum_{\it ijk \ni i}\alpha_{\it ji}^i & i\in V\label{eq:vertex_system}\\
-	0 &= \alpha_{\it ij}^k + \alpha_{\it ij}^l - (\alpha^i_{\it jl} + \alpha^i_{\it kj}) - (\alpha^j_{\it ki} + \alpha^j_{\it il}) & \textit{ij} \in E_1\label{eq:edge_system}
+	\Theta_i &=\sum_{\it ijk \ni i}\alphat_{\it ji}^i & i\in V\label{eq:vertex_system}\\
+	0 &= \alphat_{\it ij}^k + \alphat_{\it ij}^l - (\alphat^i_{\it jl} + \alphat^i_{\it kj}) - (\alphat^j_{\it ki} + \alphat^j_{\it il}) & \textit{ij} \in E_1\label{eq:edge_system}
 \end{align}
 
-The angle $\alpha_{\it ji}^i$ is the angle at vertex $i$ in the triangle $\it ijk\in F$, see Figure~\ref{fig:triangle_notation}.
+The angle $\alphat_{\it ji}^i$ is the new angle at vertex $i$ in the triangle $\it ijk\in F$, see Figure~\ref{fig:triangle_notation}.
+It is a function of the new edges lengths $\tilde\ell_{\it ij}$.
 Equation~\ref{eq:vertex_system} is the condition for the angles around each vertex to sum up to a prescribed $\Theta$.
-Condition~\ref{eq:edge_system} is satisfied if and only if the quadrilateral $\it ijkl\in \Sigma$ consisting of triangles $\it ijk\in \tilde \Sigma$ and $\it jil\in \tilde \Sigma$ is inscribed in a circle. Note that this condition is valid in all geometries. For the euclidean case the condition reduces to $\pi=\alpha_{\it ij}^k + \alpha_{\it ij}^l$.
+Condition~\ref{eq:edge_system} is satisfied if and only if the quadrilateral $\it ijkl\in \Sigma$ consisting of triangles $\it ijk\in \tilde \Sigma$ and $\it jil\in \tilde \Sigma$ is inscribed in a circle. Note that this condition is valid in all geometries. For the euclidean case the condition reduces to $\pi=\alphat_{\it ij}^k + \alphat_{\it ij}^l$.
 
 \section{Variational principles for discrete conformal maps}
 \label{sec:vari-princ}
@@ -335,6 +327,7 @@ Let $\ell_{\it ij}:E\to R_{>0}$ be the edge lengths of the $\tilde \Sigma$. Defi
 \tilde \ell_{\it ij} &:=& e^{\frac{1}{2}\tilde \lambda_{\it ij}}=e^{\frac{1}{2}(u_i + u_j)}\ell_{\it ij}
 \end{eqnarray*}
 \end{definition}
+In the latter we denote angles that are functions of new lengths $\ellt$ with tilde marks, e.g., $\alphat_{\it jk}^i$.
 
 We consider three functionals defined on the triangulation $\tilde \Sigma$:
 \begin{eqnarray*}
@@ -354,46 +347,46 @@ The functionals can be generically defined to be
 
 The function $f^*_{\it ijk}$ is defined as
 \begin{eqnarray}
-f^*_{\it ijk}(\tilde\lambda) &:=&\beta_{\it jk}^i \tilde \lambda_{jk} + \beta_{\it ki}^j \tilde \lambda_{ki} + \beta_{\it ij}^k \tilde \lambda_{ij}\\ 		
-				&&+\ML(\alpha_{\it jk}^i) + \ML(\alpha_{\it ki}^j) + \ML(\alpha_{\it ij}^k) + \ML(\beta_{\it jk}^i) + \ML(\beta_{\it ki}^j) + \ML(\beta_{\it ij}^k)\\
-				&&+\ML\left(\frac{1}{2}\left(\pi - \alpha_{\it jk}^i - \alpha_{\it ki}^j - \alpha_{\it ij}^k\right)\right).
+f^*_{\it ijk}(\tilde\lambda) &:=&\betat_{\it jk}^i \tilde \lambda_{jk} + \betat_{\it ki}^j \tilde \lambda_{ki} + \betat_{\it ij}^k \tilde \lambda_{ij}\\ 		
+				&&+\ML(\alphat_{\it jk}^i) + \ML(\alphat_{\it ki}^j) + \ML(\alphat_{\it ij}^k) + \ML(\betat_{\it jk}^i) + \ML(\betat_{\it ki}^j) + \ML(\betat_{\it ij}^k)\\
+				&&+\ML\left(\frac{1}{2}\left(\pi - \alphat_{\it jk}^i - \alphat_{\it ki}^j - \alphat_{\it ij}^k\right)\right).
 \end{eqnarray}
-The angles $\beta$ are functions of $\alpha$
+The angles $\betat$ are functions of $\alphat$
 \begin{eqnarray*}
-	2\cdot\beta_{\it jk}^i &:=& \pi + \alpha_{\it jk}^i - \alpha_{\it ki}^j - \alpha_{\it ij}^k\\
-	2\cdot\beta_{\it ki}^j &:=& \pi - \alpha_{\it jk}^i + \alpha_{\it ki}^j - \alpha_{\it ij}^k\\
-	2\cdot\beta_{\it ij}^k &:=& \pi - \alpha_{\it jk}^i - \alpha_{\it ki}^j + \alpha_{\it ij}^k.
+	2\cdot\betat_{\it jk}^i &:=& \pi + \alphat_{\it jk}^i - \alphat_{\it ki}^j - \alphat_{\it ij}^k\\
+	2\cdot\betat_{\it ki}^j &:=& \pi - \alphat_{\it jk}^i + \alphat_{\it ki}^j - \alphat_{\it ij}^k\\
+	2\cdot\betat_{\it ij}^k &:=& \pi - \alphat_{\it jk}^i - \alphat_{\it ki}^j + \alphat_{\it ij}^k.
 \end{eqnarray*}
-The angles $\alpha$ in turn are functions of the new lengths $\tilde \ell$ and are different for each of the geometries.
-Note that using $\alpha_{\it jk}^i + \alpha_{\it ki}^j + \alpha_{\it ij}^k = \pi$ for $\it ijk \in F$ in the euclidean case we get a simplified version of the functional. It is
+The angles $\alphat$ in turn are functions of the new lengths $\tilde \ell$ and are different for each of the geometries.
+Note that using $\alphat_{\it jk}^i + \alphat_{\it ki}^j + \alphat_{\it ij}^k = \pi$ for $\it ijk \in F$ in the euclidean case we get a simplified version of the functional. It is
 \begin{eqnarray*}
-f^{\rm euc}_{\it ijk}( \tilde\lambda) &=& \alpha_{\it jk}^i \tilde\lambda_{jk} + \alpha_{\it ki}^j \tilde\lambda_{ki} + \alpha_{\it ij}^k \tilde\lambda_{ij} + 2\left(\ML(\alpha_{\it jk}^i) + \ML(\alpha_{\it ki}^j) + \ML(\alpha_{\it ij}^k)\right).
+f^{\rm euc}_{\it ijk}( \tilde\lambda) &=& \alphat_{\it jk}^i \tilde\lambda_{jk} + \alphat_{\it ki}^j \tilde\lambda_{ki} + \alphat_{\it ij}^k \tilde\lambda_{ij} + 2\left(\ML(\alphat_{\it jk}^i) + \ML(\alphat_{\it ki}^j) + \ML(\alphat_{\it ij}^k)\right).
 \end{eqnarray*}
 
 The partial derivatives of $E^*$ are
 \begin{eqnarray}
-	\frac{\partial E^*}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alpha_{\it jk}^i \\
-	\frac{\partial E^*}{\partial \lambda_{\it ij}} &=& \frac{1}{2}\left(\alpha_{\it ij}^k + \alpha_{\it ij}^l - (\alpha^i_{\it jl} + \alpha^i_{\it kj}) - (\alpha^j_{\it ki} + \alpha^j_{\it il})\right).\label{eq:lambda_deriv_generic}
+	\frac{\partial E^*}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alphat_{\it jk}^i \\
+	\frac{\partial E^*}{\partial \lambda_{\it ij}} &=& \frac{1}{2}\left(\alphat_{\it ij}^k + \alphat_{\it ij}^l - (\alphat^i_{\it jl} + \alphat^i_{\it kj}) - (\alphat^j_{\it ki} + \alphat^j_{\it il})\right).\label{eq:lambda_deriv_generic}
 \end{eqnarray}
-In the second term the angles $\alpha_{\it ij}^k$ and $\alpha_{\it ji}^l$ are the angles opposite to the edge $\it ij\in E$ in the 
+In the second term the angles $\alphat_{\it ij}^k$ and $\alphat_{\it ji}^l$ are the angles opposite to the edge $\it ij\in E$ in the 
 triangles on both sides of the edge. Note that in the euclidean case Equation~\ref{eq:lambda_deriv_generic} reduces to
 \begin{eqnarray}
-	\frac{\partial E^{\rm euc}}{\partial \lambda_{\it ij}} &=& \alpha_{\it ij}^k + \alpha_{\it ji}^l - \pi.\label{eq:lambda_deriv_euc}
+	\frac{\partial E^{\rm euc}}{\partial \lambda_{\it ij}} &=& \alphat_{\it ij}^k + \alphat_{\it ji}^l - \pi.\label{eq:lambda_deriv_euc}
 \end{eqnarray}
 
-We give formulas for $\alpha$ and derive the Hessian matrices for the functionals in each of the three cases.
+We give formulas for $\alphat$ and derive the Hessian matrices for the functionals in each of the three cases.
 
 \subsection{Euclidean version}
 \label{sec:euclidean_fuctional}
 
-Let $\alpha^i_{\it jk}$ be the angle opposite to edge $\it jk$ in the triangle $\it ijk\in F$ with edge lengths $\ell_{\it ij}$, $\ell_{\it jk}$, and $\ell_{\it ki}$. In euclidean geometry we calculate $\alpha^i_{\it jk}$ using the half-angle formula
-\[\tan\left(\frac{ \alpha_{\it jk}^i}{2}\right) = \sqrt{\frac
+Let $\alphat^i_{\it jk}$ be the angle opposite to edge $\it jk$ in the triangle $\it ijk\in F$ with edge lengths $\ell_{\it ij}$, $\ell_{\it jk}$, and $\ell_{\it ki}$. In euclidean geometry we calculate $\alphat^i_{\it jk}$ using the half-angle formula
+\[\tan\Big(\frac{ \alpha_{\it jk}^i}{2}\Big) = \sqrt{\frac
 {(-\ell_{\it ij} +\ell_{\it jk} +\ell_{\it ki})(\ell_{\it ij} +\ell_{\it jk} -\ell_{\it ki})}
 {(\ell_{\it ij} -\ell_{\it jk} +\ell_{\it ki})(\ell_{\it ij} + \ell_{\it jk} +\ell_{\it ki})}}.\]
 
 We now derive the hessian matrix from the previously calculated hessian with variables $u$ only:
 \begin{eqnarray}
-d^2E^{\rm euc}(u)&=&\frac{1}{2}\sum_{\it ij \in \bar E} \cot  \alpha_{\it ij}^k \cdot (du_i - du_j)^2.
+d^2E^{\rm euc}(u)&=&\frac{1}{2}\sum_{\it ij \in \vect{E}} \cot  \alphat_{\it ij}^k \cdot (du_i - du_j)^2.
 \end{eqnarray}
 From the definition of $\tilde\lambda_{\it ij} := \lambda_{\it ij}+u_i+u_j$ we obtain
 \[du_i-du_j=d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk}.\]
@@ -402,11 +395,11 @@ using $d\lambda = 0$. If now the original $\lambda$s are variables we get extra 
 with non-vanishing $d\lambda_{\it ij}$. It is
 \begin{eqnarray*}
 d^2E^{\rm euc}(\tilde\lambda)
-&=&\frac{1}{2}\sum_{\it ij \in \bar E} \cot  \alpha_{\it ij}^k \cdot (d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk})^2.
+&=&\frac{1}{2}\sum_{\it ij \in \vect{E}} \cot  \alphat_{\it ij}^k \cdot (d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk})^2.
 \end{eqnarray*}
 and
 \begin{eqnarray*}
-d^2E^{\rm euc}(\lambda, u)&=&\frac{1}{2}\sum_{\it ij \in \bar E} \cot  \alpha_{\it ij}^k \cdot (d\lambda_{\it ki}-d\lambda_{\it jk} + du_i - du_j)^2.
+d^2E^{\rm euc}(\lambda, u)&=&\frac{1}{2}\sum_{\it ij \in \vect{E}} \cot  \alphat_{\it ij}^k \cdot (d\lambda_{\it ki}-d\lambda_{\it jk} + du_i - du_j)^2.
 \end{eqnarray*}
 
 \subsection{Hyperbolic version}
@@ -416,10 +409,10 @@ For the hyperbolic case $\lambda$ and $\tilde\lambda$ are defined as before. We 
 \begin{equation}
 \ell^{\rm hyp}_{\it ij} := 2\arsinh(\tilde \ell_{\it ij}).\label{eq:hyperbolic_lengths}
 \end{equation}
-All angles $\alpha$ are calculated using these new hyperbolic edge lengths.
-Thus in the hyperbolic case the function $\alpha$ is defined using the hyperbolic half-angle formula with hyperbolic edge lengths
+All angles $\alphat$ are calculated using these new hyperbolic edge lengths.
+Thus in the hyperbolic case the function $\alphat$ is defined using the hyperbolic half-angle formula with hyperbolic edge lengths
 \[
-  \tan\left(\frac{\alpha^k_{\it ij}}{2}\right)=
+  \tan\Big(\frac{\alpha^k_{\it ij}}{2}\Big)=
   \sqrt{\frac{
       \sinh(\frac{\ell_{ij}-\ell_{jk}+\ell_{ki}}{2})
       \sinh(\frac{\ell_{ij}+\ell_{jk}-\ell_{ki}}{2})
@@ -432,7 +425,7 @@ Thus in the hyperbolic case the function $\alpha$ is defined using the hyperboli
 The hessian matrix of $E^{\rm hyp}(u)$ if $\lambda$s are fixed is given by
 \begin{eqnarray*}
 d^2E^{\rm hyp}(u)
-&=&\tfrac{1}{2}\sum_{\it ij\in \bar E} \cot\beta^k_{\it ij} \cdot \left((du_i-du_j)^2+
+&=&\tfrac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot \left((du_i-du_j)^2+
 \tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(du_i+du_j)^2\right).
 \end{eqnarray*}
  As in the euclidean case we can derive a version with variable $\lambda$s from the fact that 
@@ -442,12 +435,12 @@ d\tilde \lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j.
 Writing the functional as a function of $\tilde \lambda$s we get 
 \begin{eqnarray*}
  d^2E^{\rm hyp}(\tilde \lambda) &=&
- \tfrac{1}{2}\sum_{\it ij\in \bar{E}} \cot\beta^k_{\it ij} \cdot \left((d\tilde\lambda_{\it ik}-d\tilde\lambda_{\it kj})^2+\tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\tilde\lambda_{\it ij})^2\right)
+ \tfrac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot \left((d\tilde\lambda_{\it ik}-d\tilde\lambda_{\it kj})^2+\tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\tilde\lambda_{\it ij})^2\right)
 \end{eqnarray*}
 With non vanishing $d\lambda_{\it ij}$ we get
 \begin{eqnarray*}
 d^2E^{\rm hyp}(\lambda, u)
-&=& \tfrac{1}{2}\sum_{\it ij\in \bar{E}} \cot\beta^k_{\it ij} \cdot 
+&=& \tfrac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot 
  \left((d\lambda_{\it ik}-d\lambda_{\it kj} +  du_i-du_j)^2+\tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\lambda_{\it ij} +du_i+du_j)^2\right)
 \end{eqnarray*}
 
@@ -457,10 +450,10 @@ We define new spherical edge lengths as
 \begin{equation}
 \ell^{\rm sph}_{\it ij} := 2\arcsin(\tilde \ell_{\it ij}).\label{eq:spherical_lengths}
 \end{equation}
-In the spherical case the angles $\alpha$ are calculated on the sphere using spherical lengths as defined in 
+In the spherical case the angles $\alphat$ are calculated on the sphere using spherical lengths as defined in 
 Equation~\ref{eq:spherical_lengths} and the spherical half-angle formula
 \[
-  \tan\left(\frac{\alpha^k_{\it ij}}{2}\right)=
+  \tan\Big(\frac{\alpha^k_{\it ij}}{2}\Big)=
   \sqrt{\frac{
       \sin(\frac{\ell_{ij}-\ell_{jk}+\ell_{ki}}{2})
       \sin(\frac{\ell_{ij}+\ell_{jk}-\ell_{ki}}{2})
@@ -473,7 +466,7 @@ Equation~\ref{eq:spherical_lengths} and the spherical half-angle formula
 Analogously to the hyperbolic case we find the formula for the second derivative:
 \begin{eqnarray*}
 d^2E^{\rm sph}(\lambda, u)
-&=& \tfrac{1}{2}\sum_{\it ij\in \bar{E}} \cot\beta^k_{\it ij} \cdot 
+&=& \tfrac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot 
  \left((d\lambda_{\it ik}-d\lambda_{\it kj} +  du_i-du_j)^2-\tan^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\lambda_{\it ij} +du_i+du_j)^2\right).
 \end{eqnarray*}
 Note the change of the sign in front of the $\tan$ in the formula and the $\tan$ instead of a $\tanh$. 
@@ -488,31 +481,31 @@ This renders the domain non-convex.
 It is possible to extend this domain and continue the function smoothly across the boundary.
 Since we only deal with triangulations the inequalities are just ordinary triangle inequalities. 
 Let 
-\[\ell_{\it ij} < \ell_{\it jk} + \ell_{\it ki}\] 
+\[\ellt_{\it ij} < \ellt_{\it jk} + \ellt_{\it ki}\] 
 be a violated triangle inequality of the triangle $\it ijk \in F$. We define the corresponding angles as
 \begin{equation*}
-\alpha^k_{\it ij} = \pi,\quad \alpha^i_{\it jk} = 0,\quad \alpha^j_{\it ki} = 0
+\alphat^k_{\it ij} = \pi,\quad \alphat^i_{\it jk} = 0,\quad \alphat^j_{\it ki} = 0
 \end{equation*}
 and analogously for thy other two inequalities of the triangle $\it ijk$. 
-For constant $\alpha$ in the extended domain the functionals are linear.
+For constant $\alphat$ in the extended domain the functionals are linear.
 Thus we replace the corresponding $\cot$ weights in the second derivatives by $0$.
 Considering the extended domain we can use unconstraint convex optimization techniques to find critical points of the euclidean and hyperbolic functionals.
 
 The spherical functional is more delicate to optimize.
 In addition to the ordinary triangle inequalities that we treat as before we have the additional constraint~\ref{eq:spherical_polygon_ineq} for the domain.
 Let 
-\[2\pi < \ell_{\it ij} + \ell_{\it jk} + \ell_{\it ki}\]
+\[2\pi < \ellt_{\it ij} + \ellt_{\it jk} + \ellt_{\it ki}\]
 be the violated inequality for the triangle $\it ijk$, i.e., $\it ijk$ is a great circle. 
 Define the corresponding angles as
 \begin{equation*}
-\alpha^k_{\it ij} = \pi,\quad \alpha^i_{\it jk} = \pi,\quad \alpha^j_{\it ki} = \pi.
+\alphat^k_{\it ij} = \pi,\quad \alphat^i_{\it jk} = \pi,\quad \alphat^j_{\it ki} = \pi.
 \end{equation*}
 Again this extends the functional smoothly across the boundary of the domain. 
 As for the triangle inequalities set the corresponding $\cot$ weights equal to $0$ in the Hessian matrix.
 
-We have another constraint in the spherical case, i.e., Equation~\ref{eq:spherical_lengths} is only defined for $\tilde\ell_{\it ij} <= 1$.
+We have another constraint in the spherical case, i.e., Equation~\ref{eq:spherical_lengths} is only defined for $\tilde\ell_{\it ij} \leq 1$.
 Thus we have additional linear constraints for each edge $\it ij$ of the triangulation
-\[\lambda_{\it ij} + u_i + u_j <= 0.\]
+\[\lambda_{\it ij} + u_i + u_j \leq 0.\]
 We give more details on how we find critical points of the non-convex spherical functional in Section~\ref{sec:spherical_computation}.
 
 
@@ -551,11 +544,11 @@ If it does not exist we get a cyclic solution and no circle pattern, see Figure~
 
 \begin{conjecture}[Necessary conditions for the existence of a solution]
 Let $\Sigma$ be bipartite. Let $V_w$ be the set of white boundary vertices and $V_b$ be the set of black boundary vertices.
-Let $\alpha_i$ be the sum of angles at boundary vertex $i$ in the domain of the map and $\tilde \alpha_i$ be the corresponding angle sum in the conformally equivalent image.
+Let $\alpha_i$ be the sum of angles at boundary vertex $i$ in the domain of the map and $\alphat_i$ be the corresponding angle sum in the conformally equivalent image.
 A necessary condition for the solvability of the system is that the change of boundary curvature in both sets cancel out:
 \begin{eqnarray}
-\sum_{i\in V_w}(\alpha_i - \tilde\alpha_i) &=& 0\\
-\sum_{i\in V_b}(\alpha_i - \tilde\alpha_i) &=& 0.
+\sum_{i\in V_w}(\alpha_i - \alphat_i) &=& 0\\
+\sum_{i\in V_b}(\alpha_i - \alphat_i) &=& 0.
 \end{eqnarray}
 \end{conjecture}
 
@@ -813,7 +806,7 @@ We use this procedure to calculate spherical maps of triangulations, see Figure~
 It is possible to use the spherical functional to calculate spherical uniformizations even if it is non-convex. In this case a numerical optimization has to find a saddle point in the energy landscape. This is due to the fact that the direction $v=(1,\ldots,1)$ is a negative direction of the Hessian. That means shrinking or enlarging all scale factors at once decreases the value of the energy. We use a simple yet effective trick that enables us to find a critical point for certain examples. Define the reduced functional
 \begin{equation}
 \label{eq:reduced_spherical}
-\tilde E^{\rm sph}(u)=\max_t \left\{S^{\rm sph}(u + tv)\right\}
+\tilde E^{\rm sph}(u)=\max_t \left\{E^{\rm sph}(u + tv)\right\}
 \end{equation}
 Now minimize the reduced functional $\tilde  E^{\rm sph}$. 
 Following this scheme we create examples that would not be possible using simple minimization with arbitrary initialization, see Figure~\ref{fig:spherical_examples}.
