@@ -1481,7 +1481,7 @@ A hyperelliptic surface is a Riemann surface of genus $g>1$ that has a realizati
 Any Riemann surface of genus $2$ is hyperelliptic.
 In this section we construct uniformizations of discrete versions of hyperelliptic Riemann surfaces.
 
-We conjecture a characterization of hyperelliptic Riemann surfaces in terms of the geometry of the fundamental group. 
+We proof a characterization of hyperelliptic Riemann surfaces in terms of the geometry of the fundamental group. 
 We construct fundamental domains specially designed to match the hyperelliptic structure of the surfaces, i.e., oppositely identified polygons with a branch point at the vertex.
 These objects are the natural generalizations of the euclidean lattices in the elliptic case, see Section~\ref{sec:tori}.
 We check this characterization with a specifically designed hyperelliptic surface of genus $3$.
@@ -1550,20 +1550,43 @@ Once the branch points are known we can proceed as described in Section~\ref{sec
 
 The images in Figure~\ref{fig:roots_of_unity_curve} suggest that we can find special fundamental domains for hyperelliptic surfaces, see also Figure~\ref{fig:fundamental_polygon_algorithm} (bottom) for a more irregular polygon. 
 And indeed for every hyperelliptic Riemann surface we can find a basis of the uniformizing group such that the axes of the transformations meet in a common point.
-Further, we can choose a fundamental polygon with minimal number of sides and a single vertex such that the branch points are located at the vertex, the intersection of the axes, and the mid points of the edges of the polygon.
-We believe that the opposite the also true and state the following
+The opposite the also true and we state the following
 
-\begin{conjecture}[Characterization of hyperelliptic surfaces]
-Let $R$ be a Riemann surface and let $G$ be its uniformizing Fuchsian group. 
-Let $A_1,\ldots,A_{2g}$ be the generators of $G$ with the relation $A_1\cdots A_{2g}A'_1\cdots A'_{2g}$=1. 
+\begin{theorem}[Characterization of hyperelliptic surfaces]
+Let $R$ be a Riemann surface and let $G$ be its uniformizing Fuchsian group with generators $A_1,\ldots,A_{2g}$.
 Then the following statements are equivalent:
 \begin{compactitem}
 \item $R$ is hyperelliptic.
 \item The axes of $A_1,\ldots,A_{2g}$ meet in a common point.
 \end{compactitem}
-\end{conjecture}
+Further, we can choose a fundamental polygon with minimal number of sides and a single vertex such that the branch points of the corresponding hyperelliptic curve are located at the vertex, the intersection of the axes, and the mid points of the edges of the polygon.
+\end{theorem}
 
-We proof only one direction of this conjecture.
+\begin{proof}
+Let $a_1,\ldots,a_{2g}$ be the axes of the transformations $A_1,\ldots,A_{2g}$ and let $x_0$ be their common point of intersection. 
+Let $h$ be the hyperbolic rotation about $x_0$ by $180\degree$. $h$ is a hyperbolic isometry and $h^2=1$, i.e., $h$ is a holomorphic involution of $\H^2$ with fixed point $x_0$. 
+We will show that $hGh^{-1}=hGh=G$. 
+This renders $h$ a holomorphic involution on the surface $R=\H^2/G$.
+
+Let $A_k$ be a generator of $G$ and let $\ell_k$ be the distance between $x_0$ and $A_kx_0$ denoted by $d(x_0,A_kx_0)$.
+\begin{eqnarray}
+d(x_0,hA_khx_0)&=&d(hx_0,hA_kx_0)\label{eq:hyper_dist_fixpoint}\\
+&=&d(x_0,A_kx_0)\label{eq:hyper_dist_isometry}\\
+&=&\ell_k.
+\end{eqnarray}
+Here we use that $x_0$ is a fixed point of $h$ (Equation~\ref{eq:hyper_dist_fixpoint}) and that $h$ is a hyperbolic isometry (Equation~\ref{eq:hyper_dist_isometry}). 
+The axes $a_k$ of the generators $A_k$ are invariant under the transformation $h$ since its fixed point is contained in $a_k$.
+Using the fact the $A_k$ is an isometry and applying the triangle inequality on the line $a_k$ we yield
+\begin{eqnarray*}
+d(A_kx_0,A_khA_khx_0)&=&d(A_kx_0,x_0)\pm d(x_0,A_khA_khx_0)\\
+&=&\ell_k.
+\end{eqnarray*}
+This implies that $d(x_0,A_khA_khx_0)=0$ and $A_khA_khx_0=x_0$.
+That means that $A_khA_kh$ is the identity on the axis $a_k$ thus it is the identity on $\H^2$. 
+Now take any group element $B$ as the composition of generators $A_1,\dots,A_{2g}$. 
+The conjugation $hBh$ is a group element of $G$ as the conjugation of each of the generators is.
+\end{proof}
+
 
 \begin{proof}
 We will construct a fundamental polygon that is symmetric with respect to a $180\degree$ rotation about $p_0$.
