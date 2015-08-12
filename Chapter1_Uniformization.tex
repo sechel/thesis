@@ -932,7 +932,6 @@ We calculate a the modulus of the discretized surface as $\tilde \tau \approx 0.
 
 \subsection{Tori given by Schottky data}
 \label{sec:tori_schottky}
-\todo{Include the explicit example from Boris.}
 \begin{figure}
 \centering
 \resizebox{\textwidth}{!}{
@@ -1142,7 +1141,6 @@ with $\alpha \approx -0.88$.
 In the second convergence experiment we choose $p_1,\ldots,p_n\in \mathbb S^2$ randomly. 
 We want to analyze how the quality of the triangulation affects the convergence behavior. 
 We define quanities that measure the regularity of the triangulation based on length cross-ratios given at edges or length multi-ratios given at faces of the triangulation
-\todo{$\lcr$ not yet defined}
 \begin{eqnarray*}
 	Q_{\lcr}(e) &:=& \frac{1}{2}\left(\lcr(e) + \frac{1}{\lcr(e)}\right) - 1\label{eq:quality_lcr}\\
 	Q_{\lmr}(f) &:=& \frac{1}{2}\left(\lmr(f) + \frac{1}{\lmr(f)}\right) - 1\label{eq:quality_lmr}.
@@ -1200,7 +1198,7 @@ R=\mathbb{H} / G.
 \end{equation}
 Typically the group $G$ is presented a set of generating elements $A,B,C,D,\ldots$ of hyperbolic isometries together with a relation 
 \begin{equation}
-P(A,B,C,D,\ldots)=1
+G=\left<A,B,C,D,\ldots\mid P(A,B,C,D,\ldots)=1\right>
 \end{equation}
 where $P$ is a product of elements and inverse elements of $G$. 
 $G$ is called a Fuchsian group if it contains only hyperbolic elements.
@@ -1316,11 +1314,11 @@ A proof that this procedure leads to a valid domain can be found in~\cite{Jost20
 
 The number of products built during the transformation of a linked pair $a$, $b$ depends on the number of polygon sides between $a$, $b$, $a'$, and $b'$. 
 Let $C$ be the number of sides between $a$ and $b$. Let $D$ and $E$ be the number of sides between $b$, $a'$, and $b'$ respectively. 
-Then the total number of products in this transformation is $\Sigma=6C+4D+2E$. 
+Then the total number of products in this transformation is $6C+4D+2E$. 
 In step $1$, connecting $a$ and $b$, we can perform the cut-and-past operation using transformation $b$ and a cut between the end of $a$ and the end of $b$ in counter-clockwise order. 
 This moves the intermediate sides between $a$ and $b$ out of the way for the next $2$ steps. 
-By this we have a total number of products $\Sigma=2C+4D+2E$. 
-We use a greedy implementation that chooses the smallest $\Sigma$ in each step to select $a$ and $b$.
+By this we have a total number of products $2C+4D+2E$. 
+We use a greedy implementation that chooses the smallest number of products in each step to select $a$ and $b$.
 Alternatively one could enumerate the transformation tree and choose the cheapest path of all transformation sequences.
 
 \begin{figure}
@@ -1468,7 +1466,7 @@ The three holes are filled and triangulated (highlighted edges) to visualize the
 \end{figure}
 
 Let R be a Riemann surface with genus $g>1$ and $n$ boundary components.
-There is a Fuchsian uniformization of $R$ that maps the boundary components onto circles.\todo{Find reference}
+There is a Fuchsian uniformization of $R$ that maps the boundary components onto circles. \todo{Find reference}
 In the discrete setting we construct this uniformization using a similar approach as for euclidean circle domains.
 Fill each of the boundary components with a face.
 Treat the extra faces as if they were cyclic faces to begin with, i.e., the corresponding $\lambda$s in the auxiliary triangulation are variables of the variational principle.
