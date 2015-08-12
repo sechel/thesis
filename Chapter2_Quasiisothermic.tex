@@ -720,34 +720,6 @@ surface together
 with its dual and isometrically deformed versions with different turning angles.
 
 
-\section{Conclusions and future research}
-\label{sec:future}
-The main contributions of this article are, on the one hand, the definition of 
-quasiisothermic parameterizations together with a new algorithm to
-compute parameterizations of surfaces that optimizes the corresponding quality measure.
-On the other hand, we have defined a new energy for meshes with touching incircles.
-
-We see the main advantage of the algorithm presented in
-Section~\ref{sec:parametrization} in its simplicity and its applicability to
-shell-like roof structures which arise in architectural models. Since these
-models often have almost constant mean curvature and thus allow for an almost
-isothermic parameterization, our algorithm performs particularly well on these
-examples.
-
-The new energy described in Section~\ref{sec:s-isothermic} is closely related
-to the article of \cite{SchiftnerHWP2009} dealing with
-circle packing meshes. They explicitly do not treat quadrilateral meshes since
-they are aware of the shape restrictions and focus on triangle meshes instead.
-The shape restriction lies in the core of isothermic surfaces but
-did not influence our results dramatically for the surfaces in our focus. How
-to approximate arbitrary surfaces by isothermic surfaces is unknown and will be
-subject to future research. The results of Section~\ref{sec:s-isothermic}
-suggest that this might be possible using related methods.
-
-Our new functional generates quad circle packing meshes in the sense of
-Schiftner \emph{et al.}. For surfaces arising in architectural context (in
-particular for shell-like roofs) we are able to construct aesthetically
-pleasing quad meshes supporting a circle packing. 
 
 \section{A discrete s-isothermic ellipsoid and its dual surface}
 
@@ -763,9 +735,9 @@ $\vcenter{\hbox{\includegraphics[width=0.5\textwidth]{image/ellipsoid01_disks.pd
 
 \begin{figure}
 \centering
-\resizebox{0.8\textwidth}{!}{
-\includegraphics[width=0.5\textwidth]{image/ellipsoid01_dual.pdf}
-\includegraphics[width=0.5\textwidth]{image/ellipsoid01_dual_disks.pdf}
+\resizebox{\textwidth}{!}{
+\includegraphics[height=10cm]{image/ellipsoid01_dual.pdf}
+\includegraphics[height=10cm]{image/ellipsoid01_dual_disks.pdf}
 }
 \caption{Dual surface of discrete s-isothermic ellipsoid of Figure~\ref{fig:ellipsoid}. }
 \label{fig:ellipsoid_dual} 
@@ -790,38 +762,40 @@ the convergence behavior of the s-isothermic functional is considerable better i
 model of singularities. We therefore like to call only the discrete ellipsoid with curvature 
 lines at symmetry planes a discrete ellipsoid, see Figure~\ref{fig:ellipsoid} and~\ref{fig:ellipsoid_dual}.
 
+
+
+\section{Conclusions and future research}
+\label{sec:future}
+The main contributions of this article are, on the one hand, the definition of 
+quasiisothermic parameterizations together with a new algorithm to
+compute parameterizations of surfaces that optimizes the corresponding quality measure.
+On the other hand, we have defined a new energy for meshes with touching incircles.
+
+We see the main advantage of the algorithm presented in
+Section~\ref{sec:parametrization} in its simplicity and its applicability to
+shell-like roof structures which arise in architectural models. Since these
+models often have almost constant mean curvature and thus allow for an almost
+isothermic parameterization, our algorithm performs particularly well on these
+examples.
+
+The new energy described in Section~\ref{sec:s-isothermic} is closely related
+to \cite{SchiftnerHWP2009} dealing with
+circle packing meshes. They explicitly do not treat quadrilateral meshes since
+they are aware of the shape restrictions and focus on triangle meshes instead.
+The shape restriction lies in the core of isothermic surfaces but
+did not influence our results dramatically for the surfaces in our focus. How
+to approximate arbitrary surfaces by isothermic surfaces is unknown and will be
+subject to future research. The results of Section~\ref{sec:s-isothermic}
+suggest that this might be possible using related methods.
+
+Our new functional generates quad circle packing meshes in the sense of
+Schiftner \emph{et al.}. For surfaces arising in architectural context (in
+particular for shell-like roofs) we are able to construct aesthetically
+pleasing quad meshes supporting a circle packing. 
+
 \subfilebibliography
 \end{document}
 
 %%% Local Variables:
 %%% TeX-master: "Thesis.tex"
 %%% End:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
