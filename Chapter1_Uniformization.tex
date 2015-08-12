@@ -539,19 +539,40 @@ We prescribe boundary angles such that we obtain a map to a parallelogram.
 Corners of the domain are mapped to corners in the image. 
 Technically we introduce auxiliary edge by triangulating the squares. $\lambda$s on these edges are treated as free variables. 
 In a solution to the mapping problem we end up with cyclic polygons, see Equation~\ref{eq:lambda_deriv_euc}.
-We note that if a Schramm-circle-pattern \cite{S97} exist for the given combinatorics of the polyhedral surface than the minimizer realizes this pattern in addition to being cyclic. 
-If it does not exist we get a cyclic solution and no circle pattern, see Figure~\ref{fig:cyclic_parallelogram} top-row versus bottom-row.
-\todo{Why? Somehow the uniqueness of the Schramm pattern has to come in}
 
-\begin{conjecture}[Necessary conditions for the existence of a solution]
+Note that if a Schramm-circle-pattern \cite{S97} exist for the given combinatorics and boundary data of the polyhedral surface than the minimizer realizes this pattern since its solution is the unique circle pattern with the given boundary conditions.
+If it does not exist we get a cyclic solution and no circle pattern, see Figure~\ref{fig:cyclic_parallelogram} top-row versus bottom-row.
+
+\begin{theorem}[Necessary conditions for the existence of a solution]
 Let $\Sigma$ be bipartite. Let $V_w$ be the set of white boundary vertices and $V_b$ be the set of black boundary vertices.
-Let $\alpha_i$ be the sum of angles at boundary vertex $i$ in the domain of the map and $\alphat_i$ be the corresponding angle sum in the conformally equivalent image.
-A necessary condition for the solvability of the system is that the change of boundary curvature in both sets cancel out:
+Let $\alpha_i$ be the sum of angles at boundary vertex $i$ in the domain of the map and $\Theta_i$ be the corresponding angle sum in the conformally equivalent image.
+A necessary condition for the solvability of the system is that the change of boundary curvature in both vertex sets cancel out:
 \begin{eqnarray}
-\sum_{i\in V_w}(\alpha_i - \alphat_i) &=& 0\\
-\sum_{i\in V_b}(\alpha_i - \alphat_i) &=& 0.
+\sum_{i\in V_w}(\alpha_i - \Theta_i) &=& 0\label{eq:boundary_white}\\
+\sum_{i\in V_b}(\alpha_i - \Theta_i) &=& 0\label{eq:boundary_black}.
 \end{eqnarray}
-\end{conjecture}
+\end{theorem}
+
+\begin{proof}
+Let $p:V\to \C$ the domain of the map consisting of squares. Each of the squares has a cross-ratio of $-1$. 
+It forms a parallelogram realization of the corresponding cross-ratio system \cite[pp. 311--318]{BobenkoSuris2008}. 
+Let $z:V\to \C$ be the conformally equivalent image of the discrete conformal map with given boundary conditions $\Theta_i:V\to \R_{>0}$. 
+There is a function $w:V\to \C$ together with following system of equations (Hirota system):
+\begin{equation*}
+z_i-z_j=w_iw_j(p_i-p_j)
+\end{equation*}
+for each directed edge $\it ij \in \vect{E}$.
+We express the sum of white and black boundary angles with the help of this system. 
+Let $k_1,\ldots,k_n$ be the boundary vertices in cyclic order.
+We use the indices $1,\ldots,n$ to refer to these vertices and obtain
+\begin{eqnarray*}
+\sum_{i=1}^{n/2}\Theta_{2i} &=&\sum_{i=1}^{n/2}\arg\left\{\frac{z_{i-1}-z_i}{z_{i+1}-z_i}\right\}\\
+&=&\sum_{i=1}^{n/2}\arg\left\{\frac{w_{2i}w_{2i-1}(p_{2i-1}-p_{2i})}{w_{2i}w_{2i+1}(p_{2i+1}-p_{2i})}\right\}\\
+&=&\arg\prod_{i=1}^{n/2}\frac{p_{2i-1}-p_{2i}}{p_{2i+1}-p_{2i}}\\
+&=&\sum_{i=1}^{n/2}\alpha_{2i}
+\end{eqnarray*}
+If $k_1$ is a black vertex we get Equation~\ref{eq:boundary_white} and Equation~\ref{eq:boundary_black} for a white $k_1$.
+\end{proof}
 
 In the examples of Figure~\ref{fig:cyclic_parallelogram} this condition is met. 
 In the top example all corners have the same color, thus all curvature changes add up and cancel.
