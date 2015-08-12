@@ -323,9 +323,7 @@ be altered by the user of the program. This user decision is then stored as a {\
 we use the static properties.
 
 \section{{\sc JRworkspace} and {\sc Jreality}}
-
-The user interface of {\sc Jreality} \cite{JrealityWebsite} is based on the {\sc JRworkspace} API and reference
-implementation.
+\label{sec:jrworkspace_jreality}
 
 \begin{figure}
 \centering
@@ -338,8 +336,17 @@ usually registers only a subset of these features.}
 \label{fig:jrworkspace_jreality}
 \end{figure}
 
-A custom {\sc Jreality} application is based on the {\tt JRViewer} class. This class uses {\tt SimpleController} to manage
+{\sc Jreality} \cite{JrealityWebsite} is a scene graph and visualization library written in {\sc Java}.
+The user interface of {\sc Jreality} is based on the {\sc JRworkspace} API and reference
+implementation.
+A custom {\sc Jreality} application can be based on the central {\tt JRViewer} class. 
+This class uses {\tt SimpleController} to manage
 plug-in registration and start-up. 
+The design of the {\tt JRViewer} application make intensive use of the plug-in concept.
+The architecture of the application is divided into separate modules which in turn are realized as plug-ins.
+The core functionality is provided by plug-ins implementing the the content, the scene, the view, and the tool system.
+Then there are plug-ins providing the tool bar and menu bar as well as the overall layout of shrink panels as described above.
+
 
 \subfilebibliography
 \end{document}
