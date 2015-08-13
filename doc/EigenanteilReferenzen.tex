@@ -1,24 +1,35 @@
-\documentclass[fontsize=12pt, paper=a4]{scrlttr2}
+\documentclass[11pt]{article}
+\usepackage{german}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\setlength{\parindent}{0pt}
 
-% Dont forget to read the KOMA-Script documentation, scrguien.pdf
-
-\setkomavar{fromname}{} % your name
-\setkomavar{fromaddress}{Address \\ of \\ Sender}
-
-\setkomavar{signature}{} % printed after the \closing
-\renewcommand{\raggedsignature}{\raggedright} % make the signature ragged right
-
-\setkomavar{subject}{} % subject of the letter
+\title{Eigenanteildarstellung und Literaturliste}
+\author{Stefan Sechelmann}
+\date{\today}
 
 \begin{document}
-\begin{letter}{Da}
+\maketitle
 
-\opening{To whom it may concern.}
+\section{Quellen, Eigenanteildarstellung und Ver\"{o}ffentlichungen}
+
+In diesem Abschnitt nenne ich die Hauptquellen meiner Dissertation und stelle meinen Eigenanteil an der pr\"{a}sentieren Arbeit dar. Ich gebe die Referenzen zu schon ver\"{o}ffentlichten Teilen der Arbeit an.
+
+\subsection*{Kapitel 1}
+Die Hauptquellen sind \cite{Bobenko2010, Springborn2008}. Mitgewirkt haben 
 
 
+\section{Eidesstattliche Versicherung}
+Ich versichere, dass ich die Dissertation selbst\"{a}ndig verfasst habe.
 
 
-\closing{} %eg. Regards
+\vspace{2cm}
+Berlin, den \today, Stefan Sechelmann
 
-\end{letter}
-\end{document}
+
+\bibliographystyle{alpha}
+\bibliography{../Thesis}
+
+\end{document}  
