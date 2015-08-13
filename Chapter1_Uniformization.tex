@@ -1549,7 +1549,7 @@ Once the branch points are known we can proceed as described in Section~\ref{sec
 \label{sec:hyperelliptic_domain}
 
 The images in Figure~\ref{fig:roots_of_unity_curve} suggest that we can find special fundamental domains for hyperelliptic surfaces, see also Figure~\ref{fig:fundamental_polygon_algorithm} (bottom) for a more irregular polygon. 
-And indeed for every hyperelliptic Riemann surface we can find a basis of the uniformizing group such that the axes of the transformations meet in a common point.
+And indeed for every hyperelliptic Riemann surface we can find a basis of the uniformizing group such that the axes of the transformations meet in a common point \cite{schmutz2000}.
 The opposite the also true and we state the following
 
 \begin{theorem}[Characterization of hyperelliptic surfaces]
@@ -1563,6 +1563,7 @@ Further, we can choose a fundamental polygon with minimal number of sides and a 
 \end{theorem}
 
 \begin{proof}
+This was first proved by Schmutz Schaller in \cite{schmutz2000} in a different fashion.
 Let $a_1,\ldots,a_{2g}$ be the axes of the transformations $A_1,\ldots,A_{2g}$ and let $x_0$ be their common point of intersection. 
 Let $h$ be the hyperbolic rotation about $x_0$ by $180\degree$. $h$ is a hyperbolic isometry and $h^2=1$, i.e., $h$ is a holomorphic involution of $\H^2$ with fixed point $x_0$. 
 We will show that $hGh^{-1}=hGh=G$. 
@@ -1585,8 +1586,28 @@ This implies that $d(x_0,A_khA_khx_0)=0$ and $A_khA_khx_0=x_0$.
 That means that $A_khA_kh$ is the identity on the axis $a_k$ thus it is the identity on $\H^2$. 
 Now take any group element $B$ as the composition of generators $A_1,\dots,A_{2g}$. 
 The conjugation $hBh$ is a group element of $G$ as the conjugation of each of the generators is.
-\todo{Proof opposite direction.}
+
+Let now $R$ be any hyperelliptic Riemann surface. There is a holomorphic involution $h$ on $R$ with $2g + 2$ fixed points $x_1,\ldots,x_{2g+2}$. 
+Let $\tilde x_1$ be a point in the universal cover corresponding to $x_0$ on the $R$. Let $\tilde x_3,\ldots,\tilde x_{2g+2}$ be the closest points in the universal cover corresponding to the other fixed points of $h$. Note that we leave out $x_2$ as we only need $2g$ cycles to define a basis of uniformizing group. 
+The points $\tilde x_3,\ldots,\tilde x_{2g+2}$ are not unique but the following reasoning works for arbitrary choices.
+In the universal cover $h$ corresponds to an isometric involution $\tilde h$ with one fixed point, e.g., a hyperbolic rotation by $180\degree$ about $\tilde x_1$.
+Consider the shortest geodesics $\tilde a_3,\ldots,\tilde a_{2g+2}$ connecting $\tilde x_1$ with $\tilde x_3,\ldots,\tilde x_{2g+2}$.
+Then the curve $(a_i, h a_i)$ is a simple closed geodesic loop on $R$.
+All curves $(a_i, h a_i)$ intersect uniquely at $x_1$. 
+For a geodesic $(\tilde a_i, \tilde h \tilde a_i)$ define $\ell_i$ to be its lengths.
+Define $A_i$ to be the hyperbolic motion with axis $(\tilde a_i, \tilde h \tilde a_i)$ and transport distance $\ell_i$.
+Then $A_3,\ldots,A_{2g+2}$ form a basis of the unformizing Fuchsian group.
+By definition the axes of $A_3,\ldots,A_{2g+2}$ intersect in a common point.
 \end{proof}
+
+We now construct a symmetric fundamental domain for hyperelliptic surfaces.
+As in the proof let $\tilde x_1$ be the fixed point of the rotation corresponding to the hyperelliptic involution of $R$ in the universal cover.
+Pick the closest point $\tilde x_2$ in the universal cover corresponding to $x_2$ on $R$.
+As before $\tilde x_2$ is not unique.
+Construct a fundamental domain of the group by reflecting $\tilde x_2$ across the axes of the generators $A_i$ to obtain a fundamental polygon with $4g$ sides.
+By construction the polygon is symmetric with respect to $\tilde h$. 
+$\tilde h$ is an involution on the fundamental domain defined by the polygon.
+An alternative algorithm to construct this polygon is given in Section~\ref{sec:fundamental_domains}.
 
 \subsection{Hyperelliptic vs. non-hyperelliptic curves}
 \label{sec:non-hyperelliptic}
@@ -1610,9 +1631,9 @@ Consider the elliptic-hyperelliptic surface that is constructed as follows. Take
 
 On both copies of this torus pick four points $\hat\lambda_1,\ldots,\hat\lambda_4$ and $\tilde\lambda_1,\ldots,\tilde\lambda_4$ in the center of the faces of the tetrahedron belonging to one of the sheets of the elliptic surface. On $\hat T$ choose paths connecting the pairs $(\hat\lambda_1,\hat\lambda_2)$ and $(\hat\lambda_3,\hat\lambda_4)$. On $\tilde T$ choose corresponding paths. Cut $\hat T$ and $\tilde T$ along theses paths and glue corresponding sheets transversally. The resulting surface $T$ is a four sheeted cover of the tetrahedron with genus $g = 3$.
 
-\begin{proposition}
+\begin{theorem}
 $T$ is a hyperelliptic Riemann surface.
-\end{proposition}
+\end{theorem}
 
 \begin{proof}
 Let $e_1,\ldots,e_6$ be the edges of the generating regular tetrahedron. Consider the reflection $\sigma_i$ across a plane through the midpoint of edge $e_i$ containing the opposite edge of $e_i$.  Because of the symmetry of the tetrahedron $\sigma_i$ induces an anti-holomorphic involution on $T$. There are six involutions belonging to the edges of the tetrahedron. Let $e_i$ and $e_j$ be two opposite edges. Then $\sigma_i \circ \sigma_j$ is a holomorphic involution of $T$. Its eight fix points are the mid points of $e_i$ and $e_j$.
