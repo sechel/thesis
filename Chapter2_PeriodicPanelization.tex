@@ -5,7 +5,7 @@
 \label{chp:periodic_conformal_maps}
 
 This publication is joint work with Thilo R\"orig, Agata Kycia, and 
-Moritz Fleischmann. It was previously published in~\cite{Roerig2014}.
+Moritz Fleischmann. It was previously published in the proceedings of the conference "Advances in Architectural Geometry 2014"~\cite{Roerig2014}.
 
 \emph{Abstract:} 
 We present a new method to obtain periodic conformal parameterizations of
@@ -66,7 +66,7 @@ high degree of similarity of these elements. Yet, the inherent
 UV subdivision of \nurbs surfaces offers limited control over the
 layout, shape and configuration of the panels. While strategies for
 the controlled and careful creation of freeform surfaces have been
-presented (see~\cite{GlymphSCMS2004}) and realized, the tiling of true
+presented and realized~\cite{GlymphSCMS2004}, the tiling of true
 freeform surfaces through alternative algorithms is still a challenge.
 
 The quality of a surface panelization solution can be defined in
@@ -83,7 +83,7 @@ repetitive. The contributions of this paper are:
   topology conformally to a cylinder or a cone of revolution. This
   allows us to obtain seamless patterns on surfaces. It is a
   generalized version of the discrete conformal parameterization
-  scheme described by~\cite{Springborn2008}.
+  scheme described by Springborn, Schr\"{o}der, and Pinkall~\cite{Springborn2008}.
 \item {\bf Regular elements}:
   % 
   We show how the periodic discrete parameterization can be used to
@@ -168,21 +168,22 @@ Figure~\ref{fig:failure}, middle.
 \subsubsection{PanelingTools for Rhino.}
 The paneling tools of Rhinoceros use the UV parameterization of the
 underlying surface to populate grid-points over the surface. With the
-help of such a grid, panels are placed onto the surface,
-see~\cite{panelingtools}. The shapes of the panels depend heavily on
+help of such a grid, panels are placed onto the surface~\cite{panelingtools}. 
+The shapes of the panels depend heavily on
 the \nurbs-parameterization. An example is shown in
 Figure~\ref{fig:failure}, left.
 
 \subsubsection{Hexagonal tilings.}
 In the architectural context, hexagonal panelizations have been
-studied by~\cite{ZimmerCHK2013, Troche2008} and \cite{SchiftnerHWP2009}. These
-aproaches however do not include regularity or special boundary
-alignment as introduced in the current work.  In \cite{SchiftnerHWP2009} the
+studied, e.g., by Zimmer~\emph{et~al.}~\cite{ZimmerCHK2013} and Troche~\cite{Troche2008}. 
+These aproaches however do not include regularity or special boundary
+alignment as introduced in the current work. In the work of 
+Schiftner~\emph{et~al.}~\cite{SchiftnerHWP2009} the
 result of the panelization depends on the choice of an initial
 triangle mesh that is optimized towards touching incircles. This
 allows for a torsion free support structure of a non planar
 hex-mesh. Hexagonal tilings for triangulated surfaces also have been
-studied by \cite{NieserPPZ2012}. They focus on regularity but not on
+studied by Nieser~\emph{et~al.}~\cite{NieserPPZ2012}. They focus on regularity but not on
 boundary conditions.
 
 \begin{figure}[tb]
@@ -201,13 +202,13 @@ There are a vast number of parameterization schemes for meshes. To
 elaborate on all methods is beyond the scope of this section and we
 describe only the most relevant results here. General purpose
 parameterization methods for triangle meshes produce high quality quad
-or hex meshes for unstructured input data, see for
-instance~\cite{BommesZK2009, AlexaCL2000, Springborn2008}. They have been used with
-success in the architectural context, e.g., by~\cite{BoPKWW2011} and
-\cite{Sechelmann2012}.
+or hex meshes for unstructured input 
+data~\cite{BommesZK2009, AlexaCL2000, Springborn2008}. 
+They have been used with success in the architectural context, e.g., by
+ Bo~\emph{et~al.}~\cite{BoPKWW2011} and Sechelmann~\emph{et~al.}~\cite{Sechelmann2012}.
 
 The basis of our method are conformally equivalent triangle meshes as
-described by \cite{Springborn2008}. The straight forward method to map a
+described by Springborn~\emph{et~al.}~\cite{Springborn2008}. The straight forward method to map a
 surface with this approach is to cut it open and map it to a rectangle
 domain. This method yields boundary aligned conformal maps that
 however do not match along the introduced cut, see
@@ -236,7 +237,7 @@ overcome this limitation is the content of the following section.
 In this section we describe our algorithm for the creation of periodic
 conformal maps for cylindrical meshes/surfaces, i.e., surfaces with
 the same topology as a cylinder. First we will review the discrete
-conformal maps of~\cite{Springborn2008}. Then we show how it can be generalized
+conformal maps of Springborn~\emph{et~al.}~\cite{Springborn2008}. Then we show how it can be generalized
 to yield periodic maps to cylinders or cones.
 
 A smooth \emph{conformal map} between two surfaces is a map that
@@ -247,8 +248,8 @@ maps from the plane to a surface and vice-versa. These can be used to
 map different patterns onto surfaces in a way that only isotropic
 stretch/uniform scaling is applied to the pattern elements.
 %
-The method described in~\cite{Springborn2008} is a triangle mesh based
-discretization of conformal maps. For each vertex~$v$ of
+The method we build onto is a triangle mesh based
+discretization of conformal maps~\cite{Springborn2008}. For each vertex~$v$ of
 the surface -- interior or boundary -- we may prescribe an
 angle~$\theta_v$ that corresponds to the angle sum of adjacent
 triangles in the target mesh.  Starting from an input mesh and target
@@ -533,8 +534,8 @@ successful submission of the project, we decided to continue the
 development and test the method of discrete conformal mappings on more
 extreme base geometries.
 
-During these tests a Grasshopper plug-in for \VaryLab,
-see~\cite{varylab-web-page} has been developed and refined. We focused
+During these tests a Grasshopper plug-in for \VaryLab has been developed 
+and refined~\cite{varylab-web-page}. We focused
 on tiling surfaces with a large distortion/stretch and double
 curvature. The main aim was to tile these surfaces without
 distorsion. This led to focus on the boundary conditions. The designer
@@ -643,13 +644,13 @@ shown in Figures~\ref{fig:cone_maps_teaser} and~\ref{fig:hex_example}.
 \section{Implementation}
 \label{sec:implementation}
 
-We use the software package \VaryLab, \cite{varylab-web-page}, in
+We use the software package \VaryLab~\cite{varylab-web-page} in
 combination with Rhino's Grasshopper to calculate discrete conformal
 maps to the cylinder or cone as shown in Figure~\ref{fig:cone_maps_teaser}.
 Figure~\ref{fig:grasshopper} shows the Grasshopper network used to
 connect Rhino and \VaryLab.
-\VaryLab uses the optimization package {\sc TAO/PETSc}, see~\cite{tao-user-ref, 
-petsc-web-page, jpetsctao-web-page}, to perform energy
+\VaryLab uses the optimization package {\sc TAO/PETSc}~\cite{tao-user-ref, 
+petsc-web-page, jpetsctao-web-page} to perform energy
 minimization.
 %
 We calculated the exact gradients of the functionals for the

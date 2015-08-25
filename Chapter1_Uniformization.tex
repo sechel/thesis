@@ -34,7 +34,7 @@ Middle: Tori are covered in Section~\ref{sec:tori}.
 Conformal tori can be parameterized over complex lattices. 
 In this case the torus can be mapped to a rectangle lattice. 
 We adjust the ratio of the the mapped grid to match the ratio of the rectangle in order to map the grid seamlessly onto the embedding.
-Bottom: Uniformizations of surfaces of higher genus are described in Section~\ref{sec:higher_genus}.
+Bottom: We describe uniformizations of surfaces of higher genus in Section~\ref{sec:higher_genus}.
 The fundamental domain of the parameterization is a (canonical) hyperbolic polygon. 
 It tessellates the hyperbolic plane by hyperbolic translations that generate the uniformizing group of the corresponding Riemann surface.
 How to find a seamless grid pattern matching this domain is an open problem.
@@ -43,13 +43,13 @@ How to find a seamless grid pattern matching this domain is an open problem.
 \end{figure}
 
 In this chapter we investigate various mathematical applications of discrete conformal maps. 
-We build upon the work of Bobenko, Pinkall, and Springborn \cite{Bobenko2010} and Springborn, Schr\"{o}der, and Pinkall \cite{Springborn2008} for the euclidean case. We present examples for uniformizations of Riemann surfaces of genus $0$, $1$, and $g>1$ based on this theory, see Figure~\ref{fig:intro_uniformization}.
+We build upon the work of Bobenko, Pinkall, and Springborn~\cite{Bobenko2010} and Springborn, Schr\"{o}der, and Pinkall~\cite{Springborn2008} for the euclidean case. We present examples for uniformizations of Riemann surfaces of genus $0$, $1$, and $g>1$ based on this theory, see Figure~\ref{fig:intro_uniformization}.
 
 We generalize the setting in a way such that not only the scaling factors $u$ are variables of the functional but also the $\lambda$s itself can be varied. 
 By this we can formulate the theory of conformally equivalent meshes on cyclic polyhedral surfaces. 
 This was briefly noted in the previous work~\cite[p. 2211]{Bobenko2010}.
 We state the euclidean, hyperbolic, and spherical variational principles together with the gradients and hessian matrices of the corresponding functional. 
-As touched upon by Bobenko et al. letting the $\lambda$s be variables we are able to create maps to regions bounded by circles~\cite[p. 2212]{Bobenko2010}.
+As touched upon by Bobenko~\emph{et~al.} letting the $\lambda$s be variables we are able to create maps to regions bounded by circles~\cite[p. 2212]{Bobenko2010}.
 
 This text is accompanied by a compact disk which contains the data for all of the examples presented in this part of the work. 
 Where applicable we give the path to the data on the disk directly under the corresponding figure.
@@ -579,7 +579,7 @@ In the top example all corners have the same color, thus all curvature changes a
 In the second example the two bottom corners have a different color than the two top corners.
 As the result is a parallelogram again the change of angles cancels out.
 On the contrary, a square made from $7$ squares in each direction does not meet the condition with the given boundary angles.
-Here opposite corners have the same color
+Here opposite corners have the same color.
 The change of curvature has the same sign for opposite corners, hence the conditions are not true.
 Experiments show that we cannot solve the problem in such a case.
 
@@ -1095,7 +1095,7 @@ The goal of this section is to provide insights into the convergence behavior of
 &=&4z^3+4(\lambda_1\lambda_2+\lambda_2\lambda_3+\lambda_3\lambda_1)z - 4\lambda_1\lambda_2\lambda_3\\
 &=&4z^3-g_2z-g_3.
 \end{eqnarray*}
-The period matrix $[\tau]$, also called the modulus of the curve, can be calculated using the periods of the elliptic lattice $\{\omega_1,\omega_3\}$ such that $\tau = \frac{\omega_2}{\omega_1}$. These can be calculated from the invariants $\{g_2,g_3\}$, e.g., using {\sc Mathematica}s build-in function {\tt WeierstrassHalfPeriods[$\{g_2,g_3\}$]}, see~\cite{WeierstrassHalfPeriods_website}.
+The period matrix $[\tau]$, also called the modulus of the curve, can be calculated using the periods of the elliptic lattice $\{\omega_1,\omega_3\}$ such that $\tau = \frac{\omega_2}{\omega_1}$. These can be calculated from the invariants $\{g_2,g_3\}$, e.g., using {\sc Mathematica}s build-in function {\tt WeierstrassHalfPeriods[$\{g_2,g_3\}$]}~\cite{WeierstrassHalfPeriods_website}.
 
 Let $\lambda_1, \lambda_2, \lambda_3, \lambda_4 \in \C$ be the branch points of an elliptic curve $C$. We create a discrete version of the curve by choosing $n$ points $p_1,\ldots,p_n$ equally distributed on $\S^2$. The triangulation for one sheet of the discrete curve is the convex hull of $\{\lambda_1,\ldots,\lambda_4,p_1,\ldots, p_4\}$. Choose non-intersecting edge-paths connecting the pairs $(\lambda_1,\lambda_2)$ and $(\lambda_3,\lambda_4)$. To create a doubly covered sphere we glue a second copy of the triangulated sphere transversely along corresponding paths, see Section~\ref{sec:discrete_algebraic_curves}.
 
@@ -1255,7 +1255,7 @@ Then
 is the unique hyperbolic metric without cone singularities that is by definition conformally equivalent to~$\ell$, see Section~\ref{sec:discr-conf-equiv}.
 
 Following the combinatorics of $\Sigma$ and the new metric $\tilde \ell$ we create a simply-connected realization by breadth-first enumeration of the triangles of $T$. 
-As a different approach one could use a shortest-path scheme as described in \cite{EricksonH02} and cut the surface open to form a simply connected domain.  
+As a different approach one could use a shortest-path scheme as described by Erickson and Har-Peled~\cite{EricksonH02} and cut the surface open to form a simply connected domain.  
 The resulting domain has boundary edges and vertices. 
 Each boundary edge is identified with a unique partner. 
 Each boundary vertex is identified with one or more other vertices. 
@@ -1279,7 +1279,7 @@ Move adjacent geodesic arcs correspondingly, see Figure~\ref{fig:fundamental_pol
 In the new domain $v_1$ is not a vertex anymore. 
 Proceed until the domain has only one vertex. 
 This process can also be seen as a sequence of cut-and-paste operations reducing the number of vertices $v\neq v_0$ one by one. 
-A proof that this leads to a valid fundamental domain can be found in \cite[p. 48]{Jost2007}.
+A proof that this leads to a valid fundamental domain can be found in the book "Compact Riemann Surfaces" by Jost~\cite[p. 48]{Jost2007}.
 
 It can be tedious to find a system of loops on a surface that lead to a specific order of sides in the fundamental polygon. 
 We give algorithms that transform a given fundamental polygon and the corresponding group presentation to canonical form, i.e., the order of polygon sides is $aba'b'cdc'd'\cdots$. 
@@ -1288,7 +1288,7 @@ Additionally we give an algorithm that transforms the domain to opposite identif
 
 During all transformations of the polygon and the group presentation we like to minimize the number of group element products. 
 This is due to numerical reasons. 
-Hyperbolic motions tend to accumulate numerical errors quite fast when building products, see~\cite{Floyd2002}.
+Hyperbolic motions tend to accumulate numerical errors quite fast when building products~\cite{Floyd2002}.
 
 \subsubsection*{Canonical Fundamental Domain.}
 
@@ -1310,7 +1310,7 @@ In order to minimize the number of products we choose $a$ and $b$ such the numbe
 We proceed cutting as described before to bring $b$ next to $a'$ and analogously $a'$ next to $b'$. 
 We end up with a new polygon and the order $aba'b'\cdots$. 
 Repeat this algorithm for the rest of the sides to arrive at canonical form. 
-A proof that this procedure leads to a valid domain can be found in~\cite{Jost2007}.
+Again a proof can be found, e.g., in the book by Jost~\cite[p. 51]{Jost2007}.
 
 The number of products built during the transformation of a linked pair $a$, $b$ depends on the number of polygon sides between $a$, $b$, $a'$, and $b'$. 
 Let $C$ be the number of sides between $a$ and $b$. Let $D$ and $E$ be the number of sides between $b$, $a'$, and $b'$ respectively. 
@@ -1339,13 +1339,11 @@ The vertices at the generators $C$ and $D$ are calculated from $p_4$.
 \end{figure}
 
 By this procedure we get a canonically identified fundamental polygon. 
-This polygon may be non-convex. Following the approach described in \cite{keen1966} we can transform this domain into a strictly convex fundamental polygon by selection of a different base point for the same group of transformations. Let
+This polygon may be non-convex. Following the approach described by Linda Keen~\cite{keen1966} we can transform this domain into a strictly convex fundamental polygon by selection of a different base point for the same group of transformations. Let
 \begin{equation}
 G=\left<A,B,C,D,\ldots\in \mathit{PSL}(2,\mathbb R)\mid ABA'B'CDC'D'\ldots=1\right>
 \end{equation}
 be a canonically presented group and $aba'b'cdc'd'\ldots$ be a corresponding fundamental polygon, see Figure~\ref{fig:keen_polygon} (left). 
-The elements are given such that $A(a)=a'$ and $B(b')=b$. 
-Here we use the notation $A':=A^{-1}$. 
 Then the axes of the generators $A$ and $B$ intersect in a point $p_0$. 
 Choosing $p_0$ as the base point of a new fundamental polygon renders it convex and uniquely defined for the given group and presentation. 
 See Figure~\ref{fig:keen_polygon} for a genus $2$ instance of this algorithm.

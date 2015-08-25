@@ -5,7 +5,7 @@
 \label{chp:gridshells}
 
 This publication is joint work with Elisa Lafuente Hern\'andez, Thilo R\"orig, and Christoph Gengnagel and was
-previously published in~\cite{Lafuente2012} under the title \emph{Topology optimisation of Regular and Irregular Elastic Gridshells by means of a Non-linear Variational Method}. The author has contributed the variational principle used in the optimization gridshell meshes. He also contributed the comparison to the explicit parameterization of the sphere.
+previously published in the proceedings of the conference "Advances in Architectural Geometry 2012"~\cite{Lafuente2012} under the title \emph{Topology optimisation of Regular and Irregular Elastic Gridshells by means of a Non-linear Variational Method}.
 
 \emph{Abstract:}
 Gridshells composed of elastically-bent profiles offer significant cost and time advantages during the production, transport and construction processes. Nevertheless, the shaping of the initially flat grid also generates important bending stresses on the structures, reducing therewith their bearing capacity against external loads. An optimization of the grid topology in order to minimize the profiles curvature and, with it, the initial stresses is therefore crucial. In this paper a non-linear variational method for optimizing topologies of elastic gridshells with regular and irregular meshes is presented. Different case studies of double-curved gridshells show the advantages and capacity of this method.
@@ -16,9 +16,9 @@ Elastic gridshells make use of the principle of active-bending \cite{AlpermannLG
 
 In order to diminish the initial stresses, profiles with low sections and materials with low modulus of elasticity are usually chosen. However, this leads to a reduction of the global stiffness of the gridshell which can result in stability problems. With an optimization of the grid topology (orientation and arrangement of the grid profiles) a minimization of the profiles curvature can be obtained and the load-bearing capacity of the gridshells improved \cite{Lafuente2011}.  
 
-In \cite{Kuijvenhoven2009}, M. Kuijvenhoven proposed a design methodology for elastic gridshells based on particle-spring models. In this method, the gridshell topology results from an iterative process, where the initially flat grid is progressively approached, vertically, towards the reference surface by shaping springs until achieving the maximum allowable curvature on the grid. Material and sectional properties of the grid profiles are given as input information. Dynamic relaxation is used here to calculate the equilibrium of forces on the grids. 
+In 2009 M. Kuijvenhoven proposed a design methodology for elastic gridshells based on particle-spring models~\cite{Kuijvenhoven2009}. In this method, the gridshell topology results from an iterative process, where the initially flat grid is progressively approached, vertically, towards the reference surface by shaping springs until achieving the maximum allowable curvature on the grid. Material and sectional properties of the grid profiles are given as input information. Dynamic relaxation is used here to calculate the equilibrium of forces on the grids. 
 
-\cite{BouhayaBC2011}, Laboratoire Navier of the Paris-Est University, presented a topology optimization method based on the geometric compass method, described by Frei Otto's Institute for Lightweight Surface Structures in \cite{IL1974}, combined with genetic algorithms. This method consists on mapping grids, differing on the orientation and angle between the crossing profiles, on an imposed surface as in the compass method and selecting the one with lowest curvature using stochastic genetic algorithms.
+Bouhaya~\emph{et~al.}~\cite{BouhayaBC2011}, Laboratoire Navier of the Paris-Est University, present a topology optimization method based on the geometric compass method described by Frei Otto's Institute for Lightweight Surface Structures~\cite{IL1974}, combined with genetic algorithms. This method consists on mapping grids, differing on the orientation and angle between the crossing profiles, on an imposed surface as in the compass method and selecting the one with lowest curvature using stochastic genetic algorithms.
 
 In this paper a non-linear variational method for optimizing topologies of regular and irregular elastic gridshells is proposed. The optimization parameters {\it mesh size}, {\it reference surface} and {\it profiles curvature} are defined as penalizing energies (the difference to the desired values will be considered) with corresponding weighting factors. The resulting grid definition is calculated by minimizing the linear combination of these three energies. In the context of discrete differential geometry a mesh with constant edge lengths is called a discrete Chebyshev net. So we aim for meshes with the Chebyshev property that approximate a given surface with low curvature in the parameter curves. 
 
@@ -86,10 +86,10 @@ Here and $e_{\mathrm{\it{i1}}}$, $e_{\mathrm{\it{i2}}}$, $e_{\mathrm{\it{i3}}}$,
 \label{fig:initial_grids}
 \end{figure}
 \subsection{Initialization and parameters}
-The energy $E(M)$ is in general non-convex. That means there can be many local optima, and the solution found by some gradient descent depends on the initialization. We propose to use a conformal re-mesh of the reference surface as initialization. The conformality of the parameterization gives us control over the angles between edges of the quadrilaterals. We can introduce shear to the parameterization and modify this angle globally. By this we start with meshes that have almost constant edge angle (see Fig.~\ref{fig:initial_grids}).
+The energy $E(M)$ is in general non-convex. That means there can be many local optima, and the solution found by some gradient descent depends on the initialization. We propose to use a conformal re-mesh of the reference surface as initialization. The conformality of the parameterization gives us control over the angles between edges of the quadrilaterals. We can introduce shear to the parameterization and modify this angle globally. By this we start with meshes that have almost constant edge angle, see Figure~\ref{fig:initial_grids}.
 
 \subsection{Implementation}
-We use the conformal mapping algorithm by \cite{Springborn2008} to create the
+We use the conformal mapping algorithm by Springborn~\emph{et~al.}~\cite{Springborn2008} to create the
 initial mesh. To minimize the energy $E(M)$ we use the non-linear optimization package
 PETSc/TAO \cite{petsc-web-page,tao-user-ref} and its java binding 
 \cite{jpetsctao-web-page}. We have made good experiences with normalizing the
@@ -101,7 +101,7 @@ a few iterations.
 \section{Case studies regular gridshells}
 
 \subsection{The sphere}
-A simple test of our method is the meshing of a part of a sphere. We will compare our results with a reference mesh that we obtain from a special smooth parameterization of the sphere. Namely there is a smooth parameterization of the sphere that has the property that the lengths of partial derivatives are constant throughout the surface. That means that for small discretization steps we can produce meshes with equal edge lengths from such a parameterization. The formula for this unit sphere can be found in \cite{Voss1881}:
+A simple test of our method is the meshing of a part of a sphere. We will compare our results with a reference mesh that we obtain from a special smooth parameterization of the sphere. Namely there is a smooth parameterization of the sphere that has the property that the lengths of partial derivatives are constant throughout the surface. That means that for small discretization steps we can produce meshes with equal edge lengths from such a parameterization. The formula for this unit sphere can be found in the work of Voss~\cite{Voss1881}:
 \begin{eqnarray*}
 	x(u,v)&=&\sn(u+v, k)\cdot \cos(k\cdot (u-v))\\
 	y(u,v)&=&\sn(u+v, k)\cdot \sin(k\cdot (u-v))\\
@@ -118,14 +118,14 @@ Here $\sn$ and $\cn$ are the Jacobi elliptic functions with modulus $k$. For dif
 \label{fig:spheres}
 \end{figure}
 
-We measure qualitative curvature of these curves like in our energy $E_{\textrm{\scriptsize{cur}}}$ as $(\pi - \angle(e,\tilde e))^2$. Where $e$ and $\tilde e$ are opposite edges at a vertex of the quad mesh. The curvature mean of the parameter curves is decreasing for $k$ approaching zero (see Fig.~\ref{fig:curvature_plot}).
+We measure qualitative curvature of these curves like in our energy $E_{\textrm{\scriptsize{cur}}}$ as $(\pi - \angle(e,\tilde e))^2$. Where $e$ and $\tilde e$ are opposite edges at a vertex of the quad mesh. The curvature mean of the parameter curves is decreasing for $k$ approaching zero, see Figure~\ref{fig:curvature_plot}.
 \begin{figure}
 \centering
 \includegraphics[width=0.7\linewidth]{images/spheres/curvature2_embedded.pdf}
 \caption{The mean value of $(\pi - \angle(e,\tilde e))^2$ (blue) on parameter curves of the explicit sphere parameterization is plotted against the parameter $k$. The green curve indicates the number of edges in the corresponding mesh.}
 \label{fig:curvature_plot}
 \end{figure}
-Using our optimization scheme from the previous section we can reproduce the mesh shapes obtained for different $k$. The initial mesh is here a sheared conformal re-mesh of a part of the unit sphere (see Fig.~\ref{fig:spheres_optimized}).
+Using our optimization scheme from the previous section we can reproduce the mesh shapes obtained for different $k$. The initial mesh is here a sheared conformal re-mesh of a part of the unit sphere, see Figure~\ref{fig:spheres_optimized}.
 \begin{figure}
 \centering
 \includegraphics[width=0.32\linewidth]{images/spheres/start45_new.pdf}
@@ -134,7 +134,8 @@ Using our optimization scheme from the previous section we can reproduce the mes
 \includegraphics[width=0.32\linewidth]{images/spheres/start45_optimized_new.pdf}
 \includegraphics[width=0.32\linewidth]{images/spheres/start15_optimized_new.pdf}
 \includegraphics[width=0.32\linewidth]{images/spheres/start0_optimized_new.pdf}
-\caption{Initialization meshes (top) and optimized geometries (bottom). The obtained geometry depends on the initial shear angle and on the boundary shape of the mesh. This leads to geometries that correspond visually to $k\approx 0.4$ (Fig.~\ref{fig:spheres} left), $k\approx 0.9$ (Fig.~\ref{fig:spheres} middle). For an orthogonal init mesh we obtain a solution that is not contained in the family of smooth parameterizations of \cite{Voss1881}. The edge lengths are constant and equal to $0.11$ in all solutions.}
+\caption{Initialization meshes (top) and optimized geometries (bottom). The obtained geometry depends on the initial shear angle and on the boundary shape of the mesh. This leads to geometries that correspond visually to $k\approx 0.4$ (Fig.~\ref{fig:spheres} left), $k\approx 0.9$ (Fig.~\ref{fig:spheres} middle). For an orthogonal init mesh we obtain a solution that is not contained in the family of smooth parameterizations defined by Voss~\cite{Voss1881}. 
+The edge lengths are constant and equal to $0.11$ in all solutions.}
 \label{fig:spheres_optimized}
 \end{figure}
 As the sphere suggests there might be solutions with low curvature in the parameter curves that are not of use. In our case two angles of the quadrilaterals tend to zero with decreasing curvature. At the same time the number of edges needed for the mesh is increasing. The shear angle of the start mesh gives the family of parameterizations for the sphere and one can easily obtain a good trade-off between number of edges and curvature of the parameter curves.
@@ -147,7 +148,7 @@ The mesh size of all three grids is 1m and the starting angle between crossing d
 
 In the following pictures the grid topologies resulting from both methods are shown and compared for the three gridshell structures. The curvatures of the profiles have been calculated as the reciprocal of the radius of the circles defined by three consecutive grid nodes. The curvature distributions, calculated by the variational method in terms of $E_{\textrm{\scriptsize{cur}}}$, have been also illustrated through colored points. The size of the points is proportional to the curvature. The maximum and minimum curvatures correspond to the red and blue colors, respectively.
 
-On the case of the anticlastic gridshell (see Fig.~\ref{fig:Compass_Anti}), the main difference between the grid topologies is located on the corners of the lateral edges. There, the topology resulting from the variational method tends to go more transversally to the front sides. Also there, the critical curvature of the grid given by the compass method is to be found. The variational method provided a grid topology with a more homogeneous curvature distribution and a maximum curvature value reduced to 87\%.
+On the case of the anticlastic gridshell, see Figure~\ref{fig:Compass_Anti}, the main difference between the grid topologies is located on the corners of the lateral edges. There, the topology resulting from the variational method tends to go more transversally to the front sides. Also there, the critical curvature of the grid given by the compass method is to be found. The variational method provided a grid topology with a more homogeneous curvature distribution and a maximum curvature value reduced to 87\%.
 
 \begin{figure}
 \centering
@@ -163,9 +164,9 @@ On the case of the anticlastic gridshell (see Fig.~\ref{fig:Compass_Anti}), the 
 \label{fig:Compass_Syn}
 \end{figure}
 
-On the case of the synclastic gridshell (see Fig.~\ref{fig:Compass_Syn}), slight differences can be found on the whole lateral sides between the grid topologies obtained with both methods. The grid configuration given by the compass method presents extreme curvature values on the corners of the lateral edges and on the gridshell crown. The variational method provided a grid configuration with lower curvature values on the top and higher on the bottom of the gridshell, the  maximum profiles curvature could be reduced to 90\% compared to the compass method.
+On the case of the synclastic gridshell, see Figure~\ref{fig:Compass_Syn}, slight differences can be found on the whole lateral sides between the grid topologies obtained with both methods. The grid configuration given by the compass method presents extreme curvature values on the corners of the lateral edges and on the gridshell crown. The variational method provided a grid configuration with lower curvature values on the top and higher on the bottom of the gridshell, the  maximum profiles curvature could be reduced to 90\% compared to the compass method.
 
-On the case of the gridshell analogue to the Downland Museum (see Fig.~\ref{fig:Compass_Downland}), differences between the grid topologies increase when approaching to the face sides. In both methods, higher curvature values are to be found on the crowns and lower on the valleys. By the grid resulting from the variational method, extreme curvature values are less concentrated as in the compass method configuration. The maximum profiles curvature could be minimized to 88\%.
+On the case of the gridshell analogue to the Downland Museum, see Figure~\ref{fig:Compass_Downland}, differences between the grid topologies increase when approaching to the face sides. In both methods, higher curvature values are to be found on the crowns and lower on the valleys. By the grid resulting from the variational method, extreme curvature values are less concentrated as in the compass method configuration. The maximum profiles curvature could be minimized to 88\%.
 
 \begin{figure}
 \centering
@@ -187,7 +188,7 @@ With the variational method, grid topologies with lower and more homogeneously d
 
 The anticlastic, synclastic and Downland-like gridshells have been further optimized by reducing the weighting factor of the {\it reference surface} energy and with it allowing a spacing between grid and target surface up to 0.6 m. Depending on the curvature distribution, the grids have been deformed above or below the reference surface.
 
-On the case of the anticlastic gridshell, the corners of the lateral sides deform outside reducing here the maximum curvature values up to 45\% and obtaining a more homogeneous distribution on the centre of the gridshell. The mean curvature of the profiles could be reduced up to 51\%. By the synclastic gridshell, the lateral edges tend to distort outwards in the middle and the crown of the grid slightly upwards. The maximum and mean profiles curvatures were reduced up to 79\% and 78\%, respectively. By the gridshell with anticlastic and synclastic curvatures, the crowns deform inwards and the valleys outwards getting a flatter surface. The maximum and mean curvatures of the profiles could be reduced here up to 76\% and 64\%, respectively (see Fig.~\ref{fig:Compass_SurfaceComparison}).
+On the case of the anticlastic gridshell, the corners of the lateral sides deform outside reducing here the maximum curvature values up to 45\% and obtaining a more homogeneous distribution on the centre of the gridshell. The mean curvature of the profiles could be reduced up to 51\%. By the synclastic gridshell, the lateral edges tend to distort outwards in the middle and the crown of the grid slightly upwards. The maximum and mean profiles curvatures were reduced up to 79\% and 78\%, respectively. By the gridshell with anticlastic and synclastic curvatures, the crowns deform inwards and the valleys outwards getting a flatter surface. The maximum and mean curvatures of the profiles could be reduced here up to 76\% and 64\%, respectively, see Figure~\ref{fig:Compass_SurfaceComparison}).
 
 \begin{figure}
 \centering
@@ -196,7 +197,7 @@ On the case of the anticlastic gridshell, the corners of the lateral sides defor
 \label{fig:Balken}
 \end{figure}
 
-The following diagram  (Fig.~\ref{fig:Balken}) outlines the optimization results achieved with the variational method in comparison to the compass method. The maximum and mean curvatures are illustrated for the three gridshells. The color of the bars represents the distance from the reference surface. Generally, a higher reduction of the mean curvature is achieved, as the energy $E_{\textrm{\scriptsize{cur}}}$ to be minimized corresponds to the sum of all curvature values.
+The diagram shown in Figure~\ref{fig:Balken} outlines the optimization results achieved with the variational method in comparison to the compass method. The maximum and mean curvatures are illustrated for the three gridshells. The color of the bars represents the distance from the reference surface. Generally, a higher reduction of the mean curvature is achieved, as the energy $E_{\textrm{\scriptsize{cur}}}$ to be minimized corresponds to the sum of all curvature values.
 
 \section{Case studies irregular gridshells}
 
@@ -204,7 +205,7 @@ The following diagram  (Fig.~\ref{fig:Balken}) outlines the optimization results
 
 A further optimization can also be achieved by allowing the distance between grid nodes to vary, reducing thus the curvature on the grid locally and globally. A spherical calotte of 15m diameter and 10m height has been firstly optimized, with constant segment length (regular gridshell) and a starting angle between profiles of $67.5^\circ$, and afterwards  by letting the segment lengths progressively differ (irregular gridshell). 
 
-On the case of the calotte with regular mesh, due to the characteristic polar singularities of the spheres, strong local concentrations of curvature can be observed. By letting the mesh size vary, the segment lengths become shorter on the poles and the also typical alignment in S of the grid tends to disappear (see Fig.~\ref{fig:SphereIrregular}).
+On the case of the calotte with regular mesh, due to the characteristic polar singularities of the spheres, strong local concentrations of curvature can be observed. By letting the mesh size vary, the segment lengths become shorter on the poles and the also typical alignment in S of the grid tends to disappear, see Figure~\ref{fig:SphereIrregular}.
 
 \begin{figure}
 \centering
@@ -215,7 +216,7 @@ On the case of the calotte with regular mesh, due to the characteristic polar si
 
 \subsection{Practical application: The Flying Dome}
 
-Elastic gridshells offer great advantages on temporary structures since the initially straight and afterwards elastically shaped profiles composing the grid allow rapid and cost-efficient production, transport and erection processes. For a temporary hanging 3D Projection Hemisphere (Flying Dome) of 10m diameter, an irregular elastic gridshell has been designed (see Fig.~\ref{fig:Renderings}). The project is a cooperation between the UdK Berlin, the TU Berlin, the Fraunhofer Institut FIRST and industrial partners and is planned to be built in Berlin in October 2012.
+Elastic gridshells offer great advantages on temporary structures since the initially straight and afterwards elastically shaped profiles composing the grid allow rapid and cost-efficient production, transport and erection processes. For a temporary hanging 3D Projection Hemisphere (Flying Dome) of 10m diameter, an irregular elastic gridshell has been designed, see Figure~\ref{fig:Renderings}. The project is a cooperation between the UdK Berlin, the TU Berlin, the Fraunhofer Institut FIRST and industrial partners and is planned to be built in Berlin in October 2012.
 
 The structure consists in a hybrid construction composed of an irregular elastic gridshell between a double-layer membrane stabilized by underpressure (vacuum) of 0.08mbar. The profiles of the gridshell are made of GFK and have a tubular section of 20mm diameter and 3mm thickness.A third layer of profiles assures the bracing of the grid and activates its shear-bearing capacity. A PVC-coated polyester fabric and a PVC projection foil have been planned for the outer and inner membranes, respectively. The extremities of the bent profiles are fixed on a steel box ring of 100x100x4mm. The hemisphere hangs from the roof through four cables of 6mm diameter and is horizontally stabilized by other four cables of 3mm diameter. The total weight of the structure is approximately 1.3 tons.
 
@@ -226,7 +227,7 @@ The structure consists in a hybrid construction composed of an irregular elastic
 \label{fig:Renderings}
 \end{figure}
 
-An irregular mesh was chosen in order to minimize the profiles curvature (the maximum curvature could be reduced up to 80% compared to the regular gridshell) and to obtain a more interesting arrangement of the grid pattern. Physical modelling was used to analyse the visual effects (see Fig.~\ref{fig:Modell}). 
+An irregular mesh was chosen in order to minimize the profiles curvature (the maximum curvature could be reduced up to 80\% compared to the regular gridshell) and to obtain a more interesting arrangement of the grid pattern. Physical modeling was used to analyze the visual effects, see Figure~\ref{fig:Modell}. 
 
 \begin{figure}
 \centering
@@ -235,7 +236,7 @@ An irregular mesh was chosen in order to minimize the profiles curvature (the ma
 \label{fig:Modell}
 \end{figure}
 
-Contrary to regular grids, grids with irregular meshes cannot be completely deployed and can only be partially pre-assembled. The two profile layers will be joined and bent in a progressive process in order not to exceed the maximum allowable curvature during the erection of the structure. By means of FEA, the assembling process of the hemisphere has been simulated and the maximum stresses during the shaping of the grid and by underpressure loading have been controlled (see Fig.~\ref{fig:FEMGlobal}). 
+Contrary to regular grids, grids with irregular meshes cannot be completely deployed and can only be partially pre-assembled. The two profile layers will be joined and bent in a progressive process in order not to exceed the maximum allowable curvature during the erection of the structure. By means of finite element analysis, the assembling process of the hemisphere has been simulated and the maximum stresses during the shaping of the grid and by underpressure loading have been controlled, see Figure~\ref{fig:FEMGlobal}. 
 
 \begin{figure}
 \centering

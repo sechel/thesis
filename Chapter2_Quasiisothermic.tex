@@ -5,7 +5,7 @@
 \label{chp:quasiisothermic}
 
 This chapter is joint work with Thilo R{\"o}rig and Alexander Bobenko.
-Most of the material presented here was published previously in \cite{Sechelmann2012}. We added Section~\ref{sub:isometric} on isometric deformations of s-isothermic surfaces and Section~\ref{sec:discrete_ellipsoid} about a discrete ellipsoid.
+Most of the material presented here was published previously in the proceedings of the conference "Advances in Architectural Geometry 2012"~\cite{Sechelmann2012}. We added Section~\ref{sub:isometric} on isometric deformations of s-isothermic surfaces and Section~\ref{sec:discrete_ellipsoid} about a discrete ellipsoid.
 
 \emph{Abstract:} 
 In architecture the quality of a quad-mesh depends on the shape of the individual
@@ -64,14 +64,14 @@ A key problem in architectural geometry is to convert surfaces created by form
 finding methods, physical simulation, or manual modeling to quadrilateral
 meshes, which are preferred for glass-steel structures. There are many 
 possible quad-meshes that approximate a given shape and we study those that consist
-of principle-curvature-aligned conformal squares (see Fig.~\ref{fig:all_mesh}). 
+of principle-curvature-aligned conformal squares, see Figure~\ref{fig:all_mesh}. 
 Not all surface shapes can be approximated by such meshes. A smooth analog of
 a surface with this property is called an isothermic surface. These surfaces admit conformal
 curvature line parameterizations, i.e., angle-preserving parameterizations
 aligned with the principle curvature directions. Their discrete counterpart are 
 so-called s-isothermic meshes. These meshes have the additional property that
-neighboring quadrilaterals possess touching incircles (see
-Fig.~\ref{fig:s_isothermic}).  
+neighboring quadrilaterals possess touching incircles, see
+Figure~\ref{fig:s_isothermic}.
 
 The class of isothermic surfaces comprises, for example, constant mean
 curvature surfaces. Roofs that act shell-like turn out to have almost constant
@@ -125,15 +125,15 @@ curvature line parameterizations related to our quasiisothermic scheme. We can
 only give a selection of previous work here.
 % general parameterization 
 For a general background on mesh parameterization we refer to the surveys by
-\cite{Floater2005} and \cite{ShefferPR2006}.
+Floater and Hormann~\cite{Floater2005} and Sheffer~\emph{et~al.}~\cite{ShefferPR2006}.
 
 % conformal 
 Our algorithmic approach is based on the discrete conformal equivalence of
-triangle meshes introduced in \cite{Springborn2008} (see
-\cite{Bobenko2010} for the mathematical background). The
-convex functional optimized in Springborn~\emph{et~al.}\ constructs a conformally
+triangle meshes as introduced by Springborn~\emph{et~al.}~\cite{Springborn2008} (see the work of
+Bobenko~\emph{et~al.}\ for the mathematical background~\cite{Bobenko2010}). The
+convex functional optimized by Springborn~\emph{et~al.}\ constructs a conformally
 equivalent flat mesh for specified boundary conditions and singularities. 
-Our work is related to \cite{Sheffer2001}. They aim for conformal parameterizations 
+Our method is related to work on angle based flattening by Sheffer and de~Sturler~\cite{Sheffer2001}. They aim for conformal parameterizations 
 and express this by the additional constraint, that triangle angles have to be close 
 to the original ones on the surface. For discrete isothermic parameterizations 
 the definitions coincide.
@@ -144,11 +144,13 @@ the definitions coincide.
 
 % curvature line 
 Parameterizations aligning with lines of principle curvature were constructed
-by\cite{AlliezCDLD2003}. Their method involves the integration of curvature vector fields
+by Alliez~\emph{et~al.}~\cite{AlliezCDLD2003}. Their method involves 
+the integration of curvature vector fields
 and does not include an optimization towards conformality. 
 Global parameterizations following arbitrary frame fields 
 (including in particular principle curvature fields) are constructed
-in\cite{KalbererNP2007}. They use discrete Hodge decomposition and
+in the work of K\"{a}lberer~\emph{et~al.}~\cite{KalbererNP2007}. They use 
+discrete Hodge decomposition and
 harmonic vector fields to obtain a globally consistent parameterization. Their
 QuadCover algorithm can deal with surfaces of arbitrary genus and treats
 singularities using a suitable branched cover.
@@ -158,26 +160,31 @@ highly complex.
 % circles on surfaces 
 The use of variational principles to enforce desired properties such as planarity of 
 quadrilateral faces has been successfully used in architectural geometry.
-\cite{LiuPWYW2006} propose an algorithm to optimize a quadrilateral mesh to
-become planar and even conical. \cite{PottmannSBSWBW2008} use functionals to
+Liu~\emph{et~al.}~\cite{LiuPWYW2006} propose an algorithm to optimize a quadrilateral mesh to
+become planar and even conical. Pottmann~\emph{et~al.}~\cite{PottmannSBSWBW2008} use functionals to
 approximate freeform surfaces with single curved panels. The energy minimized in
 Section~\ref{sec:s-isothermic} is a combination of a new functional with an
-energy recently described by \cite{SchiftnerHWP2009}. They construct circle
+energy recently described by Schiftner~\emph{et~al.}~\cite{SchiftnerHWP2009}. They construct circle
 packing triangle meshes that approximate a given surface by minimizing a
-combination of energies. Discrete s-isothermic minimal surfaces are defined in
-terms of their Gau{\ss} map in \cite{BobHofSpr06}. This Gau{\ss} map is a Koebe
+combination of energies. 
+
+Discrete s-isothermic minimal surfaces are defined in
+terms of their Gau{\ss} map by Bobenko~\emph{et~al.}~\cite{BobHofSpr06}. 
+This Gau{\ss} map is a Koebe
 polyhedron with edges tangent to a sphere. These Koebe polyhedra also occur in
-the study of edge offset meshes by \cite{PottmannLWB2007}, which again use a
+the study of edge offset meshes by Pottmann~\emph{et~al.}~\cite{PottmannLWB2007}, 
+who again use a
 variational approach to obtain support structures. Another parametrization
 technique creating quad-dominant meshes guided by conjugate parameter
-directions is given by \cite{ZadravecSW2010}. Their algorithm includes a level
+directions is given by Zadravec~\emph{et~al.}~\cite{ZadravecSW2010}. Their algorithm 
+includes a level
 set approach to circumvent the integration of a vector field.
 
 The notion of discrete s-isothermic meshes was introduced in the mathematical
-context by \cite{BobenkoP1996} as a special class of quad meshes.
+context by Bobenko and Pinkall as a special class of quad meshes~\cite{BobenkoP1996}.
 The mathematical theory of these meshes has since then been an active field of
 research in discrete differential geometry. A good overview of the recent
-development and literature can be found in the book~\cite{BobenkoSuris2008}. 
+development and literature can be found in the book by Bobenko and Suris~\cite{BobenkoSuris2008}. 
 
 
 \section{Discrete quasiisothermic parameterization}
@@ -272,7 +279,8 @@ create parameterizations that have small $Q$.
 In this section the surface $M$ is a triangulated surface with one boundary
 component. We will now construct a function $\Phi$ that
 has zero approximation error $Q^\alpha$ at boundary edges and is a discrete
-conformal map in the sense of \cite{Springborn2008} in the interior of the
+conformal map in the sense of Springborn~\emph{et~al.}~\cite{Springborn2008} in the 
+interior of the
 surface. We argue under which circumstances this leads to nice
 behaviour in the interior. We start by briefly introducing discrete conformal
 maps and the boundary conditions we need for our purposes.
@@ -426,7 +434,7 @@ modeled as cone points with prescribed curvature. Therefore we have to
 cut along paths from the cone points to the boundary of the mesh. 
 The layout overlaps if singularities with negative curvature are used. 
 To create seamless parameter lines we use the rectification approach 
-described in~\cite{Springborn2008}.
+described by Springborn~\emph{et~al.}~\cite{Springborn2008}.
 
 Finally, we create a new mesh based on a regular $(u,v)$-grid in $\mathbb R^2$. 
 The remeshing process is carried out as a subdivision step followed by some cleanup
@@ -556,7 +564,7 @@ touching circles in a row can be interpreted as discrete curvature line.}
 Starting with a quasiisothermically parameterized mesh with low modulus 
 we now aim to create discrete s-isothermic surfaces that
 stay in the vicinity of the input surface. S-isothermic surfaces were
-introduced by \cite{BobenkoP1996}: A quadrilateral mesh
+introduced by Bobenko and Pinkall~\cite{BobenkoP1996}: A quadrilateral mesh
 is \mbox{\emph{s-isothermic}} if (i) all the quadrilaterals are planar, (ii)
 all faces have incircles, and (iii) the incircles of adjacent quadrilaterals
 touch.
@@ -586,7 +594,7 @@ The s-isothermic energy $E_S$ consists of three parts:
 \end{equation}
 The planarity energy $E_{\mathrm{planar}}$ penalizes non-planar quadrilateral
 faces. For each quad it can be defined either by the distance of the diagonals
-(an idea attributed to Peter Schr\"oder in \cite{PottmannSBSWBW2008}) or the
+(an idea attributed to Peter Schr\"oder~\cite{PottmannSBSWBW2008}) or the
 volume of the tetrahedron spanned by the
 four vertices. We give the formula for the former here. 
 \begin{equation}
@@ -595,8 +603,7 @@ E_{\mathrm{planar}} = \sum_{\mathrm{\it{ijkm}} \in F} \frac{\left<\Delta_{\mathr
 \end{equation}
 Here $\Delta_{ij}$ is the vector pointing from vertex $i$ to $j$.
 
-For $E_{\mathrm{incircle}}$ we use the energy defined by
-\cite{SchiftnerHWP2009} based on the fact that the sum of opposite edge
+For $E_{\mathrm{incircle}}$ we use the energy defined by Schiftner~\emph{et~al.}~\cite{SchiftnerHWP2009} based on the fact that the sum of opposite edge
 lengths must be equal for a planar quad to possess an incircle.
 \begin{equation}
 E_{\mathrm{incircle}} = \sum_{\mathrm{\it{ijkm}} \in F} \left( l_{\mathrm{\it{ij}}} + 
@@ -670,7 +677,7 @@ with the initial surface. The mean edge length deviation of this model is $1.28\
 Every smooth minimal surface possesses a $1$-parameter (associated) family of
 non-trivial isometric deformations. All surfaces in this family have the same
 Gau{\ss} map. For discrete s-isothermic minimal surfaces this construction is
-discretized in~\cite{BobHofSpr06}: Edge lengths and the conformality of the
+discretized by Bobenko~\emph{et~al.}~\cite{BobHofSpr06}: Edge lengths and the conformality of the
 parameterization are preserved. We need to introduce the concept of dual surface
 to construct the family of isometric surfaces.
 
@@ -743,7 +750,7 @@ $\vcenter{\hbox{\includegraphics[width=0.5\textwidth]{image/ellipsoid01_disks.pd
 \end{figure}
 
 Here we describe the construction of a discrete s-isothermic ellipsoid and 
-its dual surface. (See \cite[p.~202]{Hertrich2003} for the smooth analog).
+its dual surface. (See Hertrich-Jeromin~\cite[p.~202]{Hertrich2003} for the smooth analog).
 The rough construction outline is as follows. We start with a discretized version
 of the smooth isothermically parameterized ellipsoid. We obtain this by calculating a 
 quasiisothermic parameterization of half of a triangulated ellipsoid. After remeshing 
@@ -778,7 +785,7 @@ isothermic parameterization, our algorithm performs particularly well on these
 examples.
 
 The new energy described in Section~\ref{sec:s-isothermic} is closely related
-to \cite{SchiftnerHWP2009} dealing with
+to the work of Schiftner~\emph{et~al.}~\cite{SchiftnerHWP2009} dealing with
 circle packing meshes. They explicitly do not treat quadrilateral meshes since
 they are aware of the shape restrictions and focus on triangle meshes instead.
 The shape restriction lies in the core of isothermic surfaces but
@@ -788,7 +795,7 @@ subject to future research. The results of Section~\ref{sec:s-isothermic}
 suggest that this might be possible using related methods.
 
 Our new functional generates quad circle packing meshes in the sense of
-Schiftner \emph{et al.}. For surfaces arising in architectural context (in
+Schiftner and co-authors. For surfaces arising in architectural context (in
 particular for shell-like roofs) we are able to construct aesthetically
 pleasing quad meshes supporting a circle packing. 
 
