@@ -3,7 +3,7 @@
 %\setkeys{Gin}{draft=false}
 \chapter{Introduction}
 
-In this chapter words printed in {\sc SmallCapitals} are names of software packages, words printed
+In all chapters of Part~\ref{part:implementation} words printed in {\sc SmallCapitals} are names of software packages, words printed
 in {\tt TeleType} are names of {\sc Java} classes, methods, or fields.
 
 \begin{figure}[h]
@@ -23,40 +23,41 @@ visualization of the results has to be included in a state-of-the-art publicatio
 
 There is a growing knowledge of software development in the mathematical community. This 
 is party due to the curricula of universities which started to include programming courses for 
-undergraduate students with a visualization emphasis~\cite{VisMathHomepage, 
+undergraduate students with an emphasis on mathematical visualization~\cite{VisMathHomepage, 
 CaltechVisMath}. This knowledge enables students to extend their abilities of creating visualizations and 
 mathematical software, where former generations of students solely used the visualization 
 abilities of standard computer algebra packages like Mathematica or MatLab.
 
-The audience of this chapter is two-fold. On the one hand it is students creating their 
+The audience of the following chapters is two-fold. On the one hand it is students creating their 
 visualizations of surfaces and develop algorithms. On the other hand it is researchers in the
-field of discrete differential geometry who need a stable data structure and programming
+field of DDG who need a stable data structure and programming
 infrastructure to get the job done.
 
-This part of the thesis is the description and getting-started manual of a set of software packages
-(Berlin DDG Framework) written in the programming language {\sc Java}. They are 
-specifically designed for the creation of custom interactive software for experiments with algorithms and geometries treated within DDG. It is currently being used for teaching mathematical visualization courses at TU-Berlin \cite{VisMathHomepage} and for research projects within the geometry group.
+This part of the thesis is the description of a set of software packages
+written in the programming language {\sc Java}. They are 
+specifically designed for the creation of custom interactive software for experiments with algorithms and geometric objects treated within DDG. 
+Its main components {\sc JRworkspace}, {\sc HalfEdge}, and {\sc HalfEdgeTools} are part of the collection of mathematical software libraries {\sc Jtem}~\cite{JtemWebsite}.
+They are currently being used for research projects within the geometry group as well as for teaching mathematical visualization courses at TU-Berlin \cite{VisMathHomepage}.
+Representing the core of {\sc VaryLab} they are being deployed to users from the field of architectural geometry via the online version {\sc VaryLab}~\cite{varylab-web-page}.
 
 %Section~\ref{sec:related_work} gives an overview of existing software packages that have a focus similar to the DDG Framework. 
 Chapter~\ref{chp:jrworkspace} introduces the {\sc JRworkspace} library of the 
 {\sc Jtem} project~\cite{JtemWebsite}. It is the foundation of any application created with 
-the DDG Framework. It is also the user interface basis of {\sc Jreality}, a mathematical 
+the framework. It is also the user interface basis of {\sc Jreality}, a mathematical 
 visualization library that uses {\sc JRworkspace} as plug-in and user interface 
 tool~\cite{JrealityWebsite}. Chapter~\ref{chp:halfedge} introduces the 
-{\sc HalfEdge} and {\sc HalfEdgeTools} package. They implement half-edge data 
+{\sc HalfEdge} and {\sc HalfEdgeTools} package. They implement a half-edge data 
 structure and various user interface tools and algorithms for interaction and editing.  
 In Chapter~\ref{chp:conformallab} we describe the software 
-{\sc ConformalLab}. This package implements the methods of the 
-publications~\cite{Bobenko2010, OWR2012, Sechelmann2012}.
+{\sc ConformalLab}. This implements the algorithms described in Chapter~\ref{chp:uniformization}.
 Chapter~\ref{chp:varylab} introduces {\sc VaryLab}, the software implementation of the 
-methods described in the publications \cite{Lafuente2011, Lafuente2012, Sechelmann2012}.
-This package is also released to partners of the development group as {\sc VaryLab[Gridshells]},
-{\sc VaryLab[Ultimate]}, or even online as {\sc VaryLab[Service]}\cite{varylab-web-page}.
+methods described in Chapters~\ref{chp:periodic_conformal_maps}, \ref{chp:quasiisothermic}, and~\ref{chp:gridshells}.
+The chapters about {\sc ConformalLab} and {\sc VaryLab} should enable the reader to use the  software to reproduce the results presented in the respective chapters of this work.
 
-Figure~\ref{fig:software_architecture} shows the dependencies of the packages. Every
-application depends on {\sc JRworkspace} which implements plug-in functionality. It is
-the basis of the {\sc Jreality} plug-in system. {\sc Half\-Edge\-Tools} is using {\sc Jreality} 
-for visualization and is build on top of the {\sc Jtem} project {\sc Half\-Edge}. 
+Figure~\ref{fig:software_architecture} visualizes the dependencies of the different software packages.
+Every package depends on {\sc JRworkspace} that implements plug-in functionality. 
+It is the basis of the {\sc Jreality} plug-in system. 
+{\sc Half\-Edge\-Tools} is using {\sc Jreality} for visualization and is build on top of the {\sc Jtem} project {\sc Half\-Edge}. 
 {\sc ConformalLab} and {\sc VaryLab} use {\sc Jpetsc/Jtao} to perform numerical
 optimization. Their algorithms are implemented as {\sc JRworkspace} plug-ins.
 
