@@ -1077,7 +1077,7 @@ In this spirit we calculate examples for the curves $\mu^2=\lambda(\lambda^3-1)$
 
 To create a reasonably regular triangulation with vertices on the sphere we minimize the following energy on a given set of initial points on the sphere while fixing the branch points. 
 A good start is to choose points uniformly distributed on the sphere. 
-To achieve this we choose $x$, $y$, and $z$ to be normally distributed and project the resulting vectors to the sphere, see~ \cite{Muller1959}. 
+To achieve this we choose $x$, $y$, and $z$ to be normally distributed and project the resulting vectors to the sphere~\cite{Muller1959}. 
 The functional and its gradient that we minimize is
 \begin{eqnarray*}
 E &=& n^2\sum_{v\in V}\left( \left<v,v\right> - 1\right)^2 + \sum_{v\in V}\sum_{\substack{w\in V\\w\neq v}} \frac{1}{\left<w-v, w-v\right>}\\ 
@@ -1456,7 +1456,7 @@ Vertices that land in the interior of the circles are discarded.
 }
 \includegraphics[height=5cm]{circle_domain_hyperbolic/brezel_three_holes_domain.pdf}
 }
-\setstretch{0.0}{\scriptsize\tt data/circle\_domain\_hyperbolic/brezel\_\{one/two/three\}\_holes.xml}
+\setstretch{0.0}{\scriptsize\tt data/circle\_domain\_hyperbolic/brezel\_\{one,two,three\}\_holes.xml}
 \caption{
 Uniformization of a genus $2$ surface with three boundary components. 
 The three holes are filled and triangulated (highlighted edges) to visualize the triangulation used during calculation, see Section~\ref{sec:circle_domains}.
