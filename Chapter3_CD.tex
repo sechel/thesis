@@ -7,6 +7,10 @@
 \begin{figure}
 \dirtree{%
 .1 /\DTcomment{Root folder of the data disk}.
+.2 applications.
+.3 periodic\DTcomment{Models and images treated in Chapter~\ref{chp:periodic_conformal_maps}}.
+.3 quasiisothermic\DTcomment{Models and images of Chapter~\ref{chp:quasiisothermic}}.
+.3 gridshells\DTcomment{Models and imagesof Chapter~\ref{chp:gridshells}}.
 .2 data\DTcomment{Example data for Chapter~\ref{chp:uniformization}}.
 .3 algorithm.
 .3 bear\_torus.
@@ -29,15 +33,21 @@
 \label{fig:dir_structure}
 \end{figure}
 
-See Figure~\ref{fig:dir_structure} for an overview of the directory structure of the data.
+The data disk that accompanies this work contains data and source code. 
+See Figure~\ref{fig:dir_structure} for an overview of the directory structure of the data. 
+We include the data and images for most of the objects investigated in Chapter~\ref{chp:uniformization}. 
+For many of the examples we include more instances of the same experiment varying in genus or discretization resolution.
+
+For example the folder {\tt /data/schottky\_g2} contains data for a Riemann surface of genus $2$ given by Schottky data, see Sections~\ref{sec:tori_schottky} and~\ref{sec:schottky}. 
+It contains the files {\tt genus2.xml}, {\tt genus2\_fine2.xml}, and {\tt genus2\_fine2.xml} differing in the number of vertices on the Schottky circles and in the number of vertices approximating the metric in the interior of the fundamental domain.
+
+Data belonging to chapters of the applications part is contained in the respective folders 
 
 \section{Licensing}
-All software packages belonging to the {\sc Jtem} collection and the corresponding source code are licensed under the \href{http://opensource.org/licenses/bsd-license.php}{{BSD} 2-{C}lause {L}icense}. This includes the libraries {\sc JRworkspace} (Chapter~\ref{chp:jrworkspace}), {\sc HalfEdge}, and {\sc HalfEdgeTools} (Chapter~\ref{chp:halfedge}).
+All software packages belonging to the {\sc Jtem} (\href{http://www.jtem.de}{www.jtem.de}) collection and the corresponding source code are licensed under the \href{http://opensource.org/licenses/bsd-license.php}{{BSD} 2-{C}lause {L}icense}. This includes the libraries {\sc JRworkspace} (Chapter~\ref{chp:jrworkspace}), {\sc HalfEdge}, and {\sc HalfEdgeTools} (Chapter~\ref{chp:halfedge}).
 
 {\sc ConformalLab} is licensed as follows (copied from creativecommons.org): {\sc ConformalLab} by \href{http://www.sechel.de}{Stefan Sechelmann} is licensed under a \href{http://creativecommons.org/licenses/by-nc/4.0/}{Creative Commons Attribution-NonCommercial 4.0 International License}.
 
-{\sc VaryLab} and its source code does not have a license yet. The source code and binaries are included on the data disk. If you want to use {\sc VaryLab} please contact me or Thilo R\"orig or visit the webpage at \url{http://www.varylab.com}.
-
-\subfilebibliography
+{\sc VaryLab} and its source code does not have a license yet. The source code and binaries are included on the data disk. If you want to use {\sc VaryLab} please contact the author or Thilo R\"orig  or visit the webpage at \url{www.varylab.com}.
 
 \end{document}
