@@ -228,20 +228,20 @@ Analogously the spherical version for a spherical metric $\tilde\ell:E_{\Sigma}\
 \end{equation*}
 see also Figure~\ref{fig:geometries}. 
 
-\subsection{Characterization by cross-ratios}
+\subsection{Triangulations: Characterization by length cross-ratios}
 \label{sec:cross-ratios}
 
-For triangulations we have an alternative characterization of conformal equivalence in terms of length-cross-ratios. For two adjacent triangles $\it ijk\in F$ and $\it jil\in F$ the length-cross-ratio of the common edge $\it ij\in E$ is defined as
+For triangulations we have an alternative characterization of conformal equivalence in terms of length cross-ratios. For two adjacent triangles $\it ijk\in F$ and $\it jil\in F$ the length cross-ratio of the common edge $\it ij\in E$ is defined as
 \begin{equation}
 \lcr_{\it ij}\vcentcolon=\frac{\ell_{\it il}\ell_{\it jk}}{\ell_{\it lj}\ell_{\it ki}}.
 \end{equation}
 
 \begin{proposition}
-Two euclidean triangulations $(\Sigma, \ell)$ and $(\Sigma, \tilde \ell)$ are discretely conformally equivalent if and only if for each interior edge $\it ij\in E$, the induced length-cross-ratios agree.
+Two euclidean triangulations $(\Sigma, \ell)$ and $(\Sigma, \tilde \ell)$ are discretely conformally equivalent if and only if for each interior edge $\it ij\in E$, the induced length cross-ratios agree.
 \end{proposition}
 
-In addition to this characterization we can recover a representative metric from the length-cross-ratios.
-The length-cross-ratios satisfy the product equation at each vertex $i\in V$
+In addition to this characterization we can recover a representative metric from the length cross-ratios.
+The length cross-ratios satisfy the product equation at each vertex $i\in V$
 \begin{equation}
 \prod_{\it ij\ni i} \lcr_{\it ij} = 1.
 \end{equation}
@@ -250,7 +250,7 @@ Define values attached to angles of the triangulation, e.g.,
 c^i_{\it jk}=\frac{\ell_{\it jk}}{\ell_{\it ij}\ell_{\it ki}}\label{eq:angle_parameter}
 \end{equation} 
 is attached to angle at vertex $i$ of the triangle $\it ijk\in F$.
-With this parameter the length-cross-ratios can we written as
+With this parameter the length cross-ratios can we written as
 \begin{equation}
 \lcr_{\it ij}=\frac{c^i_{\it jk}}{c^i_{\it lj}}.
 \end{equation}
@@ -261,6 +261,19 @@ The corresponding metric $\ell$ is then given by the relations
 \end{equation} 
 
 What is now the generalization of this concept to cyclic polyhedral surfaces?
+
+\subsection{Even cycles: Characterization by length multi-ratios}
+
+\begin{itemize}
+\item even polygons
+\item even cycles
+\end{itemize}
+
+Note: Even polygons and quadrangulation of the disk.
+
+\subsection{Quadrangulations: Characterization by cross-ratios and the Hirota systems}
+
+
 
 
 \todo{generalize for cyclic surfaces}
@@ -309,7 +322,7 @@ Solving these problems amounts to the solution of a system of non-linear equatio
 
 \begin{align}
 	\Theta_i &=\sum_{\it ijk \ni i}\alphat_{\it ji}^i & i\in V\label{eq:vertex_system}\\
-	0 &= \alphat_{\it ij}^k + \alphat_{\it ij}^l - (\alphat^i_{\it jl} + \alphat^i_{\it kj}) - (\alphat^j_{\it ki} + \alphat^j_{\it il}) & \textit{ij} \in E_1\label{eq:edge_system}
+	0 &= (\alphat_{\it ij}^k + \alphat_{\it ij}^l) - (\alphat^i_{\it jl} + \alphat^i_{\it kj}) - (\alphat^j_{\it ki} + \alphat^j_{\it il}) & \textit{ij} \in E_1\label{eq:edge_system}
 \end{align}
 
 The angle $\alphat_{\it ji}^i$ is the new angle at vertex $i$ in the triangle $\it ijk\in F$, see Figure~\ref{fig:triangle_notation}.
@@ -342,13 +355,13 @@ We treat all $u_i$ with $i\in V$ and all $\lambda_{\it ij}$ $\ij \in E_1$ as fre
 The functionals can be generically defined to be
 \begin{definition}{Generic functional}
 \begin{eqnarray}
-	E^*(\tilde\lambda) &:=& \sum_{\it ijk\in F}\left(f^*_{\it ijk}(\tilde\lambda) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i.
+	E^{\rm euc,hyp,sph}(\tilde\lambda) &:=& \sum_{\it ijk\in F}\left(f^{\rm euc,hyp,sph}_{\it ijk}(\tilde\lambda) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i.
 \end{eqnarray}
 \end{definition}
 
-The function $f^*_{\it ijk}$ is defined as
+The function $f^{\rm euc,hyp,sph}_{\it ijk}$ is different for each of the geometries and defined as
 \begin{eqnarray}
-f^*_{\it ijk}(\tilde\lambda) &:=&\betat_{\it jk}^i \tilde \lambda_{jk} + \betat_{\it ki}^j \tilde \lambda_{ki} + \betat_{\it ij}^k \tilde \lambda_{ij}\\ 		
+f^{\rm euc,hyp,sph}_{\it ijk}(\tilde\lambda) &:=&\betat_{\it jk}^i \tilde \lambda_{jk} + \betat_{\it ki}^j \tilde \lambda_{ki} + \betat_{\it ij}^k \tilde \lambda_{ij}\\ 		
 				&&+\ML(\alphat_{\it jk}^i) + \ML(\alphat_{\it ki}^j) + \ML(\alphat_{\it ij}^k) + \ML(\betat_{\it jk}^i) + \ML(\betat_{\it ki}^j) + \ML(\betat_{\it ij}^k)\\
 				&&+\ML\left(\frac{1}{2}\left(\pi - \alphat_{\it jk}^i - \alphat_{\it ki}^j - \alphat_{\it ij}^k\right)\right).
 \end{eqnarray}
@@ -367,7 +380,7 @@ f^{\rm euc}_{\it ijk}( \tilde\lambda) &=& \alphat_{\it jk}^i \tilde\lambda_{jk} 
 The partial derivatives of $E^*$ are
 \begin{eqnarray}
 	\frac{\partial E^*}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alphat_{\it jk}^i \\
-	\frac{\partial E^*}{\partial \lambda_{\it ij}} &=& \frac{1}{2}\left(\alphat_{\it ij}^k + \alphat_{\it ij}^l - (\alphat^i_{\it jl} + \alphat^i_{\it kj}) - (\alphat^j_{\it ki} + \alphat^j_{\it il})\right).\label{eq:lambda_deriv_generic}
+	\frac{\partial E^*}{\partial \lambda_{\it ij}} &=& \frac{1}{2}\left((\alphat_{\it ij}^k + \alphat_{\it ij}^l) - (\alphat^i_{\it jl} + \alphat^i_{\it kj}) - (\alphat^j_{\it ki} + \alphat^j_{\it il})\right).\label{eq:lambda_deriv_generic}
 \end{eqnarray}
 In the second term the angles $\alphat_{\it ij}^k$ and $\alphat_{\it ji}^l$ are the angles opposite to the edge $\it ij\in E$ in the 
 triangles on both sides of the edge. Note that in the euclidean case Equation~\ref{eq:lambda_deriv_generic} reduces to
@@ -981,7 +994,7 @@ We discretize the notion of Riemann surface given by Schottky data as follows.
 For each pair of circles $(C, C')$ with $\sigma(C) =C'$ we construct two polygons $p_1,\ldots,p_n$ inscribed in $C$ and $p'_1,\ldots,p'_n$ inscribed in $C'$ such that $\sigma(p_i)=p'_i$. E.g., build a regular $n$-gon $C$ and map the points by $\sigma$ onto $C'$.
 Triangulate the outside of the circles.
 Corresponding edges on $C$ and $C'$ are identified on $R$ but do not have the same length in $\Chat$.
-Corresponding edges in $\Chat$ have the same length-cross-ratio as this characterization is invariant under M\"{o}bius transformations.
+Corresponding edges in $\Chat$ have the same length cross-ratio as this characterization is invariant under M\"{o}bius transformations.
 That means we have a unique function $\lcr$ defined on $E$.
 We pick a representative metric $\ell$ to feed into the variational principle and calculate the uniformization, see Section~\ref{sec:cross-ratios} and Figure~\ref{fig:schottky_g1}.
 Note that the lengths $\ell$ that are a representative for $\lcr$ is not a metric in general, i.e., the polygon inequalities might be violated. 
@@ -1439,7 +1452,7 @@ Right: Fuchsian uniformization and universal cover in the Poicar\'e model of the
 
 We have treated Schottky data in the case of tori in Section~\ref{sec:tori_schottky}.
 The general construction for surfaces with genus greater that one is parallel to the construction in the torus case.
-For a given conformal structure, i.e. the length-cross-ratios on edges, we find a critical point of the hyperbolic functional.
+For a given conformal structure, i.e. the length cross-ratios on edges, we find a critical point of the hyperbolic functional.
 We visualize the Fuchsian uniformization in the Poicar\'{e} model and highlight the images of the circles, Figure~\ref{fig:schottky_g3}.
 Additionally to the vertices on the circles we choose random points in the fundamental domain on $\Chat$ such that the triangulation is close to regular.
 We optimize the vertex location using the process described in Section~\ref{sec:spherical_triangulations}.
@@ -1552,11 +1565,12 @@ And indeed for every hyperelliptic Riemann surface we can find a basis of the un
 The opposite the also true and we state the following
 
 \begin{theorem}[Characterization of hyperelliptic surfaces]
+\label{thm:hyperelliptic}
 Let $R$ be a Riemann surface and let $G$ be its uniformizing Fuchsian group with generators $A_1,\ldots,A_{2g}$.
 Then the following statements are equivalent:
 \begin{compactitem}
 \item $R$ is hyperelliptic.
-\item The axes of $A_1,\ldots,A_{2g}$ meet in a common point.
+\item There exist generators $A_1,\ldots,A_{2g}$ of $G$ whose axes meet in a common point.
 \end{compactitem}
 Further, we can choose a fundamental polygon with minimal number of sides and a single vertex such that the branch points of the corresponding hyperelliptic curve are located at the vertex, the intersection of the axes, and the mid points of the edges of the polygon.
 \end{theorem}
@@ -1589,7 +1603,7 @@ The conjugation $hBh$ is a group element of $G$ as the conjugation of each of th
 Let now $R$ be any hyperelliptic Riemann surface. There is a holomorphic involution $h$ on $R$ with $2g + 2$ fixed points $x_1,\ldots,x_{2g+2}$. 
 Let $\tilde x_1$ be a point in the universal cover corresponding to $x_0$ on the $R$. Let $\tilde x_3,\ldots,\tilde x_{2g+2}$ be the closest points in the universal cover corresponding to the other fixed points of $h$. Note that we leave out $x_2$ as we only need $2g$ cycles to define a basis of uniformizing group. 
 The points $\tilde x_3,\ldots,\tilde x_{2g+2}$ are not unique but the following reasoning works for arbitrary choices.
-In the universal cover $h$ corresponds to an isometric involution $\tilde h$ with one fixed point, e.g., a hyperbolic rotation by $180\degree$ about $\tilde x_1$.
+In the universal cover $h$ corresponds to an involution $\tilde h$ with one fixed point, e.g., a hyperbolic rotation by $180\degree$ about $\tilde x_1$.
 Consider the shortest geodesics $\tilde a_3,\ldots,\tilde a_{2g+2}$ connecting $\tilde x_1$ with $\tilde x_3,\ldots,\tilde x_{2g+2}$.
 Then the curve $(a_i, h a_i)$ is a simple closed geodesic loop on $R$.
 All curves $(a_i, h a_i)$ intersect uniquely at $x_1$. 
