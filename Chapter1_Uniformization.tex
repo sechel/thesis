@@ -106,10 +106,11 @@ polyhedral surface all of whose faces are triangles.  All
 triangulations are cyclic.
 
 \subsection{Notation}
+\label{sec:notation}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.3\textwidth]{notation_triangle.pdf}
+\includegraphics[width=0.4\textwidth]{notation_triangle_circle.pdf}
 \caption{Notation of lengths and angles in a triangle $\it ijk \in F$.}
 \label{fig:triangle_notation}	
 \end{figure}
@@ -127,6 +128,15 @@ In some formulas we need to iterate over directed edges.
 We denote the set of directed edges by $\vect{E}$. 
 For each edge $\it ij\in E$ the set $\vect{E}$ contains two "half-edges" $\it ij\in \vect{E}$ and $\it ji \in \vect{E}$.
 See also Chapter~\ref{chp:halfedge} for details on the implementation of a half-edge data structure.
+
+For a triangle $\it ijk$ we denote the angle at vertex $i\in V$ as $\alpha^i_{\it jk}$. 
+Further we define the angle $\beta^i_{\it ij}$ to be the angle between the tangent of the circum-circle of the triangle at $j$ or $k$ and the edge $\it jk$, see Figure~\ref{fig:triangle_notation}.
+The angles $\beta$ are functions of $\alpha$. At the triangle $\it ijk$ it is
+\begin{eqnarray*}
+	2\cdot\beta_{\it jk}^i &=& \pi + \alpha_{\it jk}^i - \alpha_{\it ki}^j - \alpha_{\it ij}^k\\
+	2\cdot\beta_{\it ki}^j &=& \pi - \alpha_{\it jk}^i + \alpha_{\it ki}^j - \alpha_{\it ij}^k\\
+	2\cdot\beta_{\it ij}^k &=& \pi - \alpha_{\it jk}^i - \alpha_{\it ki}^j + \alpha_{\it ij}^k.
+\end{eqnarray*}
 
 \subsection{Discrete metrics}
 \label{sec:discrete-metrics}
@@ -262,6 +272,8 @@ The corresponding metric $\ell$ is then given by the relations
 
 What is now the generalization of this concept to cyclic polyhedral surfaces?
 
+\subsection{Quadrangulations: Characterization by cross-ratios and Hirota systems}
+
 \subsection{Even cycles: Characterization by length multi-ratios}
 
 \begin{itemize}
@@ -270,8 +282,6 @@ What is now the generalization of this concept to cyclic polyhedral surfaces?
 \end{itemize}
 
 Note: Even polygons and quadrangulation of the disk.
-
-\subsection{Quadrangulations: Characterization by cross-ratios and Hirota systems}
 
 
 Until now we have only talked about discrete conformal equivalence of discrete euclidean/spherical/hyperbolic metrics.
@@ -330,11 +340,11 @@ Condition~\ref{eq:edge_system} is satisfied if and only if the quadrilateral $\i
 \label{sec:vari-princ}
 
 \begin{definition}
-Let $\ell_{\it ij}:E\to R_{>0}$ be the edge lengths of the $\tilde \Sigma$. Define
+Let $\ell_{\it ij}:E\to R_{>0}$ be the edge lengths of $\tilde \Sigma$ and $u:V_{\tilde\Sigma}\rightarrow\R$. Define
 \begin{eqnarray*}
-\lambda_{ij} &:=& 2\log \ell_{ij}\label{eq:lambda_def}\\
-\tilde\lambda_{ij} &:=& \lambda_{ij}+u_i+u_j\\
-\tilde \ell_{\it ij} &:=& e^{\frac{1}{2}\tilde \lambda_{\it ij}}=e^{\frac{1}{2}(u_i + u_j)}\ell_{\it ij}
+\lambda_{\it ij} &\vcentcolon=& 2\log \ell_{\it ij}\label{eq:lambda_def}\\
+\tilde\lambda_{\it ij} &\vcentcolon=& \lambda_{\it ij}+u_i+u_j\\
+\tilde \ell_{\it ij} &\vcentcolon=& e^{\frac{1}{2}\tilde \lambda_{\it ij}}=e^{\frac{1}{2}(u_i + u_j)}\ell_{\it ij}
 \end{eqnarray*}
 \end{definition}
 In the latter we denote angles that are functions of new lengths $\ellt$ with tilde marks, e.g., $\alphat_{\it jk}^i$.
@@ -348,35 +358,39 @@ We consider three functionals defined on the triangulation $\tilde \Sigma$:
 By $\lambda, u$ we mean the vector of all $\lambda_{\it ij}$ for $\it ij \in E_1$ and $u_i$ for all $i\in V$, i.e., $(\lambda, u)\in \R^{\# E_1}\times\R^{\#V}$.
 We treat all $u_i$ with $i\in V$ and all $\lambda_{\it ij}$ $\ij \in E_1$ as free variables. The values for $\lambda_{\it ij}$ with $\it ij\in E_0$ are fixed and are given by Equation~\ref{eq:lambda_def}. By allowing the $\lambda$s in $E_1$ to be variable the critical point of each of the functionals has a circular quadrilateral at each edge $\it ij\in E_1$, see, e.g., Equation~\ref{eq:lambda_deriv_euc}.
 
-The functionals can be generically defined to be
+The functionals can be defined generically as
 \begin{definition}{Generic functional}
 \begin{eqnarray}
-	E^{\rm euc,hyp,sph}(\tilde\lambda) &:=& \sum_{\it ijk\in F}\left(f^{\rm euc,hyp,sph}_{\it ijk}(\tilde\lambda) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i.
+	E(\lambda, u) &\vcentcolon=& \sum_{\it ijk\in F}\left(f_{\it ijk}(\tilde\lambda) - \frac{\pi}{2}\left(\tilde \lambda_{jk} + \tilde \lambda_{ki} + \tilde \lambda_{ij}\right)\right) + \sum_{i\in V} \Theta_i u_i.
 \end{eqnarray}
 \end{definition}
 
-The function $f^{\rm euc,hyp,sph}_{\it ijk}$ is different for each of the geometries and defined as
+The function $f_{\it ijk}$ is defined as
 \begin{eqnarray}
-f^{\rm euc,hyp,sph}_{\it ijk}(\tilde\lambda) &:=&\betat_{\it jk}^i \tilde \lambda_{jk} + \betat_{\it ki}^j \tilde \lambda_{ki} + \betat_{\it ij}^k \tilde \lambda_{ij}\\ 		
-				&&+\ML(\alphat_{\it jk}^i) + \ML(\alphat_{\it ki}^j) + \ML(\alphat_{\it ij}^k) + \ML(\betat_{\it jk}^i) + \ML(\betat_{\it ki}^j) + \ML(\betat_{\it ij}^k)\\
-				&&+\ML\left(\frac{1}{2}\left(\pi - \alphat_{\it jk}^i - \alphat_{\it ki}^j - \alphat_{\it ij}^k\right)\right).
+f_{\it ijk}(\lambda) &\vcentcolon=&\beta_{\it jk}^i \lambda_{jk} + \beta_{\it ki}^j \lambda_{ki} + \beta_{\it ij}^k \lambda_{ij}\\ 		
+&&+\ML(\alpha_{\it jk}^i) + \ML(\alpha_{\it ki}^j) + \ML(\alpha_{\it ij}^k) + \ML(\beta_{\it jk}^i) + \ML(\beta_{\it ki}^j) + \ML(\beta_{\it ij}^k)\\
+&&+\ML\left(\frac{1}{2}\left(\pi - \alpha_{\it jk}^i - \alpha_{\it ki}^j - \alpha_{\it ij}^k\right)\right).
 \end{eqnarray}
-The angles $\betat$ are functions of $\alphat$
+See Section~\ref{sec:notation} for the definition of the angles $\alpha$ and $\beta$. 
+The triangle angles $\alpha$ are functions of the lengths $\ell$ and are different for each of the geometries. 
+Thus $f$ is different for each of the geometries.
+Note that using $\alpha_{\it jk}^i + \alpha_{\it ki}^j + \alpha_{\it ij}^k = \pi$ for $\it ijk \in F$ in the euclidean case we get a simplified version of the functional. It is
 \begin{eqnarray*}
-	2\cdot\betat_{\it jk}^i &:=& \pi + \alphat_{\it jk}^i - \alphat_{\it ki}^j - \alphat_{\it ij}^k\\
-	2\cdot\betat_{\it ki}^j &:=& \pi - \alphat_{\it jk}^i + \alphat_{\it ki}^j - \alphat_{\it ij}^k\\
-	2\cdot\betat_{\it ij}^k &:=& \pi - \alphat_{\it jk}^i - \alphat_{\it ki}^j + \alphat_{\it ij}^k.
-\end{eqnarray*}
-The angles $\alphat$ in turn are functions of the new lengths $\tilde \ell$ and are different for each of the geometries.
-Note that using $\alphat_{\it jk}^i + \alphat_{\it ki}^j + \alphat_{\it ij}^k = \pi$ for $\it ijk \in F$ in the euclidean case we get a simplified version of the functional. It is
-\begin{eqnarray*}
-f^{\rm euc}_{\it ijk}( \tilde\lambda) &=& \alphat_{\it jk}^i \tilde\lambda_{jk} + \alphat_{\it ki}^j \tilde\lambda_{ki} + \alphat_{\it ij}^k \tilde\lambda_{ij} + 2\left(\ML(\alphat_{\it jk}^i) + \ML(\alphat_{\it ki}^j) + \ML(\alphat_{\it ij}^k)\right).
+f^{\rm euc}_{\it ijk}(\lambda) &=& \alpha_{\it jk}^i \lambda_{jk} + \alpha_{\it ki}^j \lambda_{ki} + \alpha_{\it ij}^k \lambda_{ij} + 2\ML(\alpha_{\it jk}^i) + 2\ML(\alpha_{\it ki}^j) + 2\ML(\alpha_{\it ij}^k).
 \end{eqnarray*}
 
-The partial derivatives of $E^*$ are
+\begin{proposition}{Partial derivatives of $f_{\it ijk}$}
+\begin{equation}
+\frac{\partial f_{\it ijk}}{\partial \lambda_{\it ij}}=\alpha^k_{\it ij},\quad\quad
+\frac{\partial f_{\it ijk}}{\partial \lambda_{\it jk}}=\alpha^i_{\it jk},\quad\quad
+\frac{\partial f_{\it ijk}}{\partial \lambda_{\it ki}}=\alpha^j_{\it ki}.
+\end{equation}
+\end{proposition}
+
+The partial derivatives of $E$ are
 \begin{eqnarray}
-	\frac{\partial E^*}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alphat_{\it jk}^i \\
-	\frac{\partial E^*}{\partial \lambda_{\it ij}} &=& \frac{1}{2}\left((\alphat_{\it ij}^k + \alphat_{\it ij}^l) - (\alphat^i_{\it jl} + \alphat^i_{\it kj}) - (\alphat^j_{\it ki} + \alphat^j_{\it il})\right).\label{eq:lambda_deriv_generic}
+	\frac{\partial E}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alphat_{\it jk}^i \\
+	\frac{\partial E}{\partial \lambda_{\it ij}} &=& \frac{1}{2}\left((\alphat_{\it ij}^k + \alphat_{\it ij}^l) - (\alphat^i_{\it jl} + \alphat^i_{\it kj}) - (\alphat^j_{\it ki} + \alphat^j_{\it il})\right).\label{eq:lambda_deriv_generic}
 \end{eqnarray}
 In the second term the angles $\alphat_{\it ij}^k$ and $\alphat_{\it ji}^l$ are the angles opposite to the edge $\it ij\in E$ in the 
 triangles on both sides of the edge. Note that in the euclidean case Equation~\ref{eq:lambda_deriv_generic} reduces to
@@ -398,7 +412,7 @@ We now derive the hessian matrix from the previously calculated hessian with var
 \begin{eqnarray}
 d^2E^{\rm euc}(u)&=&\frac{1}{2}\sum_{\it ij \in \vect{E}} \cot  \alphat_{\it ij}^k \cdot (du_i - du_j)^2.
 \end{eqnarray}
-From the definition of $\tilde\lambda_{\it ij} := \lambda_{\it ij}+u_i+u_j$ we obtain
+From the definition of $\tilde\lambda_{\it ij} \vcentcolon= \lambda_{\it ij}+u_i+u_j$ we obtain
 \[du_i-du_j=d\tilde\lambda_{\it ki}-d\tilde\lambda_{\it jk}.\]
 using $d\lambda = 0$. If now the original $\lambda$s are variables we get extra terms in the hessian coming from 
 \[d\tilde\lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j\]
@@ -417,7 +431,7 @@ d^2E^{\rm euc}(\lambda, u)&=&\frac{1}{2}\sum_{\it ij \in \vect{E}} \cot  \alphat
 
 For the hyperbolic case $\lambda$ and $\tilde\lambda$ are defined as before. We define hyperbolic edge lengths as 
 \begin{equation}
-\ell^{\rm hyp}_{\it ij} := 2\arsinh(\tilde \ell_{\it ij}).\label{eq:hyperbolic_lengths}
+\ell^{\rm hyp}_{\it ij} \vcentcolon= 2\arsinh(\tilde \ell_{\it ij}).\label{eq:hyperbolic_lengths}
 \end{equation}
 All angles $\alphat$ are calculated using these new hyperbolic edge lengths.
 Thus in the hyperbolic case the function $\alphat$ is defined using the hyperbolic half-angle formula with hyperbolic edge lengths
@@ -458,7 +472,7 @@ d^2E^{\rm hyp}(\lambda, u)
 \label{sec:spherical_fuctional}
 We define new spherical edge lengths as 
 \begin{equation}
-\ell^{\rm sph}_{\it ij} := 2\arcsin(\tilde \ell_{\it ij}).\label{eq:spherical_lengths}
+\ell^{\rm sph}_{\it ij} \vcentcolon= 2\arcsin(\tilde \ell_{\it ij}).\label{eq:spherical_lengths}
 \end{equation}
 In the spherical case the angles $\alphat$ are calculated on the sphere using spherical lengths as defined in 
 Equation~\ref{eq:spherical_lengths} and the spherical half-angle formula
@@ -856,7 +870,7 @@ To find the point of minimum hyperbolic distance sum as stated by Springborn we 
 	\frac{\mathrm d^2 E}{\mathrm dx^2} &=& \sum_{v\in V}\left(2\frac{x^Tx}{\left<x,x\right>^2}-\frac{v^Tv}{\left<x,v\right>^2} - \mathrm{diag}\left(\frac{1}{\left<x,x\right>}\right)\right)
 \end{eqnarray*}
 Here $\left<.,.\right>$ is the Minkowski scalar product. Note that the problem is
- $3$-dimensional and as such we define $\left<x,y\right>:=x_1y_1+x_2y_2+x_3y_3-1$ in
+ $3$-dimensional and as such we define $\left<x,y\right>\vcentcolon=x_1y_1+x_2y_2+x_3y_3-1$ in
 the implementation.
 
 \subsection{Euclidean uniformization of spheres}
@@ -982,9 +996,9 @@ Let $C_1,C'_1\ldots,C_g,C'_g$ be disjoint circles in $\hat{\C}$.
 \end{equation}
 where $\sigma_i$ maps the exterior of $C_i$ onto the interior of $C'_i$. The points $A_i$ and $B_i$ lie inside the circles $C_i$ and $C'_i$ respectively, see Figure~\ref{fig:schottky_group}.
 \end{definition}
-Let $G$ be a classical Schottky group. $G$ acts discontinuous on the $\Omega:=\Chat\setminus A$. 
+Let $G$ be a classical Schottky group. $G$ acts discontinuous on the $\Omega\vcentcolon=\Chat\setminus A$. 
 Where $A$ is the limiting set of $G$, i.e., the orbits of $A_i, B_i$ under $G$.
-Then $R:=\Omega/G$ is a Riemann surface of genus~$g$.
+Then $R\vcentcolon=\Omega/G$ is a Riemann surface of genus~$g$.
 
 We discretize the notion of Riemann surface given by Schottky data as follows.
 For each pair of circles $(C, C')$ with $\sigma(C) =C'$ we construct two polygons $p_1,\ldots,p_n$ inscribed in $C$ and $p'_1,\ldots,p'_n$ inscribed in $C'$ such that $\sigma(p_i)=p'_i$. E.g., build a regular $n$-gon $C$ and map the points by $\sigma$ onto $C'$.
@@ -1152,8 +1166,8 @@ In the second convergence experiment we choose $p_1,\ldots,p_n\in \mathbb S^2$ r
 We want to analyze how the quality of the triangulation affects the convergence behavior. 
 We define quanities that measure the regularity of the triangulation based on length cross-ratios given at edges or length multi-ratios given at faces of the triangulation
 \begin{eqnarray*}
-	Q_{\lcr}(e) &:=& \frac{1}{2}\left(\lcr(e) + \frac{1}{\lcr(e)}\right) - 1\label{eq:quality_lcr}\\
-	Q_{\lmr}(f) &:=& \frac{1}{2}\left(\lmr(f) + \frac{1}{\lmr(f)}\right) - 1\label{eq:quality_lmr}.
+	Q_{\lcr}(e) &\vcentcolon=& \frac{1}{2}\left(\lcr(e) + \frac{1}{\lcr(e)}\right) - 1\label{eq:quality_lcr}\\
+	Q_{\lmr}(f) &\vcentcolon=& \frac{1}{2}\left(\lmr(f) + \frac{1}{\lmr(f)}\right) - 1\label{eq:quality_lmr}.
 \end{eqnarray*}
 Here $\lcr$ is the length cross-ratio of an edge. 
 $\lmr$ is the length multi-ratio defined on faces as $\lmr(f)=\prod_{e \in f}\lcr(e)$.
@@ -1214,7 +1228,7 @@ where $P$ is a product of elements and inverse elements of $G$.
 $G$ is called a Fuchsian group if it contains only hyperbolic elements.
 In this section we denote the inverse elements of an element $A\in G$ as 
 \begin{equation}
-A':=A^{-1}\in G.
+A'\vcentcolon=A^{-1}\in G.
 \end{equation}
 A fundamental domain of $G$ is a simply connected region $D$ of the hyperbolic plane such that $D$ tiles hyperbolic space under the group action of $G$.
 A fundamental polygon of $G$ is a fundamental domain with polygonal boundary, i.e., the boundary consists of geodesic edges.
