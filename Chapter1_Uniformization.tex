@@ -328,13 +328,14 @@ Solving these problems amounts to the solution of a system of non-linear equatio
 
 \begin{align}
 	\Theta_i &=\sum_{\it ijk \ni i}\alphat_{\it ji}^i & i\in V\label{eq:vertex_system}\\
-	0 &= (\alphat_{\it ij}^k + \alphat_{\it ij}^l) - (\alphat^i_{\it jl} + \alphat^i_{\it kj}) - (\alphat^j_{\it ki} + \alphat^j_{\it il}) & \textit{ij} \in E_1\label{eq:edge_system}
+	\pi &= \beta_{\it ij}^k+\beta_{\it ij}^l & \textit{ij} \in E_1\label{eq:edge_system}
 \end{align}
 
 The angle $\alphat_{\it ji}^i$ is the new angle at vertex $i$ in the triangle $\it ijk\in F$, see Figure~\ref{fig:triangle_notation}.
 It is a function of the new edges lengths $\tilde\ell_{\it ij}$.
 Equation~\ref{eq:vertex_system} is the condition for the angles around each vertex $i \in V$ to sum up to a prescribed $\Theta_i$.
-Condition~\ref{eq:edge_system} is satisfied if and only if the quadrilateral $\it ijkl\in \Sigma$ consisting of triangles $\it ijk\in \tilde \Sigma$ and $\it jil\in \tilde \Sigma$ is inscribed in a circle. Note that this condition is valid in all geometries. For the euclidean case the condition reduces to $\pi=\alphat_{\it ij}^k + \alphat_{\it ij}^l$.
+Condition~\ref{eq:edge_system} is satisfied if and only if the quadrilateral $\it ijkl\in \Sigma$ consisting of triangles $\it ijk\in \tilde \Sigma$ and $\it jil\in \tilde \Sigma$ is inscribed in a circle, see Figure~\ref{fig:triangle_notation}. 
+Note that this condition is valid in all geometries. For the euclidean case the condition reduces to $\pi=\alphat_{\it ij}^k + \alphat_{\it ij}^l$.
 
 \section{Variational principles for discrete conformal maps}
 \label{sec:vari-princ}
@@ -380,17 +381,20 @@ f^{\rm euc}_{\it ijk}(\lambda) &=& \alpha_{\it jk}^i \lambda_{jk} + \alpha_{\it 
 \end{eqnarray*}
 
 \begin{proposition}{Partial derivatives of $f_{\it ijk}$}
-\begin{equation}
-\frac{\partial f_{\it ijk}}{\partial \lambda_{\it ij}}=\alpha^k_{\it ij},\quad\quad
-\frac{\partial f_{\it ijk}}{\partial \lambda_{\it jk}}=\alpha^i_{\it jk},\quad\quad
-\frac{\partial f_{\it ijk}}{\partial \lambda_{\it ki}}=\alpha^j_{\it ki}.
-\end{equation}
+\begin{gather}
+\frac{\partial f_{\it ijk}}{\partial \lambda_{\it ij}}=\beta^k_{\it ij},\quad\quad
+\frac{\partial f_{\it ijk}}{\partial \lambda_{\it jk}}=\beta^i_{\it jk},\quad\quad
+\frac{\partial f_{\it ijk}}{\partial \lambda_{\it ki}}=\beta^j_{\it ki}\\
+\frac{\partial f_{\it ijk}}{\partial u_i}=\beta^j_{\it ki}+\beta^k_{\it ij},\quad\quad
+\frac{\partial f_{\it ijk}}{\partial u_j}=\beta^k_{\it ij}+\beta^i_{\it jk},\quad\quad
+\frac{\partial f_{\it ijk}}{\partial u_k}=\beta^i_{\it jk}+\beta^j_{\it ki}.
+\end{gather}
 \end{proposition}
 
 The partial derivatives of $E$ are
 \begin{eqnarray}
 	\frac{\partial E}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alphat_{\it jk}^i \\
-	\frac{\partial E}{\partial \lambda_{\it ij}} &=& \frac{1}{2}\left((\alphat_{\it ij}^k + \alphat_{\it ij}^l) - (\alphat^i_{\it jl} + \alphat^i_{\it kj}) - (\alphat^j_{\it ki} + \alphat^j_{\it il})\right).\label{eq:lambda_deriv_generic}
+	\frac{\partial E}{\partial \lambda_{\it ij}} &=& \betat_{\it ij}^k + \betat_{\it ij}^l -\pi.\label{eq:lambda_deriv_generic}
 \end{eqnarray}
 In the second term the angles $\alphat_{\it ij}^k$ and $\alphat_{\it ji}^l$ are the angles opposite to the edge $\it ij\in E$ in the 
 triangles on both sides of the edge. Note that in the euclidean case Equation~\ref{eq:lambda_deriv_generic} reduces to
