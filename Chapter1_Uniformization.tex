@@ -70,7 +70,7 @@ We look into the convergence behavior of discrete conformal maps using discrete 
  The uniformization of hyperelliptic Riemann surfaces is a special case of the methods developed in the previous sections, see Section~\ref{sec:hyperelliptic}.
  
 
-\section{Basic definitions}
+\section{Basic definitions and discrete conformal maps}
 \label{sec:basic_definitions}
 
 \subsection{Cyclic polyhedral surfaces }
@@ -110,7 +110,8 @@ triangulations are cyclic.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.4\textwidth]{notation_triangle_circle.pdf}
+\includegraphics[width=0.4\textwidth]{notation_triangle_circle.pdf}\\
+\vspace{0.2cm}
 \caption{Notation of lengths and angles in a triangle $\it ijk \in F$.}
 \label{fig:triangle_notation}	
 \end{figure}
@@ -326,10 +327,10 @@ We also consider the more general mapping problem.
 
 Solving these problems amounts to the solution of a system of non-linear equations in terms of $u_i$ for $i\in V$ and $\lambda_{\it ij}$ for $\it ij \in E_1$:
 
-\begin{align}
-	\Theta_i &=\sum_{\it ijk \ni i}\alphat_{\it ji}^i & i\in V\label{eq:vertex_system}\\
-	\pi &= \beta_{\it ij}^k+\beta_{\it ij}^l & \textit{ij} \in E_1\label{eq:edge_system}
-\end{align}
+\begin{eqnarray}
+	0 &=&\Theta_i-\sum_{\it ijk \ni i}\alphat_{\it ji}^i \quad\quad i\in V\label{eq:vertex_system}\\
+	0 &=& \beta_{\it ij}^k+\beta_{\it ij}^l - \pi \quad\quad \textit{ij} \in E_1\label{eq:edge_system}
+\end{eqnarray}
 
 The angle $\alphat_{\it ji}^i$ is the new angle at vertex $i$ in the triangle $\it ijk\in F$, see Figure~\ref{fig:triangle_notation}.
 It is a function of the new edges lengths $\tilde\ell_{\it ij}$.
@@ -396,8 +397,7 @@ The partial derivatives of $E$ are
 	\frac{\partial E}{\partial u_i} &=& \Theta_i - \sum_{\it ijk\ni i}\alphat_{\it jk}^i \\
 	\frac{\partial E}{\partial \lambda_{\it ij}} &=& \betat_{\it ij}^k + \betat_{\it ij}^l -\pi.\label{eq:lambda_deriv_generic}
 \end{eqnarray}
-In the second term the angles $\alphat_{\it ij}^k$ and $\alphat_{\it ji}^l$ are the angles opposite to the edge $\it ij\in E$ in the 
-triangles on both sides of the edge. Note that in the euclidean case Equation~\ref{eq:lambda_deriv_generic} reduces to
+Note that in the euclidean case Equation~\ref{eq:lambda_deriv_generic} reduces to
 \begin{eqnarray}
 	\frac{\partial E^{\rm euc}}{\partial \lambda_{\it ij}} &=& \alphat_{\it ij}^k + \alphat_{\it ji}^l - \pi.\label{eq:lambda_deriv_euc}
 \end{eqnarray}
@@ -453,7 +453,7 @@ Thus in the hyperbolic case the function $\alphat$ is defined using the hyperbol
 The hessian matrix of $E^{\rm hyp}(u)$ if $\lambda$s are fixed is given by
 \begin{eqnarray*}
 d^2E^{\rm hyp}(u)
-&=&\tfrac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot \left((du_i-du_j)^2+
+&=&\frac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot \left((du_i-du_j)^2+
 \tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(du_i+du_j)^2\right).
 \end{eqnarray*}
  As in the euclidean case we can derive a version with variable $\lambda$s from the fact that 
@@ -463,12 +463,12 @@ d\tilde \lambda_{\it ij}=d\lambda_{\it ij}+du_i+du_j.
 Writing the functional as a function of $\tilde \lambda$s we get 
 \begin{eqnarray*}
  d^2E^{\rm hyp}(\tilde \lambda) &=&
- \tfrac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot \left((d\tilde\lambda_{\it ik}-d\tilde\lambda_{\it kj})^2+\tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\tilde\lambda_{\it ij})^2\right)
+ \frac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot \left((d\tilde\lambda_{\it ik}-d\tilde\lambda_{\it kj})^2+\tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\tilde\lambda_{\it ij})^2\right)
 \end{eqnarray*}
 With non vanishing $d\lambda_{\it ij}$ we get
 \begin{eqnarray*}
 d^2E^{\rm hyp}(\lambda, u)
-&=& \tfrac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot 
+&=& \frac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot 
  \left((d\lambda_{\it ik}-d\lambda_{\it kj} +  du_i-du_j)^2+\tanh^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\lambda_{\it ij} +du_i+du_j)^2\right)
 \end{eqnarray*}
 
@@ -494,7 +494,7 @@ Equation~\ref{eq:spherical_lengths} and the spherical half-angle formula
 Analogously to the hyperbolic case we find the formula for the second derivative:
 \begin{eqnarray*}
 d^2E^{\rm sph}(\lambda, u)
-&=& \tfrac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot 
+&=& \frac{1}{2}\sum_{\it ij\in \vect{E}} \cot\betat^k_{\it ij} \cdot 
  \left((d\lambda_{\it ik}-d\lambda_{\it kj} +  du_i-du_j)^2-\tan^2\left(\tfrac{\tilde \ell_{\it ij}}{2}\right)(d\lambda_{\it ij} +du_i+du_j)^2\right).
 \end{eqnarray*}
 Note the change of the sign in front of the $\tan$ in the formula and the $\tan$ instead of a $\tanh$. 
@@ -515,7 +515,7 @@ be a violated triangle inequality of the triangle $\it ijk \in F$. We define the
 \begin{equation*}
 \alphat^k_{\it ij} = \pi,\quad \alphat^i_{\it jk} = 0,\quad \alphat^j_{\it ki} = 0
 \end{equation*}
-and analogously for thy other two inequalities of the triangle $\it ijk$. 
+and analogously for the other two inequalities of the triangle $\it ijk$. 
 For constant $\alphat$ in the extended domain the functionals are linear.
 Thus we replace the corresponding $\cot$ weights in the second derivatives by $0$.
 Considering the extended domain we can use unconstraint convex optimization techniques to find critical points of the euclidean and hyperbolic functionals.
