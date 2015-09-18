@@ -3,14 +3,15 @@
 5 0 obj
 <</Length 6 0 R/Filter /FlateDecode>>
 stream
-xœuPA!¼÷}A¥tá]Æ&zpÆƒß·Pd‰!À”éL[èˆÑÕÕï²Ân™ñú„@_Ğ8\ö² ÏiÆØ§D.YhÇ÷KÍ,Ğ`p2§ÁÇFF¥?LÔµa“Æ‘?ôß
-Üà¨4^jCÂß+‘´ï¿ì	œu¦KŸ°ÚÖ½ö³åmÏÃÊä¦ı-âC¤,Yd"ñ(<ÑÌÙü†±~‹Ş4%9!ç‡hë´h©¼ÕPİendstream
+xœuP;!ísŠœ ’B8µkéXáŒnáXx}¸ì6ò’—ÿ1ºú~º,p˜ŞßÀŠhÎGà$ÈÁ.àC¤,Yd"ñ(<Qb³ST“
+°iš´›‚ó#‰…œ!P´f=W“õ`¯JN»Ù¿½G{ƒ
+ƒó”mÖ•ŒF¯L´·áGüÈ_ë6Pàací–Şæ}V¢Şæ/{AW»Ûm·X•ÆyjÜæ¥ªû_uO'endstream
 endobj
 6 0 obj
-187
+186
 endobj
 4 0 obj
-<</Type/Page/MediaBox [0 0 180 207]
+<</Type/Page/MediaBox [0 0 180 204]
 /Parent 3 0 R
 /Resources<</ProcSet[/PDF]
 /ExtGState 8 0 R
@@ -38,17 +39,17 @@ endobj
 endobj
 9 0 obj
 <</Type/Metadata
-/Subtype/XML/Length 1551>>stream
+/Subtype/XML/Length 1364>>stream
 <?xpacket begin='ï»¿' id='W5M0MpCehiHzreSzNTczkc9d'?>
 <?adobe-xap-filters esc="CRLF"?>
 <x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP toolkit 2.9.1-13, framework 1.6'>
 <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
-<rdf:Description rdf:about='uuid:5c60be5d-f05d-11ef-0000-e1224b16e1e9' xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='GPL Ghostscript 9.10'/>
-<rdf:Description rdf:about='uuid:5c60be5d-f05d-11ef-0000-e1224b16e1e9' xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2015-02-19T15:08:43+01:00</xmp:ModifyDate>
-<xmp:CreateDate>2015-02-19T15:08:43+01:00</xmp:CreateDate>
-<xmp:CreatorTool>fig2dev Version 3.2 Patchlevel 5d</xmp:CreatorTool></rdf:Description>
-<rdf:Description rdf:about='uuid:5c60be5d-f05d-11ef-0000-e1224b16e1e9' xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:5c60be5d-f05d-11ef-0000-e1224b16e1e9'/>
-<rdf:Description rdf:about='uuid:5c60be5d-f05d-11ef-0000-e1224b16e1e9' xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>/Users/sechel/workspace/DiscreteUniformizationPaper/figure/geometries/spherical.fig</rdf:li></rdf:Alt></dc:title><dc:creator><rdf:Seq><rdf:li>sechel@dhcp-15-252.math.tu-berlin.de (Stefan Sechelmann)</rdf:li></rdf:Seq></dc:creator></rdf:Description>
+<rdf:Description rdf:about='uuid:fa5fe18a-94aa-11f0-0000-946f5bda7c28' xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='GPL Ghostscript 9.10'/>
+<rdf:Description rdf:about='uuid:fa5fe18a-94aa-11f0-0000-946f5bda7c28' xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2015-09-16T18:17:30+02:00</xmp:ModifyDate>
+<xmp:CreateDate>2015-09-16T18:17:30+02:00</xmp:CreateDate>
+<xmp:CreatorTool>fig2dev Version 3.2 Patchlevel 5e</xmp:CreatorTool></rdf:Description>
+<rdf:Description rdf:about='uuid:fa5fe18a-94aa-11f0-0000-946f5bda7c28' xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:fa5fe18a-94aa-11f0-0000-946f5bda7c28'/>
+<rdf:Description rdf:about='uuid:fa5fe18a-94aa-11f0-0000-946f5bda7c28' xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>spherical.fig</rdf:li></rdf:Alt></dc:title></rdf:Description>
 </rdf:RDF>
 </x:xmpmeta>
                                                                         
@@ -58,27 +59,26 @@ endstream
 endobj
 2 0 obj
 <</Producer(GPL Ghostscript 9.10)
-/CreationDate(D:20150219150843+01'00')
-/ModDate(D:20150219150843+01'00')
-/Title(/Users/sechel/workspace/DiscreteUniformizationPaper/figure/geometries/spherical.fig)
-/Creator(fig2dev Version 3.2 Patchlevel 5d)
-/Author(sechel@dhcp-15-252.math.tu-berlin.de \(Stefan Sechelmann\))>>endobj
+/CreationDate(D:20150916181730+02'00')
+/ModDate(D:20150916181730+02'00')
+/Title(spherical.fig)
+/Creator(fig2dev Version 3.2 Patchlevel 5e)>>endobj
 xref
 0 10
 0000000000 65535 f 
-0000000481 00000 n 
-0000002242 00000 n 
-0000000422 00000 n 
-0000000291 00000 n 
+0000000480 00000 n 
+0000002054 00000 n 
+0000000421 00000 n 
+0000000290 00000 n 
 0000000015 00000 n 
-0000000272 00000 n 
-0000000545 00000 n 
-0000000586 00000 n 
-0000000615 00000 n 
+0000000271 00000 n 
+0000000544 00000 n 
+0000000585 00000 n 
+0000000614 00000 n 
 trailer
 << /Size 10 /Root 1 0 R /Info 2 0 R
-/ID [<C570E1824BCF0D296A2673B0F9BE80C9><C570E1824BCF0D296A2673B0F9BE80C9>]
+/ID [<BDFAFF92F0083FC1FE8D67E6D5331987><BDFAFF92F0083FC1FE8D67E6D5331987>]
 >>
 startxref
-2569
+2243
 %%EOF
