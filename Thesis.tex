@@ -111,14 +111,19 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex}
 
+\newcommand{\runinhead}[1]{{\noindent\bf #1}}
+
 \newtheorem{definition}{Definition}
 \newtheorem{proposition}{Proposition}
+\newtheorem{propdef}{Proposition and Definition}
 \newtheorem{theorem}{Theorem}
 \newtheorem*{remark*}{Remark}
 \newtheorem*{remark}{Remark}
 \newtheorem{example}{Example}
 \newtheorem{problem}{Problem}[subsection]
 \newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
 
 \newcommand{\R}{\mathbb R}
 \newcommand{\C}{\mathbb C}
@@ -136,7 +141,7 @@
 \newcommand{\lcr}{\operatorname{lcr}}
 \newcommand{\lmr}{\operatorname{lmr}}
 \newcommand{\mean}{\operatorname{mean}}
-\newcommand{\Eint}{E_{\mathit{int}}}
+\newcommand{\Eint}{E^{\mathit{int}}}
 \newcommand{\Ebdy}{E_{\mathit{bdy}}}
 \newcommand{\Vint}{V_{\mathit{int}}}
 \newcommand{\Vbdy}{V_{\mathit{bdy}}}
@@ -155,6 +160,13 @@
 \newcommand{\alphat}{\tilde{\alpha}}
 \newcommand{\betat}{\tilde{\beta}}
 \newcommand{\ellt}{\tilde{\ell}}
+\newcommand{\geo}[1]{\mathit{#1}}
+\newcommand{\euc}{\geo{euc\vphantom{ph}}}
+\newcommand{\hyp}{\geo{hyp}}
+\newcommand{\sph}{\geo{sph}}
+\newcommand{\lambdat}{\tilde{\lambda}}
+\newcommand{\g}{g}
+\newcommand{\gt}{\tilde{\g}}
 
 \DeclareMathOperator{\sn}{sn}
 \DeclareMathOperator{\cn}{cn}
