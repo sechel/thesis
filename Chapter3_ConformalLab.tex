@@ -39,8 +39,8 @@ http://www.varylab.com/conformallab/types}.
 
 {\bf Schottky data} 
 
-A Riemann surface can be given by Schottky data, see
-Sections~\ref{sec:tori_schottky} and~\ref{sec:schottky}. An example is shown in
+A Riemann surface can be given by Schottky data, see Section~\ref{sec:schottky}. 
+An example is shown in
 Listing~\ref{lst:schottky_xml}. {\tt SchottkyData} can include one or more {\tt
 SchottkyGenerator}s. A {\tt SchottkyGenerator} defines fix points $A$ and
 $B$, the complex number $\mu$, and a {\tt Circle}. This circle is required to
@@ -64,7 +64,7 @@ numbers=none, language=XML, captionpos=b]
 {\bf Hyperelliptic data} 
 
 {\tt HyperEllipticAlgebraicCurve}s as used in the examples of
-Section~\ref{sec:discrete_algebraic_curves} and \ref{sec:hyperelliptic} are
+Section~\ref{sec:elliptic_curves} and \ref{sec:hyperelliptic} are
 given by the location of their branch points in the complex plane. All points
 must be distinct. Listing~\ref{lst:hyperelliptic_xml} shows the XML
 representation of an elliptic algebraic curve defining a Riemann surface of
@@ -311,7 +311,7 @@ Schottky modeler user interface (right-bottom).}
 
 {\bf Schottky modeler}
 
-The Schottky modeler panel (See Figure~\ref{fig:conformal_main_generators} right-bottom) generates Schottky data for Riemann surfaces, see Section~\ref{sec:tori_schottky} and Section~\ref{sec:schottky}. 
+The Schottky modeler panel (See Figure~\ref{fig:conformal_main_generators} right-bottom) generates Schottky data for Riemann surfaces, see Section~\ref{sec:schottky}. 
 
 In the graph-paper view the circles and fix points of the generators are shown and can be modified. 
 Moving a fix point of a generator transforms the corresponding circle as the image of the circle around the other fix point. 
@@ -325,7 +325,7 @@ The \emph{Generate Surface} button creates a triangulated surface together with 
 This surface can then be uniformized via the main interface. 
 The \emph{Uniformize} button directly creates a uniformization and introduces cuts along the circles of the Schottky data. 
 The corresponding fundamental domain is then bounded by the pre-images of the circles and curves connecting them.
-The examples of Section~\ref{sec:tori_schottky} and~\ref{sec:schottky} use this fundamental domain.
+The examples of Section~\ref{sec:schottky} use this fundamental domain.
 
 {\bf Main interface}
 
@@ -421,7 +421,7 @@ The fundamental polygon corresponding to the identity group element can be visua
 The \emph{Polygon} box enables the visualization of polygon edges for all group elements defined by \emph{Cover Elements} and \emph{Cover Distance}. 
 If the triangulation exhibits a circle pattern face circles through vertices of faces can be shown.
 
-The \emph{Geometry} option is set automatically during calculation of uniformization but can be adjusted from the check box. The automatic value depends on the genus of the surface alone and may not be the correct choice. The program calculates four different fundamental domains that can be selected from the \emph{Domain} drop down see Section~\ref{sec:fundamental_domains}. If the selected geometry is \emph{Hyperbolic} you can choose the corresponding model. {\sc ConformalLab} supports visualization of \emph{Poicar\'e}, \emph{Klein}, and \emph{HalfPlane} model.
+The \emph{Geometry} option is set automatically during calculation of uniformization but can be adjusted from the check box. The automatic value depends on the genus of the surface alone and may not be the correct choice. The program calculates four different fundamental domains that can be selected from the \emph{Domain} drop down see Section~\ref{sec:polygons_generators}. If the selected geometry is \emph{Hyperbolic} you can choose the corresponding model. {\sc ConformalLab} supports visualization of \emph{Poicar\'e}, \emph{Klein}, and \emph{HalfPlane} model.
 
 The \emph{Interpolation} option lets you select how textures are interpolated on the current model. 
 %see Section~\ref{chp:projective_interpolation}. 
