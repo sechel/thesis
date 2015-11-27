@@ -2776,14 +2776,14 @@ determined for the given group and presentation.
 \label{fig:keen_polygon}
 \end{figure}
 
-%\begin{figure}
-%\centering
-%\resizebox{0.4\textwidth}{!} {
-%\input{data/algorithm/cutCanonical.pdf_t}
-%}
-%\caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=A'C_i$. Their inverses $C_i'$ become $\hat{C_i}'=C_i'A$}
-%\label{fig:cut-and-paste-canonical}
-%\end{figure}
+\begin{figure}
+\centering
+\resizebox{0.4\textwidth}{!} {
+\input{data/algorithm/cutCanonical.pdf_t}
+}
+\caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=A'C_i$. Their inverses $C_i'$ become $\hat{C_i}'=C_i'A$}
+\label{fig:cut-and-paste-canonical}
+\end{figure}
 
 \runinhead{Fundamental polygons with opposite sides identified.}
 
@@ -2813,64 +2813,64 @@ idea: Find a longest sequence of different letters in the edge
 labeling (ignoring primes), and then try to move a different letter
 into this sequence by cutting and gluing.
 
-% \begin{figure}
-% \resizebox{\textwidth}{!}{
-% \includegraphics[width=5cm]{algorithm/opposite_step0_labels_start.pdf}
-% \includegraphics[width=5cm]{algorithm/opposite_step0_labels.pdf}
-% \includegraphics[width=5cm]{algorithm/opposite_step1_labels.pdf}
-% }
-% \resizebox{0.666666\textwidth}{!}{
-% \includegraphics[width=5cm]{algorithm/opposite_step2_labels.pdf}
-% \includegraphics[width=5cm]{algorithm/opposite_step3_labels.pdf}
-% }
-% \caption{Algorithm example: Start with group relation $ABCDC' EFA'E'D'F'B' = 1$. Step~$1$: Cut from the start of $d'$ to the end of $c'$ and identify via $C'$ to move $C'$ in front of $D'$. The resulting relation is clustered such that the elements of the first half form the inverses of the second half: $ABCDEFA'E'C'D'F'B' = 1$. We now sort elements $A,\ldots,B$ to match the order of $A',\ldots,F'$ or vice versa. Step~$2$: Cut at $a'$ and $b$ and identify via $B$ to move $B$ in front of $A'$. We get relation $ACDEFBA'E'C'D'F'B' = 1$. Step~$3$: Cut between $d'$ and $e$ and identify via $E$ to move $E$ in front of $C$. We get $AECDFBA'E'C'D'F'B' = 1$ as the final relation and a fundamental polygon with oppositely identified sides.}
-% \label{fig:opposite_algorithm}
-% \end{figure}
+ \begin{figure}
+ \resizebox{\textwidth}{!}{
+ \includegraphics[width=5cm]{algorithm/opposite_step0_labels_start.pdf}
+ \includegraphics[width=5cm]{algorithm/opposite_step0_labels.pdf}
+ \includegraphics[width=5cm]{algorithm/opposite_step1_labels.pdf}
+ }
+ \resizebox{0.666666\textwidth}{!}{
+ \includegraphics[width=5cm]{algorithm/opposite_step2_labels.pdf}
+ \includegraphics[width=5cm]{algorithm/opposite_step3_labels.pdf}
+ }
+ \caption{Algorithm example: Start with group relation $ABCDC' EFA'E'D'F'B' = 1$. Step~$1$: Cut from the start of $d'$ to the end of $c'$ and identify via $C'$ to move $C'$ in front of $D'$. The resulting relation is clustered such that the elements of the first half form the inverses of the second half: $ABCDEFA'E'C'D'F'B' = 1$. We now sort elements $A,\ldots,B$ to match the order of $A',\ldots,F'$ or vice versa. Step~$2$: Cut at $a'$ and $b$ and identify via $B$ to move $B$ in front of $A'$. We get relation $ACDEFBA'E'C'D'F'B' = 1$. Step~$3$: Cut between $d'$ and $e$ and identify via $E$ to move $E$ in front of $C$. We get $AECDFBA'E'C'D'F'B' = 1$ as the final relation and a fundamental polygon with oppositely identified sides.}
+ \label{fig:opposite_algorithm}
+ \end{figure}
 
-% \begin{figure}
-% \centering
-% \resizebox{0.3\textwidth}{!} {
-% \input{figure/algorithm/moveElement.pdf_t}
-% }
-% \caption{Move element $A$ in front of $B$ in a relation that moves counter-clockwise around the base vertex. Choose the upper cut (dashed lines) and paste via transformation $A'$ moving side $a'$ to $a$. Or cut at the lower one and paste via transformation $A$.}
-% \label{fig:cut-and-paste-motion}
-% \end{figure}
+ \begin{figure}
+ \centering
+ \resizebox{0.3\textwidth}{!} {
+ \input{data/algorithm/moveElement.pdf_t}
+ }
+ \caption{Move element $A$ in front of $B$ in a relation that moves counter-clockwise around the base vertex. Choose the upper cut (dashed lines) and paste via transformation $A'$ moving side $a'$ to $a$. Or cut at the lower one and paste via transformation $A$.}
+ \label{fig:cut-and-paste-motion}
+ \end{figure}
 
-% A fundamental polygon identified by opposite sides has a side ordering
-% \begin{equation*}
-% abcd\cdots a'b'c'd'\cdots.
-% \end{equation*} 
-% A corresponding relation of the group of hyperbolic translations is $AB'CD'\cdots=1$ given that a transformation $X$ maps side $x$ to $x'$.
+ A fundamental polygon identified by opposite sides has a side ordering
+ \begin{equation*}
+ abcd\cdots a'b'c'd'\cdots.
+ \end{equation*} 
+ A corresponding relation of the group of hyperbolic translations is $AB'CD'\cdots=1$ given that a transformation $X$ maps side $x$ to $x'$.
 
-% We give two algorithms to transform a given fundamental domain into an opposite sides domain.
-% For the first algorithm we show that it terminates and yields the correct result. However we cannot control the number of products used during the transformation. The second algorithm is heuristic and minimizes the number of products. It has proven to terminate for all of our examples.
+ We give two algorithms to transform a given fundamental domain into an opposite sides domain.
+ For the first algorithm we show that it terminates and yields the correct result. However we cannot control the number of products used during the transformation. The second algorithm is heuristic and minimizes the number of products. It has proven to terminate for all of our examples.
 
-% We use the canonical form of fundamental polygons as an intermediate step in the process of transforming a given fundamental domain into opposite sided form. As shown above we can transform any domain into canonical form. In particular we can transform an abstract oppositely identified polygon into canonical form using the algorithm from above. All of the steps conducted during this transformation can be undone. We get a sequence of cut-and-paste operations transforming a canonical fundamental polygon into opposite sides form. Combining the sequence that transforms a general fundamental polygon into canonical form with the transform that creates the opposite form from the canonical one we get required sequence on transformations on any given domain.
+ We use the canonical form of fundamental polygons as an intermediate step in the process of transforming a given fundamental domain into opposite sided form. As shown above we can transform any domain into canonical form. In particular we can transform an abstract oppositely identified polygon into canonical form using the algorithm from above. All of the steps conducted during this transformation can be undone. We get a sequence of cut-and-paste operations transforming a canonical fundamental polygon into opposite sides form. Combining the sequence that transforms a general fundamental polygon into canonical form with the transform that creates the opposite form from the canonical one we get required sequence on transformations on any given domain.
 
-% This version of the algorithm is not optimal with respect to the number of products used in the sequence of transformations. In particular if the input polygon is close to opposite sides form already, the algorithm destroys this structure first and rebuilds it from the canonical form.
+ This version of the algorithm is not optimal with respect to the number of products used in the sequence of transformations. In particular if the input polygon is close to opposite sides form already, the algorithm destroys this structure first and rebuilds it from the canonical form.
 
-% In all examples we therefor use a different heuristic algorithm. We transform a given fundamental polygon and group presentation to opposite sides form using the following sequence of transformations. Refer to Figure~\ref{fig:opposite_algorithm} for an instance of this algorithm:
+ In all examples we therefor use a different heuristic algorithm. We transform a given fundamental polygon and group presentation to opposite sides form using the following sequence of transformations. Refer to Figure~\ref{fig:opposite_algorithm} for an instance of this algorithm:
 
-% For a given fundamental polygon and the ordering of its sides, we can reconstruct the relation of the group by moving around the base vertex on the surface. That means if we start with transformation $A$ moving side $a$ to $a'$ the next element in the relation belongs to the side next to $a'$ in counter-clockwise order. We proceed until we get back to element $A$. Note that we could have chosen clockwise orientation, but for drawing pictures we stick to counter-clockwise.
+ For a given fundamental polygon and the ordering of its sides, we can reconstruct the relation of the group by moving around the base vertex on the surface. That means if we start with transformation $A$ moving side $a$ to $a'$ the next element in the relation belongs to the side next to $a'$ in counter-clockwise order. We proceed until we get back to element $A$. Note that we could have chosen clockwise orientation, but for drawing pictures we stick to counter-clockwise.
 
-% For an oppositely identified fundamental polygon (and for canonically identified polygons as well) the order of transformations in the relation has the same structure as the sides of the polygon (possibly after renaming of sides). For example the group relation corresponding to a polygon $ab'cd'a'bc'd$ is $ABCDA'B'C'D'=1$.
+ For an oppositely identified fundamental polygon (and for canonically identified polygons as well) the order of transformations in the relation has the same structure as the sides of the polygon (possibly after renaming of sides). For example the group relation corresponding to a polygon $ab'cd'a'bc'd$ is $ABCDA'B'C'D'=1$.
 
-% For the order of group elements in the relation we give cut-and-paste sequences that move single elements to different locations in the relation leaving all other elements in place. Using these transformations we normalize the polygon as follows.
+ For the order of group elements in the relation we give cut-and-paste sequences that move single elements to different locations in the relation leaving all other elements in place. Using these transformations we normalize the polygon as follows.
 
-% \begin{compactitem}
-% \item[1] Find largest sequence of different (excluding inverse) generators in the relation.
-% \item[2] Move missing elements into the sequence such that it forms a basis for the group.
-% \item[3] Sort elements in the sequence to match the order of the corresponding inverse elements.
-% \end{compactitem}
+ \begin{compactitem}
+ \item[1] Find largest sequence of different (excluding inverse) generators in the relation.
+ \item[2] Move missing elements into the sequence such that it forms a basis for the group.
+ \item[3] Sort elements in the sequence to match the order of the corresponding inverse elements.
+ \end{compactitem}
 
-% Let the order of sides in the polygon be $a' \cdots b \cdots a \cdots$. The corresponding cut-and-paste operation that moves the group element $A$ in front of $B$ is one of
+ Let the order of sides in the polygon be $a' \cdots b \cdots a \cdots$. The corresponding cut-and-paste operation that moves the group element $A$ in front of $B$ is one of
 
-% \begin{compactitem}
-% \item Cut from the end of $a$ to the start of $b$ and glue using $A$.
-% \item Cut from the start of $a'$ to the start of $b$ and glue via $A'$.
-% \end{compactitem}
+ \begin{compactitem}
+ \item Cut from the end of $a$ to the start of $b$ and glue using $A$.
+ \item Cut from the start of $a'$ to the start of $b$ and glue via $A'$.
+ \end{compactitem}
 
-% Choose the one with the lowest number of products, see Figure~\ref{fig:cut-and-paste-motion}. If the order of sides in the polygon is $a' \cdots a \cdots b \cdots$ we can however not perform the operation, the resulting domain would be disconnected. We therefor define the cost for such an operation as infinite. In step 2 we minimize over all possible transformations that move a selected element into the sequence. We do not show here that the cost is always a finite during the algorithm and call this algorithm heuristic due to this fact. Depending on the sort algorithm we use in step 3 we have the freedom to choose between the motion of the inverse elements or their partners. In our examples this gives enough freedom to create all oppositely identified fundamental domains. See Figure~\ref{fig:opposite_algorithm} for an example of this algorithm.
+ Choose the one with the lowest number of products, see Figure~\ref{fig:cut-and-paste-motion}. If the order of sides in the polygon is $a' \cdots a \cdots b \cdots$ we can however not perform the operation, the resulting domain would be disconnected. We therefor define the cost for such an operation as infinite. In step 2 we minimize over all possible transformations that move a selected element into the sequence. We do not show here that the cost is always a finite during the algorithm and call this algorithm heuristic due to this fact. Depending on the sort algorithm we use in step 3 we have the freedom to choose between the motion of the inverse elements or their partners. In our examples this gives enough freedom to create all oppositely identified fundamental domains. See Figure~\ref{fig:opposite_algorithm} for an example of this algorithm.
 
 
 
