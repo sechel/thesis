@@ -9,21 +9,22 @@
 
 \begin{figure}
 \centering
-\resizebox{\textwidth}{!}{
+\resizebox{0.9\textwidth}{!}{
 \includegraphics[height=10cm]{introduction/genus0_image.pdf}
 \quad
 \includegraphics[height=10cm]{introduction/genus0_domain.pdf}
 }
-\resizebox{\textwidth}{!}{
+\resizebox{0.9\textwidth}{!}{
 \includegraphics[height=10cm]{introduction/genus1_image.pdf}
 \quad    
 \raisebox{0.5cm}{\includegraphics[height=9cm]{introduction/genus1_domain.pdf}}
 }
-\resizebox{\textwidth}{!}{
+\resizebox{0.9\textwidth}{!}{
 \includegraphics[height=10cm]{introduction/genus3_image.pdf}
 \quad   
 \includegraphics[height=10cm]{introduction/genus3_domain.pdf}
 }
+\setstretch{0.0}{\scriptsize\tt data/introduction/genus\{0/1/3\}\_data.xml} 
 \caption{
 Uniformization of compact Riemann surfaces. 
 The uniformization of spheres is treated in
@@ -727,10 +728,9 @@ angles as functions of the sides exist only for triangles, e.g.,
 the polyhedral surface. For the angles in a triangulation, we use the
 notation shown in Figure~\ref{fig:triangle_notation}.
 \begin{figure}
-%\sidecaption%[t]
 \centering
-\makebox[0pt][r]{\includegraphics[width=0.4\textwidth]{notation_triangle_circle.pdf}}%
-%\hspace*{0.3\textwidth}
+\includegraphics[width=0.4\textwidth]{notation_triangle_circle.pdf}\\
+\hspace*{0.3\textwidth}
 \caption{Notation of lengths and angles in a triangle ${\it ijk} \in F$.}
 \label{fig:triangle_notation}	
 \end{figure}
@@ -1231,7 +1231,7 @@ Definition~\ref{def:f} easier to state.
 \begin{figure}
   %\sidecaption
   \centering
-  \includegraphics[width=0.4\linewidth]{lobachevskyplot}
+  \includegraphics[width=0.5\linewidth]{lobachevskyplot}
   \caption{Graph of Milnor's Lobachevsky function, $y=\ML(x)$.}
   \label{fig:lobachevskyplot}
 \end{figure}%
@@ -1472,11 +1472,11 @@ resulting quadrangulations are shown in the middle.
 \raisebox{-0.46\height}{\includegraphics[width=0.2\textwidth]{planar_circles/schramm_image-new}}\hfill%
 \raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{planar_circles/schramm_quads-new}}\hspace{-0.05\textwidth}%
 \raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{planar_circles/schramm_circles-new}}\\
+\scriptsize\tt data/planar\_circles/circular\_schramm02.xml\\
 \raisebox{-0.46\height}{\includegraphics[width=0.2\textwidth]{planar_circles/non_schramm_image-new}}\hfill%
 \raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{planar_circles/non_schramm_quads-new}}\hspace{-0.05\textwidth}%
 \raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{planar_circles/non_schramm_circles-new}}\\
-%
-%\includegraphics[width=\textwidth]{planar_circles/all.pdf}
+\scriptsize\tt data/planar\_circles/circular\_non\_schramm02.xml\\
 \caption{
 Mapping a rectangle to a parallelogram. Note the orthogonal circle
 pattern in top row and the wiggly vertical lines
@@ -1625,7 +1625,10 @@ Figure~\ref{fig:circular_riemann}, top row.
   \rotatebox{-20}{$\uparrow$}\\
   \hspace*{\fill}%
   \includegraphics[height=5cm]{planar_circles/riemann_shape_halfplane.pdf}%
-  \hspace*{\fill}%
+  \hspace*{\fill}
+  \begin{center}
+  \setstretch{0.0}{\scriptsize\tt data/planar\_circles/riemann\_shape.xml}
+  \end{center}
   \caption{Riemann mapping with cyclic quadrilaterals}
   \label{fig:circular_riemann}
 \end{figure}
@@ -1657,7 +1660,8 @@ boundary, as in the example shown in Figure~\ref{fig:circular_riemann}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.5\textwidth]{planar_circles/riemann_shape_circles.pdf}
+  \includegraphics[width=0.5\textwidth]{planar_circles/riemann_shape_circles.pdf}\\
+  \setstretch{0.0}{\scriptsize\tt data/planar\_circles/riemann\_shape.xml}
   \caption{Here we show the face circumcircles of the solution to the
     Riemann mapping problem of Figure~\ref{fig:circular_riemann}. It
     looks conspicuously like an orthogonal circle pattern. But the
@@ -1798,9 +1802,11 @@ construct discrete maps to circle domains:
 
 Figure~\ref{fig:euclidean_circle_domain} shows an example.
 \begin{figure}
+\centering
 \includegraphics[width=0.3333\textwidth]{circle_domain_euclidean/three_holes_image.pdf}%
 \includegraphics[width=0.3333\textwidth]{circle_domain_euclidean/three_holes_domain.pdf}%
-\includegraphics[width=0.3333\textwidth]{circle_domain_euclidean/three_holes_map.pdf}%
+\includegraphics[width=0.3333\textwidth]{circle_domain_euclidean/three_holes_map.pdf}\\
+\setstretch{0.8}{\scriptsize\tt data/circle\_domain\_euclidean/three\_holes.xml}
 \caption{
 Discrete conformal map of a multiply-connected domain (left) to a
 circle domain (middle). The images of vertical and horizontal ``parameter
@@ -1846,18 +1852,28 @@ where circular holes are mapped to slits. Here, we use the following
 trick: We start with the slit surface and map it to a surface with
 circular holes as described in Section~\ref{sec:circle_domains}.
 \begin{figure}
-	\includegraphics[height=0.34\textwidth]{planar_streams/triangle_cylinder.pdf}
-	\hfill
-	\includegraphics[height=0.34\textwidth]{planar_streams/triangle_cylinder_image.pdf}
-        \hfill	
-	\includegraphics[height=0.34\textwidth]{planar_streams/triangle_cylinder_domain.pdf}\\
-	\includegraphics[height=0.34\textwidth]{planar_streams/arrow_cylinder.pdf}
+	\centering
+	\resizebox{\textwidth}{!}{
+	\includegraphics[height=5cm]{planar_streams/arrow_cylinder.pdf}
 	\hskip 0.01\textwidth
-	\includegraphics[height=0.34\textwidth]{planar_streams/arrow_cylinder_image.pdf}\hfill
+	\includegraphics[height=5cm]{planar_streams/arrow_cylinder_image.pdf}\hfill
 	\hskip 0.01\textwidth
-	\includegraphics[height=0.34\textwidth]{planar_streams/arrow_cylinder_domain.pdf}\\
-	\includegraphics[width=0.5\textwidth]{planar_streams/circular_stream_03_lines.pdf}
-	\includegraphics[width=0.5\textwidth]{planar_streams/circular_stream_03_mesh.pdf}
+	\includegraphics[height=5cm]{planar_streams/arrow_cylinder_domain.pdf}
+	}
+	\setstretch{0.0}{\scriptsize\tt data/planar\_streams/arrow\_cylinder\_planar.xml}
+	\resizebox{\textwidth}{!}{
+	\includegraphics[height=5cm]{planar_streams/triangle_cylinder.pdf}
+	\hskip 0.01\textwidth
+	\includegraphics[height=5cm]{planar_streams/triangle_cylinder_image.pdf}\hfill
+	\hskip 0.01\textwidth
+	\includegraphics[height=5cm]{planar_streams/triangle_cylinder_domain.pdf}
+	}
+	\setstretch{0.0}{\scriptsize\tt data/planar\_streams/triangle\_cylinder\_planar.xml}
+	\resizebox{\textwidth}{!}{
+	\includegraphics[height=5cm]{planar_streams/circular_stream_03_lines.pdf}
+	\includegraphics[height=5cm]{planar_streams/circular_stream_03_mesh.pdf}
+	}
+	\setstretch{0.0}{\scriptsize\tt data/planar\_streams/circular\_stream\_03.xml}
         \caption{Mapping surfaces with holes to slit surfaces. In all
           images, the left and right parts of the boundary are
           identified by a horizontal translation. Preimages of
@@ -1923,9 +1939,10 @@ sphere. This is explained in Section~\ref{sec:spherical_computation}.
 
 \begin{figure}
 \centering%
-\includegraphics[width=0.3\textwidth]{spherical_cyclic/cube_cyclic_domain.pdf}%
+\includegraphics[width=0.4\textwidth]{spherical_cyclic/cube_cyclic_domain.pdf}%
 \hspace{0.1\textwidth}%
-\includegraphics[width=0.3\textwidth]{spherical_cyclic/cube_cyclic_image.pdf}%
+\includegraphics[width=0.4\textwidth]{spherical_cyclic/cube_cyclic_image.pdf}\\
+\setstretch{0.0}{\scriptsize\tt data/spherical\_cyclic/spherical\_circular.xml}
 \caption{Discrete conformal map from the cube to the sphere,
   calculated with the method described in
   Section~\ref{sec:spheres_euclidean}. We apply M{\"o}bius
@@ -1983,6 +2000,7 @@ shows a discrete conformal map  calculated by this method.
 \includegraphics[height=5cm]{spherical/tetrahedron_image.pdf}
 \includegraphics[height=5cm]{spherical/tetrahedron_domain.pdf}
 }
+\setstretch{0.0}{\scriptsize\tt data/spherical/cube\_data.xml}\quad\quad\quad\quad\quad\quad{\scriptsize\tt data/spherical/tetrahedron\_data.xml}
 \caption{Mapping conformally to the sphere using the spherical
   functional. The spherical surfaces are M{\"o}bius normalized to
   achieve rotational symmetry.}
@@ -2111,6 +2129,7 @@ with prescribed total angle $\Theta=2\pi$ at all vertices.
     \includegraphics[height=5cm]{torus_cyclic/torus_cyclic_image.pdf}\quad
     \includegraphics[height=5cm]{torus_cyclic/torus_cyclic_domain.pdf}
   }
+  \setstretch{0.0}{\scriptsize\tt data/torus\_cyclic/torus\_cyclic.xml} 
   \caption{ Uniformization of an immersed torus with cyclic quadrilateral faces}
 \label{fig:torus_cyclic}
 \end{figure}
@@ -2129,6 +2148,7 @@ known in terms of elliptic functions~\cite{abresch1987, walter1989, bobenko1991}
 \centering
 \includegraphics[width=0.48\textwidth]{wente_embedding/wente_1240_fundamental.pdf}\hfill
 \includegraphics[width=0.48\textwidth]{wente_embedding/wente_1240_domain.pdf}
+\setstretch{0.5}{\scriptsize\tt data/wente\_embedding/wente\_1240.xml}
 \caption{Uniformization of the Wente torus}
 \label{fig:wente_torus_embedded}
 \end{figure}
@@ -2204,6 +2224,7 @@ Section~\ref{sec:hyperelliptic}.
 \includegraphics[width=0.5\textwidth]{elliptic_curves/square.pdf}
 \includegraphics[width=0.5\textwidth]{elliptic_curves/generic.pdf}
 }
+\setstretch{0.8}{\scriptsize\tt data/elliptic\_curves/\{tetrahedron|square|generic\}.xml}
 \caption{Discrete uniformization of elliptic curves. Left: If the
   branch points in $S^{2}$ are the vertices of a regular tetrahedron,
   period lattice is very close to a hexagonal lattice. Middle: If the
@@ -2243,6 +2264,7 @@ respectively.
 \includegraphics[height=4.5cm]{elliptic_tetrahedron_uniform/tetrahedron_uniform_domain.pdf}
 \includegraphics[height=4.5cm]{elliptic_tetrahedron_uniform/tetrahedron_uniform_image.pdf}
 }
+\setstretch{0.8}{\scriptsize\tt data/elliptic\_tetrahedron\_uniform/tetrahedron\_uniform\_branched.xml}
 \caption{Mapping the hexagonal torus $\C/(\Z+\tau\Z)$,
   $\tau=\tfrac{1}{2}+i\tfrac{\sqrt 3}{2}$ (left) to a double cover of
   the sphere (right). Because the regular triangulation of the torus
@@ -2257,6 +2279,7 @@ respectively.
 \includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_domain.pdf}
 \includegraphics[height=4.7cm]{elliptic_square_uniform/square_uniform_fine_image.pdf}
 }
+\setstretch{0.8}{\scriptsize\tt data/elliptic\_square\_uniform/square\_branched.xml}
 \caption{ Mapping the square torus $\C/(\Z+i\Z)$ (left) to a double
   cover of the sphere (right). Again, the triangulation on the left
   is symmetric with respect to the elliptic involution, so the image
@@ -2366,6 +2389,8 @@ experiment. It suggests the error behaves like
 \includegraphics[width=0.35\textwidth]{convergence/icosubdivision01.pdf}\hfill
 \includegraphics[width=0.32\textwidth]{convergence/icosubdivision01_example01.pdf}
 }
+{\scriptsize\tt data/convergence/subdivision/icosubdivision01.dat}\\
+{\scriptsize\tt data/convergence/subdivision/data/icosubdivision01.xml}
 \caption{Left: Error for zero to six subdivision steps. The
   $\log$-$\log$ plot shows the error $|\tau - \hat\tau|$ against the
   number of vertices of the subdivided icosahedron (i.e., in one sheet
@@ -2407,6 +2432,7 @@ x$ or $\mean_e \{Q_{\lcr}(e)\} < x$.)
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{convergence/quality_rand_points01_maxmultiratio_2.pdf}
+\setstretch{0.0}{\scriptsize\tt data/convergence/numberofpoints/quality\_rand\_points01.dat}
 \caption{Left: $\log$-$\log$ plot of the error $|\tau - \hat\tau|$
   against the number of vertices for a sample of optimized random
   triangulations with no quality constraint. Right: Only
@@ -2428,12 +2454,16 @@ We can use a variant of the discrete uniformization of elliptic curves
 surface that is homeomorphic to a sphere.  Figure~\ref{fig:bear} shows
 an example.
 \begin{figure}
+\centering
+\resizebox{\textwidth}{!}{
   \includegraphics[height=0.25\textwidth]{bear_torus/baer_quads.pdf}%
   \includegraphics[height=0.25\textwidth]{bear_torus/baer_cuts.pdf}%
-  \hfill%
+  \hspace{1mm}%
   \includegraphics[height=0.25\textwidth]{bear_torus/cover_triangulation_rectangle.pdf}%
-  \hfill%
+  \hspace{1mm}%
   \includegraphics[height=0.25\textwidth]{bear_torus/cover_triangulation.pdf}%
+  }
+  \setstretch{0.8}{\scriptsize\tt data/bear\_torus/bear60.xml}
   \caption{The discrete ``Berlin Buddy Bear'', a mascot of the
     SFB/Transregio 109 ``Discretization in Geometry and Dynamics''. 
     The square pattern is put on a bear model as described in
@@ -2490,8 +2520,9 @@ surfaces. Examples are shown in Figures~\ref{fig:intro_uniformization}
 (bottom), \ref{fig:embedded_genus_3}, and~\ref{fig:embedded_genus_5}.
 \begin{figure}
 \centering
-\hspace*{\fill}\includegraphics[height=0.4\textwidth]{genus3/genus3.pdf}\hfill%
-\includegraphics[height=0.4\textwidth]{genus3/canonical_mesh.pdf}\hspace*{\fill}
+\includegraphics[height=0.4\textwidth]{genus3/genus3.pdf}%
+\includegraphics[height=0.4\textwidth]{genus3/canonical_mesh.pdf}
+\setstretch{0.5}{\scriptsize\tt data/genus3/data.xml}
 %\includegraphics[height=10cm]{genus3/canonical_cover.pdf}
 \caption{Discrete uniformization of an embedded triangulated surface
   of genus $3$. A fundamental polygon with ``canonical'' edge pairing
@@ -2502,8 +2533,9 @@ surfaces. Examples are shown in Figures~\ref{fig:intro_uniformization}
 \end{figure}
 \begin{figure}
 \centering
-\hspace*{\fill}\includegraphics[height=0.35\textwidth]{genus5/genus5.pdf}\hspace*{\fill}%
-\includegraphics[height=0.35\textwidth]{genus5/fundamental.pdf}\hspace*{\fill}
+\includegraphics[height=0.4\textwidth]{genus5/genus5.pdf}
+\includegraphics[height=0.4\textwidth]{genus5/fundamental.pdf}\\
+\setstretch{0.5}{\scriptsize\tt data/genus5/data.xml}
 \caption{Left: An embedded triangulated surface of genus $5$. Right:
   Fundamental polygon with non-canonical edge-pairing. The axes of the
   edge pairing translations are shown in blue.}
@@ -2524,6 +2556,7 @@ circle.
 }
 \includegraphics[height=5cm]{circle_domain_hyperbolic/brezel_three_holes_domain.pdf}
 }
+\setstretch{0.0}{\scriptsize\tt data/circle\_domain\_hyperbolic/brezel\_\{one,two,three\}\_holes.xml}
 \caption{ Uniformization of a genus $2$ surface with three boundary
   components over the hyperbolic plane with three circular holes. The
   three holes are filled with polygons, which are then triangulated
@@ -2616,14 +2649,15 @@ DC'BA'D'CB'A=1.
 
 \begin{figure}
 \centering
-(a)\includegraphics[height=0.45\textwidth]{algorithm/step1_boundary.pdf}
-(b)\includegraphics[height=0.45\textwidth]{algorithm/step2.pdf}
+(a)\includegraphics[height=0.42\textwidth]{algorithm/step1_boundary.pdf}
+(b)\includegraphics[height=0.42\textwidth]{algorithm/step2.pdf}
 \\
-(c)\includegraphics[height=0.45\textwidth]{algorithm/step3.pdf}
-(d)\includegraphics[height=0.45\textwidth]{algorithm/contract_combined.pdf}
+(c)\includegraphics[height=0.42\textwidth]{algorithm/step3.pdf}
+(d)\includegraphics[height=0.42\textwidth]{algorithm/contract_combined.pdf}
 \\
-(e)\includegraphics[height=0.45\textwidth]{algorithm/step5.pdf}
-(f)\includegraphics[height=0.45\textwidth]{algorithm/step5_5.pdf}
+(e)\includegraphics[height=0.42\textwidth]{algorithm/step5.pdf}
+(f)\includegraphics[height=0.42\textwidth]{algorithm/step5_5.pdf}
+\setstretch{0.0}{\scriptsize\tt data/algorithm/data.xml}
 \caption{ Constructing a fundamental polygon with opposite edges
   identified.  (a) Laying out hyperbolic triangles creates a
   fundamental polygon with many vertices. (b) Straighten the edges
@@ -2742,14 +2776,14 @@ determined for the given group and presentation.
 \label{fig:keen_polygon}
 \end{figure}
 
-% \begin{figure}
-% \centering
-% \resizebox{0.4\textwidth}{!} {
-% \input{figure/algorithm/cutCanonical.pdf_t}
-% }
-% \caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=A'C_i$. Their inverses $C_i'$ become $\hat{C_i}'=C_i'A$}
-% \label{fig:cut-and-paste-canonical}
-% \end{figure}
+%\begin{figure}
+%\centering
+%\resizebox{0.4\textwidth}{!} {
+%\input{data/algorithm/cutCanonical.pdf_t}
+%}
+%\caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=A'C_i$. Their inverses $C_i'$ become $\hat{C_i}'=C_i'A$}
+%\label{fig:cut-and-paste-canonical}
+%\end{figure}
 
 \runinhead{Fundamental polygons with opposite sides identified.}
 
@@ -2927,6 +2961,7 @@ uniformization.
     \reflectbox{\includegraphics[width=10cm, angle=90]{schottky_g3/genus3_image2.pdf}}
     \includegraphics[width=10cm]{schottky_g3/genus3_domain2.pdf}
   }
+  \setstretch{0.0}{\scriptsize\tt data/schottky\_g3/schottky.xml} 
   \caption{Discrete Riemann surface of genus $3$ given by Schottky
     data (left) and its Fuchsian uniformization (right). Circles with
     the same color are identified. The extra points of the
@@ -2971,10 +3006,12 @@ domain of the Schottky group.
 \includegraphics[height=4cm]{schottky_g1/res50_image.pdf}
 \includegraphics[height=3.9cm]{schottky_g1/res50_cover.pdf}
 }
+\setstretch{0.8}{\scriptsize\tt data/schottky\_g1/res50.xml} 
 \resizebox{\textwidth}{!}{
 \includegraphics[height=4cm]{schottky_g1/res50_ni_image.pdf}
 \includegraphics[height=3.9cm]{schottky_g1/res50_ni_cover.pdf}
 }
+\setstretch{0.8}{\scriptsize\tt data/schottky\_g1/res40\_nonrect.xml}
 \caption{ Left: Fundamental domains of Riemann surfaces of genus $1$
   given by Schottky data $C$, $C'$, $A$, $B$, $\mu$
   (see~\eqref{eq:schottky_gen}). The triangulations use only points on
@@ -3024,6 +3061,7 @@ are branched at the $(2g)$th roots of unity and at $0$ and $\infty$.
 \includegraphics[height=4.5cm]{hyperelliptic_g3/cover_mesh.pdf}
 \includegraphics[height=4.5cm]{hyperelliptic_g4/cover.pdf}
 }
+\setstretch{0.0}{\scriptsize\tt data/hyperelliptic\_\{g2,g3,g4\}/data.xml} 
 \caption{ Uniformizations of the hyperbolic
   curves~\eqref{eq:hyperelliptic_roots_unity} with genus $2$, $3$, and
   $4$. The triangulation of the surfaces is a regular $1$-to-$4$
@@ -3050,10 +3088,11 @@ discrete conformal structure, which we map discretely conformally to
 the sphere.  Figure~\ref{fig:genus2_branched} shows an example.
 \begin{figure} 
 \centering
-\includegraphics[width=0.6\textwidth]{branched_genus_2/mercator_texture.pdf}\\
-\includegraphics[height=0.25\textwidth]{branched_genus_2/image_stereographic_all_real.pdf}%
+\includegraphics[width=0.8\textwidth]{branched_genus_2/mercator_texture.pdf}\\
+\includegraphics[height=0.27\textwidth]{branched_genus_2/image_stereographic_all_real.pdf}%
 \quad%
-\includegraphics[height=0.25\textwidth]{branched_genus_2/image_stereographic_all_real_closeup.pdf}
+\includegraphics[height=0.27\textwidth]{branched_genus_2/image_stereographic_all_real_closeup.pdf}\\
+\setstretch{0.0}{\scriptsize\tt data/branched\_genus\_2/data.xml} 
 \caption{A triangulated genus $2$ surface is mapped to a branched
   cover of $\Chat$. The $180^{\circ}$ rotation about the horizontal
   symmetry axis is a discrete conformal involution with $6$ fixed
@@ -3194,6 +3233,7 @@ result is shown in Figure~\ref{fig:non-hyperelliptic}.
 \includegraphics[width=0.4\textwidth]{non-hyperelliptic/non-hyperelliptic-symmetric-with-closeup.pdf}
 }
 }
+\setstretch{0.0}{\scriptsize\tt data/non-hyperelliptic/tetrahedron\_g3\_01\_symmetric.xml}
 \caption{Hyperelliptic vs. non-hyperelliptic. Left: Uniformization of a
   hyperelliptic surface with a centrally symmetric fundamental
   polygon. The axes of the generators meet in a common point. Right:
@@ -3296,18 +3336,21 @@ in this section is available on the {DGD Gallery} webpage
 
 \begin{figure}
 	\centering
-	\resizebox{\textwidth}{!} {
+	\resizebox{!}{6.3cm} {
 	\includegraphics[height=10cm]{lawson_curve/curve_canonical_cuts2.pdf}
 	\includegraphics[height=10cm]{lawson_curve/curve_canonical_uniformization.pdf}
 	}
-	\resizebox{\textwidth}{!} {
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_curve/curve\_canonical.xml}
+	\resizebox{!}{6.3cm} {
 	\includegraphics[height=10cm]{lawson_curve/curve_opposite_cuts.pdf}
 	\includegraphics[height=10cm]{lawson_curve/curve_opposite_uniformization.pdf}
 	}
-	\resizebox{\textwidth}{!} {
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_curve/curve\_opposite.xml}
+	\resizebox{!}{6.3cm} {
 	\includegraphics[height=10cm]{lawson_curve/curve_cyclic_cuts.pdf}
 	\includegraphics[height=10cm]{lawson_curve/curve_cyclic_triangulation_cover.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_curve/curve\_cyclic.xml}
 	\caption{Uniformization of the hyperelliptic curve
           $\mu^2=\lambda^6-1$. Left: Triangulated double cover of the
           sphere branched at the 6th roots of unity, with the boundary
@@ -3360,18 +3403,22 @@ vertex class in the fundamental polygon.
 
 \begin{figure}
 	\centering
-	\resizebox{\textwidth}{!} {
+	\resizebox{!}{6.3cm} {
 	\includegraphics[height=10cm]{lawson_embedding/embedding_canonical_cuts.pdf}
 	\includegraphics[height=10cm]{lawson_embedding/embedding_canonical_uniformization.pdf}
 	}
-	\resizebox{\textwidth}{!} {
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_embedding/embedding5k\_canonical.xml}
+	\resizebox{!}{6.3cm} {
 	\includegraphics[height=10cm]{lawson_embedding/embedding_opposite_cuts.pdf}
 	\includegraphics[height=10cm]{lawson_embedding/embedding_opposite_uniformization.pdf}
 	}
-	\resizebox{\textwidth}{!} {
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_embedding/embedding5k\_opposite.xml}	
+	\resizebox{!}{6.6cm} {
 	\includegraphics[height=10cm]{lawson_embedding/embedding_cyclic_cuts.pdf}
+	\hspace{4mm}
 	\includegraphics[height=10cm]{lawson_embedding/embedding_cyclic_triangulation_cover.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_embedding/embedding5k\_cyclic.xml}	
 	\caption{Uniformization of Lawson's surface. Left:
           Triangulated model~\cite{polthier97}, with the boundary of
           the fundamental domain shown in brown and the axes of the
@@ -3429,6 +3476,7 @@ corresponding fundamental domains.
 	}
 	\includegraphics[height=10cm]{lawson_squares/lawson_squares_triangulation_cover.pdf}
 	}
+	\setstretch{0.0}{\scriptsize\tt data/lawson\_squares/lawson\_squares\_branch.xml}
 	\caption{Left: A surface glued from six squares. Right:
           Fuchsian uniformization and fundamental domain.}
 \label{fig:lawson_squares}
