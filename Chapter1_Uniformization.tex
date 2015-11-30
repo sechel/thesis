@@ -2714,21 +2714,23 @@ the $PSL(2,\R)$-representation of hyperbolic
 isometries~\cite{Floyd2002}, but the fundamental problem remains. For
 this reason, it is desirable to perform the cut-and-glue algorithm in
 such a way that the number of matrix products required to maintain the
-gluing translations is small. We follow the following greedy
-approach. Repeatedly we have to choose labels $x$, $y$ such that the
-order in the polygon is $x\cdots y\cdots x'\cdots y'$, and then
-perform a cut-and-glue sequence to bring the labels next to each
-other, $xyx'y'$. We always choose a pair $x$, $y$, for which this
-requires the minimal number of matrix multiplications.
+gluing translations is small. 
 
-\runinhead {Canonical Fundamental Domain.}
+%We follow the following greedy
+%approach. Repeatedly we have to choose labels $x$, $y$ such that the
+%order in the polygon is $x\cdots y\cdots x'\cdots y'$, and then
+%perform a cut-and-glue sequence to bring the labels next to each
+%other, $xyx'y'$. We always choose a pair $x$, $y$, for which this
+%requires the minimal number of matrix multiplications.
+%
+%\runinhead {Canonical Fundamental Domain.}
 
 \begin{figure}
 \centering
 \resizebox{0.4\textwidth}{!} {
 \input{data/algorithm/cutCanonical.pdf_t}
 }
-\caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=A'C_i$. Their inverses $C_i'$ become $\hat{C_i}'=C_i'A$}
+\caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=C_iA'$. Their inverses $C_i'$ become $\hat{C_i}'=AC_i'$}
 \label{fig:cut-and-paste-canonical}
 \end{figure}
 
@@ -2743,14 +2745,15 @@ requires the minimal number of matrix multiplications.
  \label{fig:canonical_algorithm}
  \end{figure}
 
- We start with a fundamental polygon with a single vertex as explained above. 
+ We start with a fundamental polygon with a single vertex class that is not in canonical form. 
  Then choose sides $a$ and $b$ such that the order in the polygon is $a\cdots b \cdots a' \cdots b' \cdots$. 
  We perform a cut-and-paste operation such that sides $a$ and $b$ are next to each other after transformation, see Figure~\ref{fig:cut-and-paste-canonical}. 
  In order to minimize the number of products we choose $a$ and $b$ such the number of sides in between $a$, $b$, $a'$, and $b'$ is minimal. 
  We proceed cutting as described before to bring $b$ next to $a'$ and analogously $a'$ next to $b'$. 
  We end up with a new polygon and the order $aba'b'\cdots$. 
  Repeat this algorithm for the rest of the sides to arrive at canonical form. 
- Again a proof can be found, e.g., in the book by Jost~\cite[p. 51]{Jost2007}.
+ Again a proof can be found, e.g., in the book by Jost~\cite{Jost2007}.
+ See Figure~\ref{fig:canonical_algorithm} for an example of this algorithm.
 
  The number of products built during the transformation of a linked pair $a$, $b$ depends on the number of polygon sides between $a$, $b$, $a'$, and $b'$. 
  Let $C$ be the number of sides between $a$ and $b$. Let $D$ and $E$ be the number of sides between $b$, $a'$, and $b'$ respectively. 
@@ -2832,7 +2835,7 @@ into this sequence by cutting and gluing.
  \includegraphics[width=5cm]{algorithm/opposite_step2_labels.pdf}
  \includegraphics[width=5cm]{algorithm/opposite_step3_labels.pdf}
  }
- \caption{Algorithm example: Start with group relation $ABCDC' EFA'E'D'F'B' = 1$. Step~$1$: Cut from the start of $d'$ to the end of $c'$ and identify via $C'$ to move $C'$ in front of $D'$. The resulting relation is clustered such that the elements of the first half form the inverses of the second half: $ABCDEFA'E'C'D'F'B' = 1$. We now sort elements $A,\ldots,B$ to match the order of $A',\ldots,F'$ or vice versa. Step~$2$: Cut at $a'$ and $b$ and identify via $B$ to move $B$ in front of $A'$. We get relation $ACDEFBA'E'C'D'F'B' = 1$. Step~$3$: Cut between $d'$ and $e$ and identify via $E$ to move $E$ in front of $C$. We get $AECDFBA'E'C'D'F'B' = 1$ as the final relation and a fundamental polygon with oppositely identified sides.}
+ \caption{Algorithm example: Start with group relation $B'F'D'E'A'FEC'DCBA = 1$. Step~$1$: Cut from the start of $d'$ to the end of $c'$ and identify via $C'$ to move $C'$ behind $D'$. The resulting relation is clustered such that the elements of the first half form the inverses of the second half: $B'F'D'C'E'A'FEDCBA= 1$. We now sort elements $A,\ldots,B$ to match the order of $A',\ldots,F'$ or vice versa. Step~$2$: Cut at $a'$ and $b$ and identify via $B$ to move $B$ behind $A'$. We get relation $B'F'D'C'E'A'BFEDCA = 1$. Step~$3$: Cut between $d'$ and $e$ and identify via $E$ to move $E$ behind $C$. We get $B'F'D'C'E'A'BFDCEA = 1$ as the final relation and a fundamental polygon with oppositely identified sides.}
  \label{fig:opposite_algorithm}
  \end{figure}
 
@@ -2862,7 +2865,7 @@ into this sequence by cutting and gluing.
 
  For a given fundamental polygon and the ordering of its sides, we can reconstruct the relation of the group by moving around the base vertex on the surface. That means if we start with transformation $A$ moving side $a$ to $a'$ the next element in the relation belongs to the side next to $a'$ in counter-clockwise order. We proceed until we get back to element $A$. Note that we could have chosen clockwise orientation, but for drawing pictures we stick to counter-clockwise.
 
- For an oppositely identified fundamental polygon (and for canonically identified polygons as well) the order of transformations in the relation has the same structure as the sides of the polygon (possibly after renaming of sides). For example the group relation corresponding to a polygon $ab'cd'a'bc'd$ is $ABCDA'B'C'D'=1$.
+ For an oppositely identified fundamental polygon (and for canonically identified polygons as well) the order of transformations in the relation has the same structure as the sides of the polygon (by reading the relation backwards and possibly relabeling of sides). For example the group relation corresponding to a polygon $ab'cd'a'bc'd$ is $D'C'B'A'DCBA=1$.
 
  For the order of group elements in the relation we give cut-and-paste sequences that move single elements to different locations in the relation leaving all other elements in place. Using these transformations we normalize the polygon as follows.
 
@@ -2872,7 +2875,7 @@ into this sequence by cutting and gluing.
  \item[3] Sort elements in the sequence to match the order of the corresponding inverse elements.
  \end{compactitem}
 
- Let the order of sides in the polygon be $a' \cdots b \cdots a \cdots$. The corresponding cut-and-paste operation that moves the group element $A$ in front of $B$ is one of
+ Let the order of sides in the polygon be $a' \cdots b \cdots a \cdots$. The corresponding cut-and-paste operation that moves the group element $A$ behind element $B$ in the relation is one of
 
  \begin{compactitem}
  \item Cut from the end of $a$ to the start of $b$ and glue using $A$.
