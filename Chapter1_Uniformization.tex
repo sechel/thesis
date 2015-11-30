@@ -2963,22 +2963,27 @@ cross-ratios $\lcr$. Also, whether or not Problem~\ref{prob:analytic}
 has a solution does not depend on the choice of edge lengths $\ell$
 provided they lead to the same length cross-ratios.
 
-Figure~\ref{fig:schottky_g3} shows an example of the Fuchsian
-uniformization of a genus three surface presented by its Schottky
+Figure~\ref{fig:schottky_g3} shows a examples of the Fuchsian
+uniformization of a genus two and three surface presented by its Schottky
 uniformization. 
 
 \begin{figure}
   \centering
+ \resizebox{\textwidth}{!}{
+    \includegraphics[width=10cm]{schottky_g2/genus2_fine_image2.pdf}
+    \includegraphics[width=10cm, angle=90]{schottky_g2/genus2_fine_domain2.pdf}
+  }  
+ \setstretch{0.0}{\scriptsize\tt data/schottky\_g2/genus2\_fine.xml} 
   \resizebox{\textwidth}{!}{
     \reflectbox{\includegraphics[width=10cm, angle=90]{schottky_g3/genus3_image2.pdf}}
     \includegraphics[width=10cm]{schottky_g3/genus3_domain2.pdf}
   }
   \setstretch{0.0}{\scriptsize\tt data/schottky\_g3/schottky.xml} 
-  \caption{Discrete Riemann surface of genus $3$ given by Schottky
-    data (left) and its Fuchsian uniformization (right). Circles with
+  \caption{Discrete Riemann surface of genus $2$ and $3$ given by Schottky
+    data (left) and the corresponding Fuchsian uniformizations (right). Circles with
     the same color are identified. The extra points of the
     triangulation are chosen so that the triangles are close to
-    equilateral where possible. The shaded region in the right image
+    equilateral where possible. The shaded region in the right images
     corresponds to the fundamental domain of the Schottky group in the
     left image. Its boundary consist of curves corresponding to the
     circles and curves corresponding to lines connecting the circles
@@ -3282,9 +3287,7 @@ symmetry by moving all points of the polyhedral surface in space by a
 small random offset destroys the hyperellipticity of the surface, see
 Figure~\ref{fig:non-hyperelliptic} (right).
 
-\runinhead{Numerical Data.}
-
-We list the numerical $SO^{+}(2,1)$ matrices of the generators of the
+\runinhead{Numerical Data.} We list the numerical $SO^{+}(2,1)$ matrices of the generators of the
 group
 % \[
 % \left<T_1,T_2,T_3,T_4,T_5,T_6 \in {\it PSL}(2,\R) \mid T_1{T_2}^{-1}T_3{T_4}^{-1}T_5{T_6}^{-1} {T_1}^{-1}T_2{T_3}^{-1}T_4{T_5}^{-1}T_6 = 1
@@ -3307,7 +3310,10 @@ constructed in this section (see Figure~\ref{fig:elliptic-hyperelliptic-data}).
 \end{figure}
 The matrices satisfy the relation with error $\approx 10^{-7}$.
 
+\begingroup
+\allowdisplaybreaks
 \input{data/non-hyperelliptic/opposite_data_symmetric.tex}
+\endgroup
 
 \subsection{Example: Different forms of the same genus two surface}
 \label{sec:lawson_uniformization}
