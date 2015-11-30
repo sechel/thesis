@@ -35,12 +35,16 @@ concerned with surfaces of higher genus.
 \label{fig:intro_uniformization}
 \end{figure}
 
+In this chapter we investigate various applications of discrete conformal maps. 
+It is a joint effort of Alexander Bobenko, Boris Springborn, and the author. Most of its content is also available in an article published by Springer~\cite{BobSechSpr}.
+We build upon the work of Bobenko, Pinkall, and Springborn~\cite{BPS2015:dconf} and Springborn, Schr\"{o}der, and Pinkall~\cite{Springborn2008} for the euclidean case. 
+We present examples for uniformizations of Riemann surfaces of genus $0$, $1$, and $g>1$ based on this theory, see Figure~\ref{fig:intro_uniformization}.
+
 The notion of discrete conformal equivalence for polyhedral surfaces
 is based on a simple definition: Two polyhedral surfaces are
 discretely conformally equivalent if the edge lengths are related by
 scale factors assigned to the vertices. It leads to a surprisingly
-rich theory~\cite{Luo2004:Yamabe, BPS2015:dconf, Luo-Uniformization, Luo-Uniformization_II}. In this
-article, we investigate different aspects of this theory.
+rich theory~\cite{Luo2004:Yamabe, BPS2015:dconf, Luo-Uniformization, Luo-Uniformization_II}.
 
 We extend the notion of discrete conformal equivalence from
 triangulated surfaces to polyhedral surfaces with faces that are
@@ -92,6 +96,10 @@ uniformization to Fuchsian uniformization. The Section ends with two
 extended examples demonstrating, among other things, a remarkable
 geometric characterization of hyperelliptic surfaces due to Schmutz
 Schaller.
+
+This text is accompanied by a compact disk which contains the data for all of the examples presented in this part of the work. 
+Where applicable we give the path to the data on the disk directly under the corresponding figure.
+We describe the usage of the software and the XML data format that was used to create all the results in Chapter~\ref{chp:conformallab}.
 
 \section{Discrete conformal equivalence of cyclic polyhedral surfaces}
 \label{sec:basic_definitions}
@@ -478,7 +486,6 @@ color.
   other values by alternatingly dividing and multiplying by
   $\ellt/\ell$ along paths. The equality of length multi-ratios
   implies that the obtained values do not depend on the path.
-  \qed
 \end{proof}
 
 \begin{remark}
@@ -536,7 +543,6 @@ equal length cross-ratio implies equal complex cross-ratio:
   cross-ratio. If the (embedded) quadrilaterals are cyclic, then their
   complex cross-ratios are real and negative, so their arguments are
   also equal.
-  \qed
 \end{proof}
 
 For planar polyhedral surfaces, i.e., for quadrangulations in the
@@ -594,7 +600,6 @@ from~\eqref{eq:complex_factors} by taking absolute values.
   cycles are equal. Because $\Sigma$ is simply connected, this is the
   case if and only if the complex cross-ratios of corresponding faces
   are equal.
-  \qed
 \end{proof}
 
 \begin{remark}
@@ -887,7 +892,6 @@ of lengths:
   the same circumcircle. So deleting the edges in $E_{\Delta}\setminus
   E_{\Sigma}$, one obtains a cyclic polyhedral surface
   $(\Sigma,\ellt|_{E_{\Sigma}})_{\gt}$.
-  \qed
 \end{proof}
 
 \subsection{Variational principles}
@@ -963,7 +967,6 @@ $E^{\euc},E^{\hyp},E^{\sph}$ when this is unlikely to cause confusion.
   This follows from the analytic formulation of
   Problem~\ref{prob:factors_and_angles} (see Section~\ref{sec:analytic}) and
   Proposition~\ref{prop:dE}.
-  \qed
 \end{proof}
 
 \begin{proposition}[First derivative of $E^{\gt}$]
@@ -988,7 +991,6 @@ $E^{\euc},E^{\hyp},E^{\sph}$ when this is unlikely to cause confusion.
   Equations~\eqref{eq:dEdu} and~\eqref{eq:dEdlambda} follow from the
   definition of $E^{\gt}$ and Proposition~\ref{prop:df} on the partial
   derivatives of $f^{\g}$.
-  \qed
 \end{proof}
 
 \begin{theorem}[Uniqueness for mapping problems]
@@ -1056,7 +1058,6 @@ $E^{\euc},E^{\hyp},E^{\sph}$ when this is unlikely to cause confusion.
       \text{ for some } c\in\R.
     \end{equation*}
   \end{compactenum}
-  \qed
 \end{proof}
 
 In the following proposition, we collect explicit formulas for the
@@ -1357,7 +1358,6 @@ multiples of $\pi$, where the derivative tends to $+\infty$.
   \end{equation*}
   outside the feasible region, equation~\ref{eq:df} holds also in
   this case. This completes the proof.
-  \qed
 \end{proof}
 
 \begin{proposition}[second derivative]
@@ -1624,12 +1624,19 @@ Figure~\ref{fig:circular_riemann}, top row.
   \hspace{0.24\textwidth}%
   \rotatebox{-20}{$\uparrow$}\\
   \hspace*{\fill}%
-  \includegraphics[height=5cm]{planar_circles/riemann_shape_halfplane.pdf}%
+  \includegraphics[height=6.5cm]{planar_circles/riemann_shape_halfplane.pdf}%
   \hspace*{\fill}
   \begin{center}
   \setstretch{0.0}{\scriptsize\tt data/planar\_circles/riemann\_shape.xml}
   \end{center}
-  \caption{Riemann mapping with cyclic quadrilaterals}
+  \caption{Riemann mapping with cyclic quadrilaterals.
+Corners with valence two in the original domain are modeled as triangles, upper left.
+We first map to the upper half-plane.
+Quadrilaterals adjacent to the point at infinity are removed.
+Points opposite to the point at infinity have a prescribed boundary angle of $\pi$.
+The four vertices in between have a fixed $u=0$.
+Quadrilaterals adjacent to the point at infinity are cyclic after the M{\"o}bius transformation to the disk, bottom.  
+  }
   \label{fig:circular_riemann}
 \end{figure}
 This type of problem can often be reduced to
@@ -1773,7 +1780,6 @@ Figure~\ref{fig:circular_riemann}):
   the point at infinity and the other three vertices of our
   quadrilateral incident with $k$ form again a cyclic quadrilateral
   with the same complex cross-ratio as in the beginning.
-  \qed
 \end{proof}
 
 \section{Multiply connected domains}
@@ -2149,7 +2155,7 @@ known in terms of elliptic functions~\cite{abresch1987, walter1989, bobenko1991}
 \includegraphics[width=0.48\textwidth]{wente_embedding/wente_1240_fundamental.pdf}\hfill
 \includegraphics[width=0.48\textwidth]{wente_embedding/wente_1240_domain.pdf}
 \setstretch{0.5}{\scriptsize\tt data/wente\_embedding/wente\_1240.xml}
-\caption{Uniformization of the Wente torus}
+\caption{Uniformization of the Wente torus. Discretely sampled conformal immersion (left), domain of uniformization (right). Orange curves indicates the lattice of the flat torus in the domain. The faces of the polyhedral surface are approximate conformal squares. In the discrete uniformization their images are approximately squares, as it should be.}
 \label{fig:wente_torus_embedded}
 \end{figure}
 
@@ -2299,13 +2305,13 @@ reasons, these points should be chosen so that taking the convex hull
 leads to triangles that are close to equilateral. We obtained good
 triangulations by minimizing the following energy for $n$ points in
 $\R^{3}$ while fixing the subset of branch points:
-\begin{equation}
-\mathcal E = n^2\sum_{v\in V}\left( \left<v,v\right> - 1\right)^2 +
+\begin{eqnarray}
+\mathcal E &=& n^2\sum_{v\in V}\left( \left<v,v\right> - 1\right)^2 +
 \sum_{\substack{v,w\in V\\w\neq v}} \frac{1}{\left<w-v,
     w-v\right>},
-%\\ 
-%\frac{\partial E}{\partial v} &=& 4n^2\left<v,v\right>v + 4\sum_{\substack{w\in V\\w\neq v}}\frac{w-v}{\left<w-v,w-v\right>^2}.
-\end{equation}
+\\ 
+\frac{\partial \mathcal E}{\partial v} &=& 4n^2\left<v,v\right>v + 4\sum_{\substack{w\in V\\w\neq v}}\frac{w-v}{\left<w-v,w-v\right>^2}.
+\end{eqnarray}
 where $\left<.,.\right>$ denotes the standard euclidean scalar product
 of $\R^{3}$. We do not enforce the constraint that the points should
 lie in the unit sphere $S^{2}$. Instead, we simply project back to $S^{2}$
@@ -2517,13 +2523,16 @@ construct fundamental polygons and group generators.
 
 Not much needs to be said about the uniformization of immersed
 surfaces. Examples are shown in Figures~\ref{fig:intro_uniformization}
-(bottom), \ref{fig:embedded_genus_3}, and~\ref{fig:embedded_genus_5}.
+(bottom) and \ref{fig:embedded_genus_3}.
+%, and~\ref{fig:embedded_genus_5}.
 \begin{figure}
 \centering
+\resizebox{\textwidth}{!}{
 \includegraphics[height=0.4\textwidth]{genus3/genus3.pdf}%
-\includegraphics[height=0.4\textwidth]{genus3/canonical_mesh.pdf}
+\includegraphics[height=0.4\textwidth]{genus3/canonical_mesh.pdf}%
+\includegraphics[height=0.4\textwidth]{genus3/canonical_cover.pdf}
+}
 \setstretch{0.5}{\scriptsize\tt data/genus3/data.xml}
-%\includegraphics[height=10cm]{genus3/canonical_cover.pdf}
 \caption{Discrete uniformization of an embedded triangulated surface
   of genus $3$. A fundamental polygon with ``canonical'' edge pairing
   is shown on the right together with the image mesh. The edges of the
@@ -2531,16 +2540,16 @@ surfaces. Examples are shown in Figures~\ref{fig:intro_uniformization}
   are pulled back to the embedded surface shown on the left.}
 \label{fig:embedded_genus_3}
 \end{figure}
-\begin{figure}
-\centering
-\includegraphics[height=0.4\textwidth]{genus5/genus5.pdf}
-\includegraphics[height=0.4\textwidth]{genus5/fundamental.pdf}\\
-\setstretch{0.5}{\scriptsize\tt data/genus5/data.xml}
-\caption{Left: An embedded triangulated surface of genus $5$. Right:
-  Fundamental polygon with non-canonical edge-pairing. The axes of the
-  edge pairing translations are shown in blue.}
-\label{fig:embedded_genus_5}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[height=0.4\textwidth]{genus5/genus5.pdf}
+%\includegraphics[height=0.4\textwidth]{genus5/fundamental.pdf}\\
+%\setstretch{0.5}{\scriptsize\tt data/genus5/data.xml}
+%\caption{Left: An embedded triangulated surface of genus $5$. Right:
+%  Fundamental polygon with non-canonical edge-pairing. The axes of the
+%  edge pairing translations are shown in blue.}
+%\label{fig:embedded_genus_5}
+%\end{figure}
 In Section~\ref{sec:circle_domains} we discussed mappings from
 multiply connected domains to circle domains. Analogously, one can
 construct uniformizations of polyhedral surfaces of genus $g\geq 2$
@@ -2712,36 +2721,45 @@ perform a cut-and-glue sequence to bring the labels next to each
 other, $xyx'y'$. We always choose a pair $x$, $y$, for which this
 requires the minimal number of matrix multiplications.
 
-% \subsubsection*{Canonical Fundamental Domain.}
+\runinhead {Canonical Fundamental Domain.}
 
-% \begin{figure}
-% \centering
-% \resizebox{\textwidth}{!}{
-% \includegraphics[width=5cm]{algorithm/canonical_step0_labels.pdf}
-% \includegraphics[width=5cm]{algorithm/canonical_step1_labels.pdf}
-% \includegraphics[width=5cm]{algorithm/canonical_step2_labels.pdf}
-% }
-% \caption{Motions to transform a given fundamental domain into canonical form. The shaded area is the current fundamental polygon. Step~$1$: Choose the linked pair $a$, $b$. Cut at $c$ and $b$ and identify via $B$ to put side $a$ next to side $b$. Choose linked pair $e$, $f$. Cut between $e'$ and $d'$ and identify via $E'$ to put side $e'$ next to $f'$. The remaining handle $cdc'd'$ is already in place and we arrive at canonical form $aba'b'cdc'd'efe'f'$.}
-% \label{fig:canonical_algorithm}
-% \end{figure}
+\begin{figure}
+\centering
+\resizebox{0.4\textwidth}{!} {
+\input{data/algorithm/cutCanonical.pdf_t}
+}
+\caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=A'C_i$. Their inverses $C_i'$ become $\hat{C_i}'=C_i'A$}
+\label{fig:cut-and-paste-canonical}
+\end{figure}
 
-% We start with a fundamental polygon with a single vertex as explained above. 
-% Then choose sides $a$ and $b$ such that the order in the polygon is $a\cdots b \cdots a' \cdots b' \cdots$. 
-% We perform a cut-and-paste operation such that sides $a$ and $b$ are next to each other after transformation, see Figure~\ref{fig:cut-and-paste-canonical}. 
-% In order to minimize the number of products we choose $a$ and $b$ such the number of sides in between $a$, $b$, $a'$, and $b'$ is minimal. 
-% We proceed cutting as described before to bring $b$ next to $a'$ and analogously $a'$ next to $b'$. 
-% We end up with a new polygon and the order $aba'b'\cdots$. 
-% Repeat this algorithm for the rest of the sides to arrive at canonical form. 
-% Again a proof can be found, e.g., in the book by Jost~\cite[p. 51]{Jost2007}.
+ \begin{figure}
+ \centering
+ \resizebox{\textwidth}{!}{
+ \includegraphics[width=5cm]{algorithm/canonical_step0_labels.pdf}
+ \includegraphics[width=5cm]{algorithm/canonical_step1_labels.pdf}
+ \includegraphics[width=5cm]{algorithm/canonical_step2_labels.pdf}
+ }
+ \caption{Motions to transform a given fundamental domain into canonical form. The shaded area is the current fundamental polygon. Step~$1$: Choose the linked pair $a$, $b$. Cut at $c$ and $b$ and identify via $B$ to put side $a$ next to side $b$. Choose linked pair $e$, $f$. Cut between $e'$ and $d'$ and identify via $E'$ to put side $e'$ next to $f'$. The remaining handle $cdc'd'$ is already in place and we arrive at canonical form $aba'b'cdc'd'efe'f'$.}
+ \label{fig:canonical_algorithm}
+ \end{figure}
 
-% The number of products built during the transformation of a linked pair $a$, $b$ depends on the number of polygon sides between $a$, $b$, $a'$, and $b'$. 
-% Let $C$ be the number of sides between $a$ and $b$. Let $D$ and $E$ be the number of sides between $b$, $a'$, and $b'$ respectively. 
-% Then the total number of products in this transformation is $6C+4D+2E$. 
-% In step $1$, connecting $a$ and $b$, we can perform the cut-and-past operation using transformation $b$ and a cut between the end of $a$ and the end of $b$ in counter-clockwise order. 
-% This moves the intermediate sides between $a$ and $b$ out of the way for the next $2$ steps. 
-% By this we have a total number of products $2C+4D+2E$. 
-% We use a greedy implementation that chooses the smallest number of products in each step to select $a$ and $b$.
-% Alternatively one could enumerate the transformation tree and choose the cheapest path of all transformation sequences.
+ We start with a fundamental polygon with a single vertex as explained above. 
+ Then choose sides $a$ and $b$ such that the order in the polygon is $a\cdots b \cdots a' \cdots b' \cdots$. 
+ We perform a cut-and-paste operation such that sides $a$ and $b$ are next to each other after transformation, see Figure~\ref{fig:cut-and-paste-canonical}. 
+ In order to minimize the number of products we choose $a$ and $b$ such the number of sides in between $a$, $b$, $a'$, and $b'$ is minimal. 
+ We proceed cutting as described before to bring $b$ next to $a'$ and analogously $a'$ next to $b'$. 
+ We end up with a new polygon and the order $aba'b'\cdots$. 
+ Repeat this algorithm for the rest of the sides to arrive at canonical form. 
+ Again a proof can be found, e.g., in the book by Jost~\cite[p. 51]{Jost2007}.
+
+ The number of products built during the transformation of a linked pair $a$, $b$ depends on the number of polygon sides between $a$, $b$, $a'$, and $b'$. 
+ Let $C$ be the number of sides between $a$ and $b$. Let $D$ and $E$ be the number of sides between $b$, $a'$, and $b'$ respectively. 
+ Then the total number of products in this transformation is $6C+4D+2E$. 
+ In step $1$, connecting $a$ and $b$, we can perform the cut-and-past operation using transformation $b$ and a cut between the end of $a$ and the end of $b$ in counter-clockwise order. 
+ This moves the intermediate sides between $a$ and $b$ out of the way for the next $2$ steps. 
+ By this we have a total number of products $2C+4D+2E$. 
+ We use a greedy implementation that chooses the smallest number of products in each step to select $a$ and $b$.
+ Alternatively one could enumerate the transformation tree and choose the cheapest path of all transformation sequences.
 
 
 The polygon with canonical edge identifications may not be
@@ -2774,15 +2792,6 @@ determined for the given group and presentation.
   $p_4=BA'p_0$.  The other vertices are obtained similarly from $p_4$
   by applying~$C$ and~$D$.}
 \label{fig:keen_polygon}
-\end{figure}
-
-\begin{figure}
-\centering
-\resizebox{0.4\textwidth}{!} {
-\input{data/algorithm/cutCanonical.pdf_t}
-}
-\caption{Cut-and-paste: Cut from the start of $a$ to the start of side $b$. Glue the piece along $a'$ using transformation $A$ that moves side $a$ to $'a$. Intermediate sides $c_1,\ldots,c_n$ between $a$ and $b$ are transformed accordingly and group elements transform as $\hat{C_i}=A'C_i$. Their inverses $C_i'$ become $\hat{C_i}'=C_i'A$}
-\label{fig:cut-and-paste-canonical}
 \end{figure}
 
 \runinhead{Fundamental polygons with opposite sides identified.}
@@ -2835,21 +2844,21 @@ into this sequence by cutting and gluing.
  \caption{Move element $A$ in front of $B$ in a relation that moves counter-clockwise around the base vertex. Choose the upper cut (dashed lines) and paste via transformation $A'$ moving side $a'$ to $a$. Or cut at the lower one and paste via transformation $A$.}
  \label{fig:cut-and-paste-motion}
  \end{figure}
-
- A fundamental polygon identified by opposite sides has a side ordering
- \begin{equation*}
- abcd\cdots a'b'c'd'\cdots.
- \end{equation*} 
- A corresponding relation of the group of hyperbolic translations is $AB'CD'\cdots=1$ given that a transformation $X$ maps side $x$ to $x'$.
-
- We give two algorithms to transform a given fundamental domain into an opposite sides domain.
- For the first algorithm we show that it terminates and yields the correct result. However we cannot control the number of products used during the transformation. The second algorithm is heuristic and minimizes the number of products. It has proven to terminate for all of our examples.
-
- We use the canonical form of fundamental polygons as an intermediate step in the process of transforming a given fundamental domain into opposite sided form. As shown above we can transform any domain into canonical form. In particular we can transform an abstract oppositely identified polygon into canonical form using the algorithm from above. All of the steps conducted during this transformation can be undone. We get a sequence of cut-and-paste operations transforming a canonical fundamental polygon into opposite sides form. Combining the sequence that transforms a general fundamental polygon into canonical form with the transform that creates the opposite form from the canonical one we get required sequence on transformations on any given domain.
-
- This version of the algorithm is not optimal with respect to the number of products used in the sequence of transformations. In particular if the input polygon is close to opposite sides form already, the algorithm destroys this structure first and rebuilds it from the canonical form.
-
- In all examples we therefor use a different heuristic algorithm. We transform a given fundamental polygon and group presentation to opposite sides form using the following sequence of transformations. Refer to Figure~\ref{fig:opposite_algorithm} for an instance of this algorithm:
+%
+% A fundamental polygon identified by opposite sides has a side ordering
+% \begin{equation*}
+% abcd\cdots a'b'c'd'\cdots.
+% \end{equation*} 
+% A corresponding relation of the group of hyperbolic translations is $AB'CD'\cdots=1$ given that a transformation $X$ maps side $x$ to $x'$.
+%
+% We give two algorithms to transform a given fundamental domain into an opposite sides domain.
+% For the first algorithm we show that it terminates and yields the correct result. However we cannot control the number of products used during the transformation. The second algorithm is heuristic and minimizes the number of products. It has proven to terminate for all of our examples.
+%
+% We use the canonical form of fundamental polygons as an intermediate step in the process of transforming a given fundamental domain into opposite sided form. As shown above we can transform any domain into canonical form. In particular we can transform an abstract oppositely identified polygon into canonical form using the algorithm from above. All of the steps conducted during this transformation can be undone. We get a sequence of cut-and-paste operations transforming a canonical fundamental polygon into opposite sides form. Combining the sequence that transforms a general fundamental polygon into canonical form with the transform that creates the opposite form from the canonical one we get required sequence on transformations on any given domain.
+%
+% This version of the algorithm is not optimal with respect to the number of products used in the sequence of transformations. In particular if the input polygon is close to opposite sides form already, the algorithm destroys this structure first and rebuilds it from the canonical form.
+%
+% In all examples we therefor use a different heuristic algorithm. We transform a given fundamental polygon and group presentation to opposite sides form using the following sequence of transformations. Refer to Figure~\ref{fig:opposite_algorithm} for an instance of this algorithm:
 
  For a given fundamental polygon and the ordering of its sides, we can reconstruct the relation of the group by moving around the base vertex on the surface. That means if we start with transformation $A$ moving side $a$ to $a'$ the next element in the relation belongs to the side next to $a'$ in counter-clockwise order. We proceed until we get back to element $A$. Note that we could have chosen clockwise orientation, but for drawing pictures we stick to counter-clockwise.
 
@@ -3089,9 +3098,11 @@ the sphere.  Figure~\ref{fig:genus2_branched} shows an example.
 \begin{figure} 
 \centering
 \includegraphics[width=0.8\textwidth]{branched_genus_2/mercator_texture.pdf}\\
-\includegraphics[height=0.27\textwidth]{branched_genus_2/image_stereographic_all_real.pdf}%
+\resizebox{\textwidth}{!}{
+\includegraphics[height=0.5\textwidth]{branched_genus_2/image_stereographic_all_real.pdf}%
 \quad%
-\includegraphics[height=0.27\textwidth]{branched_genus_2/image_stereographic_all_real_closeup.pdf}\\
+\includegraphics[height=0.5\textwidth]{branched_genus_2/image_stereographic_all_real_closeup.pdf}
+}
 \setstretch{0.0}{\scriptsize\tt data/branched\_genus\_2/data.xml} 
 \caption{A triangulated genus $2$ surface is mapped to a branched
   cover of $\Chat$. The $180^{\circ}$ rotation about the horizontal
@@ -3201,7 +3212,6 @@ other point.
 % Define $A_i$ to be the hyperbolic motion with axis $(\tilde a_i, \tilde h \tilde a_i)$ and transport distance $\ell_i$.
 % Then $A_3,\ldots,A_{2g+2}$ form a basis of the uniformizing Fuchsian group.
 % By definition the axes of $A_3,\ldots,A_{2g+2}$ intersect in a common point.
-%   \qed
 % \end{proof}
 
 % We now construct a symmetric fundamental domain for hyperelliptic surfaces.
@@ -3365,39 +3375,39 @@ in this section is available on the {DGD Gallery} webpage
 We uniformize the hyperelliptic curve $\mu^2=\lambda^6-1$ as described
 in Section~\ref{sec:elliptic_curves}. The results are shown in Figure~\ref{fig:lawson_curve}.
 
-To understand the cuts on the hyperelliptic surface that lead to the
-$12$-gon in the bottom row, imagine taking the canonical system of
-loops in the top row, meeting at the north pole,  and deform them
-until they also meet at the south pole. This introduces a second
-vertex class in the fundamental polygon.
+%To understand the cuts on the hyperelliptic surface that lead to the
+%$12$-gon in the bottom row, imagine taking the canonical system of
+%loops in the top row, meeting at the north pole,  and deform them
+%until they also meet at the south pole. This introduces a second
+%vertex class in the fundamental polygon.
 
-% \textit{Canonical domain:}
-% For the canonical fundamental domain we pick $0$ to be the vertex of the domain and proceed as described in Section~\ref{sec:polygons_generators}.
-% The points $p_1,\ldots,p_n$ are chosen such that the triangulation is almost regular on the sphere.
-% The system of loops on the surface is chosen such that each loop starts at vertex $0$ runs around two branch points and returns, see the red curves in Figure~\ref{fig:lawson_curve}, top-left.
+ \textit{Canonical domain:}
+ For the canonical fundamental domain we pick a vertex at $0$ on one of the sheets to be the vertex of the domain.
+ We proceed as described in Section~\ref{sec:polygons_generators}.
+Extra points are chosen such that the triangulation is almost regular on the sphere.
+ The system of loops on the surface is chosen such that each loop starts at the base vertex, runs around two branch points, and returns, see the red curves in Figure~\ref{fig:lawson_curve}, top-left.
 
-% For the visualization we truncate the triangles of the universal cover to fill the fundamental domain only.
-% Figure~\ref{fig:lawson_curve} shows the triangulation on $\hat \C$ (left) and the universal cover (right).
-% Red curves are the boundary of the fundamental domain.
-% We show them also pulled back onto $\hat \C$. Blue curves are closed geodesic loops on the surface.
-% They are the axis of hyperbolic motions identifying pairs of fundamental edges in the hyperbolic plane.
+ For the visualization we truncate the triangles of the universal cover to fill the fundamental domain only.
+ Figure~\ref{fig:lawson_curve} shows the triangulation on $\hat \C$ (left) and the universal cover (right).
+ Red curves are the boundary of the fundamental domain.
+ We show them also pulled back onto $\hat \C$. Blue curves are simple closed geodesics on the surface.
+ They are the axis of hyperbolic motions identifying pairs of fundamental edges in the hyperbolic plane.
 
-% The branch points are clearly visible as the valence of the triangulation is doubled at these vertices.
-% The blue geodesic loops connect two branch points each.
+ The branch points are clearly visible as the valence of the triangulation is doubled at these vertices.
+ The blue geodesic loops connect two branch points each.
 
-% \textit{Opposites sides domain:}
-% The opposite sides domain (second row) is chosen as described in Section~\ref{sec:hyperelliptic_domain}.
-% All axes of hyperbolic motions intersect in a branch point of the curve.
-% Red and blue geodesic arcs are dual to each other.
-% For the example model we chose a coarse discretization of the underlying curve and truncate the triangulation to fit into the fundamental domain.
+ \textit{Opposites sides domain:}
+ The opposite sides domain (second row) is chosen as described in Section~\ref{sec:polygons_generators}.
+ All axes of hyperbolic motions intersect in a branch point of the curve.
+ Red and blue geodesic arcs are dual to each other.
+ For the example model we chose a coarse discretization of the underlying curve and truncate the triangulation to fit into the fundamental domain.
 
-% \textit{Cyclically identified domain:}
-% We call the fundamental domain in the bottom row a cyclically identified domain.
-% This domain is chosen such that is corresponds to the domain suited for the square-tiled surface as described below.
-% You can imagine this system of loops if you take the canonical system of loops meeting at $0$ (top row of the Figure) and deform the loops until they touch at $\infty$.
-% By this move we introduce two more vertices on the fundamental polygon, namely the two vertices corresponding to $\infty$ on the two-sheeted cover.
-% The triangulation of the example model is created by a subdivision process.
-% Starting from  a triangulation with vertices at $0$, $\infty$, at branch points, and the mid-points on the equator in between the branch points we subdivide using a linear 4-to-1 split followed by a projection to the sphere. Thus the boundary of the fundamental domain is contained in the edge set of the triangulation. For the visualization of the universal cover we cut along these edges to draw the triangulation, Figure~\ref{fig:lawson_curve}, bottom-right.
+ \textit{$12$-gon:}
+This domain is chosen such that it corresponds to the domain suited for the square-tiled surface as described below.
+To understand the system of loops take the canonical system of loops meeting at $0$ (top row of the Figure) and deform the loops until they touch at $\infty$.
+ By this move we introduce two more vertices on the fundamental polygon, namely the two vertices corresponding to $\infty$ on the two-sheeted cover.
+ The triangulation of the example model is created by a subdivision process.
+ Starting from  a triangulation with vertices at $0$, $\infty$, at branch points, and the mid-points on the equator in between the branch points we subdivide using a linear 4-to-1 split followed by a projection to the sphere. Thus the boundary of the fundamental domain is contained in the edge set of the triangulation. For the visualization of the universal cover we cut along these edges to draw the triangulation, Figure~\ref{fig:lawson_curve}, bottom-right.
 
 \runinhead{Lawson's surface.}
 
@@ -3449,22 +3459,17 @@ corresponding fundamental domains.
 % manually such that the fundamental domain exhibits the two
 % reflectional symmetries seen in the domain of the curve.
 
-% The fundamental domain where opposite sides are identified is chosen
-% as described in Section~\ref{sec:hyperelliptic_domain}. The rotational
-% symmetry of the surface corresponds to the hyperelliptic involution of
-% the surface. Its fix points, i.e. the intersection of the axis of
-% symmetry with the surface, correspond to the branch points of the
-% hyperelliptic curve. Thus the vertex of the fundamental polygon has to
-% be a point on the symmetry axis of the surface. We choose one of the
-% six points and proceed as explained in
-% Section~\ref{sec:polygons_generators} for oppositely identified
-% polygons. As the system of loops forming the boundary of the polygon
-% and their identifying axes are dual to each other the common
-% intersection of generator axes must lie on an intersection with the
-% symmetry axis as well, see Figure~\ref{fig:lawson_embedding},
-% middle-left.
+The fundamental domain where opposite sides are identified is chosen
+as described in Section~\ref{sec:polygons_generators}. 
+The vertex of this fundamental polygon has to
+be a point on the symmetry axis of the surface. 
+As the system of loops forming the boundary of the polygon
+and their identifying axes are dual to each other the common
+intersection of generator axes must lie on an intersection with the
+symmetry axis as well, see Figure~\ref{fig:lawson_embedding},
+middle-left.
 
-% The third fundamental polygon we present for the embedded surface corresponds to the square-tiled segmentation of the surface as described below. As in the uniformization of the hyperelliptic curve we have to deform the canonical polygon and introduce two new vertices corresponding to antipodal points of the current vertex on the curve. The hyperelliptic curve of the Lawson surface admits several anti-holomorphic involutions one of which interchanges $0$ and $\infty$. we also have these involutions on the embedded surface realized as reflections about symmetry planes containing the rotational symmetry axis. Hence we can find the new vertices of the fundamental polygon by reflection of the canonical root vertex about these symmetry planes, see Figure~\ref{fig:lawson_embedding}, bottom-left.
+ The third fundamental polygon we present for Lawson's surface corresponds to the square-tiled segmentation of the surface as described below. As in the uniformization of the hyperelliptic curve we have to deform the canonical polygon and introduce two new vertices corresponding to antipodal points of the current vertex on the curve. The hyperelliptic curve of the Lawson surface admits several anti-holomorphic involutions one of which interchanges $0$ and $\infty$. we also have these involutions on the embedded surface realized as reflections about symmetry planes containing the rotational symmetry axis. Hence we can find the new vertices of the fundamental polygon by reflection of the canonical root vertex about these symmetry planes, see Figure~\ref{fig:lawson_embedding}, bottom-left.
 
 \runinhead{Six-squares surface.}
 

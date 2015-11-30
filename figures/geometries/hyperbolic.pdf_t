@@ -12,6 +12,6 @@
 \begin{picture}(4824,3613)(-11,-2773)
 \put(2476,-1861){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\ell$}%
 }}}}
-\put(1951,-736){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$2\sinh\frac{\ell}{2}$}%
+\put(2451,-736){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$2\sinh\frac{\ell}{2}$}%
 }}}}
 \end{picture}%

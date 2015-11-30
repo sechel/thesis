@@ -10,7 +10,7 @@
   \selectfont}%
 \fi\endgroup%
 \begin{picture}(2986,3398)(8,-2604)
-\put(1576,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$2\sin\frac{\ell}{2}$}%
+\put(1676,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$2\sin\frac{\ell}{2}$}%
 }}}}
 \put(1576,539){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\ell$}%
 }}}}

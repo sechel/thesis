@@ -7,10 +7,10 @@
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % preliminary version only, comment out if no longer needed
-\usepackage{prelim2e}
-\renewcommand{\PrelimText}{\sf\scriptsize --- INCOMPLETE DRAFT of \today ---}
-\usepackage[colorinlistoftodos,bordercolor=orange,backgroundcolor=orange!20,linecolor=orange,textsize=scriptsize]{todonotes}
-\setlength{\marginparwidth}{2.8cm}
+%\usepackage{prelim2e}
+%\renewcommand{\PrelimText}{\sf\scriptsize --- INCOMPLETE DRAFT of \today ---}
+%\usepackage[colorinlistoftodos,bordercolor=orange,backgroundcolor=orange!20,linecolor=orange,textsize=scriptsize]{todonotes}
+%\setlength{\marginparwidth}{2.8cm}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\usepackage{caption2}
@@ -113,17 +113,17 @@
 
 \newcommand{\runinhead}[1]{{\noindent\bf #1}}
 
-\newtheorem{definition}{Definition}
-\newtheorem{proposition}{Proposition}
-\newtheorem{propdef}{Proposition and Definition}
-\newtheorem{theorem}{Theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{propdef}[theorem]{Proposition and Definition}
 \newtheorem*{remark*}{Remark}
-\newtheorem*{remark}{Remark}
-\newtheorem{example}{Example}
-\newtheorem{problem}{Problem}[subsection]
-\newtheorem{conjecture}{Conjecture}
-\newtheorem{corollary}{Corollary}
-\newtheorem{lemma}{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
 
 \newcommand{\R}{\mathbb R}
 \newcommand{\C}{\mathbb C}
