@@ -16,7 +16,7 @@ cone of revolution. It comes with a number of degrees of freedom on
 the boundary that can be used to obtain a variety of interesting
 panelizations. We illustrate different choices of parameters for
 \nurbs surface designs. Further, we describe how our parameterization
-can be used to get a periodic boundary aligned hex-mesh on a
+can be used to get a periodic boundary-aligned hex-mesh on a
 doubly-curved surface. We optimize this initial mesh to consist of a
 limited number of planar regular hexagons that panel the surface.
 
@@ -52,16 +52,16 @@ limited number of planar regular hexagons that panel the surface.
 \label{sec:introduction}
 
 The panelization of surfaces remains a challenge in architectural
-design. CAD software such as Rhino, delivers powerful \nurbs surface
+design. CAD software such as Rhino~\cite{rhino-website}, delivers powerful \nurbs surface
 modelling to the designer. Their ease of use have made them a de facto
 standard for the design of freeform (and other) shapes in
-architectural design especially building envelopes and facades.  
+architectural design, especially envelopes and facades of buildings.  
 
 The scale of buildings introduces challenges to surface-based
 modelling strategies: The large scale of building elements demands
 that they are divided into smaller elements. The cost of material and
 labor, standardized production lines, green building concepts,
-availability and redundancy during construction periods demand for a
+availability and redundancy during construction periods demands for a
 high degree of similarity of these elements. Yet, the inherent
 UV subdivision of \nurbs surfaces offers limited control over the
 layout, shape and configuration of the panels. While strategies for
@@ -74,9 +74,9 @@ various ways. From an aesthetic point of view the shape of individual
 elements is important. Further there are global conditions such as
 alignment with surface boundaries and smooth transition of element
 shape. From the standpoint of fabrication, the elements should be
-repetitive. The contributions of this paper are:
+repetitive. The contributions of this chapter are:
 
-\begin{itemize}
+\begin{compactitem}[$\bullet$]
 \item {\bf Periodic discrete conformal parameterization}:
   % 
   We present an algorithm that maps a triangle mesh with cylinder
@@ -94,9 +94,9 @@ repetitive. The contributions of this paper are:
   We present a case study that initiated the development and where the
   described methods have successfully been applied in the architectural design
   context.
-\end{itemize}
+\end{compactitem}
 
-The article is organized as follows:
+The chapter is organized as follows:
 Section~\ref{sec:parameterization} describes various parameterization
 schemes available to architectural geometers. We briefly discuss the
 shortcomings of current methods and explain how we adress them with our method.
@@ -119,7 +119,7 @@ design process on the example of Rhinoceros3D and 3rd party
 plugins. All available tools lack at least one of the key features of
 the proposed method:
 \smallskip
-\begin{compactitem}
+\begin{compactitem}[$\bullet$]
 \item \emph{Conformality} of the mapping avoids non-uniformly stretched
   panels
 \item \emph{Periodicity} of the parameterization is needed to layout
@@ -494,7 +494,7 @@ unsatisfactory results producing anisotropic stretch and shear of some
 regions in the master surfaces.  Some specific questions that had to
 be addressed for each massing option were:
 \smallskip
-\begin{compactitem}
+\begin{compactitem}[$\bullet$]
 \item How many (different) panels would we need?
 \item Can we clad the entire surface with planar tiles?
 \item Can we equalize the edge lengths of each hexagon?
