@@ -29,14 +29,14 @@ The notion of discrete conformal equivalence of triangle meshes was introduced b
 Two combinatorially equivalent euclidean triangle meshes are conformally equivalent if there exist scale factors associated to vertices such that corresponding edge lengths are equal up to multiplication with adjacent scale factors.
 The problem of finding a discrete conformal map from a triangulated surface to the plane is formulated in terms of a variational principle using scale factors as variables.
 
-Whereas the theoretical foundations of discrete conformal mappings via discrete conformal equivalence where arranged in the previous work, this thesis focuses of the experimental side of the theory. 
-In the spirit of discrete differential geometry we look at theorems and constructions from the geometry of Riemann surfaces, e.g. embedded surfaces and their conformal structure, and find analogous discrete constructions with similar properties.
-We investigate the generalization to cyclic polyhedral surfaces that was only touched upon in previous works.
+Whereas the theoretical foundations of discrete conformal mappings via discrete conformal equivalence were arranged in previous work, this thesis focuses on the experimental side of the theory. 
+In the spirit of discrete differential geometry we look at theorems and constructions from the geometry of Riemann surfaces, e.g., embedded surfaces and their conformal structure, and find analogous discrete constructions with similar properties.
+We investigate the generalization to cyclic polyhedral surfaces, which was only touched upon in previous work.
 We also give details on the spherical version of the theory that was put aside previously.
 
 This thesis is divided into three parts. 
 
-Part~I covers discrete uniformization of Riemann surfaces via conformal equivalence of cyclic polyhedral surfaces.
+Part~I covers the discrete uniformization of Riemann surfaces via conformal equivalence of cyclic polyhedral surfaces.
 We generalize the previously established variational principles accordingly and present a wealth of constructions and examples. 
 Taken from smooth differential geometry and translated to the discrete setting we observe properties known from classic theorems. 
 This culminates in a theorem about hyperelliptic Riemann surfaces.
@@ -76,11 +76,11 @@ In Chapter~\ref{chp:quasiisothermic} we exploit the fact that isothermic surface
 This problem is formulated as a boundary value problem of discrete conformal maps.
 As a result we obtain circle pattern representations of surfaces relevant in the architectural context, see Figure~\ref{fig:intro_applications} right.
 
-In Chapter~\ref{chp:gridshells} we use discrete conformal maps as initialization for discrete Tschebyshev meshes, i.e., meshes with equal edges length. 
-Starting from a discrete conformal map we perform non-linear optimization on quadrilateral meshes.
+In Chapter~\ref{chp:gridshells} we use discrete conformal maps as initialization for discrete Tschebyshev meshes, i.e., meshes with  edges of equal length. 
+Starting from a discrete conformal map, we perform non-linear optimization on quadrilateral meshes.
 In doing so we control the curvature and intersection angles of parameter curves in the resulting gridshell construction.
 
-The third part of this work introduces the reader to the software framework build for calculation with discrete surfaces and in particular with discrete conformal mappings, see Chapter~\ref{chp:conformallab}  about {\sc ConformalLab}, and discrete surface optimization, Chapter~\ref{chp:varylab} about {\sc VaryLab}. 
+The third part of this work introduces the reader to the software framework built for calculation with discrete surfaces and in particular with discrete conformal mappings, see Chapter~\ref{chp:conformallab}  about {\sc ConformalLab}, and discrete surface optimization, Chapter~\ref{chp:varylab} about {\sc VaryLab}. 
 Additionally the author has implemented the software packages {\sc HalfEdge} and {\sc HalfEdgeTools}, see Chapter~\ref{chp:halfedge}, designed as a general tool for the calculation with discrete surfaces. 
 Together with the user interface library {\sc JRWorkspace}, Chapter~\ref{chp:jrworkspace}, it constitutes a flexible framework for the creation of research applications in the context of discrete differential geometry. 
 
@@ -89,7 +89,7 @@ Additionally we include the current state of the source code of the programming 
 The organization of the data is presented in the appendix.
 
 \section*{Deutsche \"{U}bersetzung}
-Diskrete konforme \"{A}quivalenz von Dreiecksnetzen wurde von Springborn {\it et al.}~\cite{Springborn2008} behandelt und von Bobenko {\it et al.}~\cite{BPS2015:dconf} auf hyperbolische Metriken erweitert.
+Diskret konforme \"{A}quivalenz von Dreiecksnetzen wurde von Springborn {\it et al.}~\cite{Springborn2008} behandelt und von Bobenko {\it et al.}~\cite{BPS2015:dconf} auf hyperbolische Metriken erweitert.
 Zwei euklidische Triangulierungen mit gleicher Konnektivit\"{a}t sind diskret konform \"{a}quivalent, wenn es  Faktoren pro Ecke gibt, so dass entsprechende Kanten bis auf Multiplikation mit den Faktoren die gleiche L\"{a}nge haben.
 Die konforme Abbildung von triangulierten Fl\"{a}chen auf ebene Gebiete ist mit Hilfe eines Variationsprinzips auf den Skalierungsfaktoren formuliert.
 
@@ -106,12 +106,12 @@ Dieser Teil enth\"{a}lt einen Satz \"{u}ber hyperelliptische Riemannsche Fl\"{a}
 Eine Riemannsche Fl\"{a}che ist hyperelliptisch genau dann, wenn es eine Basis der Uniformisierungsgruppe gibt, deren hyperbolische Achsen sich in einem gemeinsamen Punkt schneiden, siehe auch Abbildung~\ref{fig:intro_uniformizations} rechts.
 Die Methoden aus diesem Abschnitt bilden die Grundlage f\"{u}r die Anwendungen in Teil~\ref{part:applications}.
 
-Der zweite Teil enth\"{a}lt Anwendungen von konformen Abbildungen f\"{u}r in der Architekturgeometrie.
+Der zweite Teil enth\"{a}lt Anwendungen von konformen Abbildungen in der Architekturgeometrie.
 In Kapitel~\ref{chp:periodic_conformal_maps} werden regul\"{a}re Muster auf architektonischen Fassaden berechnet.
 Daf\"{u}r verwenden wir periodische diskret konforme Abbildungen.
-Wir untersuchen wie Randbedingungen das lokale Verhalten der Abbildungen beeinflussen.
-Am Ende verwenden wir diese Abbildungen um die Geometrie von regul\"{a}ren Paneelen, zum Beispiel Sechsecken, zu bestimmen. 
-Wir beschreiben wie diese Netze weiter optimiert werden um Paneele effizient produzieren zu k\"{o}nnen, siehe auch Abbildung~\ref{fig:intro_applications} links.
+Wir untersuchen, wie Randbedingungen das lokale Verhalten der Abbildungen beeinflussen.
+Am Ende verwenden wir diese Abbildungen, um die Geometrie von regul\"{a}ren Paneelen, zum Beispiel Sechsecken, zu bestimmen. 
+Wir beschreiben, wie diese Netze weiter optimiert werden um Paneele effizient produzieren zu k\"{o}nnen, siehe auch Abbildung~\ref{fig:intro_applications} links.
 
 In Kapitel~\ref{chp:quasiisothermic} nutzen wir die Tatsache aus, dass Isothermfl\"{a}chen eindeutig nach Kr\"{u}mmungslinien parametrisierbar sind.
 Wir berechnen s-isotherme Netze auf architektonischen Fl\"{a}chen, das sind Netze, deren ebene Facetten "sich an den Kanten ber\"{u}hrende" Kreise besitzen.
@@ -122,13 +122,13 @@ Geometrisch sind das Netze mit gleich langen Kanten.
 Ausgehend von diskret konformen Abbildungen berechnen wir diese Strukturen mittels nicht-linearer Optimierung von Vierecksnetzen.
 
 Der dritte Teil f\"{u}hrt den Leser in das Software-Framework ein, welches f\"{u}r Berechnungen an diskreten Fl\"{a}chen und speziell konformen Abbildungen entworfen wurde, siehe hierf\"{u}r Kapitel~\ref{chp:conformallab} \"{u}ber {\sc ConformalLab}.
-Der Teil, der sich mit nicht-linearen Optimierung von diskreten Fl\"{a}chen besch\"{a}ftigt, ist im Kapitel~\ref{chp:varylab} \"{u}ber {\sc VaryLab} beschrieben.
+Der Teil, der sich mit nicht-linearer Optimierung von diskreten Fl\"{a}chen besch\"{a}ftigt, ist im Kapitel~\ref{chp:varylab} \"{u}ber {\sc VaryLab} beschrieben.
 
 Der Autor hat weiter die Bibliotheken {\sc HalfEdge} and {\sc HalfEdgeTools} entworfen, siehe Kapitel~\ref{chp:halfedge}.
-Diese sind als allgemeine Werkzeuge f\"ur Berechnungen an diskreten F\"{a}chen entworfen.
+Diese sind als allgemeine Werkzeuge f\"ur Berechnungen an diskreten F\"{a}chen konzipiert.
 Zusammen mit der Oberfl\"{a}chenbibliothek {\sc JRWorkspace}, Kapitel~\ref{chp:jrworkspace}, bilden sie ein flexibles Framework f\"{u}r den Entwurf komplexer Forschungsanwendungen im Bereich der diskreten Differentialgeometrie.
 
-Diese Arbeit enth\"{a}lt eine CD mit digitalen den Daten der meisten Beispiele aus Kapitel~\ref{chp:uniformization} und den architektonischen Anwendungen aus Teil~\ref{part:applications}.
+Diese Arbeit enth\"{a}lt eine CD mit den digitalen Daten der meisten Beispiele aus Kapitel~\ref{chp:uniformization} und den architektonischen Anwendungen aus Teil~\ref{part:applications}.
 Zus\"{a}tzlich ist der Quellcode der, in Teil~\ref{part:implementation} beschriebenen, Software in seiner aktuellen Fassung, sowie einer kompilierten, lauff\"{a}higen Version enthalten.
 Die Struktur dieser Daten ist im Anhang beschrieben.
 
