@@ -67,7 +67,7 @@ method of constructing discrete Riemann maps from triangulations to
 quadrangulations.
 
 In Section~\ref{sec:multiply_connected}, we briefly discuss discrete
-conformal maps form multiply connected domains to circle domains, and
+conformal maps from multiply connected domains to circle domains, and
 special cases in which we can map to slit domains. 
 
 Section~\ref{sec:spheres} deals with conformal mappings onto the
@@ -98,7 +98,7 @@ geometric characterization of hyperelliptic surfaces due to Schmutz
 Schaller.
 
 This text is accompanied by a compact disk which contains the data for all of the examples presented in this part of the work. 
-Where applicable we give the path to the data on the disk directly under the corresponding figure.
+Where applicable, we give the path to the data on the disk directly under the corresponding figure.
 We describe the usage of the software and the XML data format that was used to create all the results in Chapter~\ref{chp:conformallab}.
 
 \section{Discrete conformal equivalence of cyclic polyhedral surfaces}
@@ -110,7 +110,7 @@ A \emph{euclidean polyhedral surface} is a surface obtained from
 gluing euclidean polygons along their edges. (A \emph{surface} is a
 connected two-dimensional manifold, possibly with boundary.)  In other
 words, a euclidean polyhedral surface is a surface equipped with,
-first, an intrinsic metric which is flat except at isolated points
+first, an intrinsic metric that is flat except at isolated points
 where it has cone-like singularities, and, second, the structure of a
 CW complex with geodesic edges. The set of vertices contains all
 cone-like singularities. If the surface has a boundary, the boundary
@@ -293,7 +293,7 @@ We will also consider mixed versions:
   equivalent if
   \begin{equation}\label{eq:tilde_ell_sph_hyp}
     \sin\Big(\frac{\ellt_\mathit{ij}}{2}\Big)
-    = e^{\frac{1}{2}(u_{i}+u_{j})}\sinh\Big(\frac{\ell_\mathit{ij}}{2}\Big)
+    = e^{\frac{1}{2}(u_{i}+u_{j})}\sinh\Big(\frac{\ell_\mathit{ij}}{2}\Big).
   \end{equation}
 \end{compactitem}
 \end{definition}
@@ -316,7 +316,7 @@ We will also consider mixed versions:
     \begin{minipage}[b]{0.33\linewidth}
       \centering
       \input{figures/lengthcrossratio.pdf_t}
-      \caption{Length cross-ratio}
+      \caption{Length cross-ratio.}
       \label{fig:lcr}
     \end{minipage}
   \end{figure}
@@ -387,7 +387,7 @@ as
 the modulus of the complex cross-ratio of the four vertices.)  This
 definition of length cross-ratios implicitly assumes that an
 orientation has been chosen on the surface. For non-orientable
-surfaces, the length cross-ratio is well defined on the oriented
+surfaces, the length cross-ratio is well-defined on the oriented
 double cover.
 
 The product of length cross-ratios around an interior vertex $i\in V$ is $1$, because all lengths cancel:
@@ -480,7 +480,7 @@ color.
   (ii) It is easy to see that equations~\eqref{eq:tilde_ell_euc} can
   be solved for the scale factors $e^{u/2}$ if the length multi-ratios
   are equal. Note that the scale factors are not uniquely determined:
-  they can be multiplied by $\lambda$ and $1/\lambda$ on the two
+  They can be multiplied by $\lambda$ and $1/\lambda$ on the two
   vertex color classes, respectively. To find a particular solution,
   one can fix the value of $e^{u/2}$ at one vertex, and find the
   other values by alternatingly dividing and multiplying by
@@ -884,7 +884,7 @@ of lengths:
   that $\lambdat<0$ for $\ellt$ to be well-defined.
 \end{problem}
 
-\begin{proof}[of Lemma~\ref{lem:analytic}]
+\begin{proof}[Proof of Lemma~\ref{lem:analytic}]
   Note that~\eqref{eq:vertex_system} says that the angle sums at
   vertices in $V_{1}$ have the prescribed values,
   and~\eqref{eq:edge_system} says that neighboring triangles of
@@ -1019,7 +1019,7 @@ $E^{\euc},E^{\hyp},E^{\sph}$ when this is unlikely to cause confusion.
   appropriate values on $E_{\Delta}\setminus E_{\Sigma}$ so that
   $\lambdat_{\it ij}$ defined by~\eqref{eq:lambdat} remains constant
   for all ${\it ij}\in E_{\Delta}$. (In both exceptional cases, one
-  can make the minimizer unique by adding the constraint of fixing
+  can obtain a unique minimizer by adding the constraint of fixing
   $u_{i}$ for some $i~\in V_{\Delta}$.)
 \end{theorem}
 
@@ -1126,7 +1126,7 @@ Section~\ref{sec:spherical_computation}.
 Proposition~\ref{prop:D2E} follows from~\eqref{eq:E} and
 Proposition~\ref{prop:ddf} about the second derivatives of $f^{\g}$.
 
-\subsection{The peculiar triangle functions}
+\subsection{The triangle functions}
 \label{sec:f}
 
 This section is concerned with three real valued functions $f^{\euc}$,
@@ -1279,23 +1279,13 @@ multiples of $\pi$, where the derivative tends to $+\infty$.
   of~$f^{g}$. By symmetry, it suffices to consider the derivative with
   respect to $\lambda_{1}$. From~\eqref{eq:f} and~\eqref{eq:ML} one
   obtains
-  \begin{multline}
-    \frac{\partial f^{\g}}{\partial\lambda_{1}}
-    =
-    \beta_{1} + 
-    \\\sum_{i=1}^{3}
-    \Big(
-    \big(\lambda_{i} - \log(2\sin\beta_{i})\big)\,
-    \frac{\partial\beta_{i}}{\partial\lambda_{1}}
-    +\big(
-    - \log(2\sin\alpha_{i})
-    +\tfrac{1}{2}
-    \log\big|2\sin(\tfrac{\pi-\alpha_{1}-\alpha_{2}-\alpha_{3}}{2})\big|
-    \big)\,
-    \frac{\partial\alpha_{i}}{\partial\lambda_{1}}
-    \Big)
-    \label{eq:df_calculation}
-  \end{multline}
+  \begin{eqnarray}
+    \frac{\partial f^{\g}}{\partial\lambda_{1}} &=& \beta_{1} + \sum_{i=1}^{3}\Big(\nonumber\\
+    &&\quad\big(\lambda_{i} - \log(2\sin\beta_{i})\big)\, \frac{\partial\beta_{i}}{\partial\lambda_{1}}+\label{eq:df_calculation}\\
+    &&\quad\big(- \log(2\sin\alpha_{i})+\tfrac{1}{2}\log\big|2\sin(\tfrac{\pi-\alpha_{1}-\alpha_{2}-\alpha_{3}}{2})\big|\big)\,
+    \frac{\partial\alpha_{i}}{\partial\lambda_{1}}\nonumber\\
+    &&\Big).\nonumber
+  \end{eqnarray}
 
   For hyperbolic and spherical triangles, one derives from the
   respective cosine rules
@@ -1346,7 +1336,7 @@ multiples of $\pi$, where the derivative tends to $+\infty$.
   does not depend on $i$. ($R$ denotes the circumradius.)
   Equation~\eqref{eq:df} follows because the angle sum is constant.
 
-  (b)\, Now suppose $\lambda$ is contained the interior of the complement of
+  (b)\, Now suppose $\lambda$ is contained in the interior of the complement of
   the feasible region of~$f^{g}$. Since
   $\beta_{1},\beta_{2},\beta_{3}$ are constant on each connected
   component of the complement of the feasible region, and since
@@ -1396,8 +1386,8 @@ multiples of $\pi$, where the derivative tends to $+\infty$.
   function $f_{g}$ is linear so the second derivative vanishes.
 \end{proposition}
 
-A proof of~\eqref{eq:ddf_euc} is contained in~\cite{BPS2015:dconf}
-(Proposition 4.2.3), see Remark~\ref{rem:dconf_defs} below.
+A proof of~\eqref{eq:ddf_euc} is contained in the work of Bobenko {\it et al.}\ 
+\cite[Proposition 4.2.3]{BPS2015:dconf}, see Remark~\ref{rem:dconf_defs} below.
 Equations~\eqref{eq:ddf_hyp} and~\eqref{eq:ddf_sph} can be derived by
 lengthy calculations.
 
@@ -1410,13 +1400,13 @@ lengthy calculations.
 
   (ii) The function $f^{\hyp}$ is convex. On its feasible
   set, the second derivative $D^{2}f^{\hyp}$ is positive definite, so
-  the functions is locally strictly convex.
+  the function is locally strictly convex.
 \end{proposition}
 
-Part (i) is proved in~\cite{BPS2015:dconf} (Propositions~4.2.4, 4.2.5,
-note the following remark)
+Part (i) is proved by Bobenko {\it et al.}\ \cite[Propositions~4.2.4, 4.2.5,
+note the following remark]{BPS2015:dconf}
 directly from~\eqref{eq:ddf_euc}. We do not know a similarly
-straightforward proof of part~(ii). The proof in~\cite{BPS2015:dconf}
+straightforward proof of part~(ii). The proof by Bobenko {\it et al.}
 (Section 6.2) is based on a connection with 3-dimensional hyperbolic
 geometry: $f^{\hyp}$ is the Legendre dual of the volume of an ideal
 hyperbolic prism considered as a function of the dihedral angles. This
@@ -1426,8 +1416,8 @@ ideal prism into three ideal tetrahedra.
 
 \begin{remark}
   \label{rem:dconf_defs}
-  The functions $f$ and $\hat V_{h}$ defined in~\cite{BPS2015:dconf}
-  (equations (4-3), (6-4)) are related to the functions $f^{\euc}$ and
+  The functions $f$ and $\hat V_{h}$ defined by Bobenko {\it et al.}\ 
+  \cite[Equations (4-3), (6-4)]{BPS2015:dconf} are related to the functions $f^{\euc}$ and
   $f^{\hyp}$ by
   \begin{align}
     \label{eq:f_dconf}
@@ -1479,7 +1469,7 @@ resulting quadrangulations are shown in the middle.
 \scriptsize\tt data/planar\_circles/circular\_non\_schramm02.xml\\
 \caption{
 Mapping a rectangle to a parallelogram. Note the orthogonal circle
-pattern in top row and the wiggly vertical lines
+pattern in the top row and the wiggly vertical lines
 in the bottom row. 
 % All quadrilaterals in the image are cyclic quadrilaterals.
 % Note, in addition to the circle pattern generated by the quadrilaterals the upper example yields an S-isothermic circle pattern whereas the lower one does not.
@@ -1518,9 +1508,9 @@ quadrangulation consisting of squares.
 The conformal map shown in the top row of
 Figure~\ref{fig:cyclic_parallelogram} ``finds'' the orthogonal circle
 pattern because that circle pattern exists and the conformal map is
-unique (by Theorem~\ref{thm:uniqueness}). For $6\times 5$ example shown
+unique (by Theorem~\ref{thm:uniqueness}). For the $6\times 5$ example shown
 in the bottom row, a corresponding orthogonal circle pattern does not
-exists. No matter which coloring one chooses, there are two black
+exist. No matter which coloring is chosen, there are two black
 vertices at which the total angle changes (from $90^{\circ}$ to
 $50^{\circ}$ and $130^{\circ}$, respectively). The neighbors of a
 vertex do not lie on a circle. Figure~\ref{fig:cyclic_parallelogram}
@@ -1538,7 +1528,7 @@ corners with increasing angle and the corners with decreasing angle
 would have different colors. This violates the necessary condition
 expressed in the following theorem.
 
-\begin{theorem}[Necessary condition for the existence of conformal map]
+\begin{theorem}[Necessary condition for the existence of a conformal map]
   Let $\Sigma$ be an abstract quadrangulation of the closed disk, and
   let 
   \begin{equation*}
@@ -1644,12 +1634,12 @@ Problem~\ref{prob:factors_and_angles}. Then, by the variational
 principle, if a solution exists, it can be found by minimizing a
 convex function. For triangulations, the reduction of the discrete
 Riemann mapping problem to Problem~\ref{prob:factors_and_angles} is
-explained in~\cite{BPS2015:dconf} (Section 3.3). Here, we consider the
+explained by Bobenko {\it et al.}\ \cite[Section 3.3]{BPS2015:dconf}. Here, we consider the
 case of quadrangulations. (The arguments can be extended to even
 polygons with more than four sides. We restrict our attention to
 quadrilaterals because the combinatorial restrictions discussed in the
-following paragraph become even more annoying for surfaces with
-hexagons, octagons, etc.)
+following paragraph become even more involved yet not more interesting for 
+surfaces with hexagons, octagons, etc.)
 
 The basic idea is the same as for triangulations: First, map the
 polyhedral surface to the half plane with one boundary vertex at
@@ -1792,8 +1782,8 @@ Koebe's generalization of the Riemann mapping theorem says that
 multiply connected domains are conformally equivalent to domains
 bounded by circles, and the uniformizing map to such a circle domain
 is unique up to M{\"o}bius transformations. A method to construct
-discrete Riemann maps is described in~\cite{BPS2015:dconf} (Section
-3.3) for triangulations and for mostly quadrilateral meshes in
+discrete Riemann maps is described by Bobenko {\it et al.}\ \cite[Section
+3.3]{BPS2015:dconf} for triangulations and for mostly quadrilateral meshes in
 the previous Section~\ref{sec:riemann_map}. Having generalized the
 notion of discrete conformal equivalence from triangulations to cyclic
 polyhedral surfaces, it is straightforward to adapt this method to
@@ -1890,9 +1880,9 @@ circular holes as described in Section~\ref{sec:circle_domains}.
           a slit. One vertex of the triangle and the midpoint of the
           opposite side are mapped to the endpoints of the
           slit. Middle row: An arrow shaped slit is mapped to a
-          straight slit. The two vertices at the arrows tip, on either
+          straight slit. The two vertices at the arrow's tip, on either
           side of the slit, are mapped to the endpoints of the
-          straights slit. Bottom row: Three circular boundary
+          straight slit. Bottom row: Three circular boundary
           components are mapped to horizontal slits. (The slit surface
           is not shown.)}
 \label{fig:fluid_flows}
@@ -1927,7 +1917,7 @@ circular holes as described in Section~\ref{sec:circle_domains}.
 
 This section is concerned with discrete conformal maps of polyhedral
 surfaces of genus~$0$ onto the round sphere. For triangulations, this
-is described in~\cite{BPS2015:dconf} (Section 3.2). In
+is described by Bobenko {\it et al.}\ \cite[Section 3.2]{BPS2015:dconf}. In
 Section~\ref{sec:spheres_euclidean}, we adapt this method to
 quadrangulations. This is similar to the discrete Riemann mapping with
 quadrilaterals described in
@@ -1977,7 +1967,7 @@ quadrilateral faces that is homeomorphic to the sphere.
   neighbors of $k$ in $\Sigma$.  The result is a planar polyhedral
   surface with cyclic quadrilaterals. Consecutive boundary edges
   that belonged to a face incident with vertex $k$ in $\Sigma$ are
-  contained in a straight lines.
+  contained in a straight line.
 \item Map the vertices to the unit sphere by stereographic projection
   and reinsert the vertex $k$ at the image point of $\infty$.
 \item Optionally apply M{\"o}bius normalization, see Section~\ref{sec:moebius_normalization}. 
@@ -2008,7 +1998,7 @@ shows a discrete conformal map  calculated by this method.
 }
 \setstretch{0.0}{\scriptsize\tt data/spherical/cube\_data.xml}\quad\quad\quad\quad\quad\quad{\scriptsize\tt data/spherical/tetrahedron\_data.xml}
 \caption{Mapping conformally to the sphere using the spherical
-  functional. The spherical surfaces are M{\"o}bius normalized to
+  functional. The spherical surfaces are M{\"o}bius-normalized to
   achieve rotational symmetry.}
 \label{fig:spherical_examples}
 \end{figure}
@@ -2028,7 +2018,7 @@ is a critical point of $E^{\sph}_{\Delta,\Theta}(u)$. If we enlarge
 all edge lengths by a common factor $e^{h}>1$, then all angles become
 larger, so every component~\eqref{eq:dEdu} of the gradient of
 $E^{\sph}$ becomes negative. Following the negative gradient would
-make all lengths even larger.
+result in even longer lengths.
 
 The following minimax method works in many cases. Define the function
 $\tilde E$ by \emph{maximizing} the functional $E^{\sph}$ in the
@@ -2049,7 +2039,7 @@ calculated using this method.
 \label{sec:moebius_normalization}
 
 The notion of discrete conformal equivalence of euclidean polyhedral
-surfaces $(\Sigma,\ell)_{\euc}$ in $\R^{3}$ is M{\"o}bus invariant
+surfaces $(\Sigma,\ell)_{\euc}$ in $\R^{3}$ is M{\"o}bius-invariant
 (Proposition~\ref{prop:Moebius_inv}). If all vertices $v\in
 V_{\Sigma}$ are contained in the unit sphere $S^{2}\subset\R^{3}$,
 then there is a M{\"o}bius transformation $T$ of $S^{2}$ such that the
@@ -2067,7 +2057,7 @@ defined below. Then choose for $T$ a M{\"o}bius transformation that
 maps $S^{2}$ to itself and the minimizer to the origin. Here, we only
 provide explicit formulas for the function $\delta$ and its first two
 derivatives. For a more detailed account, we refer the reader
-to~\cite{Springborn05}. The function $\delta$ is defined on the open
+to Springborn~\cite{Springborn05}. The function $\delta$ is defined on the open
 unit ball in $\R^{3}$ by
 \begin{equation}
   \delta(x) = \sum_{v\in V}
@@ -2124,8 +2114,7 @@ numerical experiments of Section~\ref{sec:numerical_convergence}.
 
 First we consider a simple example with quadrilateral faces.
 Figure~\ref{fig:torus_cyclic} (left) shows a coarse discretization of
-a torus.  The faces are isosceles trapezoids, so they
-are inscribed in circles. On the right, the figure shows the
+a torus whose faces are inscribed in circles. On the right, the figure shows the
 uniformization obtained by solving Problem~\ref{prob:total_angles}
 with prescribed total angle $\Theta=2\pi$ at all vertices.
 
@@ -2145,7 +2134,7 @@ with prescribed total angle $\Theta=2\pi$ at all vertices.
 
 To test the numerical accuracy of our discrete uniformizing maps, we
 consider the famous torus of constant mean curvature discovered by
-Wente~\cite{wente1986}. Explicit doubly periodic conformal immersion
+Wente~\cite{wente1986}. Explicit doubly-periodic conformal immersion
 formulas (i.e., formulas for the inverse of a uniformizing map) are
 known in terms of elliptic functions~\cite{abresch1987, walter1989, bobenko1991}. 
 
@@ -2154,7 +2143,7 @@ known in terms of elliptic functions~\cite{abresch1987, walter1989, bobenko1991}
 \includegraphics[width=0.48\textwidth]{wente_embedding/wente_1240_fundamental.pdf}\hfill
 \includegraphics[width=0.48\textwidth]{wente_embedding/wente_1240_domain.pdf}
 \setstretch{0.5}{\scriptsize\tt data/wente\_embedding/wente\_1240.xml}
-\caption{Uniformization of the Wente torus. Discretely sampled conformal immersion (left), domain of uniformization (right). Orange curves indicates the lattice of the flat torus in the domain. The faces of the polyhedral surface are approximate conformal squares. In the discrete uniformization their images are approximately squares, as it should be.}
+\caption{Uniformization of the Wente torus. Discretely sampled conformal immersion (left), domain of uniformization (right). Orange curves indicate the lattice of the flat torus in the domain. The faces of the polyhedral surface are approximately conformal squares. In the discrete uniformization their images are approximately squares, as it should be.}
 \label{fig:wente_torus_embedded}
 \end{figure}
 
@@ -2240,9 +2229,9 @@ Section~\ref{sec:hyperelliptic}.
 \end{figure}
 
 \begin{remark}
-  Instead of constructing a doubly covered convex euclidean polyhedron
+  Instead of constructing a doubly-covered convex euclidean polyhedron
   with vertices on the unit sphere as described above, one could also
-  construct a spherical triangulation of the doubly covered sphere
+  construct a spherical triangulation of the doubly-covered sphere
   that is invariant under the elliptic involution (exchanging
   sheets). These two approaches are in fact equivalent due to
   Remark~\ref{rem:chords}. 
@@ -2256,8 +2245,8 @@ symmetric with respect to a half turn around one vertex (which is then
 also a half turn around three other vertices). The quotient space of
 the triangulated torus modulo the elliptic involution is then a
 triangulated sphere. Map it to the sphere by the procedure explained
-in~\cite{BPS2015:dconf} (Section 3.2), see also
-Section~\ref{sec:spheres_euclidean} of the present article.
+by Bobenko {\it et al.}\ \cite[Section 3.2]{BPS2015:dconf}, see also
+Section~\ref{sec:spheres_euclidean} of the present work.
 
 Figures~\ref{fig:wente_elliptic} and~\ref{fig:square_elliptic} show
 examples where we started with a hexagonal and a square torus
@@ -2309,7 +2298,7 @@ $\R^{3}$ while fixing the subset of branch points:
 \sum_{\substack{v,w\in V\\w\neq v}} \frac{1}{\left<w-v,
     w-v\right>},
 \\ 
-\frac{\partial \mathcal E}{\partial v} &=& 4n^2\left<v,v\right>v + 4\sum_{\substack{w\in V\\w\neq v}}\frac{w-v}{\left<w-v,w-v\right>^2}.
+\frac{\partial \mathcal E}{\partial v} &=& 4n^2\left<v,v\right>v + 4\sum_{\substack{w\in V\\w\neq v}}\frac{w-v}{\left<w-v,w-v\right>^2}
 \end{eqnarray}
 where $\left<.,.\right>$ denotes the standard euclidean scalar product
 of $\R^{3}$. We do not enforce the constraint that the points should
@@ -2367,7 +2356,7 @@ of the fundamental domain.)
 % \end{eqnarray*}
 % The period matrix $[\tau]$, also called the modulus of the curve, can be calculated using the periods of the elliptic lattice $\{\omega_1,\omega_3\}$ such that $\tau = \frac{\omega_2}{\omega_1}$. These can be calculated from the invariants $\{g_2,g_3\}$, e.g., using {\sc Mathematica}s built-in function {\tt WeierstrassHalfPeriods[$\{g_2,g_3\}$]}~\cite{WeierstrassHalfPeriods_website}.
 
-% Let $\lambda_1, \lambda_2, \lambda_3, \lambda_4 \in \C$ be the branch points of an elliptic curve $C$. We create a discrete version of the curve by choosing $n$ points $p_1,\ldots,p_n$ equally distributed on $S^2$. The triangulation for one sheet of the discrete curve is the convex hull of $\{\lambda_1,\ldots,\lambda_4,p_1,\ldots, p_4\}$. Choose non-intersecting edge-paths connecting the pairs $(\lambda_1,\lambda_2)$ and $(\lambda_3,\lambda_4)$. To create a doubly covered sphere we glue a second copy of the triangulated sphere transversely along corresponding paths, see Section~\ref{sec:elliptic_curves}.
+% Let $\lambda_1, \lambda_2, \lambda_3, \lambda_4 \in \C$ be the branch points of an elliptic curve $C$. We create a discrete version of the curve by choosing $n$ points $p_1,\ldots,p_n$ equally distributed on $S^2$. The triangulation for one sheet of the discrete curve is the convex hull of $\{\lambda_1,\ldots,\lambda_4,p_1,\ldots, p_4\}$. Choose non-intersecting edge-paths connecting the pairs $(\lambda_1,\lambda_2)$ and $(\lambda_3,\lambda_4)$. To create a doubly-covered sphere we glue a second copy of the triangulated sphere transversely along corresponding paths, see Section~\ref{sec:elliptic_curves}.
 
 % After discrete uniformization we calculate $\hat \tau$. We normalize $\tau$ and $\hat \tau$ such that $|\tau|>1$ and $|\re(\tau)| < \frac{1}{2}$. We can now compare the modulus $\tau$ of the smooth structure with the number $\hat \tau$ derived from the discrete uniformization of a triangulation with the same branch points. The discretization error is defined as $|\tau-\hat \tau|$.
 
@@ -2399,7 +2388,7 @@ experiment. It suggests the error behaves like
 \caption{Left: Error for zero to six subdivision steps. The
   $\log$-$\log$ plot shows the error $|\tau - \hat\tau|$ against the
   number of vertices of the subdivided icosahedron (i.e., in one sheet
-  of the doubly covered sphere). To estimate the asymptotic behavior
+  of the doubly-covered sphere). To estimate the asymptotic behavior
   of the error, we determine the slope $\alpha\approx-0.88$ of a line
   through the last four points by linear regression. Right: Result of
   the discrete uniformization after two subdivision steps.}
@@ -2448,7 +2437,7 @@ x$ or $\mean_e \{Q_{\lcr}(e)\} < x$.)
 \end{figure}
 
 The results from these two experiments suggest that the error depends
-on the number of $n$ of vertices asymptotically like $n^{\alpha}$,
+on the number of vertices asymptotically like $n^{\alpha}$,
 where the exponent $\alpha<0$ depends on the mesh. 
 
 \subsection{Putting a square pattern on a spherical mesh}
@@ -2573,7 +2562,7 @@ circle.
 \label{fig:hyperbolic_circle_domain}
 \end{figure}
 
-We explain how calculate the Fuchsian uniformization for Riemann
+We explain how to calculate the Fuchsian uniformization for Riemann
 surfaces given in the form of a Schottky uniformization in
 Section~\ref{sec:schottky}. We discuss the uniformization of
 hyperelliptic curves in Section~\ref{sec:hyperelliptic} and a
@@ -2622,7 +2611,7 @@ domain with polygonal boundary, i.e., the boundary consists of
 geodesic segments, the \emph{edges} of the fundamental polygon, which
 are identified in pairs by the action of the group $G$. For each edge
 $a$, there is exactly one partner edge $a'$ such that there exists a
-translation $A\in G$ mapping $a$ to $a'$. These edge gluing
+translation $A\in G$ mapping $a$ to $a'$. These edge-gluing
 translations form a generating set of $G$. If all vertices of the
 fundamental polygon are identified (i.e., they belong to the same
 $G$-orbit), then the fundamental polygon has $4g$ edges. In this case
@@ -2645,7 +2634,7 @@ and if opposite edges are identified,
   \label{eq:opposite_polygon_g2}
   abcda'b'c'd', 
 \end{equation}
-then then relation is 
+the relation is 
 \begin{equation}
 \label{eq:opposite_relation_g2}
 DC'BA'D'CB'A=1.
@@ -2765,7 +2754,7 @@ gluing translations is small.
 
 
 The polygon with canonical edge identifications may not be
-convex. Following Keen~\cite{keen1966} we can transform this domain
+convex. Following Linda Keen~\cite{keen1966}, we can transform this domain
 into a strictly convex fundamental polygon by choosing a different
 base vertex for the same group of transformations. Let
 $aba'b'cdc'd'\ldots$ be a fundamental polygon and let
@@ -2820,7 +2809,7 @@ to one with opposite sides identified, the detour via a canonical
 polygon is inefficient.  
 
 In all examples, we use a heuristic method based on the following
-idea: Find a longest sequence of different letters in the edge
+idea: Find one of the longest sequences of different letters in the edge
 labeling (ignoring primes), and then try to move a different letter
 into this sequence by cutting and gluing.
 
@@ -2862,21 +2851,21 @@ into this sequence by cutting and gluing.
 %
 % In all examples we therefor use a different heuristic algorithm. We transform a given fundamental polygon and group presentation to opposite sides form using the following sequence of transformations. Refer to Figure~\ref{fig:opposite_algorithm} for an instance of this algorithm:
 
- For a given fundamental polygon and the ordering of its sides, we can reconstruct the relation of the group by moving around the base vertex on the surface. That means if we start with transformation $A$ moving side $a$ to $a'$ the next element in the relation belongs to the side next to $a'$ in counter-clockwise order. We proceed until we get back to element $A$. Note that we could have chosen clockwise orientation, but for drawing pictures we stick to counter-clockwise.
+ For a given fundamental polygon and the ordering of its sides, we can reconstruct the relation of the group by moving around the base vertex on the surface. That means if we start with transformation $A$ moving side $a$ to $a'$, the next element in the relation belongs to the side next to $a'$ in counter-clockwise order. We proceed until we get back to element $A$. Note that we could have chosen clockwise orientation, but for drawing pictures we stick to counter-clockwise.
 
  For an oppositely identified fundamental polygon (and for canonically identified polygons as well) the order of transformations in the relation has the same structure as the sides of the polygon (by reading the relation backwards and possibly relabeling of sides). For example the group relation corresponding to a polygon $ab'cd'a'bc'd$ is $D'C'B'A'DCBA=1$.
 
  For the order of group elements in the relation we give cut-and-paste sequences that move single elements to different locations in the relation leaving all other elements in place. Using these transformations we normalize the polygon as follows.
 
- \begin{compactitem}
- \item[1] Find largest sequence of different (excluding inverse) generators in the relation.
- \item[2] Move missing elements into the sequence such that it forms a basis for the group.
- \item[3] Sort elements in the sequence to match the order of the corresponding inverse elements.
- \end{compactitem}
+ \begin{compactenum}[(1)]
+ \item Find largest sequence of different (excluding inverse) generators in the relation.
+ \item Move missing elements into the sequence such that it forms a basis for the group.
+ \item Sort elements in the sequence to match the order of the corresponding inverse elements.
+ \end{compactenum}
 
  Let the order of sides in the polygon be $a' \cdots b \cdots a \cdots$. The corresponding cut-and-paste operation that moves the group element $A$ behind element $B$ in the relation is one of
 
- \begin{compactitem}
+ \begin{compactitem}[$\bullet$]
  \item Cut from the end of $a$ to the start of $b$ and glue using $A$.
  \item Cut from the start of $a'$ to the start of $b$ and glue via $A'$.
  \end{compactitem}
@@ -2940,9 +2929,9 @@ $\hat\Delta$ of the universal cover of $R$, hence a triangulation
 $\Delta$ of $R$. More precisely, the triangulations~$\hat\Delta$
 and~$\Delta$ are only defined up to isotopy fixing the vertices. The
 edge-lengths~$\hat\ell$ (distances of vertices) do not project from
-$\hat\Delta$ to $\Delta$, but the length cross-ratios $\hat\lcr$
-calculated from these edge lengths do, because they are M{\"o}bius
-invariant. The projected length cross-ratios $\lcr$ determine a
+$\hat\Delta$ to $\Delta$, but the length cross-ratios $\widehat\lcr$
+calculated from these edge lengths do, because they are M{\"o}bius-invariant. 
+The projected length cross-ratios $\lcr$ determine a
 discrete conformal class for $\Delta$ (see
 Section~\ref{sec:triangulations}).
 
@@ -2962,7 +2951,7 @@ cross-ratios $\lcr$. Also, whether or not Problem~\ref{prob:analytic}
 has a solution does not depend on the choice of edge lengths $\ell$
 provided they lead to the same length cross-ratios.
 
-Figure~\ref{fig:schottky_g3} shows a examples of the Fuchsian
+Figure~\ref{fig:schottky_g3} shows examples of the Fuchsian
 uniformization of a genus two and three surface presented by its Schottky
 uniformization. 
 
@@ -2984,7 +2973,7 @@ uniformization.
     triangulation are chosen so that the triangles are close to
     equilateral where possible. The shaded region in the right images
     corresponds to the fundamental domain of the Schottky group in the
-    left image. Its boundary consist of curves corresponding to the
+    left image. Its boundary consists of curves corresponding to the
     circles and curves corresponding to lines connecting the circles
     (drawn in gray).}
   \label{fig:schottky_g3}
@@ -3003,7 +2992,7 @@ uniformization.
 % \end{figure}
 
 \runinhead{Tori given by Schottky data.}  For tori, the Schottky data
-consist of one generator 
+consists of one generator 
 \begin{equation}
   \label{eq:schottky_gen}
   \frac{\sigma(z)-A}{\sigma(z)-B}=\mu\,\frac{z-A}{z-B}
@@ -3031,8 +3020,8 @@ domain of the Schottky group.
 \caption{ Left: Fundamental domains of Riemann surfaces of genus $1$
   given by Schottky data $C$, $C'$, $A$, $B$, $\mu$
   (see~\eqref{eq:schottky_gen}). The triangulations use only points on
-  the circles $C$, $C'$. On purpose we have not chosen concentric
-  circles with center $A=B$. Right: Representation of the same
+  the circles $C$, $C'$. We deliberately chose non-concentric circles, i.e., 
+  with centers $A\neq B$. Right: Representation of the same
   surfaces as $\C/\Gamma$ for a lattice $\Gamma$. Top: For real
   $\mu=0.3$ we get a rectangular lattice. Bottom: $\mu=0.08+0.01i$
   yields a parallelogram.}
@@ -3068,7 +3057,7 @@ Figure~\ref{fig:roots_of_unity_curve} shows uniformizations of the curves
   \mu^2=\lambda\prod_{k=1}^{2g}\left(\lambda-e^{\frac{ik\pi}{g}}\right).
 \end{equation}
 for $g=2,3,4$ that were obtained this way. The curves
-are branched at the $(2g)$th roots of unity and at $0$ and $\infty$.
+are branched at the $2g^{\rm th}$ roots of unity and at $0$ and $\infty$.
 
 \begin{figure} 
 \centering
@@ -3086,8 +3075,8 @@ are branched at the $(2g)$th roots of unity and at $0$ and $\infty$.
   hyperbolic $4g$-gons. Since the triangulation is as symmetric as the
   curves, and because the solution of the discrete uniformization
   problem is unique, the fundamental domains of the polyhedral
-  surfaces are also exactly regular hyperbolic $4g$-gons. I.e., any
-  error in the domains is due to numerics, but not to the discretization.}
+  surfaces are also exactly regular hyperbolic $4g$-gons. Any
+  error in the domains is therefore due to numerics and not due to the discretization.}
 \label{fig:roots_of_unity_curve} 
 \end{figure}
 
@@ -3114,8 +3103,8 @@ the sphere.  Figure~\ref{fig:genus2_branched} shows an example.
 \caption{A triangulated genus $2$ surface is mapped to a branched
   cover of $\Chat$. The $180^{\circ}$ rotation about the horizontal
   symmetry axis is a discrete conformal involution with $6$ fixed
-  points, which are marked in red, blue, and purple. The texture is a
-  square grid in the plane, pulled back to the doubly covered sphere
+  points marked in red, blue, and purple. The texture is a
+  square grid in the plane, pulled back to the doubly-covered sphere
   by Mercator projection, then pulled back to the surface. Middle and bottom:
   branched cover of $\Chat$, and a closeup of three branch points (stereographic projection).}
 \label{fig:genus2_branched} 
@@ -3163,10 +3152,10 @@ The fundamental polygon of condition (iv) is symmetric with respect
 to a $180^{\circ}$ rotation around its center, which corresponds to
 the hyperelliptic involution on $R$. The $2g+2$ fixed points on $R$
 are the vertex of the polygon, its center, and the $2g$ edge
-midpoints. The axes of the $2g$ edge gluing translations all go
+midpoints. The axes of the $2g$ edge-gluing translations all go
 through the center. They project to $2g$ simple closed
-geodesics on $R$ which all intersect in one point and intersect in no
-other point. 
+geodesics on $R$ that all intersect in one point and intersect in no
+other point.
 
 % The images in Figure~\ref{fig:roots_of_unity_curve} suggest that we can find special fundamental domains for hyperelliptic surfaces, see also Figure~\ref{fig:fundamental_polygon_algorithm} (bottom) for a more irregular polygon. 
 % And indeed for every hyperelliptic Riemann surface we can find a basis of the uniformizing group such that the axes of the transformations meet in a common point.
@@ -3314,12 +3303,12 @@ The matrices satisfy the relation with error $\approx 10^{-7}$.
 \input{data/non-hyperelliptic/opposite_data_symmetric.tex}
 \endgroup
 
-\subsection{Example: Different forms of the same genus two surface}
+\subsection{Example: Different forms of the same genus-$2$ surface}
 \label{sec:lawson_uniformization}
 
 In this section we present Fuchsian uniformizations of the same
 Riemann surface represented in three different ways:
-\begin{compactitem}
+\begin{compactitem}[$\bullet$]
 \item 
   as hyperelliptic curve $\mu^2=\lambda^6-1$
   (Figure~\ref{fig:lawson_curve}),
@@ -3340,7 +3329,7 @@ Riemann surface represented in three different ways:
 % Figure~\ref{fig:lawson_squares}.
 For each representation we choose corresponding fundamental polygons
 that allow the comparison of the uniformization:
-\begin{compactitem}
+\begin{compactitem}[$\bullet$]
 \item an octagon with canonical edge pairing $aba'b'cdc'd'$,
 \item an octagon with opposite sides identified, $abcda'b'c'd'$,
 \item a $12$-gon that is adapted to the six-squares surface. 
@@ -3401,10 +3390,10 @@ Extra points are chosen such that the triangulation is almost regular on the sph
  We show them also pulled back onto $\hat \C$. Blue curves are simple closed geodesics on the surface.
  They are the axis of hyperbolic motions identifying pairs of fundamental edges in the hyperbolic plane.
 
- The branch points are clearly visible as the valence of the triangulation is doubled at these vertices.
+ The branch points are clearly visible: The valence of the triangulation is doubled at these vertices.
  The blue geodesic loops connect two branch points each.
 
- \textit{Opposites sides domain:}
+ \textit{Opposite sides domain:}
  The opposite sides domain (second row) is chosen as described in Section~\ref{sec:polygons_generators}.
  All axes of hyperbolic motions intersect in a branch point of the curve.
  Red and blue geodesic arcs are dual to each other.
@@ -3412,10 +3401,10 @@ Extra points are chosen such that the triangulation is almost regular on the sph
 
  \textit{$12$-gon:}
 This domain is chosen such that it corresponds to the domain suited for the square-tiled surface as described below.
-To understand the system of loops take the canonical system of loops meeting at $0$ (top row of the Figure) and deform the loops until they touch at $\infty$.
+To understand the system of loops, take the canonical system of loops meeting at $0$ (top row of the figure) and deform the loops until they touch at $\infty$.
  By this move we introduce two more vertices on the fundamental polygon, namely the two vertices corresponding to $\infty$ on the two-sheeted cover.
  The triangulation of the example model is created by a subdivision process.
- Starting from  a triangulation with vertices at $0$, $\infty$, at branch points, and the mid-points on the equator in between the branch points we subdivide using a linear 4-to-1 split followed by a projection to the sphere. Thus the boundary of the fundamental domain is contained in the edge set of the triangulation. For the visualization of the universal cover we cut along these edges to draw the triangulation, Figure~\ref{fig:lawson_curve}, bottom-right.
+ Starting from  a triangulation with vertices at $0$, $\infty$, at branch points, and the mid-points on the equator in between the branch points, we subdivide using a linear 4-to-1 split followed by a projection to the sphere. Thus the boundary of the fundamental domain is contained in the edge set of the triangulation. For the visualization of the universal cover we cut along these edges to draw the triangulation, Figure~\ref{fig:lawson_curve}, bottom-right.
 
 \runinhead{Lawson's surface.}
 
@@ -3472,12 +3461,12 @@ as described in Section~\ref{sec:polygons_generators}.
 The vertex of this fundamental polygon has to
 be a point on the symmetry axis of the surface. 
 As the system of loops forming the boundary of the polygon
-and their identifying axes are dual to each other the common
+and their identifying axes are dual to each other, the common
 intersection of generator axes must lie on an intersection with the
 symmetry axis as well, see Figure~\ref{fig:lawson_embedding},
 middle-left.
 
- The third fundamental polygon we present for Lawson's surface corresponds to the square-tiled segmentation of the surface as described below. As in the uniformization of the hyperelliptic curve we have to deform the canonical polygon and introduce two new vertices corresponding to antipodal points of the current vertex on the curve. The hyperelliptic curve of the Lawson surface admits several anti-holomorphic involutions one of which interchanges $0$ and $\infty$. we also have these involutions on the embedded surface realized as reflections about symmetry planes containing the rotational symmetry axis. Hence we can find the new vertices of the fundamental polygon by reflection of the canonical root vertex about these symmetry planes, see Figure~\ref{fig:lawson_embedding}, bottom-left.
+ The third fundamental polygon we present for Lawson's surface corresponds to the square-tiled segmentation of the surface as described below. As in the uniformization of the hyperelliptic curve we have to deform the canonical polygon and introduce two new vertices corresponding to antipodal points of the current vertex on the curve. The hyperelliptic curve of the Lawson surface admits several anti-holomorphic involutions, one of which interchanges $0$ and $\infty$. We also have these involutions on the embedded surface realized as reflections about symmetry planes containing the rotational symmetry axis. Hence we can find the new vertices of the fundamental polygon by reflection of the canonical root vertex about these symmetry planes, see Figure~\ref{fig:lawson_embedding}, bottom-left.
 
 \runinhead{Six-squares surface.}
 
