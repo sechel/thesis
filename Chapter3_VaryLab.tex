@@ -50,7 +50,7 @@ for optimization.
 
 {\sc VaryLab} can handle constraints on vertex positions. We implement this by modifying the gradient and Hessian of the selected energies to be zero at the constraint variables. Even if the derivative does not match the energy anymore we can still calculate solutions for the rest of the variables using conjugate gradient methods. Here the line search step of the algorithm minimizes the energy over the remaining variables in the direction of the gradient, i.e., the update will not include constraint variables.
 
-\section{Build-in functionals}
+\section{Built-in functionals}
 
 {\sc VaryLab} implements a number of energy functionals.
 
