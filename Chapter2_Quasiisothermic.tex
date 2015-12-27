@@ -90,8 +90,8 @@ parameterizations in the sense of our definition.
 
 \noindent\textbf{Parameterization Algorithm:}
 We give an algorithm that creates quasiisothermic parameterizations based on discrete
-conformal maps of triangle meshes to the plane. This approach is build on top 
-of the conformal mapping technique of \cite{Springborn2008}. We
+conformal maps of triangle meshes to the plane. This approach is built on top 
+of the conformal mapping technique of Springborn~{\it et al.}~\cite{Springborn2008}. We
 inherit the speed and superior projective mapping properties of their 
 parameterizations.
 
@@ -401,13 +401,13 @@ Section~\ref{subsub:examples_quality} for a discussion.}
 
 The algorithm to compute a quasiisothermic parameterization with vanishing modulus at the 
 boundary of the domain is the following:
-\begin{enumerate}
+\begin{compactenum}[(1)]
 \item Generate curvature directions and compute $\alpha$ at the boundary
 \item Calculate boundary angles $\theta$ and pick singularities
 \item Compute conformal parameterization with given $\theta$s
 \item Perform remeshing
 \item Remove cone point cuts 
-\end{enumerate}
+\end{compactenum}
 
 To estimate principle curvature fields we use the method of Cohen-Steiner and
 Morvan \cite{CohMor03}, where the curvature tensor is averaged over a disk of a
@@ -753,14 +753,14 @@ Here we describe the construction of a discrete s-isothermic ellipsoid and
 its dual surface. (See Hertrich-Jeromin~\cite[p.~202]{Hertrich2003} for the smooth analog).
 The rough construction outline is as follows. We start with a discretized version
 of the smooth isothermically parameterized ellipsoid. We obtain this by calculating a 
-quasiisothermic parameterization of half of a triangulated ellipsoid. After remeshing 
+quasiisothermic parameterization of half of a triangulated ellipsoid. After remeshing, 
 the parameter lines are approximate curvature lines. We complete the surface by reflection
 at the boundary. 
 Optimization of the s-isothermic functional yields the final discrete ellipsoid. Its 
 dual surface is constructed as in Section~\ref{sub:isometric}.
 
-The combinatorics at singularities of the discrete ellipsoid is not unique. If there is a discrete 
-curvature line a the symmetry plane of the ellipsoid we have degenerate quads that have 
+The connectivity at singularities of the discrete ellipsoid is not unique. If there is a discrete 
+curvature line in the symmetry plane of the ellipsoid, we have degenerate quads that have 
 vertices with angle $\approx\pi$. The singularity is located at this valence $2$ vertex. 
 If there is no discrete curvature line at the symmetry plane then the singularity is located at the 
 mid point of the edge connecting two valence three vertices. We have observed that 
