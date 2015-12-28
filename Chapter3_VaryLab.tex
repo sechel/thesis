@@ -14,9 +14,13 @@
     \end{center}
 \end{figure}
 
-In this chapter we introduce the {\sc Java} software {\sc VaryLab}. It is a software developed at Berlin Institute of Technology by the author, Thilo R\"orig, and others. It is supported by DFG \mbox{SFB/TRR}~109 Discretization in Geometry and Dynamics. It is designed to be an extensible and modular tool for experiments with discrete surfaces in pure mathematics and applications in industrial geometry. The purpose of this chapter is to enable the reader to reproduce the results presented in Part~\ref{part:applications} of this work.
+In this chapter we introduce the {\sc Java} software {\sc VaryLab}. 
+It is a software developed at Berlin Institute of Technology by the author, Thilo R\"orig, and others. 
+The software has been developed in the Projects A01 "Discrete Riemann Surfaces" and A08 "Discrete Geometric Structures Motivated by Applications in Architecture" of the SFB Transregio 109 - Discretization in Geometry and Dynamics~\cite{sfb-webpage}.
+It is designed to be an extensible and modular tool for experiments with discrete surfaces in pure mathematics and applications in industrial geometry. 
+The purpose of this chapter is to enable the reader to reproduce the results presented in Part~\ref{part:applications} of this work.
 
-We start with a general description of {\sc VaryLab} and its features in Section~\ref{sec:general_varylab}. Section~\ref{sec:ui_varylab} introduces the user interface which is based on {\sc JRWorkspace}, see Chapter~\ref{chp:jrworkspace}. Section~\ref{sec:periodic_varylab}, gives details on the use of {\sc VaryLab} when calculating the examples of Chapter~\ref{chp:periodic_conformal_maps}. Section~\ref{sec:quasiisothermic_varylab} explains the steps needed to reproduce results presented in Chapter~ref{chp:quasiisothermic}. Finally, in Section~\ref{sec:gridshells_varylab} we present the capabilities of {\sc VaryLab} when calculating gridshell nets as explained in Chapter~\ref{chp:gridshells}.
+We start with a general description of {\sc VaryLab} and its features in Section~\ref{sec:general_varylab}. Section~\ref{sec:ui_varylab} introduces the user interface which is based on {\sc JRWorkspace}, see Chapter~\ref{chp:jrworkspace}. Section~\ref{sec:periodic_varylab}, gives details on the use of {\sc VaryLab} when calculating the examples of Chapter~\ref{chp:periodic_conformal_maps}. Section~\ref{sec:quasiisothermic_varylab} explains the steps needed to reproduce results presented in Chapter~\ref{chp:quasiisothermic}. Finally, in Section~\ref{sec:gridshells_varylab} we present the capabilities of {\sc VaryLab} when calculating gridshell nets as explained in Chapter~\ref{chp:gridshells}.
 
 In this chapter words in [Brackets] describe ui elements.
 
@@ -54,7 +58,7 @@ for optimization.
 
 {\sc VaryLab} implements a number of energy functionals.
 
-\begin{itemize}
+\begin{compactitem}[$\bullet$]
 \item \emph{Circular Quadrilaterals Energy} - Defines an energy functional which is minimal for planar circular quads. Since we are using an angle criterion, the convergence to planarity is relatively slow. If the planar quads energy is added to the optimization, the geometry converges more quickly.
 \item \emph{Conical Quadrilaterals Energy} - This energy implements an angle criterion for conical meshes. So in combination with planarity it optimizes a mesh to have the property, that faces adjacent to one node are tangent to a cone of revolution.
 \item \emph{Cotangent Dirichlet Energy} - Dirichlet energy for the three coordinate functions of vertices of a triangle mesh. Edge weights are defined as $\omega_\mathit{ij}=\frac{1}{2}(\cot\alpha_\mathit{ij}+\cot\alpha_\mathit{ji})$ where $\alpha_\mathit{ij}$ and $\alpha_\mathit{ji}$ are the angles opposite of the edge $e_\mathit{ij}$.
@@ -68,7 +72,7 @@ for optimization.
 \item \emph{Planar Vertex Stars} - This energy is dual to the planar faces energy. It computes the volume spanned by a node and its neighbors. Minimization yields meshes such that each node lies in a plane with its neighbors. If used together with face planarity the initial mesh is mapped to a plane.
 \item \emph{Reference Mesh} - Given a reference mesh we compute the closest point to a node and add a spring force between each node and its projection. The projection point is recomputed in each step of the optimization. If combined with other energies it keeps the optimized mesh close to a reference mesh.
 \item \emph{Spring Energy} - The spring energy is computed by adding springs to all the edges of the mesh. These springs can have user specified target lengths and strengths that can be specified by various options.
-\end{itemize}
+\end{compactitem}
 
 \section{Geometry processing}
 
@@ -82,12 +86,12 @@ The geometry processing core of {\sc VaryLab} is based on {\sc HalfEdge} and {\s
     \end{center}
 \end{figure}
 
-\begin{itemize}
+\begin{compactitem}[$\bullet$]
 \item Mesh Generators - Regular Planar Meshes, Convex Hull, Primitive Meshes such as cube, cylinder, sphere, etc.
 \item Mesh Editing - Vertex/Edge/Face operations based on user selection.
 \item Subdivision - Catmull-Clark, Doo-Sabin, Loop, Sqrt3, etc.
 \item Remeshing - Quadrilaterals, Triangles, Singularities.
-\end{itemize}
+\end{compactitem}
 
 All tools are available via the tools tool bar at the top of the main window, see Figure~\ref{fig:varylab_main_ui} and~\ref{fig:varylab_tools_ui}.
 

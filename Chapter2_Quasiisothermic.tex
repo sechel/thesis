@@ -7,7 +7,6 @@
 This chapter is joint work with Thilo R{\"o}rig and Alexander Bobenko.
 Most of the material presented here was published previously in the proceedings of the conference "Advances in Architectural Geometry 2012"~\cite{Sechelmann2012}. We added Section~\ref{sub:isometric} on isometric deformations of s-isothermic surfaces and Section~\ref{sec:discrete_ellipsoid} about a discrete ellipsoid.
 
-\emph{Abstract:} 
 In architecture the quality of a quad-mesh depends on the shape of the individual
 quadrilaterals. The ideal shape from an architectural point of view is the
 planar square or rectangles with fixed aspect ratio. A parameterization that divides a
@@ -691,7 +690,7 @@ We introduce consistent signs on edges on a discrete s-isothermic surface such
 that opposite sides of the quads have the same sign and consecutive edges in a
 quad have different signs. The dual mesh of a mesh $M$ will have parallel edges
 calculated as follows: Let $e_{ij}=v_j-v_i$ be an edge vector of~$M$. Then the
-dual edge vector $e_{ij}^*$ satisfies the following equation:
+dual edge vector $e_{ij}^*$ is defined as
 \[e_{ij}^* = \pm \frac{1}{r_i \cdot r_j} e_{ij}\]
 where $r_i$ and $r_j$ are the distances from the vertex $v_i$ and $v_j$ to the
 touching point of the incircles of incident faces at the edge~$e_{ij}$. For a

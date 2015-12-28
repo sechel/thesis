@@ -25,12 +25,12 @@ Rechts: Uniformisierung einer hyperelliptischen algebraischen Kurve mit einem re
 \label{fig:intro_uniformizations} 
 \end{figure}
 
-The notion of discrete conformal equivalence of triangle meshes was introduced by Springborn {\it et al.}~\cite{Springborn2008} and extended to hyperbolic metrics by Bobenko {\it et al.}~\cite{BPS2015:dconf}. 
+The notion of discrete conformal equivalence of triangle meshes was introduced by Luo~\cite{Luo2004:Yamabe} and elaborated in detail by Springborn {\it et al.}~\cite{Springborn2008} and Bobenko {\it et al.}~\cite{BPS2015:dconf}. 
 Two combinatorially equivalent euclidean triangle meshes are conformally equivalent if there exist scale factors associated to vertices such that corresponding edge lengths are equal up to multiplication with adjacent scale factors.
 The problem of finding a discrete conformal map from a triangulated surface to the plane is formulated in terms of a variational principle using scale factors as variables.
 
 Whereas the theoretical foundations of discrete conformal mappings via discrete conformal equivalence were arranged in previous work, this thesis focuses on the experimental side of the theory. 
-In the spirit of discrete differential geometry we look at theorems and constructions from the geometry of Riemann surfaces, e.g., embedded surfaces and their conformal structure, and find analogous discrete constructions with similar properties.
+In the spirit of discrete differential geometry we look at theorems and constructions from the geometry of Riemann surfaces and find analogous discrete constructions with similar properties.
 We investigate the generalization to cyclic polyhedral surfaces, which was only touched upon in previous work.
 We also give details on the spherical version of the theory that was put aside previously.
 
@@ -72,7 +72,7 @@ We investigate how different boundary conditions affect the local behavior of th
 The resulting map is used to create new meshes with regular faces such as hexagons.
 We show how these meshes can be optimized towards a facade panel layout that can be fabricated in an efficient manner, see Figure~\ref{fig:intro_applications} left.
 
-In Chapter~\ref{chp:quasiisothermic} we exploit the fact that isothermic surfaces possess a unique conformal curvature line parametrization to create meshes with planar quadrilaterals and touching incircles. 
+In Chapter~\ref{chp:quasiisothermic} we exploit the fact that isothermic surfaces possess a conformal curvature line parametrization to create meshes with planar quadrilaterals and touching incircles. 
 This problem is formulated as a boundary value problem of discrete conformal maps.
 As a result we obtain circle pattern representations of surfaces relevant in the architectural context, see Figure~\ref{fig:intro_applications} right.
 
@@ -89,7 +89,7 @@ Additionally we include the current state of the source code of the programming 
 The organization of the data is presented in the appendix.
 
 \section*{Deutsche \"{U}bersetzung}
-Diskret konforme \"{A}quivalenz von Dreiecksnetzen wurde von Springborn {\it et al.}~\cite{Springborn2008} behandelt und von Bobenko {\it et al.}~\cite{BPS2015:dconf} auf hyperbolische Metriken erweitert.
+Diskret konforme \"{A}quivalenz von Dreiecksnetzen wurde von Luo eingef{\"u}hrt~\cite{Luo2004:Yamabe} und von Springborn {\it et al.}~\cite{Springborn2008} sowie Bobenko {\it et al.}~\cite{BPS2015:dconf} ausf{\"u}hrlich behandelt.
 Zwei euklidische Triangulierungen mit gleicher Konnektivit\"{a}t sind diskret konform \"{a}quivalent, wenn es  Faktoren pro Ecke gibt, so dass entsprechende Kanten bis auf Multiplikation mit den Faktoren die gleiche L\"{a}nge haben.
 Die konforme Abbildung von triangulierten Fl\"{a}chen auf ebene Gebiete ist mit Hilfe eines Variationsprinzips auf den Skalierungsfaktoren formuliert.
 
@@ -113,7 +113,7 @@ Wir untersuchen, wie Randbedingungen das lokale Verhalten der Abbildungen beeinf
 Am Ende verwenden wir diese Abbildungen, um die Geometrie von regul\"{a}ren Paneelen, zum Beispiel Sechsecken, zu bestimmen. 
 Wir beschreiben, wie diese Netze weiter optimiert werden um Paneele effizient produzieren zu k\"{o}nnen, siehe auch Abbildung~\ref{fig:intro_applications} links.
 
-In Kapitel~\ref{chp:quasiisothermic} nutzen wir die Tatsache aus, dass Isothermfl\"{a}chen eindeutig nach Kr\"{u}mmungslinien parametrisierbar sind.
+In Kapitel~\ref{chp:quasiisothermic} nutzen wir die Tatsache aus, dass Isothermfl\"{a}chen nach Kr\"{u}mmungslinien parametrisierbar sind.
 Wir berechnen s-isotherme Netze auf architektonischen Fl\"{a}chen, das sind Netze, deren ebene Facetten "sich an den Kanten ber\"{u}hrende" Kreise besitzen.
 Dieses Problem ist als Randwertproblem von diskret konformen Abbildungen formuliert.
 
