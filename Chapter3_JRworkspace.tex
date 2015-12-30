@@ -28,17 +28,17 @@ CaltechVisMath}. This knowledge enables students to extend their abilities of cr
 mathematical software, where former generations of students solely used the visualization 
 abilities of standard computer algebra packages like Mathematica or MatLab.
 
-The audience of the following chapters is two-fold. On the one hand it is students creating their 
-visualizations of surfaces and develop algorithms. On the other hand it is researchers in the
+The audience of the following chapters is two-fold. On the one hand it is students creating 
+visualizations of surfaces and developing algorithms. On the other hand it is researchers in the
 field of DDG who need a stable data structure and programming
-infrastructure to get the job done.
+infrastructure for their work.
 
 This part of the thesis is the description of a set of software packages
 written in the programming language {\sc Java}. They are 
 specifically designed for the creation of custom interactive software for experiments with algorithms and geometric objects treated within DDG. 
 Its main components {\sc JRworkspace}, {\sc HalfEdge}, and {\sc HalfEdgeTools} are part of the collection of mathematical software libraries {\sc Jtem}~\cite{JtemWebsite}.
 They are currently being used for research projects within the geometry group as well as for teaching mathematical visualization courses at TU-Berlin \cite{VisMathHomepage}.
-Representing the core of {\sc VaryLab} they are being deployed to users from the field of architectural geometry via the online version {\sc VaryLab}~\cite{varylab-web-page}.
+Representing the core of {\sc VaryLab}, they are being deployed to users from the field of architectural geometry via the online version of {\sc VaryLab}~\cite{varylab-web-page}.
 
 %Section~\ref{sec:related_work} gives an overview of existing software packages that have a focus similar to the DDG Framework. 
 Chapter~\ref{chp:jrworkspace} introduces the {\sc JRworkspace} library of the 
@@ -55,9 +55,9 @@ methods described in Chapters~\ref{chp:periodic_conformal_maps}, \ref{chp:quasii
 The chapters about {\sc ConformalLab} and {\sc VaryLab} should enable the reader to use the  software to reproduce the results presented in the respective chapters of this work.
 
 Figure~\ref{fig:software_architecture} visualizes the dependencies of the different software packages.
-Every package depends on {\sc JRworkspace} that implements plug-in functionality. 
+Every package depends on the plug-in functionality implemented in {\sc JRworkspace}. 
 It is the basis of the {\sc Jreality} plug-in system. 
-{\sc Half\-Edge\-Tools} is using {\sc Jreality} for visualization and is build on top of the {\sc Jtem} project {\sc Half\-Edge}. 
+{\sc Half\-Edge\-Tools} uses {\sc Jreality} for visualization and is built on top of the {\sc Jtem} project {\sc Half\-Edge}. 
 {\sc ConformalLab} and {\sc VaryLab} use {\sc Jpetsc/Jtao} to perform numerical
 optimization. Their algorithms are implemented as {\sc JRworkspace} plug-ins.
 
@@ -101,14 +101,14 @@ applications described in this work.
 \section{Plug-ins and the controller}
 \label{sec:plugins}
 
-In a {\sc JRworkspace} application a feature is implemented as plug-in and the corresponding Java class 
+In a {\sc JRworkspace} application a feature is implemented as a plug-in and the corresponding Java class 
 extends the abstract class Plugin
 (Listing~\ref{lst:plugin_base}). The idea is that a plug-in can be installed by the controller 
-calling its {\tt install} method or uninstalled via the {\tt uninstall} method. You can think of it 
-as a feature added to your program. In particular there is no more than one instance of a
+calling its {\tt install} method or uninstalled via the {\tt uninstall} method. It can be thought of 
+as a feature added to the program. In particular, there is no more than one instance of a
 plug-in class in a {\sc JRworkspace} application.
 
-A plug-in has a life-cycle during the runtime of the program which includes these basic
+A plug-in has a life-cycle during the runtime of the program that includes these basic
 steps:
 \begin{center}
 \begin{tabular}{r|r|l}
@@ -123,9 +123,9 @@ steps:
 Step 1 instantiates a plugin and initializes its default properties. In step 2 the controller 
 calls the {\tt restoreStates} method. Step 3 is the actual installation of the plug-in. 
 During runtime
-of the application the plug-in can interact with possible user interface it created during 
+of the application the plug-in can interact with a potential user interface created during 
 installation or offer services to other plug-ins. 
-Before program termination or before uninstall the {\tt storeStates} method is called. The plug-in
+Before program termination or before uninstall, the {\tt storeStates} method is called. The plug-in
 is supposed to store its state values by calling the {\tt storeProperty}
 method of the controller.
 Inter-plug-in-communication is done via the {\tt getPlugin} method of the controller. 
@@ -135,7 +135,7 @@ result can be stored by the {\tt install} method for later reference, see for ex
 Listing~\ref{lst:sample_plugin}. Step 6 {\tt uninstall} is only used with dynamic plug-ins that support 
 this operation. An implementation of {\tt Controller} may not support uninstallation of plug-ins.
 
-We describe the basic API usage from a programmers point of view by giving an example plug-in
+We describe the basic API usage from a programmer's point of view by giving an example plug-in
 in Listing~\ref{lst:sample_plugin} and the source code of the three basic API classes 
 {\tt Plugin}, {\tt Controller}, and {\tt PluginInfo} in Listings~\ref{lst:plugin_base}, 
 \ref{lst:controller_interface}, and \ref{lst:plugin_info}.
@@ -146,9 +146,9 @@ A simple plug-in class. It depends on a plug-in called {\tt DependentPlugin}
 and has the property {\tt doubleState}. It provides the method {\tt helloPlugin()} that 
 prints some message. In the {\tt storeStates} method the value of {\tt doubleState} is
 written to the controller. The class {\tt MyPlugin} is used as context class. The name of 
-this class is used as name space to avoid property name ambiguities. The value of {\tt doubleState}
+this class is used as a namespace to avoid property name ambiguities. The value of {\tt doubleState}
 is read from the controller in the {\tt restoreStates} method using the same context class and
-property name as in {\tt storeStates}. If there is no value with the given context and name
+property name as in {\tt storeStates}. If there is no value with the given context and name,
 the default value {\tt 1.0} is returned by the {\tt getProperty} method. 
 	},
 	label=lst:sample_plugin,
@@ -170,13 +170,13 @@ It is not supported to have multiple instances of the same plug-in class install
 \lstinputlisting[
 	caption={
 The {\tt Controller} interface. A plug-in can obtain other plug-in instances by calling 
-{\tt getPlugin} which returns a unique instance of the given plug-in class. The semantics
+{\tt getPlugin}, which returns the unique instance of the given plug-in class. The semantics
 of the {\tt getPlugins} methods is different. It returns all plug-ins that are already known 
 to the controller so no new dependencies are created by calling {\tt getPlugins}. Property
 handling is done via the {\tt xxProperty} methods. Note that any {\tt Object} can be used
 as property value. This requires the controller to use generic serialization to store data. It is 
-strongly discouraged to use other classes than official java API classes as stored values as 
-deserialization may fail if class geometry changes. 
+strongly discouraged to use other classes than official java API classes as stored values, as 
+deserialization may fail if the class geometry changes. 
 	},
 	label=lst:controller_interface,
 	captionpos=b,
@@ -187,7 +187,7 @@ deserialization may fail if class geometry changes.
 	caption={
 The plug-in meta data class (excerpt). Instances are returned by the {\tt getPluginInfo}
 method of any plug-in. The value of the {\tt name} field is a plaintext name that could be 
-shown in a user interface as well are the {\tt vendorName} and {\tt email} information. An optional 
+shown in a user interface, as well as the {\tt vendorName} and {\tt email} information. An optional 
 {\tt icon} and a {\tt documentationURL} can be given. The flag {\tt isDynamic} is evaluated
 by controller implementations that support deinstallation of plug-ins. A dynamic plug-in can
 be installed or uninstalled during application runtime. A non-dynamic plug-in must be installed
@@ -200,7 +200,7 @@ a default {\tt PluginInfo} instance for the given plug-in class.
 %	lastline=15
 ] {java/de/jtem/jrworkspace/plugin/PluginInfo.java}
 
-In the next section we describe an implementation of this API.
+%In the next section we describe a reference implementation of this API.
 
 \section{Reference implementation}
 \label{sec:reference_implementation}
@@ -212,7 +212,7 @@ and did not change as the features evolved from simple into quite complex.
 modular applications based on the {\sc JRworkspace} API. It defines various plug-in flavors
 that define user interface features. The implementation does not support dynamic plug-ins.
 
-In the remainder of this section I describe the basic and most interesting features of this 
+In the remainder of this section we describe the basic and most interesting features of this 
 implementation. For a complete API reference see the documentation on the {\sc Jtem} website 
 \cite{JtemWebsite}.
 
@@ -220,7 +220,7 @@ implementation. For a complete API reference see the documentation on the {\sc J
 {\bf Perspective Flavor}
 
 A plug-in implementing the interface {\tt PerspectiveFlavor} provides the base for a program's user 
-interface. It implements the method {\tt getCenterComponent} that returns a AWT {\tt Component}
+interface. It implements the method {\tt getCenterComponent} that returns an AWT {\tt Component}
 that is placed in the main frame of the application. The main program window itself is created and
 managed by the controller.
 A reference implementation of this flavor is the {\tt SideContainerPerspective}. It layouts its content 
@@ -275,8 +275,8 @@ Listing~\ref{lst:menu_aggregator} and Figure~\ref{fig:menu_aggregator}.
 
 Plug-ins implementing this flavor interface create a {\sc Java Swing\TReg} tool bar at the top of the 
 main window. There can be more than one plug-in implementing this interface to create multiple 
-tool bars. The API method signatures a similar to the signatures of the menu aggregator flavor. As 
-a tool bar does not have a hierarchy, there is no path parameter. The signature of a API method is, e.g.,
+tool bars. The API method signatures are similar to the signatures of the menu aggregator flavor. As 
+a tool bar does not have a hierarchy, there is no path parameter. The signature of an API method is, e.g.,
 
 \begin{lstlisting}[numbers=none]
 	public void addAction(Class<?> context, double priority, Action a).
@@ -318,8 +318,8 @@ is shown in Figure~\ref{fig:side_containers}.},
 
 We set the look and feel to be the system look and feel, in this case the Mac OS style. Then we create a
 {\tt SimpleController} and set the {\tt magageLookAndFeel} property to {\tt false}. Plug-in properties are saved
-to a file called {\tt MyApp.xml}. There are two property modes defined by the {\tt SimpleController}, {\tt StaticPropertiesFile}
-and {\tt UserPropertiesFile}. In static mode there is only one file location. In user mode the predefined location can
+to a file called {\tt MyApp.xml}. There are two property modes defined by the {\tt SimpleController}: {\tt StaticPropertiesFile}
+and {\tt UserPropertiesFile}. In static mode, there is only one file location. In user mode, the predefined location can
 be altered by the user of the program. This user decision is then stored as a {\sc Java} preference. In this example 
 we use the static properties.
 
@@ -330,8 +330,8 @@ we use the static properties.
 \centering
 \includegraphics[width=0.9\textwidth]{jrworkspace/jreality_hires.pdf}
 \caption[The {\sc Jreality} user interface.]{The {\sc Jreality} user interface. A {\tt SideContainerPerspective} 
-and {\tt ShrinkPanels} is used. The tool bar and 
-menu bar is created by the aggregators described in Section~\ref{sec:reference_implementation}. This application
+with {\tt ShrinkPanel}s is used. The tool bar and 
+menu bar are created by the aggregators described in Section~\ref{sec:reference_implementation}. This application
 uses a set of predefined user interface features and virtual reality components. In a custom application the developer 
 usually registers only a subset of these features.}
 \label{fig:jrworkspace_jreality}
@@ -343,9 +343,9 @@ implementation.
 A custom {\sc Jreality} application can be based on the central {\tt JRViewer} class. 
 This class uses {\tt SimpleController} to manage
 plug-in registration and start-up. 
-The design of the {\tt JRViewer} application make intensive use of the plug-in concept.
-The architecture of the application is divided into separate modules which in turn are realized as plug-ins.
-The core functionality is provided by plug-ins implementing the the content, the scene, the view, and the tool system.
+The design of the {\tt JRViewer} application makes intensive use of the plug-in concept.
+The architecture of the application is divided into separate modules, which in turn are realized as plug-ins.
+The core functionality is provided by plug-ins implementing the content, the scene, the view, and the tool system.
 Then there are plug-ins providing the tool bar and menu bar as well as the overall layout of shrink panels as described above.
 
 
