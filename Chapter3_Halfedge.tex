@@ -12,7 +12,7 @@ other contributers to the {\sc Jtem} project.
 
 This implementation of a half-edge data structure was inspired by an implementation 
 contained in the {\sc Cgal} library \cite{Kettner2000}.
-This specific implementation is however different from existing libraries as is uses the generic
+This specific implementation, however, differs from existing libraries, as it uses the generic
 programming concept of {\sc Java} to achieve compatibility and flexibility.
 
 The code presented in this section is compatible with {\sc Java} version 1.7 or later.
@@ -31,12 +31,12 @@ Thus, a cell decomposition decomposes a surface into vertices, edges, and faces.
 
 {\bf Regular and strongly regular}
 
-A cell decomposition of a surface is called regular, if it has no loops (edges with the same vertex 
-on both ends), and if the boundary of a face contains an edge or vertex at most once. It is called 
+A cell decomposition of a surface is called regular if it has no loops (edges with the same vertex 
+on both ends) and if the boundary of a face contains an edge or vertex at most once. It is called 
 strongly regular if two edges have at most one vertex in common, and if two faces have at most 
 one edge or one vertex in common. A strongly regular cell decomposition is usually called a mesh.
 
-{\bf This half-edge data structure implementation}
+%{\bf Half-edges in this implementation}
 
 This half-edge data structure implementation consists of different types of objects representing 
 vertices, half-edges, and faces. The term half-edge can and should be thought of as synonymous
@@ -44,19 +44,19 @@ with oriented edge or directed edge.
 
 Every half-edge object holds references to:
 
-\begin{itemize}
-\item its oppositely oriented companion edge
-\item the next edge in the boundary of the face on its left hand side
-\item the previous edge in the boundary of the face on its left hand side
-\item the face on its left hand side
+\begin{compactitem}[$\bullet$]
+\item its oppositely-oriented companion edge
+\item the next edge in the boundary of the face on its left-hand side
+\item the previous edge in the boundary of the face on its left-hand side
+\item the face on its left-hand side
 \item the vertex it points to.
-\end{itemize}
+\end{compactitem}
 
 The face and vertex objects hold back references to a half-edge referencing them. Finally, there 
 is the class {\tt de.jtem.halfedge.HalfEdgeDataStructure} representing a whole half-edge data 
 structure. It acts as a container for (and sort of factory of) its vertices, half-edges, and faces.
 
-{\bf Use of Generics}
+{\bf Use of generics}
 
 Typically, one wants to equip vertices, edges, and faces with additional properties or functionality. 
 For example, vertices may have coordinates associated with them, edges may have weights, and 
@@ -70,7 +70,7 @@ vertex, edge, and face types: The classes {\tt de.jtem.halfedge.Vertex}, {\tt de
 
 To create a half-edge data structure with vertices that have 2D coordinates, proceed as follows.
 
-\begin{itemize}
+\begin{compactitem}[$\bullet$]
 \item{Step 1.} 
 Define appropriate subclasses of {\tt de.jtem.half\-edge.Vertex}, {\tt de.jtem.half\-edge.Edge}, and 
 {\tt de.jtem.halfedge.Face}, for example:
@@ -83,9 +83,9 @@ public class MyEdge extends Edge<MyVertex, MyEdge, MyFace> { }
 public class MyFace extends Face<MyVertex, MyEdge, MyFace> { }
 \end{lstlisting}
 
-Of course you might make the property {\tt p} of {\tt MyEdge} private and provide getter and setter 
-methods, etc. Note that you always have to subclass {\tt de.jtem.half\-edge.Vertex}, 
-{\tt de.jtem.half\-edge.Edge}, and {\tt de.jtem.half\-edge.Face}, even if you do not define any 
+Of course one might make the property {\tt p} of {\tt MyEdge} private and provide getter and setter 
+methods, etc. Note that one always has to subclass {\tt de.jtem.half\-edge.Vertex}, 
+{\tt de.jtem.half\-edge.Edge}, and {\tt de.jtem.half\-edge.Face}, even if there is no 
 additional functionality or properties.
 
 \item{Step 2.} 
@@ -95,8 +95,8 @@ Instantiate a {\tt de.jtem.halfedge.HalfEdgeDataStructure}:
 HalfEdgeDataStructure<MyVertex, MyEdge, MyFace> heds = new HalfEdgeDataStructure<>(MyVertex.class, MyEdge.class, MyFace.class);
 \end{lstlisting}
 
-The parameters of the constructor serve as run time type tokens. Alternatively you can create a subclass
-of {\tt de.jtem.halfedge.HalfEdgeDataStructure} and create an instance of this:
+The parameters of the constructor serve as run-time type tokens. Alternatively one can create a subclass
+of {\tt de.jtem.halfedge.HalfEdgeDataStructure} and in turn create an instance of this:
 
 \begin{lstlisting}[numbers=none]
 public class MyHDS extends HalfEdgeDataStructure<MyVertex, MyEdge, MyFace> {
@@ -118,27 +118,27 @@ MyEdge e = heds.addNewEdge();
 MyFace f = heds.addNewFace();
 \end{lstlisting}
 
-\end{itemize}
+\end{compactitem}
 
 {\bf Linkage and incidence.}
 
 Node classes provide methods to create a valid data structure. Most of the methods are bidirectional linkage methods that affect the target and the caller. The corresponding methods are:
-\begin{itemize}
+\begin{compactitem}[$\bullet$]
 \item {\tt E.linkNextEdge} sets the {\tt nextEdge} property of this edge as well as the 
 {\tt previousEdge} property of the given edge.
 \item {\tt E.linkOppositeEdge} sets the {\tt oppositeEdge} property of this edge and of the given edge accordingly.
 \item {\tt E.linkPreviousEdge} sets {\tt previousEdge} and {\tt nextEdge} properties of this and the given edge.
 \item {\tt E.setLeftFace} sets the {\tt leftFace} property of this edge and the {\tt boundaryEdge} property of the given face.
 \item {\tt E.setTargetVertex} sets the {\tt targetVertex} property of this edge and the 
-{\tt incommingEdge} property of the given vertex.
-\end{itemize}
+{\tt incomingEdge} property of the given vertex.
+\end{compactitem}
 
 {\bf Node indices.}
 
 During algorithm development it is often necessary to access consistent indices on vertices,
 half-edges, or faces. We support this operation by the {\tt index} field of nodes accessible via
 the {\tt getIndex()} method of all node types. Nodes are required to have indices $0,\ldots,\#V$,
-$0,\ldots,\#E$, and $0,\ldots,\#F$ respectively. Note that $\#E$ is the number of half-edges
+$0,\ldots,\#E$, and $0,\ldots,\#F$, respectively. Note that $\#E$ is the number of half-edges
 in the data structure. The running time of a {\tt getIndex} operation is $\mathcal{O}(1)$ if
 no {\tt remove} operation has invalidated the indices. Otherwise it is $\mathcal{O}(n)$ where
 $n$ is the number of nodes in the data structure, e.g., $n=\#V$.
@@ -156,19 +156,19 @@ Nodes in the data structure can be iterated over using one of the methods {\tt g
 A half-edge has the {\tt positive} property. In a pair of opposite edges it is required that the boolean
 value of this property is different, i.e., \url{e.isPositive()} $!=$ \url{e.getOppositeEdge().isPositive()}.
 Using this property it is possible to iterate over undirected edges, i.e., the positive or the negative
-half-edges. The methods {\tt getPositiveEdges} and {\tt getNegativeEdge} of the data structure 
+half-edges. The methods {\tt getPositiveEdges} and {\tt getNegativeEdges} of the data structure 
 implement this.
 
 {\bf Removing nodes from a data structure.}
 
 A node can be deleted from the data structure using the {\tt removeVertex/Edge/Face} methods.
 The running time of a remove operation is always $\mathcal{O}(1)$. Node indices however will
-get invalidated and reindexed on the next access of any index related operation that in turn will
+get invalidated and reindexed on the next access of any index-related operation that in turn will
 then have running time $\mathcal{O}(n)$.
 
 {\bf Half-Edge utilities.}
 
-To work efficiently with half-edge data a set of algorithms is implemented as static utility methods
+To work efficiently with half-edge data, a set of algorithms is implemented as static utility methods
 in the class {\tt de.jtem.half\-edge.util.Half\-Edge\-Utils}. It contains methods that help iterating 
 over incoming edges at a vertex, or iterating over the boundary edges of a surface or a face, and many more.
 
@@ -179,7 +179,7 @@ A set of algorithms and tools is implemented in the {\sc Jtem} project {\sc Half
 \cite{JtemWebsite}. 
 
 Many algorithms in the library are purely combinatorial. This means there is no extra data 
-involved during algorithm execution. Thus such an algorithm is generic by definition. The
+involved during algorithm execution. Such an algorithm is thus generic by definition. The
 method signature could look like this:
 
 \begin{lstlisting}
@@ -205,8 +205,8 @@ for (V v : hds.getVertices()) {
 }
 \end{lstlisting}
 
-On the other hand when designing a generic algorithm that needs certain data associated
-with nodes we have basically two options. Option 1. requires the generic node classes to
+On the other hand, when designing a generic algorithm that needs certain data associated
+with nodes, we have basically two options. Option 1 requires the generic node classes to
 implement the required interfaces:
 
 \begin{lstlisting}
@@ -224,7 +224,7 @@ public static <
 This forces the Vertex implementations that use this algorithm to implement an interface
 called {\tt HasCoordinate3D}. It leads to explicit and clean code of the algorithm. A drawback of this
 is that an existing implementation that should use this algorithm has to be adapted to implement the 
-possibly many interfaces required by the algorithm. 
+potentially many interfaces required by the algorithm. 
 This is not a feasible solution when is comes to a modular application where algorithms come as 
 plug-ins without the chance to change the data structure.
 
@@ -235,8 +235,8 @@ de.jtem.\-halfedge\-tools.adapter}. An adapter defines a map from nodes to a dat
 by the adapter. We first show how this concept works when designing algorithms and then
 describe the implementation of the required adapters. 
 
-In this next example we calculate the discrete Dirichlet energy of a double valued function with 
-double valued weights on edges. 
+In this next example we calculate the discrete Dirichlet energy of a double-valued function with 
+double-valued weights on edges. 
 
 \lstinputlisting[
 	caption={Algorithm that uses data from the {\tt AdapterSet}. The {\tt get} method of the
@@ -262,38 +262,38 @@ The classes {\tt FunctionValue} and {\tt Weight} are runtime annotation classes,
 public @interface FunctionValue {}
 \end{lstlisting}
 
-An adapter class annotated with this annotation serves as {\tt @FunctionaValue} data adapter when 
+An adapter class annotated with this annotation serves as {\tt @FunctionValue} data adapter when 
 called for as in Line 11-13 of Listing~\ref{alg:dirichlet}. The meaning of adapter annotations is 
-an agreement between the algorithm using it and the implementor of the adapter. It is subject
-of a best-practice policy to implement the adapters such that they output data that fit its 
+an agreement between the algorithm using it and the implementor of the adapter. It is 
+best-practice to implement the adapters such that they output data that fits their 
 annotation names.
 
-There are three basic classes that could serve as base class of an adapter. It is
+There are three basic classes that could serve as the base class of an adapter: 
 
-\begin{itemize}
+\begin{compactitem}[$\bullet$]
 \item {\tt Adapter} - The abstract base class of all adapters. Should never be subclassed directly.
-\item {\tt AbstractAdapter} - A adapter class that knows about the supported data type and implements
+\item {\tt AbstractAdapter} - An adapter class that knows about the supported data type and implements
 all getter and setter methods. Here only the needed methods can be overwritten. Node type checking
-is done manually thus allows for the creation of generic adapters.
-\item {\tt AbstractTypedAdpter} - If you know which half edge node classes the adapter is supposed to
-work with this is the adapter base class you should use. Node type checking and casting is done in the
+is done manually and thus allows for the creation of generic adapters.
+\item {\tt AbstractTypedAdapter} - If one knows which half-edge node classes the adapter is supposed to
+work with this is the adapter base class one should use. Node type checking and casting is done in the
 super class.
-\end{itemize}
+\end{compactitem}
 
 An adapter implementation using the {\tt AbstractAdapter} is for instance:
 
 \lstinputlisting[
 	caption={
 		Adapter implementation using the {\tt AbstractAdapter} as base class and a 
-		map as storage concept for double values on generic vertices. It is annotated 
+		map as storage concept for {\tt Double} values on generic vertices. It is annotated 
 		with a {\tt @FunctionValue} annotation to serve as
 		provider for data in the {\tt AdapterSet} (Line 1). The super class {\tt
-		AbstractAdapter} is parameterized with the data type of the implementation; In this
+		AbstractAdapter} is parameterized with the data type of the implementation; in this
 		case {\tt Double} (Line 2). 
 		The super class constructor is invoked with the class object of this type and flags 
 		that tell the adapter
 		if get and/or set operations are permitted (Line 6). The method {\tt canAccept}
-		decides whether the adapter can work with the given node class; In this case the 
+		decides whether the adapter can work with the given node class; in this case the 
 		adapter can accept any {\tt Vertex} object (Line 12). 
 		Vertex getter and setter methods are generic methods (Line 16 to 32). 
 	},
@@ -307,7 +307,7 @@ When writing the adapter for concrete node classes we have a more concise descri
 
 \lstinputlisting[
 	caption={
-		An adapter using {\tt AbstractTypedAdpter} as base class. Also annotated with the {\tt
+		An adapter using {\tt AbstractTypedAdapter} as base class. Also annotated with the {\tt
 		@FunctionValue} annotation. This super class is parameterized
 		with a set of node class implementations and the adapter data type. Here the super
 		constructor takes the node class objects or {\tt null} if a node type is not supported, the
@@ -327,9 +327,9 @@ required data adapters and the creation of a suitable {\tt AdapterSet}.
 
 \lstinputlisting[
 	caption={Usage example of the algorithm presented in Listing~\ref{alg:dirichlet}. In this example 
-	an empty data structure is created, filled with a dodecahedron combinatorics, and then processed by the 	
+	an empty data structure is created, filled with dodecahedron combinatorics, and then processed by the 	
 	algorithm. The {\tt AdapterSet} contains the {\tt @FunctionValue} annotated adapter to provide 
-	{\tt Double} values on vertices. In this example a {\tt @Weight} adapter in not needed since the 
+	{\tt Double} values on vertices. In this example a {\tt @Weight} adapter is not needed, since the 
 	{\tt computeDirichlet} algorithm uses the {\tt getDefault} method to obtain weight data for edges.},
 	label=alg:dirichlet_usage,
 	captionpos=b,
@@ -337,7 +337,7 @@ required data adapters and the creation of a suitable {\tt AdapterSet}.
 	lastline=40
 ]{java/de/sechel/thesis/MyUtility.java}
 
-{\bf Generic Adapters}
+{\bf Generic adapters}
 
 There is a set of generic adapters implemented in the package 
 {\tt de.jtem.half\-edge\-tools.adap\-ter.generic}. Here generic means that the adapter does not provide
@@ -345,14 +345,12 @@ the data itself. Instead it asks for other adapters to provide data and converts
 output based on the data acquired from other adapter implementations.
 
 The most important example of pre-defined generic adapters are position and texture position adapters.
-These adapters come in three versions, e.g., {\tt @Position2D}, {\tt @Position3D}, and {\tt @Position4D}. The implementations, e.g, {\tt de.jtem.half\-edge\-tools.adapter.generic.Position\-3dAdapter} obtain position
-data from the {\tt AdapterSet} using the adapter annotated with {\tt @Position} and convert if the lengths
-of arrays is not equal to $3$.
+These adapters come in three variants, i.e., {\tt @Position2D}, {\tt @Position3D}, and {\tt @Position4D}. The implementations, e.g, {\tt de.jtem.half\-edge\-tools.adapter.generic.Position\-3dAdapter}, obtain position
+data from the {\tt AdapterSet} using an adapter annotated with {\tt @Position} and convert the resulting 
+data arrays if their lengths is not equal to $3$. 
+As a result an algorithm using generic adapters is free of data conversion code.
 
-An algorithm using generic adapters is free of data conversion code.
-
-
-{\bf Error Handling}
+{\bf Error handling}
 
 If a data adapter that is used by an algorithm is not found, the {\tt AdapterSet} throws exceptions stating
 the name of the required annotation and the node type that is expected. 
@@ -372,12 +370,12 @@ Exception in thread "main" de.jtem.halfedgetools.adapter.AdapterException: Adapt
 \label{sec:halfedge_tools_visualization}
 
 The {\sc HalfEdgeTools} package contains utility classes for the visualization of half-edge data with 
-{\sc Jreality} \cite{JrealityWebsite}. It is part of the {\sc Jtem} project \cite{JtemWebsite}. See also Section~\ref{sec:jrworkspace_jreality} for the interplay of {\sc Jreality} and {\sc JRworkspace}.
+{\sc Jreality} \cite{JrealityWebsite}. It is part of the {\sc Jtem} project \cite{JtemWebsite}. See also Section~\ref{sec:jrworkspace_jreality} for the interaction between {\sc Jreality} and {\sc JRworkspace}.
 
 {\bf Half-edge Interface}
 
-A central role plays the plug-in {\tt de.jtem.halfedge\-tools.plugin.Halfedge\-Interface}. This plug-in works 
-as a converter between half-edge data structure and {\tt IndexedFaceSet} data structure used internally 
+The plug-in {\tt de.jtem.halfedge\-tools.plugin.Halfedge\-Interface} plays a central role. This plug-in works 
+as a converter between the half-edge data structure and the {\tt IndexedFaceSet} data structure used internally 
 by {\sc Jreality}. It creates a user interface that contains GUI elements for layer management, import, export,
 undo, redo, and more features, see Figure~\ref{fig:halfedge_interface}.
 
@@ -386,19 +384,19 @@ undo, redo, and more features, see Figure~\ref{fig:halfedge_interface}.
 	\includegraphics[width=5cm]{jrworkspace/halfedge_interface_hires.pdf}
 	\caption{The user interface created by the {\tt HalfedgeInterface} plug-in. It manages layers that
 		contain different instances of half-edge data structures and the corresponding visualizations.
-		Layers can be merged, {\tt OBJ} files can be exported and imported and visualization
+		Layers can be merged, {\tt OBJ} files can be exported and imported, and visualization
 		options can be adjusted. 
 	}
 	\label{fig:halfedge_interface}
 \end{figure}
 
 The API of the {\tt HalfedgeInterface} supports {\tt set} and {\tt get} methods that convert to and from
-{\sc Jreality}. During conversion data is read from an {\tt AdapterSet} that is managed by the half-edge
+{\sc Jreality}. During conversion, data is read from an {\tt AdapterSet} that is managed by the half-edge
 interface. The plug-in supports various data on node types. We give a list of annotation types and
 their purposes. All conversion adapters work with {\tt double[]} or {\tt double} data types. All
-supported annotation types are in the package {\tt de.jtem.halfedgetools.adapter.type}.
+supported annotation types are located in the package {\tt de.jtem.halfedgetools.adapter.type}.
 
-\begin{itemize}
+\begin{compactitem}[$\bullet$]
 \item {\tt\bf @Position} - Positions of vertices can have lengths 2, 3, or 4.
 \item {\tt\bf @Color} - Colors either on vertices, edges, or faces.
 \item {\tt\bf @Normal} - Normals usually for vertices or faces.
@@ -407,7 +405,7 @@ supported annotation types are in the package {\tt de.jtem.halfedgetools.adapter
 \item {\tt\bf @Radius} - Radii of vertex sphere representations or edge cylinders when rendered
 as spheres or tubes.
 \item {\tt\bf @Size} - Size in pixels of vertex points or edge lines when rendered as points or lines.
-\end{itemize}
+\end{compactitem}
 
 Internally the conversion is done using the classes from the package 
 {\tt de.jtem.halfedge\-tools.jreality}. Conversion from and to a {\sc Jreality} {\tt IndexedFaceSet}
@@ -416,7 +414,7 @@ is implemented in {\tt ConverterHeds2JR} and {\tt ConverterJR2Heds}.
 {\bf Visualization Interface}
 
 A second important plug-in is the {\tt Visuali\-zation\-Inter\-face}. It defines
-an plug-in API and various implementations for data visualization with the half-edge data structure. 
+a plug-in API and various implementations for data visualization with the half-edge data structure. 
 
 
 \begin{figure}
@@ -429,13 +427,13 @@ an plug-in API and various implementations for data visualization with the half-
 \end{figure}
 
 Every {\tt Adapter} that is managed by the {\tt HalfedgeInterface} is available as data source. In 
-addition to this every plug-in extending {\tt de.jtem.half\-edgetools.plugin.data.Data\-Source\-Provider} 
+addition to this, every plug-in extending {\tt de.jtem.half\-edgetools.plugin.data.Data\-Source\-Provider} 
 is asked for data adapters. A list of these data sources is displayed in the user interface, see 
 Figure~\ref{fig:visualization_interface} (top). A visualization of the selected data source is created by a
 corresponding {\tt DataVisualizer} plug-in. For scalar data on vertices, edges, or faces we provide the 
-colored beads visualizer or simply colored nodes, Figure~\ref{fig:visualizers}. There is a histogram that displays a density
-plot for scalar data on nodes, Figure~\ref{fig:visualizers} (right) and Figure~\ref{fig:visualization_interface} (bottom). For vector valued data 
-there is a visualizer that creates arrows starting at half-edge nodes.
+colored beads or colored nodes visualizer, see Figure~\ref{fig:visualizers}. There is a histogram that displays a density
+plot for scalar data on nodes, Figure~\ref{fig:visualizers} (right) and Figure~\ref{fig:visualization_interface} (bottom). 
+For vector-valued data there is a visualizer that creates arrows starting at half-edge nodes.
 
 
 \begin{figure}
