@@ -103,11 +103,10 @@ All tools are available via the tools tool bar at the top of the main window, se
 
 \begin{figure}
     \begin{center}
-    \resizebox{\textwidth}{!}{
-        \includegraphics[width=\textwidth]{varylab/edge_visualization.pdf}
-        \includegraphics[width=\textwidth]{varylab/edge_histogram.pdf}    
-    }
-    \caption{Visualization interface (left), Visualizing mesh edge length data as node colors on a surface and as histogram (right).}
+    \includegraphics[width=\textwidth]{varylab/edge_visualization.pdf}\\
+    \vspace{1mm}
+    \includegraphics[width=\textwidth]{varylab/edge_histogram.pdf}    
+    \caption{Visualization interface (top), Visualizing mesh edge length data as node colors on a surface and as histogram (bottom).}
     \label{fig:visualizing_edge_lengths}
     \end{center}
 \end{figure}
@@ -179,7 +178,7 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 \item[(1a)] For the map to the cylinder we create a conformal parameterization with straight boundary using the \emph{Discrete Conformal Parameterization} panel and \emph{Quantized Angles/Straight} boundary mode. A cut is introduced automatically to uniquely define the map.\\
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
             	\includegraphics{periodic/step00.pdf}
@@ -201,7 +200,7 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 \item[(1b)] For a polygonal map to a cone of revolution, we select boundary vertices to specify boundary angles for the domain. We use multiples of $\frac{\pi}{3}$ for triangle/hexagonal panels and multiples of $\frac{\pi}{4}$ for quadrilaterals.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
             \resizebox{0.7\textwidth}{!}{
             	\includegraphics{periodic/step01b_map.pdf}
@@ -214,7 +213,7 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 \item[(1c)] We create an isometric boundary and a map to cone of revolution using the \emph{Read Isometric Angles} boundary mode and the \emph{NoCuts} cut strategy. It creates a map to an arbitrary cone of revolution and reads off the resulting boundary angles. Those are set as new boundary conditions (red vertex selection). In a second step we choose the \emph{Quantized Angle Periods} boundary mode and the desired quantization for the final map to the pattern adapted cone of revolution.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
             	\includegraphics[width=5cm]{periodic/step01c_map.pdf}
@@ -229,37 +228,39 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 \item[(3)] Select a predefined texture for quadrilateral, triangle, or hexagonal mesh preview from the \emph{Content Appearance$\to$Texture} panel. Adjust the texture scale to a reasonable value. In the isometric case (c) we close the period with the \emph{Texture Transformation} user interface manually. For cases (a) and (b), periods will be closed automatically by the remeshing algorithm.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{0.8\linewidth}
             \centering
-            \resizebox{\linewidth}{!}{
-            	\includegraphics[width=5cm]{periodic/step03_quads.pdf}
-            	\includegraphics[width=5cm]{periodic/step03_triangles.pdf}	
-            	\includegraphics[width=1.5cm]{periodic/step03_ui.pdf}	
-            }
-            \captionof{figure}{Pattern preview.}
+            \includegraphics[width=0.7\linewidth]{periodic/step03_quads.pdf}
+            \includegraphics[width=0.7\linewidth]{periodic/step03_triangles.pdf}		
+            \captionof{figure}{Pattern preview using the \emph{Content Appearance$\to$Texture} user interface.}
+\end{minipage}
+\begin{minipage}{0.19\linewidth}
+         	\includegraphics[width=4cm]{periodic/step03_ui.pdf}
 \end{minipage}
 \end{center}    
 
 \item[(4)] Perform remeshing in cases (a) and (b) either for \emph{Boundary Aligned Triangles} or \emph{Boundary Aligned Quads} using the \emph{Surface Remeshing} panel. For non-boundary-aligned parameterization (c) we use the \emph{Quads With Singularities/Triangles With Singularities} remeshing mode.\\
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{0.75\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
             	\includegraphics[width=5cm]{periodic/step04_quads_surface.pdf}
             	\includegraphics[width=5cm]{periodic/step04_triangles_surface.pdf}	
-            	\includegraphics[width=2cm]{periodic/step04_ui.pdf}	
             }
             \includegraphics[width=\linewidth]{periodic/step04_quads_map.pdf}
             \includegraphics[width=\linewidth]{periodic/step04_triangles_map.pdf}
             \captionof{figure}{New mesh and domain.}
+\end{minipage}
+\begin{minipage}{0.24\linewidth}
+\includegraphics[width=4.5cm]{periodic/step04_ui.pdf}	
 \end{minipage}
 \end{center}    
 
 \item[(5)] We create a watertight mesh using the \emph{Watertight Mesh Generator} and remove extra edges and vertices. In the isometric case (c) we use a combination of \emph{Topology$\to$Stitch} and \emph{Topology$\to$Stitch Cut Path} to remove the cut path from the mesh.
 \item[(6)] For hexagonal mesh creation we select from the periodic triangle mesh all centers of hexagons using the \emph{Selection$\to$Lattice} command. The \emph{Remove Vertex and Fill} command then creates a periodic hexagonal mesh.
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
             	\includegraphics{periodic/step05.pdf}
@@ -277,11 +278,11 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 \item[(7)] \emph{Topology$\to$Explode} creates separate faces. We use a \emph{Mean Face Edge Length} histogram to show the density of edge lengths. If we want planar panels we should planarize them now.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
             	\includegraphics[width=5cm]{periodic/step08_surface.pdf}
-            	\includegraphics[width=5cm]{periodic/step08_histogram.pdf}		
+            	\includegraphics[width=5cm]{periodic/step08_histogram.pdf}
             }
             \captionof{figure}{Measuring panel sizes and density with the \emph{Halfedge Data Visualization} facility.}
 \end{minipage}
@@ -290,25 +291,29 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
 \item[(8)] We equalize the edge lengths per face using the \emph{Springs} Energy and \emph{F-const} option. Use the \emph{Floor} rounding method. Press \emph{Update} to set target lengths per face.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{0.7\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
             	\includegraphics[width=13cm]{periodic/step09_surface.pdf}
-            	\includegraphics[width=5cm]{periodic/step09_fconst.pdf}
             }
             \captionof{figure}{Creating regular elements with the \emph{Spring} energy.}
+\end{minipage}
+\begin{minipage}{0.29\linewidth}
+\includegraphics[width=4.5cm]{periodic/step09_fconst.pdf}
 \end{minipage}
 \end{center}
 \item[(9)] From the histogram, read off the smallest and largest edge lengths and transfer those into the \emph{Springs} energy UI. We select the \emph{discr.} option and the number of discrete steps. Optimize the surface to consist of a limited number of panel sizes.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{0.7\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
             	\includegraphics[width=13cm]{periodic/step11_surface1.pdf}
-            	\includegraphics[width=5cm]{periodic/step10_springs.pdf}
             }
             \captionof{figure}{Optimization towards a discrete set of panel sizes.}
+\end{minipage}
+\begin{minipage}{0.29\linewidth}
+\includegraphics[width=4.5cm]{periodic/step10_springs.pdf}
 \end{minipage}
 \end{center}            
 \end{compactenum}
@@ -329,7 +334,7 @@ The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. 
 \item[(3)] Calculate curvature direction estimates on boundary edges of the surface, again using the \emph{Vector Field$\to$Curvature Vector Fields} command. We check singularity indices with the \emph{Check Gau{\ss}-Bonnet} button in the \emph{Discrete Conformal Parameterization} panel. It prints the left side of the Gau{\ss}-Bonnet equation to the console. It should give $2\pi$ for a genus $0$ surface in this case.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
 %                \includegraphics[width=5cm]{quasiisothermic/step00.pdf}
@@ -345,7 +350,7 @@ The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. 
 \item[(5)] Move the texture such that singularities lie either in the middle or at a corner of a quad of the texture. Use the \emph{Texture Remeshing$\to$Transform Texture} command to transform the texture such that two selected vertices lie on $(0,0)$ and $(1,0)$ respectively. This method works for one or two singularities. We do not implement methods to distort the mapping to match more that two singularities.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
                 \includegraphics[width=5cm]{quasiisothermic/step04_surface.pdf}
@@ -360,16 +365,18 @@ The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. 
 \item[(7)] Use the \emph{Texture Remeshing$\to$TextureGeometry} command to extract a quad mesh from the subdivision mesh. Disable the layer of the original mesh as we will continue to work with the quad-mesh.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{0.75\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
-                \includegraphics[width=4cm]{quasiisothermic/step06_ui.pdf}
                 \includegraphics[width=4cm]{quasiisothermic/step06_flat_rotate.pdf}
                 \includegraphics[width=5cm]{quasiisothermic/step06_surface.pdf}
                 \includegraphics[width=5cm]{quasiisothermic/step07_surface.pdf}
             }
             \captionof{figure}{Three-step remeshing of the parameterized surface. Create a subdivided domain (second to left), lift this mesh to the surface (middle). Extract the new mesh from the subdivided (right).}
             \label{fig:three-step-remeshing}
+\end{minipage}
+\begin{minipage}{0.24\linewidth}
+\includegraphics[width=5cm]{quasiisothermic/step06_ui.pdf}
 \end{minipage}
 \end{center}                 
             
@@ -378,7 +385,7 @@ The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. 
 \item[(10)] Clean up the mesh from extra edges and vertices with the \emph{Selection$\to$Geodesic}, \emph{Edit$\to$Remove Edge And Fill}, and \emph{Texture Remeshing$\to$Collapse 1,2-Valent Vertices} commands.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
                 \includegraphics[width=3cm]{quasiisothermic/step08_selection.pdf}
@@ -407,9 +414,9 @@ In Chapter~\ref{chp:quasiisothermic}, Section~\ref{sec:s-isothermic}, we propose
 \item[(1)] Create an extended reference surface.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
-            \resizebox{0.8\linewidth}{!}{
+            \resizebox{\linewidth}{!}{
                 \includegraphics[width=3cm]{gridshells/step0_target.pdf}
                 \includegraphics[width=3cm]{gridshells/step1_extended.pdf}            
             }
@@ -420,9 +427,9 @@ In Chapter~\ref{chp:quasiisothermic}, Section~\ref{sec:s-isothermic}, we propose
 \item[(2)] Discrete conformal parameterization using isometric boundary. 
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
-            \resizebox{0.8\linewidth}{!}{
+            \resizebox{\linewidth}{!}{
                 \includegraphics[width=3cm]{gridshells/step2_0degree.pdf}
                 \includegraphics[width=3cm]{gridshells/step2_40degree.pdf} 
             }
@@ -433,9 +440,9 @@ In Chapter~\ref{chp:quasiisothermic}, Section~\ref{sec:s-isothermic}, we propose
 \item[(3)] Create a new quadrilateral mesh using the parameterization from step 2. We are free to shear the meshing pattern in the domain by an angle $\alpha$. From the \emph{Surface Remeshing} panel we choose the \emph{Quads} mode and press \emph{Remesh}. Alternatively the three-step remeshing method can be performed, see Figure~\ref{fig:three-step-remeshing}.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
-            \resizebox{0.8\linewidth}{!}{
+            \resizebox{\linewidth}{!}{
                 \includegraphics[width=3cm]{gridshells/step3_0degree.pdf}
                 \includegraphics[width=3cm]{gridshells/step3_40degree.pdf}            
             }
@@ -446,9 +453,9 @@ In Chapter~\ref{chp:quasiisothermic}, Section~\ref{sec:s-isothermic}, we propose
 \item[(4)] Remove all boundary vertices and analyze the remaining edge lengths with node colors and histogram.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
-            \resizebox{0.9\linewidth}{!}{
+            \resizebox{\linewidth}{!}{
                 \includegraphics[width=3cm]{gridshells/step4_surface.pdf}
                 \includegraphics[width=4.5cm]{gridshells/step4_hist.pdf}            
             }
@@ -459,7 +466,7 @@ In Chapter~\ref{chp:quasiisothermic}, Section~\ref{sec:s-isothermic}, we propose
 \item[(5)] Configure the optimization using the \emph{Reference Surface} energy with the surface from step 1. Add the \emph{Springs} energy with a constant edge length depending on the size of the target surface. Finally add the \emph{Opposite Edges Curvature} energy as a fairing term and to control the local curvature of curves.
 
 \begin{center}
-\begin{minipage}{0.9\linewidth}
+\begin{minipage}{\linewidth}
             \centering
             \resizebox{\linewidth}{!}{
                 \includegraphics[width=5cm]{gridshells/step5_ref.pdf}
