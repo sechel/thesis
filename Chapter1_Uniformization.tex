@@ -240,7 +240,7 @@ $\ell$, $\ellt$.
   \label{def:dconf}
   \emph{Discrete conformal equivalence} is an equivalence relation on
   the set of cyclic polyhedral surfaces defined as follows:
-  \begin{compactitem}
+  \begin{compactitem}[$\bullet$]
   \item Two \emph{euclidean} cyclic polyhedral surfaces
     $(\Sigma,\ell)_{\euc}$ and $(\Sigma,\ellt)_{\euc}$ are
     \emph{discretely conformally equivalent} if there exists a
@@ -272,7 +272,7 @@ $\ell$, $\ellt$.
   \end{compactitem}
 
 We will also consider mixed versions: 
-\begin{compactitem}
+\begin{compactitem}[$\bullet$]
 \item A euclidean cyclic polyhedral surface $(\Sigma,\ell)_{\euc}$ and a
   hyperbolic cyclic polyhedral surface $(\Sigma,\ellt)_{\hyp}$ are
   discretely conformally equivalent if
@@ -671,7 +671,7 @@ Definition~\ref{def:sigma_ell_g}.)
 \begin{problem}[prescribed angle sums]
 \label{prob:total_angles}
 \textbf{Given}
-\begin{compactitem}
+\begin{compactitem}[$\bullet$]
 %\item the discrete metric $\ell:E\rightarrow\R_{>0}$ of a euclidean cyclic polyhedral surface,
 \item A euclidean, spherical, or hyperbolic cyclic polyhedral surface
   $(\Sigma,\ell)_{\g}$, where $\g\in\{\euc, \hyp, \sph\}$,
@@ -703,7 +703,7 @@ with some fixed scale factors.
 \begin{problem}[prescribed scale factors and angle sums]
 \label{prob:factors_and_angles}
 \textbf{Given}
-\begin{compactitem}
+\begin{compactitem}[$\bullet$]
 \item A euclidean, spherical, or hyperbolic cyclic polyhedral surface
    $(\Sigma,\ell)_{\g}$, where $\g\in\{\euc, \hyp, \sph\}$,
 \item a partition $V_{\Sigma}=V_0\dot\cup V_1$
@@ -795,7 +795,7 @@ of lengths:
 \begin{lemma}[analytic formulation of Problem~\ref{prob:factors_and_angles}]
   \label{lem:analytic}
   Let 
-  \begin{compactitem}
+  \begin{compactitem}[$\bullet$]
   \item the polyhedral surface\/ $(\Sigma,\ell)_{\g}$,
   \item the partition $V_{0}\dot\cup V_{1}$,
   \item $\Theta_{i}$ for $i\in V_{1}$,
@@ -825,7 +825,7 @@ of lengths:
 \begin{problem}
   \label{prob:analytic}
   \textbf{Given}
-  \begin{compactitem}
+  \begin{compactitem}[$\bullet$]
   \item an abstract triangulation $\Delta$,
   \item a partition $V_{\Delta}=V_0\dot\cup V_1$,
   \item $u_{i}\in\R$ for $i\in{V_{0}}$
@@ -926,7 +926,7 @@ $E^{\euc},E^{\hyp},E^{\sph}$ when this is unlikely to cause confusion.
   We define the \emph{feasible regions}\/ of the functions
   $E_{\Delta,\Theta}^{\gt}$ as the following open subsets of their
   domains:
-  \begin{compactitem}
+  \begin{compactitem}[$\bullet$]
   \item The feasible region of $E^{\euc}$ and $E^{\hyp}$ is the set of
     all $(\lambda, u)\in\R^{E_{\Delta}}\times\R^{V_{\Delta}}$ such
     that $\ellt\in\R_{>0}^{E}$ defined by~\eqref{eq:lambdat}
@@ -1199,8 +1199,8 @@ Definition~\ref{def:f} easier to state.
     \ML(x) = -\int_{0}^{x}\log\big|2\sin(t)\big|\,dt,
   \end{equation}
   and, 
-  
-  $\bullet$ if $\lambda$ is in the feasible region of $f^{g}$, then
+\begin{compactitem}[$\bullet$]
+\item if $\lambda$ is in the feasible region of $f^{g}$, then
   the angles $\alpha$, $\beta$ are defined as the angles (shown in
   Figure~\ref{fig:triangle_notation}) in a euclidean, hyperbolic, or
   spherical triangle (depending on $\g$) with sides $\ell_{1},
@@ -1208,9 +1208,7 @@ Definition~\ref{def:f} easier to state.
   $\alpha$ and $\beta$ are defined by~\eqref{eq:half_angle}
   and~\eqref{eq:beta}.
 
-
-
-  $\bullet$ Otherwise, if $\g=\sph$, and if either at least two $\lambda$s are
+\item Otherwise, if $\g=\sph$, and if either at least two $\lambda$s are
   non-negative or $\lambda<0$ and
   inequality~\eqref{eq:triang_ineq_ell_sph} is violated, let
   \begin{equation*}
@@ -1219,7 +1217,7 @@ Definition~\ref{def:f} easier to state.
     \beta_{k}=\beta_{i}=\beta_{j}=0.
   \end{equation*}
 
-  $\bullet$\, Otherwise, if the triangle
+\item Otherwise, if the triangle
   inequality~\eqref{eq:triang_ineq_ell_k} is violated, or if $\g=\sph$
   and $\lambda_{k}\geq 0$, let
   \begin{equation*}
@@ -1227,6 +1225,7 @@ Definition~\ref{def:f} easier to state.
     \quad
     \alpha_{i}=\alpha_{j}=\beta_{i}=\beta_{j}=0.
   \end{equation*}
+\end{compactitem}
 \end{definition}
 
 \begin{figure}
