@@ -186,7 +186,7 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
             	\includegraphics{periodic/step02_surface.pdf}		
             }
             \resizebox{\linewidth}{!}{
-                \includegraphics[width=3.2cm]{periodic/step01_ui.pdf}
+                \includegraphics[width=3.2cm]{periodic/step01_ui_light.pdf}
                 \begin{minipage}[b]{10cm}
                     \includegraphics[width=\linewidth]{periodic/step01a_map.pdf}\\
                     \includegraphics[width=\linewidth]{periodic/step02a_map.pdf}
@@ -235,7 +235,7 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
             \captionof{figure}{Pattern preview using the \emph{Content Appearance$\to$Texture} user interface.}
 \end{minipage}
 \begin{minipage}{0.19\linewidth}
-         	\includegraphics[width=4cm]{periodic/step03_ui.pdf}
+         	\includegraphics[width=4cm]{periodic/step03_ui_light.pdf}
 \end{minipage}
 \end{center}    
 
@@ -253,7 +253,7 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
             \captionof{figure}{New mesh and domain.}
 \end{minipage}
 \begin{minipage}{0.24\linewidth}
-\includegraphics[width=4.5cm]{periodic/step04_ui.pdf}	
+\includegraphics[width=4.5cm]{periodic/step04_ui_light.pdf}	
 \end{minipage}
 \end{center}    
 
@@ -299,7 +299,7 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
             \captionof{figure}{Creating regular elements with the \emph{Spring} energy.}
 \end{minipage}
 \begin{minipage}{0.29\linewidth}
-\includegraphics[width=4.5cm]{periodic/step09_fconst.pdf}
+\includegraphics[width=4.5cm]{periodic/step09_fconst_light.pdf}
 \end{minipage}
 \end{center}
 \item[(9)] From the histogram, read off the smallest and largest edge lengths and transfer those into the \emph{Springs} energy UI. We select the \emph{discr.} option and the number of discrete steps. Optimize the surface to consist of a limited number of panel sizes.
@@ -313,7 +313,7 @@ The parameterization part of the work is carried out via the {\sc ConformalLab} 
             \captionof{figure}{Optimization towards a discrete set of panel sizes.}
 \end{minipage}
 \begin{minipage}{0.29\linewidth}
-\includegraphics[width=4.5cm]{periodic/step10_springs.pdf}
+\includegraphics[width=4.5cm]{periodic/step10_springs_light.pdf}
 \end{minipage}
 \end{center}            
 \end{compactenum}
@@ -334,19 +334,21 @@ The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. 
 \item[(3)] Calculate curvature direction estimates on boundary edges of the surface, again using the \emph{Vector Field$\to$Curvature Vector Fields} command. We check singularity indices with the \emph{Check Gau{\ss}-Bonnet} button in the \emph{Discrete Conformal Parameterization} panel. It prints the left side of the Gau{\ss}-Bonnet equation to the console. It should give $2\pi$ for a genus $0$ surface in this case.
 
 \begin{center}
-\begin{minipage}{\linewidth}
+\begin{minipage}{0.7\linewidth}
             \centering
-            \resizebox{0.7\linewidth}{!}{
-%                \includegraphics[width=5cm]{quasiisothermic/step00.pdf}
+            \resizebox{\linewidth}{!}{
                 \includegraphics[height=5cm]{quasiisothermic/step02_surface.pdf}
-%                \includegraphics[height=5cm]{quasiisothermic/step02_ui.pdf}
                 \includegraphics[height=5cm]{quasiisothermic/step03_surface.pdf}
             }
             \captionof{figure}{Inspect the curvature direction field on the surface (left) and specify boundary conditions (right, magenta) and singularities (right, yellow).}
 \end{minipage}
+\hfill
+\begin{minipage}{0.25\linewidth}
+\includegraphics[width=\linewidth]{quasiisothermic/step02_ui_light.pdf}
+\end{minipage}
 \end{center}     
-            
-\item[(4)] Create a discrete conformal parameterization. Use \emph{Conformal Curvature} as boundary mode: this derives the boundary curvature from the vector field of the previous step. Select a quad texture to visualize the parameterization on the surface. Rotate the texture to match the prescribed boundary directions.
+
+\item[(4)] Create a discrete conformal parameterization. Use \emph{Conformal Curvature} as boundary mode. Select suitable cone angles at singularities in the \emph{Selected Nodes} panel. Select a quad texture to visualize the parameterization on the surface. Rotate the texture to match the prescribed boundary directions.
 \item[(5)] Move the texture such that singularities lie either in the middle or at a corner of a quad of the texture. Use the \emph{Texture Remeshing$\to$Transform Texture} command to transform the texture such that two selected vertices lie on $(0,0)$ and $(1,0)$ respectively. This method works for one or two singularities. We do not implement methods to distort the mapping to match more that two singularities.
 
 \begin{center}
@@ -375,8 +377,9 @@ The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. 
             \captionof{figure}{Three-step remeshing of the parameterized surface. Create a subdivided domain (left), lift this mesh to the surface (middle). Extract the new mesh from the subdivided (right).}
             \label{fig:three-step-remeshing}
 \end{minipage}
+\hfill
 \begin{minipage}{0.24\linewidth}
-\includegraphics[width=5cm]{quasiisothermic/step06_ui.pdf}
+\includegraphics[width=5cm]{quasiisothermic/step06_ui_light.pdf}
 \end{minipage}
 \end{center}                 
             
