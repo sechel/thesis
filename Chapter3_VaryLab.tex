@@ -336,17 +336,17 @@ The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. 
 \begin{center}
 \begin{minipage}{\linewidth}
             \centering
-            \resizebox{\linewidth}{!}{
+            \resizebox{0.7\linewidth}{!}{
 %                \includegraphics[width=5cm]{quasiisothermic/step00.pdf}
                 \includegraphics[height=5cm]{quasiisothermic/step02_surface.pdf}
-                \includegraphics[height=5cm]{quasiisothermic/step02_ui.pdf}
+%                \includegraphics[height=5cm]{quasiisothermic/step02_ui.pdf}
                 \includegraphics[height=5cm]{quasiisothermic/step03_surface.pdf}
             }
             \captionof{figure}{Inspect the curvature direction field on the surface (left) and specify boundary conditions (right, magenta) and singularities (right, yellow).}
 \end{minipage}
 \end{center}     
             
-\item[(4)] Create a discrete conformal parameterization. We use \emph{Conformal Curvature} as boundary mode. Select a quad texture to visualize the parameterization on the surface. Rotate the texture to match the prescribed boundary directions.
+\item[(4)] Create a discrete conformal parameterization. Use \emph{Conformal Curvature} as boundary mode: this derives the boundary curvature from the vector field of the previous step. Select a quad texture to visualize the parameterization on the surface. Rotate the texture to match the prescribed boundary directions.
 \item[(5)] Move the texture such that singularities lie either in the middle or at a corner of a quad of the texture. Use the \emph{Texture Remeshing$\to$Transform Texture} command to transform the texture such that two selected vertices lie on $(0,0)$ and $(1,0)$ respectively. This method works for one or two singularities. We do not implement methods to distort the mapping to match more that two singularities.
 
 \begin{center}
@@ -372,7 +372,7 @@ The methods of Chapter~\ref{chp:quasiisothermic} can be divided into two parts. 
                 \includegraphics[width=5cm]{quasiisothermic/step06_surface.pdf}
                 \includegraphics[width=5cm]{quasiisothermic/step07_surface.pdf}
             }
-            \captionof{figure}{Three-step remeshing of the parameterized surface. Create a subdivided domain (second to left), lift this mesh to the surface (middle). Extract the new mesh from the subdivided (right).}
+            \captionof{figure}{Three-step remeshing of the parameterized surface. Create a subdivided domain (left), lift this mesh to the surface (middle). Extract the new mesh from the subdivided (right).}
             \label{fig:three-step-remeshing}
 \end{minipage}
 \begin{minipage}{0.24\linewidth}
@@ -470,10 +470,10 @@ In Chapter~\ref{chp:quasiisothermic}, Section~\ref{sec:s-isothermic}, we propose
             \centering
             \resizebox{\linewidth}{!}{
                 \includegraphics[width=5cm]{gridshells/step5_ref.pdf}
-                \includegraphics[width=5cm]{gridshells/step5_equal.pdf}            
-                \includegraphics[width=7cm]{gridshells/step5_hist.pdf}                            
+                \includegraphics[width=5cm]{gridshells/step5_equal.pdf}                                     
             }
-            \captionof{figure}{Reference surface visualization (left). Optimized mesh (middle). Optimized histogram (right).}
+            \includegraphics[width=9cm]{gridshells/step5_hist.pdf}   
+            \captionof{figure}{Reference surface visualization (left). Optimized mesh (right). Optimized histogram (bottom).}
 \end{minipage}
 \end{center}   
 
