@@ -1,0 +1,302 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass g-brief2
+\begin_preamble
+\fenstermarken % prints address window marks
+\faltmarken % prints folding marks
+%\lochermarke % prints puncher marks 
+\trennlinien % prints striplines
+%\unserzeichen % prints "our ref" instead of "my ref"
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman palatino
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 4
+\tocdepth 4
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Name
+Stefan Sechelmann
+\end_layout
+
+\begin_layout NameRowA
+Stefan Sechelmann
+\end_layout
+
+\begin_layout NameRowB
+
+\end_layout
+
+\begin_layout NameRowC
+
+\end_layout
+
+\begin_layout NameRowD
+
+\end_layout
+
+\begin_layout NameRowE
+
+\end_layout
+
+\begin_layout NameRowF
+
+\end_layout
+
+\begin_layout NameRowG
+
+\end_layout
+
+\begin_layout AddressRowA
+Stefan Sechelmann
+\end_layout
+
+\begin_layout AddressRowB
+Westendallee 74
+\end_layout
+
+\begin_layout AddressRowC
+14052 Berlin
+\end_layout
+
+\begin_layout AddressRowD
+
+\end_layout
+
+\begin_layout AddressRowE
+
+\end_layout
+
+\begin_layout AddressRowF
+
+\end_layout
+
+\begin_layout TelephoneRowA
+Mobil: +49(0)160 93905384
+\end_layout
+
+\begin_layout TelephoneRowB
+Privat: +49(0)30 89374840
+\end_layout
+
+\begin_layout TelephoneRowC
+
+\end_layout
+
+\begin_layout TelephoneRowD
+
+\end_layout
+
+\begin_layout TelephoneRowE
+
+\end_layout
+
+\begin_layout TelephoneRowF
+
+\end_layout
+
+\begin_layout InternetRowA
+http:/
+\begin_inset Formula $\!$
+\end_inset
+
+/www.sechel.de
+\end_layout
+
+\begin_layout InternetRowB
+stefan@sechel.de
+\end_layout
+
+\begin_layout InternetRowC
+
+\end_layout
+
+\begin_layout InternetRowD
+
+\end_layout
+
+\begin_layout InternetRowE
+
+\end_layout
+
+\begin_layout InternetRowF
+
+\end_layout
+
+\begin_layout BankRowA
+
+\end_layout
+
+\begin_layout BankRowB
+
+\end_layout
+
+\begin_layout BankRowC
+
+\end_layout
+
+\begin_layout BankRowD
+
+\end_layout
+
+\begin_layout BankRowE
+
+\end_layout
+
+\begin_layout BankRowF
+
+\end_layout
+
+\begin_layout ReturnAddress
+Stefan Sechelmann 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ Westendallee 74 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ 14052 Berlin
+\end_layout
+
+\begin_layout PostalComment
+
+\end_layout
+
+\begin_layout Address
+Sigrid Krajewski
+\begin_inset Newline newline
+\end_inset
+
+Sekr.
+ BEL-1 Raum 216 
+\begin_inset Newline newline
+\end_inset
+
+Marchstraße 6 
+\begin_inset Newline newline
+\end_inset
+
+10587 Berlin
+\end_layout
+
+\begin_layout MyRef
+
+\end_layout
+
+\begin_layout YourRef
+
+\end_layout
+
+\begin_layout YourMail
+
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Reference
+Lebenslauf
+\end_layout
+
+\begin_layout Opening
+Sehr geehrte Frau Krajewski,
+\end_layout
+
+\begin_layout Closing
+Mit freundlichen Grüßen
+\end_layout
+
+\begin_layout Signature
+Stefan Sechelmann
+\end_layout
+
+\begin_layout Encl.
+
+\end_layout
+
+\begin_layout cc
+
+\end_layout
+
+\begin_layout Letter
+Wie besprochen sende ich Ihnen meinen Lebenslauf mit den Informationen zu
+ Beginn und Ende des Vordiploms, Hauptdiploms, sowie den Beginn der Promotion.
+\end_layout
+
+\end_body
+\end_document
